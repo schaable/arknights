@@ -164,6 +164,66 @@ if (USE_ALTERNATE_DATA_SOURCE) {
 // so it mirrors whichever base EN resolved to.
 DATA_BASE[SERVERS.ES] = DATA_BASE[SERVERS.EN];
 const serverString = localStorage.getItem("server") || "en_US";
+// Minimal i18n layer for the Story Reader UI chrome. UI language derives from the
+// selected server: es_ES -> Spanish, every other server -> English (unchanged).
+// L(key) reads the active language, falling back to English per-key, then the key
+// itself, so a missing translation never blanks the UI.
+const LANG = serverString === SERVERS.ES ? "es" : "en";
+const UI_STRINGS = {
+  en: {
+    title: "Arknights Story Reader",
+    pageTitle: "Story Reader",
+    tt_autoplay: "Autoplay Sounds",
+    tt_display: "Display Mode",
+    tt_bgm: "Toggle BGM",
+    cat_record: "Operator Record",
+    cat_main: "Main Story",
+    cat_side: "Side Story",
+    cat_mini: "Vignette",
+    cat_module: "Operator Module",
+    cat_rogue: "Integrated Strategies",
+    dr_prefix: "Dr. ",
+    speaker: "speaker",
+    min_read: "min read",
+    min_read_lt1: "<1 min read",
+    suffix_before: " Before",
+    suffix_after: " After",
+    pv: "PV",
+    introduction: "Introduction",
+    entry: "Entry",
+    floor: "Floor",
+    chapter: "Chapter",
+    squad_prefix: "M",
+  },
+  es: {
+    title: "Lector de Historias de Arknights",
+    pageTitle: "Lector de Historias",
+    tt_autoplay: "Reproducir Sonidos",
+    tt_display: "Modo de Visualización",
+    tt_bgm: "Alternar Música",
+    cat_record: "Archivo de Operador",
+    cat_main: "Historia Principal",
+    cat_side: "Historia Secundaria",
+    cat_mini: "Viñeta",
+    cat_module: "Módulo de Operador",
+    cat_rogue: "Estrategias Integradas",
+    dr_prefix: "Dr. ",
+    speaker: "hablante",
+    min_read: "min de lectura",
+    min_read_lt1: "<1 min de lectura",
+    suffix_before: " Antes",
+    suffix_after: " Después",
+    pv: "PV",
+    introduction: "Introducción",
+    entry: "Entrada",
+    floor: "Piso",
+    chapter: "Capítulo",
+    squad_prefix: "M",
+  },
+};
+function L(key) {
+  return UI_STRINGS[LANG]?.[key] ?? UI_STRINGS.en[key] ?? key;
+}
 const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 if (scrollbarWidth > 0) {
   document.documentElement.style.setProperty(

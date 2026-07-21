@@ -11,12 +11,12 @@ var operatorData,
         rogue: [],
     },
     storyTypeNames = {
-        record: "Operator Record",
-        main: "Main Story",
-        side: "Side Story",
-        mini: "Vignette",
-        module: "Operator Module",
-        rogue: "Integrated Strategies",
+        record: L("cat_record"),
+        main: L("cat_main"),
+        side: L("cat_side"),
+        mini: L("cat_mini"),
+        module: L("cat_module"),
+        rogue: L("cat_rogue"),
     },
     soundMap,
     lastBackgroundImage,
@@ -91,6 +91,22 @@ const customStoryNames = {
 };
 const storyDiv = document.getElementById("storyDisp");
 var CURRENT_STORY;
+// Localize the static HTML chrome. Done here (story-page-scoped) rather than in
+// util.js's shared window.onload, which runs on every page. story.js loads at the
+// end of <body>, so these elements already exist.
+function localizeUI() {
+    document.title = L("title");
+    const pageTitle = document.getElementById("pageTitle");
+    if (pageTitle) pageTitle.textContent = L("pageTitle");
+    const setTip = (id, key) => {
+        const el = document.getElementById(id);
+        if (el) el.title = L(key);
+    };
+    setTip("sfxButton", "tt_autoplay");
+    setTip("visButton", "tt_display");
+    setTip("playPauseBtn", "tt_bgm");
+}
+localizeUI();
 get_char_table(false, serverString)
     .then((js) => {
         operatorData = js;
@@ -169,8 +185,8 @@ get_char_table(false, serverString)
                     });
             }
             // append intro video to storyunlockdatas
-            const INTRO_NAME = "PV";
-            const INTRO_CODE = "Introduction";
+            const INTRO_NAME = L("pv");
+            const INTRO_CODE = L("introduction");
             if (x.id.startsWith("main_")) {
                 // check if entry exists first, then add
                 let storytxt = x.infoUnlockDatas[0].storyTxt.replace(
@@ -240,7 +256,7 @@ get_char_table(false, serverString)
             name: "Ceobe's Fungimist",
             infoUnlockDatas: [
                 {
-                    storyName: "Entry",
+                    storyName: L("entry"),
                     storyTxt: `activities/act12d6/level_act12d6_entry`,
                 },
                 {
@@ -317,7 +333,7 @@ get_char_table(false, serverString)
                             return { name: x.teamCharId };
                         });
                     storyReview[month_key] = {
-                        name: `M${month_num + 1} - ${v.teamName}`,
+                        name: `${L("squad_prefix")}${month_num + 1} - ${v.teamName}`,
                         infoUnlockDatas: [],
                         chars: chars,
                     };
@@ -332,7 +348,7 @@ get_char_table(false, serverString)
                             ].clientChatItemData,
                         )) {
                             storyReview[month_key].infoUnlockDatas.push({
-                                storyName: `Floor ${v2.chatFloor}`,
+                                storyName: `${L("floor")} ${v2.chatFloor}`,
                                 storyTxt: `${v2.chatStoryId.toLowerCase()}`,
                                 storyBackground: `pic_${rogue_key}_1`,
                             });
@@ -344,7 +360,7 @@ get_char_table(false, serverString)
                             ].chatItemList,
                         )) {
                             storyReview[month_key].infoUnlockDatas.push({
-                                storyName: `Floor ${v2.floor}`,
+                                storyName: `${L("floor")} ${v2.floor}`,
                                 storyTxt: `${v2.chatStoryId.toLowerCase()}`,
                                 storyBackground: `pic_${rogue_key}_1`,
                             });
@@ -448,7 +464,7 @@ get_char_table(false, serverString)
                                     "行动前",
                                 ].some((x) => d.avgTag.includes(x))
                             )
-                                name += " Before";
+                                name += L("suffix_before");
                             else if (
                                 [
                                     "After Operation",
@@ -457,7 +473,7 @@ get_char_table(false, serverString)
                                     "行动后",
                                 ].some((x) => d.avgTag.includes(x))
                             )
-                                name += " After";
+                                name += L("suffix_after");
                         }
                         break;
                     case "record":
@@ -489,7 +505,7 @@ get_char_table(false, serverString)
             switch (cat) {
                 case "main":
                     namefunc = (k) =>
-                        "Chapter " + k.split("_")[1].padStart(2, "0");
+                        L("chapter") + " " + k.split("_")[1].padStart(2, "0");
                     break;
                 case "record":
                     namefunc = (n) => {
@@ -772,7 +788,7 @@ async function genStory(data, avatars = []) {
             docName.classList.add("docName");
 
             const drPrefix = document.createElement("span");
-            drPrefix.textContent = "Dr. ";
+            drPrefix.textContent = L("dr_prefix");
             docName.appendChild(drPrefix);
 
             const editableName = document.createElement("span");
@@ -1525,12 +1541,12 @@ async function genStory(data, avatars = []) {
                 let dialog = makeDialog(
                     doctorSpeaking
                         ? {
-                              name: `Dr. ${
+                              name: `${L("dr_prefix")}${
                                   localStorage.getItem("docName") ||
                                   "{@nickname}"
                               }`,
                           }
-                        : { name: "speaker" },
+                        : { name: L("speaker") },
                     choices[0],
                     doctorSpeaking
                         ? { name: { name: "avg_npc_048" } }
@@ -2323,8 +2339,8 @@ async function genStory(data, avatars = []) {
                     wordCount / 250 + (imgCount * 12) / 60,
                 );
             if (readTimeMinutes)
-                readTime.innerHTML = `${readTimeMinutes} min read`;
-            else readTime.innerHTML = `<1 min read`;
+                readTime.innerHTML = `${readTimeMinutes} ${L("min_read")}`;
+            else readTime.innerHTML = L("min_read_lt1");
         });
 }
 function playWhenReady(audio) {
