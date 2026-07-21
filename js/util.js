@@ -24,6 +24,7 @@ const SERVERS = {
   JP: "ja_JP",
   KR: "ko_KR",
   CN: "zh_CN",
+  ES: "es_ES",
 };
 // data URI gen:
 function uri_sound(soundpath, source = ASSET_SOURCE.LOCAL) {
@@ -156,6 +157,12 @@ if (USE_ALTERNATE_DATA_SOURCE) {
   DATA_BASE[SERVERS.CN] =
     "https://raw.githubusercontent.com/ArknightsAssets/ArknightsGamedata/master/cn";
 }
+// Spanish is a translation overlay with no official data source: point its remote
+// data at EN so the index tables (which have no fallback) and any untranslated
+// story .txt resolve in English. Translated ES stories are served local-first from
+// gamedata/es_ES/ (see genStory in story.js). Set after the alternate-source block
+// so it mirrors whichever base EN resolved to.
+DATA_BASE[SERVERS.ES] = DATA_BASE[SERVERS.EN];
 const serverString = localStorage.getItem("server") || "en_US";
 const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 if (scrollbarWidth > 0) {
@@ -805,7 +812,8 @@ function selectColor(number, saturation = 15, lightness = 60) {
   return `hsl(${hue},${saturation}%,${lightness}%)`;
 }
 function countWords(str, server = serverString) {
-  if (server == SERVERS.EN)
+  // whitespace-delimited languages count words; CJK servers count characters.
+  if (server == SERVERS.EN || server == SERVERS.ES)
     return str.trim().split(/\s+/).filter(Boolean).length;
   return str.trim().length;
 }

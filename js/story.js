@@ -720,20 +720,30 @@ async function genStory(data, avatars = []) {
         };
     }
 
-    return await (
-        key.startsWith("uniequip")
-            ? getModuleStory(key)
-            : fetch(`${DATA_BASE[serverString]}/gamedata/story/${key}.txt`)
-    )
-        .then((r) => {
+    const remoteUrl = `${DATA_BASE[serverString]}/gamedata/story/${key}.txt`;
+    const localUrl = `../gamedata/${serverString}/story/${key}.txt`;
+    let txtPromise;
+    if (key.startsWith("uniequip")) {
+        // module stories are synthesized locally (English in the ES pilot)
+        txtPromise = getModuleStory(key).then((r) => (r.ok ? r.text() : ""));
+    } else if (serverString === SERVERS.ES) {
+        // ES is a translation overlay: try the local translated file first, then
+        // fall back to remote EN on a 404 OR a network rejection (the .catch also
+        // closes the un-caught reject gap the remote-first path has).
+        txtPromise = fetch(localUrl)
+            .then((r) => (r.ok ? r.text() : Promise.reject()))
+            .catch(() => fetch(remoteUrl).then((r) => r.text()));
+    } else {
+        // remote-first for EN/JP/KR/CN (unchanged behavior)
+        txtPromise = fetch(remoteUrl).then((r) => {
             if (!r.ok) {
                 // story txt is missing (potentially old story that was deleted)
-                return fetch(
-                    `../gamedata/${serverString}/story/${key}.txt`,
-                ).then((t) => (t.ok ? t.text() : r.text()));
+                return fetch(localUrl).then((t) => (t.ok ? t.text() : r.text()));
             }
             return r.text();
-        })
+        });
+    }
+    return await txtPromise
         .then((txt) => {
             if (data.storyBackground) {
                 // use special bg, currently used for IS endbooks
@@ -2308,7 +2318,7 @@ async function genStory(data, avatars = []) {
             let readTimeMinutes = Math.round(
                 wordCount / 400 + (imgCount * 12) / 60,
             );
-            if (serverString == SERVERS.EN)
+            if (serverString == SERVERS.EN || serverString == SERVERS.ES)
                 readTimeMinutes = Math.round(
                     wordCount / 250 + (imgCount * 12) / 60,
                 );
