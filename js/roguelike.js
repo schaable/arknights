@@ -73,7 +73,7 @@ async function fetchItemTable(is) {
 	switch (parseInt(is)) {
 		case 1:
 			resp = await fetch(
-				"/json/" + serverString + "/roguelike_table.json",
+				"/arknights/json/" + serverString + "/roguelike_table.json",
 			);
 			js = await fixedJson(resp);
 			table = js.itemTable.items;

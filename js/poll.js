@@ -9,7 +9,7 @@ const OVERALL_E2_NAME = "E2 (Overall)";
 POLLS.forEach((poll) => {
   let a = document.createElement("a");
   a.classList.add("rightButton", "button");
-  a.href = "/poll" + poll;
+  a.href = "/arknights/poll" + poll;
   if (poll == window.location.hash) a.classList.add("checked");
   a.innerHTML = poll;
   document
@@ -19,7 +19,7 @@ POLLS.forEach((poll) => {
 get_char_table()
   .then((js) => {
     let operatorData = js;
-    return fetch("/json/poll_results_" + PTAG + ".json");
+    return fetch("/arknights/json/poll_results_" + PTAG + ".json");
   })
   .then((res) => fixedJson(res))
   .then((js) => {

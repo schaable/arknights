@@ -8,7 +8,7 @@ const lightbox = GLightbox({
 });
 get_cc_list();
 if (!window.location.hash) window.location.hash = "#12";
-document.getElementById("usageLink").href = "/cc/usage" + window.location.hash;
+document.getElementById("usageLink").href = "/arknights/cc/usage" + window.location.hash;
 window.onhashchange = () => window.location.reload();
 
 const ccSettings = {
@@ -58,7 +58,7 @@ fetch(`${DATA_BASE[SERVERS.EN]}/gamedata/excel/skill_table.json`)
   })
   .then((js) => {
     operatorData = js;
-    return fetch("/cc/json/data" + CCTAG + ".json");
+    return fetch("/arknights/cc/json/data" + CCTAG + ".json");
   })
   .then((res) => fixedJson(res))
   .then((js) => {
@@ -219,9 +219,9 @@ fetch(`${DATA_BASE[SERVERS.EN]}/gamedata/excel/skill_table.json`)
         a.dataset.gallery = "gallery1";
         // a.href = '/cc/cropped' + (cardData[k].tag || CCTAG) + '/' + (is_dupe ? 'duplicates/' : '') + k
         // no longer use duplicates dir
-        a.href = "/cc/cropped" + (cardData[k].tag || CCTAG) + "/" + k;
+        a.href = "/arknights/cc/cropped" + (cardData[k].tag || CCTAG) + "/" + k;
         let img = document.createElement("img");
-        img.src = "/cc/thumbs" + (cardData[k].tag || CCTAG) + "/" + k;
+        img.src = "/arknights/cc/thumbs" + (cardData[k].tag || CCTAG) + "/" + k;
         img.setAttribute("loading", "lazy");
         a.appendChild(img);
         div.appendChild(a);
@@ -584,7 +584,7 @@ fetch(`${DATA_BASE[SERVERS.EN]}/gamedata/excel/skill_table.json`)
         slideConfig.description += '<div class="dupe-thumbs">';
         while (dupe && dupe != slideConfig.filename) {
           slideConfig.description +=
-            '<img src="/cc/thumbs' +
+            '<img src="/arknights/cc/thumbs' +
             (cardData[dupe].tag || CCTAG) +
             "/" +
             dupe +

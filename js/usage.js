@@ -3,7 +3,7 @@ var UPPER_BOUNDS = 50,
 	LOWER_BOUNDS = 10,
 	MAX_VALUE = UPPER_BOUNDS;
 if (!window.location.hash) window.location.hash = "#4";
-document.getElementById("clearsLink").href = "/cc" + window.location.hash;
+document.getElementById("clearsLink").href = "/arknights/cc" + window.location.hash;
 window.onhashchange = () => window.location.reload();
 var operatorData,
 	useCount = {},
@@ -42,7 +42,7 @@ get_cc_list()
 			if (online > CCMAP[window.location.hash].start * 1000 + 1209600000)
 				delete operatorData[charId];
 		});
-		return fetch("/cc/json/data" + CCTAG + ".json");
+		return fetch("/arknights/cc/json/data" + CCTAG + ".json");
 	})
 	.then((res) => fixedJson(res))
 	.then((js) => {

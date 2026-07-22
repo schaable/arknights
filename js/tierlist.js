@@ -1,5 +1,5 @@
 if (!window.location.hash) window.location.hash = "#4";
-document.getElementById("clearsLink").href = "/cc" + window.location.hash;
+document.getElementById("clearsLink").href = "/arknights/cc" + window.location.hash;
 window.onhashchange = () => window.location.reload();
 var operatorData, CCTAG;
 const tierMap = { 6: "S", 5: "A", 4: "B", 3: "C!", 2: "D", 1: "F" };
@@ -26,7 +26,7 @@ get_cc_list()
   })
   .then((js) => {
     operatorData = js;
-    return fetch("/cc/json/data" + CCTAG + ".json");
+    return fetch("/arknights/cc/json/data" + CCTAG + ".json");
   })
   .then((res) => fixedJson(res))
   .then((js) => {
