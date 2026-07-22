@@ -1,0 +1,333 @@
+[HEADER(is_tutorial=true, is_skippable=true, is_autoable=true, fit_mode="BLACK_MASK", deny_auto_switch_scene=true)] Guía inicial
+[PlayMusic(key="$babel_loop", volume=0.8, delay=0.2)]
+[name=""]   Ah, eres tú.
+[Dialog]
+[Image(image="bg_0_babel", fadetime=1, block=true)]
+[ImageTween(image="bg_0_babel", tiled=true, xScaleTo=1.05, yScaleTo=1.05, duration=3, block=false)]
+[ImageTween(image="bg_0_babel", tiled=true, xScaleTo=1.5, yScaleTo=1.5, duration=75, block=false)]
+[name=""]   Ha pasado mucho tiempo desde la última vez que nos vimos.
+[name=""]   Durante este tiempo... has estado tambaleándote al borde de un precipicio.
+[Dialog]
+[Delay(time=1.3)]
+[name=""]   Puede que hayas olvidado quién eres, pero con recordar tu nombre basta.
+[Dialog]
+[name=""]   ...Es la hora. No te demores aquí demasiado.
+[name=""]   Después de todo, aún no eres mi invitado, ni deberías siquiera estar aquí.
+[name=""]   Ella todavía te necesita.
+[Dialog]
+[Delay(time=1)]
+[name=""]   23 de diciembre.
+[name=""]   Puede que no recuerdes lo que esta fecha significa para ti.
+[name=""]   Y esto te arrojará al peligro.
+[name=""]   ......
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Image]
+[name=""]   No...
+[name=""]   Debes intentar recordar.
+[Dialog]
+[PlayMusic(intro="$ekg_loop", key="$ekg_loop", volume=0.8, delay=0)]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[CameraEffect(effect="Grayscale", fadetime=0, keep=true, initamount=0, amount=1)]
+[Image(image="bg_0_am", tiled=true, fadetime=0, block=false)]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[CameraEffect(effect="Grayscale", fadetime=18, amount=0, block=false)]
+[Delay(time=2)]
+[name="Voz Distante"]   ...conciencia...
+[name="Voz Distante"]   Circulación restablecida... signos vitales estabilizados... solución cardiopléjica inyectada...
+[Dialog]
+[Delay(time=2)]
+[CameraEffect(effect="Grayscale", fadetime=8, amount=1, block=false)]
+[name="Voz Distante"]   Temperatura corporal baja... administrando Hexametasona 20 c.c., ahora...
+[Dialog]
+[CameraEffect(effect="Grayscale", fadetime=8, amount=0, block=false)]
+[Delay(time=1)]
+[name="Voz Distante"]   ¡Trae el hemostato!
+[name="Voz Distante"]   ...Condición estable... iniciando resección... cuidado con la fibrilación ventricular...
+[Dialog]
+[Delay(time=1)]
+[name="Voz Distante"]   ...Lo siento...
+[name="Voz Distante"]   Por hacerte sufrir de nuevo...
+[Delay(time=0.5)]
+[StopMusic(fadetime=1)]
+[Background(fadetime=1, block=false)]
+[PlaySound(key="$flashback", volume=0.3)]
+[PlaySound(key="$e_atk_arrow_h", volume=0.2, Delay=0.4)]
+[PlaySound(key="$flashback", volume=0.1, Delay=0.3)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=1, r=159, g=254, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=255, g=96, b=15, afrom=1, rfrom=14, gfrom=0, bfrom=15, fadetime=0.2, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, afrom=0.8, rfrom=255, gfrom=96, bfrom=15, fadetime=0.3, block=true)]
+[delay=0.5]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[delay=1]
+[Blocker(a=1, r=225, g=225, b=225, afrom=1, rfrom=0, gfrom=0, bfrom=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Image(image="avg_0_2",x=-100, y=-50,xScale=1.3, yScale=1.3, fadetime=0)]
+[name="???"]   ......
+[name="???"]   Doctor...
+[Blocker(a=0, fadetime=10, block=false)]
+[name="???"]   ...¡mano!
+[name="???"]   Toma mi...
+[name="???"]   ¡¡Toma mi mano!!
+[Dialog(time=1)]
+[Delay(time=1)]
+[Blocker(a=0, fadetime=2, block=false)]
+[Delay(time=3)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Image(image="avg_0_1",x=-100, y=-50,xScale=1.3, yScale=1.3, fadetime=2)]
+[ImageTween(xFrom=-100, yFrom=-50, xTo=0, yTo=0, xScaleFrom=1.3, yScaleFrom=1.3, xScaleTo=1, yScaleTo=1, duration=35, block=false)]
+[name="???"]   ......
+[name="???"]   Emergencia...
+[name="???"]   ...Ayuda...
+[name="???"]   ...¡Está hecho...!
+[Dialog]
+[Image(fadetime=2)]
+[Delay(time=2)]
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_002_amiya_1#1")]
+[name="???"]   ¡Doctor, Doctor!
+[Delay(time=1)]
+[Dialog]
+[name="???"]   Médico, ¿cómo está el Doctor?
+[name="???"]   Pero, hace apenas un momento... estábamos tomados de la mano...
+[name="???"]   Entonces por qué... ¿por qué el Doctor sigue sin despertar...?
+[Character(name="char_016_medic")]
+[name="Médico"]   ¡Amiya! ¡No entres en pánico, primero cálmate!
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="Amiya"]   Ah... L-lo siento.
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=1)]
+[name="Médico"]   Siempre te pones tan nerviosa cuando se trata del Doctor.
+[name="Médico"]   Pero, Amiya, si ocurriera lo peor... ¿qué harías entonces?
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="Amiya"]   ...Ya estoy mentalmente preparada para eso. Seguiríamos adelante con el plan.
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=1)]
+[name="Médico"]   ...Entiendo. En fin, haré lo que me pediste.
+[Character(name="char_016_medic",name2="char_002_amiya_1#1",focus=2)]
+[name="Amiya"]   Muy bien... Te lo agradezco.
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="Amiya"]   Sobre el Doctor...
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=1)]
+[name="Médico"]   No te preocupes, Amiya. Todos los signos vitales están estables ahora.
+[name="Médico"]   Haré una revisión más, solo por ti.
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="Amiya"]   Gracias... ¡Muchas gracias!
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_016_medic")]
+[name="Médico"]   Ajá. La respiración es un poco superficial, pero la presión arterial es normal. No debería haber motivo de preocupación.
+[Blocker(a=0.6, r=255, g=150, b=13, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_atk_blunt_n")]
+[CameraShake(duration=0.5, xstrength=3, ystrength=4, vibrato=30, randomness=90, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Background(image="bg_indoor_1", width=1, height=1, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...!
+[Character(name="char_016_medic")]
+[name="Médico"]   ...
+[name="Médico"]   ¿Estás despierto?
+[name="Médico"]   ¡Amiya, es un éxito! ¡El Doctor ha despertado!
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   ¿Doctor...?
+[name="Amiya"]   Estoy tan feliz... Doctor...
+[Character(name="char_016_medic")]
+[name="Médico"]   ¡Ah, cuidado! No debes hacer eso...
+[Blocker(a=0.5, r=1, g=0.5, b=0.5, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[Character(name="char_016_medic")]
+[name="Médico"]   No intentes moverte todavía. Tu cuerpo aún no se ha adaptado del todo a esto.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ¿Doctor...?
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_002_amiya_1#3", focus=-1)]
+[Decision(options="¿Quién... eres tú?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Ah, Doctor... Soy yo...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Soy yo, Amiya.
+[name="Amiya"]   Hemos venido a rescatarte.
+[Decision(options="...¿Quién... soy...?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Tú...
+[name="Amiya"]   Eres un miembro de Rhodes Island, igual que nosotros...
+[name="Amiya"]   ...además de mi compañero.
+[name="Amiya"]   ...Dr. {@nickname}.
+[name="Amiya"]   Eres la persona más importante para mí.
+[name="Amiya"]   Doctor... ¿no lo recuerdas?
+[Decision(options="...¿Puedo confiar en ti?;...;Ya veo... Encantado de conocerte, Amiya.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[name="Amiya"]   Entiendo. Sé que esto es demasiado para asimilar en este momento.
+[name="Amiya"]   No espero que lo recuerdes todo de inmediato, ni te pido que confíes en mí ahora mismo.
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Dr. {@nickname}, ¿de verdad no me recuerdas para nada...?
+[name="Amiya"]   ...
+[name="Amiya"]   Aun si ese es el caso... no me rendiré.
+[name="Amiya"]   Ya hemos sacrificado tanto, solo para encontrarte...
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Ah, em, hola.
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Yo, no sé cómo decir esto, pero muchas cosas han cambiado respecto a antes.
+[name="Amiya"]   Eso me incluye a mí también.
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]   Sin embargo, siempre serás la persona más importante para mí, Doctor. Pase lo que pase, esto nunca cambiará.
+[name="Amiya"]   Así que por eso, por favor... dame un poco más de tiempo.
+[name="Amiya"]   Por poco que sea...
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#1",name2="char_016_medic",focus=2)]
+[name="Médico"]   ¿De verdad el Doctor... tiene amnesia?
+[Character(name="char_002_amiya_1#1",name2="char_016_medic",focus=1)]
+[name="Amiya"]   ...
+[name="Amiya"]   Estoy segura de que todo estará bien si le damos al Doctor algo de espacio...
+[Decision(options="Dónde estoy...", values="1")]
+[Predicate(references="1")]
+[name="Amiya"]   Aquí es seguro—
+[character(fadetime=0.5)]
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[PlaySound(key="$b_char_rockexplo")]
+[StopMusic(fadetime=0.8)]
+[delay=0.6]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿Eh? Qué está pasando—
+[character(name="char_002_amiya_1#6", name2="char_013_riop",focus=2)]
+[name="Hombre Fuertemente Armado"]   ¡Amiya, tenemos un problema!
+[character(name="char_002_amiya_1#6", name2="char_013_riop",focus=2)]
+[name="Hombre Fuertemente Armado"]   ¡Alguien irrumpió en la instalación!
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.6, block=true)]
+[delay=0.5]
+[Dialog]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[Character(name="char_1002_nsabr_1")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$b_char_rockexplo")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Delay(time=0.7)]
+[character(name="char_002_amiya_1#6", name2="char_013_riop",focus=2)]
+[name="Hombre Fuertemente Armado"]   Por cómo van vestidos... ¡no parecen soldados de Ursus!
+[character(name="char_1002_nsabr_1")]
+[CameraShake(duration=1, xstrength=4, ystrength=4, vibrato=30, randomness=90, block=false)]
+[PlaySound(key="$d_gen_soldiersrun")]
+[name="Miembro de Reunion"]   ...
+[Dialog]
+[character(name="char_013_riop")]
+[name="Hombre Fuertemente Armado"]   ¡¿Qué significa esto?!
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[character(name="char_013_riop")]
+[name="Hombre Fuertemente Armado"]   ¡Están atacando! ¡Amiya, están fuertemente equipados con armas!
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[character(name="char_016_medic")]
+[name="Médico"]   ¡Aaaahh!
+[character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Tengan cuidado, todos! ¡A cubierto, y protejan al Doctor!
+[name="Amiya"]   Estos atuendos... ¿son del Movimiento Reunion? Pero cómo es posible...
+[name="Amiya"]   ¡Guardias, prepárense para la batalla!
+[character(name="char_013_riop")]
+[name="Guardia"]   ¡Enterado!
+[character]
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[character(name="char_013_riop")]
+[name="Guardia"]   Malditos... ¡¿van tras el Doctor?!
+[character(name="char_002_amiya_1",name2="char_013_riop",focus=1)]
+[name="Amiya"]   No... Nadie más debería saber que el Doctor está aquí.
+[character(name="char_002_amiya_1#7",name2="char_013_riop",focus=1)]
+[name="Amiya"]   ¿Puedes comunicarte con Kal'tsit?
+[character(name="char_002_amiya_1",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ¡No sé por qué, pero el equipo no funciona!
+[character(name="char_002_amiya_1")]
+[name="Amiya"]   ...Alguien ha cortado nuestras comunicaciones.
+[name="Amiya"]   ¿Nos ha descubierto el gobierno de Ursus?
+[character(name="char_002_amiya_1",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ¿Qué hacemos ahora?
+[character(name="char_002_amiya_1")]
+[name="Amiya"]   Kal'tsit no podrá comandar la batalla como habíamos planeado en un principio.
+[name="Amiya"]   ...
+[character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...Dr. {@nickname}.
+[name="Amiya"]   Espero que... puedas tomar el mando.
+[Character(name="char_016_medic",name2="char_002_amiya_1",focus=1)]
+[name="Médico"]  ¿No es eso demasiado arriesgado? El Doctor apenas acaba de volver en sí...
+[Character(name="char_016_medic",name2="char_002_amiya_1",focus=2)]
+[name="Amiya"]   Me gustaría... intentarlo.
+[character(name="char_002_amiya_1")]
+[name="Amiya"]   Incluso sin recuerdos, el Doctor ha...
+[name="Amiya"]   ...peleado junto a nosotros antes.
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.4)]
+[Background(image="bg_wild_a")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="???"]   Gracias por toda tu guía...
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.1)]
+[CameraEffect(effect="Grayscale", amount=0)]
+[Background(image="bg_indoor_1")]
+[character(name="char_002_amiya_1#4")]
+[Blocker(a=0, fadetime=0.1, block=true)]
+[name="Amiya"]   ...
+[character(name="char_002_amiya_1")]
+[name="Amiya"]   Hemos pasado por tanto juntos...
+[name="Amiya"]   Doctor... simplemente sé que serás capaz de hacerlo.
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.4)]
+[Background(image="bg_wild_a")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="???"]   Sé que nos llevarás a la victoria.
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.1)]
+[CameraEffect(effect="Grayscale", amount=0)]
+[Background(image="bg_indoor_1")]
+[Character(name="char_002_amiya_1")]
+[Blocker(a=0, fadetime=0.1, block=true)]
+[name="Amiya"]   Entiendo que pedirte esto es muy repentino y desconsiderado.
+[name="Amiya"]   Pero... Por favor, préstanos tu ayuda.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Nosotros te apoyaremos!
+[Decision(options="¡Primero hagámoslos retroceder!;...;No nos queda más opción que contraatacar, ¿verdad?", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Mm... No quiero arrastrarte a esto.
+[name="Amiya"]   Pero ahora mismo, necesitamos tu sabiduría más que nunca, Dr. {@nickname}.
+[name="Amiya"]   Espero que una parte de ti vuelva a despertar durante el combate.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Aunque tal vez tengas dudas sobre ti mismo...
+[Character]
+[Background]
+[name="Amiya"]   Pero yo creo en ti.
+[Image(image="avg_0_3", fadetime=0.8)]
+[name="Amiya"]   Sé que puedes hacer esto.
+[name="Amiya"]   ¡Por favor, toma el mando... de Rhodes Island!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
+[SkipToThis]
+[StartBattle(stageId="guide_01")]
+[Tutorial(waitForSignal="battle_start")]

@@ -1,0 +1,147 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Dialog]
+[Character]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Background(image="bg_cher_1",x=0, y=20, xScale=1.1, yScale=1.1, fadetime=1)]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿Cómo puede ser esto...?
+[name="Dobermann"]  ¿Qué diablos... está pasando aquí?
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Image(image="avg_2_2",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[name="Miembro de Reunion"]  ¡Registren todas estas casas! ¡Quiero cada habitación puesta de cabeza!
+[name="Mujer"]  ¡Suéltenme...! ¡No! No pueden...
+[name="Miembro de Reunion"]  ¿Tratando de resistirte? ¡Demasiado tarde, asqueroso Chernos!
+[name="Hombre"]  ¡Solo corre! No te preocupes por mí... Salva... a nuestro hijo...
+[name="Niño"]  Mamá... ¡Mamá...!
+[name="Guardia de Ursus"]  ¡Olvídense de los civiles! ¡Primero mantengan la línea! ¡Vienen demasiados matones enmascarados!
+[name="Miembro de Reunion"]  ¡No les den tiempo a los policías para descansar! ¡Sigan atacando!
+[name="Guardia de Ursus"]  ¡¿Dónde están nuestros refuerzos?! Nos van a arrollar...
+[name="Miembro de Reunion"]  ¡Ataquen, ataquen!
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image]
+[Blocker(a=0, fadetime=1, block=true)]
+[Dialog]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]  ¿Qué está pasando...?! ¿Por qué... Por qué Reunion está haciendo esto...?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Después de todos estos años, los lobos con piel de oveja por fin muestran los colmillos.
+[Character(name="char_016_medic")]
+[name="Médico"]  Los Infected... ¡están, están atacando a las tropas de Ursus!
+[Character(name="char_013_riop")]
+[name="Guardia"]  ¡¿Pero por qué?! ¡Desafiar así al gobierno de Ursus es prácticamente un suicidio!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  No, mira lo feroz que es este ataque. Esto tuvo que ser una operación planeada.
+[name="Dobermann"]  El lugar del que rescatamos al Doctor se suponía que era altamente secreto... pero de algún modo lograron infiltrarse.
+[name="Dobermann"]  Es posible que el ataque de Reunion ya se haya extendido por todo Chernobog.
+[Character(name="char_013_riop")]
+[name="Guardia"]  No... Cómo, cómo puede ser...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Shhhh!
+[StopMusic(fadetime=0.8)]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Miembro de Reunion A"]  ¿Ya encontraste a alguno de esos Chernos que huyen?
+[name="Miembro de Reunion B"]  ¡Sigo buscando!
+[name="Miembro de Reunion A"]  ¡Bien, no dejes que se escape ni uno solo!
+[name="Miembro de Reunion A"]  Esas bestias de sangre fría... ¡les haré pagar lo que le hicieron a mi familia!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]  (*tos*)
+[Dialog]
+[Character]
+[name="Miembro de Reunion A"]  ¿Qué fue eso?
+[name="Miembro de Reunion B"]  ¡Por allá!
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[Character(name="char_016_medic")]
+[name="Médico"]  (¡Mmfh!)
+[name="Médico"]  (Nos... nos encontraron...)
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  (¡Shh!)
+[Character(name="char_016_medic")]
+[name="Médico"]  (¡Mmf...!)
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[Delay(time=1.5)]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Mujer"]  ...Ugh...
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_cher_1",x=0, y=20, xScale=1.1, yScale=1.1, fadetime=1)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Miembro de Reunion A"]  ¡Por aquí! ¡Los encontré!
+[name="Mujer"]  ...¡¡¡¡Noooo!!!!
+[name="Mujer"]  ¡Aaah! No, no lo hagas...
+[name="Miembro de Reunion B"]  ...!
+[name="Miembro de Reunion B"]  ¿Escondiéndote en un callejón?
+[name="Miembro de Reunion B"]  Sal de ahí.
+[name="Mujer"]  ¡Aaaaahh...!
+[name="Miembro de Reunion B"]  ¿De verdad creíste que no te encontraríamos ahí...?
+[name="Mujer"]  ¡Lo... lo siento! ¡¡Lo siento mucho!! ¡Por favor, al menos perdona a mi hijo!
+[name="Miembro de Reunion B"]  ...
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ...Tenemos que detener esto, ahora.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Amiya...
+[Character(name="char_002_amiya_1#7",name2="char_130_doberm_ex",focus=1)]
+[name="Amiya"]  Soy consciente del riesgo, Instructora Dobermann.
+[name="Amiya"]  Es solo que... no podemos darnos el lujo de quedarnos esperando a que Reunion se disuelva.
+[name="Amiya"]  Además, nadie sabe cuánto durará esta situación...
+[name="Amiya"]  Por lo tanto, lo mejor sería eliminar al enemigo y luego ponernos en marcha. ¿No te parece?
+[Character(name="char_002_amiya_1#7",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  ...
+[name="Dobermann"]  Entendido. Seguiré tu orden.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Todos los escuadrones, escuchen.
+[name="Dobermann"]  Tenemos el factor sorpresa: estos miembros de Reunion aún no saben que estamos aquí.
+[name="Dobermann"]  Recuerden, ¡sean decididos! Elimínenlos, de forma limpia y veloz.
+[name="Dobermann"]  Dr. {@nickname}, reúne a tu equipo. Es hora de que demuestres tu valía.
+[name="Dobermann"]  Ya no tenemos tiempo para dudar de nosotros mismos.
+[Decision(options="Deberías habérmelo dicho antes.;...;Un asunto sencillo. Yo me encargo.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Ja.
+[name="Dobermann"]  Amiya, cuento contigo.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  Entendido.
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Image(image="avg_1_3",x=0, y=-20, xScale=1.1, yScale=1.1, fadetime=1)]
+[ImageTween(xFrom=0, yFrom=-20, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=4, block=false)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Delay(time=0.6)]
+[name="Amiya"]   'Silenciosos seremos, si el conflicto puede evitarse--
+[name="Amiya"]   --¡pero lucharemos con uñas y dientes, si es necesario!'
+[name="Amiya"]  El credo de Rhodes Island... ¡siempre ha sido el mismo!
+[Delay(time=0.6)]
+[Dialog]
+[Image(image="avg_1_3",x=0, y=0, xScale=1, yScale=1, fadetime=1)]
+[PlaySound(key="$flashback", volume=0.7)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-700, xScaleFrom=1, yScaleFrom=1, xScaleTo=8, yScaleTo=8, duration=1.6, block=false)]
+[PlaySound(key="$flashback", volume=0.7, Delay=0.3)]
+[PlaySound(key="$flashback", volume=0.7, Delay=0.7)]
+[Delay(time=0.2)]
+[Blocker(a=1,r=255, g=255, b=255, fadetime=0.3, block=true)]
+[Image]
+[Blocker(block=true, fadetime=0.5)]

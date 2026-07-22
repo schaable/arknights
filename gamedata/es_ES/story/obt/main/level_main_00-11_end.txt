@@ -1,0 +1,120 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 6 (después)
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Reconocimiento completo. Puedo confirmar que los enemigos que nos perseguían han sido eliminados.
+[name="Dobermann"]  Hemos logrado romper su cerco. Pronto estaremos en las afueras de Chernobog.
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=1)]
+[name="Ace"]    Aunque los enemigos que derrotamos hoy eran solo una pequeña parte de toda la fuerza...
+[name="Ace"]    Al menos estamos a salvo por ahora.
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=2)]
+[name="Nearl"]  Gracias por lo que hiciste allá atrás. Estoy en deuda contigo para siempre.
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=1)]
+[name="Ace"]    No digas esas cosas. De todos modos, no tengo derecho a pedirle una recompensa al Caballero Radiante.
+[name="Ace"]    En fin, hablemos de ese francotirador, Nearl.
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=2)]
+[name="Nearl"]  Claro.
+[name="Nearl"]  Dejando de lado el poder destructivo de esa balista...
+[name="Nearl"]  Creo... que tal vez colocó varias torretas por adelantado, además de otros dispositivos de disparo automático.
+[name="Nearl"]  Me apuntaron desde distintas direcciones... pero solo vi a un francotirador.
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=1)]
+[name="Ace"]    Yo tuve la misma sensación.
+[name="Ace"]    El primer y el segundo disparo estallaron casi al mismo tiempo, pero hubo un retraso notable entre ellos.
+[name="Ace"]    Esos disparos no salieron de la misma balista de repetición. Al menos, cuando devolvimos el fuego, no apuntábamos al mismo francotirador.
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=2)]
+[name="Nearl"]   Ace, ¿te diste cuenta de algo?
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=1)]
+[name="Ace"]    No puedo asegurarlo. ¿Y si el enemigo se movía tan rápido... hasta el punto de estar prácticamente en varios lugares a la vez?
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=2)]
+[name="Nearl"]  No hay forma de que alguien pueda moverse tan rápido. Ni siquiera puedo imaginar cómo sería posible.
+[name="Nearl"]  No podemos subestimar lo peligrosa que es Reunion.
+[Character(name="char_130_doberm_ex",name2="char_148_nearl_1", focus=1)]
+[name="Dobermann"]  Fue ese mocoso malicioso quien ordenó al francotirador ir tras de ti. Ni siquiera recurrió al francotirador cuando nos atacaba a nosotros...
+[Character(name="char_130_doberm_ex",name2="char_148_nearl_1", focus=2)]
+[name="Nearl"]  Parece que esa personalidad repugnante suya está respaldada por un poder real.
+[Character(name="char_014_riope", name2="char_148_nearl_1", focus=1)]
+[name="Ace"]    Sin embargo, nunca nos atacó, ni siquiera cuando estaba enojado.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Así que, o sus capacidades de combate son deficientes, o simplemente eligió no mostrar aún sus verdaderas habilidades.
+[name="Dobermann"]  Con solo ver sus habilidades de mando en acción... me vuelvo muy suspicaz.
+[name="Dobermann"]   Comandaba a sus tropas como marionetas...
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]   En cualquier caso, ya no estamos en territorio que él controle.
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Nearl... Gracias.
+[name="Amiya"]  De no haber sido por tu oportuna llegada, habríamos estado en grave peligro.
+[Character(name="char_002_amiya_1#1", name2="char_148_nearl_1#1", focus=2)]
+[name="Nearl"]  Solo seguía el plan que acordamos de antemano.
+[name="Nearl"]  Fuiste tú quien nos pidió a Ace y a mí que hiciéramos ajustes según la situación.
+[name="Nearl"]  Resolviste tu propio problema.
+[name="Nearl"]  De camino aquí, vi el alcance de las atrocidades de Reunion, y tuve dudas sobre su poder.
+[name="Nearl"]  ¿Y si me hubiera detenido a enfrentar a sus fuerzas?
+[name="Nearl"]  ¿Y si hubiera ayudado a Ursus a defenderse de Reunion?
+[name="Nearl"]  ¿Y si me hubiera quedado en el punto de encuentro, esperando a que vinieras hasta mí?
+[Character(name="char_002_amiya_1#1", name2="char_148_nearl_1#7", focus=2)]
+[name="Nearl"]  ...Si yo hubiera sido quien tomara las decisiones, no hay forma de saber cuánto peor podría haber sido el resultado.
+[name="Nearl"]  No se me da bien pensar varios pasos por adelantado. La única forma que conozco de conseguir lo que quiero es seguir peleando.
+[Character(name="char_002_amiya_1#1", name2="char_148_nearl_1#1", focus=2)]
+[name="Nearl"]  Amiya, yo solo cumplía con mi deber, pero tú tienes la capacidad de poner fin a la crisis.
+[name="Nearl"]  Te ganaste esta victoria, así que ten un poco más de confianza en ti misma.
+[Character(name="char_002_amiya_1#1", name2="char_148_nearl_1#1", focus=1)]
+[name="Amiya"]  Señorita Nearl...
+[Character(name="char_002_amiya_1#1", name2="char_148_nearl_1#6", focus=2)]
+[name="Nearl"]  Je, je.
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]  Entonces, esta persona que está a tu lado debe de ser el Doctor.
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Así es. Pero...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Cada vez que conocemos a alguien, Amiya tiene que repetir la historia de cómo el Doctor sufre de amnesia. Qué fastidio...
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]   Dr. {@nickname}...
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]   Una de mis amigas también perdió sus recuerdos. Estoy segura de que ustedes dos se llevarán bien.
+[name="Nearl"]   Después de todo, deberías entender lo valioso que es vivir el presente.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]  ¡Ajá...!
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]  Pongámonos en marcha, todos.
+[name="Nearl"]  Todavía tenemos que escoltar al Doctor hasta Rhodes Island.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_cher_5", width=1, height=1, fadetime=0)]
+[Blocker(a=0, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_1508_Faust_1",fadetime=2,block=true)]
+[name="Faust"]   Lo siento... Fracasé.
+[Character(name="char_1507_Mephisto_1#1",name2="char_1508_Faust_1",focus=1)]
+[name="Mephisto"]  No, no te disculpes. Fue mi error. Perdí los estribos.
+[name="Mephisto"]  ¿Puedes ayudarme a rastrear a Rhodes Island? Primero le informaré la situación a Talulah.
+[name="Mephisto"]  Para ahora, ya debería haber tomado la torre de mando central de Chernobog.
+[name="Mephisto"]  ...Ella decidirá el destino de estos insectos.
+[Character(name="char_1507_Mephisto_1#1",name2="char_1508_Faust_1",focus=2)]
+[name="Faust"]   ...Entendido.
+[Character(name="char_1507_Mephisto_1#2",name2="char_1508_Faust_1",focus=1)]
+[name="Mephisto"]  Ten cuidado. Tu seguridad es lo más importante, ¿de acuerdo?
+[Character(name="char_1507_Mephisto_1#1",name2="char_1508_Faust_1",focus=2)]
+[name="Faust"]   ...Lo tendré.
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   ...Supongo que mi misión también está cumplida.
+[Delay(time=0.6)]
+[name="Mephisto"]   Vámonos, camaradas.
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep00_2",x=0, y=0, xScale=1, yScale=1, fadetime=3, screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]   ¡¡Salgamos a recibir nuestra nueva era!!
+[delay(time=3)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

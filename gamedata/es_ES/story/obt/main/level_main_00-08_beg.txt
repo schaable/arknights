@@ -1,0 +1,151 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 5 (antes)
+[Background(image="bg_cher_5", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1507_Mephisto_1#6",name2="char_1502_crowns#1",focus=2)]
+[name="Crownslayer"]    ...
+[name="Crownslayer"]    ¿Mephisto?
+[Character(name="char_1507_Mephisto_1#6",name2="char_1502_crowns#1",focus=1)]
+[name="???"]    No tienes motivos para objetar, ¿verdad? Solo unos cuantos insectos que volaron demasiado cerca de la luz... ¿de verdad valen tu tiempo?
+[name="???"]    Mis tropas ya recibieron tu información. Ya cumpliste con tu parte.
+[name="???"]    Lo único que te queda por hacer es volver a casa. Después de todo, tú solo eres responsable del sector central de energía y sus alrededores...
+[Character(name="char_1507_Mephisto_1#6",name2="char_1502_crowns#1",focus=2)]
+[name="Crownslayer"]    No hagas nada innecesario...!
+[Character(name="char_1507_Mephisto_1#6",name2="char_1502_crowns#1",focus=1)]
+[name="???"]    Todavía tienes que estar en otro sitio, ¿no?
+[Character(name="char_1507_Mephisto_1#6",name2="char_1502_crowns#1",focus=2)]
+[name="Crownslayer"]    ...
+[name="Crownslayer"]    Bien. Como quieras.
+[name="Crownslayer"]    No veo la hora de verte fracasar.
+[Character(name="char_1507_Mephisto_1#6",name2="char_1502_crowns#1",focus=1)]
+[name="???"]    ¿Oh...?
+[Character(name="char_1502_crowns#1")]
+[name="Crownslayer"]    Nos vamos.
+[PlaySound(key="$d_gen_walk_n")]
+[Character(fadetime=0.6)]
+[delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ...
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(fadetime=0.6)]
+[delay(time=1)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]    ¿Uno de los líderes enemigos... acaba de tomar una parte de las tropas de Reunion y se fue?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¿Qué traman?
+[name="Dobermann"]    Sea lo que sea, no podemos bajar la guardia... ¡El enemigo aún nos supera muchas veces en número!
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_1507_Mephisto_1#6")]
+[name="???"]    Vaya, vaya. Permítanme disculparme en nombre de Crownslayer por su grosería.
+[Character]
+[delay=1]
+[Character(name="char_1507_Mephisto_1#1",fadetime=1)]
+[Delay(time=1)]
+[name="Mephisto"]    Pueden llamarme Mephisto.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¿Qué intenta lograr Reunion?
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Oh, nada en particular. Para ser sincero, ni siquiera me molestaría dejarlos ir. Para empezar, ustedes ni siquiera eran nuestros objetivos.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    Si no éramos tus objetivos, entonces por qué...
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Sin embargo, tuve el honor de observar sus batallas.
+[name="Mephisto"]    Sus tácticas de combate, así como la configuración de su personal, resultaron bastante intrigantes.
+[Character(name="char_016_medic")]
+[name="Médico"]    ¿...Intrigantes?
+[name="Médico"]    ¿Crees que la carnicería de la batalla es... intrigante?
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Rhodes Island... he leído sobre su grupo antes.
+[name="Mephisto"]    Al principio, pensé que no eran más que otra compañía común y corriente.
+[name="Mephisto"]    Pero por lo que parece, ¿no creen que sus ambiciones se han alejado un poco demasiado de jugar con tubos de ensayo?
+[name="Mephisto"]    Sería terriblemente aburrido si les permitiera simplemente salir de aquí, ¿no?
+[name="Mephisto"]    Lo que me gustaría es tener una pequeña competencia, una especie de ritual.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ...No tenemos tiempo que perder con un crío inmaduro.
+[name="Dobermann"]    (Amiya, prepárate. Puede que tengamos que abrirnos paso por la fuerza.)
+[name="Dobermann"]    (¡Yo llamaré su atención...!)
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    (¡Mm, de acuerdo!)
+[Character(name="char_130_doberm_ex")]
+[dialog]
+[PlaySound(key="$d_gen_signalbomb")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[delay(time=2.2)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=1, block=true)]
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    ...¿Qué fue eso hace un momento? ¿A quién le enviabas una señal?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    No es asunto tuyo, mocoso.
+[name="Dobermann"]    (¿Amiya?)
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Vamos, aquí todos somos profesionales. ¿Dónde quedó tu cortesía básica?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¡Si no existiera gente como tú, no tendría que estar afilando mis insultos constantemente!
+[name="Dobermann"]    (¿Amiya, qué está pasando?)
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    (Dobermann... ¡Todas nuestras rutas de escape han sido bloqueadas por sus tropas!)
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    (¡¿Cómo puede ser?! ¿Cómo logró hacer eso en apenas unos minutos--)
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Esto simplemente no puede ser.
+[name="Mephisto"]    A pesar de que les di mi sincera invitación...
+[name="Mephisto"]    Pero lo único en lo que pueden pensar...
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]    ...¿es en huir?!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¡Tsk...!
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    En realidad, los dejaré salir a salvo de mis terrenos de caza siempre y cuando ganen.
+[name="Mephisto"]    Hasta entonces, mis amigos aquí seguirán intentando matarlos.
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]    ¡Es su victoria mientras no mueran! Las reglas son bastante sencillas, ¿verdad?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¡Ace!
+[Character(name="char_014_riope" )]
+[name="Ace"]    Ya estamos listos para abrirnos paso.
+[name="Ace"]    ¡Pero primero tenemos que rechazar sus ataques!
+[Character(name="char_002_amiya_1#7",name2="char_1507_Mephisto_1#1",focus=1)]
+[name="Amiya"]    ...
+[name="Amiya"]    ¿Por qué haces esto? ¡La Catástrofe se acerca! Si no salimos de Chernobog, entonces todos--
+[Character(name="char_002_amiya_1#7",name2="char_1507_Mephisto_1#1",focus=2)]
+[name="Mephisto"]    De qué estás hablando...
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]    La Catástrofe... la convierte en el mejor momento para celebrar.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    Estás enfermo...
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]    Mis estimados invitados, es un honor invitarlos a este juego.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]    Argh... ¡Argh...!
+[name="Miembro de Reunion"]    Mata... ¡Mata! ¡Mátalos... a todos!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¡Amiya! ¡Cuidado!
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Cierto, cierto...
+[name="Mephisto"]    En realidad, sabemos exactamente lo que hiciste en el área central.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]    ...!
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Esa persona enmascarada que rescataron... me deja muy, muy curioso.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    —?!
+[Character(name="char_1507_Mephisto_1#1")]
+[name="Mephisto"]    Crownslayer está tan obsesionada con lo que harán a continuación, con a dónde irán.
+[name="Mephisto"]    Pero yo soy distinto. Lo que a mí me importa es...
+[name="Mephisto"]    ¿Qué eres exactamente? ¿De dónde vienes?
+[name="Mephisto"]    Sí, tú. El que me está mirando fijamente ahora mismo... Eres algo distinto a nosotros.
+[name="Mephisto"]    ¿Qué era ese dispositivo en aquella instalación que fue capaz de preservar tu vida?
+[name="Mephisto"]    Estoy tan, tan curioso.
+[name="Mephisto"]    ¿Ves? No soy una persona tan despiadada...
+[name="Mephisto"]    Entonces qué dicen, mis estimados invitados de Rhodes Island, ¿qué tal si me entregan a esta persona como regalo?
+[name="Mephisto"]    Sería una lástima terminar el juego antes de tiempo, pero al menos dejaré ir al resto de ustedes. ¿Qué les parece?
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    Doctor...
+[name="Amiya"]    ¡¡Ponte detrás de mí!!
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

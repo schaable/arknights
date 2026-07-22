@@ -1,0 +1,93 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 4 (antes)
+[Background(screenadapt="coverall", image="bg_cher_5", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...Está cada vez más oscuro.
+[name="Amiya"]   Es como si las nubes se apretaran contra el horizonte...
+[name="Amiya"]   El aire todavía se siente despejado, pero las nubes oscuras no se mueven. Es como si toda la tensión se estuviera comprimiendo en un solo punto.
+[name="Amiya"]   Hasta el viento se ha detenido...
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  No hay duda. Una Catástrofe está a punto de caer sobre esta ciudad.
+[name="Dobermann"]  Por lo que parece, Chernobog ha quedado completamente paralizada por los ataques de Reunion.
+[name="Dobermann"]  Pero cuando se trata de inutilizar una ciudad nómada, los preparativos deben de haberse hecho con varias semanas de antelación.
+[name="Dobermann"]  ¿Podría Reunion haber tomado alguna otra acción desde entonces...?
+[Character(name="char_014_riope",name2="char_013_riop",focus=1)]
+[name="Ace"]   Eso es un poco irreal.
+[name="Ace"]   Según lo que hemos visto, Reunion actualmente no muestra la clase de disciplina que se necesita para orquestar una toma encubierta.
+[Character(name="char_014_riope",name2="char_013_riop",focus=2)]
+[name="Guardia"]   La mayoría de los miembros de Reunion siguen vagando por las calles, vengándose de los chernobogianos.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Todo se reduce a peleas sin sentido, asesinatos e incendios.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Cuando caiga la Catástrofe, hasta la inexpugnable Chernobog quedará hecha pedazos...
+[name="Dobermann"]  ...y se convertirá en ruinas repletas de Originium.
+[name="Dobermann"]  Si lo que buscan es fama o fortuna, Reunion está condenada al fracaso.
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=1)]
+[name="Amiya"]   Incluso con la cadena de mando de Ursus hecha un desastre, sigo dudando que Reunion sea capaz de enfrentar a su ejército...
+[name="Amiya"]   ¿Por qué el ejército de Ursus aún no ha organizado un contraataque?
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Por mi experiencia, cuando estalla un motín, el ejército suele lograr sofocarlo de inmediato.
+[name="Dobermann"]  Pero acabamos de presenciar cómo los guardias de Ursus eran superados...
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=1)]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Esa líder enmascarada de Reunion tal vez estaba por encima del resto... pero de ningún modo podría destruir ella sola toda la ciudad.
+[name="Dobermann"]  A menos que...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿A menos que qué?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  He peleado en muchas batallas antes...
+[name="Dobermann"]  He visto a mucha gente que actuaba igual que esa líder de Reunion.
+[name="Dobermann"]  Para ellos, los soldados no son más que peones que se desechan en cuanto han cumplido su propósito.
+[name="Dobermann"]  A los soldados se les puede usar con eficiencia cuando hacen falta, y luego abandonarlos a su suerte cuando no.
+[name="Dobermann"]  Porque el costo de entrenamiento y mantenimiento es demasiado alto.
+[Character(name="char_014_riope" )]
+[name="Ace"]   Entonces, ¿no hay un ejército permanente?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Correcto. La mayoría de las veces, basta con alimentarlos con un poco de odio o miedo...
+[name="Dobermann"]  Todo lo que se necesita para enardecerlos... es un pequeño empujón.
+[name="Dobermann"]  Si la forma en que actuó esa líder de Reunion sirve de indicio de cómo se dirige la organización...
+[Character(name="char_013_riop")]
+[name="Guardia"]   Ugh...
+[name="Guardia"]   ¿Cualquier Infected podría unirse a Reunion con solo ponerse un uniforme y una insignia?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Correcto..
+[name="Dobermann"]  Así que... eso explica sus interminables números.
+[name="Dobermann"]  Hay demasiados Infected oprimidos, tratando desesperadamente de alzar la voz. Por muy endebles que sean las soluciones que Reunion les ofrece...
+[name="Dobermann"]  Mientras vean una luz al final del túnel, con gusto darán su vida por perseguirla, aunque eso signifique lanzarse a un mar de fuego infernal.
+[Character(name="char_016_medic")]
+[name="Médico"]   Ugh...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Dr. {@nickname}.
+[name="Dobermann"]  Ellos no son como nosotros. Aunque no confíe plenamente en ti, al menos confío en tus habilidades.
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Y en total contraste contigo...
+[name="Dobermann"]  Esa clase de líder no es un comandante.
+[name="Dobermann"]  Aquellos que pisotearían por igual a enemigos y camaradas... o mejor dicho, 'secuaces'.
+[name="Dobermann"]  Quizás ni siquiera secuaces. Para Reunion, esos matones tal vez no eran más que peones.
+[name="Dobermann"]  Esto no es un líder, sino un tirano.
+[Character(name="char_014_riope" ,name2="char_130_doberm_ex",focus=1)]
+[name="Ace"]   No importa quiénes sean nuestros enemigos, cumpliremos nuestra misión.
+[name="Ace"]   Alguien una vez nos enseñó a mí y a mis compañeros--
+[name="Ace"]   'Si te enfrentas a un peón, captúralo; si te enfrentas a una fortaleza, derríbala; si te enfrentas a la Corona, derrócala.'
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[Character(name="char_014_riope" ,name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Ace, espera un momento.
+[Character(name="char_014_riope" )]
+[name="Ace"]   Dr. {@nickname}, hay tropas enemigas con armadura ligera apostadas frente a nosotros.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¿Nos han descubierto?
+[Character(name="char_014_riope" )]
+[name="Ace"]   Todavía no.
+[Character(name="char_014_riope" ,name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Sin embargo...
+[Character(name="char_014_riope" ,name2="char_130_doberm_ex",focus=1)]
+[name="Ace"]   No podremos evitarlos. La ruta que seguimos es la más corta; si damos un rodeo, perderemos un tiempo que no tenemos.
+[Character(name="char_014_riope" ,name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Entonces no hace falta seguir discutiendo. Matones o peones, ¡lo único que importa es que los saquemos de nuestro camino!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

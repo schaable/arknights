@@ -1,0 +1,98 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 2 (antes)
+[Background]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_cher_1",fadetime=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ...Esto supera con creces mis expectativas...
+[name="Dobermann"]  Explosiones, disturbios, incendios, peleas en las calles...
+[name="Dobermann"]  ¿Chernobog ha caído por completo en el caos?
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Image(image="bg_0_tv",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[name="Presentador de TV"]   Gracias a la rápida respuesta y al trabajo en equipo de la Policía Militar de Chernobog...
+[name="Presentador de TV"]   ...la situación está en gran medida bajo control. Los incidentes en la mayoría de las zonas ya han sido contenidos.
+[name="Presentador de TV"]   Actualmente, la Policía Militar ya ha rodeado a los matones que habían tomado Vaschuk Prospect.
+[name="Presentador de TV"]   Como pueden ver, esta violencia sin sentido está a punto de terminar.
+[name="Presentador de TV"]   Por favor, no entren en pánico. Permanezcan en sus hogares y esperen otra victoria para Chernobog...
+[name="Presentador de TV"]   ¡Que la gloria de Ursus bendiga al Emperador y a su pueblo!
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_cher_1",fadetime=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ...
+[Character]
+[name="Guardia de Ursus"]   Malditos sean... ¡¿de dónde diablos sacaron esa clase de equipo y armas?!
+[name="Capitán de Ursus"]   ¡No se asusten! ¡Los cobardes con armadura siguen siendo cobardes! ¡No son más que un montón de matones sin entrenamiento!
+[name="Guardia de Ursus"]   Pero... hay tantos de ellos...!
+[name="Capitán de Ursus"]   ¡Ya hemos derrotado a fuerzas tres veces mayores que la nuestra! ¡Háganlo de nuevo y la batalla habrá terminado!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Basta de tonterías, escoria de Chernobog!
+[Character]
+[name="Capitán de Ursus"]   ¿Ustedes, inmundicia, creen que pueden enfrentarnos?
+[name="Capitán de Ursus"]   El exilio y los trabajos forzados son demasiado buenos para los de tu clase. ¡Deberíamos haberlos ejecutado a todos en el momento en que los capturamos!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Cómo te atreves...!
+[Character]
+[name="Guardia de Ursus"]   ¡Ugh...! Nos están embistiendo de nuevo. ¡Nuestras líneas del frente no aguantarán mucho más!
+[name="Capitán de Ursus"]   ¡Por el Emperador! ¡Mantengan sus posiciones!
+[name="Guardia de Ursus"]   Yo... ¡ya no puedo más...!
+[name="Capitán de Ursus"]   ¡Cualquiera que huya será ejecutado en el acto!
+[name="Guardia de Ursus"]   *tos* *tos*...
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_013_riop")]
+[name="Guardia"]  Tenemos que...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Quédense quietos! ¡Aún no debemos exponernos!
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   ¿Los guardias de Ursus... están siendo superados por Reunion?
+[Character(name="char_002_amiya_1#5",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Hmph... Lo que están transmitiendo por televisión no podría estar más lejos de la verdad.
+[name="Dobermann"]  Incluso en esta situación, las autoridades de Chernobog siguen con sus juegos.
+[name="Dobermann"]  Pero las cosas también empeoran para nosotros. Ya no podemos esperar salir a escondidas.
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=1)]
+[name="Amiya"]   Caminos en pésimas condiciones y bloqueos enemigos... Ya no podremos usar nuestros propios vehículos...
+[Character(name="char_002_amiya_1",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Así es. El equipo de rescate debe ser lo bastante grande para despejar a cualquier miembro de Reunion que bloquee nuestro camino.
+[name="Dobermann"]  Dividirnos aún más sería un suicidio.
+[Character(name="char_013_riop")]
+[name="Guardia"]  Estos guardias de Ursus...
+[name="Guardia"]  Puede que parezcan poderosos porque están bien equipados, pero Reunion...
+[name="Guardia"]  ¡Reunion tiene claramente una ventaja abrumadora en número y moral!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Esto no se parece en nada a cuando investigamos Chernobog por primera vez...
+[name="Dobermann"]  Cuando nos infiltramos, la cantidad, distribución y estado de los guardias y el ejército de Chernobog estaban en una situación muy extraña.
+[name="Dobermann"]  En ese entonces, simplemente no lográbamos entender por qué.
+[Character(name="char_013_riop")]
+[name="Guardia"]  ¿Acaso Reunion ya había destruido la mayoría de las defensas de Chernobog para ese momento?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Aunque no tengo pruebas, si Reunion ha crecido lo suficiente como para lanzar una operación de tal magnitud...
+[name="Dobermann"]  ... Lo único que puedo decir es que me siento afortunado de que esos guardias estén siendo rodeados, y no nosotros.
+[name="Dobermann"]  Por supuesto, debemos estar atentos a nuestro entorno. Para cuando nos veamos en una crisis, ya será demasiado tarde--
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ... Doctor, apúrate y reúne a tus equipos.
+[name="Amiya"]   Nuestros exploradores han descubierto fuerzas de Reunion. ¡Están a punto de entrar en contacto con nuestro equipo de rescate!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Por ahora, ser cautelosos es la única ventaja que podemos tener.
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Hmm?
+[name="Miembro de Reunion"]   ¿Por qué hay una fuerza armada aquí?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Todos los equipos, prepárense para el combate! ¡No les den ninguna oportunidad de contraatacar!
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

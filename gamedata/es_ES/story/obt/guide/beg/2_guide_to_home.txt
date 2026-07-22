@@ -1,0 +1,171 @@
+[HEADER(is_tutorial=true, is_skippable=true, is_autoable=true, fit_mode="BLACK_MASK", deny_auto_switch_scene=true)] Guía 2 a la interfaz principal
+[stopmusic(fadetime=1)]
+[Background(image="bg_indoor_1", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_013_riop")]
+[name="Guardia"]   ¡Este es el último!
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[name="Miembro de Reunion"]   ¡Ugh!
+[Character(name="char_013_riop")]
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=0.5)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5)]
+[Character(name="char_013_riop")]
+[name="Guardia"]   Objetivo eliminado. ¡El escuadrón enemigo se está retirando!
+[name="Guardia"]   Las órdenes del Dr. {@nickname} fueron perfectas, tal como dijo Amiya. ¡Qué alivio!
+[Character(name="char_002_amiya_1#10")]
+[name="Amiya"]   ¿Ves? No estuvo tan mal, ¿verdad?
+[name="Amiya"]   Doctor, comparado con todo lo que has vivido, esto es pan comido.
+[Character(fatetime=0.5, block=true)]
+[delay=1]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   *tos*...Por qué están aquí... No son de Ursus...
+[name="Miembro de Reunion"]   ¡No... dejaremos que se interpongan en nuestro deber!
+[dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$p_imp_whip_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_130_doberm_ex")]
+[name="???"]   ¡Ni lo pienses!
+[Character(name="char_013_riop")]
+[name="Guardia"]   ¡Instructora!
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   ¿Por qué te distraes? ¡Casi haces que te maten!
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
+[name="Guardia"]   ¡Lo... lo siento!
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   ¡Rápido! ¡Vuelvan a la formación!
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
+[name="Guardia"]   ¡Sí, señora!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Dobermann! ¡Lo lograste!
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   Es una emergencia. Mi equipo también fue atacado por Reunion.
+[name="Dobermann"]   Vine corriendo a unirme a ustedes en cuanto pude.
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]   ¿Por qué nos atacaría Reunion...?
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   Una organización formada por Infected... siempre pensé que eran un poco extremistas...
+[name="Dobermann"]   ...¿y ahora han recurrido a la violencia, y nada menos que en una ciudad de Ursus? Eso es un deseo de muerte.
+[name="Dobermann"]   La situación solo se volverá más caótica de aquí en adelante.
+[name="Dobermann"]   Amiya, tenemos que salir de Chernobog ahora mismo.
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]   De acuerdo. Ya rescatamos al Doctor, así que podemos retirarnos según el plan.
+[Delay(time=0.5)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ...¿Y este es el Dr. {@nickname}?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Sí.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    Dr. {@nickname}, probablemente no sepas quién soy, pero conoces a Amiya. Por tu seguridad...
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]   No, no...
+[name="Amiya"]   Em, Dobermann, el Doctor no está muy bien en este momento.
+[name="Amiya"]   Para decirlo de forma simple, el Doctor... tiene amnesia.
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]    ¿Amnesia?
+[name="Dobermann"]    ...¿Qué vas a hacer ahora? ¿No planeabas transferir el liderazgo a—
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]   El Doctor todavía tiene la capacidad de comandar.
+[name="Amiya"]   ...Al menos, eso lo confirmé en la batalla anterior.
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   ...
+[name="Dobermann"]   No logro confiar en un desconocido tan fácilmente.
+[name="Dobermann"]   Pero confío en ti, Amiya.
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]   ...Entiendo.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Dr. {@nickname}, soy Dobermann, capitana del Equipo de Operaciones E1.
+[name="Dobermann"]   Vamos a escoltarte desde Chernobog, la ciudad de Ursus en la que estamos ahora, de regreso a Rhodes Island.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image(image="avg_map_1")]
+[ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.3, yScaleTo=1.3, xTo=-200, duration=75, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[name="Dobermann"]   Estamos en una instalación abandonada en Chernobog y ahora deberíamos dirigirnos al oeste.
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.8, yScaleTo=1.8, xTo=-200, duration=75, block=false)]
+[name="Amiya"]   Pero... como estamos incomunicados de la Dra. Kal'tsit, Dobermann y yo hemos llevado a nuestros equipos por separado hacia el oeste, a un punto de encuentro, antes de confirmar nuestra señal de retirada.
+[name="Amiya"]   Es decir, suponiendo que todo salga según el plan.
+[name="Dobermann"]    Estaría bien que las cosas salieran así de bien.
+[name="Dobermann"]    Hoy es nuestra última oportunidad de sacarte de aquí, Dr. {@nickname}.
+[name="Dobermann"]    Pero... tengo un mal presentimiento sobre esto.
+[character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_016_medic", name2="char_002_amiya_1", focus=1)]
+[name="Médico"]   ¡A-Amiya!
+[Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=2)]
+[name="Amiya"]   ¿Qué ocurre?
+[Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=1)]
+[name="Médico"]   Es... ¡es una llamada de Rhodes Island!
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="Amiya"]   ¿Volvieron nuestras comunicaciones? ¿Es la Dra. Kal'tsit...?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="???"]   Lo siento, pero no exactamente.
+[image(image="bg_2_call")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_002_amiya_1#1", focus=1)]
+[name="Amiya"]   ¿PRTS...?
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   Se activó el Sistema de Solicitud de Conexión Neural de Emergencia.
+[name="PRTS"]   También se ha detectado interferencia del lado de Rhodes Island, y solo es posible una conexión parcial con la Red Neural.
+[name="PRTS"]   Actualmente no es posible establecer comunicación con Kal'tsit, quien aún no ha regresado a Rhodes Island.
+[name="PRTS"]   Tu seguridad está confirmada; por lo tanto, mi misión está ahora cumplida.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Este pedazo de...
+[name="Dobermann"]   ¿De verdad tenemos tiempo para esto...?
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   Si no necesitas conectarte a Rhodes Island, la comunicación se cortará en un momento.
+[name="PRTS"]   Lamento sinceramente haber interrumpido su reunión.
+[Character(name="char_002_amiya_1#5", focus=1)]
+[name="Amiya"]   ¡Espera, espera! No cuelgues, todavía necesito tu ayuda.
+[name="Amiya"]   Dobermann, el Doctor todavía necesita algo de ayuda.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Lo sé, pero que sea rápido.
+[Character(name="char_002_amiya_1#5", focus=1)]
+[name="Amiya"]   Doctor, PRTS también es uno de nuestros... compañeros. Te mostrará qué hacer a continuación.
+[name="Amiya"]   El tiempo apremia, así que voy a reconectarte al sistema de respaldo de Rhodes Island.
+[name="Amiya"]   De esta forma, tendremos una ventaja en la batalla. 
+[name="Amiya"]   Es distinto a dar órdenes verbales y quizás cueste un poco acostumbrarse, pero una vez que aprendas a usarlo, toda la operación será mucho más fluida.
+[name="Amiya"]   ...Por favor, confía en mí. Igual que solías hacerlo.
+[name="Amiya"]   PRTS... Comencemos.
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   Se requiere verificación de identidad. Selecciona el método de verificación.
+[Character(name="char_002_amiya_1#2", focus=1)]
+[name="Amiya"]   Ah, Doctor... Por favor, di algo.
+[Decision(options="(Hablar)", values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.4)]
+[Character(name="char_002_amiya_1#3", focus=-1)]
+[name="PRTS"]   No estoy segura de por qué no hablaste, pero el acto de tocar la interfaz es suficiente—
+[name="PRTS"]   —Coincidencia de huella dactilar encontrada. Verificación completa. Nivel de autorización: 8
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep00",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[name="PRTS"]   Bienvenido a casa, Dr. {@nickname}.
+[Delay(time=0.6)]
+[Background]
+[character]
+[Dialog]
+[Blocker(block=true)]
+[Image]
+[Blocker(afrom=0, a=1, fadetime=1, block=true)]
+[SkipToThis]
+[GotoPage(dest="home")]

@@ -1,0 +1,117 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 2 (después)
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Background(image="bg_cher_1",fadetime=1,screenadapt="coverall")]
+[Delay(time=1)]
+[character(name="char_013_riop")]
+[name="Guardia"]  Ugh... Gahh...
+[name="Guardia"]  Esos matones de Reunion... ¡sí que tienen energía!
+[character]
+[name="Capitán de Ursus"]  ¿Quiénes son ustedes?
+[name="Capitán de Ursus"]  ¡¿Por qué están en Chernobog en un momento como este?!
+[character(name="char_013_riop")]
+[name="Guardia"]  ¿Eh? ¿Qu-qué está pasando--
+[character]
+[name="Capitán de Ursus"]  ¡¿Son espías?!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  (Si se revelan nuestras identidades y el gobierno de Ursus empieza a vigilarnos, ¡las consecuencias serían inimaginables!)
+[name="Dobermann"]  (Si se llega a eso...!)
+[character]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Señor.
+[character]
+[name="Capitán de Ursus"]  ... ¿Una niñita?
+[name="Capitán de Ursus"]  ¿Eres... una Infected?
+[name="Capitán de Ursus"]  ¡Detente ahí mismo! ¡Baja tu arma!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  (Prepárense para respaldarla. Si muestran cualquier señal de hostilidad...)
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=4, block=true)]
+[name="Dobermann"]  (¿Humo? ¿De dónde salió...?)
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Señor, ¡seguramente entiende que tenemos un enemigo en común!
+[name="Amiya"]   ¡Dobermann!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Defensores! ¡Están atacando!
+[character]
+[name="Capitán de Ursus"]  ¿Qu-qué?!
+[character(fadetime=0)]
+[Dialog(fadetime=0)]
+[PlaySound(key="$d_sp_ballista",volume=0.7)]
+[Blocker(a=1, r=100, g=100, b=100, fadetime=0.1,block=true)]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[Delay(time=1)]
+[Character(name="char_1502_crowns",fadetime=0.5)]
+[name="???"]  ......
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Reunion... están aquí.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Amiya, ten cuidado...
+[name="Dobermann"]  ¡Ella está en un nivel completamente distinto al de esos matones comunes!
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[Image(image="avg_1_1",x=0, y=-50, xScale=1.2, yScale=1.2, fadetime=1)]
+[ImageTween(xFrom=0, yFrom=-50, xTo=0, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, xScaleTo=1, yScaleTo=1, duration=10, block=false)]
+[name="???"]  Hmph. ¿Tratando de huir...?
+[name="???"]  ¿A dónde crees que vas?
+[name="???"]  Ve. Despedázalos.
+[name="Miembro de Reunion"]  ...
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=4, block=true)]
+[Background(image="bg_cher_1", width=1, height=1, screenadapt="coverall")]
+[Image]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Incluso sus secuaces parecen estar bien entrenados...
+[name="Dobermann"]  ¿Podría ser ella la cabecilla de Reunion?
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   La bruma se hace cada vez más densa... ¿planean aprovecharla para lanzar un ataque sorpresa?
+[name="Amiya"]   Señor, ¡tenemos que evacuar de inmediato!
+[name="Amiya"]   Si logran cortar nuestra ruta de escape, todos nosotros...
+[Character]
+[name="Capitán de Ursus"]  ...
+[name="Capitán de Ursus"]  Lárgate, Infected.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character]
+[name="Capitán de Ursus"]  Se me encomendó defender esta calle.
+[name="Capitán de Ursus"]  Coneja, no me importa por qué viniste aquí ni qué planeas hacer.
+[name="Capitán de Ursus"]  Si planeas arruinar nuestra ciudad, has de saber que alguien irá tras de ti. La furia de Ursus no tiene fin.
+[name="Capitán de Ursus"]  Si no, entonces lo que ocurra aquí no es asunto tuyo.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ... Entiendo.
+[Character]
+[name="Capitán de Ursus"]  Todos en Ursus saben que jamás hay que darle la espalda al enemigo.
+[name="Capitán de Ursus"]  ¡Ahora largo! No tenemos tiempo para lidiar contigo.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[name="Amiya"]   Gracias.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Dobermann!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Rápido! ¡Lleguemos al primer punto de encuentro!
+[name="Dobermann"]  ¡Todos los equipos, en marcha! ¡Rápido!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[Character(name="char_1502_crowns")]
+[name="???"]  ......
+[Character]
+[name="Capitán de Ursus"]  ¡Vengan por nosotros, inmundos Infected!
+[name="Capitán de Ursus"]  ¿Eso es todo lo que pueden hacer? ¿Se van a quedar ahí parados mirándonos?
+[Character(name="char_1502_crowns")]
+[name="???"]  Todos los chernobogianos...
+[name="???"]  Deben morir.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

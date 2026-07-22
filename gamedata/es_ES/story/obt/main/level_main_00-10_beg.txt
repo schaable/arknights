@@ -1,0 +1,125 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 6 (después)
+[Background(image="bg_cher_5", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]   Qué le pasa a esta mujer...
+[Dialog]
+[Delay(time=0.6)]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   ...Tú, ahí.
+[name="Nearl"]   Las fuerzas de Reunion funcionaron como una máquina bien aceitada cuando se apoderaron de los bastiones militares de Chernobog.
+[name="Nearl"]   Pero tus hombres actúan como matones trastornados.
+[name="Nearl"]   Matanza sin sentido, incendiar la ciudad, cazar inocentes... Todo esto fue por tu propio placer sádico, ¿no es así?
+[name="Nearl"]   Alguien tan ruin como para tramar estos crímenes sin sentido en un momento así... no podría haber diseñado el plan para derribar una ciudad entera.
+[name="Nearl"]   Tu comandante probablemente te ordenó causar caos, pero sucumbiste a tu perversión y tu mal gusto.
+[Character(name="char_1507_Mephisto_1#2")]
+[name="Mephisto"]   ...
+[name="Mephisto"]   ...Faust.
+[name="Mephisto"]   Quiero que le disparen a través de la boca.
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]   ...
+[Character(name="char_148_nearl_1#4")]
+[name="Nearl"]   !
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   *tos* *tos*...
+[Character(name="char_002_amiya_1#7 ")]
+[name="Amiya"]  ¡Nearl!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Su francotirador... ¡es ridículo!
+[name="Dobermann"]  ¡Si golpean a Nearl otra vez, ya no podrá defenderse!
+[Character(name="char_002_amiya_1#7 ")]
+[name="Amiya"]  ¡Nearl, tienes que retirarte!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   No puedo... Es demasiado poderoso. No puedo permitir que golpee a nuestros escuadrones.
+[name="Nearl"]   ¡Tengo que interceptar sus ataques!
+[Character(name="char_1507_Mephisto_1#2")]
+[name="Mephisto"]  ¿Logró bloquear la balista de Faust... con solo un escudo--?!
+[Character(name="char_1507_Mephisto_1#3")]
+[name="Mephisto"]  Increíble... ¡Imposible!
+[name="Mephisto"]  ¡¡Hazlo de nuevo!! ¡Hazla pedazos!
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]    --!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  Qué... ¿viene desde mi derecha?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Oh no! Rápido, esquiva--
+[Character(name="char_014_riope" )]
+[name="Ace"]  ¡Como si te lo fuera a permitir!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#7 ")]
+[name="Amiya"]  ¡Ace!
+[Character(name="char_014_riope")]
+[name="Ace"]   ¡Francotiradores, apunten!
+[name="Ace"]   Apunten a la plataforma elevada al sur. ¡Fuego!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[PlaySound(key="$e_atk_arrow_h")]
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]   ...!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_1507_Mephisto_1#3")]
+[name="Mephisto"]  ¡¿Qué?! Cómo te atreves... ¡Cómo te atreves!
+[Dialog]
+[Character]
+[Character(name="char_002_amiya_1#7 ")]
+[name="Amiya"]  ¿Le dimos?
+[Character(name="char_014_riope" )]
+[name="Ace"]  Lo dudo. Lo máximo que podemos esperar... es ejercer algo de presión sobre él.
+[name="Ace"]  Por desgracia, no tenemos tiempo para diseccionar las tácticas de nuestros enemigos.
+[Character(name="char_014_riope",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  Es muy móvil y tiene gran poder de fuego. ¡Cuanto más se alargue esto, menos probable será que podamos bloquear sus disparos!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  ¡No podemos darle tiempo para prepararse...! ¡Amiya, haz tu movimiento mientras los Francotiradores del Equipo E3 lo mantienen ocupado!
+[Character(name="char_002_amiya_1#7 ")]
+[name="Amiya"]  ¡Entendido!
+[name="Amiya"]  ¡Francotiradores del Equipo E1, vengan conmigo y supriman a las fuerzas de Reunion!
+[name="Amiya"]  ¡Equipo E2, usen todo el poder de fuego que tengan para romper su línea defensiva!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]  Sucias alimañas...
+[name="Mephisto"]  ¿Por qué no se echan obedientemente y mueren de una vez?
+[name="Mephisto"]  ¿Por qué no puedo simplemente acabar con todos ustedes aquí mismo?
+[name="Mephisto"]  ...Quiero matarlos... a cada... uno... de... ustedes...
+[Character(name="char_014_riope" )]
+[name="Ace"]  ¡Nearl, esta es tu oportunidad! ¡Rápido!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡Todos los miembros del Equipo E4, vamos a romper su formación!
+[name="Nearl"]   ¡Vamos a despejar todo lo que se interponga en nuestro camino de un solo golpe!
+[name="Nearl"]   ¡¡Desatémonos!!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ¡Fuego! ¡Fuego! No dejen que se acerque más...
+[name="Miembro de Reunion"]  ¿Eh...?
+[name="Miembro de Reunion"]  ¡¿Qué?! Estaba a veinte metros hace apenas un momento...
+[name="Miembro de Reunion"]  Guhh... ¡Aaarrghh!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[playsound(key="$p_imp_blunt_h")]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   Si desean enfrentarse a un caballero de Kazimierz, vuelvan después de entrenar unas cuantas décadas más.
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=1)]
+[name="Nearl"]   ¡Dobermann! ¡Sígueme!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Entendido!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

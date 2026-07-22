@@ -1,0 +1,106 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 4 (después)
+[Background(image="bg_cher_5", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Según nuestra ruta planeada, deberíamos estar acercándonos al pueblo central del sur de Chernobog.
+[name="Dobermann"]  Llegaremos al punto de encuentro después de cruzar este parque. Si no hay contratiempos, Nearl y el Equipo E4 deberían estar esperándonos allí.
+[Character(name="char_013_riop",name2="char_130_doberm_ex",focus=1)]
+[name="Guardia"]   Pero...
+[name="Guardia"]   Si Nearl fue atacada... ¿Qué haríamos entonces?
+[name="Guardia"]   ¿Y si quisieron alertarnos, pero no pudieron porque las comunicaciones estaban interferidas...?
+[name="Guardia"]   ¿Cómo deberíamos manejar eso?
+[Character(name="char_013_riop",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  ...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Iremos a evaluar la situación.
+[character(name="char_013_riop")]
+[name="Guardia"]   ...Oh...
+[Character(name="char_014_riope",name2="char_013_riop",focus=1)]
+[name="Ace"]   No empieces a especular antes de ver las cosas con tus propios ojos.
+[name="Ace"]   No tiene sentido dejar que la paranoia te domine.
+[Character(name="char_014_riope",name2="char_013_riop",focus=2)]
+[name="Guardia"]   Ya, ya veo...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Perder las comunicaciones ha hecho que la ansiedad se propague por las filas mucho más rápido de lo que imaginaba...
+[name="Dobermann"]  Especialmente con esta Catástrofe cerniéndose sobre nosotros.
+[name="Dobermann"]  Tenemos que apurar el paso.
+[Dialog]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=4, block=true)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]    ...
+[name="Amiya"]    Ugh... ¿Qué es esta bruma...?
+[name="Amiya"]   ¿Acaso será--
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Cuidado!
+[Character(name="char_1502_crowns")]
+[name="???"]  Mátenlos.
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Fuego enemigo entrante!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Es una trampa...!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   --!
+[character(name="char_013_riop")]
+[name="Guardia"]   ¡Esto es malo! ¡Las fuerzas de Reunion aparecieron detrás de nosotros...!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡¿Dónde está nuestro explorador?!
+[character(name="char_013_riop")]
+[name="Guardia"]   ¡Se separó de nosotros!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1502_crowns")]
+[name="???"]  Rhodes Island...
+[name="???"]  Los he atrapado.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ...!
+[name="Miembro de Reunion"]   ¡Mátenlos a todos!
+[Character(name="char_1502_crowns")]
+[name="???"]  ¡Esta vez, moleré tus huesos hasta hacerlos polvo!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Dobermann!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Francotiradores, detengan su avance!
+[name="Dobermann"]  Defensores, mantengan la línea. ¡Prepárense para avanzar!
+[name="Dobermann"]  Ace, prepárate para--
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_1507_Mephisto_1#6",fadetime=2)]
+[stopmusic(fadetime=2)]
+[name="???"]  Tiempo fuera, tiempo fuera--
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ?!
+[Character(name="char_1507_Mephisto_1#6")]
+[name="???"]  Apenas acababa de terminar de purgar la Fortaleza del Sureste, pero vine corriendo en cuanto oí la noticia.
+[name="???"]  Estos son mis terrenos de caza, Crownslayer.
+[Character(name="char_1502_crowns")]
+[name="Crownslayer"]  ...
+[name="Crownslayer"] ¿A qué viniste aquí?
+[Character(name="char_1507_Mephisto_1#6")]
+[name="???"]  ¿No es hora ya de que me los entregues?
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

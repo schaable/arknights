@@ -1,0 +1,126 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 3 (antes)
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Background(screenadapt="coverall", image="bg_cher_5",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Ace!
+[Character(fadetime=0.5)]
+[Character(name="char_014_riope" ,fadetime=0.6)]
+[delay=0.65]
+[Character(name="char_014_riope" )]
+[name="Ace"]  Parece que todos salieron con vida.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Este no es el punto de encuentro... ¿Por qué estás aquí solo?
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Son los que escaparon del área central! ¡No dejen que se escapen!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Tsk, ¡no dejan de perseguirnos!
+[name="Dobermann"]  Equipo E2, prepárense para interceptar--
+[Character(name="char_014_riope")]
+[name="Ace"]   Dobermann, no te dejes llevar. ¡La retirada es nuestra máxima prioridad!
+[name="Ace"]   ¡Amiya, Dr. {@nickname}! ¡Rápido!
+[Character]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Aquí tampoco es seguro.
+[Character(name="char_014_riope")]
+[name="Ace"]  Así es. Todavía tenemos que avanzar hasta el siguiente punto de encuentro.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿Dónde está tu equipo?
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Dónde se esconden, ratas? ¡Háganlos salir!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Aquí vienen de nuevo!
+[Character(name="char_014_riope")]
+[name="Ace"]  Dr. {@nickname}, por favor danos tus órdenes.
+[name="Ace"]  Como en los viejos tiempos.
+[Decision(options="......?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Em, Ace...
+[name="Amiya"]   En realidad, ha ocurrido algo inesperado.
+[name="Amiya"]   El Doctor... sufre de amnesia.
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="Ace"]   ...Ya veo.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Lo siento, Ace... Pero comparado con antes, mucho ha cambiado.
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="Ace"]   ¿Es así? No tienes que disculparte conmigo.
+[name="Ace"]   ¿Las capacidades de mando del Doctor se han visto afectadas por la amnesia?
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=1)]
+[name="Amiya"]   ...Tan agudas como antes.
+[name="Amiya"]   La toma de decisiones del Doctor sigue siendo absolutamente confiable. Te lo puedo asegurar.
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=2)]
+[name="Ace"]   Muy bien entonces. Seguiré las órdenes del Doctor.
+[name="Ace"]   Lo que se ha perdido puede recuperarse.
+[name="Ace"]   Ahora mismo, tenemos entre manos un problema más inminente.
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Están por aquí! ¡Rápido, atrapémoslos!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿Ya terminaron de charlar? ¡Voy a ir a partir algunos cráneos!
+[Character(name="char_014_riope" )]
+[name="Ace"]   Dr. {@nickname}, por favor danos tus órdenes.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   Ve. ¡Libera a la bestia que llevas dentro y haz que sientan tus colmillos!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Doctor! ¡Ace! ¡El enemigo está justo frente a nosotros!
+[Character(name="char_014_riope" )]
+[name="Ace"]   ——
+[Decision(options="¡Muévanse de inmediato!;...Entendido.;Aprovechen la oportunidad para arruinar los planes del enemigo.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_014_riope" )]
+[name="Ace"]   Entendido.
+[name="Ace"]   ¡Equipo E3! ¡Respalden a Dobermann!
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[character(fadetime=0)]
+[Dialog(fadetime=0)]
+[PlaySound(key="$d_sp_ballista",volume=0.7)]
+[Blocker(a=1, r=100, g=100, b=100, fadetime=0.1,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+[name="Miembro de Reunion"]   ¡¿Una emboscada?!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   El Equipo E3 se ha estado moviendo de incógnito todo este tiempo... Ya veo, han estado esperando a que atrapemos al enemigo en una pinza.
+[Character(name="char_014_riope" )]
+[name="Ace"]   Cuando las comunicaciones están interferidas, nuestros equipos deben operar cerca del punto de encuentro. Así, aunque algo nos pase a mí o al explorador...
+[name="Ace"]   La operación en su conjunto aún puede llevarse a cabo. Esa es mi forma de decidir.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  En otras palabras, Ace, dejaste a tu equipo en el punto de encuentro y viniste aquí solo...
+[Character(name="char_014_riope" )]
+[name="Ace"]   Después de todo, neutralizar las amenazas alrededor del punto de encuentro es nuestro objetivo principal.
+[name="Ace"]   Por supuesto, priorizar la comprobación de tu estado es un gran riesgo. De ningún modo pondría en peligro a todo el equipo.
+[name="Ace"]   La razón misma por la que existen los equipos es aumentar la eficiencia táctica, no al revés.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Ja. ¡Continuemos nuestra discusión después de encargarnos de Reunion!
+[Character(name="char_014_riope" )]
+[name="Ace"]   Amiya, es tu turno.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Entendido! ¡Te respaldaré con mis Arts!
+[Character(name="char_014_riope" )]
+[name="Ace"]   Por fin...
+[name="Ace"]   Dr. {@nickname}, por favor comanda a Rhodes Island.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,164 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 1 (después)
+[Background(image="bg_cher_1",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[name="Miembro de Reunion"]  Ugh...
+[name="Miembro de Reunion"]  Ustedes... no son de Ursus...
+[Character(fadetime=0.7)]
+[Dialog]
+[Delay(time=0.7)]
+[Character(name="char_013_riop")]
+[name="Guardia"]   *jadeo* *jadeo*...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Parece que no tuvieron tiempo de avisar a los demás.
+[name="Dobermann"]  ...Bien hecho, Dr. {@nickname}.
+[name="Dobermann"]  Realmente debería evaluar tus capacidades de forma más objetiva.
+[Character(name="char_016_medic")]
+[name="Médico"]  ¿Eh? Amiya... se está acercando a ellos...
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¿Estás bien?
+[Character(name="char_002_amiya_1#2",focus=-1)]
+[name="Mujer"]   ¿Eh? Oh, gracias...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   No hay problema. Es nuestro...
+[Character(name="char_002_amiya_1#2",focus=-1)]
+[name="Mujer"]   ¿Tú... tú también eres un Infected?
+[name="Mujer"]   ¡¿Qué quieren?! No lastimen a mis hijos... se los ruego, por favor no nos hagan daño...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Busca un lugar seguro para esconderte.
+[Character(name="char_002_amiya_1",focus=-1)]
+[name="Mujer"]   *Llanto* ... Por favor, tengan piedad... Déjennos ir...
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]  ...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¿Todos han descansado lo suficiente?
+[Character(name="char_016_medic")]
+[name="Médico"]  Ah, estoy bien...
+[Decision(options="¿Por qué te tiene miedo?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[name="Amiya"]   Dr. {@nickname}...
+[name="Amiya"]   Tú también hiciste una pregunta parecida antes.
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Porque yo... soy un Infected.
+[name="Amiya"]   Dobermann y yo, y la mayoría de los miembros de Rhodes Island, también lo somos.
+[name="Amiya"]   Incluso esos miembros de Reunion contra los que acabamos de pelear...
+[name="Amiya"]   Hemos contraído una enfermedad terrible. Algo que aterra a la mayoría de la gente...
+[name="Amiya"]   'Oripathy.'
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  A quienes han contraído la Oripathy se les llama los 'Infected'.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Dobermann...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Ursus siempre ha tratado con dureza a los Infected.
+[name="Dobermann"]  Digo, ¿quién no? Solo que Ursus resulta ser particularmente despiadado al respecto.
+[name="Dobermann"]  A los civiles se les enseña a temer a los Infected mediante propaganda. Nadie se inmuta cuando cazan a los Infected, y algunos incluso lo celebran.
+[name="Dobermann"]  Por eso Reunion eligió este lugar...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Sin embargo... esta vez, ya no es una simple protesta.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Han comenzado a recurrir a la violencia a gran escala.
+[name="Dobermann"]  Cuando Ursus ponga fin a los disturbios, los Infected en Chernobog solo enfrentarán más crueldad.
+[name="Dobermann"]  ...En cambio, contigo aquí, Dr. {@nickname}, quizás la situación de Rhodes Island mejore.
+[Decision(options="...¿Esto también tiene que ver conmigo?;...;Ya veo, debo de ser bastante importante.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Tanto Kal'tsit como Amiya han mencionado que eres un investigador de vanguardia de la Oripathy.
+[name="Dobermann"]  ...Pero con tu pérdida de memoria, dudo que vuelvas a ser de alguna utilidad.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Ugh... ¡Instructora, eso es demasiado duro!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ...¿Quizás puedas dominar las teorías de nuevo tras repasarlas, igual que reaprendiste tus habilidades de mando?
+[name="Dobermann"]  Después de todo, eres nuestro comandante de campo...
+[name="Dobermann"]  Para ser sincera, nunca pensé que un neurólogo pudiera ser también un maestro táctico...
+[name="Dobermann"]  Pero después de verte, de algún modo lo entiendo.
+[name="Dobermann"]  Digo, Rhodes Island en sí es muy parecida a tu campo de estudio.
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]   ¡Oye! ¡Maldito seas! ¡Deja de correr! ¡Es hora de tu inyección!
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ¿Eh? ¿Eh? ¡Te dije que estoy bien! ¡Yo, yo todavía no necesito tratamiento!
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="Médico"]   ¡Necesitas tu inyección habitual para frenar tus síntomas!
+[name="Médico"]   ¿No dijiste que te sentías mareado?
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ¡Eso no es para nada la misma condición!
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="Médico"]   ¿Y si empiezas a tener otros problemas cuando estés en batalla?
+[name="Médico"]   ¡Por la seguridad de todos, también tienes que cuidarte!
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ...
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="Médico"]   ¡Detente ahí mismo! ¡Te voy a poner la inyección!
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ¡Aaah!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ...
+[name="Dobermann"]  ...Esto es lo que hace Rhodes Island. Buscamos una cura para la infección, además de mitigar los problemas asociados a los Infected.
+[Character(name="char_130_doberm_ex",name2="char_002_amiya_1",focus=2)]
+[name="Amiya"]   Así es. No basta con solo investigar, ni con solo tratar de resolver conflictos.
+[name="Amiya"]   Debemos abordar todos los problemas que rodean a los Infected.
+[name="Amiya"]   Esta es la única forma en que Rhodes Island puede dar a todos los Infected una oportunidad de sobrevivir...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Los entendemos mejor que la mayoría porque nosotros, como ellos, también somos Infected.
+[name="Dobermann"]  Sin importar quién esté involucrado ni qué se requiera, Rhodes Island busca poner fin a la propagación del odio y la enfermedad.
+[name="Dobermann"]  Dr. {@nickname}, quizás esta también sea tu vocación.
+[name="Dobermann"]  ...Al menos, ese es mi deseo.
+[Decision(options="¿De qué estás hablando...?;...;Necesito más tiempo para pensarlo.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Te daremos tiempo de sobra para asimilar todo esto.
+[name="Dobermann"]  Sin embargo, el tiempo que se nos ha dado es escaso.
+[name="Dobermann"]  Reúnanse, todos. ¡Nos vamos!
+[name="Dobermann"]  ¡Cualquier cosa podría pasar de camino al punto de encuentro!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Background]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[delay(time=1)]
+[name="Dobermann"]  (Amiya...)
+[name="Dobermann"]  (La situación en Chernobog se ha vuelto muy complicada. No podemos permitirnos añadir más presión al equipo de rescate. Pero...)
+[name="Amiya"]  (¿Cuánto tiempo... nos queda?)
+[name="Dobermann"]  (...Tres horas.)
+[name="Dobermann"]  (Después de tres horas, toda esta ciudad será consumida por la Catástrofe.)
+[name="Dobermann"]  (Después de eso, todo habrá terminado.)
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_cher_1",x=0, y=20, xScale=1.1, yScale=1.1, fadetime=1)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Delay(time=1)]
+[Character(name="char_1502_crowns#2")]
+[name="???"]  ......
+[name="???"]  Hemos encontrado algunas variables desconocidas.
+[name="???"]  Avisa a los demás, ahora.
+[name="???"]  Vamos tras ellos.
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Dialog]
+[Image]
