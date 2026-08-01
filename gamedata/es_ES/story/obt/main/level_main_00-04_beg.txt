@@ -116,7 +116,7 @@
 [Character(name="char_014_riope" )]
 [name="Ace"]   Amiya, es tu turno.
 [Character(name="char_002_amiya_1#7")]
-[name="Amiya"]   ¡Entendido! ¡Te respaldaré con mis Arts!
+[name="Amiya"]   ¡Entendido! ¡Te respaldaré con mis Artes!
 [Character(name="char_014_riope" )]
 [name="Ace"]   Por fin...
 [name="Ace"]   Dr. {@nickname}, por favor comanda a Rhodes Island.

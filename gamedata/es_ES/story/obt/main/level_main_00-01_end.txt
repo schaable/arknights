@@ -31,7 +31,7 @@
 [Character(name="char_002_amiya_1#2")]
 [name="Amiya"]   No hay problema. Es nuestro...
 [Character(name="char_002_amiya_1#2",focus=-1)]
-[name="Mujer"]   ¿Tú... tú también eres un Infected?
+[name="Mujer"]   ¿Tú... tú también eres una Infectada?
 [name="Mujer"]   ¡¿Qué quieren?! No lastimen a mis hijos... se los ruego, por favor no nos hagan daño...
 [Character(name="char_002_amiya_1#4")]
 [name="Amiya"]   ...
@@ -58,30 +58,30 @@
 [Decision(options="......", values="1")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1#4")]
-[name="Amiya"]   Porque yo... soy un Infected.
+[name="Amiya"]   Porque yo... soy una Infectada.
 [name="Amiya"]   Dobermann y yo, y la mayoría de los miembros de Rhodes Island, también lo somos.
 [name="Amiya"]   Incluso esos miembros de Reunion contra los que acabamos de pelear...
 [name="Amiya"]   Hemos contraído una enfermedad terrible. Algo que aterra a la mayoría de la gente...
-[name="Amiya"]   'Oripathy.'
+[name="Amiya"]   'Oripatía.'
 [Character(name="char_130_doberm_ex")]
-[name="Dobermann"]  A quienes han contraído la Oripathy se les llama los 'Infected'.
+[name="Dobermann"]  A quienes han contraído la Oripatía se les llama los 'Infectados'.
 [Character(name="char_002_amiya_1#4")]
 [name="Amiya"]   Dobermann...
 [Character(name="char_130_doberm_ex")]
-[name="Dobermann"]  Ursus siempre ha tratado con dureza a los Infected.
+[name="Dobermann"]  Ursus siempre ha tratado con dureza a los Infectados.
 [name="Dobermann"]  Digo, ¿quién no? Solo que Ursus resulta ser particularmente despiadado al respecto.
-[name="Dobermann"]  A los civiles se les enseña a temer a los Infected mediante propaganda. Nadie se inmuta cuando cazan a los Infected, y algunos incluso lo celebran.
+[name="Dobermann"]  A los civiles se les enseña a temer a los Infectados mediante propaganda. Nadie se inmuta cuando cazan a los Infectados, y algunos incluso lo celebran.
 [name="Dobermann"]  Por eso Reunion eligió este lugar...
 [Character(name="char_002_amiya_1#4")]
 [name="Amiya"]   Sin embargo... esta vez, ya no es una simple protesta.
 [Character(name="char_130_doberm_ex")]
 [name="Dobermann"]  Han comenzado a recurrir a la violencia a gran escala.
-[name="Dobermann"]  Cuando Ursus ponga fin a los disturbios, los Infected en Chernobog solo enfrentarán más crueldad.
+[name="Dobermann"]  Cuando Ursus ponga fin a los disturbios, los Infectados en Chernobog solo enfrentarán más crueldad.
 [name="Dobermann"]  ...En cambio, contigo aquí, Dr. {@nickname}, quizás la situación de Rhodes Island mejore.
 [Decision(options="...¿Esto también tiene que ver conmigo?;...;Ya veo, debo de ser bastante importante.", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_130_doberm_ex")]
-[name="Dobermann"]  Tanto Kal'tsit como Amiya han mencionado que eres un investigador de vanguardia de la Oripathy.
+[name="Dobermann"]  Tanto Kal'tsit como Amiya han mencionado que eres un investigador de vanguardia de la Oripatía.
 [name="Dobermann"]  ...Pero con tu pérdida de memoria, dudo que vuelvas a ser de alguna utilidad.
 [Character(name="char_002_amiya_1")]
 [name="Amiya"]   Ugh... ¡Instructora, eso es demasiado duro!
@@ -119,13 +119,13 @@
 [Blocker(a=0, fadetime=0.6, block=true)]
 [Character(name="char_130_doberm_ex")]
 [name="Dobermann"]  ...
-[name="Dobermann"]  ...Esto es lo que hace Rhodes Island. Buscamos una cura para la infección, además de mitigar los problemas asociados a los Infected.
+[name="Dobermann"]  ...Esto es lo que hace Rhodes Island. Buscamos una cura para la infección, además de mitigar los problemas asociados a los Infectados.
 [Character(name="char_130_doberm_ex",name2="char_002_amiya_1",focus=2)]
 [name="Amiya"]   Así es. No basta con solo investigar, ni con solo tratar de resolver conflictos.
-[name="Amiya"]   Debemos abordar todos los problemas que rodean a los Infected.
-[name="Amiya"]   Esta es la única forma en que Rhodes Island puede dar a todos los Infected una oportunidad de sobrevivir...
+[name="Amiya"]   Debemos abordar todos los problemas que rodean a los Infectados.
+[name="Amiya"]   Esta es la única forma en que Rhodes Island puede dar a todos los Infectados una oportunidad de sobrevivir...
 [Character(name="char_130_doberm_ex")]
-[name="Dobermann"]  Los entendemos mejor que la mayoría porque nosotros, como ellos, también somos Infected.
+[name="Dobermann"]  Los entendemos mejor que la mayoría porque nosotros, como ellos, también somos Infectados.
 [name="Dobermann"]  Sin importar quién esté involucrado ni qué se requiera, Rhodes Island busca poner fin a la propagación del odio y la enfermedad.
 [name="Dobermann"]  Dr. {@nickname}, quizás esta también sea tu vocación.
 [name="Dobermann"]  ...Al menos, ese es mi deseo.

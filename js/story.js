@@ -784,6 +784,16 @@ async function genStory(data, avatars = []) {
             let readTime = document.createElement("span");
             readTime.classList.add("readtime");
             storyNameDiv.appendChild(readTime);
+            // Doctor nickname: rendered as live <span class="nicknameRef"> spans so
+            // editing the name box updates every on-screen occurrence immediately.
+            const currentDocName = () =>
+                localStorage.getItem("docName") || "{@nickname}";
+            const NICK_SPAN = '<span class="nicknameRef"></span>';
+            const refreshNicknames = (root) =>
+                (root || document)
+                    .querySelectorAll(".nicknameRef")
+                    .forEach((s) => (s.textContent = currentDocName()));
+
             const docName = document.createElement("span");
             docName.classList.add("docName");
 
@@ -817,6 +827,7 @@ async function genStory(data, avatars = []) {
             });
             editableName.addEventListener("input", () => {
                 localStorage.setItem("docName", editableName.textContent);
+                refreshNicknames();
             });
 
             document.getElementById("storyTitle").innerHTML =
@@ -1541,10 +1552,7 @@ async function genStory(data, avatars = []) {
                 let dialog = makeDialog(
                     doctorSpeaking
                         ? {
-                              name: `${L("dr_prefix")}${
-                                  localStorage.getItem("docName") ||
-                                  "{@nickname}"
-                              }`,
+                              name: `${L("dr_prefix")}${NICK_SPAN}`,
                           }
                         : { name: L("speaker") },
                     choices[0],
@@ -1629,14 +1637,14 @@ async function genStory(data, avatars = []) {
                     .replace(/\\r\\n|\\r|\\n/g, "<br />")
                     .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;")
                     .replace(/\{@nbs\}/gi, "&nbsp;")
-                    .replace(
-                        /\{@nickname\}/gi,
-                        localStorage.getItem("docName") || "{@nickname}",
-                    )
+                    .replace(/\{@nickname\}/gi, NICK_SPAN)
                     .replace(
                         /<color=([#\w]+)>([\s\S]*?)<\/color>/gi,
                         '<span style="color: $1;">$2</span>',
                     );
+                blocktxt
+                    .querySelectorAll(".nicknameRef")
+                    .forEach((s) => (s.textContent = currentDocName()));
                 wordCount += countWords(blocktxt.innerHTML);
                 txt.appendChild(blocktxt);
                 wrap.appendChild(left);
@@ -1697,6 +1705,7 @@ async function genStory(data, avatars = []) {
                         wrap.classList.add("hidden");
                 }
 
+                refreshNicknames(wrap);
                 return wrap;
             }
             function endMultiLine() {

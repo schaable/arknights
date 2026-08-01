@@ -20,7 +20,7 @@
 [name="Amiya"]   Señor.
 [character]
 [name="Capitán de Ursus"]  ... ¿Una niñita?
-[name="Capitán de Ursus"]  ¿Eres... una Infected?
+[name="Capitán de Ursus"]  ¿Eres... una Infectada?
 [name="Capitán de Ursus"]  ¡Detente ahí mismo! ¡Baja tu arma!
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
@@ -78,7 +78,7 @@
 [name="Amiya"]   Si logran cortar nuestra ruta de escape, todos nosotros...
 [Character]
 [name="Capitán de Ursus"]  ...
-[name="Capitán de Ursus"]  Lárgate, Infected.
+[name="Capitán de Ursus"]  Lárgate, Infectada.
 [Character(name="char_002_amiya_1")]
 [name="Amiya"]   ...
 [Character]
@@ -106,7 +106,7 @@
 [Character(name="char_1502_crowns")]
 [name="???"]  ......
 [Character]
-[name="Capitán de Ursus"]  ¡Vengan por nosotros, inmundos Infected!
+[name="Capitán de Ursus"]  ¡Vengan por nosotros, inmundos Infectados!
 [name="Capitán de Ursus"]  ¿Eso es todo lo que pueden hacer? ¿Se van a quedar ahí parados mirándonos?
 [Character(name="char_1502_crowns")]
 [name="???"]  Todos los chernobogianos...

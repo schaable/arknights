@@ -31,8 +31,9 @@ const CURATED_DNT = [
   "Kal'tsit", "Closure", "Doctor", "Faust",
   // factions / orgs / places
   "Reunion", "Rhodes Island", "Ursus", "Lungmen", "Victoria",
-  // lore proper nouns
-  "Originium", "Oripathy", "Sarkaz", "Infected",
+  // lore proper nouns (Originium/Sarkaz stay verbatim; Oripathy/Infected are
+  // translated — see CURATED_TERMS)
+  "Originium", "Sarkaz",
   // placeholder / unknown speaker
   "???",
 ];
@@ -43,7 +44,7 @@ const CURATED_TERMS = {
   // classes
   Guard: "Guardia",
   Supporter: "Soporte",
-  Caster: "Lanzador",
+  Caster: "Hechicero",
   Sniper: "Francotirador",
   Defender: "Defensor",
   Vanguard: "Vanguardia",
@@ -63,6 +64,9 @@ const CURATED_TERMS = {
   Child: "Niño",
   // lore common nouns (translate; the faction/place proper nouns stay in DNT)
   Catastrophe: "Catástrofe",
+  Infected: "Infectado", // gender/number agreement is applied per-line by hand
+  Oripathy: "Oripatía",
+  Arts: "Artes",
   Originium: "Originium", // stays verbatim, but pin it so MT never drifts
 };
 

@@ -911,7 +911,12 @@ window.onload = () => {
   if (serverSelect) {
     const dd_content = serverSelect.querySelector(".dropdown-content");
     const dd_btn = serverSelect.querySelector(".dropbtn");
-    Object.keys(SERVERS).forEach((k) => {
+    // Only expose English + Spanish in the picker; SERVERS/DATA_BASE keep the
+    // full set so any existing selection still resolves.
+    const VISIBLE_SERVERS = ["EN", "ES"];
+    Object.keys(SERVERS)
+      .filter((k) => VISIBLE_SERVERS.includes(k))
+      .forEach((k) => {
       let opt = document.createElement("div");
       opt.dataset.value = SERVERS[k];
       opt.innerHTML = k;

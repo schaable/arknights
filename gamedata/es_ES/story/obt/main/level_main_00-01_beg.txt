@@ -31,7 +31,7 @@
 [Character(name="char_130_doberm_ex")]
 [name="Dobermann"]  Después de todos estos años, los lobos con piel de oveja por fin muestran los colmillos.
 [Character(name="char_016_medic")]
-[name="Médico"]  Los Infected... ¡están, están atacando a las tropas de Ursus!
+[name="Médico"]  Los Infectados... ¡están, están atacando a las tropas de Ursus!
 [Character(name="char_013_riop")]
 [name="Guardia"]  ¡¿Pero por qué?! ¡Desafiar así al gobierno de Ursus es prácticamente un suicidio!
 [Character(name="char_130_doberm_ex")]

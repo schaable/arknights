@@ -22,7 +22,7 @@
 [name="Dobermann"]  Ya encontré el punto débil de su línea, ¡pero sin refuerzos, nos cuesta todo lo que tenemos solo para contenerlos!
 [Character(name="char_002_amiya_1#7")]
 [name="Amiya"]  ...¡Aguanten un poco más, por favor! ¡Concentren su fuego en los enemigos a distancia!
-[name="Amiya"]  ¡Nuestros Lanzadores se encargarán de su vanguardia!
+[name="Amiya"]  ¡Nuestros Hechiceros se encargarán de su vanguardia!
 [Dialog]
 [Character]
 [Character(name="char_1507_Mephisto_1#1")]
@@ -49,9 +49,9 @@
 [Character]
 [Character(name="char_1507_Mephisto_1#1")]
 [name="Mephisto"]  ¡Eso es, déjenme ver cómo se retuercen!
-[name="Mephisto"]  Ahora, Lanzadores, muévanse a C7. ¡Capturen su Torre!
+[name="Mephisto"]  Ahora, Hechiceros, muévanse a C7. ¡Capturen su Torre!
 [Character(name="char_002_amiya_1#7")]
-[name="Amiya"]  ¡Han aparecido Lanzadores enemigos! ¡Por ahora, se esconden detrás de sus Defensores!
+[name="Amiya"]  ¡Han aparecido Hechiceros enemigos! ¡Por ahora, se esconden detrás de sus Defensores!
 [Character(name="char_130_doberm_ex")]
 [name="Dobermann"]   ¡Es demasiado tarde! ¡A cubierto!
 [character]

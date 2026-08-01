@@ -533,7 +533,6 @@
     "Indra",
     "Industrial Water Cannon",
     "Ines",
-    "Infected",
     "infield groomer",
     "Insider",
     "Interference Mine",
@@ -752,7 +751,6 @@
     "Originium Recycling Furnace",
     "Originium Shrine",
     "Originium Solvent",
-    "Oripathy",
     "Orirock Dagger",
     "Ornamental Giant Mushroom",
     "Outpost",
@@ -1192,7 +1190,7 @@
   "terms": {
     "Guard": "Guardia",
     "Supporter": "Soporte",
-    "Caster": "Lanzador",
+    "Caster": "Hechicero",
     "Sniper": "Francotirador",
     "Defender": "Defensor",
     "Vanguard": "Vanguardia",
@@ -1210,7 +1208,10 @@
     "TV Host": "Presentador de TV",
     "Child": "Niño",
     "Catastrophe": "Catástrofe",
-    "Originium": "Originium"
+    "Originium": "Originium",
+    "Infected": "Infectado",
+    "Oripathy": "Oripatía",
+    "Arts": "Artes"
   },
   "overrides": {}
 }
