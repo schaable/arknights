@@ -1,0 +1,105 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 7 (después)
+[name=""]   Hora - Desconocida \ Clima - Desconocido \ Visibilidad - Escasa
+[name=""]   Chernobog - Ubicación del Escuadrón de Operaciones E0
+[name=""]   Operación de Rescate del Dr. {@nickname}, Fase 3
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_016_medic")]
+[name="Médico"]  ¡Ah!
+[name="Médico"]  Esta clínica...
+[name="Médico"]  Amiya, ¿no hemos estado aquí antes?
+[Character(name="char_016_medic",name2="char_002_amiya_1#1",focus=2)]
+[name="Amiya"]  Tienes razón...
+[name="Amiya"]  ¿Pero por qué se ha... vuelto así?
+[Character(name="char_016_medic",name2="char_002_amiya_1#1",focus=1)]
+[name="Médico"]  Está totalmente abandonada... Parece que fue atacada por Reunion.
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="Amiya"]  ...
+[Character(name="char_002_amiya_1#4",name2="char_013_riop",focus=2)]
+[name="Guardia"]  ¿No era esta Azazel, la clínica para los Infectados?
+[Character(name="char_002_amiya_1#4",name2="char_013_riop",focus=1)]
+[name="Amiya"]  Sí...
+[Character(name="char_002_amiya_1#4",name2="char_013_riop",focus=2)]
+[name="Guardia"]  Aunque tenían acceso a toda la red de inteligencia clandestina de Chernobog, aun así se negaron a colaborar con nosotros...
+[name="Guardia"]  En aquel entonces, no estaba claro qué tipo de tratos tenían con Reunion...
+[name="Guardia"]  Si tan solo nos hubieran dado algo de información, o siquiera una pista...
+[name="Guardia"]  Ya podríamos estar fuera de aquí.
+[name="Guardia"]  ¡Ellos mismos se buscaron este desenlace!
+[Character(name="char_002_amiya_1", name2="char_013_riop", focus=1)]
+[name="Amiya"]  Esa no es toda la historia...
+[Character(name="char_002_amiya_1", name2="char_013_riop", focus=2)]
+[name="Guardia"]  Amiya, tú estuviste en las negociaciones, ¿verdad?
+[name="Guardia"]  Esa actitud fría y arrogante suya de verdad me sacó de quicio...
+[Character(name="char_014_riope" )]
+[name="Ace"]  No podemos culparlos.
+[Character(name="char_013_riop")]
+[name="Guardia"]  Jefa...
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Image(image="bg_0_ori",x=-100, y=0, xScale=1.2, yScale=1.2, fadetime=1)]
+[ImageTween(xFrom=-100, yFrom=0, xTo=0, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, xScaleTo=1.2, yScaleTo=1.2, duration=10, block=false)]
+[name="Ace"]  A los Infectados les cuesta confiar en alguien.
+[name="Ace"]  Después de soportar tantas penurias, ¿quién puede culparlos por volverse hastiados y tercos?
+[name="Amiya"]  Puedo entender por qué hicieron lo que hicieron... y puedo perdonarlos. A quienes no se protegen, los demás los lastiman con facilidad.
+[name="Amiya"]  Es más, los Infectados a menudo ni siquiera pueden confiar entre sí. Tampoco todos son capaces de asumir los riesgos que nosotros corremos...
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Image]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[Decision(options="¿Una clínica para los Infectados?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Azazel... Era una clínica del mercado negro que solo prestaba servicios a los Infectados.
+[name="Amiya"]  Dada la condición social de los Infectados, no podían mostrarse abiertamente en público.
+[name="Amiya"]  Algunos Infectados, para no ser arrojados a la cuarentena, se esconden por toda la ciudad, solo tratando de sobrevivir.
+[name="Amiya"]  Azazel se dedicaba a prestar servicios a esas personas.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  ...Debieron de rechazar las propuestas de Reunion.
+[name="Amiya"]  Doctor, antes mencioné que todos estamos enfermos, ¿verdad?
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Esta enfermedad nos costará la vida, pero también nos otorga poderes extraordinarios.
+[name="Amiya"]  Por ejemplo, puedo usar las Artes de Originium sin la ayuda de un báculo.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Sin embargo, esta enfermedad no solo destruye nuestros cuerpos...
+[name="Amiya"]  También destruye cualquier posibilidad de llevar una vida normal. O más bien, la 'sociedad civilizada' nos lo arrebata todo.
+[name="Amiya"]  Chernobog ha sido el faro resplandeciente de esa 'civilidad.'
+[name="Amiya"]  Temer, odiar, exiliar y purgar a los Infectados...
+[Character(name="char_148_nearl_1#2")]
+[name="Nearl"]  ...
+[name="Nearl"]  Y así es como termina.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Lo único es, ¿a cuántos Infectados se les dio siquiera la opción de elegir entre nosotros, Reunion u otra organización?
+[name="Amiya"]  La mayoría de ellos simplemente lo perdió todo.
+[name="Amiya"]  Quizás esta clínica fue un lugar cálido que algunos podían llamar hogar...
+[name="Amiya"]  No hay cura para la Oripatía. Al menos por ahora, los Infectados solo pueden morir en la desesperación.
+[name="Amiya"]  Y sus cuerpos... se convierten en nuevas fuentes de infección.
+[name="Amiya"]  Con sus poderes anómalos y su enfermedad mortalmente contagiosa...
+[name="Amiya"]  Los Infectados... son las personas más odiadas de este planeta.
+[name="Amiya"]  ...
+[name="Amiya"]  Doctor, probablemente no puedas entenderlo todo con solo mi breve explicación.
+[name="Amiya"]  Pero cuando veas las consecuencias de estos problemas con tus propios ojos... lo entenderás.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Verás la dura realidad que rodea a los Infectados.
+[Character(name="char_002_amiya_1#4", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Rhodes Island defiende la igualdad para todos, mientras que Reunion se centra fanáticamente en los Infectados. Sin embargo, organizaciones como la nuestra son poco comunes.
+[name="Dobermann"]  Puedo entender por qué estás enfadada, pero es difícil no compadecerse de esta pequeña clínica.
+[Character(name="char_013_riop")]
+[name="Guardia"]  ...Ya veo.
+[name="Guardia"]  Quizás de verdad acabaron enfrentando una crisis mayor de la que podían manejar...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  En cualquier caso, deberíamos dejar atrás nuestra ira, junto con esta clínica.
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Rhodes Island está llena de buena gente. Aunque el miedo y la hostilidad puedan abrir brechas entre las personas...
+[name="Amiya"]  Creo que todos los malentendidos se resolverán, mientras seamos parte de la misma familia.
+[name="Amiya"]  ¿Quizás... Rhodes Island no sea más que otra Azazel?
+[Character(name="char_013_riop")]
+[name="Guardia"]  Amiya...
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Vamos, Doctor.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

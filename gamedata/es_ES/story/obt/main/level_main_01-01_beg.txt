@@ -1,0 +1,74 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 7 (antes)
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Background(screenadapt="coverall", image="bg_cher_1", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex", name2="char_013_riop", focus=2)]
+[name="Guardia"]   ¿Son ideas mías, o el cielo se está oscureciendo?
+[Character(name="char_130_doberm_ex", name2="char_013_riop", focus=1)]
+[name="Dobermann"]  ...Ojalá fueran solo ideas tuyas.
+[name="Dobermann"]  De todos modos, nunca tuvimos mucho tiempo.
+[Blocker(a=1,r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_9_2",x=50, y=30,xScale=1.15, yScale=1.15, fadetime=0)]
+[ImageTween(xFrom=50, yFrom=20, xTo=0, yTo=0, xScaleFrom=1.15, yScaleFrom=1.15, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[Blocker(a=0, fadetime=1, block=true)]
+[name="Dobermann"]  La forma de la nube de la Catástrofe está más definida que la neblina negra que era antes.
+[name="Dobermann"]  Tsk. No me gusta la sensación que me da verla formarse sobre nuestras cabezas. Qué mal presagio.
+[Blocker(a=1,r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=1)]
+[Dialog]
+[Image(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=1)]
+[name="Dobermann"]  Para colmo, podría haber matones de Reunion acechando en cada rincón.
+[name="Dobermann"]  En realidad, eso probablemente sea quedarse corto.
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=2)]
+[name="Nearl"]  Lo que deberías haber dicho es que seguramente están de fiesta en las calles.
+[Blocker(a=0, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]  Casi todas las calles están llenas de destrucción, violencia y saqueos. Vehículos y edificios están siendo incendiados...
+[name="Médico"]  ¡Pero estos rufianes deciden que es el clima perfecto para un picnic!
+[Character(name="char_148_nearl_1#6")]
+[name="Nearl"]  Si se van de picnic ahora, será la Catástrofe la que se dé un festín con sus huesos.
+[name="Nearl"]  Esto demuestra que la mayoría de los miembros de Reunion no son más que necios a los que han incitado al frenesí.
+[Character(name="char_002_amiya_1#6", name2="char_016_medic")]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#6", name2="char_016_medic", focus=1)]
+[name="Amiya"]  ...
+[Character(name="char_002_amiya_1#2", name2="char_016_medic", focus=1)]
+[name="Amiya"]   ...Pff.
+[Character(name="char_002_amiya_1#2", name2="char_016_medic", focus=2)]
+[name="Médico"]   Mira, no es que estén de picnic de verdad...
+[name="Médico"]   Yo, yo solo quería quejarme de algo. No tenías que tomarme tan en serio...
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  ...
+[Character(name="char_148_nearl_1#6")]
+[name="Nearl"]  Ah, ¿no hablabas en serio? Espera, ¿estabas intentando hacer un chiste?
+[Character(name="char_148_nearl_1#2")]
+[name="Nearl"]  Mmm...
+[name="Nearl"]  Perdón, no se me da bien esto...
+[Character(name="char_148_nearl_1#2", name2="char_016_medic", focus=2)]
+[name="Médico"]  Emm... Está bien...
+[name="Médico"]  Es solo que... es difícil aguantar la risa...
+[name="Médico"]  Em, perdón... por intentar bromear en un momento tan serio...
+[Character(name="char_002_amiya_1#3 ")]
+[Character(name="char_002_amiya_1#1 ")]
+[name="Amiya"]  No pasa nada.
+[name="Amiya"]  Rhodes Island no se fundó para que todos mantuvieran una cara seria.
+[name="Amiya"]  Siempre hemos querido que todos puedan sonreír.
+[Character(name="char_002_amiya_1#1 ",name2="char_016_medic",focus=2)]
+[name="Médico"]  A-Amiya...
+[Character(name="char_002_amiya_1#1 ",name2="char_016_medic",focus=1)]
+[name="Amiya"]  ¡No te preocupes por eso!
+[Character(name="char_130_doberm_ex",name2="char_014_riope",focus=1)]
+[name="Dobermann"]  En cualquier caso, ayudemos con el reconocimiento.
+[name="Dobermann"]  Me encargaré en silencio del enemigo a nuestras cuatro en punto.
+[name="Dobermann"]  Con suerte, sus órganos enfermos no explotarán ni estarán manipulados para servir de alarma.
+[Character(name="char_130_doberm_ex",name2="char_014_riope",focus=2)]
+[name="Ace"]  Rodearemos y nos ocuparemos del grupo grande al otro lado de la fortificación.
+[name="Ace"]  Con tanto caos a nuestro alrededor, nadie notará un poco más de ruido.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Muy bien, en marcha!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

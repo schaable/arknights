@@ -1,0 +1,202 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 9 (después)
+[Background(screenadapt="coverall", image="bg_cher_0", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Así es. No saben que Faust los sigue. Recibí algo de información de uno de sus exploradores.
+[name="Mephisto"]  Rhodes Island está atrapada en el perímetro del centro de la ciudad.
+[name="Mephisto"]  Por muy insectos que sean, aún podrían aprovechar la confusión causada por la Catástrofe para escapar.
+[name="Mephisto"]  Dado lo que saben de la situación en Chernobog, podrían llegar a interferir con nuestros planes.
+[name="Mephisto"]  ... Al menos, deshacernos de ellos no nos hará ningún daño.
+[Dialog(fadetime=0)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="char_011_talula_1#2",fadetime=1)]
+[name="???"]   ————
+[Character(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_cher_1", width=1, height=1, fadetime=0)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ¡Malditos de Chernobog! Es por ustedes, es toda su culpa... ¡que los Infectados terminamos así!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Lárgate!
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[playsound(key="$p_imp_whip_h", volume=0.5)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ¡Ugh!
+[Character(fadetime=0.5)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Esta gente, es como si solo estuvieran esperando morir! !
+[Character(name="char_148_nearl_1#4")]
+[name="Nearl"]  ¿Por qué Reunion se está volviendo completamente loca?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡¿Por qué están enviando a tantos miembros aquí ahora?!
+[name="Dobermann"]  ¡Esto no tiene sentido! ¡No hay razón para que defiendan este lugar con tanta obstinación!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  ¡Operadores de Rhodes Island, manténganse firmes! ¡Hagan retroceder a Reunion y abran una ruta de escape!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_0", width=1, height=1, fadetime=0)]
+[Background(fadetime=2)]
+[Character(name="char_011_talula_1#2", fadetime=0.5)]
+[Delay(time=0.5)]
+[name="???"]   ————
+[Delay(time=1)]
+[Character(name="char_1505_frstar_1#2")]
+[name="???"]   ¿Así que esa es la 'Rhodes Island' de la que tanto he oído hablar? Je... Qué heroico.
+[Delay(time=0.5)]
+[Character(name="char_1502_crowns")]
+[name="Crownslayer"]   ...
+[Delay(time=0.5)]
+[Dialog]
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_cher_1", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[PlaySound(key="$d_gen_explo_n")]
+[StopMusic(fadetime=1)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.7, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[PlaySound(key="$d_gen_explo_n", volume=0.1)]
+[Character(name="char_016_medic")]
+[name="Médico"]  ...¿Eh?
+[Character(name="char_013_riop")]
+[name="Guardia"]  ... ¿Caen rocas? ¿En un momento como este?
+[Character(name="char_014_riope",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  ¡No dejen de moverse! ¡Mantengan nuestra línea defensiva!
+[Character(name="char_013_riop")]
+[name="Guardia"]  Algo no está bien... Estas rocas vienen de los edificios...
+[Character(name="char_014_riope",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]  De qué estás hablando...
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ¡Ya está aquí! ¡Ya está aquí!
+[name="Miembro de Reunion"]  Ajajá... ¡la salvación ha llegado para nosotros! ¡Ha llegado el día del juicio!
+[name="Miembro de Reunion"]  Ahhh, arghhhh--*¡CRAC!*
+[dialog]
+[PlaySound(key="$d_gen_explo_n", channel=2, volume=0.6)]
+[Blocker(a=0.7, r=1, g=0.1, b=0.3, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=30, randomness=90, block=false)]
+[name="Miembro de Reunion"]  Ahhh, arghhhh--*¡CRAC!*
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ...
+[name="Dobermann"]  ¿Fueron... aplastados por algo?
+[name="Dobermann"]  ¿Fue uno de ustedes... quien los atacó?
+[name="Dobermann"]  O acaso fueron...
+[PlaySound(key="$d_gen_explo_n", volume=0.4, delay=2)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Dobermann! ¡Mira, el cielo...!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  ...
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[name="Nearl"]  El cielo se tiñó de un carmesí sangriento...
+[name="Nearl"]  'Nubes negras hirvientes, cayendo en llamas...'
+[Character(name="char_014_riope")]
+[name="Ace"]  ¡No cundan en pánico!
+[Character(name="char_148_nearl_1#7")]
+[name="Nearl"]  ¡Mantengan la cabeza fría!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ... ¡Aún podemos salir de esta con vida si actuamos con decisión!
+[Dialog]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Image(image="avg_9_3",x=-64, y=35, xScale=1.1, yScale=1.1, fadetime=2)]
+[ImageTween(xFrom=-64, yFrom=35, xTo=64, yTo=35, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1.1, yScaleTo=1.1, duration=10, block=false)]
+[CameraShake(duration=3, fadeout=true, xstrength=15, ystrength=15, vibrato=30, randomness=90, block=false)]
+[PlaySound(key="$d_gen_explo_n", channel=2, volume=0.6)]
+[name="???"]  '...Mientras el terror les arranca la voz, la tierra cae en silencio.'
+[Blocker(a=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0.05, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[PlaySound(key="$d_gen_explo_n", channel=2, volume=0.8)]
+[CameraShake(duration=3, fadeout=true, xstrength=25, ystrength=25, vibrato=30, randomness=90, block=false)]
+[Delay(time=0.2)]
+[name="???"]  'El titánico Originium inclina la cabeza...'
+[Blocker(a=0.1, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0.05, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[name="???"]  '...y cae sobre la sombra calcinada de la muerte.'
+[PlaySound(key="$d_gen_explo_n", channel=2, volume=0.6)]
+[CameraShake(duration=3, fadeout=true, xstrength=25, ystrength=25, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.05, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0.2, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[PlaySound(key="$d_gen_explo_n", channel=2, volume=0.4)]
+[CameraShake(duration=3, fadeout=true, xstrength=35, ystrength=35, vibrato=30, randomness=90, block=false)]
+[Delay(time=0.2)]
+[Blocker(a=0.05, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0.05, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.40, b=0.32, fadetime=0.1, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[Image(image="avg_9_1",x=0, y=50,xScale=1, yScale=1, fadetime=0)]
+[CameraShake(stop=true, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[name="Crownslayer"]  Talulah.
+[name="Talulah"]  ...
+[name="Crownslayer"]  ¿Qué hacemos ahora?
+[name="Talulah"]  ... Quizás logren sobrevivir a la Catástrofe.
+[name="Talulah"]  Acaben con los rezagados.
+[name="Crownslayer"]  Muy bien.
+[Dialog]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.3)]
+[character]
+[Blocker(block=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[Background(image="bg_cher_4", width=1, height=1, fadetime=0)]
+[Delay(time=0.6)]
+[Image]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Aunque suponía que Reunion usaría la Catástrofe para vengarse...
+[name="Dobermann"]  No esperaba que la usaran para destruir Chernobog por completo...
+[name="Dobermann"]  Más que venganza, esto parece más bien un manifiesto...
+[name="Dobermann"]  ¿Algo sobre la Era de los Infectados... o algo así?
+[Character(name="char_016_medic")]
+[name="Médico"]  Aaaahh...
+[name="Médico"]  Todo el cielo... se viene abajo...
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="Guardia"]  ¡Cuidado!
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="Médico"]  Qué es eso...
+[PlaySound(key="$d_gen_thunders_amb", volume=0.3)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[Image(image="avg_9_3",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[CameraShake(duration=3, fadeout=true, xstrength=35, ystrength=35, vibrato=30, randomness=90, block=false)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Estén más alerta!
+[PlaySound(key="$d_gen_thunders_amb", volume=0.3)]
+[Blocker(a=1, r=1, g=0.5, b=0.5, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]  -- ¡Oh!
+[Character(name="char_002_amiya_1#7",name2="char_013_riop",focus=1)]
+[name="Amiya"]  ¡Protejan a la Médico, rápido, llévenla a un lugar seguro!
+[Character(name="char_002_amiya_1#7",name2="char_013_riop",focus=2)]
+[name="Guardia"]  ¡Enterado!
+[Character(name="char_014_riope")]
+[name="Ace"]  ¡Todos los operadores, a cubierto!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Todos los equipos, prepárense para... resistir la Catástrofe!
+[PlaySound(key="$d_gen_thunders_amb", volume=0.3)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

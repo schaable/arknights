@@ -1,0 +1,74 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 8 (antes)
+[name=""]   Hora - Desconocida \ Clima - Desconocido \ Visibilidad - Escasa
+[name=""]   Chernobog - Ubicación del Escuadrón de Operaciones E0
+[name=""]   Operación de Rescate del Dr. {@nickname}, Fase 3
+[dialog]
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Nos queda menos de una hora. No podemos permitirnos un desvío...
+[name="Dobermann"]  Cuanto más tiempo perdamos, más probable será que nos atrape la Catástrofe.
+[name="Dobermann"]  Debemos cruzar directamente esta zona.
+[name="Dobermann"]  Sin embargo, ya no podremos ocultar nuestros movimientos dado el tamaño de nuestras fuerzas.
+[name="Dobermann"]  La posibilidad de que nos embosquen mientras avanzamos por calles estrechas es muy alta...
+[Character(name="char_148_nearl_1", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]   ¿Cuál es el plan?
+[Character(name="char_148_nearl_1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   No tenemos muchas opciones...
+[name="Dobermann"]  Dr. {@nickname}, ¿cuál es tu valoración?
+[Decision(options="¡Solo tenemos que destruirlos en un ataque frontal!;...No pueden detenernos, probablemente...;Al enemigo le lleva tiempo reagruparse.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Las fuerzas de Reunion no son rival para nosotros de forma individual.
+[name="Dobermann"]  Pero la mayoría de las veces, intentan abrumarnos con pura cantidad.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   Si podemos usar nuestra velocidad para avanzar sin descanso evitando los combates a gran escala...
+[Predicate(references="2")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   No parece que hayan construido fortificaciones.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   Si logramos irrumpir a través de su bloqueo...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Aunque parezca que tienen ventaja numérica, su formación dispersa no podrá detener nuestro avance.
+[Predicate(references="3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Por lo que he observado en nuestras batallas anteriores, los métodos de comunicación de Reunion son absolutamente primitivos.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   Si lo hacemos rápido, para cuando logren reagruparse y organizar un esfuerzo para detenernos...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Ya nos habremos ido hace rato para cuando se pongan en formación.
+[Predicate]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   Me parece bien.
+[name="Nearl"]   Los asaltaremos, romperemos su formación, destruiremos su base de fuego y luego nos replegaremos rápidamente.
+[name="Nearl"]   Dobermann, ¿me estás poniendo a prueba, o...?
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Es mucho más fácil lidiar con amenazas que podemos ver que quedar entre la espada y la pared.
+[name="Dobermann"]  Entiendo que estas son órdenes del Dr. {@nickname}, ¿verdad, Amiya?
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]  La situación está clara. Confío en las decisiones del Doctor...
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   ...La confianza no se construye tan fácilmente con una sola batalla.
+[name="Dobermann"]   Tengo en gran estima al Dr. {@nickname}, Amiya...
+[name="Dobermann"]   Pero no bajes la guardia. Por supuesto, no hay nada de malo en aprender de la sabiduría del Doctor, pero recuerda: no puedes depender por completo de nadie más en este mundo.
+[Character(name="char_002_amiya_1#7", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]  ...Lo sé.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  No me malinterpretes, Doctor, no intento ponerte las cosas difíciles.
+[name="Dobermann"]   Pero espero que entiendas... Amiya todavía necesita aprender y crecer.
+[name="Dobermann"]   Si estuvieras en mi lugar, tampoco permitirías que dependiera de otra persona.
+[name="Dobermann"]   Sin embargo, que sepas que ya he reconocido tus capacidades como comandante.
+[Decision(options="Gracias...", values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Además, no hay razón para ser tan formal. Ahora somos compañeros de armas.
+[name="Dobermann"]   Al menos en el campo de batalla, ya te he confiado mi vida.
+[name="Dobermann"]   Pero basta de charla, apurémonos.
+[Character(name="char_148_nearl_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]   Así es.
+[name="Nearl"]   Hay un viejo dicho en Kazimierz: 'La muerte te alcanza cuando te detienes a descansar.'
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

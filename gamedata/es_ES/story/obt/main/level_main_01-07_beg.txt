@@ -1,0 +1,179 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 10 (antes)
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_10", fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5,block=true)]
+[Delay(time=0.3)]
+[PlaySound(key="$d_gen_explo_n")]
+[CameraShake(duration=1, xstrength=3, ystrength=5, vibrato=30, randomness=90, fadeout=false)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡¡Prepárense para el impacto!!
+[name="Dobermann"]  ¡¡¡Dispérsense—!!!
+[name="Dobermann"]  Viene demasiado... ¡a este ritmo, todos y cada uno de los edificios de esta ciudad serán destruidos!
+[name="Dobermann"]  ¡Esto pinta mal...!
+[character]
+[dialog]
+[image(fadetime=1)]
+[Character(name="char_014_riope")]
+[name="Ace"]  ——!
+[name="Ace"] ¡Tenemos que reubicarnos!
+[Character(name="char_016_medic")]
+[name="Médico"]   ...!
+[Character(name="char_014_riope")]
+[name="Ace"]  ¡¡Aguanten!!
+[Character]
+[PlaySound(key="$d_gen_explo_n", volume=0.7)]
+[CameraShake(duration=3, fadeout=true, xstrength=25, ystrength=25, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.2, r=0.93, g=0.7, b=0.2, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[name="Miembro de Reunion"]     ¡¡Aaaaagh!! Se cae... ¡Se cae!
+[name="Miembro de Reunion"]    ¡El cielo se viene abajo!
+[PlaySound(key="$d_gen_explo_n", volume=0.7)]
+[CameraShake(duration=3, fadeout=true, xstrength=25, ystrength=25, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.2, r=0.93, g=0.7, b=0.2, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[name="Miembro de Reunion"]    ¡Aghhhh! Duueleee...!
+[name="Miembro de Reunion"]    Mi mano... ¡mi mano! Dónde está mi mano...
+[name="Miembro de Reunion"]    ¡¡No, no puede ser!! No quiero morir...!
+[name="Miembro de Reunion"]    ¡¡¡Aaaaaaaghh!!!
+[PlaySound(key="$d_gen_thunders_amb", delay=2, volume=0.5)]
+[Dialog]
+[Blocker(a=0.2, r=0.93, g=0.8, b=0.4, fadetime=0.1, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    ¡Defensores!
+[name="Nearl"]    ¡Protejan a nuestros Hechiceros! !
+[name="Nearl"]    ...!!
+[name="Nearl"]    ¡¿Qué es ese sonido?!
+[Character(name="char_014_riope")]
+[name="Ace"]  ¡Una enorme masa acaba de derribar el edificio de enfrente! ¡Al suelo! !
+[Dialog]
+[PlaySound(key="$d_gen_explo_n", volume=0.7)]
+[CameraShake(duration=3, fadeout=true, xstrength=25, ystrength=25, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.2, r=0.93, g=0.7, b=0.2, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]  ¡Iiik...!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    ... No te quedes ahí... ¡Médico! ¡Cuidado!
+[Character(name="char_013_riop")]
+[name="Guardia"]    Oh no... ¡Médico, sal de ahí!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Decision(options="......!", values="1")]
+[Predicate(references="1")]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]  ¡Aaaahh!
+[name="Médico"]  ...¿Eh, D-Doctor?
+[Character(name="char_013_riop")]
+[name="Guardia"]    ¿El Doctor apartó a la médico de un empujón? ¿Eso no significaría que... Doctor...?!
+[name="Guardia"]    ¡¡No, Doctor!!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    ¡¡Dr. {@nickname}!!
+[Character(name="char_013_riop")]
+[name="Guardia"]    ¿Eh?
+[name="Guardia"]    ¡N-Nearl se lanza hacia adelante!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    ¡Al suelo, Doctor!
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_explo_n", volume=0.5)]
+[CameraShake(duration=3, fadeout=true, xstrength=25, ystrength=25, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.2, r=0.93, g=0.7, b=0.2, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[Blocker(a=1, r=0.93, g=0.8, b=0.4, fadetime=0.1, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_148_nearl_1#3",fadetime=0.7)]
+[name="Nearl"]    Aagh...
+[name="Nearl"]    ¡Llegó a tiempo!
+[Character(name="char_013_riop")]
+[name="Guardia"]    Lo logró... ¡Salvó al Doctor!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    *tos*... Jaah...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    ¡Nearl! ¡Doctor! ¡Vuelvan aquí, rápido!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    ¡Ya está todo bien!
+[name="Nearl"]    ¡Aún puedo sostener mi escudo...!
+[name="Nearl"]    ¡Salta, Doctor!
+[name="Nearl"]    ¡Salta!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]    Doctor, Doctor...
+[name="Amiya"]    ¿No estás, no estás herido?
+[Decision(options="Estoy bien... No es nada.;...;Gracias por salvarme, Nearl.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    ¡Cómo pudiste... ponerte en peligro así!
+[name="Nearl"]    ¡Al menos llévame contigo, para que pueda protegerte!
+[name="Nearl"]    No puedo permitir que te hagan daño...
+[name="Nearl"]    ¡Y menos, justo ante mis ojos!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]    ¡Deberíamos considerarnos afortunados de que todos sigan a salvo...!
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]    Pero...
+[name="Amiya"]    (¿Cuánto más va a durar esto?)
+[name="Amiya"]    (¿Cuánto tiempo más podremos seguir con vida?)
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]    ... Mm...
+[name="Amiya"]    ¿Ahora caen menos rocas?
+[name="Amiya"]    Así que logramos resistir el primer impacto...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    Pero aún tenemos que tener cuidado. Nadie sabe cuánto durará esta Catástrofe.
+[name="Dobermann"]    Al menos... no quedamos atrapados justo en medio de ella.
+[name="Dobermann"]    Tuvimos suerte de poder colarnos.
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]    Ajá...
+[name="Amiya"]    ¿Cómo está todo el mundo?
+[Character(name="char_013_riop")]
+[name="Guardia"]    ¡Parece que todos los operadores salieron bien...!
+[name="Guardia"]    ¡Algunos resultaron levemente heridos, pero dadas las circunstancias, tuvimos mucha suerte!
+[name="Guardia"]    ¡Lo... lo logramos!
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[name="Miembro de Reunion"]    Ugh...
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]    Algunos de los miembros de Reunion también...
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]    ...¿Eh?
+[name="Miembro de Reunion"]    ¿Eh...? ¡Ahh! ! ¡Rhodes Island!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ...¿Qué?
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]    ¡¡Arghh...!!
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]    ¡¿Todavía intentan atacarnos?!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]    ...
+[name="Miembro de Reunion"]    ¡Rhodes Island!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    ¡Qué les pasa a ustedes!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]    ¡Vuelvan aquí...!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    Se han vuelto locos.
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]    ¡¿Es que no valoran sus vidas en absoluto?!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]    Dobermann...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]    No tenemos elección...
+[name="Dobermann"]    ¡Primero los someteremos, y luego nos reubicaremos de inmediato!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

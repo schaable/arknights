@@ -1,0 +1,98 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 11 (después)
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="avg_11_2",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Delay(time=0.6)]
+[name="Dobermann"]  ¡Hemos roto el cerco de Reunion!
+[name="Nearl"]  Pero... ellos...
+[name="Nearl"]  ... Yo... Aaaagh...
+[Background]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_148_nearl_1#3", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Shh...
+[name="Dobermann"]  ...Que Amiya no te oiga.
+[Character(name="char_148_nearl_1#7", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]  ¡Amiya ha mantenido la cabeza fría en todo esto! ¡Es mucho más madura de lo que pensábamos...!
+[name="Amiya"]  ...Ngh...
+[name="Amiya"]  ...¿Mmh...?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="char_148_nearl_1#3", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  ¡Aun así, no podemos dejar que oiga esto!
+[name="Dobermann"]  No debemos cargarla con más peso. Ya lleva... el peso del mundo sobre los hombros.
+[name="Dobermann"]  ...¡No podemos... dejar que sus esfuerzos hayan sido en vano!
+[name="Dobermann"]  Tomaron la decisión última de dejarnos vivir, así que tenemos que devolverles el favor... asegurándonos de que Amiya y el Doctor regresen a salvo.
+[Character(name="char_148_nearl_1#2", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]  ...
+[name="Nearl"]  Así es.
+[Character(name="char_148_nearl_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Ahora no es momento de abatirse.
+[name="Dobermann"]  Como la Caballero Radiante, ¿no deberías ser siempre nuestro faro de esperanza, pase lo que pase?
+[Character(name="char_148_nearl_1#4", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]  ...
+[name="Nearl"]  ... Ya no estoy segura. Pero cumpliré con mi parte.
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  ¡Reagrúpense! ¡No bajen la guardia! ¡Ya casi llegamos!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ...
+[name="Dobermann"]  *suspiro*...
+[name="Dobermann"]  Los que me dijeron que no me preocupara... Ninguno de ellos acabó regresando.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_cher_2", width=1, height=1, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  ...
+[name="Amiya"]  ¿Doctor {@nickname}...? ¿Qué pasó...?
+[name="Amiya"]  P-por favor... bájame...
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[CameraShake(duration=2, fadeout=true, xstrength=2, ystrength=5, vibrato=10, randomness=90, block=true)]
+[name="Amiya"]  Mm, estoy bien. Puedo caminar por mi cuenta...
+[name="Amiya"]  Solo... perdí el conocimiento un momento... pero estoy bien.
+[name="Amiya"]  ...¿Logramos salir?
+[name="Amiya"]  ¿Y Ace y los demás...?
+[Decision(options="......",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Ya veo.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]  Está bien. Seguro que Ace estará bien.
+[name="Amiya"]  Todos en Rhodes Island son muy fuertes.
+[name="Amiya"]  Ya casi llegamos a la salida sur. Una vez que dejemos Chernobog, estaremos...
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Estaremos... a...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  ...
+[name="Amiya"]  Doctor... ¿Puedo... apoyarme en ti un momento...
+[name="Amiya"]  Solo... un poco...
+[name="Amiya"]  ...
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_cher_10", width=1, height=1, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_011_talula_1")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[name="Talulah"]  ...
+[name="Talulah"]  Qué fastidio.
+[Character(name="char_1507_Mephisto_1#2")]
+[name="Mephisto"]  ...
+[name="Mephisto"]  Cómo logró ese tipo... hacer esto...
+[name="Mephisto"]  La mitad de la ciudad quedó reducida a cenizas, toda la plaza se convirtió en un mar de llamas... El acero se derretía y se volvía a formar...
+[name="Mephisto"]  ¿Pero cómo pudo él... seguir luchando?
+[Character(name="char_1505_frstar_1")]
+[name="???"]  Luchó hasta el amargo final... Impresionante.
+[Background( fadetime=4, block=false)]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]  Recordaré esto.
+[Delay(time=0.6)]
+[name="Talulah"]  ...Rhodes Island.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

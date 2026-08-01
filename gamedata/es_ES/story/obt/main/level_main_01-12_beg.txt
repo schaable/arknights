@@ -1,0 +1,99 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 12 (antes)
+[name=""]   Hora - Desconocida \ Clima - Desconocido \ Visibilidad - Escasa 
+[name=""]   Chernobog - Ubicación del Escuadrón de Operaciones E0
+[name=""]   Operación de Rescate del Dr. {@nickname} - Fase de Retirada Final 
+[dialog]
+[Background(image="bg_cher_3", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[stopmusic(fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Maldición!
+[name="Dobermann"]   ¡Y eso que ya habíamos llegado a la salida...!
+[Character(name="char_1504_cqbw#2")]
+[name="???"]  ¿De verdad creyeron que los dejaríamos salir de Chernobog tan campantes?
+[name="???"]  ¿No creen que ya es hora de que alguien los despierte de su sueño?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Nuestras comunicaciones se han restablecido, y he contactado con la O.P.D. ¡Se unirán a nosotros en breve!
+[name="Dobermann"]   Pero, esta maldita...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  ¡Cuidado, tiene explosivos en la mano!
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[character(fadetime=0)]
+[Dialog(fadetime=0)]
+[PlaySound(key="$d_sp_ballista",volume=0.7)]
+[Blocker(a=1, r=100, g=100, b=100, fadetime=0.1,block=true)]
+[CameraShake(duration=1, xstrength=3, ystrength=5, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Todavía no consigo contactar con el equipo de reconocimiento!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ... ¿Quién eres tú exactamente?
+[Dialog]
+[Character]
+[Character(name="char_1504_cqbw",fadetime=1)]
+[Delay(time=1)]
+[name="???"]  No espero que sepas quién soy...
+[name="???"]  Pero conozco a esa persona que está a tu lado.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¿Reunion... va a seguir combatiéndonos?
+[Character(name="char_002_amiya_1#7", name2="char_1504_cqbw", focus=2)]
+[name="???"]  Ey, ey, no te pongas así.
+[name="???"]  No le tengo ningún aprecio a esa dragona, Talulah. Ni siquiera estoy hecha para esto de guardar la portería. Es un fastidio tener que venir corriendo hasta aquí tras un largo día de trabajo.
+[name="???"]  Así que, en aras de una futura cooperación, ¿por qué no intercambiamos primero unas cortesías?
+[name="???"]  Pueden llamarme simplemente... W.
+[name="W"]  He esperado mucho tiempo para ver a esa persona que está a tu lado.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ...¿Doctor?
+[Character(name="char_002_amiya_1#7", name2="char_1504_cqbw", focus=2)]
+[name="W"]  Dr. {@Nickname}......
+[name="W"]  Tengo unas cuantas preguntitas que me gustaría hacerle a {@Nickname}. ¿Serían tan amables de darnos algo de... tiempo a solas?
+[stopmusic(fadetime=1)]
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]  Estás malgastando saliva.
+[Character(name="char_148_nearl_1#8", name2="char_1504_cqbw", focus=2)]
+[name="W"]  --No seas tan impaciente. Tengo cierta información que podría interesarte.
+[name="W"]  De hecho, acabamos de encontrarnos con unos tipos bastante escurridizos... Muy habilidosos, y vestidos igual que ustedes.
+[name="W"]  Aunque su camuflaje quizá bastara para engañar a Ursus, yo vi a través de su pequeño truco al instante~
+[Character(name="char_002_amiya_1#2", name2="char_1504_cqbw", focus=1)]
+[name="Amiya"]  ¿Podrían ser del equipo de reconocimiento?
+[name="Amiya"]  Me alegra... que estén a salvo...
+[Character(name="char_002_amiya_1#2", name2="char_1504_cqbw", focus=2)]
+[name="W"]  Conejita, ¿tú eres su líder?
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  ?!
+[Character(name="char_002_amiya_1#1", name2="char_1504_cqbw", focus=2)]
+[name="W"]  Tengo mucha curiosidad: ¿qué encanto ejerces sobre ellos... para que entreguen su vida por ti con tanto entusiasmo y sin el menor remordimiento?
+[Character(name="char_002_amiya_1#7", name2="char_1504_cqbw", focus=1)]
+[name="Amiya"]  ¿Qué... estás diciendo...?
+[Character(name="char_1504_cqbw")]
+[name="W"]  Ya me oíste. Ninguno de ellos... volverá contigo.
+[name="W"]  Oye, tú...
+[name="W"]  ¿De verdad... vale la pena sacrificar sus vidas por ti?
+[PlayMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ...
+[Decision(options="No te preocupes por ella. ¡La salida está justo ahí!;Amiya...;¿Qué sentido tiene que hagas esto, W?", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_1504_cqbw")]
+[name="W"]  Todavía no he terminado de hablar.
+[name="W"]  Amiya...
+[name="W"]  ... ¿Te hice enojar?
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ... Has ido demasiado lejos.
+[Character(name="char_1504_cqbw")]
+[name="W"]  Bien, bien... Así me gusta más.
+[name="W"]  Ven a por mí.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡W del Movimiento Reunion, has ido demasiado lejos!
+[name="Amiya"]  Cada vida es valiosa, todas y cada una de ellas...
+[name="Amiya"]  ¡Esto es algo que nunca podrás mancillar!
+[name="Amiya"]  ¡¡Doctor!!
+[Decision(options="¡Rhodes Island, prepárense para el combate!", values="1")]
+[Predicate(references="1")]
+[Character(name="char_1504_cqbw")]
+[name="W"]  Jeje...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

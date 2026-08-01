@@ -1,0 +1,39 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 8 (después)
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Background(image="bg_cher_1", width=1, height=1, fadetime=0)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[CameraShake(duration=3,xstrength=2,ystrength=3,vibrato=10,randomness=90,fadeout=true,block=true)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]  ¡¡A la caaaarga—!!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Eh?
+[name="Miembro de Reunion"]   —¡¿Quién anda ahí?!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Tsk, ¿a dónde miras? ¡Toma esto!
+[playsound(key="$p_imp_whip_h", volume=0.7)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[CameraShake(duration=3,xstrength=2,ystrength=3,vibrato=10,randomness=90,fadeout=true,block=false)]
+[name="Miembro de Reunion"]   ¡¡Agh!!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_013_riop", name2="char_148_nearl_1", focus=1)]
+[name="Guardia"]   Uf...
+[name="Guardia"]   Las fuerzas de Reunion se están reagrupando detrás de nosotros... ¡se preparan para atacar!
+[Character(name="char_013_riop", name2="char_148_nearl_1#3", focus=2)]
+[name="Nearl"]  ¡No pueden seguirnos el ritmo! ¡Sigan avanzando!
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.8)]
+[CameraShake(duration=3,xstrength=2,ystrength=3,vibrato=10,randomness=90,fadeout=true,block=true)]
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1#3", focus=1)]
+[name="Dobermann"]  ¡Casi salimos del territorio controlado por Reunion! ¡¡No dejen de moverse!!
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1#3", focus=2)]
+[name="Nearl"]   Estos rufianes insignificantes...
+[name="Nearl"]   ...¡No tienen ninguna esperanza de detenernos!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,488 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 11 (antes)
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_7", fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5,block=true)]
+[Delay(time=0.3)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   Amiya, llévate al Doctor contigo.
+[name="Nearl"]   ...¡Vete, ya!
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ¡No! No te dejaré...
+[Character(name="char_002_amiya_1#4", name2="char_148_nearl_1#3", focus=2)]
+[name="Nearl"]   ¡Seguro que tú también lo sientes! Ella... ¡Si no te vas, todo el equipo de rescate morirá aquí!
+[name="Nearl"]   Esa Talulah...
+[name="Nearl"]   ¡Es un monstruo viviente! ¡Amiya!
+[Character(name="char_002_amiya_1#7", name2="char_148_nearl_1#3", focus=1)]
+[name="Amiya"]   ¡Estaremos bien, mientras permanezcamos unidos!
+[Character(name="char_002_amiya_1#7", name2="char_148_nearl_1#3", focus=2)]
+[name="Nearl"]   ¿Y qué hay del Doctor, entonces? ¿Puedes garantizar la seguridad del Doctor?
+[Character(name="char_002_amiya_1#4", name2="char_148_nearl_1#3", focus=1)]
+[name="Amiya"]   ... Mm...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡Equipo E4, nos quedaremos atrás y mantendremos la línea!
+[name="Nearl"]   ¡Debemos asegurarnos de que Amiya, el Dr. {@nickname} y los equipos de Médicos escapen a salvo!
+[Character(name="char_014_riope")]
+[name="Ace"]   No, mi escuadrón se encargará de esto.
+[Character(name="char_014_riope",name2="char_148_nearl_1#3",focus=2)]
+[name="Nearl"]   ¡Ace! Sé racional, ¡ahora no es momento de discutir esto!
+[Character(name="char_014_riope",name2="char_148_nearl_1#3",focus=1)]
+[name="Ace"]   Soy racional.
+[Character(name="char_014_riope",name2="char_148_nearl_1#3",focus=2)]
+[name="Nearl"]   Seguro que tú también lo ves: ¡todo a su alrededor se está derritiendo!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   No voy a dejarlos aquí a todos luchando solos.
+[name="Amiya"]   Rhodes Island... ¡no te abandonará!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Amiya, el tiempo apremia! ¡Tienes que escapar!
+[Character(name="char_014_riope")]
+[name="Ace"]   ...Deberías confiar en mí.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡No soporto ver a Rhodes Island sacrificar a nadie!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Piensa en nuestro objetivo! ¡Piensa en para qué vinimos aquí!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Este sigue sin ser el momento de hablar de eso!
+[Character(name="char_011_talula_1")]
+[name="Talulah"]  ...
+[Dialog]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=10, randomness=20, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0, fadetime=3, block=true)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   --? El calor... ¿se está concentrando en sus manos?
+[Character(name="char_013_riop")]
+[name="Guardia"]   ¿Está... distorsionando el espacio a su alrededor?
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   No, eso es... ¡el aire sobrecalentado a su alrededor!
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ¡Cuidado! Se prepara para usar sus Artes...
+[name="Amiya"]   ¡No... No puedes! ¡¡Nearl!! ¡¡Vuelve, ya!!
+[name="Amiya"]   Esa no es ella... Te matará si--
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_cher_7", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Character(name="char_011_talula_1",block=true)]
+[name="Talulah"]  ... Silencio.
+[Dialog]
+[Character(fadetime=1)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡Uaaaaagh...!
+[Dialog]
+[Character]
+[Character(name="char_011_talula_1",block=true)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=false)]
+[delay(time=1)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   Ugh... Gahh...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Nearl!
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=1)]
+[name="Nearl"]   *tos*... ¡Atrás! No se preocupen por mí...
+[name="Nearl"]   Solo hace... un poco de calor...
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]   ¿Qué estás diciendo... que no me preocupe?
+[name="Dobermann"]   ¡No te queda ni una sola pieza de armadura intacta, ¿y me dices que no me preocupe?! !
+[name="Dobermann"]   ¡No debes seguir luchando contra ella!
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=1)]
+[name="Nearl"]   Ya lo dije... ¡Atrás!
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]   ¡Nearl! ¡Serás terca...!
+[Dialog]
+[Character(fadetime=1)]
+[Character(name="char_011_talula_1",block=true)]
+[name="Talulah"]   ... ¿Mm?
+[Character(name="char_014_riope")]
+[name="Ace"]   ¡Al suelo!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=false)]
+[delay(time=1)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   *tos* *tos*... ¡¿Y ahora qué!?
+[Character(name="char_148_nearl_1#3",name2="char_014_riope",focus=2)]
+[name="Ace"]   ... Unas llamas invisibles acaban de pasar sobre nuestras cabezas.
+[name="Ace"]   Retrocedan. Toda esta manzana se está derritiendo...
+[name="Ace"]   ¡No te sacrifiques en vano!
+[Character(name="char_148_nearl_1#3",name2="char_014_riope",focus=1)]
+[name="Nearl"]   ...
+[name="Nearl"]   ¿Contra qué monstruosidad estoy luchando?
+[Character(name="char_148_nearl_1#3",name2="char_014_riope",focus=2)]
+[name="Ace"]   Tenemos que interrumpir su conjuro de algún modo...
+[name="Ace"]   ¡Francotiradores, apunten al enemigo!
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Dialog]
+[Character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Background(fadetime=2)]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   ...
+[name="Talulah"]   La resistencia traerá esperanza a esta tierra.
+[name="Talulah"]   Pero la resistencia... no cambiará tu destino.
+[Character(name="char_014_riope")]
+[name="Ace"]   ¡¡Fuego!!
+[Character(fadetime=0)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   Chernobog ya ha alcanzado la liberación.
+[name="Talulah"]   Nuestro trabajo aquí ha terminado, y tu grupo ha resultado ser bastante interesante.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Qué...
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   Sin embargo, eso es todo lo que valen.
+[name="Talulah"]   Han elegido mal.
+[name="Talulah"]   Rhodes Island, deberían haberse puesto con firmeza del lado de los Infectados.
+[Dialog]
+[Character(fadetime=1)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_8", width=1, height=1, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]   ¿Qué... está pasando?
+[name="Médico"]   ¿Por qué toda la plaza... se está calcinando?
+[name="Médico"]   ¿Qué... pasó... hace un momento...?
+[name="Médico"]   Yo... no puedo respirar... quema...
+[Character(name="char_013_riop")]
+[name="Guardia"]   Rocas, saetas, flechas...
+[name="Guardia"]   Han desaparecido todas.
+[name="Guardia"]   En un abrir y cerrar de ojos... todos los objetos a su alrededor han quedado reducidos a la nada...
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   Tienen la entereza de los libertadores.
+[Character(name="char_013_riop")]
+[name="Guardia"]   ... No queda ni siquiera ceniza...
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=1)]
+[name="Nearl"]   Amiya. Sabes lo que hay que hacer.
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=2)]
+[name="Amiya"]   ...
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=1)]
+[name="Nearl"]   Alguien... tiene que detenerla.
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   ...Pero esto empieza a cansarme.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡¡Amiya!!
+[PlaySound(key="$d_gen_thunders_amb", volume=0.3)]
+[PlaySound(key="$b_char_defboost", volume=0.3, Delay=0.4)]
+[Blocker(a=1, initr=2, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[Dialog(time=0.5)]
+[Delay(time=1)]
+[Blocker(r=0.9, g=0.4, b=0.3, a=1, fadetime=0.1, block=true)]
+[Character]
+[Image(image="avg_11_1",x=0, y=-50,xScale=1.3, yScale=1.3, fadetime=0)]
+[ImageTween(xFrom=-100, yFrom=-50, xTo=0, yTo=0, xScaleFrom=1.3, yScaleFrom=1.3, xScaleTo=1, yScaleTo=1, duration=35, block=false)]
+[Blocker(r=0.7, g=0.4, a=1, fadetime=0.3, block=true)]
+[Blocker(r=0.2, g=0,b=0, a=0.1, fadetime=1.5, block=true)]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   Este es el precio que deben pagar por masacrar a sus hermanos Infectados.
+[name="Talulah"]   Les concederé un final que me resulta muy grato.
+[name="Talulah"]   ...Desaparezcan.
+[Dialog]
+[Character(fadetime=0)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡¡Maldición!!
+[name="Dobermann"]   Corran... ¡¡rápido!!
+[name="Dobermann"]   Esa cantidad de calor, a semejante escala... ¡No, no!
+[name="Dobermann"]   ¡Protejan a Amiya y al Doctor! ¡¡Rápido!!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡No lo lograremos...!
+[name="Nearl"]   ¡¡¡Yo la detendré!!!
+[Character(name="char_016_medic")]
+[name="Médico"]   ¡¡AAAAAGH!!
+[stopmusic(fadetime=1)]
+[Blocker(r=0.9, g=0.4, b=0.3, a=1, fadetime=0.1, block=true)]
+[Image(fadetime=0)]
+[Dialog]
+[Character(fadetime=0)]
+[Background(image="bg_light")]
+[CameraShake(duration=6, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[PlaySound(key="$p_skill_chimera", volume=1)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Character(name="char_016_medic")]
+[name="Médico"]   ...
+[name="Médico"]   ...¿¿¿Eh???
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[name="Médico"]   ¿A-Amiya?
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   No les harás daño.
+[Delay=1]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]  ...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Image(image="bg_1_reflect",fadetime=0,screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[name="Amiya"]   ¡Nunca... te permitiré hacer eso!
+[PlayMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Dialog]
+[CameraShake(duration=6, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$p_skill_spiritexplo", volume=1)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.4, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[character(fadetime=1)]
+[Character(name="char_011_talula_1", fadetime=1, block=false)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.3, rfrom=0.8, bfrom=0.8, gfrom=0.8, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.3, rfrom=0.8, bfrom=0.8, gfrom=0.8, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=false)]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Talulah"]   -----¿Oh?
+[Delay(time=0.6)]
+[Dialog]
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[CameraShake(duration=6, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[PlaySound(key="$p_skill_chimera", volume=1)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0.8, r=1, g=0.4, b=0.5, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=false)]
+[name="Amiya"]   Ngh...
+[name="Amiya"]   Debo... proteger a todos...!
+[CameraShake(duration=6, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$p_skill_spiritexplo", volume=1)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.4, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[Character(name="char_148_nearl_1#8")]
+[Delay=1]
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]   ¿Amiya está conteniendo las Artes del enemigo... ella sola...?
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=1)]
+[name="Nearl"]   No sirve de nada... ¡Ese poder es demasiado descomunal!
+[name="Nearl"]   Ni siquiera Amiya podrá...
+[name="Nearl"]   ¡No aguantará mucho tiempo!
+[Character(name="char_016_medic")]
+[name="Médico"]   ¡Amiya!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   No se preocupen... No se preocupen por mí...
+[name="Amiya"]   ¡Puedo con esto...!
+[name="Amiya"]   Quiero... Debo... ¡protegerlos a todos!
+[Dialog]
+[Character(fadetime=1)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0, fadetime=2, block=true)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Character(name="char_016_medic")]
+[name="Médico"]   La materia oscura... está sellando las Artes del enemigo dentro de la plaza...
+[Character(name="char_002_amiya_1#9")]
+[name="Amiya"]   ¡Ngh... Argh... Ughh!
+[Character(name="char_013_riop")]
+[name="Guardia"]   ¡S-su barrera se está incendiando!
+[Character(name="char_130_doberm_ex",name2="char_002_amiya_1#9",focus=1)]
+[name="Dobermann"]   ¡¡Amiya, detente!! ¡Tu anillo va a--!
+[Character(name="char_130_doberm_ex",name2="char_002_amiya_1#4",focus=2)]
+[name="Amiya"]   No me importa... aunque...
+[name="Amiya"]   Doctor, lo siento...
+[name="Amiya"]   ¡Aunque esto traiga el desastre, aunque yo...!
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   No quiero perder... a la persona más querida para mí... nunca más...
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   Je...
+[name="Talulah"]   Muy bien.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡¡Aghh... Aaaaaahhh...!!
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡Amiya!
+[name="Nearl"]   Maldición... ¡Vamos a perderla...!
+[Character(name="char_130_doberm_ex",name2="char_148_nearl_1#3",focus=1)]
+[name="Dobermann"]   ¿Qué estás haciendo?
+[Character(name="char_130_doberm_ex",name2="char_148_nearl_1#3",focus=2)]
+[name="Nearl"]   ¡Destruir las Artes de esa dragona!
+[Character(name="char_130_doberm_ex",name2="char_148_nearl_1#3",focus=1)]
+[name="Dobermann"]   Tú...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ... 'Oh, Luz de Kazimierz, la Caballero Radiante ofrece su cuerpo a ti...'
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Doctor! ¡Solo vete! Ayudaremos a Amiya, pero tienes que...
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   --!
+[Dialog]
+[Character(fadetime=1)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[Character(name="char_002_amiya_1#7")]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=1, block=true)]
+[CameraShake(duration=6, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$p_skill_spiritexplo", volume=1)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.4, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[name="Amiya"]   ¡¡Aaaaaaaaghh!!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[stopmusic(fadetime=1)]
+[name="Amiya"]   ¿Qué...?
+[name="Ace"]   Es suficiente, Amiya.
+[name="Amiya"]   --?!
+[character(fadetime=0)]
+[Image]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_014_riope")]
+[name="Ace"]   Lo has hecho bien.
+[name="Ace"]   Deja que compartamos tu carga.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Yo...
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¡Amiya!
+[Character(name="char_014_riope")]
+[name="Ace"]   Dobermann, llévatela contigo. Nos vemos pronto.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ...Ace...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Ace... No... ¡Ace...!
+[name="Amiya"]   Prométeme... que tú...
+[Character(fadetime=1.5)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[name="Ace"]   ——
+[name="Ace"]   Lo siento, Dr. {@nickname}. Puede que no me recuerdes.
+[name="Ace"]   Pero yo te recuerdo, y sé qué clase de persona eres.
+[name="Ace"]   ... Llegará un día en que tú y Amiya enfrenten juntos esta tierra cruel.
+[name="Ace"]   Por eso... debes cuidarla, Doctor.
+[name="Ace"]   Vamos.
+[name="Ace"]   Que la fortuna los acompañe.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

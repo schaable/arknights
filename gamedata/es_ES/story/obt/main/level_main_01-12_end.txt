@@ -1,0 +1,213 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 12 (después)
+[Background(image="bg_cher_3", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1504_cqbw")]
+[name="W"]  Ahh... ¡Qué sensación tan nostálgica!
+[name="W"]  Amiya, ¿verdad?
+[name="W"]  ——
+[name="W"]  Ah, ¡ajajá! Ya veo... Así que de eso se trata.
+[name="W"]  Ahora lo recuerdo, Amiya.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ...¿Qué?
+[Character(name="char_1504_cqbw")]
+[name="W"]  Ya conseguí lo que vine a buscar. Ya pueden irse todos. Fuera.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Tú...!
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=2)]
+[name="Miembro de Reunion"]  ¿W...?
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=1)]
+[name="W"]  ... ¿Qué, quieren quedarse aquí a morir? Por mí perfecto. Son todos libres de hacer lo que les plazca.
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=2)]
+[name="Miembro de Reunion"]  ...
+[name="Miembro de Reunion"]  Nos retiramos. Déjenlos ir. Órdenes de Talulah.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ...?
+[Character(name="char_1504_cqbw")]
+[name="W"]  Olvídalo. Las cosas se vuelven aburridas cuando se alargan demasiado. Odio aburrirme, eso es todo.
+[name="W"]  Sin embargo, sí que espero con ganas volver a verte, Amiya.
+[name="W"]  Así como... a esa persona.
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  ¿Qué...? !
+[Character(name="char_1504_cqbw")]
+[name="W"]  La próxima vez, oiré la verdad de tu boca, {@Nickname}.
+[name="W"]  Adiós~
+[PlaySound(key="$d_gen_walk_n", volume=1.1)]
+[Dialog(fadetime=1)]
+[Character(fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¿Qué... Por qué... hace esto?
+[Delay=0.5]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Reunion... se han ido.
+[name="Dobermann"]  --Hace rato que se nos pasó la hora del encuentro.
+[name="Dobermann"]  Retirada hacia Rhodes Island... de inmediato.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  ...
+[name="Amiya"]  Yo escoltaré... a los operadores de la retaguardia.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  Amiya...
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Estoy bien.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  ... Está bien..
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Ve, Amiya.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[delay(time=1)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_cher_7", width=1, height=1, fadetime=0)]
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[Blocker(a=0, fadetime=3, block=false)]
+[name="Guardia"]  ...
+[name="Guardia"]  ... ...
+[name="Guardia"]  ... ¿Jefe...?
+[name="Guardia"]  Dónde están los demás...
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Nearl y los demás ya se abrieron paso con Amiya y el Dr. {@nickname}.
+[name="Ace"]  Los que se quedaron atrás...
+[name="Ace"]  ... Ya no están, ninguno.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(fadetime=0)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_cher_7", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  ... Qué...
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Somos los únicos dos que quedamos.
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  Ahora lo recuerdo... Esa, esa aberración... Talulah... ella sola...
+[name="Guardia"]  Apartó a nuestros Guardias de un golpe como si fueran bloques de juguete...
+[name="Guardia"]  Ese monstruo atravesó a nuestros Defensores como si fueran mantequilla...
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Calla... Tus heridas son profundas.
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  ¡La Catástrofe...! Ella es la Catástrofe encarnada... Cómo, cómo si no podría haber reducido a nuestros escuadrones a cenizas en un instante...
+[name="Guardia"]  Aunque lo vi con mis propios ojos, no puedo... no puedo creerlo...
+[name="Guardia"]  Los gritos... Aagh... Gaaaah...
+[Character(name="char_014_riope")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Ace"]  ¡Reacciona!
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  Lo siento mucho... Yo, yo no sé cómo...
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Cálmate.
+[name="Ace"]  Te di algo de tratamiento de emergencia.
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  ... Jefe... ¿qué le pasó a tu brazo...?
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Al menos aún me queda uno que puedo usar.
+[Character(name="char_014_riope", name2="char_013_riop", focus=-1)]
+[Dialog]
+[Delay(time=0.6)]
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  Jefe... Deberías irte. Seguro que podrás abrirte paso.
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Solo logramos retenerla unos minutos.
+[name="Ace"]  Hasta que el Dr. {@nickname} y Amiya estén a salvo, no puedo irme.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(fadetime=0)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_cher_7", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Character(name="char_014_riope")]
+[name="Ace"]  Primero tengo que detener a ese monstruo.
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  Jefe... yo también...
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  El precio de tu vida... se pagó con mi brazo.
+[name="Ace"]  Si puedes vivir aunque sea un minuto más, habrá valido la pena.
+[Character(name="char_014_riope", name2="char_013_riop", focus=2)]
+[name="Guardia"]  ...
+[Character(name="char_014_riope", name2="char_013_riop", focus=1)]
+[name="Ace"]  Vuelvo enseguida. Cuídate.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(fadetime=0)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_cher_7", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Character(name="char_013_riop")]
+[name="Guardia"]  Jefe... lo siento... por ser tan poco digno.
+[Character(name="char_013_riop")]
+[name="Guardia"]  Amiya...
+[Character(fadetime=1)]
+[CameraShake(duration=0.5, xstrength=2, ystrength=3, vibrato=30, randomness=90, fadeout=true)]
+[name="Guardia"]  Estoy seguro de que podrás... hacer que los sueños de todos...
+[Dialog]
+[name="Amiya"]  ...
+[name="???"]  Todos ellos... Yo...
+[name="Amiya"]  ... ...
+[name="???"]  ... ¿Amiya?
+[name="???"]  ... ... ¿Amiya?
+[StopMusic(fadetime=0.1)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[Background(image="bg_cher_3", width=1, height=1, fadetime=0, block=true, screenadapt="coverall")]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_016_medic", name2="char_002_amiya_1#4" ,fadetime=0, focus=2)]
+[name="Amiya"]  Oh, ¿eh?
+[Character(name="char_016_medic", name2="char_002_amiya_1#4", focus=1)]
+[name="Médico"]  ¿Qué ocurre?
+[Character(name="char_016_medic", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]  N-nada... De repente sentí...
+[name="Amiya"]  Pena...
+[Character(name="char_016_medic", name2="char_002_amiya_1#4", focus=1)]
+[name="Médico"]  *sollozo*... Urk...
+[name="Médico"]  Pena... vaya...
+[name="Médico"]  Aauugh...
+[Character(name="char_016_medic", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]  ... No llores...
+[name="Amiya"]  Al menos... por ahora.
+[name="Amiya"]  Alguien me dijo una vez...
+[name="Amiya"]  Las lágrimas... deben guardarse para cuando la guerra termine.
+[name="Amiya"]  Ahora... no es el momento.
+[Character(name="char_016_medic", name2="char_002_amiya_1#4", focus=1)]
+[name="Médico"]  Nnh... Ugh... Nn...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[dialog]
+[character(fadetime=0)]
+[Background(image="bg_0_rhodes3", fadetime=0, screenadapt="coverall", screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Amiya"]  Vamos...
+[name="Amiya"]  ...Nos vamos a casa.
+[dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep01",x=0, y=0, xScale=1, yScale=1, fadetime=3, screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[delay(time=5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

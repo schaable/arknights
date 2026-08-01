@@ -1,0 +1,76 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 9 (antes)
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Uf... Por fin los perdimos.
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=1)]
+[name="Ace"]  Si mantenemos el ritmo, pronto saldremos de la región central y llegaremos a la salida sur.
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Empieza a haber más ruido y más caos...
+[name="Dobermann"]  Puede que sea porque los civiles de Chernobog que intentan evacuar la ciudad se están topando con Reunion.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  ...
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=1)]
+[name="Ace"]  Parece que algunos distritos ya han sido desalojados.
+[name="Ace"]  Pero a quienes no llegaron a tiempo ahora los está reteniendo Reunion.
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ...
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=1)]
+[name="Ace"]  ——
+[name="Ace"]  Este lugar solía ser una plaza magnífica y extensa. Ahora... ha quedado reducida a ruinas.
+[name="Ace"]  Esta ciudad atormentó a los Infectados. Que su fin llegue de esta forma es casi poético.
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Casi...
+[name="Dobermann"]  Pareces bastante sentimental.
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=1)]
+[name="Ace"]  Quizás, en algún momento...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  El cielo se oscurece aún más.
+[name="Amiya"]  Hasta el aire tiene olor... a algo quemándose.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(fadetime=0)]
+[name="Civil"]  ¡¿Qué estás haciendo?!
+[name="Miembro de Reunion"]  ...
+[Character(fadetime=0)]
+[name="Civil"]  ...¡¡Aaaargh!! !
+[Character(name="char_014_riope")]
+[name="Ace"]  ————!
+[name="Ace"]  ¿Civiles?
+[Character(name="char_014_riope", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  Ya no oigo nada.
+[name="Dobermann"]  No podemos distinguir quiénes son a esta distancia.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  ...!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Reunion los está atacando...!
+[Character(name="char_014_riope")]
+[name="Ace"]  Aquí no podemos aprovechar el terreno a nuestro favor. No tenemos la capacidad de salvar a todos.
+[name="Ace"]  La vida es muy valiosa, Amiya. Cada una de ellas.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  ...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ...
+[name="Dobermann"]  En cualquier caso, ya es demasiado tarde.
+[name="Dobermann"]  Después de todo, nosotros mismos tenemos problemas por delante.
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ...
+[name="Nearl"]   Hoy no podemos tomarnos un respiro.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ...
+[Delay(time=0.5)]
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]  ...Mátenlos a todos.
+[Character(name="char_148_nearl_1#1")]
+[name="Nearl"]   ¡Un gran número de fuerzas de Reunion viene por las salidas!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¡Prepárense para abrirnos paso luchando!
+[Dialog]
+[Blocker(block=true)]
+[Delay(time=0.6)]
+[Image]

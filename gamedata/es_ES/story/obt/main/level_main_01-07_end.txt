@@ -1,0 +1,164 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 10 (después)
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_7", fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5,block=true)]
+[Delay(time=0.3)]
+[PlaySound(key="$d_gen_explo_n")]
+[CameraShake(duration=1, xstrength=3, ystrength=5, vibrato=30, randomness=90, fadeout=false)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   *jadeo* *jadeo*...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ¡Lo logramos...!
+[name="Nearl"]   No solo hemos logrado quitarnos de encima a Reunion...
+[name="Nearl"]   ...¡sino que la Catástrofe también se está debilitando de forma visible!
+[name="Nearl"]   Pero seguimos en una situación terrible... ¡Todos, sigan actuando con cautela!
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   La Catástrofe...
+[name="Amiya"]   Las calles están ahora sepultadas bajo escombros, y los edificios derrumbados bloquean todos los caminos...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ¿El Originium ya está empezando a metastatizar...?
+[name="Dobermann"]   ¡Ya casi llegamos, pero todo nos bloquea el paso!
+[name="Dobermann"]   Si tan solo pudiéramos...
+[name="Dobermann"]   ... Solo...
+[Character(name="char_014_riope")]
+[name="Ace"]  ——
+[name="Ace"]  Ya están aquí.
+[Character(name="char_014_riope",name2="char_013_riop",focus=2)]
+[name="Guardia"]   ¿Qué está aquí?
+[name="Guardia"]   ¿Reunion? ¿Nos alcanzaron? !
+[Character(fadetime=0)]
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=1)]
+[Character(name="char_1002_nsabr_2",fadetime=1)]
+[Delay(time=2)]
+[Character(name="char_016_medic")]
+[name="Médico"]   Ugh...
+[name="Médico"]   Hay... muchísimos...
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_soldiersrun",volume=1)]
+[Dialog]
+[Delay(time=2)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   No solo nos alcanzaron...
+[name="Dobermann"]   Están...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   --Por todas partes.
+[Character(fadetime=0)]
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=1)]
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",fadetime=1)]
+[Delay(time=2)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Desde la plaza, las calles, los edificios... e incluso todas las ruinas.
+[name="Dobermann"]   Mira esas cifras. Ja...
+[name="Dobermann"]   Eso explica por qué no le tenían ningún miedo a la Catástrofe, salvo los que acabaron aplastados.
+[name="Dobermann"]   Incluso si suponemos...
+[name="Dobermann"]   Que la Catástrofe acabó con la mitad de sus hombres--
+[name="Dobermann"]   Todavía tienen aquí suficiente gente para matarnos una docena de veces.
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ...
+[name="Nearl"]   ¡No dejen de moverse! ¡Seguiremos avanzando hacia nuestra ruta de retirada!
+[name="Nearl"]   ¡Estamos acabados si nos detenemos en campo abierto! ¡Al menos lleguen a la salida de la plaza antes de reagruparse!
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=2)]
+[name="Amiya"]   Nearl...
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=1)]
+[name="Nearl"]   Tenemos que luchar. Después de romper su línea, nos escabulliremos en el caos que se genere.
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=2)]
+[name="Amiya"]   ¿Estás segura de que funcionará?
+[Character(name="char_148_nearl_1#3",name2="char_002_amiya_1#7",focus=1)]
+[name="Nearl"]   Las probabilidades son escasas, pero no nos quedan opciones. Pero...
+[name="Nearl"]   ¡Aunque nos superen diez a uno, si no son más que un montón de rufianes, aún tenemos una oportunidad!
+[name="Nearl"]   ¡Mantengan la calma! ¡Prepárense para la batalla! ¡Formaciones defensivas!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   ...Tsk.
+[name="Dobermann"]   Con estas cifras, si quisieran tomar Chernobog... quizás de verdad podrían lograrlo.
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   Son demasiados...
+[name="Nearl"]   Son muchísimos..
+[name="Nearl"]   ¿De dónde sacó Reunion a todos estos Infectados?
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Estamos completamente rodeados...
+[name="Dobermann"]   Nunca pedí esta clase de respeto por parte de Reunion.
+[Character(name="char_013_riop")]
+[name="Guardia"]   ¡Toda la plaza... está plagada de fuerzas de Reunion!
+[name="Guardia"]   ¡Han dejado de moverse!
+[name="Guardia"]   ...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Ugh...
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_walk_n",volume=1)]
+[dialog]
+[Character(fadetime=0)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_7", fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_011_talula_1#2",fadetime=1,block=true)]
+[Delay(time=2)]
+[character(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_013_riop")]
+[name="Guardia"]   ¡Solo un enemigo se acerca a nuestra línea defensiva!
+[name="Guardia"]   Por qué esa persona camina hacia nosotros sola...
+[name="Guardia"]   ¿Están enviando a un emisario? No lo creo...
+[Dialog]
+[character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Ella...
+[name="Amiya"]   Según nuestra información, ella es...
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   ...
+[name="Nearl"]   Hay algo peculiar en su olor.
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=2)]
+[name="Dobermann"]   Nearl...
+[Character(name="char_148_nearl_1#3",name2="char_130_doberm_ex",focus=1)]
+[name="Nearl"]   No sabría decir exactamente qué es, pero...
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_7", fadetime=0)]
+[Dialog(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[PlaySound(key="$d_gen_walk_n",volume=1)]
+[Character(name="char_011_talula_1#2",fadetime=2)]
+[Background(image="bg_cher_7",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=1)]
+[BackgroundTween(xFrom=0, yFrom=0, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=4, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[character]
+[Background(image="bg_cher_7", fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   Es... el olor a acero y azufre.
+[name="Nearl"]   Como si algo se estuviera quemando.
+[name="Nearl"]   Si de verdad es fuego, entonces...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Todos los operadores... máxima alerta.
+[name="Amiya"]   ...Esa persona es...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   La soberana de Reunion...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...Talulah.
+[PlaySound(key="$d_gen_thunders_amb")]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, block=false)]
+[stopmusic(fadetime=2)]
+[character]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true, fadetime=1)]
+[Background]
+[Blocker(a=1, initr=2, r=1, g=1, b=1, block=true, fadetime=0.3)]
+[Blocker(a=0, fadetime=0.3, block=false)]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   ...
+[name="Talulah"]   ... ...
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true, fadetime=1)]
+[Character(name="char_148_nearl_1#3")]
+[name="Nearl"]   Me atrevería a decir... que sus llamas son lo bastante poderosas como para devorar Terra por completo.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
