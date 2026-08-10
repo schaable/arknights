@@ -1,0 +1,158 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 13 (después)
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(fadetime=0)]
+[Background(image="bg_lungmen_station", width=1, height=1, fadetime=0)]
+[name=""]   10:14 p. m. \ Despejado \ Visibilidad: 19 km
+[name=""]   Lungmen, Distrito 5- Zona de Inspección y Cuarentena
+[Dialog]
+[delay(time=1)]
+[Character(name="char_015_lmg")]
+[name="???"]   Señorita.
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="???"]   Ya están aquí.
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=1)]
+[name="???"]   ......
+[Dialog]
+[Character(fadetime=0.6)]
+[PlaySound(key="$radio")]
+[name="Transmisión"]   Atención, por favor...
+[name="Transmisión"]   Debido a la interferencia de la Catástrofe, todo el tráfico aéreo en Lungmen ha sido suspendido. Todas las entradas al Distrito 5 se cerrarán en dos horas.
+[name="Transmisión"]   Les agradecemos su cooperación durante las inspecciones de Oripatía.
+[name="Transmisión"]   Si descubre a algún Infectado no registrado, informe de inmediato a un agente del orden cercano.
+[name="Transmisión"]   El L.G.D. los detendrá conforme a la 'Ley de Gestión de Emergencias'.
+[name="Transmisión"]   Atención, por favor...
+[PlaySound(key="$radio")]
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]   Es justo como decían los rumores...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Vamos, Doctor.
+[name="Amiya"]   Ya llegamos.
+[Delay(time=1)]
+[Character(name="char_010_chen_1")]
+[name="???"]   Rhodes Island tenía programada una reunión con el L.G.D. a las 10 en punto.
+[name="???"]   Ahora son las 10:14.
+[Character(name="char_010_chen_1#4")]
+[name="???"]   Llegaron tarde 14 minutos; por lo tanto, han desperdiciado 14 minutos de mi tiempo.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   ...Lo siento, Señorita Ch'en, acabamos de enterarnos de que Reunion está aquí...
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Está bien, ya lo sé. Pero eso no es importante ahora mismo.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ...¿Y quién es este?
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   El Dr. {@nickname} es el asesor de Rhodes Island. La Dra. Kal'tsit ya debería haberte informado.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Mmm...
+[name="Ch'en"]   Bueno, ya que están todos aquí, ahora necesito que me sigan hasta...
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.4)]
+[name="Agente del L.G.D."]   ¡Señorita Ch'en! ¡Es una emergencia! Esos Infectados... no están...
+[Character(name="char_010_chen_1#4", name2="char_015_lmg", focus=1)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="Ch'en"]   ¡No cundan en pánico!
+[name="Ch'en"]   ¡Primer Escuadrón, en espera! ¡Francotiradores, a sus posiciones!
+[Dialog]
+[Character(fadetime=0)]
+[name="Civil"]   ¿Q-qué está pasando?!
+[name="Infectado"]   ¡¡Suéltenme!!
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Tch... ¿Qué ocurre? Informen de la situación.
+[Dialog]
+[Character(fadetime=0)]
+[CameraShake(duration=1.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="Infectado"]   ¡¡Déjenme ir!! ¿¡Por qué me arrestan!?
+[name="Infectado"]   ¡¡¡No hicimos nada malo!!!
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[name="Agente del L.G.D."]   Algunos Infectados... se niegan a ser detenidos... Estamos...
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=1)]
+[name="Ch'en"]   Ya lo veo...
+[name="Ch'en"]   Olvídalo.
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=1)]
+[name="Ch'en"]   Deténganlos a todos.
+[name="Ch'en"]   Dispersen a la multitud de inmediato. Abran las puertas en 30 minutos, después de que terminen el proceso de revisión.
+[name="Ch'en"]   Además, adelanten la línea de inspección de cuarentena 40 metros.
+[Character]
+[Dialog]
+[Delay(time=0.4)]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]   Aparte de ti y del Dr. {@nickname}, el resto de Rhodes Island se quedará aquí y ayudará con la seguridad del perímetro. Ustedes dos, vengan conmigo.
+[name="Ch'en"]   Si tu grupo no puede encargarse de una tarea tan trivial, no podré asignarles ninguna misión.
+[name="Ch'en"]   PC94172, asígnales algo de trabajo a esta gente. No quiero ver más problemas esta noche.
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[name="Agente del L.G.D."]   ¡Entendido, Señorita!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]   Todos, quisiera que...
+[PlaySound(key="$d_gen_walk_n",volume=0.6)]
+[Character(fadetime=2)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   ...
+[name="Amiya"]   (La Señorita Ch'en es muy dura... es más estricta de lo que imaginaba...)
+[Decision(options="... (Asiente)", values="1")]
+[Predicate(references="1")]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]   Ustedes dos.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.4, block=true)]
+[name="Ch'en"]   Síganme.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2,block=true)]
+[Background]
+[Dialog]
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_walk_n",volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Ya llegamos.
+[Character(fadetime=0)]
+[Delay(time=0.5)]
+[Dialog]
+[Background(image="bg_lungmen_n",x=40, y=0, fadetime=1, xScale=1.3, yScale=1.3)]
+[Delay(time=0.5)]
+[BackgroundTween(xFrom=40, yFrom=0, xTo=40, yTo=-150, duration=4, block=true)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Q-qué edificio tan alto!
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ...
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Ugh...
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   L-lo siento...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ... Rhodes Island es indudablemente capaz.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Oh...
+[name="Amiya"]   Gracias por su elogio, Señorita.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Sin embargo...
+[name="Ch'en"]   Tras el incidente de Chernobog, ha habido una avalancha enorme de refugiados hacia Lungmen.
+[name="Ch'en"]   Los Infectados ya deberían saber cuáles son las consecuencias de entrar en Lungmen.
+[Character]
+[Dialog]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_walk_n",volume=0.6)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_lungmen_o", width=1, height=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+[name="???"]   Se lo recordaré una vez más.
+[name="???"]   Lungmen es el próximo Chernobog.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Dra. Kal'tsit...!
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   La representante de Rhodes Island ya se ha reunido con el Jefe Wei.
+[name="Ch'en"]   Por favor, esperen aquí.
+[name="Ch'en"]   Les avisaré en breve.
+[Dialog(fadetime=0.6)]
+[Character(fadetime=0.6)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Uf... de verdad que es difícil hablar con ella.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Dr. {@nickname}, de aquí en adelante, la Dra. Kal'tsit se encargará de las negociaciones.
+[name="Amiya"]   Por favor, ten confianza en ella.
+[Dialog(fadetime=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

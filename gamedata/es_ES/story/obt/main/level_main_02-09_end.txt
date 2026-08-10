@@ -1,0 +1,103 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 21 (después)
+[Background(image="bg_lungmen_r", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Esta es la última oleada de perseguidores!
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$b_char_rockexplo", volume=0.6)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[name="Miembro de Reunion"]   ¡...Aaargh!
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   ¡Todo despejado!
+[name="Liskarm"]   ¡Confirmo que por aquí es seguro!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   ¿Dónde está el comandante enemigo?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ...No está con su fuerza principal.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   El enemigo acecha... nos siguen y nos vigilan.
+[name="Franka"]   ¿Intentan desgastarnos hasta tener la oportunidad perfecta para atacar?
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Reunion no es ajena a los ataques por sorpresa.
+[name="Amiya"]   Lo aprendimos por las malas en Chernobog.
+[name="Amiya"]   Retrocedamos rápido...
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1", focus=1)]
+[name="Liskarm"]   No puedo garantizar la seguridad de la ruta de escape.
+[name="Liskarm"]   Estaremos en peligro si empiezan a demoler los edificios cercanos para bloquear el camino.
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   Rápido, veamos qué otras rutas podemos tomar. ¡Cuanto más sigilosas, mejor!
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Amiya, ¿qué tal si bajamos por esa escalera a nuestras 4 en punto?
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Esa es una ruta difícil.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Aaargh! ¡Rhodes Island!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Es una emboscada! ¡Cuidado!
+[Dialog(fadetime=0.5)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_soldiersrun")]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   Continúen la persecución.
+[name="Skullshatterer"]   No les den ni un respiro.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   Señorita...
+[name="Misha"]   Hay unos niños Infectados... todavía en los suburbios.
+[name="Misha"]   Si es posible...
+[name="Misha"]   Espero que pueda cuidar de ellos...
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=1)]
+[name="Ch'en"]   Nuestro deber es proteger Lungmen.
+[name="Ch'en"]   Los Infectados no son considerados ciudadanos de Lungmen.
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=1)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   Sin embargo, ciudadanos o no, los Infectados siguen perteneciendo a Lungmen.
+[name="Ch'en"]   No tengo obligación de prometerte nada, pero cumpliré con mi deber.
+[name="Ch'en"]   Después de todo...
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]  Decían que antes solían...
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=1)]=
+[name="Ch'en"]   Es algo que siempre hemos hecho.
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[name="Misha"]   Gracias...
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=1)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   ¿Sabes por qué te hemos estado buscando?
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...No estoy segura.
+[name="Misha"]   No se me ocurre ninguna razón por la que me quieran.
+[name="Misha"]   Pero tengo la sensación...
+[name="Misha"]   De que esto no se trata de mí...
+[name="Misha"]   ...Se trata de mis padres.
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=1)]
+[name="Ch'en"]   ...Sí.
+[name="Ch'en"]   Tu padre fue el científico más famoso de Chernobog.
+[name="Ch'en"]   Además de una de las figuras políticas más importantes de allí.
+[name="Ch'en"]   Quizá haya algo que tú sepas...
+[name="Ch'en"]   ...
+[name="Ch'en"]   Pero incluso si no es así...
+[name="Ch'en"]   No podemos permitir que caigas en manos de Reunion.
+[Character(fadetime=1)]
+[Background(screenadapt="coverall", time=2)]
+[Dialog]
+[Character(name="char_1504_cqbw#2", fadetime=0.2)]
+[Delay(time=1)]
+[name="W"]   Jeje. Te he encontrado, L.G.D.
+[name="W"]   No te lo tomes como algo personal...
+[name="W"]   Pero tengo entre manos una trama muy interesante.
+[name="W"]   Para hacerlo más entretenido, necesitaré que todos ustedes participen.
+[name="W"]   Ahora, comencemos.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

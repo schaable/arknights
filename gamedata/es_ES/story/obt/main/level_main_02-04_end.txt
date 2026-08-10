@@ -1,0 +1,76 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 16 (después)
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]  ¡Todo despejado!
+[name="Franka"]  Tenías razón... ¡Este grupo vino preparado!
+[name="Franka"]  ¡Ustedes también deberían apurar el paso!
+[Character(name="char_012_misa_1")]
+[name="Misha"]   *jadeo*... Pero quiénes son ustedes... *jadeo*...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Todos, muévanse más rápido, por favor!
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Amiya, nos persiguen por detrás.
+[name="Liskarm"]   ¿Tenemos tiempo de contraatacar?
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=1)]
+[name="Amiya"]   Por el momento, no...
+[name="Amiya"]   Es mejor intentar despistarlos y evitar batallas innecesarias...
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Olvida el asunto de la seguridad...
+[name="Liskarm"]   Necesito una ruta que pueda sacarnos de los suburbios hacia la Señorita Ch'en lo antes posible.
+[name="Liskarm"]   Reunion ya nos sigue el rastro...
+[name="Liskarm"]   ¡Cuanto más terreno tengamos que cubrir, mayor será el peligro!
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=1)]
+[name="Exusiai"]   Eso es fácil. Tengo aquí una ruta que el enemigo jamás imaginaría.
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ¿Ya tienes algo en mente?
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=1)]
+[name="Exusiai"]   Por supuesto~
+[name="Exusiai"]   Pero primero tendré que echar un vistazo yo misma para ver si mi información es fiable o no.
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Intenta hacerlo rápido.
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   ¡Entendido~ En fin, vuelvo enseguida!
+[name="Exusiai"]   ¡Si necesitan algo, contacten a otro agente de Penguin Logistics!
+[Character(fadetime=1)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[name="Misha"]   ¿Puedo preguntar... a dónde vamos?
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Vamos a reunirnos con el L.G.D.
+[name="Amiya"]   Ellos te protegerán.
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...¿Eh?
+[name="Misha"]   ...¿el L.G.D.?
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Nuestra misión actual es escoltarte a salvo hasta el L.G.D., y ellos te brindarán protección.
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[name="Misha"]   Casi llegué a creer... que de verdad estaban aquí para salvarme.
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   No, de verdad lo estamos...
+[name="Amiya"]   Nuestro plan original era pedirle a Lungmen que nos confiara a algunos de sus Infectados...
+[name="Amiya"]   Pero tras escuchar nuestro informe, el L.G.D. nos pidió de repente que te transfiriéramos a ellos.
+[name="Amiya"]   Además... en Lungmen, estarás más segura bajo su protección.
+[name="Amiya"]   Si no actuamos ahora, estarás en grave peligro.
+[name="Amiya"]   Muchos de los Infectados que te perseguían ya llevaban puesta la insignia de Reunion...
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   No sé nada de esta 'Reunion' de la que hablan, pero...
+[name="Misha"]   Pero sí conozco al L.G.D., y he visto cómo tratan a los Infectados. Si querían capturarme desde el principio, deberían haberlo dicho sin más.
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Lo siento... Pero, de verdad esa no es nuestra intención. Sé que aún quedan algunos malentendidos por resolver.
+[name="Amiya"]   Pero por muy malos que creas que somos... Por favor, ten paciencia con nosotros un poco más.
+[name="Amiya"]   Tu seguridad tiene prioridad sobre cómo te sientas.
+[name="Amiya"]   Te lo explicaré todo si tengo la oportunidad.
+[name="Amiya"]   Después de todo, todavía hay cosas que yo quiero saber...
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

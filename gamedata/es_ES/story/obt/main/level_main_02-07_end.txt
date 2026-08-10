@@ -1,0 +1,68 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 19 (después)
+[Background(image="bg_lungmen_b", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[name="Infectado"]   Gracias... Muchísimas gracias...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Aquí no es seguro. Deberían apurarse y marcharse.
+[Character(fadetime=0)]
+[Dialog]
+[name="Infectado"]   ¿Marcharnos...?
+[name="Infectado"]   ¿A dónde... iríamos?
+[name="Infectado"]   Este era un lugar al que podíamos llamar hogar... Pero ahora está todo en ruinas...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Lo siento...
+[Character(fadetime=0)]
+[Dialog]
+[name="Infectado"]   No es tu culpa...
+[name="Infectado"]   No lo es...
+[Delay(time=1)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   No esperaba que Reunion, la autoproclamada salvadora de los Infectados, atacara a otros Infectados.
+[name="Exusiai"]   Eso sí... es lo que yo llamo mala publicidad.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Esta infiltración de Reunion no ocurrió de forma espontánea sin más.
+[name="Texas"]   Estoy segura de que aquí había muchos Infectados que eligieron seguir a Reunion.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Agh... Prefieren confiar en Reunion antes que en Rhodes Island--
+[Character(name="char_106_franka_1", name2="char_103_angel_1", focus=1)]
+[name="Franka"]   Rhodes Island no hace promesas vacías.
+[name="Franka"]   Hay muchos Infectados dispuestos a aceptar lo que sea que Reunion ofrezca, aunque no sea más que una ilusión.
+[name="Franka"]   Pocos son capaces de ver más allá de la ilusión.
+[name="Franka"]   Y de entre quienes sí pueden, la mayoría está dispuesta a renunciar a todo por ese vago destello de esperanza.
+[name="Franka"]   ¿Quién elegiría creerle a nuestra conejita, que es demasiado bondadosa como para engañar a nadie?
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[Character(name="char_012_misa_1#5")]
+[name="Misha"]   Yo le creo.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿Misha...?
+[Character(name="char_012_misa_1")]
+[name="Misha"]   Nnh...
+[Character(name="char_002_amiya_1#6", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   ¡Ten cuidado! ¡Todavía no puedes moverte!
+[Character(name="char_002_amiya_1#6", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   Solo estoy un poco mareada... No te preocupes.
+[name="Misha"]   ¿Reunion... nos sigue persiguiendo?
+[name="Misha"]   No sé qué quieren de mí...
+[name="Misha"]   Pero...
+[name="Misha"]   Vamos...
+[name="Misha"]   Amiya.
+[Character(name="char_002_amiya_1#3", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#2", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Entiendo.
+[name="Amiya"]   Marchémonos de inmediato.
+[name="Amiya"]   En breve podremos salir de los suburbios y reunirnos con el L.G.D.
+[name="Amiya"]   Gracias, Misha.
+[Character(name="char_002_amiya_1#3", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   No...
+[name="Misha"]   Yo... soy quien debería darte las gracias.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

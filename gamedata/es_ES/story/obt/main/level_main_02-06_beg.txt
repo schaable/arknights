@@ -1,0 +1,72 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 18 (después)
+[name="Texas"]   Aquí estamos.
+[Background(image="bg_lungmen_b", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   --¿?!
+[name="Amiya"]   ¿Tenemos que subir hasta la azotea?
+[name="Amiya"]   ...Esta puerta está cerrada con llave.
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Hazte a un lado, la volaré para abrirla--
+[Character(name="char_102_texas_1", name2="char_107_liskam_1", focus=1)]
+[name="Texas"]   ...
+[name="Texas"]   No hace falta eso.
+[playsound(key="$e_atk_blunt_n")]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Texas"]   Solo derríbala de una patada.
+[Character(name="char_102_texas_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ...
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Liskarm, deberías aprender de ella.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Tengo mi propia forma de hacer las cosas. ¿¡Algún problema con eso!?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Hay otra azotea frente a nosotros...
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Creo que empiezo a entender...
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_103_angel_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Exusiai"]   ¡Amiya, por allá! ¡Podrán cruzar desde ahí!
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Dónde es 'ahí'... ¿Nos estás diciendo que--
+[name="Amiya"]   ¿Saltemos de azotea en azotea?
+[Character(fadetime=0)]
+[name="Exusiai"]   ¡Bingo~!
+[name="Exusiai"]   ¿Quién esperaría esto? ¡Ven, es infalible!
+[name="Exusiai"]   ¿Saben? Lungmen es un lugar estupendo, lleno de secretos--
+[Dialog]
+[playsound(key="$d_gen_soldiersrun", volume=0.7)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[CharacterCutin(widgetID="1", name="char_1002_nsabr_2", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-200, width=200, block=true)]
+[name="Miembro de Reunion"]   ¡No van a escapar!
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Delay(time=1)]
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_103_angel_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=200, width=200, block=true)]
+[name="Exusiai"]   ...¿Eh? ¿¡Qué está pasando!?
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[name="Amiya"]   Exusiai, el enemigo apareció de forma inesperada...
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Ya sellé la entrada, así que cómo...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  ¿Habrán venido de los edificios cercanos...?
+[name="Amiya"]  Parece que llevan una especie de mochila propulsora rudimentaria, pero les basta para hacer el trabajo.
+[name="Amiya"]  Estaríamos en desventaja si lograran colarse por lugares que no podemos defender...
+[Character(fadetime=0)]
+[name="Exusiai"]   Tch... Aguanten, iré a ayudarles en breve.
+[Character(name="char_106_franka_1")]
+[name="Franka"]   No tardes demasiado, mi angelito de la guarda.
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   ¡Defensores, en formación! ¡Rápido!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   ...Voy a entrar.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Todos, protejan a nuestra vanguardia!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

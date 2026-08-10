@@ -1,0 +1,104 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 15 (después)
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_012_misa_1")]
+[name="Misha"]   Uf...
+[name="Misha"]   Probablemente no me encuentren si me escondo aquí...
+[name="Misha"]   Pero ya no podré volver con esos niños.
+[name="Misha"]   Espero que no les pase nada...
+[name="Misha"]   *suspiro*... Por qué...
+[name="Misha"]   ...!
+[name="Misha"]   ¿Quién es?
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#2", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   ¿Eres la Señorita Misha?
+[Character(name="char_002_amiya_1#2", name2="char_012_misa_1#4", focus=2)]
+[name="Misha"]   ...¿Qué?
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ...
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Lo siento, Señorita Misha. Espero no haberte asustado...
+[name="Amiya"]   Estas son mis compañeras, Franka y Liskarm.
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Hola.
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Buen día.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Somos de Rhodes Island Pharmaceuticals. Como organización creada para servir a los Infectados, al menos...
+[name="Amiya"]   Esperamos poder ayudarte. Por eso nos gustaría hablar un momento.
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ¿Hablar?
+[Character(name="char_002_amiya_1#3", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Ajá.
+[name="Amiya"]   Aunque este no es el mejor lugar para eso...
+[name="Amiya"]   Ahora mismo, nuestra máxima prioridad es mantenerte a salvo.
+[name="Amiya"]   Por el momento te protegeremos, así que quédate tranquila.
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   De qué... están hablando...
+[name="Misha"]   ...
+[name="Misha"]   Solo van a capturarme y encerrarme, ¿¡no es así!?
+[name="Misha"]   ¡Aléjense de mí! ¡Mis garras son afiladas...! Si no quieren salir lastimados...
+[Character(name="char_106_franka_1", name2="char_012_misa_1", focus=1)]
+[name="Franka"]   ...Pff.
+[Character(name="char_106_franka_1", name2="char_012_misa_1#4", focus=2)]
+[name="Misha"]   De qué se ríen...
+[Character(name="char_106_franka_1", name2="char_012_misa_1#4", focus=1)]
+[name="Franka"]   Si de verdad fuéramos a capturarte, no te habríamos dado la oportunidad de resistirte.
+[Character(name="char_106_franka_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Señorita Misha, de verdad queremos ayudarte, así que...
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   No confío en ustedes...
+[name="Misha"]   ¡Lungmen trata a los Infectados peor que a los criminales!
+[name="Misha"]   ¿Por qué...? ¿Por qué se tomarían tantas molestias para ayudar a los Infectados?
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   --Señorita Misha, mira...
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ¿Qué... estás haciendo?
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...Tu...
+[name="Misha"]   Tu mano...
+[name="Misha"]   ¿Tú también eres... una Infectada?
+[Character(name="char_002_amiya_1#4", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Así es, soy igual que tú.
+[Character(name="char_002_amiya_1#7", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Hay muchos Infectados en estos suburbios. Esos niños que dejaste atrás hace un momento... confiaban en ti.
+[name="Amiya"]   Misha, ya los has puesto en peligro.
+[Character(name="char_002_amiya_1#7", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...¿Vas a usar a esos niños para amenazarme?
+[Character(name="char_002_amiya_1#7", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   No, jamás. Pero alguien ya ha empezado a hacer justamente eso...
+[name="Amiya"]   Acabamos de ahuyentar a un grupo de matones que intentaba amenazar a esos niños.
+[Character(name="char_002_amiya_1#7", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...!
+[Character(name="char_002_amiya_1#7", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Lungmen también está buscando a los Infectados en este momento. Si Lungmen te hubiera encontrado primero, quizá ya habría sido demasiado tarde.
+[name="Amiya"]   Queríamos desviar a los amotinados de esos niños atrayendo su atención hacia ti...
+[name="Amiya"]   Visto desde otra perspectiva, también podríamos mantenerte a salvo de todo daño.
+[Character(name="char_002_amiya_1#7", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...¿Saben por qué me persiguen?
+[name="Misha"]   ¿Qué razón tienen... para hacer todo esto por mí?
+[Character(name="char_002_amiya_1#2", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   La verdad es que no sabemos por qué hay Infectados que te tienen como objetivo...
+[name="Amiya"]   Pero sí nos importa la seguridad de los inocentes, tú incluida. Al menos, este es el mejor curso de acción por ahora. Espero que puedas confiar en nosotros.
+[name="Amiya"]   ¿Nos permitirías sacarte de aquí primero?
+[Character(name="char_002_amiya_1#2", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   ...
+[name="Misha"]   ...Está bien... Vamos.
+[name="Misha"]   Después de todo, no tengo muchas opciones, ¿verdad?
+[Character(name="char_002_amiya_1", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Yo no diría eso...
+[name="Amiya"]   Pero al menos, gracias... ¡Señorita Misha!
+[Delay(time=1)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

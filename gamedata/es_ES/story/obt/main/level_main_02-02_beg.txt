@@ -1,0 +1,127 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 14 (antes)
+[name="Ch'en"]   Adelante.
+[Delay(time=0.3)]
+[PlaySound(key="$d_gen_dooropen", volume=0.7)]
+[character]
+[Dialog]
+[Background(image="bg_lungmen_o", width=1, height=1, fadetime=2)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_003_kalts_1",name2="char_2005_weiyw_1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¡...Dra. Kal'tsit!
+[Character(name="char_003_kalts_1")]
+[Delay(time=0.6)]
+[name="Kal'tsit"]   Amiya...
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   ...{@nickname}.
+[name="Kal'tsit"]   Así que has venido.
+[PlaySound(key="$d_gen_doorclose", volume=0.5)]
+[Delay(time=1)]
+[Character(name="char_003_kalts_1#3", focus=-1)]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Ejem.
+[name="Ch'en"]   Jefe Wei, los otros dos representantes de Rhodes Island también han llegado.
+[Character]
+[Dialog]
+[Character(name="char_2005_weiyw_1")]
+[Delay(time=1)]
+[name="Wei Yenwu"]   Ah, excelente.
+[name="Wei Yenwu"]   Por favor, tomen asiento. La Señorita Kal'tsit me está explicando la situación en este momento.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   Permítame continuar entonces. Señor Wei, confío en que ya comprende bien la situación.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="bg_0_tv",x=0, y=-20, xScale=1.1, yScale=1.1, fadetime=0)]
+[ImageTween(xFrom=0, yFrom=-20, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=7, block=false)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[PlaySound(key="$slideshow", volume=0.2,channel="2", loop=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[name="Kal'tsit"]   Actualmente, la red de información de Lungmen capta gran cantidad de datos sobre el Movimiento Reunion. Es bueno que reconozca la importancia de esto.
+[name="Kal'tsit"]   Pero esto por sí solo no basta. Lungmen todavía carece de información clave.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[image]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=1)]
+[name="Kal'tsit"]   Creo que el L.G.D. sabe muy bien que esta simple cuarentena no basta para contener a Reunion.
+[name="Kal'tsit"]   Reunion no pasará dócilmente por las inspecciones, ni esperará a que las autoridades tomen la iniciativa. Por eso...
+[name="Kal'tsit"]   Sin la ayuda de Rhodes Island, Lungmen sufrirá grandes pérdidas frente a Reunion si deciden emplear las mismas estrategias contra los Infectados.
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Disculpen la interrupción.
+[name="Ch'en"]   El L.G.D. entiende las defensas de Lungmen mejor que Rhodes Island. Ya hemos tomado precauciones para hacer frente a una posible infiltración de Reunion.
+[name="Ch'en"]   Sin embargo, no estamos obligados a proporcionarles información confidencial sobre nuestras operaciones.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[name="Wei Yenwu"]    ...
+[name="Wei Yenwu"]    Señorita Kal'tsit, por favor continúe.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   Si bien es cierto que Lungmen ha tenido éxito hasta ahora tratando con Infectados desarmados, nunca antes se han enfrentado a disturbios organizados de esta magnitud. Esto podría acarrear pérdidas innecesarias.
+[name="Kal'tsit"]   Por nuestra experiencia... Solo los Infectados son capaces de contrarrestar a los Infectados.
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   Según tengo entendido, ¿Rhodes Island posee cierta pericia especial para contrarrestar a Reunion?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="bg_0_rhodes2",x=0, y=0, xScale=1.2, yScale=1.2, fadetime=0)]
+[ImageTween(xFrom=0, yFrom=-0, xTo=0, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, xScaleTo=1, yScaleTo=1, duration=27, block=false)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   Tenemos experiencia, sí, pero no lo llamaría pericia.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=300, width=200, block=true)]
+[name="Wei Yenwu"]   ¿Oh...?
+[name="Wei Yenwu"]   Me han dicho que Rhodes Island estuvo implicada en el incidente de Chernobog y logró obtener mucha información sobre Reunion.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Kal'tsit"]   No importa de dónde haya oído eso...
+[name="Kal'tsit"]   En esta etapa, esa información no está en juego para intercambiarse. No es más que parte de nuestro historial, una credencial que nos permite hablar con usted, Señor Wei.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[name="Wei Yenwu"]   Es Lungmen quien decidirá si intercambiamos o no la información. Si Rhodes Island no puede ni siquiera ofrecernos información de este nivel...
+[name="Wei Yenwu"]   Ja.
+[name="Wei Yenwu"]   En ese caso, sencillamente no tenemos fundamento para confiar en sus capacidades.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[character]
+[image]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   Señor Wei, me disculpo si mis palabras no fueron lo bastante claras.
+[name="Kal'tsit"]   Lo que debo recalcar es... que la única razón por la que Rhodes Island posee esta información es porque fuimos lo bastante fuertes para obtenerla.
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Sea como sea, Lungmen no puede simplemente confiar en otro grupo de Infectados.
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=1)]
+[name="Kal'tsit"]   Señorita Ch'en, si cree que repartir castigo a los Infectados es más importante que la seguridad real de Lungmen...
+[name="Kal'tsit"]   Entonces me entregaré de inmediato conforme a sus leyes locales. Y luego suspiraré desde mi celda mientras veo a Reunion incendiar su ciudad.
+[name="Kal'tsit"]   Esta vez, Lungmen no tiene elección.
+[Character(name="char_003_kalts_1", name2="char_010_chen_1#5", focus=2)]
+[Blocker(a=0.6, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=0.1, block=true)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="Ch'en"]   Sus buenas intenciones no nos pasan desapercibidas, pese a su descortesía.
+[name="Ch'en"]   Sin embargo, tampoco somos una obra de caridad para cabilderos inútiles.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
+[name="Wei Yenwu"]   Señorita Ch'en.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
+[name="Ch'en"]   Jefe Wei, considero inapropiado que estos forasteros se involucren en los asuntos confidenciales de Lungmen.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
+[name="Wei Yenwu"]   Cálmate, Señorita Ch'en. Al fin y al cabo son nuestros invitados.
+[name="Wei Yenwu"]   ... Mis invitados.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   Muy bien.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   A menos que hayan violado nuestras leyes, los toleraré, Señor.
+[Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=1)]
+[name="Wei Yenwu"]   Ah, disculpen. Acabo de recordar...
+[name="Wei Yenwu"]   Es cierto. Mmm...
+[name="Wei Yenwu"]   Hay una cosa que me importa.
+[name="Wei Yenwu"]   Su capacidad.
+[name="Wei Yenwu"]   Según tengo entendido, ¿Rhodes Island también está ayudando a reprimir a los Infectados de los alrededores?
+[name="Wei Yenwu"]   Señorita Ch'en, según su mejor información, ¿cómo evaluaría las capacidades de combate de Rhodes Island?
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ... Permítanme describir lo que he presenciado de las operaciones de Rhodes Island.
+[name="Ch'en"]   Aquí están los detalles...
+[stopSound(channel="2", fadetime=1)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

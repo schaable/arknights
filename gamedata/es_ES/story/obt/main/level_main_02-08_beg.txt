@@ -1,0 +1,96 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 20 (antes)
+[Background(screenadapt="coverall", image="bg_lungmen_b", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Franka, Liskarm, estén atentas a nuestro entorno.
+[name="Amiya"]   Yo llevaré a Misha con la Señorita Ch'en.
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ...
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Llegan tarde otra vez.
+[name="Ch'en"]   Lungmen no quiere más riesgos de seguridad.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   Señorita Ch'en, nuestro equipo de escolta fue atacado varias veces por Reunion.
+[name="Amiya"]   De hecho, siguen por aquí mientras hablamos.
+[name="Amiya"]   Aquí no es seguro. Por favor, lleve a Misha y márchense lo antes posible.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ¿Y tú eres Misha?
+[Character(name="char_012_misa_1")]
+[name="Misha"]   Sí, lo soy...
+[Character(name="char_010_chen_1", name2="char_012_misa_1", focus=1)]
+[name="Ch'en"]   De ahora en adelante, seguirás las disposiciones del L.G.D.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   PC94172, tú estás a cargo de esta chica.
+[Character(name="char_015_lmg", name2="char_012_misa_1", focus=1)]
+[name="Agente del L.G.D."]   Ven conmigo.
+[Character(name="char_015_lmg", name2="char_012_misa_1", focus=2)]
+[name="Misha"]   Amiya...
+[Character(name="char_002_amiya_1#2", name2="char_012_misa_1", focus=1)]
+[name="Amiya"]   Está bien.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Señorita Ch'en, no sé para qué la necesita Lungmen...
+[name="Amiya"]   Pero espero que pueda garantizar su seguridad.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Ya tratamos muy bien a los Infectados.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Ya veo...
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Pero Misha no está bien de salud.
+[name="Amiya"]   Esperamos que Lungmen le permita vivir en Rhodes Island después de esto.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   ...Enviaré una solicitud al Jefe Wei.
+[name="Ch'en"]   Lungmen la transferirá a Rhodes Island si pasa nuestras revisiones sin ningún otro inconveniente.
+[name="Ch'en"]   ...Es decir, si no hay ningún problema.
+[name="Ch'en"]   No debería tardar mucho.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]   Entendido.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ...Nos separaremos por el momento, Misha.
+[name="Amiya"]   Rhodes Island te da la bienvenida.
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ...
+[name="Misha"]   Amiya, mientras no estoy, por favor protege a esos niños de los suburbios.
+[Character(name="char_002_amiya_1#2",name2="char_012_misa_1",focus=1)]
+[name="Amiya"]   ¿Eh?
+[name="Amiya"]   ...Ah, es cierto.
+[name="Amiya"]   ¡Sin problema, tienes mi promesa!
+[name="Amiya"]   Por cierto, Misha...
+[Character(name="char_002_amiya_1#2",name2="char_012_misa_1",focus=2)]
+[name="Misha"]   ¿Hmm?
+[Character(name="char_002_amiya_1#2",name2="char_012_misa_1",focus=1)]
+[name="Amiya"]   La próxima vez, ¿podrías enseñarme... a hacer muñecos?
+[Character(name="char_002_amiya_1#2",name2="char_012_misa_1",focus=2)]
+[name="Misha"]   ...Jeje.
+[name="Misha"]   Mm, claro.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_106_franka_1", name2="char_102_texas_1", focus=1)]
+[name="Franka"]   ¿Ya terminó nuestra misión?
+[Character(name="char_106_franka_1", name2="char_102_texas_1", focus=2)]
+[name="Texas"]   Rhodes Island tendrá las manos atadas cuanto más se vea arrastrada a todo esto.
+[Character(name="char_106_franka_1", name2="char_102_texas_1", focus=1)]
+[name="Franka"]   Pero Lungmen todavía nos oculta muchos secretos.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   A Lungmen no parece importarle demasiado...
+[name="Liskarm"]   Pero con Reunion parece ocurrir lo contrario.
+[playsound(key="$d_gen_soldiersrun", volume=0.7)]
+[name="Liskarm"]   ...
+[name="Liskarm"]   Amiya.
+[name="Liskarm"]   El enemigo quiere atacar el distrito en el que nos alojamos.
+[name="Franka"]   ¡Aunque ya había oído de ella, la arquitectura de Lungmen sí que es compleja!
+[name="Franka"]   Toda esta calle está construida, en realidad, sobre azoteas...
+[name="Franka"]   ¡...y eso les está dando a nuestros enemigos una enorme ventaja que aprovechar!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¡Reunion está atacando otra vez...!
+[name="Amiya"]   ¿¡Nos han perseguido incluso hasta aquí!?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Por qué... quieren tanto a Misha?
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

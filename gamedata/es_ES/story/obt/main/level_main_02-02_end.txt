@@ -1,0 +1,168 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 14 (después)
+[Background(image="bg_lungmen_o", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ... Y con esto concluye mi informe sobre las operaciones de combate de Rhodes Island.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=1)]
+[name="Wei Yenwu"]   ¿Y su evaluación?
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Hay pocas razones para dudar de su fuerza.
+[name="Ch'en"]   Sin embargo, Jefe Wei, dadas sus identidades, creo que desde un punto de vista estratégico...
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ... el L.G.D. es más que capaz de encargarse del trabajo.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=1)]
+[name="Wei Yenwu"]   Cuando se trata de combatir el crimen y prevenir la infiltración, el L.G.D. es más que suficiente.
+[name="Wei Yenwu"]   Puede que Rhodes Island tenga más que aportar. Sin embargo...
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=1)]
+[name="Wei Yenwu"]   De entre las cosas que Rhodes Island ha solicitado, hay un 'artículo' que no estamos dispuestos a intercambiar según lo que se ha ofrecido.
+[name="Wei Yenwu"]   La cooperación defensiva temporal que ofrecen dista mucho de un valor equivalente. Tal como están las cosas, su 'precio' es un poco demasiado alto.
+[name="Wei Yenwu"]   Señorita Kal'tsit, Señorita Amiya, espero que ambas lo comprendan.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   Señor Wei, una defensa temporal no bastará. Hay muchas cosas sobre Reunion que usted desconoce.
+[name="Kal'tsit"]   Según los datos que reunimos mientras los combatíamos, si no se toman medidas proactivas, Reunion se apoderará de Lungmen en un plazo de dos semanas.
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]   ... Tonterías. No hay pruebas de eso--
+[Character(name="char_003_kalts_1", name2="char_010_chen_1#4", focus=1)]
+[name="Kal'tsit"]   Señorita Ch'en, ¿le gustaría saber la verdadera razón por la que Chernobog cayó en una sola noche?
+[Character(name="char_003_kalts_1", name2="char_010_chen_1#4", focus=2)]
+[name="Ch'en"]   ...
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[name="Wei Yenwu"]   Explíquese, por favor.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   Amiya.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Ah... Claro.
+[name="Amiya"]   Rhodes Island no solo estuvo implicada en el incidente de Chernobog... También quedamos atrapados dentro de la Catástrofe, y sobrevivimos.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[name="Wei Yenwu"]   Impresionante, impresionante.
+[name="Wei Yenwu"]   No todos los días conozco a alguien lo bastante loco como para haber salido con vida de una Catástrofe. Señorita Amiya, por favor continúe, la escucho.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ... Luchamos contra la líder de Reunion.
+[Character(name="char_010_chen_1#6")]
+[name="Ch'en"]   ...
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   ¿Mmm? ¿Cómo se llamaba?
+[name="Wei Yenwu"]   No lo recuerdo bien...
+[Character(name="char_2005_weiyw_1", focus=-1)]
+[Decision(options="Talulah.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=1)]
+[name="Wei Yenwu"]   Ah, cierto, Talulah.
+[name="Wei Yenwu"]   Señorita Ch'en, ¿qué opina?
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   Yo... lo sé.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ... Esto es lo que le ocurrió a Rhodes Island en Chernobog. Aunque Reunion logró arrebatarle el control de Chernobog a Ursus...
+[name="Amiya"]   Pero para expandirse tendrán que resolver su escasez de recursos. Lungmen será su próximo trampolín.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Aunque quizá puedan repelerlos por un tiempo, sus ataques no cesarán a menos que manejen esta situación de forma proactiva.
+[name="Amiya"]   Es más... Hay otro factor desconocido: aún no sabemos cómo reaccionará Ursus tras perder Chernobog...
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   Jajaja... Bien dicho, jovencita.
+[name="Wei Yenwu"]   Dada la gravedad de esta amenaza y los limitados efectivos del L.G.D., no me opongo a considerar este acuerdo temporal según los términos que se detallaron antes.
+[name="Wei Yenwu"]   Pero lo que dije antes sigue en pie...
+[Dialog]
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   ...
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   ... ¿El precio de Rhodes Island sigue siendo demasiado alto?
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   Correcto.
+[name="Wei Yenwu"]   Para asegurarme de que Lungmen reciba la debida compensación, tengo dos condiciones muy simples.
+[name="Wei Yenwu"]   Primero, Rhodes Island ayudará al L.G.D. a reprimir la amenaza de Reunion. Esto incluye identificar amenazas dentro de Lungmen, así como las relacionadas con las secuelas de Chernobog.
+[name="Wei Yenwu"]   Esto también incluye evaluar hasta qué punto los Infectados se han infiltrado en Lungmen. Espero que compartan con nosotros cualquier información que pueda ser de ayuda.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   ¿Cuál es la segunda condición, entonces?
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[name="Wei Yenwu"]   Les hablaré de la segunda condición una vez que hayan cumplido la primera.
+[name="Wei Yenwu"]   Naturalmente, no pediré nada que quede fuera del área de especialidad de Rhodes Island.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   No estoy segura de entender. ¿Podría explicarse, Señor Wei?
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   ¿Cómo lo diría...? Si Reunion causa daños que superan las estimaciones de Rhodes Island...
+[name="Wei Yenwu"]   Espero que ayuden al L.G.D. a manejar la situación, lo que podría incluir la gestión posterior al desastre. Por supuesto, nada que exceda sus capacidades. Esa es, a grandes rasgos, la idea.
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="Kal'tsit"]   ...
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[name="Wei Yenwu"]   No puedo decir mucho más por ahora. Sin embargo, no olviden que Rhodes Island no tiene elección.
+[name="Wei Yenwu"]   Si no pueden aceptar nuestros términos, entonces todas las condiciones que discutimos, así como sus peticiones, serán...
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   ¿Amiya?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Dra. Kal'tsit...
+[name="Amiya"]  Señor Wei, me gustaría añadir una cláusula más al acuerdo...
+[name="Amiya"]  'Cualquier interpretación de las cláusulas deberá ser acordada por ambas partes.' ¿Es esto aceptable?
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   Oh... Por supuesto. Puedo ver su respeto hacia Lungmen, Señorita Amiya.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=1)]
+[name="Wei Yenwu"]   Señorita Ch'en, ¿tiene alguna objeción?
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ... Acepto esta operación.
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=1)]
+[name="Wei Yenwu"]   Ja.
+[name="Wei Yenwu"]   Parece que la Señorita Ch'en ahora también tiene su propio objetivo.
+[Character(name="char_010_chen_1#6")]
+[name="Ch'en"]   ...
+[Character(name="char_2005_weiyw_1")]
+[name="Wei Yenwu"]   En cualquier caso, felicidades. Se han ganado la confianza de Lungmen. La Señorita Ch'en se encargará de sus disposiciones.
+[name="Wei Yenwu"]   Sin embargo, tengan en cuenta que a los Infectados no se les permite moverse libremente por la ciudad, ya que eso podría causar pánico.
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.7, block=true)]
+[name="Wei Yenwu"]   Espero que acaten las órdenes del L.G.D. mientras cumplen con sus deberes.
+[name="Wei Yenwu"]   En especial, las órdenes de la Señorita Ch'en.
+[delay(time=1)]
+[stopmusic(fadetime=4)]
+[name="Wei Yenwu"]   Lungmen estará abierta a Rhodes Island, siempre que sus acciones estén en sintonía con nosotros.
+[Dialog]
+[Character(fadetime=0)]
+[Background(image="bg_lungmen_station", width=1, height=1, fadetime=0, screenadapt="coverall")]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[delay(time=1)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#5", focus=2)]
+[name="Amiya"]   Uf... ¡Agh...! Ese hombre era tan difícil...
+[name="Amiya"]   Era tan metódico al hablar, y parecía que nada podía hacerlo cambiar de opinión...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#5", focus=1)]
+[name="Kal'tsit"]   Amiya, con el tiempo tendrás que aprender a tratar con esta clase de gente por ti misma.
+[name="Kal'tsit"]   Pero al final lo hiciste muy bien.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#3", focus=2)]
+[name="Amiya"]   Ejeje...
+[Dialog]
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   Por cierto...
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   ...
+[Dialog]
+[Delay(time=0.4)]
+[name="Kal'tsit"]   Tú...
+[Delay(time=0.4)]
+[Character(name="char_003_kalts_1#3", focus=-1)]
+[Decision(options="¿Te conozco, Kal'tsit?;...Hola, Dra. Kal'tsit.;Encantado de conocerla, Dra. Kal'tsit.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   ... ...
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#3", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]   Dra. Kal'tsit, por favor no le hagas pasar un mal rato al Dr. {@nickname}...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#4", focus=1)]
+[name="Kal'tsit"]   *inhala con fuerza*...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]   ...
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   Haah...
+[name="Kal'tsit"]   Espero que nuestros sacrificios... no hayan sido en vano.
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#2")]
+[name="Kal'tsit"]   Hola, Dr. {@nickname}.
+[name="Kal'tsit"]   Bienvenido de vuelta.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,74 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 13 (antes)
+[stopmusic]
+[name=""]   5:57 a. m. \ Nublado \ Visibilidad: 17 km
+[name=""]   Desierto; a 4 km de las afueras de Lungmen
+[name=""]   4 días después de la misión de rescate en Chernobog
+[dialog]
+[delay(time=1)]   
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[image(image="bg_2_call", fadetime=2)]
+[name="PRTS"]   Buenos días, Dr. {@nickname}. Hasta ahora has dormido 99999----
+[name="PRTS"]   ----9999 horas.
+[name="PRTS"]   Aunque tu resistencia a levantarte de la cama no es del todo irracional, se requiere tu presencia con urgencia en la sala de mando de operaciones.
+[name="PRTS"]   Además, aquí tienes un consejo médico de la Dra. Kal'tsit: por favor, mantén las ventanas abiertas para conservar una fuente de aire fresco, y pasa algo de tiempo en la cubierta para mantener niveles saludables de vitamina D.
+[dialog]
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0, block=true)]
+[Image(fadetime=0)]
+[PlaySound(key="$d_gen_walk_n",volume=0.6)]
+[delay(time=1.5)]
+[Background(image="bg_bridge", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.4)]
+[delay(time=1.4)]
+[delay(time=2)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Delay(time=1.4)]
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Ah, Doctor! Buenos días.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Así que lo lograste, Dr. {@nickname}.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Doctor, ¿te sientes mejor ahora?
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Ayer parecía que aún te dolía y que no podías moverte bien.
+[Decision(options="Me he recuperado por completo. ¿Y tú?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Hoy estoy perfectamente bien y llena de energía!
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Después de todo, aún tenemos otras misiones de las que ocuparnos...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Así que cuanto antes empecemos a prepararnos, mejor. Doctor, deberías acostumbrarte a tener que cambiar de marcha rápido por aquí.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Doctor,
+[name="Dobermann"]  Aunque sufrimos grandes pérdidas en Chernobog, obtuvimos mucha información sobre Reunion y, más importante aún, te sacamos con vida.
+[name="Dobermann"]  Según las negociaciones que tuvimos ayer, la ciudad nómada más cercana a nosotros, Lungmen, nos ha ofrecido un pacto de cooperación y ha accedido a intercambiar información con nosotros.
+[name="Dobermann"]  Tenemos algunas pruebas de que Reunion podría tener a Lungmen como su próximo objetivo.
+[name="Dobermann"]  Tendremos que esperar primero el permiso de la Dra. Kal'tsit antes de poder obtener el resto de la información. Ella sigue apostada dentro de Lungmen.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Lungmen nos ha concedido permiso para acampar temporalmente cerca de la ciudad. También han accedido a compensar una parte de nuestras pérdidas y gastos durante la operación.
+[name="Amiya"]   A cambio, se espera que Rhodes Island ayude a defender las afueras de la ciudad.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Pero la razón por la que te llamé tan temprano es...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Deja que lo explique yo, Amiya.
+[name="Dobermann"]  Anoche descubrimos otra oleada de supervivientes de Chernobog dirigiéndose hacia Lungmen. Se espera que lleguen por la tarde.
+[name="Dobermann"]  Se espera que resguardemos las afueras del Distrito 5, igual que estos últimos días. Solo que esta vez podría haber más miembros de Reunion mezclados entre el grupo.
+[name="Dobermann"]  Como la situación es un poco distinta, tendremos que hablar de algunas tácticas nuevas contigo antes de comenzar la operación.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]  En fin, Doctor, hoy hay mucho que hacer, así que...
+[name="Amiya"]  ¡Demos lo mejor de nosotros!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  En cualquier caso...
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_0_rhodes3", fadetime=0, screenadapt="coverall", screenadapt="coverall")]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[name="Dobermann"]  Ustedes dos, por favor completen sus preparativos de combate. Doctor, una vez que hayas decidido la asignación de tus escuadrones, avisa a los operadores para que también tengan tiempo de prepararse.
+[name="Dobermann"]  Saldremos 15 minutos después de que terminen sus ejercicios.
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[dialog]
+[image(fadetime=0)]
+[Delay(time=0.4)]
+[name="Dobermann"]  Ah, y asegúrate de no llegar tarde esta vez.

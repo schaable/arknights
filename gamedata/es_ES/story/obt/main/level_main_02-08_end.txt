@@ -1,0 +1,112 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 20 (después)
+[Background(screenadapt="coverall", image="bg_lungmen_b", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=1)]
+[name="Franka"]   Uf...
+[name="Franka"]   El equipo de escolta del L.G.D. ha logrado marcharse a salvo.
+[name="Franka"]   Pero... no parece que nuestros enemigos tengan intención de dejarnos ir.
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Mientras no sepan que Misha se ha ido con el L.G.D., seguirán concentrando sus esfuerzos en nosotros.
+[name="Amiya"]   Así Misha estará más segura.
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1", focus=1)]
+[name="Liskarm"]   Ahora que lo pienso, ¿por qué tanto Reunion como Lungmen van tras esta chica?
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   No sabría decirlo con certeza. Hay muchas posibilidades.
+[name="Amiya"]   Mi mejor suposición es que, o bien ella, o algo que sabe, es lo bastante importante como para determinar la seguridad continua de Lungmen.
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=1)]
+[name="Franka"]   ¿Algo?
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Sí, quizá algún dato o información...
+[name="Amiya"]   Así que por eso tanto Lungmen como Reunion van tras ella.
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1", focus=1)]
+[name="Liskarm"]   Qué contienda tan peligrosa...
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Y ninguno de nosotros puede mantenerse al margen: ni nosotros, ni Misha, ni el L.G.D.
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=1)]
+[name="Franka"]   Ojalá no acabemos atrapados en el fuego cruzado.
+[name="Franka"]   No sabemos nada, pero tenemos que encargarnos de todo...
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Yo, yo no estoy muy segura...
+[name="Amiya"]   Pero en cuanto a la Señorita Ch'en...
+[name="Amiya"]   Tengo el presentimiento... de que las cosas no van a terminar tan bien.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true, fadetime=0.5)]
+[Blocker(a=0, fadetime=0.5)]
+[Character(fadetime=0)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Amiya, ¿queda algo por hacer para nosotros?
+[name="Exusiai"]   ¿Deberíamos acompañarte de vuelta a Rhodes Island?
+[Character(name="char_002_amiya_1", name2="char_103_angel_1", focus=1)]
+[name="Amiya"]   No, gracias. Ya nada nos frena en combate, así que deberíamos estar bien.
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Si es así, regresaremos y esperaremos nuevas órdenes.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Sin problema.
+[name="Amiya"]   De aquí en adelante, espero que sigan vigilando los movimientos de Reunion dentro de Lungmen.
+[name="Amiya"]   Aunque hemos entregado a Misha al L.G.D., el hecho de que Reunion esté aquí... me sigue inquietando.
+[Character(name="char_002_amiya_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Hecho, sin problema~ Nos vamos ya~
+[Character(name="char_002_amiya_1", name2="char_103_angel_1", focus=1)]
+[name="Amiya"]   Ajá. Se lo dejo a ustedes.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Todos, no sabemos cuántos miembros más de Reunion siguen escondidos.
+[name="Amiya"]   Asegúrense de mantenerse preparados y alerta.
+[name="Amiya"]   A continuación, seguiremos trasladando nuestras operaciones dentro de estos rascacielos.
+[name="Amiya"]   Si es necesario, incluso podemos usar las azoteas.
+[name="Amiya"]   De este modo, tendremos ventaja de terreno frente a tener que combatir a Reunion en plena calle.
+[name="Amiya"]   ¡Si es necesario, los atraeremos hacia zonas que controlemos!
+[Dialog]
+[Character(fadetime=0)]
+[name="Operadores"]   ¡Enterado!
+[Dialog]
+[Blocker(a=1,r=0, g=0, b=0, fadetime=1, block=true )]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_wild_a", width=1, height=1)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1502_crowns")]
+[name="Crownslayer"]   Talulah.
+[name="Crownslayer"]   Los preparativos están completos.
+[Background(screenadapt="coverall", fadetime=0, block=true)]
+[Character(name="char_011_talula_1",fadetime=1)]
+[name="Talulah"]   ...
+[name="Talulah"]   Es hora de hacer nuestro movimiento.
+[Character(name="char_011_talula_1", name2="char_1502_crowns", focus=2)]
+[name="Crownslayer"]   ...
+[Character(name="char_011_talula_1", name2="char_1502_crowns", focus=1)]
+[name="Talulah"]   --Habla.
+[Character(name="char_011_talula_1", name2="char_1502_crowns", focus=2)]
+[name="Crownslayer"]   En realidad, sí hay un propósito estratégico para que ataquemos Lungmen.
+[name="Crownslayer"]   Si logramos tomar el control de Lungmen, Reunion tendrá una enorme ventaja.
+[name="Crownslayer"]   Por supuesto, esto conlleva un alto riesgo.
+[name="Crownslayer"]   ...¿Por qué te obsesiona esta idea?
+[Character(name="char_011_talula_1", name2="char_1502_crowns", focus=1)]
+[name="Talulah"]   ...
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(screenadapt="coverall", image="bg_lungmen_m",x=0, y=-20, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[backgroundTween(xFrom=0, yFrom=-20, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=17, block=false)]
+[name="Talulah"]   ¿Ves esa estructura de allá?
+[name="Crownslayer"]   La veo.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_011_talula_1")]
+[name="Talulah"]   Ese es el símbolo de Lungmen... También es...
+[name="Talulah"]   ...
+[name="Talulah"]   No he vuelto aquí solo para devolver todo lo que se les ha arrebatado a los Infectados.
+[name="Talulah"]   También... le haré pagar.
+[Dialog]
+[Delay(time=0.6)]
+[Background(screenadapt="coverall", fadetime=2, block=false)]
+[name="Talulah"]   Por encima de todo... ¿No crees que... las cosas se están poniendo muy interesantes?
+[Character]
+[name="Talulah"]   ¿No estás de acuerdo... Talulah?
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

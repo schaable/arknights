@@ -1,0 +1,119 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 17 (después)
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Amiya! ¡Rápido!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Señorita Misha! ¡Por favor, síguenos!
+[Character(name="char_012_misa_1#4")]
+[name="Misha"]   ...Cómo... puede ser...
+[Character(name="char_102_texas_1")]
+[name="Texas"]   ¡Por aquí, rápido!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Esta zona está despejada! ¡Cuidado, todavía nos persiguen!
+[Character(name="char_002_amiya_1", name2="char_012_misa_1#4", focus=2)]
+[name="Misha"]   ...
+[name="Misha"]   ¿Ellos también son...?
+[Character(name="char_002_amiya_1", name2="char_012_misa_1#4", focus=1)]
+[name="Amiya"]   Sí...
+[name="Amiya"]   Reunion...
+[name="Amiya"]   Ellos también son... Infectados.
+[Character(name="char_012_misa_1#4")]
+[name="Misha"]   ...
+[name="Misha"]   ¿Por qué?
+[name="Misha"]   Por qué los Infectados se pelean entre sí...
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ...
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   Skullshatterer...
+[name="Miembro de Reunion"]   ¿Los... dejaste ir?
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=1)]
+[name="Skullshatterer"]   No te preocupes...
+[name="Skullshatterer"]   No pueden huir.
+[name="Skullshatterer"]   Pero por fin la he encontrado-- No, no...
+[name="Skullshatterer"]   Por fin... ha venido a mí...
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   ...
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_102_texas_1", name2="char_106_franka_1", focus=1)]
+[name="Texas"]   Hemos llegado.
+[Character(name="char_102_texas_1", name2="char_106_franka_1", focus=2)]
+[name="Franka"]   ...¿Hablas en serio?
+[Character(name="char_102_texas_1", name2="char_106_franka_1", focus=1)]
+[name="Texas"]   Eso es lo que dicen las marcas.
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Pero... esta ruta va hacia arriba, ¿no?
+[name="Franka"]   ¿De qué nos va a servir eso?
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_103_angel_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Exusiai"]   ¡Amiya, Amiya! ¡Aquí arriba, eso es, suban aquí!
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   --¡Exusiai!
+[name="Amiya"]   ¿Estás segura...?
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_103_angel_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Exusiai"]   Confía en mí, yo no me equivocaría~
+[name="Exusiai"]   ¡Conozco las calles de Lungmen como la palma de mi mano!
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   Ajá...
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Subamos.
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¿No sería eso... esperar a que el enemigo nos rodee?
+[Character(fadetime=0)]
+[name="Exusiai"]   ¡Si no te apuras y Reunion nos encuentra, quizá sí!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Tch... Esperen, ustedes vayan primero...
+[name="Franka"]   Yo iré a soldar la entrada de la reja para que Reunion no pueda pasar.
+[CameraShake(duration=1, xstrength=8, ystrength=10, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(fadetime=0)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Hay un logo de pingüino en la escalera de aquí. ¿Es este el lugar?
+[Character(fadetime=0)]
+[name="Exusiai"]   Claro que sí. Sigue de frente y dobla a la izquierda, luego sube por las escaleras.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Eso nos llevará al interior del edificio...
+[name="Amiya"]   ¿No íbamos a ir bajo tierra?
+[Character(fadetime=0)]
+[name="Exusiai"]   No, no, acabo de decir que íbamos hacia arriba.
+[Character(name="char_102_texas_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ...¿Hacia arriba?
+[name="Liskarm"]   ¿Estás segura... de que es de fiar?
+[Character(name="char_102_texas_1", name2="char_107_liskam_1", focus=1)]
+[name="Texas"]   'Con tal de llegar al destino, cualquier ruta es válida.' Ese es uno de nuestros lemas aquí en Penguin Logistics.
+[name="Texas"]   Prueba nuestro servicio una vez. Te encantará.
+[Character(name="char_102_texas_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ...
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   *jadeo*... *jadeo*...
+[name="Amiya"]   Lo siento, Misha... No lo sabía...
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ...
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Uf...
+[name="Texas"]   Oye, tú.
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_102_texas_1")]
+[name="Texas"]   ¿Eres el Dr. {@nickname} de Rhodes Island?
+[name="Texas"]   No parece gustarte subir escaleras.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,117 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 16 (antes)
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   --Con esto concluye el informe, Señorita Ch'en.
+[Character(fadetime=0)]
+[Dialog]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_010_chen_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Ch'en"]   Recibido.
+[name="Ch'en"]   El L.G.D. asegurará el punto de encuentro y esperará a que escolten al objetivo.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Entendido.
+[name="Amiya"]   Franka, tráeme el mapa que dibujó el escuadrón de reconocimiento...
+[name="Amiya"]   Bien, esto servirá.
+[name="Amiya"]   Saldremos de los suburbios por la ruta más corta.
+[name="Amiya"]   (¿Alguna otra orden, Señorita Ch'en?)
+[Character(fadetime=0)]
+[Dialog]
+[name="Ch'en"]   Solo dense prisa. No tenemos mucho tiempo. Cambio.
+[name="Ch'en"]   ¡En formación! ¡¡No se demoren!!
+[name="Ch'en"]   ...
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[name="Amiya"]   ...Uf, colgó...
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=2)]
+[name="Franka"]   En otras palabras, ¿ahora tenemos que hacerle los recados?
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=1)]
+[name="Amiya"]   Al fin y al cabo, fuimos nosotros quienes encontramos al objetivo...
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   (El L.G.D. nunca nos dio información detallada sobre el objetivo.)
+[name="Liskarm"]   Se suponía que colaborábamos, pero de repente nos dijeron que la persona que encontramos les era de gran utilidad.
+[name="Liskarm"]   Hay un montón de información crucial que no nos han dado.
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=1)]
+[name="Amiya"]   (...Aunque no me sorprende que el L.G.D. nos oculte secretos.)
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ¿Por qué lo dices?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   ¿No se supone que eres lista? ¿Qué se ganaría con que Rhodes Island supiera demasiado?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Lo único que sé es que saber muy poco es malo para la misión.
+[name="Liskarm"]   En cualquier caso, primero tendremos que escoltar a Misha hasta el punto de encuentro.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Mmm, qué ruta tomar...
+[name="Amiya"]   Tendremos que pedirles otro favor.
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ¿A quién?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Penguin Logistics.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Ey, Rhodes Island~
+[name="Exusiai"]   ¿Ya casi terminan su misión? ¿Qué les parecieron nuestros servicios?
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Lo sabía...
+[name="Franka"]   *suspiro*...
+[Character(name="char_106_franka_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Ey, no te pongas así~
+[name="Exusiai"]   ¿Pasó algo malo? ¿O te topaste con alguien que no te agrada?
+[Character(name="char_106_franka_1", name2="char_103_angel_1", focus=1)]
+[name="Franka"]   Sí, contigo.
+[Character(name="char_107_liskam_1", name2="char_106_franka_1", focus=1)]
+[name="Liskarm"]   No hace falta ponerse así. Sin la información de Penguin Logistics, no habríamos podido acotar nuestra búsqueda...
+[name="Liskarm"]   Ni habríamos podido obtener información sobre la población Infectada de Lungmen con tanta facilidad.
+[Character(name="char_107_liskam_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   ¡Vaya, gracias por el elogio, señorita! Está claro que tienes buen ojo.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Exusiai, necesitaremos que nos encuentres una ruta relativamente segura.
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   En ese caso, iré directa al grano.
+[name="Exusiai"]   Mmm... Ninguna de estas rutas es especialmente buena.
+[name="Exusiai"]   ¡Ah, vayamos por esta! Eh, miren este mapa. Empezando desde el centro de los suburbios, avancen tres cuadras al norte, luego sigan esta calle de regreso al sur hasta llegar a la salida.
+[name="Exusiai"]   Esta debería ser, probablemente, la ruta más segura.
+[name="Exusiai"]   Aun así, seguramente hay suficientes enemigos por el camino como para montar unas cuantas fiestas de karaoke.
+[Character(name="char_002_amiya_1#6", name2="char_103_angel_1", focus=1)]
+[name="Amiya"]   ¿El enemigo?
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Al parecer, Reunion ya se ha infiltrado en Lungmen.
+[name="Liskarm"]   Señorita Exusiai, ¿puedo suponer que ya conoces la distribución de los enemigos?
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=1)]
+[name="Exusiai"]   ¡Ajá!
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Entonces, ¿cómo son sus movimientos?
+[Character(name="char_103_angel_1", name2="char_107_liskam_1", focus=1)]
+[name="Exusiai"]   ¡Vienen justo hacia ustedes!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1",focus=2)]
+[name="Liskarm"]   ...
+[Character(name="char_106_franka_1", name2="char_107_liskam_1",focus=1)]
+[name="Franka"]   ...
+[Character( name="char_107_liskam_1")]
+[name="Liskarm"]   Nos han rodeado.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Nuestra máxima prioridad es sacar a Misha a salvo.
+[name="Amiya"]   Franka, cuento contigo para detener la emboscada enemiga.
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Fácil.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Liskarm, divide el escuadrón de defensores y cubran ambos flancos. Estarás a cargo de proteger a Misha.
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Sin problema.
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Ah, cierto, ¿sabían que también hay algunos hechiceros enemigos?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...Nghh...
+[name="Amiya"]   Doctor, por favor mantente cerca de mí.
+[name="Amiya"]   Por favor, sigue comandando a los escuadrones. Yo transmitiré tus órdenes.
+[name="Amiya"]   ... Intentemos seguir esta ruta más segura, entonces.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

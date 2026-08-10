@@ -1,0 +1,174 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 15 (antes)
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Background(image="bg_lungmen_b", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_012_misa_1")]
+[name="???"]   ¡Rápido, escóndanse!
+[name="???"]   Yo... tengo que irme.
+[name="???"]   Toma esto... es para ti.
+[name="???"]   Es un amuleto protector. Mi madre me enseñó a hacerlos...
+[name="???"]   Y este es uno que hice yo.
+[name="???"]   Cuando haces estos muñecos a mano, puedes mantener a salvo a quienes te importan.
+[Character(fadetime=0)]
+[Dialog]
+[name="Niños"]   ¡De acuerdo, hermana Misha, lo cuidaremos muy bien!
+[Character(name="char_012_misa_1#3")]
+[name="Misha"]   Bien, bien.
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ¡Ahora, vayan a esconderse! Y no hagan ningún ruido.
+[Character(fadetime=0)]
+[Dialog]
+[name="Niños"]   ¡De acuerdo!
+[Dialog]
+[Delay(time=2)]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[PlaySound(key="$d_gen_soldiersrun")]
+[name="Amotinado"]   ¿¡A dónde se fueron!? ¡Tras ellos! ¡Veamos hasta dónde pueden correr esos Infectados!
+[name="Amotinado"]   ¿Mmm? Vaya... ¿qué tenemos aquí?
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Según los datos de Exusiai, el objetivo de nuestra misión debería estar por algún lugar cercano...
+[name="Amiya"]   Agh, el terreno por aquí es muy complicado. Si estuviéramos haciendo esto solos, esta tarea podría haber sido bastante problemática...
+[name="Amiya"]   Por suerte, me puse en contacto con Penguin Logistics de antemano...
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...¿Quién anda ahí?
+[name="Amiya"]   ¡Esas personas son...!
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[name="Niño"]   ¡Malos! ¡Panda de malos! ¡Suéltenme! ¡Suél... tenme...!
+[name="Amotinado"]   ¡Dime! ¿A dónde se escapó?
+[name="Amotinado"]   ¡Deja de hacerte el tonto!
+[name="Niño"]   ¡Hermana! ¡Hermana! ¿Dónde estás...! Ayuda...
+[name="Niño"]   ¡Hermana Misha! ¡Hermana Misha, sálvame!!
+[name="Amiya"]   ...
+[Character(fadetime=0)]
+[name="Amotinado"]   ¿Quién es?
+[name="Amotinado"]   ¡Vuelve aquí!
+[Character(name="char_002_amiya_1#7",fadetime=1)]
+[name="Amiya"]   ...
+[name="Amiya"]   ...Deberían marcharse ahora mismo si saben lo que les conviene.
+[Delay(time=1)]
+[Character(fadetime=0)]
+[name="Amotinado"]   ¿...?!
+[name="Amotinado"]   ¿¡Quién demonios...!?
+[name="Amotinado"]   ¡No pareces ser de por aquí!
+[name="Amotinado"]   No nos tienes miedo...
+[Dialog]
+[playsound(key="$p_skill_spiritexplo", volume=0.4)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   De lo contrario...
+[Character(fadetime=0)]
+[name="Amotinado"]   ¿Eh?
+[name="Amotinado"]   ¡¡Gaaah!!
+[name="Amotinado"]   ¿Q-qué fue eso?
+[name="Amotinado"]   ¡Artes! ¿¡E-está usando Artes!?
+[name="Amotinado"]   ¡Aaaargh! ¡Aléjate de mí!
+[blocker(a=0, block=true, fadetime=0.5)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...No vuelvan a abusar de los indefensos nunca más.
+[Character(fadetime=0)]
+[CameraShake(duration=1, xstrength=3, ystrength=4, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Amotinado"]   ¡Aaaagh! ¡Monstruo!
+[playsound(key="$d_gen_soldiersrun", volume=0.4)]
+[CameraShake(duration=1, xstrength=5, ystrength=6, vibrato=90, randomness=90, fadeout=true, block=true)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Je... Monstruo, ¿eh?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Todo va a estar bien. Ya pueden salir.
+[name="Amiya"]   Aquí es peligroso. Deberían apurarse y buscar un lugar seguro.
+[Character(fadetime=0)]
+[name="Niños"]   ¡Gracias, señorita!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Cuídate!
+[Delay(time=0.5)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_106_franka_1", fadetime=1)]
+[name="Franka"]   Amiya, ¿qué ocurre?
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=1)]
+[name="Amiya"]   Mmm, acabo de ver a una Infectada, probablemente no registrada...
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=2)]
+[name="Franka"]   ¿De Ursus?
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=1)]
+[name="Amiya"]   Sí. Se dirigía hacia lo más profundo de los suburbios.
+[name="Amiya"]   Franka, reúne a los operadores cercanos.
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=2)]
+[name="Franka"]   De acuerdo.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Cuanto más nos adentremos en los suburbios, más volátil se pondrá todo...
+[name="Amiya"]   Hay civiles comunes, criminales y refugiados, todos mezclados.
+[name="Amiya"]   Tendremos que hacer preparativos minuciosos.
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Amiya, tenemos una comunicación entrante.
+[name="Liskarm"]   Espera un segundo, por favor.
+[name="Liskarm"]   ...
+[name="Liskarm"]   Así es.
+[name="Liskarm"]   Amiya, es el L.G.D.
+[Character(name="char_002_amiya_1",name2="char_107_liskam_1",focus=1)]
+[name="Amiya"]   ¿Era la Señorita Ch'en?
+[Character(name="char_002_amiya_1",name2="char_107_liskam_1",focus=2)]
+[name="Liskarm"]   Así es.
+[name="Liskarm"]   ... Correcto. Ya hemos encontrado a varios Infectados no registrados.
+[name="Liskarm"]   ... Sí.
+[name="Liskarm"]   ... ¿Qué?
+[name="Liskarm"]   ... ¿Buscamos a una chica de Ursus, de cabello blanco corto, de unos 145 cm de estatura, llamada Misha?
+[Character(name="char_002_amiya_1",name2="char_107_liskam_1",focus=1)]
+[name="Amiya"]   ¿Eso es...?
+[Character(name="char_002_amiya_1",name2="char_107_liskam_1",focus=2)]
+[name="Liskarm"]   ...Entendido.
+[name="Liskarm"]   Amiya, la Señorita Ch'en quiere que busquemos de inmediato a la Infectada que acaba de describir.
+[name="Liskarm"]   Una vez que la encontremos, debemos entregarla al L.G.D. de inmediato.
+[Character(name="char_002_amiya_1",name2="char_107_liskam_1",focus=1)]
+[name="Amiya"]   ¿Puedo hablar con ella, por favor?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Hola, hola...
+[name="Amiya"]   Señorita Ch'en, ¿me escucha?
+[CharacterCutin(widgetID="1", name="char_010_chen_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Ch'en"]   Te escucho.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Puedo confirmar la validez de esa orden?
+[Character(name="char_002_amiya_1",focus=0)]
+[name="Ch'en"]   100% válida, con efecto inmediato.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Ya veo.
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[name="Amiya"]   ...
+[name="Amiya"]   Colgó de repente...
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Esa Ch'en tiene su carácter.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Así que esta va a ser nuestra misión por ahora...
+[Character(name="char_002_amiya_1",name2="char_107_liskam_1",focus=2)]
+[name="Liskarm"]   Amiya, acabo de recibir otro mensaje de varios defensores.
+[name="Liskarm"]   Se toparon con unos individuos abiertamente hostiles hacia los operadores de Rhodes Island.
+[name="Liskarm"]   Es más, esos atacantes no eran personas comunes, eran... Infectados.
+[Character(name="char_002_amiya_1#6")]
+[Delay=0.5]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ... Haz que los defensores retrocedan hacia nosotros.
+[name="Amiya"]   ¡Equipo de reconocimiento! Nuestro objetivo es una chica de Ursus de cabello blanco corto, de 145 cm de estatura. ¡Recuerden permanecer ocultos y a salvo!
+[name="Amiya"]   Los demás operadores, sigan a sus líderes y dispérsense.
+[Character]
+[Decision(options="Lo mejor sería entretenerlos.;¿Así que vamos a... atraerlos?;Franka, ataquémoslos de frente.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Vaya... Nada mal.
+[name="Franka"]   Liskarm, este chico es bastante listo.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ... El Dr. {@nickname} es nuestro comandante táctico. Deberías tomarte esto más en serio.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Comencemos.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Así que... Rhodes Island tiene que luchar contra los Infectados otra vez...
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,115 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 17 (antes)
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_102_texas_1")]
+[name="Texas"]   ...
+[name="Texas"]   Rhodes Island se está tomando su tiempo, sin duda.
+[name="Texas"]   ¿Oh...?
+[Delay(time=0.6)]
+[Character(fadetime=0.3)]
+[PlaySound(key="$d_gen_soldiersrun")]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Casi llegamos al punto de intercepción!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Tch, por fin... Acabo de terminar de desempacar.
+[name="Texas"]   Qué desperdicio.
+[PlaySound(key="$d_gen_soldiersrun")]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Apúrense! ¡Los de atrás, sigan más de cerca!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Oye, tú, el de la máscara de ahí.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿¡Quién es!?
+[name="Miembro de Reunion"]   ¿Qué quieres?
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Vengan todos hacia mí. Ando corto de tiempo.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_indoor_2", width=1, height=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=2)]
+[name="Franka"]   Amiya, Texas, de Penguin Logistics, ha regresado.
+[Character(name="char_002_amiya_1#2", name2="char_106_franka_1", focus=1)]
+[name="Amiya"]   Ahh... ¡qué alivio!
+[Character(name="char_002_amiya_1#2", name2="char_102_texas_1", focus=2)]
+[name="Texas"]   Tengo novedades.
+[name="Texas"]   Acabo de encargarme de unos tipos que se hacían llamar 'Reunion'.
+[name="Texas"]   ... Pero vienen muchos más de ellos.
+[name="Texas"]   Reunion ha salido de su escondite y empieza a moverse en grupos.
+[Character(name="char_002_amiya_1", name2="char_102_texas_1", focus=1)]
+[name="Amiya"]   Es como me temía...
+[name="Amiya"]   Reunion ya se ha infiltrado en Lungmen a través de los suburbios...
+[name="Amiya"]   Y su objetivo... es el mismo que el nuestro.
+[name="Amiya"]   De lo contrario, no habría razón para que persiguieran a Rhodes Island.
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   La Señorita Misha guarda secretos que solo Lungmen y Reunion conocen.
+[name="Liskarm"]   Estamos atrapados en una situación desventajosa.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Las cosas no pintan bien para nosotros ahora mismo.
+[name="Franka"]   Más tarde tendré que pinchar esa carita bonita de la oficial para averiguar qué está pasando de verdad.
+[Character(name="char_102_texas_1")]
+[name="Texas"]   ...¿Algo más que añadir?
+[name="Texas"]   Si no, yo iré al frente. ¡Sé exactamente a dónde ir!
+[name="Texas"]   Exusiai ha confirmado nuestra ruta de escape. Ahora los guiaré por ella.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Franka, reúne a todos los escuadrones. Nosotros--
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Deberíamos... buscar refugio primero.
+[name="Franka"]   Reunion ya está aquí.
+[Character(fadetime=0)]
+[Dialog]
+[name="Miembro de Reunion"]   ¡Por aquí! ¡No dejen que se escapen!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   No hay nada más molesto que los problemas mordiéndote los talones sin parar.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...Algo anda mal.
+[name="Amiya"]   ¡No...!
+[name="Amiya"]   ¡Tienen... un líder!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Ugh...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Cuidado!
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="Miembro de Reunion"]   Skullshatterer, están justo aquí. ¡Sí, es ella!
+[name="Miembro de Reunion"]   ¡Hechiceros, adelante! ¡Háganlos pedazos!
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Van en serio...
+[name="Liskarm"]   ¡Cuidado! ¡El enemigo ha desplegado múltiples hechiceros! ¡Preparen las contramedidas apropiadas!
+[Character(name="char_002_amiya_1", name2="char_107_liskam_1", focus=1)]
+[name="Amiya"]   Lo que buscan es...
+[name="Amiya"]   ¡...Misha!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Image(image="bg_1_firstcontact", fadetime=2, xScale=1.5, yScale=1.5, x=-300, y=200)]
+[ImageTween(xScaleTo=1, yScaleTo=1, duration=10, xTo=0, yTo=0, ease="InOutCubic", block=false)]
+[Blocker(a=0, block=true)]
+[Delay(time=0.5)]
+[name="Misha"]   Aah... Quién... eres...
+[dialog]
+[Delay(time=0.5)]
+[name="Skullshatterer"]   ...
+[name="Skullshatterer"]   Por fin...
+[name="Skullshatterer"]   Yo...
+[PlaySound(key="$d_gen_walk_n")]
+[name="Misha"]   ...
+[dialog]
+[Delay(time=0.5)]
+[name="Skullshatterer"]   Por fin... te he encontrado.
+[dialog]
+[Delay(time=0.5)]
+[name="Misha"]   ¿¡Quién eres...!?
+[Delay(time=1)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Image(fadetime=0)]
+[Blocker(a=0, block=true)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,96 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 22 (antes)
+[Background(image="bg_lungmen_r", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Liskarm, ¿puedes mantener la posición?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ¡Por aquí estoy bien!
+[name="Liskarm"]   ¡Franka, cuidado con un flanqueo enemigo!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   ¡No tienen fin...!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡No tienen ninguna posibilidad de atravesar nuestras defensas!
+[name="Miembro de Reunion"]   Voy a aplastarte...
+[PlaySound(key="Sound_Beta_2/Enemy/e_skill/e_skill_skulsrsword", volume=0.6)]
+[CameraShake(duration=1, xstrength=6, ystrength=10, vibrato=50, randomness=90, fadeout=true, block=true)]
+[name="Miembro de Reunion"]   ¿¡Guh!?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡A-aaaagh!
+[name="Miembro de Reunion"]   ¿¡Q-qué es eso!?
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Es una hoja de termita.
+[name="Franka"]   ¿Cortar también cuenta como romper?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.5)]   
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Qué fastidio...
+[name="Franka"]   ¡Médico! ¡Hay alguien herido aquí!
+[name="Franka"]   ¡Tengan cuidado al transportarlo!
+[Character(fadetime=0)]
+[name="Médico"]  ¡Yo me encargo!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Amiya!
+[name="Franka"]   ¿Cómo está la situación por allá?
+[Character( name="char_107_liskam_1")]
+[name="Liskarm"]   Creo que aquí tenemos un pequeño problema.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Franka...
+[name="Amiya"]   ¡El líder enemigo... acaba de aparecer frente a Liskarm y a mí!
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ...
+[playsound(key="$e_imp_sword_h", volume=0.7)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[playsound(key="$e_imp_sword_h", volume=0.5)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=6, ystrength=10, vibrato=50, randomness=90, fadeout=true, block=true)]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ¿En qué otro sitio piensan esconderse?
+[name="Skullshatterer"]   No pueden escapar de nosotros, Rhodes Island.
+[name="Skullshatterer"]   Los reduciré a polvo...
+[name="Skullshatterer"]   ...ni siquiera quedarán sus huesos.
+[name="Skullshatterer"]   ¡Traidores... le han dado la espalda a los Infectados!
+[playsound(key="$e_skill_skulsrshot", volume=0.5)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=50, randomness=90, fadeout=true, block=true)]
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Oh~ Este por fin se decidió a aparecer.
+[name="Franka"]   Aunque no suena muy impresionante.
+[Character( name="char_107_liskam_1")]
+[name="Liskarm"]   Amiya, parece que nosotros--
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Ay, es un callejón sin salida!
+[name="Franka"]   ¿¡Corrí demasiado hacia adelante!?
+[Character( name="char_107_liskam_1")]
+[name="Liskarm"]   Franka también está teniendo algunos problemas...
+[name="Liskarm"]   Reunion nos tiene acorralados.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character( name="char_107_liskam_1")]
+[name="Liskarm"]   Tendremos que luchar.
+[name="Liskarm"]   Siento que... les hacemos más que frente.
+[name="Liskarm"]   Solo tenemos que ponernos un poco más serios...
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Liskarm, simplemente no lo entiendes.
+[name="Franka"]   Sea cual sea el nivel de poder que decidamos mostrar, no podemos dejar que el L.G.D. se sienta amenazado.
+[Character( name="char_107_liskam_1")]
+[name="Liskarm"]   ¡Pero no podemos quedarnos aquí sentados y dejar que nos pasen por encima!
+[name="Liskarm"]   ¡Defensores, mantengan su posición!
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   Una líder de Rhodes Island, ¿eh...?
+[name="Skullshatterer"]   ¡Eres una Infectada, y aun así ayudas a Lungmen en su matanza de otros Infectados!
+[name="Skullshatterer"]   ¡Tienes en las manos la sangre de muchísimos de mis compañeros!
+[playsound(key="$e_skill_skulsrshot", volume=0.5)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=50, randomness=90, fadeout=true, block=false)]
+[name="Skullshatterer"]   ¡Ponte de pie y enfréntame!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...
+[name="Amiya"]   Reunion...
+[name="Amiya"]   Fueron ustedes quienes iniciaron el odio, el dolor y la violencia...
+[name="Amiya"]   ¡¡Fueron ustedes quienes empezaron todo esto en Chernobog!!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,65 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 21 (antes)
+[Background(screenadapt="coverall", image="bg_lungmen_b", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   ...
+[name="Liskarm"]   ¿¡Por qué hay tantos miembros de Reunion aquí!?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Aaargh!
+[Character(fadetime=0.2)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ...
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   ¿Soy la única que piensa que cada vez vienen más y más de ellos?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡¡Agh!!
+[Character(fadetime=0.2)]
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   No. Está claro que tienen más refuerzos en camino.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Maldición... ¡Todavía no hemos tenido oportunidad de vengarlos...!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Terminaron encontrándonos primero.
+[name="Liskarm"]   Franka, mira.
+[name="Liskarm"]   Por la salida este, creo que esos son hechiceros de Reunion escondidos por allá.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Muchos de ellos se acercan por el pasaje central, así como desde los rascacielos a nuestros costados...
+[name="Franka"]   ...Intentan acercarse a hurtadillas fingiendo que aún no nos han visto.
+[name="Franka"]   Pero nosotros estamos en lo alto de la azotea...
+[name="Franka"]   Por muchos que nos manden, estarán perdidos si los hacemos caer...
+[name="Franka"]   Siento que insultan mi inteligencia al lanzar un ataque tan descarado como este...
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   ¿Reunion está lanzando su ofensiva?
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   ¡Todos los operadores, reagrúpense!
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#7", focus=1)]
+[name="Franka"]   Espera, creo que acabo de ver...
+[name="Franka"]   ¿Ese no es el comandante de Reunion con el que nos topamos antes?
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ...
+[Delay(time=0.6)]
+[name="Skullshatterer"]   ... Rhodes Island.
+[name="Skullshatterer"]   ¿La entregaron a Lungmen?
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#7",name2="char_106_franka_1",focus=1)]
+[name="Amiya"]   (¡Franka, primero tenemos que contener a las fuerzas de Reunion!)
+[name="Amiya"]   (¡Tendremos que bajar en cuanto tengan demasiado miedo de seguir atacándonos!)
+[name="Amiya"]   (¡Por ahora tendremos que dispersar el campo de batalla!)
+[Character(name="char_002_amiya_1#7",name2="char_106_franka_1",focus=2)]
+[name="Franka"]   (Entendido. ¡Entonces haremos un ataque relámpago!)
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¿Qué tiene eso que ver contigo?
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]    ¡...Cómo te atreves!
+[name="Skullshatterer"]    ...
+[name="Skullshatterer"]    ¡Compañeros, al ataqueee!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
