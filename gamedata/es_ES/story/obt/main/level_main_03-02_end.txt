@@ -1,0 +1,197 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 24 (después)
+[Background(screenadapt="coverall", image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Así que tú debes de ser Misha, ¿no?
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Hola.
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=1)]
+[name="Misha"]   ...?
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   He oído hablar mucho de ti por Skullshatterer. Por fin puedo conocerte.
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=1)]
+[name="Misha"]   ¿Tú también eres... Infectado...?
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Sí, lo soy.
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=1)]
+[name="Misha"]   ¿Por qué te... uniste a Reunion?
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   ¿Por qué?
+[name="Miembro de Reunion"]   ...
+[name="Miembro de Reunion"]   Mi esposa, mi hijo... todos fueron asesinados por la gente de Chernobog.
+[name="Miembro de Reunion"]   Bajo Ursus, a los Infectados se los trataba peor que al ganado.
+[name="Miembro de Reunion"]   ¿La destrucción de Chernobog...? No, no. Ese castigo es demasiado leve...
+[name="Miembro de Reunion"]   ¿¡Sabes cuánta sangre tienen en las manos!?
+[name="Miembro de Reunion"]   Misha... Nos han temido, explotado, humillado y perseguido...
+[name="Miembro de Reunion"]   ...Solo por el hecho de ser Infectados.
+[name="Miembro de Reunion"]   Por ninguna otra razón.
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   L-lo siento, me exalté un poco. Olvida lo que dije.
+[Character(name="char_012_misa_1#4")]
+[name="Misha"]   ...
+[Delay(time=0.4)]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   Ivan, ven a ayudar a atender a los heridos.
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Voy.
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=1)]
+[name="Skullshatterer"]   Solo usamos esta mina abandonada como base temporal hasta que podamos reorganizarnos y reagruparnos.
+[name="Skullshatterer"]   Cuando llegue el momento, emprenderemos el regreso a Chernobog.
+[Character(name="char_012_misa_1#4")]
+[name="Misha"]   ...
+[name="Misha"]   ...Al--
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   No...
+[name="Skullshatterer"]   Deseché ese nombre hace mucho.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ¿Por qué...?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Esa persona ya murió.
+[name="Skullshatterer"]   Solo llámame Skullshatterer.
+[name="Skullshatterer"]   ¿Tienes... miedo?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ¿Skull...shatterer? ¿...Por qué?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Ah... Pronto lo entenderás.
+[name="Skullshatterer"]   Después de saber que habías acabado como refugiada en Lungmen, todos se ofrecieron a ir a rescatarte.
+[name="Skullshatterer"]   También hemos aceptado a muchos miembros nuevos allí.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Pero... estás lastimando a la gente.
+[name="Misha"]   No quiero... hacer eso...
+[name="Misha"]   Por qué los Infectados se pelean entre sí...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Ojo por ojo, como debe ser.
+[name="Skullshatterer"]   Hay un dicho en Ursus. 'Recibe a los tuyos como recibirías la cálida primavera...'
+[name="Skullshatterer"]   'Pero recibe a tus enemigos...'
+[name="Skullshatterer"]   ... ... ...
+[Delay(time=0.3)]
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ¿Qué ocurre?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ...¿Lo sabes?
+[name="Skullshatterer"]   No... No, no lo sabes.
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[name="Skullshatterer"]   Cuando vinieron por mí, me arrastraron fuera de mi casa...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ¿Qué ocurre?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Vi a mi madre. Me tomó de la mano...
+[name="Skullshatterer"]   Tú también lo viste.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ...No...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Debiste haber--
+[name="Skullshatterer"]   La golpearon sin piedad, pero no me soltaba...
+[name="Skullshatterer"]   Dejó un rastro de sangre en la nieve mientras se la llevaban a rastras.
+[name="Skullshatterer"]   Si Reunion hubiera... Si los Infectados hubieran podido... ¡Si tan solo--!
+[name="Skullshatterer"]   ¡Si hubieran venido antes, nada de esto habría pasado!
+[name="Skullshatterer"]   ¡No habríamos tenido que sufrir tanto!
+[Blocker(a=0, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Yo... no fui lo bastante valiente para...
+[name="Misha"]   Yo... Aaaahh...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Misha...
+[name="Skullshatterer"]   Todo estará bien... Al final todo saldrá bien.
+[name="Skullshatterer"]   No te culpo.
+[name="Skullshatterer"]   En aquel entonces... ¿quién habría sido lo bastante valiente?
+[name="Skullshatterer"]   Pero ahora, Reunion me ha dado esa valentía.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Al--
+[name="Misha"]   Skullshatterer...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Que confíes en nosotros o no depende de ti.
+[name="Skullshatterer"]   Aunque confíes en nosotros, que te unas o no también depende de ti.
+[name="Skullshatterer"]   Pero eres una Infectada.
+[name="Skullshatterer"]   Reunion... luchará sin duda hasta el amargo final para que los Infectados puedan ser libres.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Pero... destruyeron Chernobog.
+[name="Misha"]   Junto con incontables inocentes--
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ...¿Inocentes?
+[name="Skullshatterer"]   Ja. ¿Quién es inocente?
+[name="Skullshatterer"]   Cuando Chernobog implementó la cuarentena, ¿alguno de ellos alzó la voz en contra?
+[name="Skullshatterer"]   Cuando Ursus nos envió a morir en las minas y los páramos helados, ¿alguno de ellos hizo algo al respecto?
+[name="Skullshatterer"]   ¿¡Alguno de ellos nos defendió alguna vez!?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   No lo sé...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ...Reunion tiene dos líderes que lucharon por Ursus durante mucho tiempo.
+[name="Skullshatterer"]   Dijeron que había algunos en Ursus que se opusieron al gobierno por el bien de los Infectados.
+[name="Skullshatterer"]   Pero no estaban en Chernobog.
+[name="Skullshatterer"]   Chernobog hizo la vista gorda con frialdad mientras moríamos...
+[name="Skullshatterer"]   ¡¡No, se reían mientras nos veían morir!!
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ¡Chernobog... merecía ser destruida!
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Conocí a otras personas que ayudaban a los Infectados... Ellas...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ¿Rhodes Island?
+[name="Skullshatterer"]   A pesar de ser Infectados, ayudaron a Lungmen y nos perjudicaron, ¿no es así?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Mataron a nuestros compañeros y diezmaron a nuestros hermanos, ¿no es así?
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   No...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   No podías ver la verdad. Pero ahora debería quedarte clara...
+[name="Skullshatterer"]   ...
+[name="Skullshatterer"]   ...Perdón, dejé que la ira me dominara.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Está bien... Yo...
+[name="Misha"]   Entiendo cómo te sientes...
+[name="Misha"]   Debes de haber sufrido tanto... todo este tiempo...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Todos han pasado por mucho.
+[name="Skullshatterer"]   Pero ahora mismo, al menos tenemos esperanza.
+[name="Skullshatterer"]   Talulah... Ella es quien tomó las riendas de los Infectados y encabezó la lucha contra la crueldad de este mundo.
+[name="Skullshatterer"]   Reunion es la única esperanza que tenemos.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Ya veo... Todos han sufrido tanto...
+[name="Misha"]   Si Reunion de verdad puede protegerlos a todos...
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Por supuesto.
+[name="Skullshatterer"]   Igual que Reunion protegerá a todos... yo te protegeré a ti.
+[name="Skullshatterer"]   No dejaré que nadie vuelva a hacerte daño.
+[Character(name="char_012_misa_1#4", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Skullshatterer...
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.8)]
+[Delay(time=1)]
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   ¡Uh, los encontré--!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Parece que sufrieron pérdidas bastante serias.
+[name="Exusiai"]   Por suerte, no regresé a la sede de la compañía... De lo contrario, habría tenido que dar un largo rodeo para esta misión...
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Intenta predecir sus rutas de escape.
+[name="Texas"]   Envíale a Amiya todas las rutas probables junto con sus coordenadas.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   ¡Termino en un segundo!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Hmph.
+[name="Texas"]   No podemos darle a Reunion tiempo para reagruparse.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Mmm, veamos... por aquí... así... ¡y con eso debería bastar!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   ¿Terminaste, Exusiai?
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   ¿Qué necesitas? ¿Cómo vamos a hacer esto?
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Primero hagamos un pequeño calentamiento.
+[name="Texas"]   Empieza por sus centinelas.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

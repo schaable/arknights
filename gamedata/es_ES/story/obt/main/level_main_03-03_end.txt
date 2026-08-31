@@ -1,0 +1,145 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 25 (después)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2,fadetime=1,block=true)]
+[name="Skullshatterer"]   Mira.
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Mmm...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Este es el gatillo.
+[name="Skullshatterer"]   Solo carga la munición así...
+[name="Skullshatterer"]   Apunta al enemigo, y aprieta el gatillo.
+[name="Skullshatterer"]   Esto lanzará la bala...
+[name="Skullshatterer"]   Luego concéntrate, y sujeta la empuñadura.
+[name="Skullshatterer"]   Concéntrate... y canaliza tus Artes.
+[name="Skullshatterer"]   Esto hará que la bala detone.
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   No sé si pueda...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Sé que puedes hacer esto.
+[name="Skullshatterer"]   Tenemos mucho en común. Puedo sentirlo dentro de ti.
+[name="Skullshatterer"]   Solo imagínalo en tu mente...
+[name="Skullshatterer"]   Toma, sujeta este fragmento de Originium.
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Nnh...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Concéntrate.
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ...
+[name="Misha"]   La palma me... arde.
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ¡Eso es!
+[name="Skullshatterer"]   Lo sabía, lo sabía...
+[name="Skullshatterer"]   Sí, Misha, de verdad eres... Jaja, ajaja...
+[name="Skullshatterer"]   De verdad eres mi...
+[Delay(time=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   ¡...Tenemos que irnos! ¡Skullshatterer, rápido!
+[name="Miembro de Reunion"]   ¡Ya no podemos mantener esta base!
+[Character(name="char_1002_nsabr_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ¿¡Qué pasó!?
+[Character(name="char_1002_nsabr_1", name2="char_1500_skulsr", focus=1)]
+[name="Miembro de Reunion"]   ¡Rhodes Island está atacando! ¡Nos están arrollando!
+[Character(name="char_1002_nsabr_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ...
+[name="Skullshatterer"]   Esos malditos...
+[name="Skullshatterer"]   No cundan en pánico. ¡Reagrúpense y preparen nuestro contraataque!
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Skullshatterer...
+[name="Misha"]   Estoy segura... de que Rhodes Island...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ¿Qué cosa? ¿Quieres que tenga una charla con Rhodes Island?
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Ellos, seguro que ellos intentan ayudar a los Infectados.
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   Mataron a tantos de mis compañeros...
+[name="Skullshatterer"]   ¿De verdad me pides que hable con ellos?
+[name="Skullshatterer"]   Todos mis compañeros... ¡ellos también eran Infectados!
+[name="Skullshatterer"]   Rhodes Island, esos autoproclamados salvadores de los Infectados... ¿qué hicieron para ayudar a mis compañeros?
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.3, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[name="Skullshatterer"]   ¿¡Qué te dijeron para cegarte!?
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   No lo sé...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Perdón...
+[name="Skullshatterer"]   Me estoy poniendo demasiado sentimental.
+[name="Skullshatterer"]   Pero una cosa es segura...
+[name="Skullshatterer"]   Reunion por fin le ha dado un atisbo de esperanza a los Infectados después de todo este tiempo...
+[name="Skullshatterer"]   ¡Pero Rhodes Island, a pesar de ser Infectados, eligió hacernos daño, masacrarnos!
+[name="Skullshatterer"]   ¿¡Qué son sino traidores!?
+[name="Skullshatterer"]   ¿¡Qué hay que discutir con traidores!?
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ¿Entonces los Infectados están condenados a matarse siempre entre sí?
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Entonces, qué se supone que debo hacer...
+[name="Skullshatterer"]   ¿Debería quedarme de brazos cruzados viendo morir a mis compañeros?
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   No te preocupes.
+[name="Skullshatterer"]   Te protegeremos.
+[name="Skullshatterer"]   Aunque tú también tendrás que protegerte...
+[name="Skullshatterer"]   No te dejes arrastrar a la pelea.
+[name="Skullshatterer"]   Por favor, ten cuidado...
+[Character(name="char_012_misa_1", name2="char_1500_skulsr", focus=1)]
+[name="Misha"]   Promete... que volverás...
+[name="Misha"]   Justo cuando por fin te encontré de nuevo...
+[Character(name="char_1500_skulsr")]
+[Background(fadetime=1)]
+[name="Skullshatterer"]   Sí. Volveré por ti.
+[name="Skullshatterer"]   Entonces, iremos a casa juntos...
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ...Ajá.
+[Dialog(fadetime=0.5)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Background(screenadapt="coverall", image="bg_wild_a", width=1, height=1, fadetime=1)]
+[Character(name="char_1504_cqbw")]
+[name="W"]   Hola.
+[name="W"]   Así que, después de todo, ¿necesitas mi ayuda?
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Así es.
+[name="Skullshatterer"]   En realidad... la situación es un poco distinta de lo que Talulah nos dijo.
+[name="Skullshatterer"]   El enemigo es más poderoso de lo que esperábamos.
+[name="Skullshatterer"]   Por eso... tienes que proteger a Misha.
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=1)]
+[name="W"]   No creo estar obligada a hacer eso.
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Lo estás.
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=1)]
+[name="W"]   Bien, bien.
+[name="W"]   Sin embargo, no basta con solo proteger a Misha, ¿verdad?
+[name="W"]   Si fallas, de todas formas nos alcanzarán.
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ...
+[name="Skullshatterer"]   ¿Qué tienes en mente?
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=1)]
+[name="W"]   Skullshatterer, ¿no recuerdas lo que te dije antes?
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   ...Sí lo recuerdo.
+[name="Skullshatterer"]   Podemos darle la vuelta a la situación si eliminamos a ese objetivo.
+[name="Skullshatterer"]   Dr. {@nickname}...
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=1)]
+[name="W"]   ¿Ves? Estabas prestando atención. Solo tenemos que eliminar a su comandante. Fácil, ¿no?
+[name="W"]   La persona encapuchada que siempre está junto a esa conejita.
+[name="W"]   La persona que dirige las operaciones de combate de Rhodes Island.
+[name="W"]   Si logras matar a ese... ¡Bang!
+[name="W"]   Así de simple, se quedarán sin cerebro.
+[name="W"]   Todo será tan fácil después de eso~
+[name="W"]   No nos quedan muchas tropas, y se nos acaban las opciones.
+[name="W"]   Hay un lugar cerca de la entrada de las minas que será ideal para montar nuestra emboscada.
+[name="W"]   Mis hechiceros te darán cobertura... Sabes qué hacer, ¿verdad?
+[name="W"]   Usaré a mis tropas para atraerlos hasta aquí.
+[name="W"]   No desperdicies esta oportunidad~
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=2)]
+[name="Skullshatterer"]   Entiendo.
+[name="Skullshatterer"]   ...Cuida de Misha por mí.
+[Character(name="char_1504_cqbw", name2="char_1500_skulsr", focus=1)]
+[name="W"]   Cuenta con ello~
+[name="W"]   Hmph... En fin, buena suerte.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

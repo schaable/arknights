@@ -1,0 +1,125 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 29 (antes)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Hemos atravesado la primera línea defensiva!
+[Dialog]
+[Character(fadetime=0)]
+[playsound(key="$e_atk_arrow_h", volume=0.4, delay=0.1)]
+[name="Miembro de Reunion"]   ¿¡Qué están haciendo los hechiceros!?
+[name="Miembro de Reunion"]   Aunque solo hay un enemigo en la vanguardia...
+[name="Miembro de Reunion"]   ¿¡Por qué se quedan mirando cómo nos hace pedazos!?
+[name="Miembro de Reunion"]   ¡Rápido, rápido! ¡Elimínenla!
+[playsound(key="$e_atk_arrow_h", volume=0.4, delay=0.1)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=true)]
+[CameraShake(stop=true)]
+[Character(name="char_107_liskam_1",name2="char_106_franka_1",focus=1)]
+[name="Liskarm"]   ¡Franka! ¡Te estás saliendo del alcance!
+[name="Liskarm"]   ¡No puedo... darte cobertura desde aquí!
+[Character(name="char_107_liskam_1",name2="char_106_franka_1",focus=2)]
+[name="Franka"]   ¿Tan imprudente te parezco?
+[Character(name="char_107_liskam_1",name2="char_106_franka_1",focus=1)]
+[name="Liskarm"]   ¡Cuida tus cuatro en punto!
+[Character(name="char_107_liskam_1",name2="char_106_franka_1",focus=2)]
+[name="Franka"]   ¡Liskarm, es hora de tu debut!
+[name="Franka"]   Sé un encanto y bloquea los ataques a distancia del enemigo, ¿quieres?
+[Character(name="char_107_liskam_1",name2="char_106_franka_1",focus=1)]
+[name="Liskarm"]   Tsk...
+[Dialog]
+[Character(fadetime=0)]
+[name="Miembro de Reunion"]   ¡Rápido! ¡Más rápido!
+[name="Miembro de Reunion"]   ¡Concéntrense primero en la de la espada!
+[playsound(key="$e_atk_arrow_h", volume=0.4, delay=0.1)]
+[playsound(key="$p_imp_blunt_h")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Miembro de Reunion"]   ¿La alcanzamos--?
+[name="Miembro de Reunion"]   ...¿Eh?
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Ni lo pienses.
+[name="Hoshiguma"]   ¿A eso le llamas ataques, o solo estás lanzando palos y piedras?
+[Dialog]
+[Character(fadetime=0)]
+[name="Miembro de Reunion"]   ¡¡Woah!!
+[name="Miembro de Reunion"]   ¿¡D-de dónde salió esta!?
+[Character(name="char_106_franka_1",name2="char_136_hsguma",focus=1)]
+[name="Franka"]   ¡Te debo una, capitana!
+[Character(name="char_106_franka_1",name2="char_136_hsguma",focus=2)]
+[name="Hoshiguma"]   Es un placer.
+[name="Hoshiguma"]   Sin embargo, Franka, tu tarea era lanzar un ataque de distracción.
+[name="Hoshiguma"]   En cambio, te abriste paso peleando hasta aquí. Ahora tienes una enorme diana sobre la cabeza. ¿Te parece bien eso?
+[Character(name="char_106_franka_1",name2="char_136_hsguma",focus=1)]
+[name="Franka"]   ¡Claro que sí, después de todo tengo una compañera de confianza!
+[Dialog]
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Delay(time=1)]
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Ugh... Gahh...
+[name="Liskarm"]   ¡Franka! ¡Te adelantaste demasiado!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¿Ves? Nos alcanzó.
+[Character(name="char_107_liskam_1",name2="char_106_franka_1",focus=1)]
+[name="Liskarm"]   ¡No estoy acostumbrada a este tipo de cosas...! ¿Por qué me haces cargar de cabeza contra el enemigo? ¡No lo entiendo!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ...¿Eh?
+[Dialog]
+[Character(fadetime=0)]
+[name="Miembro de Reunion"]   Maldición...
+[name="Miembro de Reunion"]   ¡El L.G.D. y Rhodes Island están trabajando juntos!
+[name="Miembro de Reunion"]   No hay forma de que podamos defender este lugar...
+[name="Miembro de Reunion"]   No podemos permitirnos dudar. Es o vencer o morir. ¡Todos, al ataqueee!
+[PlaySound(key="$d_gen_soldiersrun",volume=0.8)]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=false)]
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   ¡Los enemigos se lanzan directamente hacia nosotros!
+[Dialog]
+[Character(fadetime=0)]
+[name="Miembro de Reunion"]   ¡Mueraaan!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Si piensan resistirse, no me dejan otra opción. No se lo tomen como algo personal.
+[Dialog]
+[Character(fadetime=0)]
+[name="Miembro de Reunion"]   ¡Tú...!
+[playsound(key="$p_imp_blunt_h")]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=false)]
+[playsound(key="$flashback")]
+[name="Hoshiguma"]  ...!
+[delay(time=1.5)]
+[Dialog]
+[Character(fadetime=0)]
+[name="Miembro de Reunion"]   ¡¡Aaaaaaaaghh!!
+[delay(time=1)]
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]   Señorita, es... bastante fuerte.
+[name="Liskarm"]   Ese tipo de Reunion... No es su día de suerte.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Tienen las agallas de atacarnos así...
+[name="Hoshiguma"]   Me da pena por él.
+[name="Hoshiguma"]   Deberían disculparse con quienes murieron injustamente.
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#2", name2="char_136_hsguma", focus=1)]
+[name="Amiya"]   ¡Inspectora!
+[Character(name="char_002_amiya_1", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   Me alegra ver que están todos bien.
+[Character(name="char_002_amiya_1#2", name2="char_136_hsguma", focus=1)]
+[name="Amiya"]   ¡Hemos desplomado su flanco! El siguiente paso es lanzar nuestro asalto total.
+[Character(name="char_002_amiya_1", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   Por mí bien.
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Todo parece ir sobre ruedas.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Eso probablemente no durará mucho más. Los enemigos han colocado muchos obstáculos, y hacen un buen trabajo manteniéndose ocultos.
+[name="Hoshiguma"]   Amiya, prepárate para una pelea dura.
+[name="Hoshiguma"]   ¡Dr. {@nickname}, asegúrate de explorar todo a fondo y proteger a tus escuadrones!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¡Por supuesto!
+[name="Amiya"]   ¡Todos, vayamos a rescatar a Misha juntos!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

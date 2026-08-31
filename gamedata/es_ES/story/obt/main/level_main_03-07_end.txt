@@ -1,0 +1,189 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 29 (después)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Blocker(a=0.3, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[playsound(key="$p_imp_blunt_h", volume=0.7)]
+[playsound(key="$p_imp_sword_n", volume=0.3, delay=0.4)]
+[CameraShake(duration=0.6, xstrength=14, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Miembro de Reunion"]   ¡¡No dejen que pasen!!
+[name="Miembro de Reunion"]   ¡W debió de haber escapado con Misha...!
+[name="Miembro de Reunion"]   ¡No podemos permitir...!
+[Dialog]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[playsound(key="$p_imp_blunt_h")]
+[Character(name="char_136_hsguma")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[name="Hoshiguma"]   ¡Fuera de mi camino! ¿¡Tienes deseos de morir!?
+[Character(fadetime=0)]
+[Dialog]
+[name="Miembro de Reunion"]   ¡¡Uaaagh!!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   O-ohhh... Ese estilo de pelea salvaje me recuerda a alguien de Rhodes Island.
+[name="Franka"]   Sí que tienen mucho en común, ¿no?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ¡Franka, no te quedes ahí parada!
+[name="Liskarm"]   ¡Date prisa y haz algo!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   Sí, sí.
+[Character(fadetime=0)]
+[Dialog]
+[Delay(time=0.5)]
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Ja, parece que todas esas leyendas sobre la Inspectora de Lungmen son ciertas...
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Mantén la concentración.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Oye, no solo estoy...
+[name="Exusiai"]   ¡...Mirando a otros! *¡Bang!*
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$p_atk_smg_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(fadetime=0)]
+[Dialog]
+[name="Hechicero de Reunion"]   ¡Argh!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   ¿Ves esos escuadrones enemigos en el segundo piso? ¡Los encontré yo primero!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Buen trabajo.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Je, je.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   ...Vamos.
+[name="Texas"]   No podemos dejar que nuestra clienta se encargue de esto sola.
+[Character(fadetime=0)]
+[Dialog]
+[Delay(time=0.5)]
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Franka, ¿has encontrado a Misha?
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=1)]
+[name="Franka"]   No la encuentro por ningún lado.
+[name="Franka"]   W probablemente... ya se la llevó...
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]   ...
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#4", focus=1)]
+[name="Franka"]   Tsk... ¿No crees que eso fue demasiado rápido...?
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_002_amiya_1#7")]
+[StopMusic]
+[name="Amiya"]   ...?
+[name="Amiya"]   ¿Qué fue eso... una explosión?
+[name="Amiya"]   Franka, reúne a tu escuadrón. ¡Tenemos que respaldar al L.G.D.!
+[playsound(key="$e_skill_skulsrexplo", volume=0.5)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_015_lmg", name2="char_002_amiya_1#7", focus=1)]
+[PlayMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[name="Agente del L.G.D."]   ¡Rhodes Island, cuidado!
+[name="Agente del L.G.D."]   E-este enemigo...
+[name="Agente del L.G.D."]   Él...
+[Character(name="char_015_lmg", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   ¿Qué pasó...? ¡Háblame!
+[name="Amiya"]   El enemigo...
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿...Qué?!
+[name="Amiya"]   ¿Eso es...?
+[name="Amiya"]   ¿¡C-cómo es posible...!?
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ...¿Qué?
+[name="Ch'en"]   Tsk... ¿Es esto algún tipo de truco?
+[Character(fadetime=0)]
+[Dialog]
+[CameraShake(duration=1, xstrength=14, ystrength=20, vibrato=30, randomness=90, fadeout=true)]
+[name="Miembro de Reunion"]   ...
+[name="Miembro de Reunion"]   ¡Es un milagro! ¡Es un milagro!
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[name="Amiya"]   ¿Por qué...?
+[playsound(key="$e_skill_skulsrexplo", volume=0.7, delay=0.4)]
+[CameraShake(duration=1, xstrength=14, ystrength=20, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_010_chen_1#2", name2="char_002_amiya_1#5", focus=1)]
+[name="Ch'en"]   ¡No se queden ahí parados! ¡Cúbranse!
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   ...
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, initr=2, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Delay(time=1)]
+[Blocker(r=0.6, g=0.3, a=1, fadetime=0.1, block=true)]
+[Character]
+[Background]
+[Image(image="bg_1_back", fadetime=0.5, xScale=1, yScale=1, )]
+[ImageTween(image="bg_1_back", xScaleTo=1.3, yScaleTo=1.3, xFrom=0, xTo=-100, duration=20, block=false)]
+[Blocker(r=0.6, g=0.3, a=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[name="Miembro de Reunion"]   ¡¡Nos han enviado un milagro!!
+[name="Miembro de Reunion"]   ¿Eres tú...? ¡¡De verdad eres tú!!
+[delay(time=1)]
+[name="Miembro de Reunion"]   ¡¡...Está bien!!
+[name="Miembro de Reunion"]   ¡E-está bien otra vez!
+[delay(time=1)]
+[name="Miembro de Reunion"]   ¡¡Skullshatterer sigue vivo!!
+[Blocker(a=0.3, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[name="Miembro de Reunion"]   ¡Skullshatterer! ¡¡De verdad eres tú!!
+[delay(time=1)]
+[Blocker(a=0.3, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="Miembro de Reunion"]   ¡¡Hurra!!
+[Dialog]
+[Background(screenadapt="coverall", screenadapt="coverall", image="bg_wild_a", width=1, height=1, fadetime=1)]
+[Image(fadetime=0.5, block=true)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   ...¿Podría ser...?
+[name="Amiya"]   ...No...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   La moral de Reunion se ha elevado desde la reaparición de su líder.
+[name="Ch'en"]   Ahora será más difícil someterlos.
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=1)]
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   ...Skullshatterer, las cosas pintan mal.
+[name="Miembro de Reunion"]   Pero al menos... has vuelto con nosotros.
+[name="Miembro de Reunion"]   Qué alivio... Estoy tan, tan feliz...
+[name="Miembro de Reunion"]   Misha también debió de haber salido de aquí.
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=1)]
+[name="Skullshatterer"]   ...
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   ¡Ahora podemos luchar sin ningún arrepentimiento!
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=1)]
+[name="Skullshatterer"]   ...Yo me quedaré aquí y los contendré.
+[name="Skullshatterer"]   Ustedes deberían irse todos.
+[name="Skullshatterer"]   Los protegeré a todos...
+[Character(name="char_1500_skulsr", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   De qué hablas, Skullshatterer...
+[name="Miembro de Reunion"]   ¿No prometiste que volveríamos a Ursus juntos? ¡Todavía tenemos que darles una lección!
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ...
+[name="Skullshatterer"]   Cuídense. No mueran.
+[Dialog]
+[Character(fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   ...
+[name="Amiya"]   No... Imposible...
+[Delay(time=1)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡Date prisa y muévete!
+[name="Ch'en"]   ¡Hoshiguma, contacta de inmediato con las fuerzas del L.G.D. apostadas afuera!
+[name="Ch'en"]   Hemos neutralizado la mayoría de las trampas y emboscadas. La líder enemiga, W, y el objetivo siguen desaparecidas.
+[name="Ch'en"]   ¡Ahora mismo, cambiamos los objetivos de la misión!
+[name="Ch'en"]   ¡Todos los escuadrones, avancen y acaben con Reunion!
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]  Por qué...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.1, block=true)]
+[name="Amiya"]  ...Por qué está pasando esto...
+[name="Amiya"]  No...
+[Delay(time=1)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

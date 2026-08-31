@@ -1,0 +1,123 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 28 (después)
+[Background(screenadapt="coverall", image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   No...
+[name="Miembro de Reunion"]   ¡Imposible! ¡Imposible...!
+[name="Miembro de Reunion"]   ¿¡C-cómo pudo pasar esto!? ¡Skullshatterer, Skullshatterer!
+[name="Miembro de Reunion"]   N-no podemos dejar que Misha vea esto...
+[name="Miembro de Reunion"]   ¿Quién aquí sabe primeros auxilios? ¡Tráiganlo aquí ahora!
+[name="Miembro de Reunion"]   Maldición, ¿por qué Mephisto se negó a venir? ¿¡Qué está haciendo!?
+[name="Miembro de Reunion"]   No paraba de hablar de un 'otro plan'... ¿¡Qué demonios es eso!?
+[name="Miembro de Reunion"]   ¡Si estuviera aquí, habríamos podido salvar a tanta gente!
+[Character(name="")]
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=1)]
+[name="W"]   De todos modos no podemos contar con ese tipo. A él no le importan sus compañeros.
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   ...
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=1)]
+[name="W"]   No te culpes por cosas que no puedes controlar.
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Gracias por cubrirnos, W...
+[name="Miembro de Reunion"]   Al menos pudimos traerlo de vuelta.
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=1)]
+[name="W"]   Si quieres agradecerme, hazlo con tus actos.
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Por supuesto. Cubriremos su huida... Sin embargo, tengo una petición--
+[name="Miembro de Reunion"]   Por favor, prometan cuidar de Misha.
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=1)]
+[name="W"]   Por supuesto. Después de todo...
+[Character(name="char_012_misa_1#5")]
+[name="Misha"]   Todavía les soy de utilidad, ¿no?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   Nosotros...
+[Character(name="char_012_misa_1", name2="char_1002_nsabr_2", focus=1)]
+[name="Misha"]   Por favor, déjenme pasar un rato a solas con Skullshatterer.
+[name="Misha"]   Yo... cuidaré de él.
+[Character(name="char_012_misa_1", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   Pero...
+[name="Miembro de Reunion"]   ... ...
+[name="Miembro de Reunion"]   ...Está bien.
+[name="Miembro de Reunion"]   W, es una promesa. Una que debes cumplir.
+[Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=1)]
+[name="W"]   Ya lo sé, ya lo sé~
+[Dialog(fadetime=0.6)]
+[Character(fadetime=0.6)]
+[Delay(time=0.6)]
+[Character(name="char_012_misa_1")]
+[Delay(time=0.6)]
+[name="Misha"]   Acabo de decir--
+[name="Misha"]   Déjenme pasar un rato a solas con él.
+[Character(name="char_1504_cqbw")]
+[name="W"]   Pero deberían irse ya.
+[Character(name="char_012_misa_1")]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=2)]
+[name="W"]   Lungmen y Rhodes Island irrumpirán aquí en cualquier momento.
+[name="W"]   Supongo que la gente de aquí también va a morir.
+[name="W"]   Vaya, vaya, qué dilema tenemos.
+[name="W"]   Misha, mucha más gente va a morir por tu culpa...
+[name="W"]   Qué lástima.
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=1)]
+[name="Misha"]   De verdad me estás sacando de quicio, W.
+[name="Misha"]   No sacarás nada de mí.
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=2)]
+[name="W"]   Uuuh, qué miedo~
+[name="W"]   ¿Sabes? Esa conejita parece preocuparse mucho por ti~
+[name="W"]   Pero esa tal Ch'en parece diferente.
+[name="W"]   No le tendrá piedad a nadie.
+[name="W"]   Quizá decida perdonarte la vida, porque te necesita...
+[name="W"]   Pero has visto lo suficiente en Ursus como para saber qué pasará después de eso, ¿verdad?
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=2)]
+[name="W"]   Si vienes conmigo ahora, todavía no es demasiado tarde.
+[name="W"]   Aunque... aún tendrías que ver a todos nuestros amigos de Reunion sacrificarse...
+[name="W"]   Aunque supongo que ese es sencillamente su destino.
+[name="W"]   Qué cosas tan lamentables.
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=1)]
+[name="Misha"]   ...
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=2)]
+[name="W"]   Ah, es cierto.
+[name="W"]   Aunque viste todo lo que pasó...
+[name="W"]   ¿Sabes? Ahh, cómo lo digo... De verdad no tengo energía de sobra para arrastrar a Skullshatterer de vuelta a Chernobog...
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=1)]
+[name="Misha"]   ¡Cállate!
+[Character(name="char_012_misa_1", name2="char_1504_cqbw", focus=2)]
+[name="W"]   Solo digo la verdad.
+[name="W"]   Es decir, después de todo la situación aquí es desesperada~
+[name="W"]   Date prisa y avísame cuando aclares tus ideas, ¿sí?
+[Delay(time=0.6)]
+[Dialog]
+[Character(name="char_1504_cqbw")]
+[Character(fadetime=0.6)]
+[Delay(time=0.6)]
+[Background(fadetime=1)]
+[Character(name="char_012_misa_1")]
+[Delay(time=1)]
+[name="Misha"]   No...
+[name="Misha"]   Juro que voy a...
+[name="Misha"]   Devolverle la vida a Skullshatterer.
+[name="Misha"]   Skullshatterer no está muerto... Skullshatterer no puede morir.
+[name="Misha"]   Si estuviera aquí, nos protegería... a todos nosotros.
+[name="Misha"]   Simplemente lo sé... esto es lo que él habría hecho.
+[name="Misha"]   ...
+[name="Misha"]   Todos son como yo. Todos somos Infectados.
+[name="Misha"]   Yo también soy... una de ellos.
+[name="Misha"]   No tenemos a dónde ir...
+[name="Misha"]   Todos... necesitan protección.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true, fadetime=0.6)]
+[Background(fadetime=0)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Misha"]   Esto...
+[name="Misha"]   ...
+[name="Misha"]   ...es el legado de Skullshatterer.
+[Delay(time=0.6)]
+[Dialog]
+[Delay(time=1)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

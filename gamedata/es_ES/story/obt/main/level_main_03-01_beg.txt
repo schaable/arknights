@@ -1,0 +1,153 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 23 (antes)
+[Background(image="bg_wild_m", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Parece que tú también la pasaste mal.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Señorita Ch'en, ¿qué pasó aquí?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Reunion nos tendió una emboscada.
+[name="Ch'en"]   Nos sorprendió un ataque demoledor y sin refuerzos. Dispersaron a nuestras fuerzas con facilidad.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ¿Y Misha...?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Se la llevó una mujer vestida de rojo.
+[name="Ch'en"]   De verdad debí haber...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]  ...?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Olvídalo.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ...
+[name="Amiya"]   Señorita Ch'en, ¿por qué es tan especial Misha?
+[name="Amiya"]   Si sigue ocultándonos cosas, cada vez nos resultará más difícil seguir trabajando juntos.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   No tengo obligación de decírtelo.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Pero Rhodes Island tiene la obligación de comprender los objetivos y preparar nuestras estrategias en consecuencia.
+[name="Amiya"]   Naturalmente, seguiremos las instrucciones del L.G.D. durante nuestras operaciones...
+[name="Amiya"]   Sin embargo, cuando se trata de usar a los Infectados para combatir a otros Infectados, necesitamos toda la información posible.
+[name="Amiya"]   Aunque usted tenga esa información, no cuenta con los medios para usarla de forma eficaz y reducir sus pérdidas.
+[name="Amiya"]   Por otro lado, nosotros tenemos la capacidad de detener a Reunion, pero no sabemos qué buscan.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   Hace un momento sonaste un poco como ese doctor.
+[Character(name="char_002_amiya_1#6", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ¿E-eso crees...?
+[name="Amiya"]   Creo que...
+[Character(name="char_002_amiya_1#7", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Esto es algo igual de importante para ambos.
+[Character(name="char_002_amiya_1#7", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Ya veo.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Si es porque necesita pedirle permiso al Jefe Wei...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Cuando investigamos a Misha, el dato más destacado fue que su padre era una de las personas más influyentes de Chernobog.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ¿El padre de Misha?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Naturalmente, no sabemos cuánto sabe Misha sobre Chernobog.
+[name="Ch'en"]   Podría no saber nada, o podría saberlo todo.
+[name="Ch'en"]   Nadie lo sabe...
+[name="Ch'en"]   ...excepto ella.
+[name="Ch'en"]   Tampoco tenemos idea de qué tipo de información podría tener.
+[name="Ch'en"]   Ya que predijeron que Lungmen sería el próximo objetivo de Reunion...
+[name="Ch'en"]   Es obvio que debemos impedir que Reunion utilice Chernobog.
+[name="Ch'en"]   Por eso no podemos permitir que tengan a Misha.
+[name="Ch'en"]   Sabíamos que alguien que encajaba con su descripción se había refugiado en Lungmen...
+[name="Ch'en"]   Pero hasta que ustedes la encontraron, no pudimos verificar si esa información era exacta.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Si es así, no podemos perder más tiempo.
+[name="Amiya"]   ¡Tenemos que detener a Reunion y rescatar a Misha antes de que puedan llevarla de vuelta a Chernobog!
+[name="Amiya"]   ¡Rhodes Island, prepárense para partir!
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Era responsabilidad del L.G.D. dar con ella.
+[name="Ch'en"]   ...y dejar que Reunion la capturara fue un incumplimiento de nuestro deber.
+[name="Ch'en"]   En lugar de lanzar una operación conjunta, necesitaremos que Rhodes Island elimine otras amenazas de Reunion.
+[name="Ch'en"]   Esto es una orden.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ...Entendido.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   No me decepcionen.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡N-no! N-no me golpeen...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ¡Deberías haberlo pensado dos veces antes de entrar en Lungmen!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Aaaagh!
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ¡Enciérrenlos a todos!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.1, block=true)]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   No están con este grupo de Infectados. Maldición...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Tampoco con este grupo... Maldita sea...
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]   Se... retiraron demasiado rápido...
+[Character(name="char_015_lmg", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Parece que Reunion también tiene su propia jerarquía.
+[name="Ch'en"]   Dejaron atrás a la chusma solo para ganar más tiempo.
+[name="Ch'en"]   Pensar que una sola persona pudo retrasar nuestros refuerzos...
+[name="Ch'en"]   Quiénes serán...
+[Character(name="char_015_lmg", name2="char_010_chen_1", focus=1)]
+[name="Agente del L.G.D."]   ¡Señorita! ¡Encontramos a unos rezagados de Reunion por allá!
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ¡Síganme!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]   ...!
+[name="Agente del L.G.D."]   ¡Tenga cuidado, Señorita Ch'en!
+[name="Agente del L.G.D."]   ¡Es una emboscada!
+[Character]
+[CharacterCutin(widgetID="1", name="char_1002_nsabr_2", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.2, offsetx=0, width=200, block=true)]
+[name="Miembro de Reunion"]   ¡V-váyanse al infierno!
+[CharacterCutin(widgetID="1", fadetime=0.2, block=true)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡No se interpongan en mi camino--!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]   ¡Señorita Ch'en, todavía estamos en suelo de Lungmen!
+[name="Agente del L.G.D."]   ¡Las instalaciones cercanas todavía sirven, así que por favor intente no causar demasiados daños!
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡Ya cállate!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]   ¡Al menos no hagas pedazos estos edificios!
+[playsound(key="$p_imp_blunt_h", volume=0.9)]
+[Blocker(a=0.7, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=0.3, b=0.3, fadetime=0.10, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[playsound(key="$e_atk_blunt_n", volume=0.7, delay=0.1)]
+[delay(time=0.5)]
+[Blocker(a=0.7, r=1, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.05, block=true)]
+[playsound(key="$p_imp_sword_n", volume=0.3, delay=0)]
+[Blocker(a=0, r=1, g=0.3, b=0.3, fadetime=0.05, block=true)]
+[Blocker(a=0.5, r=1, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.05, block=true)]
+[playsound(key="$p_imp_sword_n", volume=0.2, delay=0)]
+[Blocker(a=0, r=1, g=0.3, b=0.3, fadetime=0.05, block=true)]
+[Blocker(a=0.5, r=1, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.05, block=true)]
+[playsound(key="$p_imp_sword_n", volume=0.5, delay=0)]
+[Blocker(a=0, r=1, g=0.3, b=0.3, fadetime=0.05, block=true)]
+[Blocker(a=0.5, r=1, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.05, block=true)]
+[playsound(key="$p_imp_sword_n", volume=0.5, delay=0)]
+[Blocker(a=0, r=1, g=0.3, b=0.3, fadetime=0.05, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   E-esta mujer...
+[name="Miembro de Reunion"]   ¡Es tan difícil de tratar!
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]   ...¿Difícil de tratar?
+[name="Ch'en"]   Infectados insensatos...
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]   ...
+[name="Ch'en"]   ¿¡Creyeron que dejaríamos que escoria como ustedes tratara a Lungmen como su letrina personal!?
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡L.G.D., al ataque!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

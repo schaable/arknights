@@ -1,0 +1,152 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 26 (antes)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Entonces, ¿qué te parece Penguin Logistics, Amiya? Somos bastante buenos, ¿no?
+[Character(name="char_103_angel_1",name2="char_002_amiya_1#2",focus=2)]
+[name="Amiya"]   ¡Sí, son geniales!
+[Character(name="char_103_angel_1",name2="char_002_amiya_1#2",focus=1)]
+[name="Exusiai"]   ¡G-guaaau!
+[name="Exusiai"]   ¡Da bastante vergüenza que te elogie una niñita!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Cuida tu boca. Es nuestra clienta.
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   ¡Uy, perdón por eso!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   No te preocupes. ¡Son ustedes a quienes deberíamos agradecer!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Bueno, ya nos reunimos con Rhodes Island.
+[name="Texas"]   ¿Qué sigue?
+[Character(name="char_102_texas_1",name2="char_002_amiya_1",focus=2)]
+[name="Amiya"]   Quizá necesite que el L.G.D. tome una decisión antes de dar mi opinión.
+[Character(name="char_102_texas_1",name2="char_002_amiya_1",focus=1)]
+[name="Texas"]   ¿Ah, sí...?
+[name="Texas"]   Entonces les pediré que vengan a echar un vistazo por aquí.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2,block=true)]
+[Character(fadetime=0)]
+[Delay(time=1.5)]
+[name="Hoshiguma"]   Este terreno...
+[name="Hoshiguma"]   Reunion debió atraernos aquí a propósito.
+[dialog]
+[Character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Nada más que arena y rocas en este páramo. Tiene todos los ingredientes de uno de esos duelos de película.
+[name="Franka"]   Lo único que falta es el enemigo, ¿eh?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Hoshiguma, quédate aquí y respalda a Rhodes Island.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   ¿Hm? Muy bien.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Yo llevaré al L.G.D. y cambiaremos de posición.
+[name="Ch'en"]   Si este punto muerto continúa, no podremos controlar las rutas de escape de Reunion.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Entendido.
+[name="Hoshiguma"]   Ten cuidado tú también.
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   --Guau, ese viento fue realmente fuerte.
+[name="Exusiai"]   Agh... La visibilidad también está empeorando mucho, apenas puedo ver lo que tengo delante...
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   No avancen más.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Reunion podría esperar a que caigamos en su trampa antes de volver a atacar.
+[name="Liskarm"]   No podemos permitir que eso pase.
+[Character(name="char_106_franka_1",name2="char_002_amiya_1",focus=1)]
+[name="Franka"]  Qué te parece esto, Amiya.
+[name="Franka"]  Liskarm y yo lucharemos por el control de las alturas de por aquí y exploraremos al enemigo.
+[name="Franka"]  Hasta que te avisemos, quédate en esta posición.
+[name="Franka"]  Solo no salgas corriendo hacia nosotras aunque parezca que la pelea se pone intensa, Amiya.
+[Character(name="char_106_franka_1",name2="char_002_amiya_1",focus=2)]
+[name="Amiya"]  Lo sé. Tomaré mi propia decisión.
+[Character(name="char_106_franka_1")]
+[name="Franka"]  ¡Doctor, tú también mantenla vigilada!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   Estaremos en contacto.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Las ruinas están vacías. Las alturas están sin defender por ahora.
+[name="Franka"]   Qué curioso, ¿Reunion no tiene comandantes?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Franka, ¿pasa algo?
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Ese lugar se suponía fácil de defender pero difícil de atacar.
+[name="Franka"]   No hay forma de que Reunion no haya montado una emboscada...
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Mueran, traidores!
+[Character(name="char_106_franka_1")]
+[name="Franka"]   Tch... Sin ningún sentido del honor.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡...Franka!! ¡¡Detrás de ti!!
+[name="Amiya"]   ¡Veo fuerzas de Reunion subiendo desde las ruinas cercanas!
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$p_imp_sword_n", volume=0.7)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   *tos*... No pude ver... ¿¡su espada!?
+[name="Miembro de Reunion"]   Cómo... es posible...
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Jaja!
+[name="Franka"]   ¿De verdad creyeron que podían emboscarnos desde ahí?
+[name="Franka"]   ¿No crees que me estás subestimando?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡...Blacksteel...!
+[Dialog(fadetime=0)]
+[Character(fadetime=0)]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.7)]
+[name="Miembro de Reunion"]   ¡Retrocedan! ¡Rápido!
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]   De verdad pensé que habría más matones de Reunion aquí arriba. Hasta iba caminando de puntillas.
+[name="Franka"]   Resulta que solo son un montón de cobardes. Qué decepción.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]   ¿¡Te vas a decepcionar por eso!?
+[name="Liskarm"]   Más importante aún, ¡tenemos que ir tras ellos! ¡No dejen que escapen tan fácilmente!
+[name="Liskarm"]   Amiya, ¿tú qué opinas?
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Creo que... ¡lo mejor es no arriesgarse!
+[name="Amiya"]   Dejemos que Penguin Logistics estabilice la situación antes de decidir el siguiente paso.
+[name="Amiya"]   Exusiai, ¿puedes priorizar asegurar las alturas?
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   ¡Cuenta con ello! ¡Voy en camino!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Bien, sigan presionando al enemigo. ¡No dejen que Reunion monte un contraataque!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   ...
+[name="Texas"]   Reunion intenta reagruparse tras retroceder un poco.
+[name="Texas"]   ¡Están... sacando algo!
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Cuidado.
+[name="Amiya"]   Esa cosa...
+[name="Amiya"]   ¡no es un matón cualquiera!
+[name="Amiya"]   Nunca esperé que Reunion estuviera trabajando con...
+[Character(name="char_106_franka_1",name2="char_107_liskam_1",focus=1)]
+[name="Franka"]   ¿Podría ser...?
+[Character(name="char_106_franka_1",name2="char_107_liskam_1",focus=2)]
+[name="Liskarm"]   ¿Trabajando con quién?
+[name="Liskarm"]   ...
+[name="Liskarm"]   Tienes razón, este soldado de Reunion sí que se ve diferente...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¿Podría ser...?
+[Character(name="char_002_amiya_1#7",name2="char_107_liskam_1",focus=1)]
+[name="Amiya"]   (¡Liskarm, ahora mismo estamos colaborando con el L.G.D.... Probablemente no sea el mejor momento para hablar de temas delicados!)
+[Character(name="char_002_amiya_1#7",name2="char_107_liskam_1",focus=2)]
+[name="Liskarm"]   (Ah, entendido.)
+[Character(name="char_002_amiya_1#7",name2="char_107_liskam_1",focus=1)]
+[name="Amiya"]   (¡Te contaré mi teoría la próxima vez!)
+[Character(name="char_102_texas_1")]
+[name="Texas"]   *bosteza*...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Todos, prepárense, por favor!
+[name="Amiya"]   ¡Esta... podría ser una batalla muy difícil!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

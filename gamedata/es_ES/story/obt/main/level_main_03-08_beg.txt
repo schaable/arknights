@@ -1,0 +1,184 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 30 (antes)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Agh! ¡Siguen resistiendo!
+[dialog]
+[playsound(key="$e_skill_skulsrexplo", volume=0.5)]
+[CameraShake(duration=1, xstrength=12, ystrength=1, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Skullshatterer!
+[name="Miembro de Reunion"]   ¡Mientras podamos hacerlos retroceder, la victoria será nuestra!
+[dialog]
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[CameraShake(duration=1, xstrength=12, ystrength=1, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   Sí...
+[name="Skullshatterer"]   Ahora mismo... no nos queda más opción que luchar.
+[dialog]
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[playsound(key="$p_imp_blunt_h")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Estos tipos... ¡son bastante duros!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Gaah-! Maldito sea ese escudo tuyo...
+[name="Miembro de Reunion"]   ¡E-ella es la del L.G.D...!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   No es demasiado tarde para bajar las armas y rendirse...
+[name="Hoshiguma"]   A menos que quieran morir en vano aquí mismo.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Esperas que te creamos?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Mentirosa! Ursus... ya han dicho lo mismo antes. Pero ejecutaron a esos Infectados, uno por uno...
+[name="Miembro de Reunion"]   Me escondí bajo los cuerpos de los caídos, conteniendo la respiración, para sobrevivir.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ...
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   No hay bajeza a la que los de tu clase no se rebajen... con tal de exterminarnos.
+[name="Miembro de Reunion"]   ¿No están solo intentando reunirnos para poder matarnos más rápido?
+[name="Miembro de Reunion"]   Muy bien. Entonces han tomado su decisión.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ...
+[Character(name="char_106_franka_1")]
+[name="Franka"]   No los estás convenciendo, grandulón. No van a atender a razones.
+[name="Franka"]   Ni siquiera saben distinguir entre el bien y el mal, entre Lungmen y Ursus.
+[name="Franka"]   En ese lugar... No, en muchos lugares...
+[name="Franka"]   Solo existe odio entre quienes están infectados y quienes no.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Parece que por eso... toda comunicación se ha roto. Aunque haya otro camino ante nuestros ojos.
+[Character(fadetime=0)]
+[Dialog]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ¿Otro camino?
+[name="Skullshatterer"]   ¿Qué... podríamos hacer nosotros?
+[name="Skullshatterer"]   ¿Y qué podrías lograr tú?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡No pierdan más tiempo escuchando sus mentiras! ¡Skullshatterer, deshagámonos de ellos juntos!
+[Character(fadetime=0)]
+[Dialog]
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¿Explosiones?
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]   ¡Planea rodearnos desde varias direcciones!
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   Nuestro flanco se desplomará si no tomamos la iniciativa... ¡Prepárense para contraatacar!
+[Character(fadetime=0)]
+[Dialog]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Skullshatterer! ¡Yo te cubro! ¡Solo mátalos, y la batalla terminará!
+[name="Miembro de Reunion"]   ¡Skullshatterer...!
+[Character(name="char_1500_skulsr",name2="char_1002_nsabr_2",focus=1)]
+[name="Skullshatterer"]   Tengo que volver... con todos ustedes...
+[name="Skullshatterer"]   ¡¡Tengo que...!!
+[name="Skullshatterer"]   ----------
+[dialog]
+[Character(fadetime=0)]
+[Dialog]
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=true, block=false)]
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡No nos queda mucho tiempo!
+[name="Ch'en"]   Hoshiguma.
+[Character(name="char_010_chen_1#2", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   Estoy lista.
+[playsound(key="$p_imp_sword_n", volume=0.3)]
+[CameraShake(duration=1, xstrength=12, ystrength=1, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Ch'en"]   Actúa con cuidado. No le muestres al enemigo ningún signo de debilidad.
+[Character(name="char_010_chen_1#2", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   ¡No les daré ninguna oportunidad!
+[Character(name="char_010_chen_1#2", name2="char_015_lmg", focus=2)]
+[name="Agente del L.G.D."]   ¡Cuidado, el enemigo carga hacia adelante!
+[Dialog]
+[Character(fadetime=0)]
+[playsound(key="$p_imp_axe_h", volume=0.3)]
+[CameraShake(duration=1, xstrength=12, ystrength=1, vibrato=30, randomness=90, fadeout=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Character(name="char_106_franka_1")]
+[name="Franka"]   ¡Amiya! ¡Aléjate del enemigo...!
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   E-eso es...
+[name="Amiya"]   Yo...
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   Doctor... Doctor, qué debo hacer...
+[Character(name="char_002_amiya_1#5", focus=-1)]
+[Decision(options="Sabes lo que tienes que hacer, Amiya.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Pero no quiero...
+[name="Amiya"]   Lo siento, Doctor... Yo...
+[Character(fadetime=0)]
+[Dialog]
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   ...
+[name="Skullshatterer"]   A-...
+[name="Skullshatterer"]   ¿Amiya...?
+[dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[playsound(key="$e_skill_skulsrexplo", volume=0.3)]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Por qué...
+[name="Amiya"]   Tú...
+[name="Amiya"]   Por qué te volviste así...
+[Character(name="char_1500_skulsr")]
+[name="Skullshatterer"]   Amiya... Supongo que este fue nuestro destino desde el principio.
+[Delay(time=1)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡Amiya! ¿Qué estás haciendo? Date prisa...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Yo...
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ...
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   Tsk...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ¿Señorita Ch'en? Yo...
+[StopMusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   Es suficiente.
+[name="Ch'en"]   Es hora...
+[name="Ch'en"]   ...de poner fin a esto.
+[Delay(time=0.5)]
+[Character(name="char_002_amiya_1#5")]
+[name="Amiya"]   Señorita Ch'en...
+[Delay(time=0.5)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   Hay algo que debo decirte.
+[name="Ch'en"]   De ahora en adelante, será mejor que trates a todos los Infectados de la misma forma... ...como a tus enemigos.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[Character(fadetime=0)]
+[Dialog]
+[Delay(time=0.5)]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   La vida es injusta.
+[Delay(time=0.3)]
+[Delay(time=0.3)]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Si quieres odiar a alguien, entonces ódiame a mí.
+[Character(name="char_010_chen_1#6")]
+[Delay(time=0.3)]
+[name="Ch'en"]   ¡L.G.D.! ¡Al ataque!
+[Dialog]
+[Delay(time=1)]
+[Image]

@@ -1,0 +1,136 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 25 (antes)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$p_imp_sword_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=0.7, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Maldición...!
+[name="Miembro de Reunion"]   ¡Solo hay dos enemigos! ¡Métanse de una vez!
+[name="Miembro de Reunion"]   ¿¡De qué tienen tanto miedo!?
+[PlaySound(key="$p_imp_sword_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=30, randomness=90, fadeout=false)]
+[Character(fadetime=0)]
+[Dialog]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Ya hemos perdido a más de veinte soldados!
+[name="Miembro de Reunion"]   ¡Esos dos demonios no son gente común...!
+[Dialog]
+[Delay(time=0.6)]
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]  ¡Cuida tu derecha!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]  Échame una mano.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Sigue presionándola! ¡Yo la remato!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]  No tengo tiempo de lidiar con ese tipo que se me viene encima.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Me debes un trago la próxima, ¿de acuerdo?
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]  Claro, ahora date prisa.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   ¡Muy bien!
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Oye, ¿señor de Reunion?
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Eh?
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Esta bala es mi regalo para ti. Asegúrate de aceptarla con gratitud~
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Bala? Pero qué...
+[PlaySound(key="$p_atk_smg_h", volume=0.7,block=true)]
+[name="Miembro de Reunion"]   Guh... Agh...
+[Character(fadetime=0.2)]
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Je, me encargué de él por ti~
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]  Muchas gracias.
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[Background(fadetime=0)]
+[Character(fadetime=0)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[name="Miembro de Reunion"]   ¡M-monstruo!
+[name="Miembro de Reunion"]   Su... su espada...
+[name="Texas"]  ¡Aaaaahh! ¡¡Lo siento!!
+[name="Texas"]  --Normalmente prefiero usar dos.
+[PlaySound(key="$p_imp_sword_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=0.7, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[name="Miembro de Reunion"]   ¡Gaah! ¡¡Aaagh!!
+[Background(screenadapt="coverall", image="bg_wild_a", width=1, height=1, fadetime=1,block=true)]
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+[name="Exusiai"]   Esos son los que faltaban.
+[name="Exusiai"]   ¡Estuvimos totalmente sincronizadas ahí atrás!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   ...Supongo que sí.
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_wild_a", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[name="Miembro de Reunion"]   ¡Vuelve aquí!
+[Character(name="char_102_texas_1")]
+[name="Texas"]   Aquí viene su fuerza principal.
+[name="Texas"]   Parece que hicimos demasiado ruido y atrajimos su atención.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡¡¡Aaaaaah!!! ¡¡Tú...!!
+[name="Miembro de Reunion"]   Cómo puede ser... ¿¡Qué han hecho!?
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Ah, no te lo tomes como algo personal.
+[name="Exusiai"]   Pero estamos bajo contrato, ¿sabes?
+[name="Exusiai"]   ¡Cuando estás en el negocio de la logística, no hay nada más importante que cumplir tus contratos!
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   A tu izquierda.
+[PlaySound(key="$p_imp_sword_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=0.7, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   ¿Eh?
+[Character(name="char_1002_nsabr_2")]
+[Character(fadetime=1)]
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   ¿Qué- eh?
+[name="Exusiai"]   G-gracias.
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+[name="Texas"]   Entonces cubre mi derecha, por favor.
+[name="Texas"]   Empieza a correr. Tenemos que movernos.
+[Character(fadetime=0)]
+[PlaySound(key="$p_atk_smg_h", volume=0.7)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2,block=true)]
+[Delay(time=1.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_002_amiya_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Amiya"]   ¡Exusiai, nos estamos acercando a tu posición!
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_103_angel_1")]
+[name="Exusiai"]   Hemos atraído toda la atención del enemigo. ¡El resto depende de ti!
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_002_amiya_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Amiya"]   ¡Cuídense, ustedes dos!
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Franka, ¿ya llegaste al destino?
+[CharacterCutin(widgetID="1", name="char_106_franka_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Franka"]   Todo bien por aquí.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[CharacterCutin(widgetID="1", name="char_107_liskam_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Liskarm"]   Liskarm y los demás defensores ya están en posición.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Todos, por favor manténganse en guardia. Los francotiradores enemigos podrían estar usando el terreno para ocultarse.
+[name="Amiya"]   Asegúrense de cuidar su propia posición, y prioricen atacar a los francotiradores enemigos.
+[name="Amiya"]   A continuación... prepararemos nuestro asalto.
+[name="Amiya"]   ...Pero no se excedan, no podemos poner en peligro a nuestro objetivo.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

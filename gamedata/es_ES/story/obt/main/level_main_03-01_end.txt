@@ -1,0 +1,94 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 23 (después)
+[Background(screenadapt="coverall", image="bg_wild_m", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[name="Agente del L.G.D."]   Señorita...
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=1)]
+[name="Ch'en"]   Habla.
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[name="Agente del L.G.D."]   La mayor parte de las fuerzas de Reunion ya se ha retirado.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Señorita Ch'en, nosotros también terminamos aquí.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Tsk...
+[name="Ch'en"]   Sobre esos sospechosos de Reunion que arrestamos hace unos días...
+[name="Ch'en"]   ¿Hemos podido sacarles algo de información?
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Image(image="avg_21_1",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[Character(fadetime=0)]
+[name="Sospechoso de Reunion"]   ...
+[name="Agente del L.G.D."]   ¿Te resulta familiar esta ballesta?
+[name="Sospechoso de Reunion"]   ...
+[name="Agente del L.G.D."]   Puedes tensarla, ¿verdad?
+[name="Agente del L.G.D."]   ¿Cuál es la estructura de la munición? ¿Cómo funciona?
+[name="Agente del L.G.D."]   ¿Qué hacías en los suburbios?
+[name="Agente del L.G.D."]   ¿Qué hacías en Lungmen?
+[name="Sospechoso de Reunion"]   ...
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[Delay(time=1)]
+[name="Agente del L.G.D."]   ...Nada.
+[name="Agente del L.G.D."]   No dirán ni una palabra.
+[name="Agente del L.G.D."]   O tal vez... simplemente no saben nada.
+[name="Agente del L.G.D."]   Como los demás miembros de Reunion que derrotamos, probablemente no sean más que títeres obedientes.
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=1)]
+[name="Ch'en"]   ...Hazlos hablar.
+[name="Ch'en"]   Usa cualquier método que sea necesario.
+[name="Ch'en"]   Quiero saber sobre sus escuadrones, su liderazgo, sus estrategias, de dónde vienen y qué planean hacer...
+[name="Ch'en"]   Sácales todo lo que puedas.
+[name="Ch'en"]   Quiero todo lo que se pueda obtener.
+[name="Ch'en"]   Infórmame de inmediato, por insignificante que parezca.
+[Character(name="char_010_chen_1", name2="char_015_lmg", focus=2)]
+[name="Agente del L.G.D."]   ¡Enterado!
+[Dialog]
+[Delay(time=0.5)]
+[Character(name="char_002_amiya_1#6", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ¿El L.G.D. ha arrestado antes a miembros de Reunion?
+[Character(name="char_002_amiya_1#6", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   No podríamos asegurarlo.
+[name="Ch'en"]   Al final, no son más que especulaciones.
+[Character(name="char_015_lmg", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ¡Comunícame con Hoshiguma!
+[name="Ch'en"]   ¿Cómo le va a la División de Operaciones Especiales?
+[name="Ch'en"]   ¿Siguen siendo superados por un solo Infectado?
+[Character(name="char_015_lmg", name2="char_010_chen_1", focus=1)]
+[name="Agente del L.G.D."]  Parece que Reunion también se ha replegado por su lado.
+[name="Agente del L.G.D."]  La Inspectora Hoshiguma teme que sea una trampa e intenta descartar todos los riesgos...
+[Character(name="char_015_lmg", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Hmph... Una sola persona...
+[name="Ch'en"]   ¿¡Quién demonios se cree que es, yendo y viniendo así!?
+[name="Ch'en"]   ...
+[name="Ch'en"]   Ya deberías saber cuál va a ser tu próxima misión, Amiya.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ¿Vamos a recuperar a Misha?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Correcto.
+[name="Ch'en"]   Esta será la operación conjunta.
+[name="Ch'en"]   El L.G.D. tomará el mando, mientras que Rhodes Island se encargará del reconocimiento y el asalto.
+[name="Ch'en"]   Su misión estará cumplida con tal de que logren frenar la retirada de Reunion.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Entendido.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.8)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=2)]
+[name="Franka"]   Si buscamos al enemigo... ¿no corremos también el riesgo de ser descubiertos?
+[name="Franka"]   Ahora mismo tampoco tenemos suficiente apoyo para nuestro escuadrón de reconocimiento...
+[name="Franka"]   No podemos hacer esto solos.
+[Character(name="char_002_amiya_1", name2="char_106_franka_1", focus=1)]
+[name="Amiya"]   Deberíamos dejar esto en manos de los profesionales.
+[name="Amiya"]   Franka, ayúdame a contactar con Penguin Logistics.
+[name="Amiya"]   Vamos a necesitar otro favor de Exusiai y Texas.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,158 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 27 (antes)
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Dr. {@nickname}...
+[name="Amiya"]   Yo... no era mi intención... Yo...
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   La niebla se ha disipado.
+[name="Hoshiguma"]   Hemos recibido comunicaciones del L.G.D. Encontraron más movimientos de Reunion.
+[name="Hoshiguma"]   Ahora mismo están rastreando a un enemigo, descrito como una mujer de cabello blanco--
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#4", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   Amiya, Ch'en me dijo que quería que tú...
+[Dialog(fadetime=0)]
+[Character(name="char_002_amiya_1#4")]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#4", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   ...
+[name="Hoshiguma"]   ...No tienes buen aspecto.
+[Character(name="char_002_amiya_1#4", name2="char_136_hsguma", focus=-1)]
+[Decision(options="Deja que yo me encargue.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Bueno...
+[name="Hoshiguma"]   Te la dejo a ti, Dr. {@nickname}.
+[name="Hoshiguma"]   Lo ideal sería partir dentro de 5 minutos.
+[Dialog]
+[Character(fadetime=0.6)]
+[Delay(time=0.6)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[name="Amiya"]   Dr. {@nickname}...
+[Character(name="char_002_amiya_1#5", focus=-1)]
+[Decision(options="¿Tienes miedo?;...¿No te gusta este poder que tienes?;Amiya, no es tu culpa.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿Eh...? Yo...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Doctor... no es que tenga miedo ni nada...
+[name="Amiya"]   Claro que tengo miedo... de perderte otra vez... Por eso...
+[name="Amiya"]   Solo... no era mi intención...
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Yo... simplemente no lo sé...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   No sé si debería decir esto, pero...
+[name="Amiya"]   No debería... servir solo para lastimar a los demás.
+[name="Amiya"]   No quiero que me veas así, de cerca...
+[name="Amiya"]   ...Le quité la vida a alguien.
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   No siento arrepentimiento.
+[name="Amiya"]   No, lo que quiero decir es...
+[name="Amiya"]   Siempre usaré mi poder por tu bien. Sin importar qué carga llevara él, no me arrepiento de haberlo matado.
+[name="Amiya"]   Pero... debería haber habido una mejor manera.
+[name="Amiya"]   Murió porque... no fui capaz de encontrarla.
+[name="Amiya"]   Y eso... me está carcomiendo por dentro.
+[name="Amiya"]   No quiero...
+[name="Amiya"]   No quiero que veas este lado de mí, {@nickname}.
+[name="Amiya"]   Aunque siempre he hablado de liberar a los Infectados del dolor y el sufrimiento...
+[name="Amiya"]   Pero cuando más importa, tengo que convencerme, una y otra vez, de que está justificado quitarle la vida a otro Infectado.
+[name="Amiya"]   Soy realmente patética.
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#4", focus=-1)]
+[Decision(options="Amiya, al menos me protegiste.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[name="Amiya"]   ...Este era mi deber.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Entiendo.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Nunca creí que nada estuviera ya determinado por el destino.
+[name="Amiya"]   Pero, pase lo que pase... en lo que sea que me convierta...
+[name="Amiya"]   Siempre te protegeré, Doctor.
+[name="Amiya"]   Lo prometo.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=1)]
+[name="Miembro de Reunion"]   ¡No!
+[name="Miembro de Reunion"]   ¡Ustedes adelántense!
+[name="Miembro de Reunion"]   Necesito... ¡Necesito traer a Skullshatterer de vuelta!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=2)]
+[name="Miembro de Reunion"]   ¿Estás loca?
+[name="Miembro de Reunion"]   Eso es un suicidio... ¡Si vas, vamos todos juntos!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=1)]
+[name="Miembro de Reunion"]   ¡Muy bien!
+[name="Miembro de Reunion"]   No puedo dejarlo solo ahí afuera...
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=2)]
+[name="Miembro de Reunion"]   ¡Vamos entonces!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Por qué...
+[name="Hoshiguma"]   ¿Por qué Reunion... está dando media vuelta?
+[name="Hoshiguma"]   ¿¡Qué están haciendo!?
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   ¡Señorita Hoshiguma! ¡Retroceda!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡L.G.D., no cundan en pánico!
+[name="Hoshiguma"]   ¡Prepárense para el ataque enemigo!
+[playsound(key="$p_imp_blunt_h", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Cúbranme! ¡Cúbranme!
+[name="Miembro de Reunion"]   Esa mujer...
+[name="Miembro de Reunion"]   Es imposible... ¡No podemos atravesar su escudo!
+[name="Miembro de Reunion"]   ¡Rápido! Rodéenlos, antes de que tengan oportunidad de reaccionar...
+[name="Miembro de Reunion"]   Tenemos que llegar hasta Skullshatterer... y traerlo...
+[name="Miembro de Reunion"]   ¡¡Y llevarlo a casa!!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡Rhodes Island! ¡Están cambiando de objetivo, cuidado!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Oh no!
+[name="Amiya"]   ¡Señorita Hoshiguma! ¡Cuide su derecha!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¿Eh...?
+[playsound(key="$p_imp_grenade_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_136_hsguma", name2="char_1504_cqbw", focus=2)]
+[name="W"]   Jeje, ¿lograste bloquear eso? Qué interesante...
+[Character(name="char_136_hsguma", name2="char_1504_cqbw", focus=1)]
+[name="Hoshiguma"]   ¿Una explosión? ¿¡Otra emboscada de Reunion!?
+[Character(name="char_136_hsguma", name2="char_1504_cqbw", focus=2)]
+[name="W"]   No solo eso, por supuesto~
+[name="W"]   Me gustaría que te portaras bien y te quedaras justo aquí. Ni pienses en dar la vuelta, ¿de acuerdo?
+[CameraShake(duration=1, xstrength=14, ystrength=20, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=true)]
+[playsound(key="$p_imp_grenade_n", volume=0.7)]
+[Blocker(a=0, fadetime=0.3, block=false)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Tsk... ¿¡De dónde demonios saliste!?
+[name="Hoshiguma"]   ¡Otra vez con esos explosivos...!
+[name="Hoshiguma"]   ¡Amiya! ¡Reunion me está bombardeando!
+[name="Hoshiguma"]   ¡Sus fuerzas se dirigen hacia ti en este momento!
+[Character(name="char_1504_cqbw")]
+[name="W"]   Mmm, ese escudo tuyo es bastante resistente.
+[name="W"]   Parece que me he metido en un pequeño lío...
+[name="W"]   Da igual, lo tomaré como que le estoy haciendo un pequeño favor a Reunion.
+[name="W"]   Muéstrame algo entretenido. Procura no decepcionarme~
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Esa es la tal 'W' que vimos en Chernobog!
+[name="Amiya"]   ¿Habrá logrado... deshacerse de la Señorita Ch'en?!
+[name="Amiya"]   ¡Cuidado con el asalto enemigo! ¡Tenemos que ayudar a la Señorita Hoshiguma de inmediato!
+[name="Amiya"]   ¡Hay muchos más enemigos escondidos cerca!
+[name="Amiya"]   ¡No podremos tomar la ventaja a menos que los descubramos!
+[name="Amiya"]   ¡Doctor! ¡Por favor, dirige a nuestros escuadrones y contén el asalto enemigo!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

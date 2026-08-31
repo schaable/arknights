@@ -1,0 +1,168 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 27 (después)
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Retrocedan! ¡Todos, reagrúpense!
+[name="Amiya"]   ¡Déjenlos ir!
+[name="Amiya"]   ¡A este paso, el enemigo va a aislar a nuestros escuadrones!
+[name="Amiya"]   No podemos permitir que eso pase, por si aparecen más refuerzos...
+[name="Amiya"]   Estas fuerzas de Reunion... ¡no nos tienen a nosotros como objetivo!
+[name="Amiya"]   ¡Nuestra máxima prioridad es mantener a salvo a nuestros operadores!
+[name="Amiya"]   ¡Francotiradores, dejen de atacar a las fuerzas de Reunion que huyen!
+[name="Amiya"]   ¡Concéntrense en ayudar primero a la Señorita Hoshiguma!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡Qué fastidio!
+[Character(name="char_1504_cqbw")]
+[name="W"]   Nada mal, nada mal. De verdad lograste aguantar todos mis ataques~
+[name="W"]   Pero, ¿cuánto más puedes soportar?
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡Eso depende de cuánto puedas sobrevivir tú!
+[name="Hoshiguma"]   ---¡Ch'en! ¡Date prisa!
+[Character(name="char_010_chen_1#2")]
+[Blocker(a=0.3, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[name="Ch'en"]   ¡Rodeen a esa mujer!
+[Character(name="char_1504_cqbw")]
+[name="W"]   Ohhh, ¿el L.G.D. vino a jugar?
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]   ¡Bajen las armas!
+[Character(name="char_1504_cqbw", name2="char_010_chen_1", focus=1)]
+[name="W"]   Nos vemos de nuevo, Señorita~
+[Character(name="char_1504_cqbw", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   No vas a librarte de esta con palabras.
+[name="Ch'en"]   Todo lo que le has hecho a Lungmen... te lo devolveré por partida doble.
+[Character(name="char_1504_cqbw", name2="char_010_chen_1", focus=1)]
+[name="W"]   Ay, qué miedo~
+[name="W"]   Pero hoy no vine a jugar contigo.
+[name="W"]   Amiya, atrapa~
+[Character(name="char_1504_cqbw", name2="char_002_amiya_1#6", focus=2)]
+[name="Amiya"]   ¿Yo? Esto es... ¿una especie de teléfono?
+[name="W"]   Así es. Alguien quiere hablar contigo~
+[Character(name="char_1504_cqbw", name2="char_002_amiya_1#6", focus=2)]
+[name="Amiya"]   ¿...?!
+[Character(name="char_1504_cqbw", name2="char_002_amiya_1#6", focus=1)]
+[name="W"]   En fin, con esto concluye mi misión.
+[name="W"]   Antes de que lo olvide, también tengo algo para ti, Señorita.
+[name="W"]   Nos vemos luego~
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]   ¡Cuidado!
+[CameraShake(duration=1, xstrength=14, ystrength=20, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[playsound(key="$p_imp_grenade_n", volume=0.7)]
+[Blocker(a=0, fadetime=0.3, block=false)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¿¡...Una bomba de corto alcance...!?
+[name="Amiya"]   ¡No, es una granada cegadora!
+[name="Amiya"]   No dejen que los engañe...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ...Es demasiado tarde.
+[name="Ch'en"]   Ya escapó.
+[name="Ch'en"]   Sí que salió de ahí rápido. Solo necesitó una distracción momentánea para colarse entre nuestras defensas.
+[name="Ch'en"]   Además, deberías tener cuidado con esa cosa que sostienes. Si es otra bomba...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Esto... parece un teléfono celular común...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Salvo que... ¿podría ser...?
+[name="Amiya"]   ...
+[name="Amiya"]   ¿Hola?
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true, fadetime=0.5)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Delay(time=0.5)]
+————
+[PlaySound(key="$phone")]
+[Delay(time=2)]
+[Image(image="bg_1_call", fadetime=1, xScale=1, yScale=1, block=true)]
+[Delay(time=0.6)]
+[name="Misha"]   ¿Es...?
+[name="Misha"]   ¿Amiya...?
+[name="Amiya"]   ¡Misha! Dime, ¿¡dónde estás!? Estoy...
+[name="Misha"]   Amiya...
+[name="Misha"]   ...
+[Dialog]
+[Image(fadetime=0.6, block=true)]
+[name="Voz de chica"]   ¡...Prioricen... atender a los heridos graves!! ¡¡Necesitamos una transfusión de sangre aquí!! ¡¡Rápido!!
+[name="Voz de joven"]   ...Maldición... Por qué... Aunque todos somos Infectados...
+[name="Voz de joven"]   Rhodes Island... ¿¡por qué nos harían esto...!?
+[name="Voz de chica"]   ¡...Siempre estuvimos abandonados desde el principio!! No tenemos escapatoria... nada de nada...!
+[name="Voz de niño"]   ¡No mueras! ¡¡No me dejes!! Lo prometimos... ¡Prometimos volver a casa juntos...!
+[name="Voz de chica"]   *sollozos*... Hermano... por favor no...
+[Dialog]
+[Delay(time=0.5)]
+[Image(image="bg_1_call", fadetime=1, xScale=1, yScale=1, block=true)]
+[name="Misha"]   ¿Oyes sus voces...?
+[name="Amiya"]   ...
+[name="Amiya"]   ¿Los Infectados... de Reunion?
+[name="Misha"]   Ahora recuerdo.
+[name="Misha"]   No, nunca lo olvidé. Solo... no quería recordarlo...
+[name="Misha"]   Así es. Fue Reunion quien destruyó mi hogar. Mi padre también...
+[name="Misha"]   Pero... nos lo buscamos nosotros mismos.
+[name="Misha"]   Aquel año, vi cómo se llevaban a rastras a mi hermano menor ante mis propios ojos... Me llamaba a gritos, llorando mi nombre, pero yo aparté la mirada...
+[name="Misha"]   ...y me escondí en mi habitación.
+[name="Misha"]   Cuando volvió a encontrarme... Había sacrificado tantas cosas.
+[name="Misha"]   Aunque él todavía me quería, tuve miedo, y hui...
+[Dialog]
+[Delay(time=1)]
+[name="Misha"]   Pero ahora lo entiendo.
+[name="Misha"]   Todo lo que ha hecho... fue solo para dar a los opresores una probada del sufrimiento que los Infectados padecen a diario.
+[name="Misha"]   Y ahora, yo soy una de ellos.
+[name="Misha"]   ...Es hora de que expíe mis pecados.
+[name="Amiya"]   ¡Misha, no seas imprudente!
+[name="Amiya"]   No importa cómo trataras a los Infectados en el pasado, siempre puedes cambiar--
+[name="Misha"]   Es inútil.
+[name="Misha"]   ¿Qué puedo cambiar?
+[name="Misha"]   Porque yo... fui una de las que hicieron la vista gorda...
+[name="Misha"]   Después de volverme una Infectada, por fin... puedo verlo con claridad.
+[name="Misha"]   La forma en que la gente normal trataba a los Infectados... es como los Infectados tratarían a la gente normal.
+[name="Misha"]   Porque se lo merecen.
+[name="Amiya"]   No...
+[name="Misha"]   Todo esto... no es más que la mala hierba del mal que ha brotado de las semillas de crueldad que yo sembré...
+[name="Misha"]   Este tormento es mi justicia kármica.
+[Dialog]
+[Delay(time=1)]
+[name="Misha"]   Pero, por qué... ¿Por qué?
+[name="Misha"]   ¿¡Por qué le pasó eso a él, si no había hecho nada malo!?
+[name="Misha"]   De lo único que era culpable era de haber contraído la infección de repente...
+[name="Misha"]   Era tan pequeño... ¡Apenas había empezado a pedirme que le ayudara con las tareas!
+[name="Misha"]   Si tan solo yo... Si tan solo lo hubiera protegido en aquel entonces...
+[name="Amiya"]   ¡Misha! ¡Por favor, cálmate!
+[name="Amiya"]   ¡No lastimaste a ningún inocente! ¡Nada de esto fue tu culpa!
+[name="Misha"]   Desde el principio, ¿¡quién es inocente!?
+[name="Amiya"]   ...
+[Dialog]
+[Delay(time=1)]
+[name="Misha"]   Lo único que está mal... es esta etiqueta que se les ha puesto a los Infectados...
+[name="Misha"]   Si esto es un ciclo de venganza mutua... Entonces dime, ¿¡quién fue el que puso en marcha esta tragedia...!?
+[name="Misha"]   Si Ursus nunca hubiera tratado a los Infectados como monstruos...
+[name="Misha"]   ¿¡...entonces qué razón tendría nadie para odiar tanto a Ursus!?
+[name="Misha"]   ¿¡Quién decretó que los Infectados deben sufrir así!?
+[name="Amiya"]   Misha...
+[name="Amiya"]   Skullshatterer está muerto. Ahora puedes volver con nosotros. Te lo prometo, vamos a...
+[name="Misha"]   ...
+[name="Misha"]   Amiya... Ya he encontrado mi respuesta...
+[name="Misha"]   Soy una Infectada.
+[name="Misha"]   Estoy del lado de los Infectados.
+[name="Amiya"]   No...
+[name="Misha"]   Así es, Amiya. Tú también eres una Infectada...
+[name="Misha"]   Así que deberías poder entenderlo.
+[name="Amiya"]   Así es. Soy igual que tú... igual que todos en Rhodes Island. Todos entendemos cómo te sientes...
+[name="Amiya"]   ¡Pero, Misha, aunque aceptes tu identidad, eso no cambiará quién eres!
+[name="Amiya"]   ¡Por favor, espérame! ¡Voy a buscarte!
+[name="Misha"]   No vengas.
+[name="Amiya"]   ¡...Misha! ¿Dónde estás--
+[name="Misha"]   Tienes razón, Amiya. Tienes toda la razón... Solo me sentía culpable. Culpable... porque fui demasiado débil.
+[name="Misha"]   Pero ya lo he decidido.
+[name="Misha"]   Aunque sea un solo paso... es un paso que debo dar.
+[name="Misha"]   Lo siento, Amiya. Lo siento mucho...
+[name="Misha"]   Ser una Infectada... es ser parte de Reunion.
+[name="Misha"]   Después de todo, eso es todo lo que somos...
+[name="Misha"]   Adiós...
+[name="Amiya"]   ¿Misha? ¿¡Misha!? ¡¡Misha!!
+[name="Amiya"]   ...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

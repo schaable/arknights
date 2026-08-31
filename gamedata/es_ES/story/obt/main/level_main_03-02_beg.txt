@@ -1,0 +1,65 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 24 (antes)
+[Background(screenadapt="coverall", image="bg_wild_m", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Ya era hora de que aparecieras, Hoshiguma.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Mis disculpas. Nos retrasamos bastante.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ¿Algún herido?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   No.
+[name="Hoshiguma"]   Sin embargo, nos sorprendió lo fuerte que era esa Infectada.
+[name="Hoshiguma"]   La División de Operaciones Especiales ya había destinado a muchos miembros a reforzar la defensa de Lungmen.
+[name="Hoshiguma"]   Tuve que llevarme al resto de los miembros disponibles.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...¿De verdad todo tu escuadrón fue detenido por un solo enemigo?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Yo tampoco lo creía hasta que la vi con mis propios ojos.
+[name="Hoshiguma"]   Esa persona... de verdad era así de fuerte.
+[name="Hoshiguma"]   Además, parecía un poco... ¿distraída?
+[name="Hoshiguma"]   En fin, sobre esta gente que está a tu lado...
+[name="Hoshiguma"]   ¿Son de Rhodes Island?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Señorita Ch'en, ¿ella es...?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Hoshiguma, una élite de la División de Operaciones Especiales.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   ¿Así que ustedes son la Rhodes Island de la que tanto he oído hablar?
+[name="Hoshiguma"]   Mmm, qué niña tan joven. ¿Tú también eres de Rhodes Island?
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Es su líder.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   Eh, Señorita Ch'en...
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Vaya...
+[name="Hoshiguma"]   En fin, dejémonos de charla.
+[name="Hoshiguma"]   ¿Alguna idea de qué hacemos ahora?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Dos de nuestros agentes especiales han localizado el paradero de los secuestradores.
+[name="Amiya"]   Están rastreando a Reunion mientras hablamos, y pueden indicarnos el camino.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Nada mal.
+[name="Hoshiguma"]   Ch'en, ya veo por qué se han ganado tu elogio.
+[name="Hoshiguma"]   Esta gente se toma su trabajo en serio.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿La Señorita Ch'en... nos elogió?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Hmph.
+[name="Ch'en"]   Hoshiguma, reúne a todos nuestros escuadrones. Es hora de partir.
+[name="Ch'en"]   Guíen el camino, Rhodes Island.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Entendido. Como era de esperar, Reunion dejó atrás algunas fuerzas dispersas.
+[name="Amiya"]   Estarán al acecho en nuestra ruta...
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   No hay problema.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Sí, mientras avancemos con cautela, podremos tomar la iniciativa contra ellos.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡Muy bien!
+[name="Hoshiguma"]   ¡Déjenme ver qué tan bien pelean, Rhodes Island!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
