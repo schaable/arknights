@@ -42,7 +42,7 @@
 [Character(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=true)]
 [Character(fadetime=0)]
-[name="Niño"]   ¡Malos! ¡Panda de malos! ¡Suéltenme! ¡Suél... tenme...!
+[name="Niño"]   ¡Malos! ¡Montón de malos! ¡Suéltenme! ¡Suél... tenme...!
 [name="Amotinado"]   ¡Dime! ¿A dónde se escapó?
 [name="Amotinado"]   ¡Deja de hacerte el tonto!
 [name="Niño"]   ¡Hermana! ¡Hermana! ¿Dónde estás...! Ayuda...

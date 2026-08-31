@@ -97,7 +97,7 @@
 [Blocker(a=0, fadetime=0.1, block=true)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
 [name="Ch'en"]   Sus buenas intenciones no nos pasan desapercibidas, pese a su descortesía.
-[name="Ch'en"]   Sin embargo, tampoco somos una obra de caridad para cabilderos inútiles.
+[name="Ch'en"]   Sin embargo, tampoco somos una obra de caridad para charlatanes inútiles.
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
 [name="Wei Yenwu"]   Señorita Ch'en.
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]

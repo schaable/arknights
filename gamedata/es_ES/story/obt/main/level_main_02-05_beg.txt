@@ -23,7 +23,7 @@
 [name="Miembro de Reunion"]   ¿¡Quién es!?
 [name="Miembro de Reunion"]   ¿Qué quieres?
 [Character(name="char_102_texas_1")]
-[name="Texas"]   Vengan todos hacia mí. Ando corto de tiempo.
+[name="Texas"]   Vengan todos hacia mí. Ando corta de tiempo.
 [Dialog]
 [Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=2, block=true)]
 [Character(fadetime=0)]
