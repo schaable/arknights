@@ -45,7 +45,7 @@
 [Character(name="char_136_hsguma")]
 [name="Hoshiguma"]   ...
 [Character(name="char_106_franka_1")]
-[name="Franka"]   No los estás convenciendo, grandulón. No van a atender a razones.
+[name="Franka"]   No los estás convenciendo, grandulona. No van a atender a razones.
 [name="Franka"]   Ni siquiera saben distinguir entre el bien y el mal, entre Lungmen y Ursus.
 [name="Franka"]   En ese lugar... No, en muchos lugares...
 [name="Franka"]   Solo existe odio entre quienes están infectados y quienes no.
