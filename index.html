@@ -1,99 +1,80 @@
 <html>
-	<head>
-		<title>/akg/ Resources</title>
-		<link type="text/css" href="/arknights/css/reset.css" rel="stylesheet" />
-		<link type="text/css" href="/arknights/css/style.css" rel="stylesheet" />
-		<link type="text/css" href="/arknights/css/style2.css" rel="stylesheet" />
-		<link type="text/css" href="/arknights/css/home.css" rel="stylesheet" />
-		<link type="text/css" rel="stylesheet" href="/arknights/css/all.min.css" />
-		<meta charset="UTF-8" />
-	</head>
-	<body>
-		<div id="topNav">
-			<a id="pageTitle">/akg/ Resources</a>
-		</div>
-		<div id="links" class="btnContainer">
-			<a class="bigbtn" data-label="Randomizer" href="/arknights/randomizer"
-				><img src="/arknights/images/relic_45.png"
-			/></a>
-			<a class="bigbtn" data-label="Story Reader" href="/arknights/story"
-				><img src="/arknights/images/STORY_REVIEW_COIN.png"
-			/></a>
-			<a class="bigbtn" data-label="Roguelike Items" href="/arknights/roguelike"
-				><img src="/arknights/images/gold.png"
-			/></a>
-			<a class="bigbtn" data-label="Shop History" href="/arknights/shoplist"
-				><img src="/arknights/images/HGG_SHD.png" /></a
-			><a class="bigbtn" data-label="Recruit Calc" href="/arknights/recruit"
-				><img src="/arknights/images/TKT_RECRUIT.png" /></a
-			><a class="bigbtn" data-label="Pull History" href="/arknights/history"
-				><img src="/arknights/images/DIAMOND.png" /></a
-			><a class="bigbtn" data-label="Combined Stats" href="/arknights/cc/usage#all"
-				><img src="/arknights/images/relic_31.png"
-			/></a>
-			<a class="bigbtn" data-label="Survey Results" href="/arknights/poll"
-				><img src="/arknights/images/relic_32.png"
-			/></a>
-		</div>
-		<h2>Contingency Contract Clears</h2>
-		<div id="cc" class="btnContainer">
-			<a class="bigbtn" href="/arknights/cc#b"
-				><img src="/arknights/images/ccbicon.png" />
-				<div class="ccname">#B</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#0"
-				><img src="/arknights/images/cc0icon.png" />
-				<div class="ccname">#0</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#1"
-				><img src="/arknights/images/cc1icon.png" />
-				<div class="ccname">#1</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#2"
-				><img src="/arknights/images/cc2icon.png" />
-				<div class="ccname">#2</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#3"
-				><img src="/arknights/images/cc3icon.png" />
-				<div class="ccname">#3</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#4"
-				><img src="/arknights/images/cc4icon.png" />
-				<div class="ccname">#4</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#5"
-				><img src="/arknights/images/cc5icon.png" />
-				<div class="ccname">#5</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#6"
-				><img src="/arknights/images/cc6icon.png" />
-				<div class="ccname">#6</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#7"
-				><img src="/arknights/images/cc7icon.png" />
-				<div class="ccname">#7</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#8"
-				><img src="/arknights/images/cc8icon.png" />
-				<div class="ccname">#8</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#9"
-				><img src="/arknights/images/cc9icon.png" />
-				<div class="ccname">#9</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#10"
-				><img src="/arknights/images/cc10icon.png" />
-				<div class="ccname">#10</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#11"
-				><img src="/arknights/images/cc11icon.png" />
-				<div class="ccname">#11</div></a
-			>
-			<a class="bigbtn" href="/arknights/cc#12"
-				><img src="/arknights/images/cc12icon.png" />
-				<div class="ccname">#12</div></a
-			>
-		</div>
-		<div id="bweeeeh"></div>
-	</body>
+  <head>
+    <title>Arknights Story Reader</title>
+    <link rel="icon" href="favicon.ico" />
+    <link type="text/css" href="css/reset.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/style2.css" rel="stylesheet" />
+    <link type="text/css" href="css/story.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/all.min.css" />
+    <script type="text/javascript" src="js/util.js"></script>
+    <meta charset="UTF-8" />
+  </head>
+  <body ontouchstart>
+    <div id="topNav">
+      <div class="nav-left">
+        <a id="pageTitle">Story Reader</a>
+      </div>
+      <div class="nav-center">
+        <div id="storyTitle" class="hidden"></div>
+      </div>
+      <div class="nav-right">
+        <div class="nav-dropdown rightButton" id="serverSelect">
+          <div class="dropbtn button">
+            EN
+            <i class="fa fa-caret-down"></i>
+          </div>
+          <div class="dropdown-content"></div>
+        </div>
+        <div
+          class="button iconButton rightButton"
+          id="sfxButton"
+          title="Autoplay Sounds"
+        >
+          <i class="fas fa-volume-mute"></i>
+        </div>
+        <div
+          class="button iconButton rightButton"
+          id="visButton"
+          title="Display Mode"
+        >
+          <i class="fas fa-eye"></i>
+        </div>
+        <div id="volControl">
+          <div class="iconButton button" id="playPauseBtn" title="Toggle BGM">
+            <i class="fas fa-play"></i>
+          </div>
+          <i class="fa fa-volume-down"></i>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="slider"
+            id="volSlider"
+          />
+          <i class="fa fa-volume-up"></i>
+        </div>
+        <div class="vol-spacer"></div>
+      </div>
+    </div>
+    <div id="avatarModal" class="modal">
+      <div class="modal-content"></div>
+    </div>
+    <div class="btnPanel" id="ccselector">
+      <i class="fas fa-angle-double-left story_nav story_prev"></i
+      ><select class="storySelect" id="catSelect"></select>
+      <select class="storySelect" id="subCatSelect"></select>
+      <select class="storySelect" id="thirdCatSelect"></select
+      ><i class="fas fa-angle-double-right story_nav story_next"></i>
+    </div>
+    <div id="storyDisp" display-mode="0"></div>
+    <div class="storyNav">
+      <i class="fas fa-angle-double-left story_nav story_prev"></i>
+      <div class="spacer"></div>
+      <i class="fas fa-angle-double-right story_nav story_next"></i>
+    </div>
+    <i id="topBtn" class="fas fa-caret-square-up interactable"></i>
+    <script type="text/javascript" src="js/story.js"></script>
+  </body>
 </html>

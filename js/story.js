@@ -737,7 +737,7 @@ async function genStory(data, avatars = []) {
     }
 
     const remoteUrl = `${DATA_BASE[serverString]}/gamedata/story/${key}.txt`;
-    const localUrl = `../gamedata/${serverString}/story/${key}.txt`;
+    const localUrl = `gamedata/${serverString}/story/${key}.txt`;
     let txtPromise;
     if (key.startsWith("uniequip")) {
         // module stories are synthesized locally (English in the ES pilot)
