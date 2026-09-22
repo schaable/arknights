@@ -31,6 +31,10 @@ const CURATED_DNT = [
   "Kal'tsit", "Closure", "Doctor", "Faust",
   // factions / orgs / places
   "Reunion", "Rhodes Island", "Ursus", "Lungmen", "Victoria",
+  // "Children of Ursus" (act10d5) speaking NPCs — story-only, so they are not in
+  // character_table and would be dropped by a re-seed if they lived only in the JSON
+  "Natalya", "Rosalind", "Sonya", "Valery", "Anna", "Pavel", "Lada", "Nikola",
+  "Tatyana", "Anton", "Andrey", "Viktor", "Compass",
   // lore proper nouns (Originium/Sarkaz stay verbatim; Oripathy/Infected are
   // translated — see CURATED_TERMS)
   "Originium", "Sarkaz",

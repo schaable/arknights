@@ -1,0 +1,762 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Istina: La elegida
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", crossfade=3,volume=0.4)]
+[Character(name="char_195_glassb_2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Istina"]  ......
+[name="Istina"]  Está enchufado.
+[name="Istina"]  ¿Está grabando? 'Prueba. Prueba.'
+[name="Istina"]  Parece que sí.
+[name="Istina"]  ......
+[name="Istina"]  ......
+[name="Istina"]  ¿Y ahora qué digo?
+[Dialog]
+[Character(name="char_195_glassb_2#6")]
+[delay(time=1)]
+[name="Istina"]  Ejem.
+[name="Istina"]  Closure me prestó este aparato con el fin de... Bueno, la solicitud dice 'registro del autodiagnóstico y tratamiento de traumas mediante terapia de exposición y métodos afines'.
+[name="Istina"]  Todo un trabalenguas, sí.
+[name="Istina"]  Es una máquina muy sencilla de manejar. Solo compruebo que la batería esté cargada, acciono este interruptor... Y ahora grabará automáticamente.
+[name="Istina"]  Uf...
+[name="Istina"]  (Hablar sola es dificilísimo.)
+[name="Istina"]  (Sinceramente pensé que sería más fácil sincerarse con una pantalla.)
+[name="Istina"]  Cuando pregunté por aliviar o al menos controlar mis síntomas, el personal médico sugirió esto...
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  '¿Por qué no intentas hablarlo contigo misma...?' Lo hicieron sonar tan fácil.
+[name="Istina"]  Bien, ya hay video. No es que se lo vaya a enseñar a nadie. Ni es que quisiera enseñárselo jamás a nadie.
+[name="Istina"]  Cálmate, Istina. No hace falta ponerse nerviosa. Aquí todos somos amigos. Solo di lo que piensas. Suéltalo.
+[name="Istina"]  Todas esas cosas que no has podido compartir con los demás, puedes decírtelas a ti misma. Una y otra vez.
+[name="Istina"]  Desde luego es una idea viable.
+[name="Istina"]  Así que retrocedamos...
+[name="Istina"]  Aunque parezca que no pasa nada, sé que tarde o temprano tendremos que enfrentarnos a esto. A tantas cosas.
+[name="Istina"]  Sé que Gummy y Natalya nunca podrán olvidar aquello. Lo que pasó en la escuela... lo que pasó después de que salimos de la escuela... Nadie podría olvidarlo.
+[name="Istina"]  Y Zima, ella... creo que últimamente tiene pesadillas. Leto parece haberlo superado, pero... ¿puede alguien superarlo de verdad?
+[name="Istina"]  ¿Y yo? Creo que puedo afrontarlo. ¿Pero de verdad puedo...?
+[name="Istina"]  Nadie habla de ello. Pero de algún modo tendremos que hacer las paces con eso, al final.
+[Dialog]
+[Character(name="char_195_glassb_2")]
+[delay(time=1)]
+[name="Istina"]  ......
+[name="Istina"]  ...Sigue siendo difícil.
+[name="Istina"]  Fiu... está bien. Aunque sí creo que me estoy acostumbrando.
+[name="Istina"]  Empecemos, esta vez de verdad.
+[name="Istina"]  ¿Supongo que me presentaré primero?
+[name="Istina"]  (Respiración profunda)
+[name="Istina"]  Me llaman 'Istina'——Esto es, por supuesto, un nombre en clave. Mi verdadero nombre es Anna Morozova.
+[name="Istina"]  Mmm. Es un nombre que hace mucho que no escucho. Es mi nombre, claro, pero se siente algo ajeno. Qué extraño.
+[Dialog]
+[showitem(image="item_act10_1")]
+[delay(time=1)]
+[hideitem(fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_195_glassb_2")]   
+[name="Istina"]  Esta es Vika. Una buena amiga mía.
+[name="Istina"]  Vika era mi mejor amiga antes de que me uniera al Grupo de Autogobierno Estudiantil.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Ahora vivo en la sede de una organización llamada Rhodes Island, donde se me clasifica como parte del 'Grupo de Autogobierno Estudiantil de Ursus'.
+[name="Istina"]  Mm. Este grupo fue idea mía, pero fue Zima quien realmente lo fundó. Y aunque sí somos independientes, por ahora solo somos cinco.
+[name="Istina"]  Zima, Natalya, Leto, Gummy y yo.
+[name="Istina"]  Antes éramos más. Pero somos las únicas que quedamos.
+[name="Istina"]  Ah, por supuesto, Vika también es miembro.
+[name="Istina"]  Actualmente servimos como 'Operadoras' para esta Rhodes Island... Supongo que es una especie de trabajo.
+[name="Istina"]  No me molesta. Paga justa por trabajo justo.
+[name="Istina"]  Zima no tiene planes de irse, por ahora. Y aunque no dice lo que piensa, sé que está a gusto aquí. Y de vez en cuando me sorprendo pensando que estaría bien quedarse.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  ...Fiu.
+[name="Istina"]  La verdad es que, aunque ahora estemos todas juntas, no veníamos de la misma escuela.
+[name="Istina"]  Gummy, Natalya y yo íbamos al mismo instituto. Zima y Leto iban a otro.
+[name="Istina"]  Ah, pero Zima era algo famosa, incluso en nuestra escuela. De hecho, todos los estudiantes del distrito sabían de ella.
+[name="Istina"]  Supongo que es algo así como una líder nata. Reconozco que era la elección correcta para dirigirnos.
+[name="Istina"]  Reunion nos encontró indefensos y ocupó Chernobog, nuestra ciudad.
+[name="Istina"]  Luego pasaron... ciertas... cosas. Reunion se llevó a un puñado de chicos de nuestra escuela, yo entre ellos, y nos condujo hasta el campus de Zima.
+[name="Istina"]  Puede que también hubiera estudiantes de otras escuelas allí. No estoy segura. Fue una época caótica.
+[name="Istina"]  Todavía no está claro por qué lo hicieron. Pero todo lo orquestó el chico de cabello blanco que dirigía ese grupo de Reunion.
+[name="Istina"]  ¿Creo que puede que fuera incluso más joven que nosotras? No lo sé.
+[name="Istina"]  Me dio la impresión de que tuvo que convencer a los otros líderes para reunir a los estudiantes, y entonces nos encerraron dentro de la escuela de Zima.
+[Character(name="char_195_glassb_2#6")]
+[name="Istina"]  Ahora que lo pienso, todo parece ridículo.
+[name="Istina"]  Estuvimos encerrados ahí unas dos semanas, y...
+[Dialog]
+[Character]
+[Background]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_cher_0",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="???"]  ¡Anna!
+[name="???"]  ¡Fiu! Gracias al cielo que eres tú.
+[name="???"]  Súbeme, Anna.
+[name="???"]  ¿...Anna?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_195_glassb_2#7",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Istina"]  ...y peleamos.
+[name="Istina"]  Peleamos dentro de la escuela sellada. Y cuando logramos escapar de ella, peleamos en las calles de Chernobog.
+[name="Istina"]  Cada una de nosotras tiene algo con lo que debe hacer las paces.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+[name="Istina"]  Nosotras——
+[Dialog]
+[stopmusic(fadetime=3)]
+[PlaySound(key="$doorknockquite")]
+[delay(time=1)]
+[Character(name="char_195_glassb_2#3")]
+[name="Istina"]  (No sería Gummy tan temprano. ¿Quién podrá ser...?)
+[name="Istina"]  Un momento.
+[name="Istina"]  (Creo que dejaré la grabación andando. No quiero preocuparme por guardarla y cerrarla.)
+[name="Istina"]  ¿Quién es?
+[Character]
+[name="???"]  ¡Soy yo!
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  ¿A quién?
+[Character]
+[name="???"]  ¿Eh? ¡Me sorprendes, detective aprendiz Istina! ¿Cómo no reconoces mi voz? ¿Te haces la tonta?
+[Character(name="char_195_glassb_2#5")]
+[name="Istina"]  ¿Podrías bajar la voz?
+[name="Istina"]  Y te lo he dicho mil veces, no soy tu detective aprendiz.
+[Character]
+[name="???"]  Ja. Ustedes dos se llevan de maravilla.
+[name="???"]  Buenas tardes, Anna. Yo también vengo a molestarte.
+[Character(name="char_195_glassb_2#3")]
+[name="Istina"]  ¿...Eh?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[name="Istina"]  ¿Natalya?
+[Dialog]
+[PlaySound(key="$dooropenquite")]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Té.
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Ah, gracias!
+[name="May"]  Mmm...Huele fantástico. ¡Un té excelente, sin duda!
+[name="May"]  Por cierto, tardaste bastante en abrir la puerta. ¿Estás ocupada, Istina? ¿Te interrumpimos?
+[name="May"]  Siempre podemos volver más tarde. En realidad solo vine a devolver este libro.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  No estoy ocupada. No se preocupen.
+[name="Istina"]  Con nada urgente, al menos.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Oh...?
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Tranquila. Si Anna dice que no la molestamos, no la molestamos.
+[name="Natalya"]  Anna no miente sobre esas cosas, ¿verdad?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Jeje. ¡Me alegra oírlo!
+[name="May"]  Ah, pero nunca imaginé que fueras del tipo que cierra la puerta con llave. Qué precavida.
+[name="May"]  ¡Y práctico! ¡Esa clase de cautela le vendrá muy bien a una detective aprendiz!
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Te he dejado muy claro que no me interesa esta tontería de la detective aprendiz.
+[name="Istina"]  Y además, esta vez daba la casualidad de que tenía un motivo para cerrar con llave.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Pero yo diría que sí eres del tipo que cierra con llave, la verdad. Anna siempre ha sido la más precavida de nosotras.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  No te burles de mí, Natalya.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Je je. No puedo evitarlo con esa carita adorable que tienes.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ...*Suspiro*.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  En fin, está muy bien que tomes el té por la tarde. ¡Como debe ser!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  De verdad te encanta el té, ¿eh...? Tu cara, con esa expresión, me recuerda a una tostada recién dorada.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Qué? ¿¡Qué se supone que significa eso!?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Supongo que significa que te ves ridícula.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Ah, sí? ¿Cómo te atreves? ¡Eso es pasarse de la raya!
+[name="May"]  Hmph. ¡No importa! Mira qué magnánima es tu detective veterana. ¡Hasta te traje galletas!
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Ah, sí? ¿Galletas? Eso sí que no me lo esperaba...
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿No?
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Perdona, no esperaba que trajeras bocadillos. Supuse que solo venías a gorronear té. Te juzgué mal.
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡No soy ninguna gorrona!
+[name="May"]  ¡Mira, preparé un regalo de agradecimiento súper especial! ¡Con los famosos scones de verduras de Hibiscus——!
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Muy bien. Ahora te acompaño a la puerta. Vuelve rapidito por donde viniste.
+[name="Istina"]  Ahora mismo, de inmediato, por la puerta y a la derecha. Que tengas un buen día.
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=2)]
+[name="May"]  Oye, no hace falta ponerse tan brusca. Los scones están deliciosos, te lo prometo.
+[name="May"]  Toma, prueba uno.
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  No, gracias... En serio, para, yo... No me lo metas así——
+[name="Istina"]  ¡Mmmf! ¡Mmmrrfff...!
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  ¡Ajajajaja! A esto me refería con que ustedes dos se llevan bien. Qué envidia.
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1")]
+[name="Istina y May"]  Qué disparate. ¿Te parece que nos llevamos bien? / Jeje, como uña y carne, ¿eh?
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Eh?
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Eh?
+[delay(time=1)]
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  No es que nos llevemos mal, yo diría que simplemente...
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=2)]
+[name="May"]  Lo tenía todo mal. ¡No nos caemos nada bien!
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[Character(name="char_195_glassb_2#4",name2="char_133_mm_1")]
+[name="Istina y May"]  ¿¿¿¿????
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  ¡Jajajajajaja!
+[Character(name="char_195_glassb_2#4", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¡Na- Natalya!
+[Character(name="char_195_glassb_2#4", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ¡Jaja, pfft, jajaja! P- perdón, es que... Ustedes dos conectan a un nivel más profundo de lo que pensaba. ¡Pf-jajaja!
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=2)]
+[name="May"]  Eh.
+[Character(name="char_195_glassb_2#4")]
+[name="Istina"]  ...*Suspiro*.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  No hay forma de que seamos tan graciosas. Pero da igual... May vino a devolverme mi libro. ¿Qué te trae por aquí, Natalya?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ¿Yo? Últimamente he tenido algunas cosas en la cabeza. Cosas que quiero hablar contigo.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¿Ah, sí? ¿Cosas importantes? Eso no es propio de ti. Y menos que vengas tú a mí.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Oye, siempre he sido cercana a ti, Anna.
+[name="Natalya"]  Pero de verdad no es nada tan importante. Podemos retomarlo luego. Disfrutemos del té por ahora.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Sí, hagámoslo.
+[name="Istina"]  ¡Uy, May! ¡Ten cuidado! No andes dando saltitos con la taza. Se te va a derramar.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡No soy una niña! No se va a derramar.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  *Suspiro*...
+[name="Istina"]  Perdón, no esperaba visitas, así que el cuarto está algo desordenado.
+[name="Istina"]  No hay un buen sitio para recibir visitas en el dormitorio. Pero no te quedes ahí de pie, Natalya. Siéntate donde sea, como May.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Acepto la oferta.
+[name="Natalya"]  Aunque Rhodes Island sí ofrece dormitorios bien amueblados. Y limpios y ordenados, además.
+[name="Natalya"]  Aunque tienes razón en que no sirven para buenas fiestas en casa. No como las que hacíamos antes.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Aquello eran más banquetes que fiestas.
+[Character(name="char_133_mm_1")]
+[name="May"]  ¿Ah, sí? ¿Banquetes?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ¿Cuál es la diferencia?
+[Character(name="char_195_glassb_2#4", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¡Son completamente distintos!
+[Character(name="char_195_glassb_2#4", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ¿Lo son?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Absolutamente.
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=1)]
+[name="May"]  Uy, un banquete suena encantador...
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  No nos dejemos llevar.
+[name="Natalya"]  Eso fue otra época. La casa grande, el estilo de vida, nada de eso tiene que ver con quien soy ahora.
+[name="Natalya"]  Y esa Sonya siempre me molesta con eso. Qué falta de tacto.
+[name="Natalya"]  Si no fuera por ti, Anna, seguro que Sonya andaría chocando con todo el mundo a diestra y siniestra.
+[Character(name="char_195_glassb_2#6")]
+[name="Istina"]  ......
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=1)]
+[name="May"]  Sinceramente creo que ahora vivimos bastante bien. Es muchísimo mejor que cuando me tenían en investigaciones encubiertas.
+[name="May"]  Y por cierto, Istina, tu cuarto ya está muy limpio. Tienes muchísimos libros, y todos tan bien ordenados.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Todavía estamos terminando de ordenarlo todo. Y Gummy siempre ha sido bastante meticulosa.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Es cierto. A nuestra Gummy le gusta ordenar las cosas.
+[name="Natalya"]  Incluso en aquellos días, en un lugar como aquel, mantenía bien ordenado todo lo que reuníamos.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Igual que siempre.
+[Character(name="char_133_mm_1")]
+[name="May"]  ¿Un lugar como cuál...?
+[Character(name="char_195_glassb_2#6")]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2#6", name2="char_133_mm_1",focus=2)]
+[name="May"]  Aunque una compañera de cuarto ordenada puede ser genial, o supongo que puede ser un infierno.
+[name="May"]  Ah, ¿y quién es esta muñequita tan linda?
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[CameraShake(duration=0.7, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_195_glassb_2#5", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  !	
+[name="Istina"]  ¡No la toques!
+[Character(name="char_195_glassb_2#5", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Iep!
+[name="May"]  ¿Q- qué pasa? Me sacaste un susto de muerte.
+[name="May"]  No hacía falta ser tan brusca.
+[Character(name="char_195_glassb_2#6", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ......
+[name="Istina"]  Mis... disculpas...
+[name="Istina"]  Es solo que esto es algo muy importante para mí.
+[playMusic(intro="$distressed_intro", key="$distressed_loop", crossfade=3,volume=0.4)]
+[Character(name="char_195_glassb_2#6", name2="char_197_poca_1#4",focus=2)]
+[name="Natalya"]  Eso es...
+[name="Natalya"]  Anna, ¿eso no era de...?
+[name="Natalya"]  Así que te llevaste la muñeca contigo, tú——
+[Character(name="char_195_glassb_2#6", name2="char_197_poca_1#4",focus=1)]
+[name="Istina"]  Por favor, deja de hablar, Natalya.
+[Dialog]
+[Character] 
+Deja de hablar.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1#4",focus=1)]
+[name="Istina"]  Estoy bien. No te preocupes.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1#4",focus=2)]
+[name="Natalya"]  ...Anna...
+[Dialog]
+[Character] 
+Deja de hablar.
+[Character(name="char_197_poca_1#3")]
+[name="Natalya"]  Me enteré de ello... de lo que pasó entonces...
+[name="Natalya"]  No había nada que nadie pudiera hacer. Nadie podía saberlo.
+[Dialog]
+[Character] 
+¡Deja de hablar!
+[Character(name="char_197_poca_1#3")]
+[name="Natalya"]  ...Fue trágico. Pero todas sabemos que no fue tu culpa.
+[Dialog]
+[Character] 
+¡¡Cállate!!
+[Character(name="char_197_poca_1#4")]
+[name="Natalya"]  Llegaste solo un segundo tarde. Hiciste todo lo que pudiste.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Istina"]  Lo sé. Gracias. Estoy bien, Natalya.
+[name="Istina"]  Estoy bien.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Estoy bien.
+Eso es lo que siempre les he dicho a todos.
+Zima, Gummy, Leto, Natalya... Todas creen que estaré bien.
+Yo casi me lo creo.
+No fue mi culpa.
+¿O sí?
+Simplemente llegué demasiado tarde.
+No, no llegué tarde.
+Hice todo lo que pude.
+...todo lo que pude.
+——Ya había tomado mi decisión.
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Character(name="char_133_mm_1")]
+[name="May"]  ¡Ah, este libro! ¿No es el último tomo de la serie de detectives que estoy leyendo?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Hm? Ah, ese. Sí, tienes buen ojo.
+[name="Istina"]  Es el título más preciado de la serie. El acto final en la historia del mejor detective del mundo... Hmph, tuve que rogarle al Doctor una y otra vez que me ayudara a rastrearlo.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Ah, eso me recuerda... Allá en el viejo país, vi lo que estoy casi segura que era un ejemplar firmado de la primera edición en la estantería de casa.
+[name="May"]  Ay, qué recuerdos. ¡Lloré a mares la primera vez que lo leí!
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Eh?
+[name="Istina"]  ¿Autografiado... y primera edición encima...?
+[Character(name="char_195_glassb_2#3", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Ay, qué mala suerte.
+[name="Natalya"]  Recuerdo que Sonya decía que Anna movió cielo y tierra para conseguir cualquier ejemplar firmado de ese autor. Y sigue con las manos vacías.
+[name="Natalya"]  Es que son demasiado raros.
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  (Uy. ¿Tan especial era? Hay demasiadas cosas viejas así en casa. ¡Nunca me di cuenta!)
+[name="May"]  Eh, em, en fin, Istina. ¿Me podrías, eh, prestar este libro?
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
+[name="Istina"] ......
+[name="Istina"] ...Puedo. ¿Pero no dijiste que ya lo habías leído?
+[name="Istina"]  (Refunfuñando) ¿Una. Primera. Edición. Firmada?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Ah, bueno... sí, pero ha pasado mucho tiempo, ¿sabes? Ya va siendo hora de releerlo.
+[name="May"]  E- es todo un logro que tengas un libro así aquí. ¡Jajaja, puedes leerlo cuando quieras!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Hm.
+[name="Istina"]  Puesto así, supongo que debería prestártelo. Por ahora.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Ay, Istina, qué maravilla! ¡Eres la mejor!
+[name="May"]  (Fiu... Ningún problema entonces.)
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Hmph.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  (Refunfuñando) No te vendría mal ser un poco más consciente de los sentimientos ajenos.
+[name="Istina"]  (En voz baja) Pero aun así... gracias.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Dijiste algo?
+[name="May"]  Ay, estas galletas están de muerte. ¿De verdad no quieres una, Istina?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  No dije nada.
+[name="Istina"]  Son galletas normales, ¿no? Podría probar una...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Pero no esperaba verte a ti y a Natalya juntas. ¿De qué se conocen?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Ah, yo no diría que nos conozcamos tanto. Natalya simplemente me echó una mano cuando investigaba encubierta a Penguin Logistics.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Me alegra haber ayudado.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Hablas bastante de investigar a Penguin Logistics. Todavía no te rindes con eso, ¿eh?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Jamás me rendiré! He puesto en juego mi reputación como Detective Real——
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Personalmente, creo que hace mucho que perdiste tu reputación como Detective Real.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Serás...! Hmph. ¡Ya me tienes harta!
+[name="May"]  El caso es que solo nos topamos de casualidad de camino aquí.
+[name="May"]  Es más, el último libro que te pedí prestado fue absolutamente fascinante. ¡Tenía que venir a hablar de él en cuanto pasé la última página!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Bueno, eso no queda del todo descartado...
+[name="Istina"]  Hace tiempo que no tengo una buena charla sobre novelas de detectives. Y la trama de ese es de mis favoritas, sí. ¿'Fascinante', dijiste?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Por supuesto que sí! ¿Cómo se le ocurre a alguien una trama tan retorcida? ¡Uy, te juro que se me pusieron los pelos de punta al leer la revelación final!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  No lo dudo. Es un cóctel perfecto de creatividad literaria y deducción lógica que le da al lector justo en la psique. Sin duda mi favorito de la serie.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Ah——Ya veo. ¡Lo tengo clarísimo!
+[name="May"]  Estaba escrito en primera persona, así que... ¡El asesino en realidad era el protago——mmffst. ¿¡Mmffmm!?
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¡Insensata! ¡No puedes destriparlo todo así! ¡Natalya todavía no lo ha leído!
+[Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Mmmmmpf!
+[name="May"]  ¡Pfah——Jaah! Casi me matas...
+[name="May"]  ¡Nnng! Me mordí la lengua. Eso dolió. Entiendo lo de no querer destripes, ¡pero eso fue pasarse muchísimo, Istina!
+[Character(name="char_195_glassb_2#4", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Interesante. De verdad te gustan tus novelas de detectives, ¿eh, Anna? No suelo verte tan entusiasmada hablando de algo.
+[Character(name="char_195_glassb_2#3", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¿Ah, sí? ¿D- de verdad?
+[Character(name="char_195_glassb_2#3", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  De verdad. Es más, creo que tendrás que dejarme leer uno a mí también. Ya que son tan cautivadores.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¿Tú también quieres leer, Natalya? Jamás lo habría imaginado. Cada vez que te lo pedía antes, decías lo mismo: 'Cuando tenga tiempo'.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1#2",focus=2)]
+[name="Natalya"]  Vaya. ¿Así era...?
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Pero cuando las veo a ustedes dos cacareando sobre estos libros, no puedo evitar querer unirme.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Muy bien entonces. Cuantas más, mejor.
+[Character(name="char_195_glassb_2#2", name2="char_133_mm_1",focus=2)]
+[name="May"]  De verdad no hay mucha gente aquí capaz de sostener una conversación sobre arte de verdad... El Doctor lee, pero encontrar tiempo para una charla no es tarea sencilla.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  El Doctor... Ah, te refieres a ese comandante.
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=1)]
+[name="May"]  ¿Veo que lo conoces, Natalya?
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Así es. Esa persona es una presencia bastante singular en esta nave. Y he tenido el placer de presenciar las operaciones de campo de ese comandante en particular.
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=1)]
+[name="May"]  Qué lástima. Hoy hay una reunión especial o algo así. Quería darle una galleta al Doctor.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  No te preocupes, seguro que Hibiscus se encarga de que al Doctor le toque su parte.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sí. La Dra. Kal'tsit lo vigila de cerca, pero está claro que todos se preocupan igual por el Doctor.
+[name="Natalya"]  El personal médico, en particular. Fui a hacerme una prueba hace poco y oí a varios médicos hablar de ajustes en la dieta del Doctor... ¿Creo que se mencionó la confiscación de bocadillos?
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=1)]
+[name="May"]  Jajajaja. Es una medida bastante razonable, ¿no?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Gummy también se quejaba de eso. En serio, ¿qué come esa persona todos los días?
+[name="Istina"]  Por cierto, ¿qué era eso de una 'prueba', Natalya?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Ah, agradecería algo de discreción en este asunto. Todavía no me he decidido, pero... es por lo que vine hoy.
+[name="Natalya"]  Sin embargo...
+[name="Natalya"]  En realidad no es el momento. Retomémoslo otro día.
+[name="Natalya"]  Lo sabrás pronto, Anna. Con toda probabilidad.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¿Ah, sí?
+[name="Istina"]  Está bien entonces. No indagaré.
+[name="Istina"]  Ejem, volvamos al asunto que nos ocupa. ¿Por qué no empezamos a Natalya con los clásicos?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Ah, ¿ese es el asunto que nos ocupa, entonces?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Jeje, es una excelente oportunidad para presentarle tu amada afición a una amiga.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Yo no dejaría pasar esto tan fácilmente.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Uy... ahora mismo rezumas pasión por todos lados.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¡Por supuesto!
+[name="Istina"]  No subestimes el poder de la novela de detectives. Sea del tipo que sea, una obra maestra lleva un alma viva dentro.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Je je. Si eso no es un annaísmo, no sé qué lo sea. Pero no por ello deja de ser cierto.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Deducir la trama de una novela es parte de la diversión, pero el verdadero atractivo del género detectivesco va mucho más hondo.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Istina dice la verdad, pero he de decir que mi parte favorita es siempre cuando la detective desenmascara al verdadero culpable.
+[name="May"]  Y si hablamos de clásicos, por supuesto hay que hablar de 'esa', ¿eh?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿'Esa'? ¿Te refieres a...?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡'Esa'! ¡Sí!
+[name="May"]  Ejem.
+[name="May"]  '¡Una sola verdad prevalece! ¡El asesino es——tú!'
+[Character(name="char_197_poca_1", name2="char_133_mm_1",focus=1)]
+[name="Natalya"]  Ah, esa me la sé. Es la frase típica de un detective.
+[Character(name="char_197_poca_1", name2="char_133_mm_1",focus=2)]
+[name="May"]  Exacto. ¡Por muchas veces que la escuche, sigue acelerándome el corazón!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Así es.
+[name="Istina"]  Pero en mi opinión, es después de encontrar al culpable cuando empieza el verdadero pensar, la parte realmente interesante.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿A qué te refieres?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Permíteme responder a tu pregunta con otra pregunta, May. Tras acorralar al criminal, y tras llegar a la verdad, ¿qué debería hacer la detective?
+[name="Istina"]  ¿Debería anunciar la verdad a todos, asegurando una condena?
+[name="Istina"]  Aun cuando la verdad es clara, la ley puede a veces ser un remedio ineficaz. ¿Qué puede hacer entonces?
+[name="Istina"]  ¿Deja que este criminal se salga con la suya? ¿O se toma la justicia por su mano?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Esas cosas también pasan en el mundo real. Sin solución sencilla.
+[name="Natalya"]  Si yo fuera ella...
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ...Hmm.
+[name="May"]  ¿Solo querías soltarnos eso?
+[name="May"]  ¿De qué hablas siquiera, Istina? Llevas todo el día rara. ¿Te sientes bien?
+[name="May"]  ...No, ¿nada de fiebre?
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿...Perdón?
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  El deber de una detective es descubrir la verdad. El resto le corresponde a la policía, claro. No puede hacer de juez, jurado y verdugo.
+[name="May"]  Cada parte del sistema de justicia cumple un papel. La policía, los tribunales y detectives como nosotras. ¿No es obvio?
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Y esa cara ahora? ¿Dije algo tan escandaloso?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Claro que sé que una detective no puede condenar legalmente a un criminal.
+[name="Istina"]  Es solo que nunca esperé oírte hablar con sensatez...
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Oye! ¿¡Qué se supone que significa eso!?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Nada. Solo hablaba sola.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Ahora bien, dado el mundo en que vivimos, tenemos bastante gente que pasa los días matando y matando. El asesinato puede no parecer un crimen de especial urgencia, pero dejemos eso de lado por el momento.
+[name="May"]  Sigue siendo nuestro deber, como detectives, buscar la verdad y hacer cumplir la ley lo mejor que podamos.
+[name="May"]  No podemos dictar sentencia. No podemos estar por encima de la ley. No podemos impartir nuestra propia justicia.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Hacer daño a otros, por mucho que lo envolvamos, es un acto inmoral. La naturaleza de esa conducta es inmutable.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Así es. Tienes razón...
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Que el crimen llegue o no a conocerse, que se dicte sentencia o no, el conocimiento del crimen vive para siempre dentro del criminal.
+[name="May"]  ¡Y es la detective quien desentierra esa verdad! ¡Ajá! ¡Solo decir cosas así se siente estupendamente genial!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  El conocimiento del crimen...
+[name="Istina"]  ......
+[name="Istina"]  Tienes razón.
+[name="Istina"]  Sea cual sea la justificación, se sepa o no en el mundo, lo hecho, hecho está.
+[name="Istina"]  Y algún día...
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Vaya, nuestra charlita se ha puesto bastante sombría.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ...Perdón. No debí sacar el tema.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Para nada, fue una discusión bastante esclarecedora de presenciar. Pero en la rara ocasión en que volvamos a vernos para el té de la tarde, hablemos de algo un poco más ligero.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Sí. Buena idea.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  El té se enfrió.
+[name="May"]  ¿Hm? ¿Eso es...?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Qué pasa, May? ¿Te levantaste y algo te llamó la atención?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Es, bueno, véanlo ustedes mismas. ¿Qué es eso al otro lado de la ventana?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1#2",focus=2)]
+[name="Natalya"]  ¿Hm? ¿La ventana? Déjame ver.
+[name="Natalya"]  Ah, está... ¿volando? Y viene hacia aquí.
+[name="Natalya"]  ¿Parece una especie de dron?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1#2",focus=1)]
+[name="Istina"]  ¿Un dron?
+[name="Istina"]  Es un dron... ¿Pero qué hace aquí fuera? De hecho, creo que se enganchó en el aparejo.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Ah! Bueno, si está sujeto a la nave terrestre, no puede ser una amenaza, ¿no? Nada de qué preocuparse entonces.
+[Character(name="char_133_mm_1")]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="May"]  ¡Arriba!
+[Character(name="char_195_glassb_2#3")]
+[name="Istina"]  ¿¡Estás loca!? ¡No te lances por las ventanas así como así!
+[Character(name="char_133_mm_1")]
+[name="May"]  Jeje, te tengo——
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  ¡May! ¡Cuidado dónde pisas!
+[Character(name="char_133_mm_1")]
+[name="May"]  ¿Eh?
+[name="May"]  ¡Waaaah——
+[Character]
+[Dialog]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_195_glassb_2#3")]
+[name="Istina"]  ¡*Grito ahogado*!
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="???"]  ¡Anna!
+[name="???"]  ¡Fiu! Gracias al cielo que eres tú.
+[Dialog]
+Resbaló así sin más.
+Su cuerpo se mecía de un lado a otro, la brisa agitando su largo cabello, tan limpio que desentonaba con la escena a nuestro alrededor. Ese contraste tan marcado hacía que todo el episodio pareciera nada más que un sueño.
+[name="???"]  Súbeme, Anna.
+[Dialog] 
+Me quedé paralizada. En silencio.
+[name="???"]  ¿...Anna?
+[Dialog]
+Con un roce leve, el sueño se escurrió.
+Sin palabras. Sin sonido. Solo unas pequeñas marcas en las yemas de mis dedos.
+[name="???"]  ¿...Anna, por favor, qué haces?!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Solo la vi caer.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_195_glassb_2#7",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Istina"]  ......
+[playMusic(intro="$distressed_intro", key="$distressed_loop", crossfade=3,volume=0.4)]
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  ¡May! ¡Eso fue una imprudencia! ¿Estás herida?
+[Character(name="char_133_mm_1")]
+[name="May"]  Duele, sin duda, pero estoy bien. Nada permanente.
+[name="May"]  ¡Ah, pero hay una nota pegada al dron!
+[name="May"]  Y es para ti, Natalya.
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  ¿Eh? ¿Para mí?
+[name="Natalya"]  Déjame ver.
+[Character(name="char_195_glassb_2#7")]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2#3")]
+[name="Istina"]  ¡Ah!
+[name="Istina"]  May...
+[Character(name="char_195_glassb_2#3", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Hm?
+[name="May"]  Vaya, ¿qué pasó? ¡Parece que hubieras visto un fantasma!
+[Character(name="char_195_glassb_2#6", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ...Estoy bien.
+[Character(name="char_195_glassb_2#6", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Segura? ¿De verdad no estás enferma? No pensaría peor de ti.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  *Suspiro*...
+[name="Istina"]  Insensata.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Qué?
+[Character(name="char_195_glassb_2#5", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Qué clase de idiota absoluta se lanzaría por una ventana y se colgaría del aparejo solo para hacerse con un dron misterioso?
+[name="Istina"]  ¡Una mujer con cerebro usaría una herramienta, o me pediría que usara mis Artes!
+[Character(name="char_195_glassb_2#5", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¡Pues no se me ocurrió, ¿de acuerdo?!
+[Character(name="char_195_glassb_2#5", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¡Usa la cabeza la próxima vez!
+[Dialog]
+[Character]
+No me asustes así. Idiota.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Dame la mano.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  ¿Eh? No hace falta, de verdad estoy bien.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Te rasguñaste la mano con el alféizar.
+[name="Istina"]  No te hagas la tonta conmigo. Te veo venir. Se te nota todo en la cara.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Agh.
+[name="May"]  Tienes un ojo demasiado afilado.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Como 'detective aprendiz', una aguda capacidad de observación es imprescindible, ¿no?
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Ugh.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  Bueno, no es un corte profundo. Lo limpiamos, le ponemos algo de desinfectante... y listo.
+[name="Istina"]  Pero aun así conviene que te lo vea una operadora médica, por pequeña que sea la herida.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  No es nada grave. ¡No te alteres tanto!
+[name="May"]  Pero gracias de todos modos. Jeje.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  *Suspiro*.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  La nota es una citación de Silence.
+[Character(name="char_195_glassb_2#3", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  ¿La Dra. Silence?
+[Character(name="char_195_glassb_2#3", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sí, es por la prueba que mencioné antes.
+[name="Natalya"]  Pero da un poco de miedo. ¿Cómo supo la Dra. Silence que estaba aquí?
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=1)]
+[name="May"]  Con drones todo es posible, ¿no? Desde la Dra. Kal'tsit para abajo, los médicos tienen sus métodos...
+[Character(name="char_133_mm_1", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Eso sin duda.
+[name="Natalya"]  Perdona, Anna, parece que me voy a la enfermería.
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Sin problema. Claramente es algo importante. Ve a ocuparte de ello.
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=2)]
+[name="May"]  Bueno, entonces yo también debería irme.
+[name="May"]  Devolví tu libro y pedí prestado otro. ¡Un éxito rotundo!
+[Character(name="char_195_glassb_2", name2="char_133_mm_1",focus=1)]
+[name="Istina"]  ¿Qué es un éxito rotundo?
+[Character(name="char_195_glassb_2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Repitámoslo pronto.
+[name="Natalya"]  Si todo va bien, tengo ganas de contarle la buena noticia a todo el Grupo de Autogobierno.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=1)]
+[name="Istina"]  Sí. Yo también.
+[Character(name="char_195_glassb_2#2", name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Anna...
+[name="Natalya"]  ......
+[name="Natalya"]  Nada. Olvídalo.
+[name="Natalya"]  Hasta la próxima.
+[Character(name="char_133_mm_1")]
+[name="May"]  ¡Hasta lueguito~
+[Dialog]
+[Character]
+[PlaySound(key="$doorclosequite")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2#6")]
+[name="Istina"]  ......
+[Character(name="char_195_glassb_2#6")]
+[name="Istina"]  *Suspiro*...
+[name="Istina"]  'La buena noticia', ¿eh?
+[Character(name="char_195_glassb_2#6")]
+[name="Istina"]  Vika, dime, ¿cuál será exactamente esa buena noticia?
+[name="Istina"]  Natalya, y Zima, o Sonya... si logran llevarse bien...
+[name="Istina"]  ¿Es posible algo así? Sí, yo también lo creo.
+[name="Istina"]  ......
+[name="Istina"]  Nunca me he olvidado de ti. De lo que te pasó.
+[name="Istina"]  ¿Me culparías, si lo hiciera? Lo harías, ¿verdad?
+[name="Istina"]  ¿No? Sé que eso no es cierto. Te conozco, Vika. Y sé que es mentira. De hecho, sé que no puedes hablar en absoluto.
+[name="Istina"]  Has estado conmigo tanto tiempo. Sigues a mi lado hoy.
+[name="Istina"]  Algún día, todas tendremos que hacer las paces...
+[name="Istina"]  ...Pero no hoy. No ahora.
+[name="Istina"]  Parece que... no soy lo bastante fuerte. Todavía no puedo. Aún no.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Image]

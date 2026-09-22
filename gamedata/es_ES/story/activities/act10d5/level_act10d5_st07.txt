@@ -1,0 +1,737 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] La pequeña policía: Antes de la primavera
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+Las historias nos dicen que el mal nunca triunfa sobre el bien.
+La mayor parte del tiempo, lo doy por sentado.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cherbefore_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[name="Mujer"]  ¿De verdad tienes que ir?
+[name="Mujer"]  Vi las noticias. La cosa se está calentando entre la turba y la policía.
+[name="Mujer"]  Vi sangre. Mucha gente sangrando...
+[name="Hombre"]  No te preocupes, cariño, las cosas no están tan mal.
+[name="Hombre"]  Solo son los medios exagerando. 'Si hay sangre, va en portada', ya sabes. Así es como cobran.
+[name="Hombre"]  No dejes que te asusten.
+[name="Mujer"]  Pero...
+[name="Mujer"]  El del estanco dice que ya no vienen tantos nobles a por licor. Y la tía Nina, que trabaja en la finca del señor Santelli, volvió a casa. Dice que han suspendido a todo el personal del señor.
+[name="Mujer"]  ¿No crees... no crees que eso significa——
+[name="Hombre"]  ¡Basta!
+[name="Mujer"]  ......
+[name="Hombre"]  ...Perdona. No debí levantar la voz.
+[name="Mujer"]  Loban, es solo que... es solo que estoy muy preocupada.
+[name="Hombre"]  Te dije que no te preocuparas. No tengas miedo. Estoy aquí. Puedes confiar en mí. Yo te protegeré.
+[name="Hombre"]  Y no soy solo yo. Tengo conmigo al resto de la guarnición de la Guardia, y el Ejército está justo a las afueras de la ciudad. No hay nada que temer.
+[name="Mujer"]  Loban...
+[name="Hombre"]  Tranquila, Darya. Juramos proteger esta ciudad, y este hogar.
+[name="Hombre"]  No preocupes esa cabecita tuya. Este invierno pasará, y cuando el tiempo mejore, iremos a algún sitio bonito. ¿Qué te parece?
+[name="Hombre"]  Y no se lo digas a Zoya. Que seamos solo nosotros dos, de escapada romántica. ¿De acuerdo?
+[name="Mujer"]  ...jeje.
+[name="Mujer"]  ¿Cómo sigues siendo así, incluso a tu edad?
+[name="Mujer"]  Hace tantísimo frío. ¿A dónde vamos a ir de escapada romántica cuando se derrita la nieve y los caminos se vuelvan barro?
+[name="Hombre"]  ¿No es la forma perfecta de terminar el invierno? Cuando llegue el momento, iremos a bailar, tú traerás hidromiel de casa, y yo mismo te hornearé galletas.
+[name="Mujer"]  Oho, qué palabras tan atrevidas. ¿Todavía te acuerdas de cómo? Creo que... podríamos. Solo hay que esperar a que Zoya vuelva a la escuela. Cuando esté a salvo en su residencia, nos vamos.
+[name="Hombre"]  ¡Claro! Y bien, ¿cuánto falta para que empiecen las clases? ¿Podríamos llevarla antes?
+[name="Mujer"]  ¡Tonterías!
+[name="Mujer"]  ¿Zoya? Justo hablábamos de ti. Ven, tu padre entra en el turno de noche. Despídete.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=3)]
+Hubo momentos felices que en su momento estallaron de pronto con tal fuerza que trajeron una sensación de existir sin igual.
+O quizá se sintieron muy corrientes. Solo en retrospectiva me doy cuenta de qué era esa sensación.
+Conversaciones cotidianas para una vida monótona.
+Como si la primavera fuera a llegar como siempre. Como si la nieve se fuera a derretir, la gente fuera a atar el heno en muñecos de paja, y a pisotear el barro entre el aroma del hidromiel claro.
+Los saludos de siempre: buenos días, buenas noches, hola, adiós.
+Hasta aquel día——
+Nuestra ciudad, ante nuestros propios ojos, se retorció, se deformó, estalló.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_405_absin_ed_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="???"]  Adelante a la izquierda, despejado.
+[name="???"]  Ahora.
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[Character(name="char_405_absin_ed_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="???"]  ......
+[name="???"]  Sin señal. No hay forma de contactar.
+[name="???"]  Fiu. Tengo calculadas sus rutas de patrulla, así que aquí debería estar bien. Solo tengo que pasar la valla...
+[name="???"]  ¡Esta vez lo logro!
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  !
+[PlaySound(key="$runsand", volume=1)]
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (¿Qué? ¡Viene alguien! Esto no está en la ruta de patrulla... Tengo que esconderme.)
+[Character(name="char_1002_nsabr_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Soldado de Reunion"]  (Inaudible).
+[Character(name="char_1002_nsabr_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  (Alterado, pero todavía inaudible).
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (Debería estar bien escondida aquí un rato.)
+[name="???"]  (Eso sonaba a esos tipos que se hacen llamar 'Reunion'. Y eran unos cuantos... El de la izquierda no se parece a los que veo patrullando.)
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (¿Qué está pasando? Aparecen de la nada y nos encierran a todos en la escuela. ¿Qué es lo que quieren siquiera?)
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[name="???"]  (¡Vienen hacia aquí!)
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  ¿Qué está pensando Mephisto?
+[name="Líder de escuadrón de Reunion"]  ¿De verdad se ofrecería voluntario para hacerse cargo? ¿Quiere ocuparse de los estudiantes de allá? No sé si me creo que sea tan bondadoso.
+[name="Líder de escuadrón de Reunion"]  Reunieron a la mayoría de los críos nobles junto con todos los demás en Peterheim. ¿Por qué llegar tan lejos?
+[name="Líder de escuadrón de Reunion"]  Esa escuela queda bastante lejos de aquella en la que nos apostaron. Y si Mephisto está tramando algo, no hay mucho que podamos hacer...
+[name="Líder de escuadrón de Reunion"]  *Suspiro*, espero que sepa mantener la vista en lo importante. No queremos que ande haciendo tonterías.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  ¿Quién sabe qué pasa en esa cabecita psicópata suya? ¡A lo mejor lo hace a propósito!
+[name="Soldado de Reunion"]  ¡Es un fenómeno! ¡Un monstruo!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Oye, cálmate. No olvides que estamos en el mismo bando...
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  ¿Cómo que me calme? ¿No viste lo que hacía con sus Artes la última vez? ¡Esa mierda es pura maldad!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  ¡Baja la voz!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  ¿Acaso él cree que estamos en el mismo bando? ¡Y una mierda!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  ¡Te dije que te callaras! ¡No asustes a los estudiantes!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  ¡Maldición!
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  Perdón. Dejé que me afectara.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Lo entiendo. Sé cómo te sientes. ¿Quién no?
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  Sinceramente, a veces pienso en matar a Mephisto. ¡Si no fuera por el Capitán, iría a matarlo ahora mismo!
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  No hables así. ¿Crees que yo no quiero matarlo? ¿Crees que el Capitán no?
+[name="Líder de escuadrón de Reunion"]  Pero no podemos. Es de los nuestros. Y no matamos a los nuestros. Eso está en el corazón de nuestro movimiento.
+[name="Líder de escuadrón de Reunion"]  Pero sí, es normal estar furioso.... con lo que hizo esta vez.
+[name="Líder de escuadrón de Reunion"]  Vimos a sus hombres desbocados, destrozándolo todo. ¿Somos matones que entran en las casas, matan gente, prenden fuego?
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (¿Quién es Mephisto?)
+[name="???"]  (¿Están hablando de... matar gente?!)
+[name="???"]  (¿Oí bien? No les hicieron nada a los estudiantes. ¿Por qué...?)
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  Ja, bien dicho. ¿Entonces no somos matones?
+[name="Soldado de Reunion"]  Quizá las tropas del Capitán no lo sean. Pero si me preguntas, no le estamos haciendo precisamente un bien a esta ciudad.
+[name="Soldado de Reunion"]  ¿Cuántas manzanas hemos arrasado? ¿A cuánta gente hemos sacado a rastras de sus casas y matado en la calle? Ahí fuera es un desastre. Todos lo sabemos.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Yo...
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[delay(time=1)]
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]  No tenemos elección. La gente de ahí fuera no distingue quién pertenece al escuadrón de quién. Les da igual.
+[name="Hechicero de Reunion"]  Mientras cualquiera de 'los nuestros' haga esas cosas, la gente de aquí nos verá a todos como matones.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Rolena, ya volviste. ¿Estás lista para el relevo?
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Todo listo.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Bien. El Capitán va con el tiempo justo con este nuevo encargo de la dirección. Tus equipos harán la limpieza final en los distritos sometidos.
+[name="Líder de escuadrón de Reunion"]  Y te conviene vigilar a los mercenarios Sarkaz.
+[name="Líder de escuadrón de Reunion"]  Ah, y ocúpate de los estudiantes. El Capitán los mantiene aquí. No les hagas daño, pero tampoco dejes que escapen.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Entendido. Si los cachorros se portan bien, me parece bien dejar las cosas como están, ¿pero y si se rebelan?
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Solo intenta no hacerles daño.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  ¿Pero y si tengo que hacerlo? ¿Y si algunos saben usar Artes? Si se defienden, tendremos que actuar.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  ......
+[name="Líder de escuadrón de Reunion"]  Rolena, sé a qué te refieres. Tienes fuego dentro. Pero no te desmadres. Es una orden del Capitán.
+[name="Líder de escuadrón de Reunion"]  Mantén tus emociones bajo control. No dejes que dominen tu juicio.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Ja. Si viene del Capitán, acataré.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Eso espero.
+[name="Líder de escuadrón de Reunion"]  Empezaremos el traspaso en treinta minutos. Luego este sitio es responsabilidad tuya... Qué significa eso exactamente, depende de ti.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  ¿Depende de mí? ¿Vas a poder dormir por las noches?
+[name="Hechicero de Reunion"]  Dije que acataré, pero no me encargo de todo personalmente. Las amenazas, la intimidación y el terror hacen que la gente se porte bien. Haremos lo que haga falta...
+[name="Hechicero de Reunion"]  Oye, solo bromeo. No me mires así. Sé lo que tengo que hacer.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  Uf, dijiste todo eso demasiado a la ligera.
+[name="Soldado de Reunion"]  En serio, me da igual el plan o lo que sea. ¿Has pensado en dónde vamos a acabar si esta ciudad cae?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  ......
+[name="Hechicero de Reunion"]  Nunca tuvimos a dónde ir.
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  No. Podemos ir a cualquier parte. Algún día podremos ir a donde queramos.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  Eso estaría bien. ¿Crees que ese día llegará de verdad?
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ......
+[name="???"]  (¿De qué están hablando? ¿Quiénes son?)
+[name="???"]  (¿Qué tiene tanta gracia? Malditos. Aparecen de la nada y ocupan la ciudad. Nos encierran aquí, ¿y para qué?)
+[name="???"]  (Y parece que esto va mucho más allá de la escuela...)
+[name="???"]  (Maldición, ¿qué está pasando fuera entonces?)
+[name="???"]  (Ya no puedo quedarme aquí. Tengo que volver.)
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (Mamá, papá...)
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (No me vieron. ¡Es mi oportunidad...!)
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=0.9)]
+[delay(time=1)]
+[Character(name="char_1011_wizard_1")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Hechicero de Reunion"]  ¿Hm?
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  ¿Oíste eso...?
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  ¿Oír qué?
+[Character(name="char_1002_nsabr_2",name2="char_1011_wizard_1",focus=1)]
+[name="Líder de escuadrón de Reunion"]  Qué raro...
+[name="Líder de escuadrón de Reunion"]  En fin, ese es el trato. Ahora depende de ti.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_1",focus=2)]
+[name="Soldado de Reunion"]  Vete ya. No dejes que te retrasemos la misión.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_1002_nsabr_1")]
+[name="Soldado de Reunion"]  ......
+[name="Soldado de Reunion"]  Se fue.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Sí. Él tiene su trabajo, ahora nosotros tenemos el nuestro.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¿Cuál es el nuestro? ¿No acaba de decir que tu trabajo es vigilar a esos estudiantes y no dejarlos salir?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Exacto. ¿A dónde quieres llegar?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  No te hagas la tonta. ¿De verdad no te diste cuenta?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  ......
+[name="Hechicero de Reunion"]  Pensé que era la única.
+[name="Hechicero de Reunion"]  Parece que te ha ido bien bajo el mando del Capitán. Y ese entrenamiento te afiló bien. Mejor de lo que esperaba.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  No te andes con rodeos.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Bien. A mí tampoco me gusta andarme por las ramas.
+[name="Hechicero de Reunion"]  ¿Me creerías si te dijera que dejé escapar a esa colegiala a propósito?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¿De verdad crees que soy así de estúpida?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Resulta que no lo eres.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Oye, ¿no oí que eres de por aquí?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¿A ti qué te importa? Sé que tú también lo eres. Te he visto en el Barrio Viejo, Rolena la Sastra.
+[name="Soldado de Reunion"]  ¿Pero qué más da? Ahora las dos somos Infectadas.
+[name="Soldado de Reunion"]  Y todos sabemos lo que hemos hecho. ¿Así que a quién le importa de dónde venimos?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  ...¿Sabes qué le habría pasado a esa chica si simplemente la hubiera agarrado?
+[name="Hechicero de Reunion"]  Imagino que tendría que romperle una pierna o dos para enseñarle a quedarse en su cuarto. ¿Habría ido eso contra las órdenes? ¿Habría sido pasarse de la raya?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  Ja. Eres de verdad implacable.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  O simplemente podría haberla matado. De todos modos el equipo del Capitán ya no está. Aparte de los guerrilleros, ¿a quién le va a importar si mato a uno o dos estudiantes?
+[name="Hechicero de Reunion"]  Podría servir de ejemplo para los demás críos.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ......
+[name="Soldado de Reunion"]  Tú no harías eso. No irías en contra de las órdenes del Capitán.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Tienes razón.
+[name="Hechicero de Reunion"]  El grupo bajo el mando del viejo, Patriot, también lo han tenido crudo, ¿eh? Esos críos les han dado mucho ruido esta última semana.
+[name="Hechicero de Reunion"]  Si no hacemos algo, los estudiantes no conocerán el miedo, y tendremos a los más atrevidos buscando salir día sí y día también.
+[name="Hechicero de Reunion"]  No saben cómo está la cosa fuera. No saben lo mal que se ha puesto.
+[name="Hechicero de Reunion"]  Y aparte de los pocos críos nobles, ¿de qué le sirven al movimiento?
+[name="Hechicero de Reunion"]  El Capitán nos dijo que mantuviéramos la escuela bajo control. ¿Eso era solo para proteger a los cachorritos?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¿Por qué estamos hablando siquiera de esto?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Vamos, ¿no acabas de dejar ir a esa chica? Es porque temías que yo la atrapara y le hiciera algo, ¿verdad?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  Nop.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Suéltalo de una vez.
+[name="Hechicero de Reunion"]  Tengo curiosidad. ¿Sientes algo por la gente de aquí?
+[name="Hechicero de Reunion"]  Por mucho que te trataran antes, por cómo trataron a tus hermanos, solo porque eras Infectada... ¿No los odias?
+[name="Hechicero de Reunion"]  No, lo noto en tu tono. Sí que los odias.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¡Déjate de tonterías! Simplemente no creo que una colegiala pueda causar tantos problemas, aunque ande deambulando por el campus.
+[name="Soldado de Reunion"]  Eso es todo.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Creo que de verdad te crees tus propias mentiras.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¿Qué mentiras? No cambies de tema. ¡Tú también viste a esa chica!
+[name="Soldado de Reunion"]  Entonces, ya que eres una asesina tan despiadada, ¿por qué no la sacaste a rastras y la moliste a golpes?
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  No soy como tú.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ¿Ah, sí? Ni siquiera puedes admitirlo——
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  No soy como tú. No soy tú.
+[name="Hechicero de Reunion"]  No la saqué a rastras precisamente porque sé que no anda simplemente deambulando por la escuela.
+[name="Hechicero de Reunion"]  Está más claro que el agua. Esa chica está intentando escapar.
+[name="Hechicero de Reunion"]  En cuanto salga del campus y de nuestra zona 'controlada', se encontrará con un lugar no tan tranquilo.
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
+[name="Soldado de Reunion"]  ...Espera.
+[name="Soldado de Reunion"]  ¿¡Por qué demonios no la detuviste!? Si sale, va a, va a...
+[Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]  Sip. Está caminando hacia su propia tumba.
+[name="Hechicero de Reunion"]  ¿Por qué iba a detenerla? Aunque la atrapara, no podría hacer nada. Órdenes del Capitán.
+[name="Hechicero de Reunion"]  Así que la dejé ir.
+[name="Hechicero de Reunion"]  Te lo dije, no soy como tú. Tú sigues siendo blanda. Incluso ahora te preocupas por esos críos.
+[name="Hechicero de Reunion"]  ¿Pero yo? No puedo olvidar lo que mi familia y yo sufrimos a manos de esta ciudad.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Hechicero de Reunion"]  Los odio a todos.
+[name="Hechicero de Reunion"]  Espero que esa chica no muera demasiado rápido. ¡Jaja! Abre los ojos y mira bien el sufrimiento que te rodea.
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$escape_intro", key="$escape_loop", volume=0.4)]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+Nunca había visto esta cara de la ciudad.
+Casas destruidas, calles bloqueadas, ventanas tapiadas, ladrillos rotos esparcidos por la calle como si fueran bloques de juguete.
+El humo se alza de los incendios a mi alrededor, llevando lamentos de dolor en el viento.
+Todo mientras los hombres armados vitorean, tallando sus símbolos en cada superficie que encuentran. Oigo su nombre. Los asesinos lo dicen con orgullo.
+Se hacen llamar——Reunion.
+[Dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ...Agh, cómo duele...
+[name="???"]  (¿De la escuela al centro de la ciudad hay como dos horas? ¿Más o menos?)
+[name="???"]  (No oigo nada. Eso debería ser temporal. Y no siento la mano izquierda... parece que también tengo roto el meñique. Mmm...)
+[name="???"]  (Tengo un dolor agudo en el abdomen. Pero todavía no es grave.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (No entres en pánico, Zoya. Llegaste hasta aquí. Solo sigue así. No te precipites. Lo más importante es seguir escondida de los malos...)
+[name="???"]  (...nng.)
+[Character]
+[Dialog]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (Otra explosión. Creo que esta vez vino del parque.)
+[name="???"]  (¿¡Cuántas van ya!?)
+[name="???"]  (¿¡Qué demonios pasó...!? ¿Dónde está la policía? ¿Dónde está el ejército? ¿Por qué no ha venido nadie a restablecer el orden?)
+[name="???"]  (Parece que no puedo pasar por delante. ¿Y esa gente que pelea parece de Reunion? ¿Quién está luchando contra ellos...?)
+[name="???"]  Maldición. Ya casi llego a casa. ¿¡Por qué tiene que ser ahora!?
+[Character]
+[name="Civil de Ursus"]  ¡Corran!
+[name="Civil de Ursus"]  ¡Esos malditos! ¡Son monstruos! ¡Monstruos!
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (La multitud está fuera de control. Más aterrada de lo normal...)
+[Character(name="char_405_absin_ed_1#3")]
+[name="???"]  Eh, ¿qué está pasando por——
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Civil de Ursus"]  ¡Fuera de mi camino!
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  !
+[Character]
+[name="Civil de Ursus"]  ¿Qué haces? ¡Corre ya!
+[name="Mujer de Ursus"]  ¡Mi bebé! ¿¡Dónde está mi bebé!?
+[name="Civil de Ursus"]  ¡Ya vienen! ¡Mierda! ¡Rápido!
+[name="Niño de Ursus"]  Buaaah, mamá... mamaaá...
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ¡Cuidado!
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (Agh, mi herida. Eso dolió...)
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¿Estás bien?
+[Character]
+[name="Niño de Ursus"]  ¡Waaaahhh! ¡Waahhhh! ¡Suelta! ¡Suéltame!
+[Dialog]
+[Character(name="char_405_absin_ed_1")]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=120, fadeout=true, block=true)]
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral")] 
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¡Oye, espera!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_soldiersrun")] 
+[Character]
+[name="Policía de Ursus"]  ¡Retrocedan!
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (¡Por fin, la policía! Ahora estaremos bien.)
+[Character]
+[name="Policía de Ursus"]  Hay una situación más adelante. ¡Esta manzana queda cerrada!
+[name="Policía de Ursus"]  ¡Oye! ¿¡Tienes ganas de morir!? ¡Da la vuelta! ¡Por ahí hay gente de Reunion!
+[name="Policía de Ursus"]  ...Espera, ¿tú no eres Zoya? ¿¡Qué haces aquí!?
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¡Tío Valery!
+[name="???"]  ¿Qué demonios está pasando? ¿Quiénes son esos de Reunion? ¿Y dónde está todo el mundo?
+[Character]
+[name="Civil de Ursus"]  ¡Déjennos pasar!
+[name="Civil de Ursus"]  ¡Tienen que dejarnos salir! ¡Están matando gente! ¡Son la policía, tienen que saber qué hacer!
+[name="Valery"]  ¡No entren en pánico! Cálmense. Vamos a——
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[delay(time=1)]
+[Character]
+[name="Valery"]  ——!
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¡Tío Valery!
+[Character]
+[name="Valery"]  Estoy bien...
+[Character]
+[name="Policía de Ursus"]  ¡No empujen! ¡Alto! ¡Dije que se calmen de una maldita vez!
+[Dialog]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character]
+[name="Civil de Ursus"]  ¿¡Para qué sirven los policías!? ¡Inútiles de mierda, vayan a detener a esos Infectados!
+[name="Civil de Ursus"]  ¡Ya vienen! Nos van a matar——
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ¡Oye! ¡Ya basta!
+[Character]
+[name="Civil de Ursus"]  ¡Fuera de mi camino! No quiero morir...
+[Dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[Character]
+[name="Valery"]  ¡Deténganlos!
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¡Cómo pueden hacer...! Tío Valery, ¿estás bien?
+[Character]
+[name="Valery"]  Estoy bien. La gente anda toda en pánico estos días. Vemos mucho esto. Casi nos hemos acostumbrado.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  Pero por qué...
+[Character]
+[name="Valery"]  No importa. No tengo mucho tiempo para hablar contigo.
+[name="Valery"]  Tengo que detener a estos civiles. Más adelante es demasiado peligroso. Esa gente de ahí fuera son monstruos. No se parecen en nada a los Infectados normales.
+[name="Valery"]  ¡Anton, lleva a tu equipo para allá!
+[Character]
+[name="Policía de Ursus"]  ¡Sí, señora!
+[name="Valery"]  Uf...
+[name="Valery"]  En fin, ¿qué haces aquí, Zoya? ¿Y cómo llegaste hasta aquí?
+[name="Valery"]  Oí a su caudillo decir que a los estudiantes los mantendrían encerrados en sus escuelas.
+[name="Valery"]  Y la tuya queda bastante lejos de aquí. Cómo... Da igual. No importa. Tienes que venir conmigo. Aquí es demasiado peligroso.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  Espera, tío, ¡todavía no me has dicho qué pasó!
+[name="???"]  Vine por los callejones, escondiéndome de los hombres malos, y todo se volvía más demencial cuanto más avanzaba.
+[name="???"]  Había explosiones por todas partes. Edificios derrumbados. Tantísimos heridos. Los vi prendiendo fuego. ¿Cómo pueden hacer esto?
+[name="???"]  Mi familia... ¿papá también está luchando contra Reunion? ¿Dónde está? ¿Y dónde está mamá? Tengo que encontrar——
+[Character]
+[name="Valery"]  ......
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  Por... ¿por qué no dices nada...?
+[name="???"]  Tío Valery, ¿mis padres están...?
+[Character]
+[name="Valery"]  ...Tu padre está a salvo.
+[stopmusic(fadetime=4)]
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¿¡De verdad!?
+[Character]
+[name="Valery"]  Pero——
+[name="Valery"]  Tu barrio fue de los primeros en ser atacados.
+[name="Valery"]  Esos Infectados, los de Reunion, devastaron cada distrito en el que entraron. No nos quedó más remedio que priorizar la evacuación de civiles en las zonas de alto riesgo.
+[name="Valery"]  Tu padre y yo... los dos estuvimos de acuerdo en esto.
+[name="Valery"]  Teníamos que mirar la situación y tomar las decisiones adecuadas. Es nuestra responsabilidad. Hubo que sacrificar cosas.
+[name="Valery"]  ...Para cuando el equipo de rescate llegó a tu manzana, ya no había nada que salvar.
+[name="Valery"]  Fue un desastre. Cuesta imaginar cómo pudo pasar algo así.
+[name="Valery"]  Todo se había derretido. La hierba, los ladrillos, las vigas de acero, todo. Ni siquiera la nieve podía posarse sobre la tierra calcinada.
+[name="Valery"]  No te voy a decir que tu madre pudo haber escapado. Eres una cría lista. No puedo mentirte.
+[name="Valery"]  Lo siento. Llegamos demasiado tarde.
+[Character(name="char_405_absin_ed_1")]
+[playMusic(intro="$distressed_intro", key="$distressed_loop", volume=0.4)]
+[name="???"]  ......
+[name="???"]  Estás mintiendo. Tienes que estar... eso es imposible.
+[Character]
+[name="Valery"]  ¡Zoya!
+[name="Valery"]  Zoya... Escúchame. Estoy diciendo la verdad.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  No puede ser. Papá dijo...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Dijo que nos protegería.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cherbefore_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[name="Hombre"]  No hay nada de qué preocuparse.
+[name="Hombre"]  Tengo conmigo al resto de la guarnición de la Guardia, y el Ejército está justo a las afueras de la ciudad.
+[name="Hombre"]  Juramos proteger esta ciudad, y este hogar.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Hombre"]  Zoya, ¿qué quieres ser de mayor?
+[name="Hombre"]  ¿Quieres ser como tu papá? Jaja, ¿en serio? Es un trabajo duro.
+[name="Hombre"]  Cuando crezcas, entenderás todo lo que hace papá. Si eso no te hace cambiar de opinión, entonces espero con ganas trabajar contigo, Zoya.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+......
+Es verdad. Sí lo dijo.
+Su misión en la vida era proteger. Protegernos a mamá y a mí, proteger a la familia, proteger...
+'Proteger esta ciudad.'
+No llores.
+No puedes llorar.
+Quiero ser como él. Quiero...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_405_absin_ed_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="???"]  ......
+[Character]
+[name="Valery"]  Zoya.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ...Estoy bien. No te preocupes.
+[name="???"]  Continúa.
+[Character]
+[name="Valery"]  *Suspiro...*
+[name="Valery"]  La cuestión es que esos malditos Infectados salieron de la nada, y son demasiados.
+[name="Valery"]  Algunos parecen contenidos, pero otros están totalmente descontrolados, empeñados en arrasar la ciudad entera.
+[name="Valery"]  El Ejército no ha venido. Pero nuestras comunicaciones funcionan bien. No tenemos ni idea de qué les pasa.
+[name="Valery"]  Solo estamos nosotros, los de la Guardia. No hay mucho que podamos hacer para detenerlos. Pero al menos con nosotros estarás un poco más segura.
+[name="Valery"]  Ah, tu padre ya no está con el escuadrón. Se fue a la Escuela Secundaria Peterheim.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¿Peterheim...? Peterheim otra vez...
+[name="???"]  ¿Qué hace allá?
+[Character]
+[name="Valery"]  ¿No te has enterado? Los Infectados encerraron a otro grupo de críos en Peterheim, igual que en tu escuela.
+[name="Valery"]  Es raro. No parece que les estén haciendo nada. Ningún movimiento por ahí.
+[name="Valery"]  Pero ha habido noticias estos últimos días. Parece que Reunion se está retirando. Sea lo que sea lo que traman, tenemos que tener una contramedida lista.
+[name="Valery"]  No podemos destinar mucho personal. Solo unos pocos distritos están tranquilos, y otros están tan descontrolados que solo pudimos enviar un equipo pequeño a Peterheim.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¿Es decir, mi papá?
+[Character]
+[name="Valery"]  Se ofreció voluntario. Tu padre tiene experiencia. No estoy preocupado.
+[name="Valery"]  Y ya que estás sana y salva, él también podrá estar tranquilo. Una lástima que no tengamos forma de contactarlo...
+[name="Valery"]  Nos faltan manos por todas partes. Maldita sea, ¿¡qué demonios les ha dado a estos Infectados!?
+[name="Valery"]  Dejemos el resto para después. No podemos quedarnos aquí más tiempo. No hay forma de saber cuándo aparecerá el Ejército... ¿¡Dónde diablos está el Tercer Ejército cuando se le necesita!?
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ......
+[Character]
+[name="Valery"]  En fin, Zoya, ponte a cubierto. Cuando el Ejército tome el control, todo irá bien. ¡Esta turba no es rival para los soldados de Ursus!
+[name="Valery"]  Y no te preocupes. En cuanto liberemos algo de personal, enviaremos a alguien a Peterheim a rescatar a los estudiantes y a recoger a tu padre. Por no hablar de tu escuela, de todas las escuelas.
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ......
+[name="???"]  Si... si no hay nadie más libre, puedo ir yo.
+[Character]
+[name="Valery"]  ¿Qué?
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ¡Dije que si no tienen manos libres, puedo ir yo a buscar a mi papá!
+[Character]
+[name="Valery"]  ¡No seas tonta! ¡Eso es demasiado peligroso! ¡Ni hablar!
+[name="Valery"]  ¿Quieres ir sola? ¿¡De qué ayuda podrías ser!?
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ¡Tío Valery!
+[name="???"]  Me doy cuenta de que estamos en problemas. Y parece que las cosas están... están empeorando, ¿verdad?
+[name="???"]  No tenemos tiempo que perder. La situación se vuelve más peligrosa a cada segundo. Y si no viene ayuda, solo van a necesitar más manos. ¿Así que por qué no tomar las mías?
+[name="???"]  He observado cómo operan en mi escuela. Sé cómo patrullan, sé cuántos hombres ponen en un escuadrón.
+[name="???"]  Es otra escuela, pero sus tácticas deberían ser prácticamente las mismas...
+[name="???"]  He estado en Peterheim antes. Conozco la distribución del campus. Y logré esquivar a Reunion todo el camino hasta aquí.
+[name="???"]  Puedo hacerlo. Puedo ayudar——
+[Character]
+[name="Valery"]  ¡No es lo mismo!
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  !
+[Character]
+[name="Valery"]  Escúchame. Esto no se parece en nada a lo que has visto en la comisaría. No es un simulacro. No es nada de lo que te imaginas.
+[name="Valery"]  Zoya, sé que eres fuerte, sé que eres hábil. Pero sigues siendo una cría. ¡Tu vida vale! ¡Esto no te toca a ti hacerlo!
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ......
+[name="???"]  Lo sé. Les complico las cosas a todos, y probablemente no pueda ayudar en gran cosa.
+[name="???"]  Pero, pero yo...
+[Dialog]
+[Character]
+¿Pero qué más puedo hacer?
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  Voy a...
+[Dialog]
+[Character]
+Me da miedo pensar. Tengo que actuar.
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  Por favor. Déjame ir...
+[Character]
+[name="Valery"]  *Suspiro.*
+[name="Valery"]  Total, no es que me vayas a hacer caso.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  Perdón...
+[Character]
+[name="Valery"]  Toma esto.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¿Hm?
+[name="???"]  ¿Qué es...?
+[Character]
+[name="Valery"]  Se supone que conecta con las redes de comunicación militares. No estoy seguro de si todavía funciona.
+[name="Valery"]  Si tienes suerte, podrás contactar con el Ejército cuando llegues a Peterheim. Si puedes informarles de la situación desde allí, sería de gran ayuda.
+[name="Valery"]  Sé que no puedo detenerte. Sinceramente, ahora mismo tengo demasiado encima como para preocuparme de vigilarte. Lo que hagas ahora depende enteramente de ti.
+[name="Valery"]  Pero... Zoya, ten presente que no eres una funcionaria pública. Nosotros estamos aquí para protegerte.
+[name="Valery"]  No te hagas la heroína. Protegerte a ti misma es tu primera prioridad.
+[name="Valery"]  Tu padre no querría verte en peligro.
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ...Gracias.
+[Character(name="char_405_absin_ed_1#3")]
+[name="???"]  Gracias, tío Valery.
+[name="???"]  Seguro que voy a...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+¿Seguro que qué?
+No termino la frase.
+Porque los dos sabemos que promesas como esa son solo intentos desesperados de consolarnos mutuamente.
+Me abro paso entre la multitud, esquivando los escombros que caen y evitando a los hombres despiadados que arruinan la ciudad.
+No pienso en nada. No me atrevo a pensar. Solo sigo avanzando hacia mi objetivo.
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (Fiu, ya llegué.)
+[name="???"]  (Escuela Secundaria Peterheim... La última vez que estuve aquí fue por un intercambio académico.)
+[name="???"]  (Parece que los de Reunion son prácticamente iguales. Intervalos de una hora con un solo equipo de patrulla... no debería costar esquivarlos.)
+[name="???"]  (Nada de qué preocuparse. ¿Pero por qué hay tanto silencio?)
+[name="???"]  (¿Eh? ¿Qué es eso de allá...?)
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  ¡¿?!
+[Dialog]
+[Character]
+¿Qué es?
+[Character(name="char_405_absin_ed_1#2")]
+[name="???"]  (¿¡Qué demonios son!?)
+[name="???"]  (Estos... estos son... ¿estudiantes?)
+[Dialog]
+[Character]
+¿Pero qué demonios?
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  (O, supongo que debería decir, estos... eran... estudiantes.)
+[name="???"]  (Hay marcas de quemaduras en el suelo y las paredes. Todo está carbonizado... Pero estos críos, no murieron quemados...)
+[name="???"]   ¿Armas blancas, armas contundentes, y pisoteo?
+[name="???"]  (Agh, ¿cómo pudo pasar esto? ¿Y por qué?)
+[name="???"]  (¿Hizo esto Reunion? Pero estas heridas no parecen obra de esos matones.)
+[name="???"]   (Y estos estudiantes deberían serles útiles. Reunion no querría hacerles daño a unos críos, ¿verdad?)
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  ¿Mm? ¿Qué es eso...?
+[name="???"]  ¿Eh...?
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Allí, en el suelo calcinado, entre los muchos uniformes escolares, una nota se escapa de la partitura y cae con fuerza sobre las teclas del piano.
+Es una escena que jamás imaginé. Ni en mis peores pesadillas.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cherbefore_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[name="Hombre"]  ¿No va siendo hora de que cambie el tiempo? Oye, Zoya, ¿qué te parece esta ropa?
+[name="Hombre"]  ¿Ah? Algo que llevo tiempo planeando con tu madre. *Suspiro,* siempre estoy de uniforme. Me cuesta muchísimo encontrar otras cosas que ponerme.
+[name="Hombre"]  ¿Tú también quieres ir? Ni hablar. De ninguna manera.
+[name="Hombre"]  Es una cita para tu madre y para mí.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_405_absin_ed_1")]
+[name="???"]  Ah... ah...
+[name="???"]  ¿Papá...?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Cuando acabe el invierno, cuando cambie el tiempo, haremos una pequeña fiesta, ¿eh?
+Beber algo de hidromiel, hacer tortitas junto al fuego. Nos daremos la mano, cantaremos y bailaremos en el barro. Aunque el suelo siga helado, habrá algunas florecillas brotando.
+En esta ciudad, la primavera llegará como siempre.
+[stopmusic(fadetime=1)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_016_medic")]
+[name="Trabajador de Logística"]  Bien, todos los trámites resueltos.
+[name="Trabajador de Logística"]  Aquí tienes tu tarjeta de registro. Conviene que la guardes bien.
+[Character(name="char_405_absin_4#3",name2="char_016_medic",focus=1)]
+[name="Absinthe"]  Gracias.
+[Character(name="char_405_absin_4#3")]
+[name="Absinthe"]  (Genial. Todo listo.)
+[name="Absinthe"]  (Es bastante fácil, una vez que te acostumbras.)
+[Character(name="char_405_absin_4")]
+[name="Absinthe"]  (Tengo hambre... Ya que estoy, recargo la tarjeta de comidas.)
+[Character(name="char_405_absin_4")]
+[name="Absinthe"]  ¿Hm?
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Fue superdivertido! El Doctor es buenísimo con las cartas. ¡No perdió ni una mano! ¡Y luego me enseñó a hacer 'puf' con una moneda! Así... ¡'puf'!
+[Character(name="char_197_poca_1")]
+[name="Rosa"]  Jeje, la verdad es que es muy divertido. ¿Hacemos que Leto se una la próxima vez?
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  ¿Eh? No, gracias...
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Vamooooos!
+[Character(name="char_196_sunbr_1#2", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  Oye... Gummy. Baja la voz.
+[Character(name="char_115_headbr_9#7")]
+[name="Zima"]  Hmph. ¿A quién le importa si no quiere venir? Solo tiene miedo de perder contra mí.
+[Character(name="char_115_headbr_9#7", name2="char_194_rosali_1#2",focus=2)]
+[name="Leto"]  ¿Qué? ¿Quién va a perder? ¿¡Quieres apostar!? ¡Veamos quién le tiene miedo a quién!
+[Character(name="char_115_headbr_9#8", name2="char_194_rosali_1#2",focus=1)]
+[name="Zima"]  ¡Métete conmigo y verás!
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_405_absin_4#2")]
+[name="Absinthe"]  ......
+[name="Absinthe"]  Esos uniformes... Son——
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+¡Son de Peterheim...!
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]

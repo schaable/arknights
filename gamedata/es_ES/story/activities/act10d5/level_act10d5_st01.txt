@@ -1,0 +1,890 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Gummy: Costumbres
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+Gummy es la segunda en despertarse en su dormitorio cada mañana. Y tiene una costumbre.
+En cuanto Istina la despierta, se dan un apretón de manos. Luego Gummy va a la habitación de al lado a despertar a Zima de la misma forma.
+Que 'la General' decida estrecharle la mano o no depende enteramente de su humor.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+6:30 a. m.
+Dormitorios de Rhodes Island - Habitación de Istina y Gummy
+[Dialog]
+[Character]
+[delay(time=2)]
+[name="Gummy"]  Zzz...zzz...
+[name="Gummy"]  (Ya es de mañana.)
+[name="Gummy"]  (Istina debería llegar pronto.)
+[name="Gummy"]  Zzz...zzz...
+[name="Gummy"]  (Pero hoy se está tardando. ¿Habrá estado trabajando demasiado?)
+[name="Gummy"]  (Pero voy a llegar tarde si me quedo esperándola. ¡Vamos, Gummy, levántate de una vez!)
+[name="Gummy"]  Zzz...zzz...
+[name="Gummy"]  (¡Tú puedes, niña!)
+[name="Gummy"]  Zzz... ¡Nnhhah!
+[Character]
+[Dialog]
+[Character(name="char_196_sunbr_1#5",fadetime=1,block=true)]
+[delay(time=2)]
+[name="Gummy"]  ¡Ya estoy despierta!
+[Character(name="char_196_sunbr_1#7")]
+[name="Gummy"]  Está muy oscuro...
+[name="Gummy"]  ¿Qué le pasó a mi lamparita de noche?
+[name="Gummy"]  ¿Istina? ¡Istina!
+[name="Gummy"]  Qué raro... ¿Ya se habrá ido?
+[name="Gummy"]  Mejor voy a ver cómo está.
+[name="Gummy"]  ......
+[name="Gummy"]  Sí, no está aquí.
+[name="Gummy"]  Supongo que tenía algo importante que hacer.
+[name="Gummy"]  ¿Qué habrá sido?
+[name="Gummy"]  Oh...
+[name="Gummy"]  ¿Qué es esto...?
+[name="Gummy"]  'Gummy, salimos. No volveremos hasta la noche. Por favor, cuídate.'
+[name="Gummy"]  'Firmado, Istina...'
+[name="Gummy"]  '...y Zima.'
+[Character(name="char_196_sunbr_1#4")]
+[name="Gummy"]  ¡Hmph! Miren cómo me vuelven a tratar como a una niña. ¡Claro que puedo cuidarme sola!
+[name="Gummy"]  Eso significa que Zima también ya se levantó.
+[name="Gummy"]  Mmm...
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Uy, mejor me apuro a presentarme o voy a llegar tarde.
+[name="Gummy"]  Solo tengo que agarrar mi fiel escudo y mi sartén...
+[name="Gummy"]  Listo, eso es todo.
+[name="Gummy"]  ¡¡Hora de irse!!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+11:28 a. m.
+Cafetería de Rhodes Island - Cocina
+[Dialog]
+[delay(time=1)]
+*Grrr~*
+[Character(name="char_196_sunbr_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Gummy"]  Tengo algo de hambre...
+[name="Gummy"]  Salí con prisa esta mañana y no tuve tiempo de llenarme la pancita.
+[name="Gummy"]  Pero supongo que debería concentrarme en el trabajo primero y comer después.
+[name="Gummy"]  Eh...
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Pedido listo! ¡Listo para el mostrador!
+[Character(name="char_260_durnar_1")]
+[PlaySound(key="$rungeneral", volume=0.9)]
+[name="Dur-nar"]  ¡Voy!
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¿Ahora toca un shchi? ¡De acuerdo, lo saco enseguida!
+[name="Gummy"]  ......
+[Character]
+[Dialog]
+[delay(time=1)]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Listo!
+[name="Gummy"]  ¡La comida está lista! ¡Llévenla al comedor, por favor!
+[name="Gummy"]  El siguiente es... Ajá, tenemos otro pelmeni frito.
+[name="Gummy"]  Solo necesito que alguien se lleve este pedido, luego preparo los pelmeni y quedo libre.
+[Character]
+[name="Dur-nar"]  ¡Gummy, tengo las manos ocupadas! ¿Me lo sacas tú?
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Claro que sí!
+[name="Gummy"]  Uf...
+[name="Gummy"]  Yo me encargo. Pesa mucho menos que mi escudo.
+[Character(name="char_196_sunbr_1#7")]
+[name="Gummy"]  ¿Pero a dónde va?
+[name="Gummy"]  ¡Dur-nar!
+[name="Gummy"]  ......
+[name="Gummy"]  ¿Dur-nar?
+[name="Gummy"]  Qué raro...
+[name="Gummy"]  ¿Por qué todos andan con tanta prisa hoy? Volteo un segundo y ya no está...
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  En fin, supongo que preguntaré dónde ponerlo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  Tiene que ir por aquí en alguna parte. La señora de la caja, esa es... Gitano, ¿verdad?
+[name="Gummy"]  Hola, Gitano.
+[Dialog]
+[Character]
+[Character(name="char_109_fmout_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Gitano"]  Buen día, Osita.
+[name="Gitano"]  ¿Por qué andas por aquí con tu sartén? ¿Necesitas mi ayuda?
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Solo una cosa. ¿Me puedes decir dónde va el shchi? ¡Se está enfriando!
+[Character(name="char_2013_cerber_1")]
+[name="Ceobe"]  ......
+[Character(name="char_109_fmout_1")]
+[name="Gitano"]  ¿Shchi, eh? Si mal no recuerdo, va allá en el medio, donde está Courier.
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Entendido!
+[Character(name="char_109_fmout_1")]
+[name="Gitano"]  ¿Segura que no necesitas ayuda, Osita?
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Estoy perfectamente bien! ¡Nos vemos luego, Gitano!
+[Character(name="char_109_fmout_1")]
+[name="Gitano"]  ......
+[Character(name="char_284_spot_1")]
+[name="Spot"]  Olvídalo. De todos modos no podrías levantarlo.
+[Character(name="char_109_fmout_1")]
+[name="Gitano"]  Sí, lo sé.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_198_blackd_1")]
+[name="Courier"]  Bienvenido, ¿qué le sirvo?
+[name="Courier"]  ¿Cerdo estofado con verduras? Enseguida. ¿Y un huevo al vapor con sus verduras salteadas? Sin problema.
+[name="Courier"]  Muy bien, aquí tiene.
+[name="Courier"]  Tenga cuidado. Está caliente.
+[name="Courier"]  Ajá, nos vemos~
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Courier, traje la comida!
+[Character(name="char_198_blackd_1")]
+[name="Courier"]  ¡Genial! Gracias, Gummy.
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡De nada~
+[Character(name="char_198_blackd_1")]
+[name="Courier"]  ¡Uf!
+[name="Courier"]  ¡Fiu! Eso es todo por ahora.
+[name="Courier"]  Perdona la molestia, Gummy, ¿te importaría llevar esta olla de vuelta a la cocina?
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Claro, Courier!
+[Dialog]
+[Character(name="char_196_sunbr_1#2")]
+*Grrr~~~*
+[delay(time=1)]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Agh...
+[Character(name="char_198_blackd_1")]
+[name="Courier"]  De verdad te luciste, Gummy. Ven, tengo una galleta para ti. Debes de tener hambre, ¿no?
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Muchas gracias, Courier!
+[Character(name="char_198_blackd_1")]
+[name="Courier"]  Es un placer. Asegúrate de comer bien después de esto, ¿de acuerdo?
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Lo haré!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Nos vemos luego, Gitano. Tengo que volver y terminar unas cosas.
+[Character(name="char_109_fmout_1")]
+[name="Gitano"]  Cuídate.
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Lo haré!
+[Dialog]
+*Grrr~~~~*
+[delay(time=1)]
+[Character(name="char_196_sunbr_1#7")]
+[name="Gummy"]  (Solo aguanta un poco más... ¡Ya casi es hora de comer!)
+[Character(name="char_2013_cerber_1")]
+[name="Ceobe"]  ¡Ricuras, allá voy!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡Guaaau! ¡Kay, no puedes entrar ahí!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Ceobe"]  ¿No puedo?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡No puedes! ¿No ves el letrero de la puerta?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Ceobe"]  La veo.
+[name="Ceobe"]  Veo un círculo rojo con una rayita roja chueca atravesándolo.
+[name="Ceobe"]  También veo a Kay.
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Eso significa 'Kay no puede entrar aquí'. ¿Entendido?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Ceobe"]  Entendido.
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¿¡Si lo entiendes, por qué sigues entrando!?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Ceobe"]  Hambre.
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  Si tienes hambre, puedes hacer fila y pedir algo de comer.
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Ceobe"]  Hambre.
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡N- no puedes entrar ahí!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Ceobe"]  ¡Pero tengo hambre!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  ¡Bueno, bueno! ¡¡Ya se me ocurrirá algo!!
+[name="Gummy"]  Mmm...
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¿Y si...?
+[name="Gummy"]  Si te doy esta galleta, ¿prometes no entrar?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Ceobe"]  *olfatea* *olfatea*
+[name="Ceobe"]  ¡Mm!
+[name="Ceobe"]  ¡Está bien, está bien!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  Toma...
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Ceobe"]  ¡Gracias!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  De nada...
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  *suspiro*... Por fin se fue...
+[Dialog]
+*Grrrrrrrrrrrrr~~~~*
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Todavía... todavía queda... uno más...
+[name="Gummy"]  ¡Solo aguanta... un poquito más!
+[Dialog]
+*Grrrrrrrrrrrrr~~~~*
+[Character]
+[name="Gummy"]  Por qué pesa tanto el cucharón......
+[name="Gummy"]  Ni siquiera puedo servir la comida......
+[name="Gummy"]  ......
+[name="Gummy"]  Ya no puedo más. ¡Tengo que comer algo!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+Gummy tiene una costumbre. Cuando está famélica, algo se apodera de ella,
+Y no puede resistir el impulso de comer...
+...absolutamente cualquier cosa.
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ......
+[name="Gummy"]  ¿Qué es esto?
+[Character]
+[name="???"]  ¿Qué diablos haces, Gummy?
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  Qué suave... Mmmhh.... Debe de estar delicioso.
+[name="Gummy"]  Ah, mm....
+[name="Gummy"]  *ñam*
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_260_durnar_1")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Dur-nar"]  ¡¡¡Gyahhhhhhh!!!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  ¿Eh?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  Gummy, ¿por qué me estás mordiendo la cadera?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  Ah, mm, hmm...
+[name="Gummy"]  ¡L-lo siento, Instructora!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+11:55 a. m.
+Cafetería de Rhodes Island - Comedor
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  (Gummy prácticamente está inhalando el pan que tiene en las manos...)
+[name="Gummy"]  (...y lo baja con un trago de sopa.)
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#5",focus=1)]
+[name="Dur-nar"]  C-cálmate, Gummy, la comida no se va a ir a ningún lado. Y tenemos entrenamiento por la tarde, ¿sabes?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#5",focus=2)]
+[name="Gummy"]  (No deja ni una migaja en el plato...)
+[name="Gummy"]  (...y no duda en servirse otra ración.)
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#5",focus=1)]
+[name="Dur-nar"]  ¿Gummy?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#5",focus=2)]
+[name="Gummy"]  (En un abrir y cerrar de ojos, se ha devorado una mesa entera de comida.)
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#5",focus=1)]
+[name="Dur-nar"]  Supongo que no tienes ganas de hablar...
+[name="Dur-nar"]  Te busco más tarde.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Fiu. ¡Me siento como una Gummy totalmente nueva!
+[name="Gummy"]  Instructora, ¿usted no va a comer?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  Claro que sí. Pero de algún modo toda la comida que traje desapareció dentro de tu panza.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  ¡¡Lo siento muchísimo, Instructora!!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  No te preocupes, siempre puedo traer más.
+[name="Dur-nar"]  Por cierto, ¿cómo acabaste con tanta hambre? ¿Te saltaste el desayuno o qué?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#4",focus=2)]
+[name="Gummy"]  Me quedé dormida esta mañana y no tuve tiempo de comer, así que...
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#4",focus=1)]
+[name="Dur-nar"]  ¿Sabes? A lo mejor eres de esas chicas. De las que tienen un pozo sin fondo por estómago.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  ¿En serio?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  Sip, igualita que aquella de allá.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¿Kay? ¿¡Está asaltando la cocina otra vez!? Mejor voy—
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Tranquila, tenemos a alguien vigilándola. Además, dejaron unas golosinas cerca de la puerta por si acaso entra. No llegará a nada importante.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  Ah, yo pensaba que esas eran canastas de bienvenida para los reclutas nuevos...
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  Sí, eso también. Lo que sirva para el caso.
+[name="Dur-nar"]  ¿Ves? Ya terminó.
+[name="Dur-nar"]  Si selláramos esa puerta, le dolería. Dejarla entrar de vez en cuando la hace sentir que ganó. Y no nos cuesta gran cosa.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  Oh...
+[name="Gummy"]  Eh, ¿y quién está a cargo de vigilarla?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  Hoy le toca a Gitano.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  Buena elección. Ella siempre lo tiene todo bajo control.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  Eso me recuerda que tengo que preguntarte algo. Tiene que ver con el entrenamiento.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  Mm, claro. ¿Qué pasa?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  He notado que te cuesta mover los brazos, sobre todo en movimientos rápidos y repetidos. ¿Por qué?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  ¿Eh?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Dur-nar"]  Te he visto en combate, y es lo mismo en la cocina. Das dos buenos golpes y luego tienes que parar.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Supongo que... ¿es una costumbre?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Dur-nar"]  ¿Eh—? Bueno, esa sí que es una mala costumbre. ¿Podemos corregirla?
+[name="Dur-nar"]  Porque pararte así en el campo de batalla va a hacer que te maten.
+[name="Dur-nar"]  Pero si logramos curarte, seguro te llevas la próxima Competencia de Picado de Rhodes Island.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  ......
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Dur-nar"]  ¿Lo intentamos?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  ......
+[name="Gummy"]  Está bien... Lo intentaré...
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Dur-nar"]  Bien. Nos ponemos con eso después de la práctica de defensores.
+[name="Dur-nar"]  No sabremos si podemos corregir esa costumbre hasta que lo intentemos.
+[name="Dur-nar"]  Pero por ahora...
+[name="Dur-nar"]  Tenemos que comer.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Sí.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+3:00 p. m.
+Centro de Entrenamiento de Rhodes Island - Sala de Entrenamiento de Defensores
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  Última ronda del día. Démoslo todo.
+[name="Dur-nar"]  Quiero cuatro series de planchas, tiempo—
+[name="Dur-nar"]  ¡Empiecen!
+[Dialog]
+[Character]
+[delay(time=2)]
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  ¡Diez segundos!
+[name="Dur-nar"]  ¡Tres, dos, uno!
+[name="Dur-nar"]  ¡Alto!
+[name="Dur-nar"]  Bien, terminamos. Vayan a enfriar.
+[Character]
+[name="Operadores defensores"]  ¡Wuu!
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  Gummy.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  ¡Sí, señora!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Dur-nar"]  ¿Lista? ¿Lo que hablamos en el almuerzo?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡Sí, señora!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Yo agarro el escudo de entrenamiento, y tú puedes usar tu arma ahí.
+[name="Dur-nar"]  Ahora relájate. Eso va a ser una parte importante de tu rehabilitación.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡Entendido!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Muy bien, Gummy. Quiero que me golpees tan fuerte como puedas.
+[name="Dur-nar"]  Sé que estás cansada del entrenamiento de la tarde, pero en realidad es el momento perfecto para trabajar en esto.
+[name="Dur-nar"]  ¿Me entiendes?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  Te entiendo.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Genial. Ahora dame todo lo que te quede en el tanque.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Gummy"]  ¡Hyah!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Otra vez.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Gummy"]  ¡Hyah!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Otra vez.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Gummy"]  ¡Nngh!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  ¡Otra vez! ¡Sigue!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Gummy"]  ¡¡Agh!!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  ¡Otra vez!
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  (Si fuera un reflejo condicionado, eso debería haber soltado algunos golpes más.)
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  (¿Se estará deteniendo involuntariamente?)
+[name="Dur-nar"]  (¿Pero por qué?)
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  ¡Gummy, golpea!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  ¡No puedo!
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Dur-nar"]  ¡Golpea!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡No puedo!
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Dur-nar"]  ¡Es una orden!
+[name="Dur-nar"]  ¡Gummy!
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Dur-nar"]  Te ordeno que——
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=2)]
+Gummy cocina bien, pero tiene una costumbre.
+Solo pica dos veces. Si alguna vez picara una tercera——
+Atravesaría la tabla de cortar de un tajo, hasta la encimera misma.
+[Dialog]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Delay(time=0.65)]
+[PlaySound(key="$sheildimpact")]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.8, xstrength=10, ystrength=12, vibrato=30, randomness=120, fadeout=true, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_260_durnar_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Dur-nar"]  ¡Ngah!
+[name="Dur-nar"]  Nng... Fiu...
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡Instructora!
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#3",focus=1)]
+[name="Dur-nar"]  Estoy bien, estoy bien. Solo que hacía mucho que no recibía un golpe así.
+[name="Dur-nar"]  ¿Esta es otra de tus 'costumbres'?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#8",focus=2)]
+[name="Gummy"]  Lo siento, Instructora...
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#8",focus=1)]
+[name="Dur-nar"]  Tranquila. Te dije que estoy bien.
+[name="Dur-nar"]  Pero parece que este problema tuyo es más complicado de lo que pensaba.
+[name="Dur-nar"]  En el tercer golpe, pones toda tu fuerza sin darte cuenta. ¿Es así?
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Sí...
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#7",focus=1)]
+[name="Dur-nar"]  Y me imagino que eso descarta un cuarto golpe.
+[name="Dur-nar"]  Si hubiéramos estado en la cocina ahora mismo, habrías partido esa tabla de cortar en dos mitades limpias.
+[name="Dur-nar"]  Y yo que pensaba que solo teníamos que empujarte un poco... Resulta que aquí pasa otra cosa.
+[name="Dur-nar"]  Me lancé de cabeza a esto sin tantear bien el terreno. Perdóname, Gummy.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#8",focus=2)]
+[name="Gummy"]  Está... está bien.
+[name="Gummy"]  Es mi culpa por ser una mala alumna.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#8",focus=1)]
+[name="Dur-nar"]  Dejémoslo por hoy. Vete a casa y descansa. Dame algo de tiempo para darle vueltas a esto.
+[name="Dur-nar"]  Pero si quieres volver a intentarlo, ya sabes dónde encontrarme.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#8",focus=2)]
+[name="Gummy"]  Me vendría bien un descanso.
+[name="Gummy"]  Nos vemos, Instructora.
+[Character(name="char_260_durnar_1",name2="char_196_sunbr_1#8",focus=1)]
+[name="Dur-nar"]  Adiós.
+[Dialog]
+[PlaySound(key="$rungeneral", volume=0.9)]
+[Character]
+[Delay(time=1)]
+[Character(name="char_260_durnar_1")]
+[name="Dur-nar"]  ......
+[name="Dur-nar"]  (No siento el brazo.)
+[name="Dur-nar"]  (Lo tengo totalmente dormido.)
+[name="Dur-nar"]  (Esos Exploradores Juveniles de Ursus son bestialmente fuertes.)
+[name="Dur-nar"]  (Mejor le hago una visita a Gavial en la enfermería.)
+[name="Dur-nar"]  (De paso le llevo algo de comer.)
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.7, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+4:30 p. m.
+Dormitorios de Rhodes Island - Habitación de Zima, Istina y Gummy
+[Dialog]
+Gummy vuelve a casa sola.
+No enciende las luces.
+Cuelga su 'escudo' en el rincón,
+Y se adentra en la habitación.
+No hizo nada malo.
+Y aun así está triste.
+Quiere hacerlo mejor, por todos los que hacen tanto para ayudarla.
+Fracasó.
+Desde que llegó a Rhodes Island, las 'costumbres' de Gummy solo engendraron más costumbres.
+Y sabe que esas costumbres molestan a quienes la rodean.
+Pero no puede cambiar.
+No puede hacer otra cosa que seguir siendo 'Gummy'.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Y Gummy tiene una costumbre.
+Lleva consigo una puerta de caja fuerte y una sartén a todas partes.
+Gummy tiene una costumbre.
+Usa el tubo entero de pasta de dientes, y hasta le chupa las últimas gotas.
+Gummy tiene una costumbre.
+Cuando está en algún lugar alto, se mantiene bien lejos del borde, aunque haya baranda.
+[name="???"]  ......
+[Dialog]
+[Character]
+Gummy tiene una costumbre.
+Cuando está famélica, tiene que luchar contra el impulso de devorar lo primero que tenga cerca. Si falla...
+[name="???"]  ......?
+[Dialog]
+[Character]
+Gummy tiene una costumbre.
+Si se queda demasiado tiempo a oscuras...
+[PlaySound(key="$dooropenquite")] 
+[stopmusic(fadetime=3)]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Ay, Gummy, ¿ya volviste? ¿Por qué no encendiste las luces?
+[Dialog]
+[Character]
+Sin embargo...
+Gummy tiene una costumbre.
+Todas sus innumerables costumbres se disipan en cuanto ve a Zima y a Istina.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.7, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[name="Gummy"]  ¿¡Ah!?
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=1)]
+[name="Istina"]  Sin duda estaba lloriqueando sola en el rincón después de que algo la asustara.
+[Character(name="char_196_sunbr_1#3")]
+[name="Gummy"]  (Lloriqueando) ¡¡No es cierto!!
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=1)]
+[name="Istina"]  ¿Ves?
+[Character(name="char_115_headbr_9#2")]
+[name="Zima"]  ¿Qué voy a hacer contigo?
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Gummy, ponte a limpiar. Leto está por venir.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¡Enseguida, Zima!
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=1)]
+[name="Istina"]  Oye.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#3",focus=1)]
+[name="Zima"]  Hmph.
+[name="Zima"]  Gummy, ven aquí.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#3",focus=2)]
+[name="Gummy"]  ¿Sí, Zima?
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#3",focus=1)]
+[name="Zima"]  Ven.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Mmm.
+[name="Gummy"]  Puedo hacerlo yo sola.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#7",focus=1)]
+[name="Zima"]  No te muevas.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Mmmf...
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#7",focus=1)]
+[name="Zima"]  Listo. Devuélvele el pañuelo a Istina cuando lo laves.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  De acuerdo.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#2",focus=1)]
+[name="Zima"]  Ahora cuéntame qué pasó.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#7",focus=2)]
+[name="Gummy"]  Eh...
+[Character(name="char_115_headbr_9", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  Zima.
+[Character(name="char_115_headbr_9", name2="char_195_glassb_2",focus=1)]
+[name="Zima"]  ¿Qué?
+[Character(name="char_115_headbr_9", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  (Shhh...)
+[Character(name="char_115_headbr_9#2")]
+[name="Zima"]  Bien. Olvídalo.
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  A trabajar, Gummy. Yo hice las compras. El resto queda en manos de ustedes dos.
+[Character(name="char_115_headbr_9", name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  Bueno. ¿Qué tiene de especial hoy, por cierto?
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Hoy se cumple exactamente un año desde que llegamos a Rhodes Island. Zima hasta se levantó temprano por la ocasión. Aunque no lo creas.
+[Character(name="char_115_headbr_9#2", name2="char_195_glassb_2",focus=1)]
+[name="Zima"]  Fiu— Estoy agotada. Me voy a acostar un rato. Llámenme cuando llegue Leto.
+[Character(name="char_115_headbr_9#2", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  Ni lo sueñes. Hay demasiado que hacer.
+[Character(name="char_115_headbr_9", name2="char_195_glassb_2",focus=1)]
+[name="Zima"]  Nah. Estoy cansada.
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Gummy, haz lo tuyo.
+[Character(name="char_196_sunbr_1#2", name2="char_195_glassb_2",focus=1)]
+[name="Gummy"]  ¿Tengo que hacerlo?
+[Character(name="char_196_sunbr_1#2", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  Yo voy a preparar los refrigerios. Tú te encargas de levantar a Zima.
+[Character(name="char_196_sunbr_1#2", name2="char_195_glassb_2",focus=1)]
+[name="Gummy"]  De acuerdo.
+[name="Gummy"]  Hrm.
+[name="Gummy"]  Ziiimaaaa...
+[Character(name="char_196_sunbr_1#2", name2="char_115_headbr_9#5",focus=2)]
+[name="Zima"]  Qué.
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#5",focus=1)]
+[name="Gummy"]  ¡Gummy te quieeeere muchooo~
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#2",focus=2)]
+[name="Zima"]  Ahórrame la cursilería. Tengo sueño.
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#2",focus=1)]
+[name="Gummy"]  Ziiimaaaa~ ¡Jeje~
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#6",focus=2)]
+[name="Zima"]  ¡Quítate de encima!
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#6",focus=1)]
+[name="Gummy"]  Cosquillas, cosquillas.
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#4",focus=2)]
+[name="Zima"]  ¡Está bien! ¡Ya me levanto! ¡Ya me levanto!
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Misión cumplida, Istina!
+[Character(name="char_196_sunbr_1#5", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  Bien. Ahora ponla a trabajar. Yo tengo las manos ocupadas.
+[Character(name="char_115_headbr_9#6")]
+[name="Zima"]  Agh. Acabo de cargar todas esas bolsas. ¿Por qué tengo que trabajar más?
+[Character(name="char_115_headbr_9#6", name2="char_195_glassb_2",focus=2)]
+[name="Istina"]  Llámalo la carga del mando.
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Porque eres nuestra líder! Jeje.
+[Character(name="char_196_sunbr_1#5", name2="char_115_headbr_9#6",focus=2)]
+[name="Zima"]  Aahh... Maldición.
+[Character]
+[Dialog]
+[PlaySound(key="$doorknockquite")]
+[delay(time=1)]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Está abierto.
+[Character]
+[Dialog]
+[Character(name="char_194_rosali_1",fadetime=1,block=true)]
+[delay(time=3)]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Pasa y échame una mano.
+[name="Zima"]  Celebramos cuando esté todo listo.
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  No puedo creer que te acordaras.
+[name="Leto"]  Uy, ¿eso es...?
+[name="Leto"]  ¡Mi favorito!
+[name="Leto"]  Eso no es barato.
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Yo invito.
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  Jeje, gracias.
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Qué haces ahí parada? Ponte a trabajar.
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  Ya voy, ya voy.
+[name="Leto"]  ¿Puedo poner esto aquí?
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9#6",focus=2)]
+[name="Zima"]  ¡Acabo de sacar eso!
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Jajajajaja!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Gummy tiene una costumbre.
+Cuando está feliz, se ríe.
+Es una risa que le sale desde lo más hondo del alma.
+Y quiere que todos compartan esa risa.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_195_glassb_2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Istina"]  Listo.
+[name="Istina"]  Zima, di unas palabras.
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  'Unas palabras.' A comer.
+[name="Zima"]  ¡Ura!
+[Character(name="char_195_glassb_2#2")]
+[name="Istina"]  Ura.
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  ¡¡Ura!!
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Ura!
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  (Hacía mucho que no nos juntábamos todas.)
+[name="Gummy"]  （......）
+[name="Gummy"]  (Ojalá Rosa pueda venir la próxima vez.)
+[Character]
+[Dialog]
+[PlaySound(key="$doorknockquite")]
+[delay(time=1)]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Está abierto.
+[Dialog]
+[Character]
+[Character(name="char_2013_cerber_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Ceobe"]  (Ceobe asoma la cabeza)
+[name="Ceobe"]  ¿Está aquí la Osita?
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¿Hm?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Ceobe"]  ¡Ahí estás!
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  ¿Eh?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Ceobe"]  Hola.
+[name="Ceobe"]  Me comí tu galleta antes, así que te traje una nueva.
+[name="Ceobe"]  Vulcan me enseñó a hacerla. Recién salida del horno.
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Gummy"]  ¿No es... un poco grande?
+[Character(name="char_2013_cerber_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Ceobe"]  Apúrate y cómetela antes de que se enfríe.
+[name="Ceobe"]  Adiós.
+[Dialog]
+[Character]
+[PlaySound(key="$doorclosequite")]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  Ah. ¡Adiós!
+[name="Gummy"]  Se fue.
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  Nichego sebe, menuda galleta.
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Una galleta es una galleta.
+[name="Zima"]  ¿Y bien? Cómetela ya.
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  (Hoy ceno bien.)
+[name="Gummy"]  (Yupi.)
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.7, r=0, g=0, b=0, fadetime=1, block=true)]
+9:00 p. m.
+Dormitorios de Rhodes Island - Habitación de Zima, Istina y Gummy
+[name="Gummy"]  Fiu. Estuvo buenísimo. Pero ahora toca dormir.
+[name="Gummy"]  Solo necesito mi fiel lamparita de noche...
+[name="Gummy"]  ¿Eh? ¿No se enciende?
+[name="Gummy"]  ¿Se habrá quemado el foco?
+[name="Gummy"]  Ahora que lo pienso, tampoco estaba encendida esta mañana.
+[name="Gummy"]  ¿Entonces cuándo se rompió?
+[name="Gummy"]  Ay, no...
+[Dialog]
+[Character]
+Gummy tiene una costumbre.
+Ella tiene que dormir sí o sí con una lamparita de noche.
+[name="Istina"]  Gummy.
+[name="Gummy"]  ¿Qué pasa, Istina?
+[name="Istina"]  ¿Puedo dormir contigo esta noche?
+[name="Gummy"]  ¡S- sí!
+[name="Istina"]  Zima.
+[name="Gummy"]  ¿Tú también vas a dormir con nosotras?
+[name="Zima"]  Eh, supongo que sí.
+[name="Zima"]  Oye, ¿Istina?
+[name="Zima"]  ¿De verdad cabemos las tres en la cama de Gummy?
+[name="Istina"]  Solo apriétense bien.
+[name="Zima"]  Supongo que vamos a hacer un sándwich de osita.
+[name="Gummy"]  Por mí bien.
+[name="Zima"]  Está bien. Solo avísenme si hace demasiado calor y se pone sofocante. Me vuelvo a mi habitación.
+[name="Gummy"]  De acuerdo.
+[name="Istina"]  Voy a apagar las luces. Buenas noches.
+[name="Zima"]  Noches.
+[name="Gummy"]  Buenas nochecitas.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Zima"]  ¿Cuándo fue la última vez que dormimos todas juntas así?
+[name="Istina"]  Ni me acuerdo. Ni quiero acordarme.
+[name="Gummy"]  Yo tampoco.
+[name="Zima"]  Olvida que pregunté. Solo duerman.
+[name="Istina"]  Zzz......
+[name="Zima"]  Apenas toca la almohada, ¿eh?
+[name="Gummy"]  ......
+[name="Zima"]  ¿Gummy?
+[name="Gummy"]  Zzzzzz......
+[name="Zima"]  Supongo que soy la única que no se duerme al instante.
+[name="Zima"]  *Suspiro*......
+[name="Zima"]  Cálmate, cerebro. Mañana tenemos un día ocupado. Uf.
+[name="Zima"]  ......
+[name="Gummy"]  (Jeje~)
+[name="Gummy"]  (Zima es tan linda.)
+[name="Gummy"]  (Buenas nochecitas~)
+[Dialog]
+[Character(fadetime=2)]
+Gummy tiene una costumbre.
+......
+¿Conocen el Grupo de Autogobierno Estudiantil de Ursus?
+¿Zima e Istina?
+Son la costumbre que Gummy simplemente no puede dejar.
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

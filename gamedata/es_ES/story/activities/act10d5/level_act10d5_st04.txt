@@ -1,0 +1,721 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Rosa: ¿Expiación?
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$relax_intro", key="$relax_loop", volume=0.4)]
+[name="Operador de Vanguardia"]  Esta textura poco hecha, este sabor un pelín demasiado salado, ay, ¡por fin estoy en casa otra vez!
+[name="Operador de Logística"]  Solo fue una misión larga. No hace falta que beses la cubierta.
+[name="Operador de Vanguardia"]  Oye, no sabes cómo me sienta la comida de Ursus. De verdad que no me cae bien.
+[name="Operador de Vanguardia"]  Nuestro comedor es mucho mejor. Aquí me gusta todo.
+[name="Operador de Logística"]  Por cómo lo acabas de decir, no suena precisamente a que te guste.
+[name="Operador de Vanguardia"]  No hace falta que algo sepa bien para que me guste.
+[name="Operador de Vanguardia"]  Ayudé a unos supervivientes a encontrar a sus familiares y me lo agradecieron con un banquete. Un fiestón elegante y de alcurnia.
+[name="Operador de Vanguardia"]  Pero digamos que mi paladar no es tan refinado.
+[name="Operador de Logística"]  Sí, claro. Dependes por completo de la cafetería de Rhodes Island.
+[name="Operador de Logística"]  ¿Y cuál era la misión?
+[name="Operador de Vanguardia"]  Seguro que ya sabes de qué va. Reasentar a los refugiados de Chernobog en otras ciudades de Ursus. Cosa fácil, pero lleva tiempo.
+[name="Operador de Logística"]  Olvida que pregunté. Sé lo mucho que significan para ti las operaciones con refugiados.
+[name="Operador de Vanguardia"]  Sí. Solo podemos hacer hasta cierto punto cuando ellos son tantos y nosotros tan pocos. Pero una vida salvada es una vida salvada.
+[name="Operador de Vanguardia"]  Oí a Dobermann hablar de que ahora mismo no estamos en la mejor posición con Ursus, así que es genial que Amiya y el Doctor sigan dispuestos a hacer estas operaciones de rescate.
+[name="Operador de Logística"]  Desde luego. Tuvimos suerte con esos dos.
+[name="Operador de Logística"]  Bueno, hay otra a la que también le debemos mucho agradecimiento.
+[name="Operador de Vanguardia"]  Ah, sí, oí hablar de ella allá en la carretera. ¿Una chica llamada Natalya?
+[name="Operador de Logística"]  Exacto. Ahora es toda una celebridad aquí.
+[Character]
+[name="???"]  Uuuh, me están zumbando los oídos.
+[name="Operador de Logística"]  Hola, Natalya, ¿cómo estás?
+[Dialog]
+[Character(name="char_197_poca_1",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=1)]
+[name="Natalya"]  Buenas tardes, señor Saren. ¿Y usted es...?
+[Character(name="char_013_riop")]
+[name="Operador de Vanguardia"]  Nombre en clave Compass. Encantado de conocerte.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Compass.. un buen nombre en clave. Buenas tardes. ¿Les molesta si los acompaño?
+[Character(name="avg_npc_012")]
+[name="Operador Saren"]  ¡Por supuesto!
+[Character(name="char_013_riop",name2="avg_npc_012",focus=1)]
+[name="Compass"]  Oye, ¿no había oído que era solo una estudiante?
+[name="Compass"]  ¡Esta no es ninguna niñita! ¡Es *glup* bastante alta!
+[Character(name="char_013_riop",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  ¿Qué crees que significa 'estudiante'?
+[Character(name="char_013_riop",name2="avg_npc_012",focus=1)]
+[name="Compass"]  ¡No sé cómo hablarle a una dama así!
+[Character(name="char_013_riop",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  Tranquilo. Natalya es muy accesible.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  ¿He oído por casualidad que el buen Compass acaba de volver de reasentar refugiados?
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=1)]
+[name="Compass"]  Así es. Justo estábamos hablando de eso.
+[Character(name="char_013_riop",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  Le estaba contando todo lo que hiciste para ayudar.
+[Character(name="char_197_poca_1",name2="avg_npc_012",focus=1)]
+[name="Natalya"]  Ay, mi papel fue completamente trivial.
+[Character(name="char_197_poca_1",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  Eres demasiado modesta. Si no fuera por Natalya animando a los supervivientes a seguir, lo habríamos tenido mucho más difícil.
+[Character(name="char_013_riop",name2="avg_npc_012",focus=1)]
+[name="Compass"]  Los refugiados también hablaban de ella. Decían que había una joven amable que les dijo que la gente de Rhodes Island es buena.
+[name="Compass"]  Y después de oírlo directamente de Saren, de verdad tengo que darte las gracias, Señorita Natalya.
+[name="Compass"]  Que los refugiados tengan una buena imagen de nosotros marca toda la diferencia del mundo. Sin ti, sé que las cosas habrían salido mal allá afuera.
+[name="Compass"]  O sea, yo también fui refugiado. Sé cómo piensan. Pero aun así es horrible cuando intentas hacer el bien y la gente no confía en ti.
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Hice lo mínimo indispensable. Eras tú quien hacía el trabajo de verdad allá afuera, Compass.
+[name="Natalya"]  Y no es que no confíen en Rhodes Island. Es que han sufrido una Catástrofe y no confían en nadie.
+[name="Natalya"]  Percibí que a Rhodes Island le importaba de verdad el bienestar de todos. Y habiendo sido Presidenta del Consejo Estudiantil, estaba acostumbrada a estos asuntos. Es en lo que soy buena.
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=1)]
+[name="Compass"]  ¿Oíste eso, Saren? Así es como se le habla a la gente. Toma nota.
+[Character(name="char_013_riop",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  ¿No acabo de decir que Natalya es accesible?
+[name="Operador Saren"]  Cuando se corrió la voz de que la nueva era una heredera aristócrata, a todos nos preocupaba llevarnos bien.
+[name="Operador Saren"]  Pero resulta que es buena en su trabajo, fácil de tratar, superfácil de llevar. Todos adoramos a Natalya.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Ay, no. Todos me aguantan solo porque soy muy joven.
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=1)]
+[name="Compass"]  Hablando de eso, ¿decidiste quedarte en Rhodes Island?
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sí. Aprobé el examen del Departamento de Logística la semana pasada. Ahora estoy formalmente empleada por Rhodes Island Pharmaceuticals.
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=1)]
+[name="Compass"]  Vaya, qué buena noticia. Te va a encantar esto, créeme.
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Ya estoy muy contenta.
+[name="Natalya"]  Ya que estamos en el tema, señor Saren, terminé de compilar el segundo registro de refugiados, emparejando nombres con destinos. Si no le importa enviarlo después del almuerzo.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  ¿Qué? ¿Ya?
+[name="Operador Saren"]  ¿Eso significa que todos los refugiados que salvamos tienen a dónde ir?
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sí. Aparte de los que siguen en tratamiento.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  Increíble. Menos mal que el jefe de sección te puso en esa tarea.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Solo cumplo con mi deber.
+[Character(name="char_013_riop",name2="char_197_poca_1",focus=1)]
+[name="Compass"]  Supongo que entonces será mejor que me apunte a la segunda operación de reasentamiento.
+[Character(name="char_013_riop",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  ¿Quieres volver allá afuera? ¿No me acabas de decir que no soportas la comida de Ursus?
+[Character(name="char_013_riop",name2="avg_npc_012",focus=1)]
+[name="Compass"]  Sí, pero ver a los supervivientes volver a sus hogares y con sus familiares, verlos tan felices, lo compensa.
+[name="Compass"]  Bien, ya casi termino de almorzar. Me ayudas con la bandeja, ¿sí? Tengo que ir a apuntarme.
+[Character(name="char_013_riop",name2="avg_npc_012",focus=2)]
+[name="Operador Saren"]  ¡Oye, lleva tú tu propia bandeja!
+[name="Operador Saren"]  Perdónalo, Natalya. Es así.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  ¿Nuestro buen Compass le tiene bastante apego a los refugiados...?
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  Así es. Lo oíste decir que él también fue refugiado, ¿verdad? Uno de nuestros equipos lo salvó, así que se entusiasma mucho con cualquier operación que tenga que ver con refugiados.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ¿Y parece que se llevan bien?
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  Ah, sí. Supongo que sí. Estuvo un tiempo en Logística, antes de pasarse a la primera línea. Coincidimos un tiempo, nuestras personalidades congeniaron, y así nos hicimos amigos.
+[name="Operador Saren"]  Tú eres del Grupo de Autogobierno Estudiantil de Ursus, ¿verdad?
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sí. Pero Son... Zima y las chicas son operadoras de primera línea como Compass, y yo estoy en Logística.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  Oí que las encontraron a todas juntas. ¿También son muy unidas?
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ...Sí, sí lo somos. Estuvimos juntas todo ese tiempo. Somos muy unidas.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  Lo pasaron como grupo. Eso es bueno. Eh, no es que ese tipo de penurias sea bueno.
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sé a qué te refieres.
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  ......
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  ¿Ah? Zima...
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=1)]
+[name="Operador Saren"]  Hablando del rey de Roma, ¿eh?
+[name="Operador Saren"]  ¿Te está mirando fijamente?
+[Character(name="avg_npc_012",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Sí.
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  ......
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  Discúlpeme, Saren. Debo irme.
+[Character(name="avg_npc_012")]
+[name="Operador Saren"]  Sí, claro.
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Character(name="char_197_poca_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Natalya"]  ¿Me buscabas, Zima?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ......
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Estás bien? Te ves pálida.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Yo...
+[name="Zima"]  Estoy bien. No debí venir a buscarte. Olvida que estuve aquí.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  Oye, espera.
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=0.9)]
+[Delay(time=2)]
+[Character(name="char_115_headbr_9#6")]
+[name="Zima"]  ¡No me toques!
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Habla conmigo, Sonya. No hemos tenido una buena charla desde que llegamos aquí.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ......
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Ven a mi habitación.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_197_poca_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Natalya"]  Toma asiento. ¿Quieres algo de beber? ¿Café? ¿Té? Tengo ambos.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Eso es la aristócrata que llevas dentro.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Todavía te quedan fuerzas para burlarte de mí. Parece que estás mejor de lo que pensaba. Tu cara allá atrás era un espanto.
+[name="Natalya"]  Que sea café entonces. Rhodes Island tiene buenos granos, pero no puedo decir lo mismo de su té.
+[name="Natalya"]  He oído que tiene que ver con la Ingeniera Jefe. Es bastante quisquillosa con su café. ¿Tú qué opinas?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Y yo qué voy a saber?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Je je. Últimamente solo oigo elogios. Echaba de menos tu lengua viperina.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Y yo ya estoy harta de ti.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Lo tomas con azúcar?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿En serio? Es solo.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Está bien.
+[name="Natalya"]  Que aproveche.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9#4",focus=2)]
+[name="Zima"]  ......
+[name="Zima"]  Puaj.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9#4",focus=1)]
+[name="Natalya"]  Está demasiado amargo, ¿verdad?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9#2",focus=2)]
+[name="Zima"]  ......
+[Character(name="char_197_poca_1",name2="char_115_headbr_9#2",focus=1)]
+[name="Natalya"]  Vamos. Échale una cucharada de azúcar.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Me arrastraste hasta aquí para joderme?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Tú eres la que no quiso el azúcar, Sonya.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Hmph.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Y no olvidemos que fuiste tú quien vino a buscarme.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Ya te lo dije, fue un error. No somos amigas. No me caes bien.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Cierto. No somos amigas. Anna tampoco es mi amiga. Simplemente sobrevivimos juntas.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Simplemente...
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sonya, hay cosas que cuesta más decirle a quienes tienes más cerca.
+[name="Natalya"]  Si fueras mi amiga, no te habría traído aquí.
+[name="Natalya"]  Algunas cosas solo pueden decírsele a alguien sin importancia, alguien que entiende tu situación.
+[name="Natalya"]  Para mí, la mejor persona es Anna. Pero tú servirás.
+[name="Natalya"]  Mmm... Rosalind es demasiado directa y abierta. Y Lada es demasiado honesta y bondadosa. No servirán.
+[name="Natalya"]  Seguro que tú sientes lo mismo. Lo que significa que solo me tienes a mí, me temo. Sinceramente no me sorprende que acudieras a mí.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Eso significa que quieres hablar conmigo?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sí.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Por qué?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ...Sonya, estos últimos dos meses, ¿cómo te sientes peleando como operadora?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Cómo que 'sentir'? Solo es pelear. Supongo que sí es un fastidio tener que hacerle caso a ese Doctor.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Lo de que le contestas al Doctor hasta llegó a Logística. Eres todo un caso.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...No soy como tú. Yo no hablo con floritura.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Lo que de verdad quiero preguntarte es: después de todo lo que pasamos, ¿no te cuesta empuñar un arma?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Me gusta pelear.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Ya veo... Aun así, creo que te convendría aprender algo de esa 'floritura'. Podría salvarte la vida.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No tienes que preocuparte.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Puede que no seamos amigas, pero hemos pasado por mucho juntas. Creo que es normal preocuparse por ti, como colega.
+[name="Natalya"]  Y a decir verdad, sí me caes bastante bien. Me gustaría ser tu amiga.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...¿Eh?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Para ser más precisa, diría que te envidio. Porque haces con tanta facilidad lo que yo nunca podría hacer.
+[name="Natalya"]  Ahora bien, Sonya, ¿no vas a contarme qué te hizo venir a buscarme?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Últimamente tengo pesadillas.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Puedes describírmelas?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...No.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Está bien. Déjame adivinar. Deben de ser algo de lo que no puedes hablar con Anna. De lo contrario no habrías venido a mí, ¿verdad?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Bien.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Lo deduje cuando todavía estábamos en Chernobog.
+[name="Natalya"]  Ustedes dos tienen un acuerdo tácito. Cada una sabe lo que la otra necesita, pero evitan hablar de ello.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No es asunto tuyo.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Tranquila, no intento decirte qué hacer. Ahora mismo no estoy en posición de dar consejos a nadie.
+[name="Natalya"]  Hablemos de otra cosa, Sonya. ¿Piensas vivir tu vida como Zima ahora?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿A qué te refieres?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Quiero decir, ¿vas a quedarte en Rhodes Island?
+[name="Natalya"]  No tenemos por qué. La gente de aquí es muy comprensiva. Si quisiéramos irnos, nos enviarían a algún lugar tranquilo.
+[name="Natalya"]  Hay muchos supervivientes como nosotras, rescatados al mismo tiempo, que ya van de camino de vuelta a Ursus.
+[name="Natalya"]  Si quisiéramos, podríamos ir a otra ciudad del Imperio y empezar vidas nuevas.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Entonces por qué no te has ido?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  No lo sé.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ......?
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=1)]
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Hace buen tiempo hoy. ¿Verdad, Sonya?
+[name="Natalya"]  Perfecto para un picnic.
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Oye.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Cuando rebuscábamos entre las ruinas, desesperadas por comida, estirando una sola botella de agua para que durara un día entero, a menudo pensaba para mis adentros:
+[name="Natalya"]  'Si sobrevivo a esto, voy a buscar un jardín precioso en una tarde soleada y hacer un picnic suntuoso.'
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¡Oye!
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Pero mucho más a menudo pensaba——
+[delay(time=1)]
+[stopmusic(fadetime=2)]
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  'Ojalá me hubieras matado aquel día.'
+[name="Natalya"]  No dudes. No me tengas lástima. No pienses en salvarme. Mira desde arriba a esta miserable niña aristócrata, y descarga tu hacha.
+[name="Natalya"]  Puede que hubiera sido lo mejor para mí que acabaras con mi vida ahí mismo.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Todavía hay tiempo.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿De verdad podrías?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ......
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Dejamos aquel lugar, Sonya. Hemos vuelto al mundo civilizado.
+[name="Natalya"]  Debemos pensar como personas civilizadas. Debemos usar métodos civilizados para resolver nuestros problemas. Esas cosas que pasaron allá no pueden volver a pasar.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  A quién le importa.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  A ti te importa. Eres una buena persona, Sonya. 'General Zima', Protectora de los Débiles, Azote de los Matones.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No me hagas vomitar.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Esa es la Sonya de la que oí rumores.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Simplemente no soporto a esos mocosos que consiguen un poquito de fuerza y creen que es licencia para abusar.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Entonces debes de odiar a la aristocracia?
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Obvio. Un montón de cabrones falsos y engreídos.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sí. Ellos, o más bien, nosotros somos 'cabrones falsos y engreídos'.
+[name="Natalya"]  Desde que me trajiste de vuelta, creo que nunca te he contado qué me pasó antes de que aparecieras, ¿verdad?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Nop. Solo sé que estabas al mando de esa pandilla de nobles.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Te contaré la historia en algún momento.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Da igual.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  La mayoría de la nobleza y de los ricos huyó de la ciudad cuando llegó Reunion, o incluso antes.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Sabían que venían?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sí. Lo sabían.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...hijos de puta.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Desde luego. Pero ya sabes, los nobles son egoístas.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Tú también?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sí.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Entonces por qué te quedaste?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Mi familia simplemente fue demasiado lenta. Quedamos atrapados junto a otras familias nobles. Algunas casas no se tomaron la amenaza en serio, por supuesto.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Ah.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Vamos, no pongas esa cara. Este trasfondo es importante para enmarcar la historia. Ya llegaremos a la parte buena.
+[name="Natalya"]  En resumen, los estudiantes que enviaron a tu escuela caían en la categoría de 'lentos' o en la de 'estúpidos'.
+[name="Natalya"]  Al principio se suponía que nos quedaríamos con nuestros padres, para que Reunion nos usara como rehenes y negociara con el Imperio. Pero al final nos separaron y nos enviaron a la escuela.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Eso es un poco raro.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Lo era. Los nobles son buenos rehenes en tiempos de guerra. No se desperdician.
+[name="Natalya"]  La aristocracia es elegante, noble, y debe inspirar respeto. Incluso como cautiva, una nunca debe olvidar su casa.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Están todos mal de la cabeza.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  La antigua yo te habría metido en un debate de dos horas por decir eso, Sonya. Porque así me criaron.
+[name="Natalya"]  Pero ahora, estoy de acuerdo.
+[name="Natalya"]  No hay diferencia real entre nobles y plebeyos. Todo es fachada. Raspa el barniz y la aristocracia es verdaderamente fea.
+[name="Natalya"]  Hablamos de que si no fuera por el primer incendio, si no hubiéramos perdido esa reserva de comida, las cosas no se habrían puesto tan mal.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Pero Anna dijo que incluso sin el incendio, habría pasado otra cosa.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Si yo hubiera pasado por eso, habría pensado lo mismo.
+[name="Natalya"]  Pero en cualquier caso, es a posteriori—— 'Qué tenía que pasar para provocar todo lo que vino después.'
+[name="Natalya"]  Lo gracioso es que a los nobles no les hace falta que pase nada. Júntalos y pelean.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Por qué?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Me pongo con las diferencias entre la nobleza nueva y la vieja? ¿Las inclinaciones políticas del alcalde? ¿Cuántas facciones hay en la aristocracia de Chernobog?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Podrías, tipo, no hacer eso?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Pero entonces no entenderás por qué pelean.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Supongo que simplemente nunca lo entenderé.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  A mí tampoco me interesan mucho estas cosas. Pero como hija de la Casa Rostov, tuve que aprenderlas.
+[name="Natalya"]  Lo único que necesitas saber es que desde el primerísimo día que nos encerraron en la escuela, los estudiantes nobles se apuñalaban por la espalda unos a otros.
+[name="Natalya"]  No me quedó más remedio que dar un paso al frente como Presidenta del Consejo Estudiantil de la Escuela Secundaria n.º 4 y usar mi posición para imponer orden.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Quieres decir que los organizaste para acabar con las peleas internas?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Suena razonable, ¿no? Para evitar que mis compañeros pelearan, di un paso al frente y tomé el mando.
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", crossfade=3,volume=0.4)]
+[name="Viktor"]  Eh, ah...
+[name="Nikola"]  ¡No te creas el amo del gallinero solo porque tu padre tiene una mina, Pavel!
+[name="Pavel"]  Un simple barón se atreve a hablarme en ese tono. Tiene suerte de no encontrarse mi hoja en el pecho.
+[name="Pavel"]  Y en cuanto a ti, segundo hijo de la Casa Ivanov, ¿cuándo te llegó el turno de hablar? ¿Quizá también te gustaría un agujero nuevo en el torso?
+[name="Nikola"]  ¿¡Cómo te atreves...!? ¡Mi padre es consejero!
+[name="Pavel"]  ¿Consejero? ¿Sabes cuántos consejeros vienen a las veladas de mi madre cada domingo?
+[name="Pavel"]  Ah, ¿no lo sabes? Porque tu padre no da la talla.
+[name="Nikola"]  ¡Tú!
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_197_poca_1#4")]
+[name="Natalya"]  ¡Muérdete la lengua, Pavel!
+[Character]
+[name="Pavel"]  Por favor, Natalya, llámame Pasha. No hace falta que seas tan formal.
+[Character(name="char_197_poca_1#4")]
+[name="Natalya"]  ¡Hablo en serio, Pavel Nikolaevich! ¡No vas a iniciar otra riña sin sentido!
+[Character]
+[name="Pavel"]  Como desees, mi estimada Presidenta del Consejo Estudiantil.
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  Tatyana, por favor venda la herida de Viktor.
+[Character]
+[name="Tatyana"]  ¡P- por supuesto!
+[Character(name="char_197_poca_1#4")]
+[name="Natalya"]  Damas y caballeros, nos han sellado dentro de esta escuela. No sabemos qué ocurrirá. Pero sospecho que el Movimiento Reunion no nos dejará ir a la ligera.
+[name="Natalya"]  Miren en qué se han convertido. No han pasado doce horas y ya están discutiendo, peleando, incluso amenazando con matar a sus propios pares nobles.
+[name="Natalya"]  ¿¡Así se comporta la aristocracia!?
+[Character]
+[name="Anton"]  ¿Quién demonios eres tú? ¿¡Por qué debería escucharte!?
+[name="Tatyana"]  ¡Porque ella es la presidenta del consejo estudiantil de la Escuela Secundaria n.º 4, Natalya Andreyevna Rostova!
+[name="Anton"]  ¿¡T- tú eres la hija mayor del Conde Rostov!?
+[name="Andrey"]  Ella es la 'Perla de la n.º 4', a quien el Conde Rostov ha declarado su heredera.
+[Character(name="char_197_poca_1#4")]
+[name="Natalya"]  Aquí hemos reunido a la nobleza de cada escuela secundaria del distrito. No deseo centrarme en mi rango. Solo debo hacerles comprender a todos la gravedad de nuestra situación.
+[name="Natalya"]  Nos encontramos rodeados de muchos estudiantes plebeyos, y no quiero que nos vean con una conducta tan vergonzosa.
+[name="Natalya"]  Además, aunque el Movimiento Reunion nos haya atrapado aquí, no buscarán hacernos daño si desean obtener concesiones del Imperio.
+[name="Natalya"]  ¿¡Vamos a desperdiciar nuestras preciadas vidas en estas peleas internas!?
+[name="Natalya"]  ¡Necesitamos unidad, ahora más que nunca!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Por supuesto, ahora sabemos que a Reunion le importábamos un bledo los aristócratas.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9#3",focus=2)]
+[name="Zima"]  ......
+[Character(name="char_197_poca_1#4",name2="char_115_headbr_9#3",focus=1)]
+[name="Natalya"]  En fin, logré poner fin a sus peleas. Pero en una situación así, las palabras bonitas y un título elegante solo te llevan hasta cierto punto.
+[name="Natalya"]  Sonya, ¿sabes por qué el Imperio de Ursus es tan fuerte como es?
+[name="Natalya"]  De hecho, hubo bastantes estudiantes nobles que no quisieron someterse a mi autoridad, ni compartir habitación con nadie más, y se fueron del grupo.
+[name="Natalya"]  Al final, tenía unas tres docenas a mi cargo.
+[name="Natalya"]  En aquel momento, pensé que lo había hecho muy bien.
+[Character(name="char_197_poca_1#4",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Así que por eso seguía habiendo tantos nobles de mierda merodeando por ahí.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sí, seguro que también formaron sus propios grupos.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Cómo iba yo a saberlo?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Es una lástima. Estoy disfrutando esta conversación contigo, pero ojalá Anna estuviera aquí para oírla.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No cambies de tema.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Ah, lo siento. Sí tengo más que decir, pero cuesta sacar las palabras.
+[name="Natalya"]  Ursus es lo que es hoy gracias a la guerra. El monarca anterior libró guerras sin fin, saqueando recursos e invirtiéndolos en la siguiente campaña.
+[name="Natalya"]  Mientras hubiera guerra, el Imperio podía funcionar, con el pueblo unido en su lucha común.
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Nikola"]  Yo... estoy de acuerdo con la Presidenta Rostova.
+[name="Pavel"]  Me someteré al liderazgo de la Presidenta.
+[Character(name="char_197_poca_1#4")]
+[name="Natalya"]  Si todos están dispuestos a depositar su confianza en mí, yo estoy dispuesta a servir al grupo.
+[name="Natalya"]  (Logré detener la pelea, por poco, ¿pero qué hago ahora...?)
+[Character]
+[name="Pavel"]  Siendo así, tengo una propuesta.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  ¿Ah, sí?
+[Character]
+[name="Pavel"]  Tenías razón al decir que tenemos la responsabilidad de preservar la dignidad de la aristocracia.
+[name="Pavel"]  Por lo tanto, ya es hora de que los plebeyos nos ofrezcan una contribución, para asegurar que podamos vivir con esa dignidad.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9#6",focus=2)]
+[name="Zima"]  ¿Quieres decir...?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9#6",focus=1)]
+[name="Natalya"]  Sí, accedí a dejar que depredaran a los plebeyos.
+[name="Natalya"]  Sonya, yo solía creerme una buena persona.
+[name="Natalya"]  Al menos, en aquel entonces, así pensaba.
+[name="Natalya"]  Me parecían aburridas e hipócritas las maquinaciones sociales de la aristocracia, lamentaba las tragedias del mundo, incluso servía comidas a los refugiados.
+[name="Natalya"]  Pero no te mentiré, ni me mentiré a mí misma.
+[name="Natalya"]  En aquel momento, para unir a los nobles, les permití saquear.
+[Character]
+[Dialog]
+[CameraShake(duration=1, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=false, block=true)]
+'¡Zas!' La chica de cabello blanco es arrojada al suelo. Recibe unos cuantos golpes sólidos en la cara. Y mientras un leve hilo de sangre carmesí se le escapa de la boca, esta se curva en una sonrisa.
+Una sonrisa trágica.
+[Character(name="char_197_poca_1#3")]
+[name="Natalya"]  *Tos,* *tos...*
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9#6",focus=2)]
+[name="Zima"]  Pedazo de...
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9#6",focus=1)]
+[name="Natalya"]  Soy un monstruo.
+[name="Natalya"]  Pero ¿sabes, Sonya? No me habría dado cuenta si nunca hubiera pasado ese tiempo contigo, si nunca hubiera venido a Rhodes Island.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9#6",focus=1)]
+[name="Natalya"]  Sin estas experiencias, no pensaría como pienso ahora.
+[name="Natalya"]  Me enseñaste que no soy noble, en el verdadero sentido de la palabra. Y ese es el conocimiento más doloroso que debo soportar.
+[name="Natalya"]  Por eso digo que habría sido mejor que me hubieras matado como hiciste con mis compañeros.
+[name="Natalya"]  Podría haber muerto en paz, recreándome en la fantasía de que era una buena chica, de que las circunstancias me obligaron a hacer lo que hice.
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  ...¿Sabes, Sonya, qué es esto?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9#6",focus=2)]
+[name="Zima"]  Un abrecartas.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9#6",focus=1)]
+[name="Natalya"]  Estos últimos meses, veintiséis veces he pensado en cortarme las muñecas. Quince veces pensé en abrirme la garganta.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Las tienes contadas, ¿eh?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Porque cada vez que fallo, me río de mí misma por ser una cobarde tan estúpida. Eso se me queda grabado.
+[name="Natalya"]  Por supuesto, también he considerado métodos más aristocráticos: té envenenado, un sable. Incluso he pensado con cuidado qué estilo caligráfico usar en mi nota de suicidio.
+[name="Natalya"]  Por desgracia, todos esos métodos se descubrirían antes de que pudiera consumar el acto. Y no quiero causar problemas.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿A qué quieres llegar?
+[Character(name="char_197_poca_1#2")]
+[name="Natalya"]  Yo...
+[name="Natalya"]  Le dije a Rhodes Island: quiero quedarme aquí y hacer lo que pueda por la gente de Ursus.
+[name="Natalya"]  Me dije a mí misma: Natalya, esta es tu expiación.
+[name="Natalya"]  ¿Pero es eso cierto?
+[name="Natalya"]  Cada vez que pienso en la sonrisa de Nikola, en cualquiera de sus caras cuando venían a mí, triunfantes tras robar a los plebeyos; en mi cobardía al devolverles la sonrisa, en lugar de reprender su maldad.
+[name="Natalya"]  Cada vez que pienso en todo lo que les dejé hacer, en los planes que trazaba para ellos, en el placer que me daba nuestro cómodo botín de provisiones.
+[name="Natalya"]  Cada vez que pienso en todos los gritos y llantos que ignoré, en cómo me creía inocente por obra de las circunstancias, en cómo empecé a acostumbrarme a vivir así.
+[name="Natalya"]  Sonya, ¿te lo puedes creer? ¿Que en toda esa batalla campal no maté a una sola persona?
+[name="Natalya"]  Y sin embargo, soy la que carga con más culpa.
+[name="Natalya"]  ¿Creíste que te traje aquí para decirte qué deberías hacer?
+[name="Natalya"]  No, Sonya. No lo sé. No tengo ni idea. De nada.
+[name="Natalya"]  ¡Ni siquiera sé cómo decirle a la gente que no lo sé! ¡Lo único que puedo hacer es poner esa estúpida fachada de que lo tengo todo perfectamente bajo control mientras te arrastro hasta aquí!
+[stopmusic(fadetime=3)]
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ......
+[Character(name="char_197_poca_1#4",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ......
+[Character(name="char_197_poca_1#4",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Acaso...?
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Uf, lo siento. Perdí la compostura.
+[Character(name="char_197_poca_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...¿Quieres algo de beber?
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Té negro, por favor. Gracias.
+[Character(name="char_197_poca_1#3",name2="char_115_headbr_9",focus=2)]
+[name= "Zima"]  De acuerdo.
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Y eh, ¿dónde guardas el té negro?
+[name="Zima"]  Tienes un montonazo de cajas de té distintas aquí. No distingo cuál es cuál.
+[Character(fadetime=2)]
+[Dialog]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Uf.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Aúpa.
+[name="Natalya"]  Ya lo saco yo, Sonya.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Eh, perdón.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Se me acaba de ocurrir que probablemente no sepas preparar té. Perdona el lapsus momentáneo de juicio que te empujó a hacer algo que no se te da bien.
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Serás...
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Oye, Sonya, ¿qué estabas pensando exactamente en aquel entonces?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Eh?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Después del incendio, corrí tan rápido como pude solo para que me atraparan otros estudiantes. ¿Por qué me salvaste?
+[name="Natalya"]  Sabías, por supuesto, que yo era la líder de los nobles que causaban estragos apenas días antes.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  No me acuerdo.
+[name="Zima"]  Probablemente solo te veías demasiado patética.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Entonces por qué me dejaste unirme al Grupo de Autogobierno?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Porque Anna dijo que estaba bien.
+[name="Zima"]  ¿Quieres que te odie, Natalya?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  No lo sé. ¿Puedes odiarme?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Nunca había visto a una cabrona admitir que es una cabrona.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Entonces una cabrona que admite que es una cabrona ya no es una cabrona?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...¿Quieres que te aplaste?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  No soy masoquista. Es solo que, ¿cómo lo digo? Me gustaría ser honesta contigo, eh, después de todo lo que acabas de oír, para evitar malentendidos.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Maso... qué?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Ah, es solo una especie de 'afición' popular en los círculos aristocráticos. En realidad solo he oído rumores. No te preocupes por eso.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Mientras no tenga que darte otra paliza.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿No quieres?
+[name="Natalya"]  ¿Prefieres columbiano o victoriano? El té, digo.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Ya volviste a ser la de siempre.
+[name="Zima"]  Da igual, de todos modos no puedo tomarlo.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Así me criaron. Debo mostrar mi lado más refinado en todo momento.
+[name="Natalya"]  ¿Azúcar?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ...Sí.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Lo siento, este tipo de té no se endulza. Tómalo solo, por favor.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Eres lo peor.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Hmph.
+[name="Zima"]  Mira, Natalya, no sé cómo se supone que debo animarte. Y de todas formas no tengo ninguna gana.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Ah, sí? ¿No solo no me odias, sino que quieres consolarme?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Cállate el pico, tetera.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Está bien, está bien.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Odio intentar consolar a la gente. Cada vez que lo intento, lo arruino todo.
+[name="Zima"]  Lo único que puedo hacer es decirte lo que pienso.
+[name="Zima"]  Hace un minuto me preguntaste si iba a seguir viviendo como Zima.
+[name="Zima"]  La respuesta es sí.
+[name="Zima"]  Mi mamá y mi papá murieron en Chernobog. No tengo nada a lo que volver. No quiero volver a Ursus. Y ya está.
+[name="Zima"]  Creo que debería poder entender tu dolor o lo que sea, pero de verdad que no.
+[name="Zima"]  Al principio pensé que querías justificarte. Los mocosos hablan así cuando quieren pegarme a traición mientras estoy distraída. Pero pareces triste de verdad. ¿Por qué?
+[name="Zima"]  Esos nobles de mierda no habrían estado mejor sin ti. Y de todos modos no fuiste tú quien los convirtió en cabrones. Tú no provocaste todo aquello.
+[name="Zima"]  En realidad fui yo...
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  ¿Tú?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Nada, olvídalo. Pero si yo fuera uno de esos nobles, quizá me habría gustado tener una líder como tú. Igual que Istina me eligió a mí.
+[name="Zima"]  Hiciste lo que pudiste.
+[name="Zima"]  Solo te odio porque fuiste mi enemiga antes de dejar de serlo. Además odio a los nobles. Eso es todo.
+[name="Zima"]  Ah, y tengo pesadillas, y las pesadillas me hacen vomitar, y luego no puedo dormir porque estoy triste.
+[name="Zima"]  Pero hacer lo que puedes para sobrevivir no está mal.
+[name="Zima"]  Y no creo que estuviera mal dejarte vivir.
+[name="Zima"]  Crees que eres una cabrona. Pero yo sé que sin ti, dependiendo solo de Anna, nunca habríamos sobrevivido esas dos semanas siguientes.
+[name="Zima"]  Sal a correr y ya. Come cuando tengas hambre. Duerme cuando estés cansada. Mejor que quedarte ahí sentada lamentándote.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Aúpa.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Qué?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Ajajajajaja.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Qué te hace reír así? Cielos, se te saltan las lágrimas.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Nada. Es solo que por esto es agradable charlar contigo.
+[name="Natalya"]  Si fuéramos Anna y yo, a estas alturas estaríamos llorando a moco tendido la una por la otra.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  A ella tampoco le caes bien, no lo olvides.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Lo sé. Pfft. ¡Jajaja! Lo sé.
+[name="Natalya"]  Escucha, Sonya.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Qué estás haciendo?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Quiero que sepas que no abordaste mi problema en absoluto.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Me da demasiada pereza que me importe.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Y creo que no hay nada que yo pudiera hacer para ayudarte con el tuyo.
+[name="Natalya"]  Pero tenías razón en una cosa: sobrevivimos.
+[name="Natalya"]  ¿Crees que lo superaremos, al final?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Eh?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  El círculo bajo nuestros pies, la noche, el laberinto, nuestras mentes, nuestros pensamientos, el abismo.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Podrías usar, tipo, palabras de verdad?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Cierto, cierto. En fin, todos los operadores tienen nombres en clave, ¿no? Si yo fuera a hacerme operadora, ¿cuál debería ser mi nombre en clave?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Y yo qué sé? Anna eligió el mío.
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Bien. ¿Qué te parece Rosa?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿'Rocío' en la lengua de Ursus?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
+[name="Natalya"]  Sí, como el rocío de la mañana. ¿Puedes llamarme 'Rosa'?
+[Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿De... acuerdo?
+[Character(name="char_197_poca_1")]
+[name="Rosa"]  Queda decidido. Si me hago operadora, me llamarán Rosa.
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

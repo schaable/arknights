@@ -1,0 +1,518 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Recopilación: También sale el sol
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Decision(options="......miya.", values="1")]
+[Predicate(references="1")]
+[Decision(options="Amiya.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]  ¿Eh? Ah, perdón, Doctor. Estaba distraída.
+[Decision(options="No tienes buen aspecto.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Ah, eh, hay un asunto que me preocupa.
+[name="Amiya"]  Doctor, mira, es una solicitud de traslado interno.
+[name="Amiya"]  La solicitante es Natalya Rostova.
+[name="Amiya"]  Quiere pasar de Logística a la primera línea.
+[Decision(options="El Grupo de Autogobierno Estudiantil de Ursus...;......;Perdón, ¿quién es esa?", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Exacto. Es la única miembro que trabaja en Logística.
+[name="Amiya"]  Tengo entendido que valoran su talento y eficiencia.
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Claro que a ti también te preocuparía. Sinceramente, no tengo muchas ganas de aprobar esta.
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Lo entiendo. Los nombres de Ursus son difíciles. No me sorprende que lo hayas olvidado.
+[name="Amiya"]  Es una de las supervivientes que rescatamos de Chernobog, y miembro del Grupo de Autogobierno Estudiantil de Ursus de Zima.
+[name="Amiya"]  De hecho, era la única aristócrata entre los refugiados.
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  ¿Recuerdas que el equipo de Zima se volvió operadoras de combate por petición propia?
+[name="Amiya"]  En realidad al principio yo estaba en contra.
+[Decision(options="No ha pasado tanto desde que las rescatamos...;......;Confío en tu criterio.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Exacto. Al principio, aunque lo pidieran ellas mismas, iba a convencer a la Dra. Kal'tsit de vetar la solicitud.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Es solo que...
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Reciben terapia psicológica periódica y, según los informes, están en general bien, salvo alguna sombra ocasional.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Es solo que...
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Gracias, Doctor.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Es solo que...
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  No sé cómo expresarlo mejor.
+[name="Amiya"]  ...Doctor, ¿puedes ir a ver cómo está la Señorita Rostova?
+[Decision(options="De acuerdo.;......;Agh.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Gracias, Doctor.
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Sé que es algo pesado, pero eres el único que puede hacerlo, Doctor.
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Doctor, esto es muy importante. No seas perezoso.
+[name="Amiya"]  Y de verdad no tienes que tomártelo demasiado en serio. Piénsalo como un pequeño cambio de aires.
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  Ah, ya es la hora del almuerzo. No hay prisa, puedes ir a verla después de comer.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Zima"]  Oye, Doctor.
+[Decision(options="¿Qué pasa?;......;Hola, Zima.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Nada. Solo saludo, ya que te vi.
+[Predicate(references="2")]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Oye, no finjas que no me oíste. Te vi parar.
+[name="Zima"]  ¿No estás como súper ocupado siempre? ¿Qué haces deambulando por los pasillos?
+[Predicate(references="3")]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Tú no pareces ocupada.
+[Predicate(references="1;2;3")]
+[Character(name="char_115_headbr_9")]
+[name="Zima"]  Tengo una misión. No puedo andar de paseo tranquilo como tú.
+[Dialog]
+[Character]
+[Character(name="char_148_nearl_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Nearl"]  Te dije que no deambularas antes de los despliegues, Zima.
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=1)]
+[name="Zima"]  ......
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  Buenas tardes, Doctor.
+[name="Nearl"]  Vamos, Zima, de vuelta a la sala de preparación. Es hora de irnos.
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=1)]
+[name="Zima"]  Hmph. Un día voy a ser la capitana y te voy a dar órdenes a ti.
+[name="Zima"]  A ti también, Doctor. Vas a responder ante mí.
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=2)]
+[name="Nearl"]  Me gusta la ambición. Hablamos de eso cuando me hayas ganado una.
+[name="Nearl"]  En cuanto al Doctor, bueno, tendrás que haber ganado bastantes más que una.
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=1)]
+[name="Zima"]  Eh.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=1)]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  Ah, Doctor, deberías saber que últimamente llevo al equipo de novatas.
+[name="Nearl"]  Así que si no tienes nada más, me voy.
+[Decision(options="¿Qué opinas de Zima?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  ¿Hm?
+[name="Nearl"]  Mm... Bueno, acabas de ver que no lleva bien la disciplina. Es muy insubordinada.
+[name="Nearl"]  Y como guerrera, a su edad, es normal no saber contra qué peleas, ni por qué peleas.
+[name="Nearl"]  Pero en Zima es especialmente evidente.
+[name="Nearl"]  Sufre mucha confusión. No sé exactamente qué es, pero es mala señal y es en lo que me voy a centrar a continuación.
+[Decision(options="¿Quieres decir que solo parece dura?;......;*Suspiro*, de verdad me gustaría llevarme bien con ella.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  Exacto. La violencia es un caparazón protector para ella.
+[name="Nearl"]  No llegaría a decir que bajo ese caparazón tiene un corazón frágil, pero sí puedo decir que esa dureza es muy frágil delante de mí.
+[Predicate(references="2")]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  No te preocupes, Doctor. Todavía es una cría.
+[name="Nearl"]  Oí que es de Chernobog. Seguro que carga con mucho. Pero tiene futuro.
+[Predicate(references="3")]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  Ja, no te preocupes, Doctor.
+[name="Nearl"]  Debes saber que no te odia ni nada.
+[name="Nearl"]  De hecho, parece atacar por reflejo a quienes tiene cerca.
+[Predicate(references="1;2;3")]
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]  Pero debo decir que esta cría me parece buena, Doctor.
+[name="Nearl"]  De hecho, me cae bien. Tiene un fuerte sentido de la integridad. Así que aunque esté confundida, esa integridad la mantendrá en el buen camino.
+[name="Nearl"]  Y eso es raro.
+[name="Nearl"]  Bien, tengo que irme. Con permiso.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Gummy"]  ¡Vaya, es el Doctor!
+[Decision(options="Buenas tardes, Gummy.;......;¡Vaya, es Gummy!", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Buenas tardes, Doctor!
+[Predicate(references="2")]
+[Character(name="char_196_sunbr_1#3")]
+[name="Gummy"]  ¿¡Soy demasiado bajita!?
+[name="Gummy"]  Holaaa, Doctor, ¿me ves?
+[Predicate(references="3")]
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Hoy te ves bien!
+[Predicate(references="1;2;3")]
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¿Vienes a comer?
+[name="Gummy"]  Últimamente no he tenido misiones, así que estoy ayudando en la cocina.
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Gummy, traje las especias.
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=1)]
+[name="Gummy"]  ¡Ah, gracias, Perfumer! Déjalas por allá.
+[name="Gummy"]  ¿Querías algo de comer?
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=2)]
+[name="Perfumer"]  No, gracias. Estoy acostumbrada a cocinar para mí en mi taller.
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=1)]
+[name="Gummy"]  Uuuh, ¿puedo ir a comer contigo alguna vez? ¡De verdad quiero aprender a usar las especias como tú!
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=2)]
+[name="Perfumer"]  Je je. Por supuesto.
+[Character(name="char_199_yak_1")]
+[name="Matterhorn"]  Gummy, ¿me echas una mano cuando tengas un minuto?
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  ¡Voy!
+[Character(name="char_199_yak_1")]
+[name="Matterhorn"]  Hung está fuera en una misión y me faltan manos. Necesito que te lleves esta olla.
+[Character(name="char_196_sunbr_1#2")]
+[name="Gummy"]  ¡Claro, tío Matterhorn! Nos vemos la próxima, Perfumer. ¡Y tú come bien también, Doctor!
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Claro. Eres bienvenida cuando quieras.
+[Character]
+[name="Operador de Vanguardia"]  ¿¡Hoy cocina Gummy!?
+[name="Operador de Logística"]  ¡Vaya, qué suerte!
+[name="Operador de Logística"]  ¡Qué lástima que acabo de comer!
+[name="Operador de Vanguardia"]  ¡Jaja, yo repito!
+[Character(name="char_196_sunbr_1#5")]
+[name="Gummy"]  Cálmense todos. ¡Hay suficiente para todos!
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Gummy sí que tiene mucha energía, ¿verdad, Doctor?
+[Decision(options="Y que lo digas.;......;¡Y que lo digas!", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Una vez, cuando se quedó dormida en mi taller, la oí hablar en sueños. Lo que dijo me preocupó un poco.
+[name="Perfumer"]  Pero cuando la veo así, adaptándose tan bien a la vida en Rhodes Island, siento que no tengo de qué preocuparme.
+[name="Perfumer"]  No puedes esperar que sanen al instante. Pero con tiempo, estarán bien.
+[Decision(options="¿Qué dijo en sueños?;......;Eso espero.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Ay, Doctor, algunas cosas piden discreción, ¿sabes?
+[name="Perfumer"]  Le guardaré ese secreto. Pero quédate tranquilo, no necesita consuelo, solo necesita tiempo.
+[Predicate(references="2")]
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  ¿Te importa, Doctor? Je je. De verdad te preocupas por tus operadores.
+[name="Perfumer"]  Pero quédate tranquilo, si hubiera algo realmente importante, no me callaría.
+[name="Perfumer"]  Una chica tiene sus secretos, ¿sabes?
+[Predicate(references="3")]
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Doctor, no te creas tan importante como para pensar que tienes que cuidar de todos.
+[name="Perfumer"]  Nosotras también podemos cuidarnos entre nosotras.
+[Predicate(references="1;2;3")]
+[Character(name="char_181_flower_1")]
+[name="Perfumer"]  Es hora de que vuelva a la oficina.
+[name="Perfumer"]  Si alguna vez te sientes cansado, Doctor, siempre puedes venir a sentarte conmigo.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[Character(name="char_195_glassb_2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Istina"]  Hola, Doctor.
+[Decision(options="Buenas tardes, Istina.;......;¿Qué tal la comida hoy, Istina?", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Nunca te había visto en el comedor, Doctor.
+[Predicate(references="2")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Parece que tienes algo en la cabeza, Doctor. Te sugiero que busques un lugar mejor para quedarte pensando que la puerta de la cafetería.
+[Predicate(references="3")]
+[Character(name="char_195_glassb_2#2")]
+[name="Istina"]  Mm... hoy el arroz está un poco duro, y la sopa demasiado dulce. Pero las verduras me están gustando.
+[Predicate(references="1;2;3")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Si no hay nada más, Doctor, me retiro.
+[name="Istina"]  Tengo clase por la tarde.
+[Decision(options="¿Clase?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Sí, la clase de historia de Hypatia.
+[name="Istina"]  Después de asistir de oyente un tiempo, encontré que el enfoque de Hypatia sobre la historia me resulta muy útil.
+[Decision(options="¿Puedo ayudarte?;......;¡A mí también se me da genial la historia!", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Mm. No.
+[name="Istina"]  Ah, no pretendo rechazarte. Me cuesta explicarlo, porque yo tampoco lo tengo muy claro.
+[Predicate(references="2")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Las clases de Hypatia son muy interesantes. Creo que deberías escucharlas tú mismo, cuando tengas tiempo.
+[Predicate(references="3")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  Eh, Doctor, ¿no había oído que sufres de amnesia?
+[name="Istina"]  Pero agradezco el ofrecimiento.
+[Predicate(references="1;2;3")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  La verdad, me vendría bien algo de orientación.
+[name="Istina"]  De hecho, no estoy segura de que el estudio de la historia me ayude tanto.
+[name="Istina"]  Sin embargo, reflexionar sobre las experiencias de nuestros antepasados podría darme algo de inspiración.
+[name="Istina"]  Me voy a clase entonces.
+[Decision(options="¿Sabes dónde está Natalya?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="Istina"]  ¿Natalya...? ¿La estás buscando?
+[name="Istina"]  Gummy me dijo que quiere ser operadora de primera línea. No he oído si su solicitud fue aprobada, pero por lo que la conozco, probablemente ya se esté preparando para el traslado.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  Tienes una puntería pésima, Natalya.
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  No estés tan segura, Rosalind. Te voy a dar.
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  Jeje, ni de broma~
+[name="Leto"]  ¡Y ahora tienes que llamarme Leto! Operadora Rosa~
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  De acuerdo, Operadora Leto. Ya lo veremos.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  ¿Y quién te puso a usar semejante trasto tan grande?
+[name="Leto"]  Lo encontraste en Chernobog, ¿verdad? ¿Por qué no lo tiras y consigues algo nuevo?
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Uf... valor sentimental.
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  Bien. Más trabajo para ti.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  Parece que ya no puedes ni moverte. ¿Por qué no descansas un poco?
+[Character(name="char_194_rosali_1",name2="char_197_poca_1#2",focus=2)]
+[name="Natalya"]  Todavía puedo...
+[Character(name="char_197_poca_1#2")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Natalya"]  ¡Agh!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Te falta resistencia, Natalya.
+[name="Dobermann"]  Ser de Ursus te da una buena base sobre la que construir, pero estás muy lejos de estar lista para el combate.
+[Character]
+[Dialog]
+[Character(name="char_197_poca_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Natalya"]  Pff... uf... Lo siento. Seguiré intentándolo.
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1#2",focus=1)]
+[name="Dobermann"]  Pero tu fuerza de voluntad es mucho mayor de lo que pensaba. Nada mal.
+[name="Dobermann"]  Si logras superar esta tanda de entrenamiento, te vendrá bien, aunque no llegues a ser operadora.
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Gracias por eso.
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1",focus=1)]
+[name="Dobermann"]  Mm... ¿mm?
+[name="Dobermann"]  Descansen cinco.
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  ¡Sí, señora!
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Leto, sal ahí y entrena tú.
+[Character(name="char_130_doberm_ex",name2="char_194_rosali_1",focus=2)]
+[name="Leto"]  Sí, señora~
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Grace, vigílala.
+[Character]
+[name="Instructora Grace"]  Entendido.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Doctor, es la hora del almuerzo. Deberías estar descansando. No te necesitamos aquí.
+[Decision(options="Buenas tardes, Dobermann.;......;¿No puedo estar aquí?", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Buenas tardes, Doctor.
+[name="Dobermann"]  Si solo vienes a saludarme, tengo mucho a lo que volver.
+[Predicate(references="2")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Poco a poco te estás convirtiendo en un líder. No es algo malo, he de decir.
+[Predicate(references="3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Puedes, pero tengo que sacar tiempo para atenderte. Espero que no sea mucho.
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿Pero supongo que Amiya te dijo que tenemos a otra chica del grupo de Zima que quiere ser operadora, y querías echarle un vistazo?
+[name="Dobermann"]  No pongas esa cara de sorpresa.
+[name="Dobermann"]  Todos saben que Amiya se preocupa mucho por los supervivientes que rescatamos de Ursus.
+[name="Dobermann"]  Debes de recordar a Zima, Gummy, Istina, Leto——
+[name="Dobermann"]  Bueno, Leto es una excepción. Nada de qué preocuparse en el terreno del combate.
+[name="Dobermann"]  Cuando esas cuatro chicas lo solicitaron, Amiya estaba totalmente en contra. Quería vetar sus solicitudes. No sé por qué, pero cambió de opinión en algún momento del proceso.
+[name="Dobermann"]  Y ahora que hay otra, sería impropio de ella no preocuparse...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  Uf, ya descansé bastante. Rosalind, practica conmigo un rato.
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  Vaya, sí que estás comprometida.
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="Natalya"]  No subestimes mi determinación de convertirme en operadora.
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="Leto"]  Está bien, está bien.
+[Character]
+[name="Instructora Grace"]  Natalya, todavía necesitas descansar. La parte más importante del ejercicio es la recuperación. Si sigues machacándote, solo vas a romperte el cuerpo.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Gracias, Instructora Grace, pero creo que todavía me quedan fuerzas...
+[Character]
+[name="Instructora Grace"]  Oye, no te preocupes por Dobermann, sé que parece aterradora...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Grace, te estoy oyendo.
+[Character]
+[name="Instructora Grace"]  Ah, bueno, ya me entiendes.
+[Character(name="char_197_poca_1")]
+[name="Natalya"]  Sí, pero no te preocupes.
+[Character]
+[name="Instructora Grace"]  De acuerdo...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿Qué opinas de ella?
+[Decision(options="Es resuelta.;......;Es una luchadora.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿Ah, sí? Yo no lo creo.
+[name="Dobermann"]  He visto de su tipo. Aprietan los dientes, luchando con todas sus fuerzas por no pensar.
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  ¿No te recuerda a esas tres?
+[name="Dobermann"]  No saben de dónde viene el valor, así que aprietan los dientes y se enfrentan a la sociedad, sin importar su edad.
+[name="Dobermann"]  Pero sí parecen estar listas.
+[Predicate(references="3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Sí que lo está. Sinceramente, supera mis expectativas.
+[name="Dobermann"]  Una señorita aristócrata que de verdad es capaz de esforzarse por sí misma... ja.
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Sí entiendo el instinto de Amiya de mantenerlas fuera del campo de batalla.
+[name="Dobermann"]  Doctor, a nadie le alegraría mandar a jóvenes a la guerra. ¿No es el sentido de una soldado como yo proteger a crías así?
+[name="Dobermann"]  Siempre me culpo de que tengan que ir a pelear.
+[name="Dobermann"]  Pero he asumido que no puedo salvar a todos.
+[name="Dobermann"]  Lo único que puedo hacer es enseñarles a pelear, a protegerse, y a volver a casa de una pieza.
+[name="Dobermann"]  Piénsalo, Doctor, ¿qué puedes hacer tú por ellas?
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_002_amiya_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Amiya"]  Bienvenido de vuelta, Doctor.
+[name="Amiya"]  ¿Y qué opinas?
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Decision(options="¿Viste algo en Zima y sus chicas, Amiya?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  ...Sí. Por eso les he estado prestando más atención.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Perdón, Doctor, no... no estaba segura de si debía contárselo a alguien.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Conoces mi capacidad de percibir las emociones más intensas de una persona, e incluso de sentirlas cuando van dirigidas a mí.
+[name="Amiya"]  Si no van dirigidas a mí, pero aun así son lo bastante fuertes, no las siento con tanta claridad, pero percibo algo.
+[name="Amiya"]  Y las chicas de Ursus... es difícil de decir.
+[name="Amiya"]  Su situación es distinta.
+[name="Amiya"]  A veces, en momentos que a nosotros nos parecerían corrientes, percibo en ellas una emoción inmensa, abrumadora.
+[name="Amiya"]  Por supuesto, sus emociones son distintas, pero comparten algunos rasgos.
+[name="Amiya"]  Si tuviera que ponerle nombre a la emoción principal, creo que tendría que decir 'impotencia'.
+[name="Amiya"]  No están tan tristes, ni doloridas, ni enfadadas, ni desesperanzadas...
+[name="Amiya"]  Quizá no sea la palabra correcta. Es como... como si hubiera un muro invisible.
+[name="Amiya"]  Normalmente es invisible e intangible, pero las bloquea cada vez que intentan avanzar. Y se quedan atascadas.
+[Decision(options="¿Hay algo que podamos hacer por ellas?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]  No.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Ahora no estamos en posición de ayudarlas, Doctor.
+[name="Amiya"]  Lo que cada operador está dispuesto a contarnos al registrar su ficha, eso es todo lo que 'podemos' saber de ellos.
+[name="Amiya"]  Puede que nos estén ocultando algo. Pero de ser así, tenemos aún menos motivos para desenterrarlo.
+[name="Amiya"]  Por supuesto, eso no incluye cosas que pudieran perjudicar a Rhodes Island. Pero no creo que el grupo de Zima entre en esa categoría.
+[name="Amiya"]  Además...
+[name="Amiya"]  No estoy segura de que tendernos de repente a ayudarlas fuera de verdad de ayuda.
+[Decision(options="La ayuda no pedida es un acto egoísta.;......;Podríamos simplemente preguntarles.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  Sí, yo también lo creo.
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Quizá sea solo que me da un poco de miedo hacerlo.
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]  Ay, Doctor, otra vez te estás burlando.
+[name="Amiya"]  Ojalá fuera así de simple.
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Siento que 'te entiendo' no vale gran cosa.
+[name="Amiya"]  Pero a la gente le encanta decirlo. Como si con eso cumplieran su deber de dar consuelo, o como si fuera a hacer que alguien se abra con ellos.
+[name="Amiya"]  Es difícil entender los sentimientos de alguien, y más aún ayudarle.
+[name="Amiya"]  Muchos operadores a bordo de esta nave están igual, en realidad.
+[name="Amiya"]  No compartimos ninguna experiencia concreta con ellos, nuestras palabras no les llegan, y lo que hacemos, aunque sea lo correcto, no será lo que quieren.
+[Decision(options="Así que no impediste que las chicas de Ursus se hicieran operadoras.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Exacto.
+[name="Amiya"]  Después de percibir sus emociones, cambié de opinión.
+[name="Amiya"]  Obligarlas a ponerse a salvo puede parecernos lo correcto, lo mejor para ellas. Y probablemente las mantendría a salvo, en la práctica.
+[name="Amiya"]  Pero eso no las ayudaría a sanar.
+[name="Amiya"]  Doctor, de verdad no quiero decir que el tiempo lo cura todo.
+[name="Amiya"]  Pero no conozco otra manera.
+[name="Amiya"]  Lo único que puedo hacer es respetar su decisión, y protegerlas a mi manera, a la manera de Rhodes Island.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Cuando lo pienso así, me siento un poco presumida...
+[Decision(options="Rhodes Island no es un invernadero. Vas por buen camino.;......;Entonces hazte amiga de todos.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Sí, pero siempre espero poder hacer más.
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  Doctor, cómo tratar a alguien, o si tratarlo, desde el punto de vista físico, rara vez es algo que requiera deliberación.
+[name="Amiya"]  Pero cuando se trata de la salud mental, se convierte en un problema más difícil.
+[name="Amiya"]  Por ahora, solo puedo dar una respuesta vaga.
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  Sí, tienes razón.
+[name="Amiya"]  Si no estamos en posición de ayudar a alguien, debemos crear esa posición.
+[name="Amiya"]  Solo estoy un poco frustrada.
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  La medicina es para el dolor, para curar heridas. Y algunos medicamentos sí curan. Pero en cualquier caso, no pueden borrar el dolor y el sufrimiento padecidos antes de aplicarla.
+[name="Amiya"]  Siempre me he preguntado si Rhodes Island podría ayudar a algunas personas, aunque solo fueran unas pocas, a olvidar, o al menos a soltar el trauma que han sufrido en el pasado.
+[name="Amiya"]  Por el camino me he dado cuenta de que es realmente difícil.
+[name="Amiya"]  Desarrollar el fármaco es solo el primer paso más básico. Habría muchísimo más que hacer para poder lograrlo.
+[Decision(options="Al menos ya lo estamos haciendo.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  Sí. Al menos lo estamos.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]  Gracias, Doctor.
+[name="Amiya"]  Me da un poco de vergüenza que me estés consolando y animando por un asunto ajeno...
+[name="Amiya"]  En fin, al grano: voy a aprobar la solicitud de la Señorita Rostova.
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  Espero que algún día ella y sus amigas estén dispuestas a abrirse con nosotros. Espero que algún día podamos ayudarlas.
+[name="Amiya"]  Espero que algún día... Rhodes Island pueda convertirse en su nuevo hogar.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Image]

@@ -1,0 +1,772 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Zima: Sueño sin fin
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_indoor_u",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.4)]
+Es de mañana. Salgo de mi cuarto como siempre.
+[name="Madre"]  Sonya, ¿ya terminaste de lavarte?
+[name="Sonya"]  Ya no soy una niña, mamá.
+[Character(fadetime=1)]
+[Dialog]
+Mamá me llama desde la cocina, donde está cocinando. Me siento a la mesa a esperar mi desayuno bien caliente.
+El desayuno normalmente sería un tazón de avena con pan y jamón. Supongo que quiere bajar de peso, así que solo tenemos avena.
+Por mí bien.
+Papá está sentado leyendo el periódico. Todo lo que traen es siempre aburridísimo. Cosas de política y economía que no me interesan nada.
+¿Por qué no publican notas sobre mis gloriosas hazañas?
+[name="Padre"]  Sonya, ¿cómo va la escuela?
+Otra vez esto.
+¿No se cansa de repetir este paripé dos veces al día? Solo en el desayuno y la cena finge que le importa.
+[name="Sonya"]  ...Está bien. 
+[name="Padre"]  Ya estás en séptimo grado. Va siendo hora de que te portes bien.
+[Character]
+[Dialog]
+¿Por qué? Apenas estoy en séptimo grado.
+[name="Padre"]  ¿Y ya decidiste qué harás cuando termines noveno?
+[name="Sonya"]  ...Todavía no.
+[Character]
+[Dialog]
+Después de noveno grado tengo que decidir si sigo estudiando o me voy a la escuela técnica a aprender un oficio.
+Sé que papá preferiría que fuera a la escuela de oficios. Y seguro está a punto de decirlo.
+[name="Padre"]  Creo que deberías...
+[name="Madre"]  No le cargues tus complejos a tu hija. ¿Ya encontraste trabajo?
+Mamá interrumpe a papá mientras trae el desayuno de la cocina.
+[name="Padre"]  ...Hoy tengo una entrevista.
+Desde que perdió el trabajo, a papá le cuesta mirar a mamá a los ojos. No es que antes fuera mucho mejor.
+[name="Madre"]  Tienes que dejar el orgullo a un lado, Pierre. La dignidad no se come.
+[name="Padre"]  Lo sé. Lo estoy intentando, Anna.
+A mamá le importan mis estudios mucho más que a papá. Quiere que siga en la escuela después de graduarme. Hasta ha ahorrado dinero para eso.
+Siempre habla de que en su época no se podía llegar hasta noveno grado gratis.
+Y al mismo tiempo reconoce la suerte que tuvo de haber sido criada de la nobleza.
+Terminó sus estudios en una escuela de señoritas, lo que le permitió conseguir un trabajo bastante bueno, incluso en una economía tan mala como esta.
+A veces me gustaría poder ser una buena chica para ella. Lástima que no pueda.
+[name="Madre"]  Ojalá lo fueras. Vamos, Sonya, come. No querrás perder el autobús.
+[name="Sonya"]  Lo sé.
+[Character]
+[Dialog]
+Bajo la vista hacia mi desayuno, desconcertada por lo extraño que se ve todo——Un tristísimo pegote de avena, media rebanada de pan y un jamón de forma sospechosa.
+[name="Sonya"]  Mamá... ¿qué es esto?
+[name="Madre"]  ¿Cómo que qué es? Es lo mismo que comemos todos los días.
+[name="Sonya"]  ¡No lo es!
+[stopmusic(fadetime=1)]
+[Character(name="char_115_headbr_9#11")]
+[name="¿Sonya?"]  ¿Se te olvidó?
+[Character]
+[Dialog]
+Una chica idéntica a mí aparece en la mesa.
+[dialog]
+[Character(name="char_115_headbr_9#5",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Sonya"]  ¿Quién eres? ¿Por qué te pareces a mí?
+[Character(name="char_115_headbr_9#5",name2="char_115_headbr_9#11",focus=2)]
+[name="¿Sonya?"]  Soy tú.
+[Character]
+[Dialog]
+¿Ella es yo? Qué ridículo. ¿Entonces quién soy yo?
+[Character(name="char_115_headbr_9#10")]
+[name="¿Sonya?"]  Tú eres Sonya.
+[Character]
+[Dialog]
+Esto no tiene ningún sentido.
+Pero más raro aún es que mamá y papá no reaccionen a este doble que apareció en nuestra mesa.
+[name="Padre"]  Sonya, ¿en qué estás soñando despierta? Cómete el desayuno.
+Ah, ya entiendo. Esto es una pesadilla. Es la explicación más sencilla. Ja. Solo es comida de aspecto raro. He tenido sueños más aterradores.
+[Character(name="char_115_headbr_9#10")]
+[name="¿Sonya?"]  Esas eran fantasías que sacaste de cómics y videojuegos.
+[name="¿Sonya?"]  Antes creías que lo más aterrador eran las cosas increíblemente poderosas.
+[name="¿Sonya?"]  Una columna de tanques, un monstruo gigante, el puño de tu padre. Algo simple y cruel.
+[Character]
+[Dialog]
+¿Qué está diciendo? ¿Cómo puede saberlo?
+[Character(name="char_115_headbr_9#6")]
+[name="Sonya"]  ¿A ti qué te importa? Tú también eres solo un producto de mi imaginación. ¿De qué otro modo sabrías lo que pienso?
+[Character(name="char_115_headbr_9#6",name2="char_115_headbr_9#11",focus=2)]
+[name="¿Sonya?"]  Mira más de cerca la comida que tienes en las manos.
+[Character(name="char_115_headbr_9#6",name2="char_115_headbr_9#11",focus=1)]
+[name="Sonya"]  ¿¡Qué...!?
+[Character]
+[Dialog]
+No es avena. Es arroz en agua con unas hierbas mezcladas. ¡No se parece en nada a lo que cocina mamá!
+El pan... es pan, pero huele horrible, como si llevara días a la intemperie.
+...¿Pero cómo iba yo a saber eso?
+El jamón parece arrancado de un trozo de carne más grande, y huele casi... a pescado. Espera, ¿esto es... sangre?!
+[Character(name="char_115_headbr_9#4")]
+[name="Sonya"]  ...*Vomita*.
+[name="Sonya"]  ¡Solo es una pesadilla!
+[Character(name="char_115_headbr_9#4",name2="char_115_headbr_9#11",focus=2)]
+[name="¿Sonya?"]  Pero nunca habías tenido una así. Y se siente tan real. Es como si...
+[Character]
+[Dialog]
+Me da la impresión de que mi doble quiere burlarse de mí, pero la maestra siempre dice que burlarse es una forma de hacerse feliz lastimando a los demás.
+Y ella no parece feliz.
+De todos modos, sé que no puedo dejar que se salga con la suya.
+Aunque la comida sea un poco peor, ¿eso hace que una vida no merezca la pena?
+¡Tengo que callarla e irme a la escuela!
+[Character(name="char_115_headbr_9#6")]
+[name="Sonya"]  ¡Cállate!
+[Character]
+[Dialog]
+Sé cuál es la mejor manera de lidiar con alguien que habla de más: mis puños.
+[Character(name="char_115_headbr_9#11")]
+[name="¿Sonya?"]  ¿No se siente igual que si de verdad te lo hubieras comido?
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Aprieto el puño y me lanzo hacia ella, pero me lleva un paso de ventaja.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+Mi gancho de derecha se estrella con fuerza contra la cara del chico que tengo delante.
+La sensación del hueso aplastándose contra la piel es reconfortante, en cierto modo.
+[name="Estudiante A"]  ¡Gah!
+[name="Estudiante B"]  Q- qué fuerte. Estaba seguro de que con una docena bastaría, pero limpió el suelo con nosotros...
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¡Blyat'! ¿Hasta cachorros débiles como ustedes quieren jugar a los matones? Va a hacer falta más que eso.
+[Character]
+[name="Estudiante C"]  *Escupe*, vámonos. Tú espera, General Zima, ¡esto no se ha acabado!
+[Character]
+[Dialog]
+La verdad, me gusta el nombre 'General Zima'.
+Suena rudo.
+Pero estos mocosos siempre me buscan cuando intento echarme una siesta. ¿No saben que normalmente me salto la clase de la tarde?
+[name="Estudiante acosado"]  Eh, gracias, General Zima.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¿Eh? ¿Sigues aquí? ¿No saliste corriendo?
+[Character]
+[name="Estudiante acosado"]  Esta vez quería darte las gracias.
+[Character]
+[Dialog]
+¿Esta vez?
+[name="Estudiante acosado"]  Ah, ¿no me reconoces? Me llamo Valeria. No es la primera vez que tienes que salvarme.
+[Dialog]
+Ahora que lo menciona, el lazo amarillo del pelo de esta chica sí me resulta familiar.
+¿Fue la semana pasada? ¿O el mes pasado? Estoy bastante segura de que la ayudé, sí.
+[name="Estudiante acosado"]  También salvaste a mis amigos. Todos te estamos muy agradecidos.
+[Dialog]
+Al ver su cara radiante, algo de su alegría se me contagia. Pero aun así tengo que guardar las apariencias.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Simplemente no soporto a estos imbéciles que se meten con los más débiles.
+[name="Sonya"]  Y tú tienes que armarte de valor. Si fueras más valiente, serían ellos los que te tendrían miedo.
+[Character]
+[name="Estudiante acosado"]  Sí... Tienes razón. Lo intentaré.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Bien. Ahora lárgate.
+[Character]
+[name="Estudiante acosado"]  Adiós. ¡Y gracias otra vez!
+[Dialog]
+Grita mientras se aleja corriendo.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¿Hm?
+[Dialog]
+[Character]
+¿Son ideas mías, o todo en el aula está mucho más sucio que antes?
+Bah, da igual. Vuelvo a mi siesta.
+Junto cuatro sillas y me acuesto.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¿Qué es eso?
+[Dialog]
+[Character]
+Se me está clavando algo en la espalda.
+Meto la mano por detrás y saco un lazo amarillo.
+Me resulta muy familiar. Pero está sucio, y un lado está roto.
+[Character(name="char_115_headbr_9#5")]
+[name="Sonya"]  ¿¡Eh!?
+[Dialog]
+[Character]
+La parte de atrás del lazo está manchada de un color negro oscuro, como...
+Sangre.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ...Debe de ser kétchup.
+[Dialog]
+[Character]
+Tiro el lazo a un lado y vuelvo a dormirme.
+Pero antes de poder caer en el sueño, oigo una voz.
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9#11",fadetime=1,block=true)]
+[delay(time=1)]
+[name="¿Sonya?"]  Este lazo lo encontraste después, en una de las aulas.
+[name="¿Sonya?"]  Admítelo, sabes que está muerta.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+La puerta del aula se abre de golpe, interrumpiendo mi siesta.
+Entra una chica con lentes, con un libro en la mano. Por el uniforme veo que no va a esta escuela.
+[Character(name="char_195_glassb_2")]
+[name="???"]  Disculpa, ¿hay alguien más aquí?
+[Character(name="char_195_glassb_2",name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  Este es mi territorio. Soy la única que puede entrar.
+[Character(name="char_195_glassb_2",name2="char_115_headbr_9",focus=1)]
+[name="???"]  Perdona, pero mis amigos y yo buscamos refugio...
+[name="???"]  Eh, ¿tú eres... Sonya?
+[Character(name="char_195_glassb_2",name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  Tú eres... ¿Anna?
+[Character]
+[Dialog]
+Anna era mi vecina. Hacía años que no la veía, desde que nos mudamos, pero...
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Tomen otra aula.
+[Character]
+[Dialog]
+La verdad es que lo pidió con amabilidad, y no es que antes nos lleváramos mal. No quiero rechazarla.
+Pero las cosas se han puesto feas entre los chicos de aquí desde el primer incendio. Solo hoy tuve que espantar a tres pandillas.
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  Sé que esto puede molestarte, Sonya, pero...
+[Character]
+[Dialog]
+[name="Voz al otro lado de la puerta"]  Solo hay una dentro, Anna. Echémosla y ya.
+Ah, bueno. Hora de otra pelea.
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  Entonces no seríamos distintos de los ladrones. Eso no es lo nuestro.
+[Character]
+[Dialog]
+...Anna sigue igual que siempre. Una pacificadora.
+[name="???"]  Bien. Eh, soy Lada, y cocino bastante bien. ¿Y si te preparo algo de comer a cambio de dejarnos escondernos aquí?
+[Character]
+[Dialog]
+Debo admitir que es una oferta bastante tentadora. Hace tiempo que no como algo que no salga de una lata.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Está bien. Pueden quedarse. Pero cuidado por dónde pisan. Soy Sonya. Y conmigo no se juega.
+[Character]
+[Dialog]
+[name="Voz al otro lado de la puerta"]  ¿Acaba de decir Sonya...? ¿¡Esa es de verdad la 'General Zima'!?
+[name="Voz al otro lado de la puerta"]  Es famosa hasta en nuestra escuela. Es sin duda la chica más fuerte del distrito.
+[name="Voz al otro lado de la puerta"]  No puede ser... parece que tuvimos suerte.
+[Character]
+[Dialog]
+Debo decir que disfruto del reconocimiento. Pero lo mejor es ver cómo se le descompone la cara a una buena chica como Anna cuando lo oye.
+[Character(name="char_195_glassb_2#4")]
+[name="Anna"]  Gracias, Sonya. Intentaremos no molestarte.
+[Character]
+[Dialog]
+...Maldición. Ninguna reacción. Qué aburrido.
+Después de darle permiso, mete a toda su caravana.
+El primer grupo es una mezcla de chicas y chicos. Llevan la ropa bastante andrajosa, el pelo revuelto, y está claro que no duermen hace días.
+Y detrás de ellos...
+¿¡Qué demonios!?
+¿¡Un montón de uniformes escolares vacíos, flotando!?
+Y al final del todo de la multitud estoy yo.
+[dialog]
+[delay(time=1)]
+[Character(name="char_115_headbr_9#11",fadetime=1,block=true)]
+[delay(time=1)]
+[name="¿Sonya?"]  Trajes de marinero flotando, ¿eh? Menudo mecanismo de defensa.
+[Character(name="char_115_headbr_9#6",name2="char_115_headbr_9#11",focus=1)]
+[name="Sonya"]  ¿¡De qué hablas!? Es decir, ¿¡quién eres tú siquiera!?
+[Character(name="char_115_headbr_9#6",name2="char_115_headbr_9#11",focus=2)]
+[name="¿Sonya?"]  Soy tú. Y estás soñando, idiota.
+[Character(name="char_115_headbr_9#5",name2="char_115_headbr_9#11",focus=1)]
+[name="Sonya"]  Mmh. Agh.
+[Character]
+[Dialog]
+Tiene sentido. Algo así tiene que ser un sueño... ¿¡Pero por qué acabo de llamarme idiota a mí misma!?
+[Character(name="char_115_headbr_9#5",name2="char_115_headbr_9#11",focus=2)]
+[name="¿Sonya?"]  Digo, al menos es mejor que un montón de zombis sin cabeza.
+[Character(name="char_115_headbr_9#1",name2="char_115_headbr_9#11",focus=1)]
+[name="Sonya"]  ¿A qué te refieres? ¿Por qué habría zombis sin cabeza?
+[Character(name="char_115_headbr_9#1",name2="char_115_headbr_9#11",focus=2)]
+[name="¿Sonya?"]  Porque los mataste a todos.
+[Character]
+[Dialog]
+¿Por qué haría eso?
+[Character(name="char_115_headbr_9#10")]
+[name="¿Sonya?"]  Porque iban a atacarte. ¿No es así, Istina?
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  No había otra salida. Te obligaron.
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=1)]
+[name="¿Sonya?"]  Exacto. Mientras haya una buena razón, la violencia está bien. Así funciono yo.
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ¿Eso es de verdad lo que piensas?
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=1)]
+[name="¿Sonya?"]  Siempre creí que hacía lo correcto.
+[Character]
+[Dialog]
+Esto es bastante raro, incluso para un sueño. Mi doble está conversando con una chica que apenas conozco, como si fueran viejas amigas. Pero toda la razón me dice que ambas son solo producto de mi imaginación.
+Eso me recuerda, ¿no debería haber despertado en cuanto me di cuenta de que estaba soñando?
+En el instante en que ese pensamiento me cruza la cabeza, todos en la sala salvo mi doble y los uniformes flotantes se giran para clavarme la mirada.
+Cada rostro lleva una sonrisa retorcida.
+Me rodean.
+[name="Todos"]  Eres nuestra líder. Deberías quedarte aquí. Deberías guiarnos.
+Intento encontrar a la otra yo.
+Pero ya no está.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9#5")]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Sonya"]  Ugh...
+[Character]
+[Dialog]
+Abro los ojos de golpe.
+La sala a mi alrededor sigue siendo el aula. Es entrada la noche. Los demás duermen. Estoy recostada contra la puerta.
+Hay otra puerta, pero la bloqueé con mi pupitre. Las ventanas están todas selladas. La puerta junto a mí es la única entrada y salida.
+Soy su líder. Tengo que protegerlos.
+[Character(name="char_115_headbr_9#5",name2="char_195_glassb_2#3",focus=2)]
+[name="Anna"]  ¿No puedes dormir, Sonya?
+[Character]
+[Dialog]
+Oigo la voz de Anna cerca.
+Han pasado tres días desde que ella y su compañera se nos unieron. Hubo ciertos roces en ese tiempo, pero Anna acabó poniéndose de mi lado.
+[Character(name="char_115_headbr_9#2",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Sí. Tuve una pesadilla.
+[Character(name="char_115_headbr_9#2",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ...No dejes que te afecte. No hiciste nada malo.
+[Character]
+[Dialog]
+No recuerdo con qué estaba soñando, pero Anna debe de pensar que tenía que ver con ellos.
+Se siente mal por eso. Nunca imaginó que los compañeros en los que confiaba llegarían a atacarme solo porque ella me pidió que los liderara.
+Los maté a todos, por supuesto.
+He visto muchos grupos desmoronarse por conflictos pequeños como este. Por eso no quería unirme a un grupo en primer lugar. Prefiero comunicarme con los puños antes que intentar manejar relaciones.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  No te preocupes.
+[Character]
+[Dialog]
+Oigo un susurro de tela mientras se acerca a mí.
+Sé que quiere consolarme, pero es obvio que la que necesita consuelo es ella. Debería cambiar de tema.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Anna, ¿eras la delegada de tu clase?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  No.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  ¿Entonces cómo acabaste con tantos seguidores?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  En realidad me incomodaba mucho hacer de líder. Pero Lada insistía, y sentí... que tenía que hacer algo.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  ¡Ajá! ¡Sí que tenías que hacer algo!
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Te estás burlando de mí.
+[name="Anna"]  ...Pero en serio, cuando los chicos de mi clase se acosaban entre ellos, yo sabía que estaba mal. Pero me guardaba para mí. Me mantenía al margen.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Deberías haberles dado una paliza. Eres una chica dura.
+[Character]
+[Dialog]
+Es cierto. Puede parecer del tipo ratón de biblioteca, pero Anna se defiende muy bien peleando. Simplemente no le gusta esforzarse en eso.
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  Ojalá fuera tan valiente como tú. Nunca encuentro el valor para plantarle cara a la gente.
+[Character]
+[Dialog]
+Uy, suena aún más triste que antes. De verdad no sé cómo consolar a una chica. ¿Qué puedo decir para animarla?
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ...A- al menos ahora sí estás plantando cara.
+[Character]
+[Dialog]
+¿¡Eso es lo mejor que se te ocurrió, Sonya!?
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  ...Porque creo que está mal. Al menos, eso fue lo que pensé al principio.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  ¿Qué ocurre?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Esto. Todo esto.
+[name="Anna"]  Llevamos ocho días encerrados en esta escuela. Todo sigue empeorando.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Todo es por ese primer incendio. Si no fuera por el incendio...
+[Character]
+[Dialog]
+Después de que el incendio destruyera una de las despensas, los estudiantes nobles de la Escuela Secundaria n.º 4 ocuparon la otra. Y luego empezaron a saquear.
+Todavía se ve a los plebeyos peleándose por comida.
+La escuela parece una zona de guerra. Escombros y grafitis por todas partes. Y cada noche transcurre con el sonido de chicos gritando, chillando, llorando.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Quizá, ¿pero no crees que ese incendio iba a pasar tarde o temprano?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  ¿Estás diciendo que alguien lo provocó a propósito?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  No. Hmm. ¿Cómo lo digo...? Déjame pensar.
+[name="Anna"]  Es más bien que aquello que el incendio representa habría llegado pasara lo que pasara.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  De algún modo entiendo todavía menos.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Incluso sin el incendio, algo habría pasado que nos habría hecho entrar en pánico a todos... ¿Así queda más claro?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Qué raro. Habrán sido los malos los que provocaron el incendio. Los malos...
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Siempre hay malos.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  ......
+[Character]
+[Dialog]
+No creo que eso sea correcto. Pero tampoco sé cómo discutírselo.
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  Una vez leí un libro que decía que la naturaleza humana es malvada.
+[name="Anna"]  En su momento me pareció extraño. Hemos construido sociedades tan civilizadas. Vivimos vidas de orden y moralidad. ¿Cómo podemos ser malvados por naturaleza?
+[name="Anna"]  Fue con eso en mente que logré reunir el valor para juntar a todos y mantener el orden.
+[name="Anna"]  Pero las cosas siguieron empeorando. Y yo no hice nada al respecto.
+[name="Anna"]  No restauré el orden. No salvé a nadie. Y sin ti, mis compañeros quizá ya me habrían matado...
+[name="Anna"]  Soy una inútil.
+[Character]
+[Dialog]
+Su voz se tambalea al borde del llanto.
+¡Aaagh, lo empeoré muchísimo!
+Da igual. No sé una mierda de moral, orden, sociedad ni nada de eso. Pero entiendo a qué va, así que más vale que empiece a hablar.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Lo que dices es que ahora crees que todos hacen cosas malas, ¿no? ¿Incluida yo?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ...No es lo que quise decir.
+[Character]
+[Dialog]
+Ahora suena sorprendida. Ja, con esa le di bien.
+¡Peleo mucho, pero siempre se lo merecen!
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Bueno, no te pongas triste. Yo te ayudo.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ¿...Lo harás?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Soy tu líder. Y tú quieres hacer el bien. Claro que te ayudaré.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ...Gracias, Sonya.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Oye, ¿no es costumbre que un grupo reciba un nombre nuevo cuando tiene un líder nuevo? ¿Se te ocurre algo?
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Vayamos con... el 'Grupo de Autogobierno Estudiantil de Ursus'.
+[Character]
+[Dialog]
+...Probablemente no debí esperar mucho de una alumna modelo.
+Pero supongo que un nombre directo y sin adornos como ese está bien, de vez en cuando.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Muy bien. Desde este día, se nos conocerá como el 'Grupo de Autogobierno Estudiantil de Ursus'. Yo lidero el grupo, y tú eres mi consejera.
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ...Bien.
+[Character(name="char_115_headbr_9#11")]
+[name="¿Sonya?"]  Oíste el alivio en su voz, y eso te hizo feliz.
+[name="¿Sonya?"]  Porque por fin protegiste algo. Te ganaste la confianza de alguien. Empezaste a sentirte como una líder de verdad, como una heroína de esas novelas.
+[Character]
+¿Quién eres?
+[Character(name="char_115_headbr_9#11")]
+[name="¿Sonya?"]  Soy tú. ¿Estás ciega?
+[Character]
+[Dialog]
+Cierto, sí es idéntica a mí... ¿Pero por qué me estoy machacando así a mí misma?
+Y me da escalofríos cómo siempre dice lo que estoy pensando. Por no hablar de su tono de voz espeluznante.
+[Character(name="char_115_headbr_9#11",name2="char_115_headbr_9",focus=1)]
+[name="¿Sonya?"]  Para mí tampoco es divertido. Pero cada vez que recuerdo esta noche, me dan ganas de reírme de mí misma.
+[name="¿Sonya?"]  ¿Eso es culpa mía? ¿O tuya?
+[name="¿Sonya?"]  No lo sé. Y no te lo voy a preguntar.
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ......
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=1)]
+[name="¿Sonya?"]  Me da miedo que digas que fue culpa tuya. Y me da el mismo miedo que digas que fue mía.
+[Character(name="char_115_headbr_9#11",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  ......
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+De repente me doy cuenta de que el suelo bajo mis pies se ha convertido en un vacío sin fondo.
+Y empiezo a caer.
+Mientras caigo, oigo voces inconexas que gritan.
+[name="???"]  ¡Piénsalo, Anna! ¡Sonya sola no puede protegernos a todos!
+[name="???"]  La única opción es unirnos a ellos.
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  Sonya odia a los aristócratas, Vika.
+[Character]
+[name="???"]  ¿¡Entonces vas a arriesgar la vida de todos nosotros!?
+[Character(name="char_195_glassb_2")]
+[name="Anna"]  Yo...
+[Character]
+[Dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Es entonces cuando la oscuridad empieza a tragarme.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0.7, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", crossfade=3,volume=0.4)]
+Me dejo caer desde la ventana del segundo piso, aterrizando firme en el suelo.
+Me atraparán si voy por la entrada principal, así que este es mi único camino.
+Hay algo que tengo que hacer. Algo muy importante para mí.
+Entiendo a Anna. La idea de Vika tiene sentido. Y no soy tan creída como para pensar que puedo con todos esos nobles de mierda yo sola.
+Al menos, no podría con ellos de frente.
+Seguro que están dormidos a estas horas de la noche. Es el momento de acabar con todos de una vez por todas.
+Bueno, quizá matarlos a todos sea demasiado. Capturar a su líder debería bastar. Pero en realidad tendré que cortar la cabeza para que muera el cuerpo, al menos...
+[Dialog]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Delay(time=0.65)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=120, fadeout=true, block=true)]
+[name="Estudiante A"]  ¡Por favor, suéltenme!
+[name="Estudiante B"]  ¡Auxiliooo!
+[name="Estudiante C"]  ¡Entreguen la comida que han estado acaparando!
+[name="Estudiante A"]  ¡No... no tenemos comida, lo juro!
+[name="Estudiante B"]  ¡Por favor!
+[Dialog]
+No voy a salvarlos.
+No solo porque esté ocupada. Tampoco me importa.
+He visto mucho de esto estos últimos dos días.
+Salvé a unos cuantos. Y ahora tenemos más chicos metidos en el aula que cuando Anna apareció con sus compañeros.
+Así que Anna tuvo que escuchar a Vika.
+Pero la verdad es que, aunque le dijo que a mí no me gustan los nobles, en realidad es Anna quien odia a los aristócratas más que nada.
+Cuando esos malnacidos se quedaron con la última reserva de comida y dejaron al resto de los chicos peleándose por las sobras, esa fue la gota que colmó el vaso para Anna.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Ella no quiere unirse a ellos.
+[Character]
+[Dialog]
+Y desde luego yo no puedo hacerla cambiar de opinión. Así que estaría bien que la causa de todas sus preocupaciones simplemente... desapareciera.
+Pienso para mis adentros, mientras sigo adelante, dejando que los gritos se apaguen a mis espaldas.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¿Hm? Ese árbol seguía en pie ayer. ¿Quién se aburre tanto como para andar talando árboles, yo...?!
+[Character]
+[Dialog]
+De repente tropiezo con algo, y apenas logro mantenerme en pie.
+Bajo la vista y veo una señal de tránsito caída, ya cubierta de grafitis ilegibles.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Hrm.
+[Character]
+[Dialog]
+Solo han pasado diez días desde que nos encerraron aquí, pero la escuela parece abandonada desde hace años.
+Paredes picadas, grafitis, basura, sangre...
+La verdad, lo odio. Y no sé cuándo acabará por fin.
+Agacho la cabeza y sigo adelante, hacia la base de esos niños ricos de mierda. Está en este almacén, con lo último de nuestra comida.
+¿Y a quién veo ahí de pie? A mí.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¿Quién eres?
+[Character(name="char_115_headbr_9#11")]
+[name="¿Sonya?"]  Soy tú.
+[Character]
+[Dialog]
+No sé bien por qué, pero la verdad es que no me sorprendió tanto.
+[Character(name="char_115_headbr_9#11")]
+[name="¿Sonya?"]  Vas a irrumpir en este almacén en un minuto.
+[name="¿Sonya?"]  Querías ir directa a por su líder, pero nunca se te dio bien moverte a escondidas, así que te atraparon, y tuviste que enfrentarte a una falange de niños ricos.
+[name="¿Sonya?"]  Eres fuerte, Sonya. Casi lograste abrirte paso entre ellos.
+[name="¿Sonya?"]  Pero.
+[name="¿Sonya?"]  Pero siempre has sido tan imprudente. Tiraste un precioso candelabro, y, bueno...
+[name="¿Sonya?"]  Fwooom——
+[Character]
+[Dialog]
+Mi doble desaparece de repente, y lo único que veo ante mí es un rojo puro y ardiente.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Yo provoqué el segundo incendio.
+[name="Sonya"]  Las llamas destruyeron la fortaleza de los nobles, y toda la comida con ella.
+[name="Sonya"]  No se pudo salvar nada. Y en palabras de Anna, el incendio derribó la última barrera que contenía la lucha indiscriminada y caótica entre los estudiantes que vino después.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Estudiante A"]  ¡Los aristócratas de la Escuela Secundaria n.º 4 ya no están! ¡Agarren lo que puedan!
+[name="Estudiante B"]  ¡Vi a esos nobles por allá! ¡Mátenlos antes de que escapen!
+[name="Estudiante C"]  ¡Atrás! ¡Llevo tres días sin comer! ¡Estoy buscando comida!
+[name="Estudiante B"]  ¿¡Qué acabas de decir!?
+[name="Estudiante C"]  ¡Dije que te alejes de mí, maldita sea!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  La escuela se hundió aún más en el caos. Ahora ningún lugar es seguro.
+[name="Sonya"]  Algunos de nuestro Grupo de Autogobierno han desaparecido. Vika nunca volvió.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Estudiante A"]  ¡Lárgate!
+[name="Estudiante B"]  ¡Es mío!
+[name="Estudiante C"]  Ah... agh... ayuda...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Un día, no recuerdo cuál, Reunion se marchó de repente.
+[name="Sonya"]  Pero en realidad nunca hicieron nada más que encerrarnos dentro. Y el caos continuó, como si los estudiantes ni siquiera notaran que se habían ido.
+[name="Sonya"]  Como si estuvieran disfrutando del caos.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  ¡Oigan, los de Reunion que vigilaban la escuela ya no están!
+[Character(name="char_194_rosali_1#2", name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Hm...
+[Character(name="char_194_rosali_1#2", name2="char_195_glassb_2",focus=1)]
+[name="Rosalind"]  ¡Por fin podemos irnos! ¿Por qué no pareces emocionada, Anna?
+[Character(name="char_194_rosali_1#2",name2="char_197_poca_1#2",focus=2)]
+[name="Natalya"]  Ya no importa.
+[name="Natalya"]  Desde el primer incendio, nada de esto tuvo que ver con Reunion.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Pero no estábamos listos para escapar del caos. Y al día siguiente llegó la Catástrofe.
+[name="Sonya"]  La Catástrofe sacudió a todos.
+[name="Sonya"]  Fue entonces cuando quedó claro que todos podían marcharse.
+[name="Sonya"]  Fue también entonces cuando nos dimos cuenta de que las cosas estaban aún peor fuera de la escuela.
+[dialog]
+[Background]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Image(image="avg_9_3",xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[ImageTween(xFrom=0, yFrom=0, xTo=-30, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1.3, yScaleTo=1.3,duration=20, block=false)]
+[name="Natalya"]  ¿Esto es... una Catástrofe...?
+[name="Anna"]  ¿Qué demonios pasó...?
+[name="Lada"]  ¡Aaaaaahhh! ¡Tengo miedo!
+[name="Rosalind"]  ¡Anna, tenemos que salir de aquí ya!
+[name="Anna"]  Pero... ¿a dónde podemos ir?
+[Dialog]
+[image]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Sonya"]  Después de eso, nos refugiamos en la parte de la ciudad que no estaba invadida por el Originium, escondiéndonos de otros supervivientes, escondiéndonos de Reunion.
+[name="Sonya"]  Al final, un escuadrón de Rhodes Island nos rescató y nos llevó a su base.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_013_riop")]
+[name="Operador de Vanguardia"]  ¿¡Quién anda ahí!?
+[dialog]
+[Character]
+[Character(name="char_115_headbr_9#6",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Sonya"]  ......
+[Character(name="char_013_riop")]
+[name="Operador de Vanguardia"]  ¿¡Una niña!?
+[name="Operador de Vanguardia"]  ¡Está armada!
+[Character(name="char_115_headbr_9#6")]
+[name="Sonya"]  ...Vete al carajo.
+[Character(name="char_013_riop")]
+[name="Operador de Vanguardia"]  ¡Espera, estamos aquí para rescatar supervivientes!
+[Character(name="char_115_headbr_9#5")]
+[name="Sonya"]  ...¿Eh?
+[Character(name="char_013_riop")]
+[name="Operador de Vanguardia"]  Cálmate. Somos de una organización llamada Rhodes Island. Ahora estás a salvo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Sonya"]  Sobreviví. Sobrevivimos.
+[name="Sonya"]  Pero no logré acabar con todas las preocupaciones de Anna. La verdad, le fallé.
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Sonya, los estudiantes nunca se habrían vuelto así sin el incendio.
+[playMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.4)]
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  ¡F- fue un accidente!
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  No te culpo, Sonya. Pero si lo hubieras hablado conmigo antes...
+[Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
+[name="Sonya"]  Solo quería que pudieras dormir por las noches.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=1)]
+[name="Istina"]  Zima, sigo dispuesta a confiar en ti.
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Pero no sé cómo hablar contigo de estas cosas.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_indoor_u",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9#11", name2="char_115_headbr_9",focus=1)]
+[name="¿Sonya?"]  Eres culpable.
+[Character(name="char_115_headbr_9#11", name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  No lo soy.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1#6", name2="char_115_headbr_9",focus=1)]
+[name="Gummy"]  Mereces morir.
+[Character(name="char_196_sunbr_1#6", name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  No fue para tanto.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_197_poca_1", name2="char_115_headbr_9",focus=1)]
+[name="Rosa"]  Me dejaste ir porque te sentías culpable.
+[Character(name="char_197_poca_1", name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  No quería matarte.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_indoor_u",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9#4",focus=1)]
+[name="Rosalind"]  No te machaques. Solo cometiste un error.
+[Character(name="char_194_rosali_1", name2="char_115_headbr_9#4",focus=2)]
+[name="Sonya"]  ¡No puedo dejar de pensar en ello!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=1)]
+[name="Anna"]  Te odio.
+[Character(name="char_195_glassb_2", name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  Yo...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9#4")]
+[name="Sonya"]  ¡Waaaaahhhh!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_115_headbr_9#4")]
+[name="Zima"]  ...¡aaaaaaaaaaaahhh!
+[dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[Character(name="char_115_headbr_9#4")]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Zima"]  *Vomita*...
+[name="Zima"]  ¡*Vomita*...!
+[name="Zima"]  Otra vez ese sueño.
+[name="Zima"]  Anna, yo...
+[name="Zima"]  Yo...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+La chica de pelo castaño se recuesta contra el lavabo y mira por la ventana. La luna se ve preciosa esta noche.
+[Character(fadetime=1)]
+[Dialog]
+[Blocker(fadetime=1.5,block=true)]
+[Image]

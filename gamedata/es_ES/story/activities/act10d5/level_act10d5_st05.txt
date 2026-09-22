@@ -1,0 +1,949 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Leto: Desvaríos y secretos
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+Centro de Entrenamiento de Rhodes Island
+Sala de Entrenamiento de Combate Cuerpo a Cuerpo Individual
+[Dialog]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Delay(time=0.55)]
+[Character(name="char_194_rosali_1#2")]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=120, fadeout=true, block=true)]
+[name="Leto"]  ¡Hyah!
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Demasiado lenta.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿En serio? ¿Entonces por qué bloqueaste? Ahórrate la charla.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Métenos al ring y te tumbo en el primer asalto.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  No estoy tan segura.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Qué tal esto, Leto: me das otra serie. Si me aciertas un buen golpe, te doy un premio. ¿Te parece?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Sí, claro.
+[name="Leto"]  ¡Toma esto!
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Sí, nada mal. Más potencia ahí.
+[name="Beehunter"]  Y respiración constante.
+[name="Beehunter"]  Mi turno. ¡Por el premio!
+[name="Beehunter"]  ¡Oraoraora!
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadetime=0.4, block=true)]
+[PlaySound(key="$fightgeneral")]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[delay(time=1)]
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡Mmh!
+[name="Leto"]  Fiu, *tos,* *carraspeo...*
+[name="Leto"]  ¡Shura! ¡Tú...!
+[name="Leto"]  *Tos* *tos* *carraspeo...* Fiu... uf.
+[name="Leto"]  ¿¡Me puedes enseñar ese movimiento!?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Ah, enseñar puedo. ¿Pero tú puedes aprender?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Solo es lanzar los puños un poco. ¿Qué hay que aprender?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Es un truco que uso contra esos 'bichos' cuando saco miel. También funciona bien con los cabrones espinosos del ring.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿En serio?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Ah, sí. Nocaut total, siempre. ¿Cómo si no?
+[name="Beehunter"]  Si de verdad quieres aprender, sal afuera y saca algo de miel. Lo entenderás rápido.
+[name="Beehunter"]  Confía en mí.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Eh? Nah, ni loca.
+[name="Leto"]  Tú eres la Beehunter.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  La Beehunter es una chica de Ursus que pelea por su vida. ¿Pero si hablamos del futuro? Yo apuesto por la pequeña Leto.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Jeje, eso sí me gusta oírlo.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Bien, se acabó el descanso, ven a pelear conmigo.
+[name="Beehunter"]  Claro que si prefieres que te den una paliza, también podemos. No me importa pasar el resto del tiempo de sala haciéndote mi saco de boxeo.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Tú espera, Shura. ¡Esta vez te doy!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Uuh——
+[name="Beehunter"]  Si no puedes darme con los puños, ¿por qué no agarras un arma?
+[Character(name="char_194_rosali_1#4",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Vamos, tengo mi orgullo, Shura.
+[name="Leto"]  Aunque las armas de la sala de entrenamiento tienen seguros. Que te den con ellas solo duele un poco.
+[name="Leto"]  Agarra tú una también. Practicamos.
+[Character(name="char_194_rosali_1#4",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Claro.
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Manoplas para ti?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  A mucha gente del ring le gustan las armas de asta.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Vaya, por fin nos ponemos serias, ¿eh?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Hay dos formas de lidiar con alguien que usa un arma de asta, ¿sabes?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Ni idea. Enséñame.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Claro.
+[Character]
+[PlaySound(key="$radio")] 
+[name="Anuncio"]  Le quedan——veinte minutos——de tiempo en esta sala de entrenamiento. Use su tiempo con prudencia y prepare la sala para el uso de otros operadores. Repito: Le quedan——
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Se nos acaba el tiempo. ¡Bien, vamos!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡Vamos!
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  ¡Qué rápida!
+[name="Leto"]  Gah.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_137_brownb_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Beehunter"]  Glup——
+[Character(name="char_194_rosali_1#4",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Glup glup, aaahhh——qué dulce.
+[Character(name="char_194_rosali_1#4",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  No te bebas tanta agua justo después de entrenar. Te van a dar calambres a medianoche.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Ese es problema de la Leto del futuro. Ahora mismo se siente increíble.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Qué tal? ¿Aprendiste algo hoy?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Sí.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Jeje. Suéltalo.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Nunca, jamás te acerques a una boxeadora.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Las manoplas solo están ahí para asustarte.
+[name="Beehunter"]  Solo fui a por ti con los hombros y los codos. Además llevas equipo de protección. Imposible que te hayas lastimado.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Pero no pude bloquearte ni una vez, Shura.
+[name="Leto"]  ¿Qué clase de entrenamiento hiciste para ser tan rápida? Tienes que enseñarme.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Peleé mucho, no me morí. Tachán.
+[name="Beehunter"]  Recibe suficientes palizas y aprenderás por dónde te va a querer atacar alguien.
+[name="Beehunter"]  Y si no, acabas en la basura bastante rápido.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Y yo? ¿Acabo en la basura?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Me tienes a mí y a tus hermanas cuidándote. Si alguna vez acabas en un contenedor de basura, iremos a sacarte.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Lo dices como si yo fuera basura.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Jajaja. No te agobies, Leto. Todavía eres una cría. Acumula algo de experiencia y serás mucho más fuerte. Sin duda.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡No me trates con condescendencia! ¡Yo incluso——!
+[name="Leto"]  (Murmurando) Yo incluso le planté cara a Reunion.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Eh?
+[name="Beehunter"]  (En voz baja) ¿Por qué no había oído esto antes? No te lo estás inventando, ¿verdad?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Para nada.
+[name="Leto"]  ¿Qué tal esto? Vamos a asearnos, conseguimos algo de comer, nos ponemos cómodas, y te cuento toda la historia.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Me parece bien. Le pedí a Logística que me preparara una bebida de miel hace un par de días. Momento perfecto.
+[name="Beehunter"]  Y Dur-nar, oí que preparó unos bocadillos brutales el otro día. Se rumorea que te vende algunos si le das la contraseña.
+[name="Beehunter"]  ¿Listas? Rompan.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Bien. Nos vemos en el dormitorio.
+[name="Leto"]  ¡Oye, espera!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Qué pasa?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Obvio.
+[name="Leto"]  (En voz baja) ¿Cuál es la contraseña? Siempre eran Gummy y Su Señoría las que hacían estas cosas. No sé cómo.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Ah, ven aquí, te la digo.
+[name="Beehunter"]  (En voz baja) Escucha bien. Solo lo voy a decir una vez. No preguntes.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  (En voz baja) Entendido.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  (En voz baja) La Red de Bocadillos de Dur-nar cubre toda Rhodes Island. Pero por seguridad, solo entras por invitación de alguien en quien la red confíe. Yo normalmente voy por medio de Haze. Es discretísima.
+[name="Beehunter"]  (En voz baja) Tocas seis veces. Largo, corto, largo, largo, corto, largo. ¿Entendido?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  (En voz baja) Entendido.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  (En voz baja) Luego conversas cuando abran la puerta. Cuando digan la palabra 'glockenspiel', tienes que responder de inmediato: 'este está bastante bueno'. Entonces te dan el precio y ya está.
+[name="Beehunter"]  (En voz baja) No lo olvides: 'Glockennnspiel', largo en el medio, corto al final.
+[name="Beehunter"]  (En voz baja) ¿Entendido?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  (En voz baja) Entendido.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Bien. Tengo que ducharme. Luego nos vemos.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Nos vemos.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[delay(time=2)]
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  Mmmm——
+[name="Leto"]  ¿Tengo que pasar por todo eso solo para conseguir unos bocadillos?
+[name="Leto"]  Qué fastidio. Mejor que lo haga Gummy.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+Una hora después...
+Dormitorios de Rhodes Island
+Habitación de Leto y Beehunter
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Shura, conseguí los——¡Oye, ya empezaste a beber!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Me aburrí esperándote. Pero compré bastante. ¿Por qué no puedo ir calentando un poco?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Sí, está bien. La verdad es que piqué un poco de los bocadillos de vuelta. Están buenos.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Crees que la Beehunter se conformaría con menos?
+[name="Beehunter"]  Vamos, comamos, juguemos una mano o dos para calentar, y luego nos cuentas tu gran aventura.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  De acuerdo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Pareja de sietes.
+[Character(name="char_194_rosali_1#1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Pareja de reyes.
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Full.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Póker.
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Escalera de color.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Escalera real de color.
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  20, me planto.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  As y 4. Decisión difícil.
+[name="Leto"]  Carta.
+[name="Leto"]  5.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Empate? Bueno, otra vez.
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡Me planto!
+[name="Leto"]  Carta.
+[name="Leto"]  7.
+[name="Leto"]  Carta.
+[name="Leto"]  3.
+[name="Leto"]  Carta.
+[name="Leto"]  As.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Gano yo.
+[Character(name="char_137_brownb_1")]
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=false)]
+[name="Beehunter"]  ¡Me rindo!
+[name="Beehunter"]  Espera.
+[name="Beehunter"]  ¿Qué pasa hoy?
+[name="Beehunter"]  Siempre tienes una suerte de mierda con las cartas.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Eh——?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Oye——
+[name="Beehunter"]  ¿Tienes la cara roja?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Roja?
+[name="Leto"]  ¿Estoy borracha?
+[name="Leto"]  Para nada. 
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Llevamos solo tres o cuatro latas, y esto no tiene alcohol.
+[name="Beehunter"]  ¡Debes de estar borracha de miel igual que yo!
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Eso existe?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¡Sí! Y a ti te está pegando mucho más fuerte que a mí.
+[name="Beehunter"]  Y yo que pensaba que era la única que se emborrachaba con miel. ¡Je, jajajaja!
+[name="Beehunter"]  ¡Ah, esto es genial!
+[Character(name="char_194_rosali_1#4",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿De qué hablas? ¡La grande y poderosa Leto jamás se emborracharía *hip*!
+[Character(name="char_194_rosali_1#4",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Sí, sí, Diosa Emperatriz Leto. ¡Todos salve! ¡Jajajajaja!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿De qué te ríes? Si ya terminamos con las cartas, ven aquí y escucha la historia de Leto la Grande.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Sí, Su *risita* Majestad, Leto la Grande. Jeje.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Escucha bien, Bee——Beehunter. La G-grandiosa habla.
+[name="Leto"]  Nnnng——
+[name="Leto"]  ¡Bien, empecemos por el principio!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Me estoy divirtiendo demasiado hoy. Tengo que grabar esto.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿¡A dónde vas, Beehunter!?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¡A traerle a la Grandiosa algo para mojar el gaznate!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Ah, sí?
+[Dialog]
+[Character]
+[PlaySound(key="$doorknockquite", volume=1)]
+[delay(time=1)]
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  ¿¡Quién osa!?
+[Character]
+[name="Zima"]  Yo. Gummy dijo que la mandaste a por bocadillos. Vengo por mi parte.
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  ¡Ah!
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite", volume=1)]
+[Delay(time=1)]
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Claro, toma.
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Genial. Gracias.
+[name="Zima"]  ¿Hm?
+[name="Zima"]  ......
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  ¿Qué? ¿Tengo algo en la cara de la Gran... eh, en mi cara?
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Comiste miel?
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  ¿Ah, miel? N- no. No seas tonta.
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Dónde está Beehunter?
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  Ella, eh, no está aquí.
+[Dialog]
+[Character]
+[Character(name="char_137_brownb_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Beehunter"]  Oh, Poderosa Leto——Te he traído tus refrigerios.
+[name="Beehunter"]  Hola, Zima, ¿qué tal?
+[Character(name="char_137_brownb_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Hmph.
+[name="Zima"]  Beehunter, ven. Déjame preguntarte algo.
+[Character(name="char_137_brownb_1",name2="char_115_headbr_9",focus=1)]
+[name="Beehunter"]  ¿Ah, sí? ¿Qué pasa?
+[Character(name="char_137_brownb_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  ¿Qué le pasa a esa?
+[Character(name="char_137_brownb_1",name2="char_115_headbr_9",focus=1)]
+[name="Beehunter"]  ¿Ella? Ah, está borracha de miel.
+[name="Beehunter"]  Y le está pegando mucho más fuerte de lo que me pega a mí. Se supone que me está contando una historia sobre sus aventuras de antes.
+[name="Beehunter"]  ¿Tú también quieres escuchar? O te la puedo grabar.
+[Character(name="char_137_brownb_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Nah.
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Zima——devuélveme a Beehunter——
+[name="Leto"]  Tengo que——nng, tengo que contarle mis gloriosas historias de guerra——
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=2)]
+[name="Zima"]  Sí, claro, quédatela.
+[name="Zima"]  Me voy. Que te diviertas, Leto.
+[Character(name="char_194_rosali_1",name2="char_115_headbr_9",focus=1)]
+[name="Leto"]  ¡De acuerdo!
+[name="Leto"]  ¡Nos vemos, General Zima!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[delay(time=1)]
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  *Suspiro*.
+[name="Beehunter"]  Vamos, Leto. Deja de quedarte en la puerta haciendo el ridículo.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Leto qué?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Bien, bien. Leto la Grande y Poderosa, métete adentro de una vez.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Suficiente.
+[Dialog]
+[Character]
+[name="???"]  Eh, ¿disculpen?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1")]
+[name="Beehunter y Leto"]  ¿Eh?
+[Character(name="char_137_brownb_1")]
+[name="Beehunter"]  ¿Qué pasa, Mousse?
+[Character(name="char_185_frncat_1")]
+[name="Mousse"]  Eh, bueno, perdón por molestarlas tan tarde. Pero, si no es mucha molestia, ¿creen que podrían tener su conversación dentro de su habitación?
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Eso es exactamente lo que quiero haceeeeer.
+[Character(name="char_137_brownb_1")]
+[name="Beehunter"]  Perdón por el ruido, de verdad. Déjame cerrar nuestra puerta.
+[Character(name="char_185_frncat_1")]
+[name="Mousse"]  ¡La que lo siente soy yo!
+[Character(name="char_185_frncat_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  No, de verdad.
+[Character(name="char_194_rosali_1#3")]
+[name="Leto"]  ¡Nnnnnng!
+[Dialog]
+[Character]
+[PlaySound(key="$doorclosequite", volume=1)]
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Uf, estás más borracha que borracha.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Si tú lo dices.
+[name="Leto"]  ¡Beehunter!
+[name="Leto"]  ¡Otra lata!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Claro, ¿por qué no? O a lo grande o a casa.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡GLUP——GLUP——Ahhh!
+[name="Leto"]  Genial.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Tan buena está?
+[name="Beehunter"]  Oigamos la historia.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Sí, ¿por dónde íbamos?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Ni habías empezado.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Ah, vaya. Entonces supongo que mejor me arremango y empiezo otra vez.
+[name="Leto"]  Hm...
+[name="Leto"]  Pero probablemente debería beber algo primero.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¡Oye!
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", crossfade=3,volume=0.4)]
+[Character(name="char_194_rosali_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Rosalind"]  Ah——
+[name="Rosalind"]  Me vendría bien otro refresco helado.
+[name="Rosalind"]  Si esa pandilla de nobles no hubiera desmontado la máquina expendedora.
+[name="Rosalind"]  Glup, glup glup.
+[name="Rosalind"]  Fiu——
+[name="Rosalind"]  ¿Hm?
+[name="Rosalind"]  ¿Otro que se cree que puede salir del campus?
+[name="Rosalind"]  Los tipos de las máscaras lo empujaron de vuelta adentro. Tsk.
+[Character]
+[name="Estudiante A"]  Oye, ¿tú no eres Rosalind, la de la clase 3?
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Sí, soy yo.
+[Character]
+[name="Estudiante B"]  Somos de la Sociedad Benéfica Peterheim. Nuestro jefe, Andrey el Grande, quiere que te unas a nosotros.
+[name="Estudiante B"]  ¿Qué dices? ¿Lo piensas?
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Nah. No me interesa.
+[Character]
+[name="Estudiante A"]  ¿De verdad nos estás rechazando?
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  ¿En los últimos dos días como cuatro o cinco pandillas distintas han intentado ficharme?
+[name="Rosalind"]  Ni siquiera entiendo por qué tenemos tantos grupitos. Y todos con nombres tan grandes y duros.
+[Character]
+[name="Estudiante B"]  ¿Eh? ¿Qué se supone que significa eso...?
+[name="Estudiante A"]  Uy, no la provoques.
+[name="Estudiante A"]  Rosalind, ahora hay chicos de un montón de escuelas distintas aquí. Hasta mandaron a un montón de una escuela de nobles a la nuestra.
+[name="Estudiante A"]  Sabes a cuántos de nuestros compañeros los pisotean esos nobles de mierda.
+[name="Estudiante A"]  ¿No es hora de que nos unamos todos?
+[name="Estudiante A"]  Andrey dice que con tal de que vengas, te tratará bien.
+[name="Estudiante A"]  Tendrás comida, bebida, y lo que sobre también puede ser para ti.
+[name="Estudiante A"]  Solo piénsalo, 'General Leto'.
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Hm...
+[name="Rosalind"]  Bueno...
+[name="Rosalind"]  Bien, acepto tus condiciones.
+[Character]
+[name="Estudiante B"]  ¡Genial! ¡Gracias por ser tan razonable!
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Espera un momento. No te emociones tanto.
+[name="Rosalind"]  Tienes que conseguirme lo que quiero.
+[Character]
+[name="Estudiante A"]  Continúa.
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Busca a Sonya y haz que sea ella quien me pida unirme.
+[Character]
+[name="Estudiante A"]  Eh...
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Eso es todo lo que tienes que hacer, y me pongo tu brazalete.
+[Character]
+[name="Estudiante A"]  ......
+[name="Estudiante A"]  ......
+[name="Estudiante A"]  Tenemos que pensarnos esta.
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Claro. Tómense su tiempo.
+[name="Rosalind"]  Nos vemos.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[delay(time=1)]
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Lidio con estos mocosos aburridos todos los días.
+[name="Rosalind"]  Qué fastidio.
+[name="Rosalind"]  ¿Hm?
+[name="Rosalind"]  Vamos, ¿tanto bebí hace un rato?
+[name="Rosalind"]  ¿Ya no queda?
+[name="Rosalind"]  *Suspiro*.
+[name="Rosalind"]  Esto apesta.
+[Character]
+[name="Estudiante noble"]  Tú eres Rosalind.
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Otra vez lo mismo...
+[name="Rosalind"]  Sí, soy yo.
+[Character]
+[name="Estudiante noble"]  Tú, tú y tú, vayan.
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Ah, ¿vamos a pelear?
+[name="Rosalind"]  Vaya.
+[name="Rosalind"]  Pues muy bien.
+[name="Rosalind"]  ¡Esto es mucho más divertido que hablar!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$fightgeneral", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Nunca había probado estos. Siempre me daba pereza lidiar con la cáscara.
+[name="Leto"]  Mm, no sabía que estos frutos secos estaban tan buenos.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Entonces eso significa que ahí dentro no solo había chicos de tu escuela?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Se llevaron a estudiantes de un montón de escuelas cercanas distintas y los encerraron con nosotros.
+[name="Leto"]  Incluidos los gopniks de la escuela de Su Señoría.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Perdona, ¿de cuál estás hablando ahí?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Ah, esa es Natalya. Una de las chicas de Ursus que están con nosotras.
+[name="Leto"]  Simplemente me acostumbré a llamarla así.
+[name="Leto"]  No es mala chica. Pero en aquel entonces andaba metida en unas mierdas muy jodidas.
+[name="Leto"]  Todas nos acordamos.
+[name="Leto"]  Oye, Beehunter, hazme otra vez eso.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿El qué?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Lo que acabas de hacer.
+[name="Leto"]  Ese truco donde rompes los frutos secos con las manos.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Dame uno.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Toma.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Mira.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[stopmusic]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$fightgeneral", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", crossfade=3,volume=0.4)]
+[name="Estudiante"]  ¡N- no me mates!
+[name="Estudiante"]  ¡Aieeeee!
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=1)]
+[Character(name="char_194_rosali_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Rosalind"]  Cobarde.
+[name="Rosalind"]  *Escupe*.
+[name="Rosalind"]  Son malísimos apagando incendios, pero desde luego se les da bien robar.
+[name="Rosalind"]  Espera, no.
+[name="Rosalind"]  Yo tampoco tengo comida aquí. ¿Por qué siempre vienen a por mí?
+[name="Rosalind"]  Todos son gopniks de nuestra escuela.
+[name="Rosalind"]  Ninguno de estos mocosos lleva brazalete. ¿Cómo voy a saber si son de Andrey o de Vasily?
+[name="Rosalind"]  Me llevaré unos pedazos, solo para llenar el estómago.
+[name="Rosalind"]  No puedo seguir así. Me molestan todas las noches.
+[name="Rosalind"]  La basura de la n.º 4 se apoderó de la cámara frigorífica de la cafetería, y el otro comedor se fue en humo.
+[name="Rosalind"]  Las bebidas van a ser el menor de mis problemas si esto sigue. No tendré ni comida ni agua.
+[name="Rosalind"]  Tengo que pensar...
+[name="Rosalind"]  Hm...
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  ¿Y si fuera con Sonya?
+[name="Rosalind"]  Ya tiene un par de chicos allá, ¿no?
+[name="Rosalind"]  No le importará aceptar a una más.
+[name="Rosalind"]  Sí, eso es. Podría funcionar.
+[name="Rosalind"]  Le ofrezco unas cuantas latas y me deja entrar enseguida.
+[name="Rosalind"]  Buena idea.
+[name="Rosalind"]  Eso será un poco más 'estable', al menos.
+[name="Rosalind"]  ......
+[Character(name="char_194_rosali_1#4")]
+[name="Rosalind"]  Nunca habría pensado que la segunda más fuerte del mundo tendría que ir a rogarle ayuda a la primera.
+[name="Rosalind"]  ......
+[name="Rosalind"]  Pero allá podría dormir bien por la noche...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Oye, Sonya, ¿estás aquí? Quiero hablar contigo.
+[name="Rosalind"]  ¿Sonya?
+[name="Rosalind"]  Soy yo...
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  ¿¡Iep!?
+[Dialog]
+[Character]
+[Character(name="char_115_headbr_9",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Sonya"]  ......
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  ¿Sonya? ¿Q- qué pasó?
+[name="Rosalind"]  Pff.
+[name="Rosalind"]  Eh, en serio, voy a entrar.
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  ¿...Hm?
+[Character(name="char_194_rosali_1#4")]
+[name="Rosalind"]  Yo, eh, no quería... Solo quería, eh, quiero unirme a ustedes.
+[name="Rosalind"]  ¿Sonya?
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Rosalind, necesito una mano.
+[name="Sonya"]  Los que están desplomados contra la pared. Sácalos por mí.
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Oye, no habrás de verdad...
+[Character(name="char_115_headbr_9")]
+[name="Sonya"]  Tengo que vigilar este lugar. Los estoy protegiendo. No puedo irme.
+[name="Sonya"]  Te deberé una.
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Eh...
+[name="Rosalind"]  Está bien. Tú mandas.
+[name="Rosalind"]  Te traje unas cuantas latas. Son tuyas.
+[name="Rosalind"]  Y yo me encargo de... ellos.
+[Character(name="char_194_rosali_1#2",name2="char_115_headbr_9",focus=2)]
+[name="Sonya"]  Gracias.
+[Character(name="char_194_rosali_1#2",name2="char_115_headbr_9",focus=1)]
+[name="Rosalind"]  ......
+[name="Rosalind"]  Has cambiado.
+[Dialog]
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Te caíste dentro, Shura? ¿¡Quién tarda tanto en el baño!?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Bebí demasiado.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡Ajajaja! Demasiado divertido.
+[name="Leto"]  Tú también tienes toda la cara roja.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Tú también eres bastante divertida.
+[name="Beehunter"]  ¿Eh?
+[name="Beehunter"]  Mírate, ya casi no puedes ni hablar.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿¡Qué!? Todavía tengo una historia que contar.
+[name="Leto"]  ¿Por dónde iba?
+[name="Leto"]  ¿El segundo incendio?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Incendio? ¿Qué incendio? ¿Dónde está el incendio?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Ah, ah sí. Ahora me acuerdo.
+[name="Leto"]  Oye, Beehunter.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Qué?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Esa muñeca de Ursus de tamaño real que tienes, ¿crees que podrías dejarme abrazarla esta noche?
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Claro. Te la puedes quedar ahora mismo.
+[name="Beehunter"]  Atrápala.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡Uy, no la lances! ¡Así no puedo atraparla!
+[name="Leto"]  Qué pesada...
+[name="Leto"]  ¡Aaaahh!
+[Dialog]
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1#1")]
+[name="Rosalind"]  Je. ¿Eso es todo lo que tienes?
+[name="Rosalind"]  Levántate, Andrey. ¿¡Dónde quedó toda tu palabrería!?
+[Character]
+[name="Andrey"]  ......
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  ¿Se desmayó?
+[name="Rosalind"]  Bueno, al menos no pasarás hambre.
+[name="Rosalind"]  ¿A que sí? ¿¡Eh!?
+[name="Rosalind"]  Bien, el jefe está caído. ¿Alguien más...?
+[Dialog]
+[Character]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=0.5)]
+[Character(name="char_194_rosali_1#3")]
+[name="Rosalind"]  ¡Gah!
+[name="Rosalind"]  *Tos*, muy bien, así que sabes pelear sucio.
+[Character]
+[name="Estudiante"]  ¡Gah!
+[Character(name="char_194_rosali_1#3")]
+[name="Rosalind"]  ¿Crees que soy tan fácil?
+[name="Rosalind"]  ¿Crees que recibo un golpe en la nuca y caigo como en las películas?
+[name="Rosalind"]  ¿Eh?
+[name="Rosalind"]  ¡Ura!
+[Character]
+[name="Estudiante"]  ¡Ngah!
+[name="Estudiante"]  ......
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Qué.
+[name="Rosalind"]  ¿Eso es todo?
+[name="Rosalind"]  Hmph. Qué desperdicio.
+[name="Rosalind"]  Supongo que esta comida ahora es mía.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_school",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1#3",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Rosalind"]  Agh... qué dolor de cabeza.
+[Character(name="char_194_rosali_1#3",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  Perdón... Esto es culpa nuestra...
+[Character(name="char_194_rosali_1",name2="char_195_glassb_2",focus=1)]
+[name="Rosalind"]  Nah, somos un equipo. Para eso estoy aquí.
+[name="Rosalind"]  Y mira, ella no está en gran forma ahora mismo.
+[name="Rosalind"]  Así que me toca a mí, como la segunda más fuerte de Peterheim, aAAAAAAaaaagh ¡eso duele!
+[Character(name="char_194_rosali_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Lada"]  Un poquito más. Ya casi.
+[name="Lada"]  ¡Bien, listo!
+[Character(name="char_194_rosali_1",name2="char_196_sunbr_1#2",focus=1)]
+[name="Rosalind"]  Gracias.
+[name="Rosalind"]  Ese entrenamiento de los Exploradores Juveniles viene bien, ¿eh?
+[Character(name="char_194_rosali_1",name2="char_196_sunbr_1#2",focus=2)]
+[name="Lada"]  Jeje, gracias.
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Al mundo se le acaba la buena gente. Suerte de tenerte.
+[name="Rosalind"]  De verdad. Eres genial.
+[name="Rosalind"]  Si aquel policía se hubiera topado con chicas como tú, las cosas habrían acabado distinto.
+[name="Rosalind"]  ......
+[Character(name="char_194_rosali_1#2",name2="char_196_sunbr_1#6",focus=2)]
+[name="Lada"]  ......
+[Character(name="char_194_rosali_1#2",name2="char_195_glassb_2#6",focus=2)]
+[name="Anna"]  ......
+[Dialog]
+[Character]
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  (No podemos seguir así.)
+[name="Rosalind"]  (No tenemos comida suficiente. No tenemos gente suficiente.)
+[name="Rosalind"]  (Ni siquiera conmigo y con Sonya.)
+[name="Rosalind"]  (Las dos reservas de comida ya no están. Simplemente no hay bastante para comer.)
+[name="Rosalind"]  (¿Y si algún día una pandilla aparece en nuestra puerta?)
+[name="Rosalind"]  (Ni siquiera con Sonya...)
+[name="Rosalind"]  (Tengo que pensar en algo...)
+[name="Rosalind"]  (......)
+[name="Rosalind"]  (¿Supongo que podría ir a hablar con los tipos de las máscaras?)
+[name="Rosalind"]  (Ni loca. ¿Y si me convierten en uno de esos monstruos cubiertos de roca?)
+[name="Rosalind"]  (......)
+[name="Rosalind"]  (Bien puedo intentarlo.)
+[name="Rosalind"]  (Solo se vive una vez, ¿no?)
+[name="Rosalind"]   Oye, Anna.
+[Character(name="char_194_rosali_1",name2="char_195_glassb_2",focus=1)]
+[name="Rosalind"]  No nos quedan muchas raciones. Voy a salir a por más esta noche.
+[Character(name="char_194_rosali_1",name2="char_195_glassb_2",focus=2)]
+[name="Anna"]  No puedes. Estás herida. Si sales otra vez vas a——
+[Character(name="char_194_rosali_1",name2="char_195_glassb_2",focus=1)]
+[name="Rosalind"]  Soy dura. Puedo con ello.
+[name="Rosalind"]  No iré lejos. Y no le quitaré a nadie su último bocado.
+[name="Rosalind"]  No te preocupes.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_schoolyard",screenadapt="coverall")]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+Esa noche...
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Hace tanto que no vengo aquí. Hasta me emociona un poco.
+[Dialog]
+[Character]
+El corazón me late con fuerza.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  Alto.
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Este es mi antiguo dormitorio. ¿Por qué no puedo entrar?
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¿Quieres morir?
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  Si tuviera miedo de morir, intentaría encontrar una salida de la escuela. No habría razón para venir aquí.
+[name="Rosalind"]  Soy Rosalind, y quiero hablar con su líder.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  Solo si eres Infectada.
+[name="Miembro de Reunion"]  De lo contrario, ni hablar.
+[Character(name="char_194_rosali_1#2")]
+[name="Rosalind"]  ¿Y si insisto?
+[Dialog]
+[Character]
+Tengo miedo. Un miedo de muerte. Pero mi boca sigue funcionando.
+Siento que estoy mirando las fauces del infierno por culpa de mi propio orgullo.
+Y   me   encanta.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  (Desenfunda su arma).
+[Character(name="char_1508_Faust_1")]
+[name="???"]  Déjenla pasar.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¿?
+[name="Miembro de Reunion"]  (Baja su arma).
+[Character(name="char_1508_Faust_1")]
+[name="???"]  Tú, ven conmigo.
+[Character(name="char_194_rosali_1")]
+[name="Rosalind"]  Jeje, gracias.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=5)]
+¿Por qué pensé que era buena idea reunirme con el líder de Reunion?
+¿Fue porque le diría unas palabras y nos dejaría ir a todos, o nos daría comida?
+¿O iba a amenazarlo?
+¿Yo, una diminuta estudiante de secundaria?
+......
+Pero al menos...
+Tenía que intentarlo.
+......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Y... y entonces...
+[Character]
+[name="Beehunter"]  Zzzzz......
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  Y entonces el crío de cabello blanco con la sonrisa espeluznante me dijo un par de cosas y me dejó ir.
+[name="Leto"]  No lo recuerdo muy bien.
+[name="Leto"]  Algo como 'tu sufrimiento apenas ha comenzado' o 'disfruta la vida' o lo que sea.
+[Character]
+[name="Beehunter"]  Zzzzz......
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  ¿Cómo iba yo a entenderlo?
+[name="Leto"]  Luego me dejó ir, así sin más.
+[name="Leto"]  Volví al aula y dormí un rato. Al día siguiente, los tipos de las máscaras ya no estaban.
+[Character]
+[name="Beehunter"]  Zzzzz......
+[Character(name="char_194_rosali_1#4")]
+[name="Leto"]  Las cosas no mejoraron después de eso.
+[name="Leto"]  Creíamos que la vida en la escuela era dura.
+[name="Leto"]  Cuando salimos, nos dimos cuenta de que eso solo era el aperitivo.
+[name="Leto"]  Esas historias te comen viva.
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Beehunter, di algo.
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  ¿Beehunter?
+[Character]
+[name="Beehunter"]  Zzzzz......
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  Y tú que decías, decías que yo estaba borracha de miel. ¡La borracha eres tú!
+[name="Leto"]  No me lo puedo cleer. Te queas dormida sin decir nada.
+[name="Leto"]  Da igual.
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  ¿Dónde está el escenario?
+[name="Leto"]  ¡Quiero tocar!
+[name="Leto"]  Aah, aquí está mi escenario.
+[name="Leto"]  Beehunter está dormida, así que a ti te toca oír el resto de mi historia.
+[Character(name="char_194_rosali_1#4")]
+[name="Leto"]  Tengo tanto, tando que decir.
+[name="Leto"]  Fiu... uf...
+[Character]
+[name="Leto"]  Zzzzz......
+[Character]
+[name="Beehunter"]  Zzzzz......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+Al amanecer del día siguiente...
+[Dialog]
+[Character(name="char_194_rosali_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Leto"]  ——
+[name="Leto"]  !
+[name="Leto"]  ¿Por qué estoy en la cama?
+[name="Leto"]  ¿Cuándo me quedé dormida?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Levántate.
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Qué pasó, Shura?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  ¿Qué?
+[name="Beehunter"]  ¿Me vas a preguntar qué pasó?
+[name="Beehunter"]  Te tragaste bebida de miel hasta caer borracha perdida, luego robaste mi muñeca grande, te desplomaste encima de ella y babeaste todo lo que habías bebido.
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¿Eh?
+[name="Leto"]  ¿No me la lanzaste tú?
+[Character(name="char_194_rosali_1#2",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Compruébalo tú misma, dura.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  No hace falta.
+[name="Leto"]  Perdón, Shura.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Solo lávamela.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  Sí, claro, sin problema.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Voy a sacar la basura. Tú ponte a limpiar.
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
+[name="Leto"]  ¡Enseguida!
+[Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
+[name="Beehunter"]  Me voy. ¡No olvides la clase de la tarde!
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  ¡No la olvidaré!
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite", volume=1)]
+[delay(time=1)]
+[PlaySound(key="$doorclosequite", volume=1)]
+[Character(name="char_194_rosali_1#2")]
+[name="Leto"]  ¿Qué le dije ayer?
+[name="Leto"]  Probablemente algo bastante divertido.
+[Character(name="char_194_rosali_1")]
+[name="Leto"]  Por eso hoy me desperté tan fresca.
+[name="Leto"]  Hay que limpiar, desayunar, y luego buscar a alguien que me ayude a lavar a esta grandulona.
+[name="Leto"]  Sí. Nada mal.
+[name="Leto"]  Ya veré de volver a beber con Beehunter en un par de días.
+[name="Leto"]  Espera.
+[name="Leto"]  ¿Por qué está fuera mi guitarra?
+[name="Leto"]  ......
+[name="Leto"]  Ya que estamos, rasguearé unos acordes.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Character]
+[Image]
