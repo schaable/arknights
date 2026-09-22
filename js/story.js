@@ -639,46 +639,34 @@ get_char_table(false, serverString)
                 sessionStorage.setItem("userChange", false);
             });
             CURRENT_STORY = [uppercat, cat, idx].join("&");
+            localStorage.setItem("lastStory", CURRENT_STORY);
+        }
+        // Restore the story saved above. Returns false when nothing is saved or the
+        // saved story no longer exists -- stories do get removed from the game data,
+        // and an unvalidated value would fall into the CN-exclusive branch of
+        // loadFromHash and silently switch the user's server.
+        function restoreLastStory() {
+            const saved = localStorage.getItem("lastStory");
+            if (!saved) return false;
+            const [sUppercat, sCat, sIdx] = saved.split("&");
+            if (!storyTypes[sUppercat]?.includes(sCat)) return false;
+            if (!storyReview[sCat]?.infoUnlockDatas?.[sIdx]) return false;
+            history.replaceState(null, "", "#" + saved);
+            return true;
         }
         window.onhashchange = loadFromHash;
         if (window.location.hash) {
             loadFromHash();
+        } else if (restoreLastStory()) {
+            // no hash in the URL, but we have a valid saved story: pick up there.
+            loadFromHash();
         } else {
-            // select current event story; if story begins >12hrs from now, don't select it.
-            let latest_story = Object.keys(storyReview)
-                .filter(
-                    (k) =>
-                        storyReview[k].entryType != "NONE" &&
-                        (storyReview[k].remakeStartTime > 0
-                            ? storyReview[k].remakeStartTime
-                            : storyReview[k].startTime > 0
-                              ? storyReview[k].startTime
-                              : storyReview[k].startShowTime) <
-                            Date.now() / 1000 - 60 * 60 * 12,
-                )
-                .sort(
-                    (a, b) =>
-                        (storyReview[a].remakeStartTime > 0
-                            ? storyReview[a].remakeStartTime
-                            : storyReview[a].startTime > 0
-                              ? storyReview[a].startTime
-                              : storyReview[a].startShowTime) -
-                        (storyReview[b].remakeStartTime > 0
-                            ? storyReview[b].remakeStartTime
-                            : storyReview[b].startTime > 0
-                              ? storyReview[b].startTime
-                              : storyReview[b].startShowTime),
-                )
-                .slice(-1)[0];
-            let newHash = "#";
-            for (const [k, v] of Object.entries(storyTypes)) {
-                if (v.includes(latest_story)) {
-                    newHash += k;
-                    break;
-                }
-            }
-            newHash += "&" + latest_story + "&0";
-            history.replaceState(null, "", newHash);
+            // default to the start of the Main Story (Chapter 0 / Prologue).
+            // storyTypes.main only ever holds storyReview keys, so its first entry
+            // is a safe fallback on the off chance main_0 isn't present.
+            const defaultStory =
+                "main_0" in storyReview ? "main_0" : storyTypes.main[0];
+            history.replaceState(null, "", `#main&${defaultStory}&0`);
             loadFromHash();
         }
     });
