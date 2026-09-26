@@ -1,13 +1,32 @@
-# Arknights Story Reader
+# Unofficial Arknights Story Reader — Spanish Fan Translations
 
-A static, client-side reader for Arknights story scripts, served at
+A static, client-side reader for unofficial, AI-assisted Spanish fan translations
+of Arknights story scripts, served at
 <https://schaable.github.io/arknights>.
+
+## Unofficial fan project
+
+This is an **unofficial, non-commercial fan translation**. Arknights and its
+original story content are the property of Hypergryph/Yostar and their respective
+rights holders. This project is not affiliated with, sponsored by, or endorsed by
+them.
+
+The Spanish translations are fan-made with AI assistance. The maintainer reviews
+and edits them after finishing each chapter. They are not official localizations.
+Please support Arknights through its official releases and channels.
+
+The repository's MIT license covers the reader software; it does not grant rights
+to Arknights story content, translations of that content, or third-party artwork,
+music, and other game assets. All rights to the underlying game content remain
+with their respective owners.
+
+## About this fork
 
 This is a trimmed fork of [akgcc.github.io](https://github.com/akgcc/akgcc.github.io):
 the other tools that lived in the upstream repo (CC clears, randomizer, recruit
 calculator, pull history, roguelike/shop lists, tier list, polls) have been removed so
-the site is just the story reader. It also adds a **Spanish (`es_ES`) translation**
-of the Main Story.
+the site is just the story reader. This fork focuses on hosting **unofficial
+Spanish (`es_ES`) fan translations** of the Main Story.
 
 ## How it works
 
@@ -30,7 +49,7 @@ No build step and no backend — open `index.html` and the browser does the rest
 | --- | --- |
 | `index.html` | the story reader page |
 | `css/`, `js/`, `webfonts/`, `images/` | front-end assets |
-| `gamedata/es_ES/story/**` | translated story scripts |
+| `gamedata/es_ES/story/**` | unofficial Spanish fan-translated story scripts |
 | `tools/` | the translation pipeline (see below) |
 
 ## Translation
@@ -71,7 +90,10 @@ Then open <http://localhost:8000/>.
 -   https://github.com/astral4/arkdata
 -   https://github.com/hysts/anime-face-detector
 
-### If you want to support the original developer:
+### Support the upstream reader's developer
+
+These links support the upstream reader's software developer, not the creators or
+publishers of Arknights or this fork's Spanish translations.
 
 [Sponsor them on Github](https://github.com/sponsors/NeverDecaf)
 or
