@@ -236,7 +236,7 @@ Nuestra ciudad, ante nuestros propios ojos, se retorció, se deformó, estalló.
 [Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
 [name="Hechicero de Reunion"]  Oye, ¿no oí que eres de por aquí?
 [Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
-[name="Soldado de Reunion"]  ¿A ti qué te importa? Sé que tú también lo eres. Te he visto en el Barrio Viejo, Rolena la Sastra.
+[name="Soldado de Reunion"]  ¿A ti qué te importa? Sé que tú también lo eres. Te he visto en el Barrio Viejo, Rolena la Sastre.
 [name="Soldado de Reunion"]  ¿Pero qué más da? Ahora las dos somos Infectadas.
 [name="Soldado de Reunion"]  Y todos sabemos lo que hemos hecho. ¿Así que a quién le importa de dónde venimos?
 [Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
@@ -253,7 +253,7 @@ Nuestra ciudad, ante nuestros propios ojos, se retorció, se deformó, estalló.
 [Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
 [name="Hechicero de Reunion"]  Tienes razón.
 [name="Hechicero de Reunion"]  El grupo bajo el mando del viejo, Patriot, también lo han tenido crudo, ¿eh? Esos críos les han dado mucho ruido esta última semana.
-[name="Hechicero de Reunion"]  Si no hacemos algo, los estudiantes no conocerán el miedo, y tendremos a los más atrevidos buscando salir día sí y día también.
+[name="Hechicero de Reunion"]  Si no hacemos algo, los estudiantes no nos tendrán miedo, y los más atrevidos intentarán escaparse a cada rato.
 [name="Hechicero de Reunion"]  No saben cómo está la cosa fuera. No saben lo mal que se ha puesto.
 [name="Hechicero de Reunion"]  Y aparte de los pocos críos nobles, ¿de qué le sirven al movimiento?
 [name="Hechicero de Reunion"]  El Capitán nos dijo que mantuviéramos la escuela bajo control. ¿Eso era solo para proteger a los cachorritos?
@@ -266,7 +266,7 @@ Nuestra ciudad, ante nuestros propios ojos, se retorció, se deformó, estalló.
 [Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=2)]
 [name="Hechicero de Reunion"]  Suéltalo de una vez.
 [name="Hechicero de Reunion"]  Tengo curiosidad. ¿Sientes algo por la gente de aquí?
-[name="Hechicero de Reunion"]  Por mucho que te trataran antes, por cómo trataron a tus hermanos, solo porque eras Infectada... ¿No los odias?
+[name="Hechicero de Reunion"]  Después de todo lo que te hicieron a ti y a tus hermanos por ser Infectados... ¿no los odias?
 [name="Hechicero de Reunion"]  No, lo noto en tu tono. Sí que los odias.
 [Character(name="char_1002_nsabr_1",name2="char_1011_wizard_1",focus=1)]
 [name="Soldado de Reunion"]  ¡Déjate de tonterías! Simplemente no creo que una colegiala pueda causar tantos problemas, aunque ande deambulando por el campus.

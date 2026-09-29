@@ -248,14 +248,14 @@
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
 [name="Natalya"]  Lo de que le contestas al Doctor hasta llegó a Logística. Eres todo un caso.
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
-[name="Zima"]  ...No soy como tú. Yo no hablo con floritura.
+[name="Zima"]  ...No soy como tú. Yo no hablo tan bonito.
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
 [name="Natalya"]  Lo que de verdad quiero preguntarte es: después de todo lo que pasamos, ¿no te cuesta empuñar un arma?
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
 [name="Zima"]  ...Me gusta pelear.
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]
-[name="Natalya"]  Ya veo... Aun así, creo que te convendría aprender algo de esa 'floritura'. Podría salvarte la vida.
+[name="Natalya"]  Ya veo... Aun así, creo que te convendría aprender a 'hablar bonito'. Podría salvarte la vida.
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=2)]
 [name="Zima"]  No tienes que preocuparte.
 [Character(name="char_197_poca_1",name2="char_115_headbr_9",focus=1)]

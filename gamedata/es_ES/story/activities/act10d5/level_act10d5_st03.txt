@@ -18,7 +18,7 @@ Papá está sentado leyendo el periódico. Todo lo que traen es siempre aburrid�
 ¿Por qué no publican notas sobre mis gloriosas hazañas?
 [name="Padre"]  Sonya, ¿cómo va la escuela?
 Otra vez esto.
-¿No se cansa de repetir este paripé dos veces al día? Solo en el desayuno y la cena finge que le importa.
+¿No se cansa de hacer el mismo teatro dos veces al día? Solo en el desayuno y la cena finge que le importa.
 [name="Sonya"]  ...Está bien. 
 [name="Padre"]  Ya estás en séptimo grado. Va siendo hora de que te portes bien.
 [Character]
@@ -366,7 +366,7 @@ Uy, suena aún más triste que antes. De verdad no sé cómo consolar a una chic
 [Character(name="char_195_glassb_2")]
 [name="Anna"]  ...Porque creo que está mal. Al menos, eso fue lo que pensé al principio.
 [Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=1)]
-[name="Sonya"]  ¿Qué ocurre?
+[name="Sonya"]  ¿Qué está mal?
 [Character(name="char_115_headbr_9",name2="char_195_glassb_2",focus=2)]
 [name="Anna"]  Esto. Todo esto.
 [name="Anna"]  Llevamos ocho días encerrados en esta escuela. Todo sigue empeorando.

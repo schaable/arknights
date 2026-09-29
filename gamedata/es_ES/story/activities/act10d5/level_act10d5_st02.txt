@@ -125,7 +125,7 @@
 [Character]
 [name="???"]  ¡Soy yo!
 [Character(name="char_195_glassb_2")]
-[name="Istina"]  ¿A quién?
+[name="Istina"]  ¿Quién?
 [Character]
 [name="???"]  ¿Eh? ¡Me sorprendes, detective aprendiz Istina! ¿Cómo no reconoces mi voz? ¿Te haces la tonta?
 [Character(name="char_195_glassb_2#5")]
@@ -443,11 +443,11 @@ Hice todo lo que pude.
 [name="May"]  Ah——Ya veo. ¡Lo tengo clarísimo!
 [name="May"]  Estaba escrito en primera persona, así que... ¡El asesino en realidad era el protago——mmffst. ¿¡Mmffmm!?
 [Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=1)]
-[name="Istina"]  ¡Insensata! ¡No puedes destriparlo todo así! ¡Natalya todavía no lo ha leído!
+[name="Istina"]  ¡Insensata! ¡No puedes revelar toda la trama así! ¡Natalya todavía no lo ha leído!
 [Character(name="char_195_glassb_2#4", name2="char_133_mm_1",focus=2)]
 [name="May"]  ¡Mmmmmpf!
 [name="May"]  ¡Pfah——Jaah! Casi me matas...
-[name="May"]  ¡Nnng! Me mordí la lengua. Eso dolió. Entiendo lo de no querer destripes, ¡pero eso fue pasarse muchísimo, Istina!
+[name="May"]  ¡Nnng! Me mordí la lengua. Eso dolió. Entiendo que no quieras spoilers, ¡pero te pasaste de la raya, Istina!
 [Character(name="char_195_glassb_2#4", name2="char_197_poca_1",focus=2)]
 [name="Natalya"]  Interesante. De verdad te gustan tus novelas de detectives, ¿eh, Anna? No suelo verte tan entusiasmada hablando de algo.
 [Character(name="char_195_glassb_2#3", name2="char_197_poca_1",focus=1)]

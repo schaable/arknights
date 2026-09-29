@@ -1365,6 +1365,18 @@
     "obt/main/level_main_04-10_end::s37": {
       "source": "Roger!",
       "translation": "¡Recibido!"
+    },
+    "activities/act10d5/level_act10d5_st02::s71": {
+      "source": "Who?",
+      "translation": "¿Quién?"
+    },
+    "activities/act10d5/level_act10d5_st03::s238": {
+      "source": "What's wrong?",
+      "translation": "¿Qué está mal?"
+    },
+    "activities/act10d5/level_act10d5_st06::s38": {
+      "source": "You don't look busy.",
+      "translation": "Tú no pareces ocupado."
     }
   }
 }

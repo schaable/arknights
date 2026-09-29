@@ -88,10 +88,10 @@
 [name="Zima"]  ¿No estás como súper ocupado siempre? ¿Qué haces deambulando por los pasillos?
 [Predicate(references="3")]
 [Character(name="char_115_headbr_9")]
-[name="Zima"]  Tú no pareces ocupada.
+[name="Zima"]  Tú no pareces ocupado.
 [Predicate(references="1;2;3")]
 [Character(name="char_115_headbr_9")]
-[name="Zima"]  Tengo una misión. No puedo andar de paseo tranquilo como tú.
+[name="Zima"]  Tengo una misión. No puedo pasearme tan tranquila como tú.
 [Dialog]
 [Character]
 [Character(name="char_148_nearl_1",fadetime=1,block=true)]

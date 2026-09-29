@@ -162,7 +162,7 @@ Sala de Entrenamiento de Combate Cuerpo a Cuerpo Individual
 [Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
 [name="Beehunter"]  Me parece bien. Le pedí a Logística que me preparara una bebida de miel hace un par de días. Momento perfecto.
 [name="Beehunter"]  Y Dur-nar, oí que preparó unos bocadillos brutales el otro día. Se rumorea que te vende algunos si le das la contraseña.
-[name="Beehunter"]  ¿Listas? Rompan.
+[name="Beehunter"]  ¿Lista? ¡En marcha!
 [Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
 [name="Leto"]  Bien. Nos vemos en el dormitorio.
 [name="Leto"]  ¡Oye, espera!
@@ -210,12 +210,12 @@ Habitación de Leto y Beehunter
 [Character(name="char_194_rosali_1")]
 [name="Leto"]  Shura, conseguí los——¡Oye, ya empezaste a beber!
 [Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
-[name="Beehunter"]  Me aburrí esperándote. Pero compré bastante. ¿Por qué no puedo ir calentando un poco?
+[name="Beehunter"]  Me aburrí de esperarte. Además, compré bebida de sobra. ¿Qué tiene de malo tomarme un trago antes?
 [Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
-[name="Leto"]  Sí, está bien. La verdad es que piqué un poco de los bocadillos de vuelta. Están buenos.
+[name="Leto"]  Bueno, está bien. Yo también probé unos bocadillos de camino de regreso. Están buenos.
 [Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=2)]
-[name="Beehunter"]  ¿Crees que la Beehunter se conformaría con menos?
-[name="Beehunter"]  Vamos, comamos, juguemos una mano o dos para calentar, y luego nos cuentas tu gran aventura.
+[name="Beehunter"]  ¿Crees que Beehunter se conformaría con cualquier cosa?
+[name="Beehunter"]  Vamos, comamos algo y juguemos un par de manos para calentar. Después nos cuentas tu gran aventura.
 [Character(name="char_194_rosali_1",name2="char_137_brownb_1",focus=1)]
 [name="Leto"]  De acuerdo.
 [Dialog]
