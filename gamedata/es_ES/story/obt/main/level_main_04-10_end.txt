@@ -1,0 +1,367 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 40 (después)
+[Background(image="bg_cher_6", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$frostnova_intro", key="$frostnova_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   *tos* *tos*...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Meteorite! ¡Logramos hacer retroceder al Yeti Squadron!
+[name="Amiya"]   Pero...
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Parece que los subestimé, Rhodes Island.
+[name="FrostNova"]   Quizás me contuve demasiado.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   (Ya no siento los dedos... Maldición...)
+[name="Amiya"]   ...¿Qué está pasando...?
+[name="Amiya"]   ¿La corriente de aire frío... sigue concentrándose a su alrededor?
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Esta vez...
+[name="FrostNova"]   No tendrán tanta suerte.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...¿? !
+[name="Amiya"]   ¡Oh, no...!
+[name="Amiya"]   ¿Está intentando absorber todo el hielo que nos rodea y liberarlo de golpe? !
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ——♩——♬——
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...¡Va a absorber todo el calor de nuestros cuerpos!
+[name="Amiya"]   ¡Estas Artes están a una escala completamente distinta de lo que vimos antes...!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Que todo llegue a su fin.
+[name="FrostNova"]   Que la escarcha más pura sepulte su ira.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...¡Nnngh...!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ...♩...
+[Dialog]
+[Blocker(a=0.3, initr=2, r=255, g=255, b=255, fadetime=1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.6)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Delay(time=0.5)]
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ¿...?!
+[name="FrostNova"]   Algo... está impidiendo que el frío se concentre...
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...Gah...
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ¿Esto es obra tuya?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   No te lo dije ya...
+[name="Frostleaf"]   ¡No dejaré que... te acerques más...!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ...¿Interrumpiste mi corriente de aire frío con tus propias Artes?
+[name="FrostNova"]   ...Qué buena niña.
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=0.3)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Frostleaf cortó la corriente de aire frío con su arma...!
+[name="Amiya"]   ¡Pero, pero... no resistirá mucho tiempo en ese estado!
+[name="Amiya"]   ¡La hoja de su arma... está a punto de romperse!
+[Character(name="char_219_meteo_1#2")]
+[name="Meteorite"]   ...Eso es más que suficiente.
+[name="Meteorite"]   ¡Esta es nuestra última oportunidad!
+[name="Meteorite"]   ¡Amiya... es ahora!
+[name="Meteorite"]   ¡Cúbreme!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Ten cuidado!
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   ¡Recibido!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Abran fuego, frenen el avance de Reunion!
+[name="Amiya"]   ¡Meteorite, adelante!
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   ¡Ya voy...!
+[Character(fadetime=0)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$d_gen_explo_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Miembro de Reunion"]   ¡¿Qué?! ¿El enemigo... está cargando contra nosotros?
+[name="Miembro de Reunion"]   No, ella... ¡¿va directo hacia FrostNova?!
+[name="Miembro de Reunion"]   ¡Como si fuéramos a dejarte!
+[name="Miembro de Reunion"]   ¡Fuego!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$p_imp_grenade_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$p_imp_grenade_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_219_meteo_1#2")]
+[name="Meteorite"]   ¡Agh...!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡¡Meteorite!!
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   ¡No te preocupes, no me dio de lleno!
+[Character(fadetime=0)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$p_imp_grenade_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[name="Miembro de Reunion"]   ¡¿A-aún puede correr?!
+[name="Miembro de Reunion"]   ¡Maldición!
+[name="Miembro de Reunion"]   ¡Te lo dije! ¡Nunca llegarás a los Yetis!
+[name="Miembro de Reunion"]   ¡Sigan disparando! ¡No le den ninguna oportunidad!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$p_imp_grenade_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   ...¡Oh, no!
+[Character(name="char_219_meteo_1#2")]
+[name="Meteorite"]   ¡Gaah...!
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]   ¡¡Nooo!! Le... le dieron... No puede ser...
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   ...¡Solo es un rasguño! ¡¡Tendrán que hacerlo mejor si quieren detenerme!!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$d_gen_surfacefrozen", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Más... Tengo que hacer más...
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[Blocker(a=0, fadetime=0.2, block=false)]
+[Character(name="char_193_frostl_1")]
+[name="FrostNova"]   *tos* *tos*...
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[Blocker(a=0, fadetime=0.2, block=false)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...!
+[name="Amiya"]   (¿La corriente de aire frío... fluctuó por un momento?)
+[name="Amiya"]   Espera... ¿De dónde viene esa corriente...?
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[name="Amiya"]   --!
+[Blocker(a=0, fadetime=0.2, block=false)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Conozco esta sensación...!
+[name="Amiya"]   ¡¿Será que...?!
+[name="Amiya"]   ¡Tendré que intentarlo!
+[name="Amiya"]   ¡Tengo que darle...!
+[name="Amiya"]   ¡Todos, confíen en mí!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$p_skill_chimera", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ...?
+[name="Miembro de Reunion"]   La líder de Rhodes Island...
+[name="Miembro de Reunion"]   ¿Destrozó con sus Artes el Originium que colocamos?
+[Blocker(a=0.5, r=255, g=255, b=255, fadetime=3, block=true)]
+[name="Miembro de Reunion"]   Se está formando una neblina...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Lo sabía! ¡FrostNova creó esa corriente de aire frío colocando Originium!
+[name="Amiya"]   ¡¡Meteorite!! ¡Esta es tu oportunidad!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_gen_surfacefrozen", volume=0.7)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   Frostleaf...
+[name="Meteorite"]   ¡¡Yo... te prometo que te salvaré!!
+[name="Meteorite"]   Así que espérame...
+[name="Meteorite"]   ¡Por favor, espérame!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[name="???"]   ¡Despierta!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¿Nnh...?
+[Character(fadetime=0)]
+[name="???"]   ¡Te tengo!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Quién...
+[Character(name="char_219_meteo_1")]
+[name="???"]   ¡Aquí arriba! ¡Rápido! ¡Agárrate de mí!
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   ¿Meteo...rite?
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡¿Quién te dijo que podías hacerte la heroína?!
+[name="Meteorite"]   ¿Crees que podía quedarme mirando cómo morías?
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_gen_explo_n", volume=0.7)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   Bájame... No soy... una mascota...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡No voy a soltarte!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_gen_surfacefrozen", volume=0.7)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡Amiya! ¡¡Jessica!!
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]   ...¡Muy bien!
+[name="Jessica"]   ¡Todos, salgamos de aquí!
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1", focus=1)]
+[name="Amiya"]   Meteorite, adelántate con Frostleaf. ¡Cubriré su retirada!
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡Entendido!
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_gen_surfacefrozen", volume=0.7)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   ...Gah...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Haah... Haah...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   ¡Frostleaf... resiste...!
+[name="Meteorite"]   ¡¡No te mueras... no te atrevas a morirte!!
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=1)]
+[name="Frostleaf"]   No te preocupes... no te librarás de mí tan fácilmente...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡Por Dios, tanto tú como Amiya! ¡¿Por qué las dos tienen que ser así?!
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#5", focus=2)]
+[name="Meteorite"]   ¡Por muy fuertes que sean... al fin y al cabo siguen siendo unas niñas!
+[PlaySound(key="$d_gen_surfacefrozen", volume=0.7)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#5", focus=1)]
+[name="Frostleaf"]   ¿Todavía me tratas como a una niña...?
+[name="Frostleaf"]   ...Si pudiera salvarlos a todos a cambio de mi vida, me parecería un buen trato.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=2)]
+[PlaySound(key="$d_gen_explo_n", volume=0.3)]
+[name="Meteorite"]   Tú... ¡Escúchame bien! Si vuelves a intentar algo así...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#5", focus=2)]
+[name="Meteorite"]   Si vuelves a... yo...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#5", focus=1)]
+[name="Frostleaf"]   *suspiro*... Perdón.
+[name="Frostleaf"]   Corre, Meteorite.
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$d_sp_ballista", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡No... mires atrás...!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Rápido! ¡¡Váyanse!!
+[name="Amiya"]   ¡Evacúen esta zona de inmediato! ¡Protejan a los médicos y a los heridos!
+[name="Amiya"]   ¡Francotiradores...! Apunten a esas efigies. ¡¡Sigan disparando!!
+[name="Amiya"]   ¡Rompan su formación! ¡Derriben todo el edificio para cubrir nuestra huida!
+[PlaySound(key="$d_gen_explo_n", volume=0.7)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=15, ystrength=18, vibrato=30, randomness=90, fadeout=true)]
+[name="Amiya"]   *tos* *tos*...
+[name="Amiya"]   ¡Las explosiones están espesando la neblina...!
+[name="Amiya"]   ¡Esta es nuestra oportunidad! ¡¡En marcha!!
+[name="Amiya"]   ¡¡Todos, nos retiramos de esta plaza!!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(fadetime=0)]
+[playsound(key="$d_gen_soldiersrun")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(name="char_1505_frstar_1")]
+[Delay(time=1)]
+[name="FrostNova"]   Así que... escaparon.
+[Blocker(a=0.7, r=0.6, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.6, g=0, b=0, fadetime=0.8, block=true)]
+[Blocker(a=0.7, r=0.6, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.6, g=0, b=0, fadetime=0.8, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[name="FrostNova"]   *tos*...
+[name="FrostNova"]   *tos*...
+[Blocker(a=0, r=0.6, g=0, b=0, fadetime=0.25, block=true)]
+[name="FrostNova"]   ...
+[Background(fadetime=1, block=true)]
+[name="FrostNova"]   ¿Cuánto tiempo llevas mirando?
+[Character(fadetime=0.5)]
+[name="???"]   Solo unos minutos.
+[name="???"]   Estos guerreros merecen reconocimiento.
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Tch.
+[Dialog]
+[Character(fadetime=0.5, block=true)]
+[Delay(time=0.6)]
+[Image(image="avg_40_3", fadetime=2, xScale=1, yScale=1)]
+[ImageTween(image="avg_40_3", duration=20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.2, yScaleTo=1.2,yTO=600 )]
+[name="???"]   Ten cuidado.
+[name="???"]   Tu cuerpo no está en buenas condiciones.
+[name="FrostNova"]   ...No necesito que me lo recuerdes.
+[name="FrostNova"]   Tú ocúpate de lo tuyo, viejo.
+[Dialog]
+[Image(fadetime=1, block=true)]
+[name="FrostNova"]   Voy a ir tras Rhodes Island.
+[name="FrostNova"]   Primero tenemos que deshacernos de ellos. Solo entonces podremos...
+[name="FrostNova"]   ...ir a Lungmen.
+[name="???"]   ......
+[Dialog]
+[Delay(time=1)]
+[stopmusic]
+[playsound(key="$d_gen_soldiersrun")]
+[playsound(key="$d_gen_soldiersrun",volume=0.6, delay=0.3)]
+[CameraShake(duration=3, xstrength=0, ystrength=4, vibrato=12, randomness=90, block=false)]
+[Background(screenadapt="coverall", image="bg_cher_3", width=1, height=1, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Uf...
+[name="Amiya"]   Haah......
+[name="Amiya"]   Ya casi llegamos al punto de evacuación.
+[name="Amiya"]   Doctor, nosotros...
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ...¡¡Amiya!! ¡¡Por fin logramos contactar al L.G.D.!!
+[name="Meteorite"]   ¡¡Es una comunicación de emergencia!!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡¡Señorita Ch'en!!
+[Character(name="char_002_amiya_1#7", focus=-1)]
+[name="Ch'en"]   Escucha... bien...
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿Señorita Ch'en? ¿Me escuchas bien?
+[Character(fadetime=0)]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true, fadetime=1)]
+[name="Ch'en"]   ...Lungmen...
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...¡¿Qué está pasando?!
+[Dialog]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Image(image="avg_40_4", fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=false)]
+[Delay(time=0.5)]
+[name="Ch'en"]   ...Ahora estoy a salvo.
+[name="Ch'en"]   Pero...
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   ...Reunion tomó una de nuestras instalaciones clave y ahora está abriendo por la fuerza un paso entre los suburbios y el exterior de la ciudad.
+[Character(fadetime=0)]
+[Image(image="avg_ep04",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[name="Ch'en"]   Amiya...
+[name="Ch'en"]   Lungmen... está en peligro.
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Delay(time=1)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
+[stopmusic]
+[Blocker(a=0, initr=2, r=0, g=0, b=0, block=true, fadetime=0.4)]
+[name=""]   ............
+[Delay(time=1)]
+[Image(image="item_tll", fadetime=2, xScale=1.3, yScale=1.3)]
+[ImageTween(image="item_tll", tiled=true, xScaleTo=1.0, yScaleTo=1.0, duration=25, block=false)]
+[name="Mephisto"]   W logró atraer a Lungmen y a Rhodes Island directamente a nuestra trampa.
+[name="Mephisto"]   Así es. No podrán escapar. Faust y Crownslayer ya rompieron sus defensas en un punto.
+[name="Mephisto"]   Como dijiste, esa será nuestra brecha para entrar en masa a Lungmen.
+[name="Mephisto"]   Prepararemos emboscadas en cada esquina. El camino a Lungmen se teñirá de sangre fresca.
+[name="Mephisto"]   Cierto, ese viejo abanderado debería volver pronto a Chernobog.
+[name="Mephisto"]   Nuestra victoria está asegurada.
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=1, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[name="Mephisto"]   ¿Tienes alguna otra orden para mí, Talulah?
+[Delay(time=1)]
+[name="Talulah"]  ...
+[Delay(time=1)]
+[name="Talulah"]   Ha llegado el momento...
+[name="Talulah"]   ...de reducir a cenizas esta ciudad podrida.
+[Dialog]
+[Stopmusic(fadetime=5)]
+[Blocker(block=true)]

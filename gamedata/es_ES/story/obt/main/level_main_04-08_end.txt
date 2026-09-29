@@ -1,0 +1,172 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 38 (después)
+[Background(image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_219_meteo_1#2")]
+[name="Meteorite"]   ...!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(name="char_193_frostl_1")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="Frostleaf"]   Sé que eres tú la que está ahí detrás. No dispares.
+[name="Frostleaf"]   Mira a quién traje.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Meteorite, somos nosotros!
+[Character(name="char_219_meteo_1#4")]
+[name="Meteorite"]   ¿Quién? ¡¿Esa es.. Amiya?!
+[Character(name="char_219_meteo_1#5")]
+[name="Meteorite"]   ¡Amiya! ¡Amiya, de verdad viniste!
+[name="Meteorite"]   Qué alegría verte...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ...
+[name="Meteorite"]   ...pero no debiste venir. Todo esto es una gran trampa.
+[name="Meteorite"]   No valía la pena venir a rescatarnos.
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   ¡Fue una mala decisión...!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   No tiene sentido culparla ahora.
+[name="Frostleaf"]   Además, aunque todos los demás crean que no pueden rescatarte, Amiya no te abandonaría.
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1#5", focus=2)]
+[name="Meteorite"]   ¡No la estaba culpando! Es solo que...
+[name="Meteorite"]   Tsk. Perdón, Amiya.
+[Character(name="char_002_amiya_1#2", name2="char_219_meteo_1#5", focus=1)]
+[name="Amiya"]   No pasa nada. Me alegra ver que todas siguen a salvo.
+[Character(name="char_002_amiya_1#2", name2="char_219_meteo_1#5", focus=2)]
+[name="Meteorite"]   Amiya...
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1#5", focus=1)]
+[name="Amiya"]   Pero... ¿qué le pasó a Jessica?
+[Character(name="char_259_Jessica_1#5")]
+[Character]
+[name="Jessica"]   Ugh...
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1#5", focus=2)]
+[name="Meteorite"]   Ella... sigue en shock.
+[name="Meteorite"]   Quería esperar a que se recuperara, pero...
+[name="Meteorite"]   Parece que quedó... traumatizada.
+[Character(name="char_259_Jessica_1#5")]
+[Character]
+[name="Jessica"]   ...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Jessica, ¿estás bien?
+[Character(name="char_259_Jessica_1#5")]
+[Character]
+[name="Jessica"]   ...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Esto es todo lo que puedo hacer...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Frostleaf, hazme un favor. Pon sus manos sobre mi brazo y sujeta bien sus dedos.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...Claro.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Bien.
+[name="Amiya"]   ...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Background(image="bg_cher_2", fadetime=0)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.15, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...!!
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Background(image="bg_cher_0", fadetime=0)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.15, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Background(image="bg_lungmen_station", fadetime=0)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.15, block=true)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Ngh...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Background(image="bg_cher_2", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡Amiya!
+[Background(fadetime=0.4)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=1, r=0.7, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=0.3, b=0.3, afrom=1, rfrom=14, gfrom=0, bfrom=15, fadetime=0.2, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, afrom=0.8, rfrom=255, gfrom=96, bfrom=15, fadetime=0.3, block=true)]
+[delay=0.5]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[delay=1.5]
+[Blocker(a=1, r=1, g=1, b=1, afrom=1, rfrom=0, gfrom=0, bfrom=0, fadetime=4, block=true)]
+[name="Amiya"]   ¡Estoy bien! Es solo que... Nnh...
+[name="Amiya"]   Una tristeza tan profunda...
+[Character(name="char_002_amiya_1#2")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.3, block=true)]
+[Blocker(a=1, r=0.8, g=0.8, b=0.8, fadetime=0.3, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_light")]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.3, rfrom=0.8, bfrom=0.8, gfrom=0.8, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.3, rfrom=0.8, bfrom=0.8, gfrom=0.8, block=true)]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Amiya"]   Es un poco difuso, pero...
+[Character(name="char_259_Jessica_1#5")]
+[name="Jessica"]   ...
+[Character(name="char_259_Jessica_1#5", focus=-1)]
+[name="???"]   ¡¡Jessica!!
+[name="???"]   Ya pasó...
+[name="???"]   ¡Tienes que ser fuerte, Jessica...!
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]   ...?
+[name="Jessica"]   ...¿Amiya...?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ...
+[name="Amiya"]   Aquí estoy.
+[Character(name="char_259_Jessica_1#5")]
+[name="Jessica"]   Amiya... Amiya...
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   Ya, tranquila... Todo va a estar bien.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_cher_2", width=1, height=1, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_219_meteo_1#4")]
+[name="Meteorite"]   Jessica... ¿Estás bien...?
+[Character(name="char_259_Jessica_1", name2="char_002_amiya_1", focus=1)]
+[name="Jessica"]   Amiya... ¿Qué estaba...?
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1", focus=1)]
+[name="Jessica"]   ...Lo siento tanto... No pensé... No pensé que...
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Ya pasó...
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1", focus=1)]
+[name="Jessica"]   Esas, esas... Auugh...
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Sé lo que se siente.
+[name="Amiya"]   Sí, yo también lo viví...
+[name="Amiya"]   ...Querer correr, pero que tus piernas no se muevan...
+[name="Amiya"]   ...Querer gritar, pero que no te salga la voz...
+[name="Amiya"]   Entiendo por lo que pasaste, Jessica... Yo también lo viví.
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1", focus=1)]
+[name="Jessica"]   ...
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Intenta levantarte.
+[name="Amiya"]   Ya no tienes que tener miedo...
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]   Porque ahora estamos todos juntos. No estás sola. Siempre estaremos a tu lado.
+[name="Amiya"]   Volvamos juntos a Rhodes Island.
+[Character(name="char_259_Jessica_1#5", name2="char_002_amiya_1#3", focus=2)]
+[name="Amiya"]   Franka y Liskarm te están esperando.
+[Character(name="char_259_Jessica_1", name2="char_002_amiya_1#3", focus=1)]
+[name="Jessica"]   ...
+[Character(name="char_259_Jessica_1#6", name2="char_002_amiya_1#3", focus=1)]
+[name="Jessica"]   ...¡Ajá!
+[Character(fadetime=1)]
+[Delay(time=0.6)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...
+[name="Frostleaf"]   Amiya... Tú... ¿qué acabas de hacer...?
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   Shh... No se lo digas a la Dra. Kal'tsit.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

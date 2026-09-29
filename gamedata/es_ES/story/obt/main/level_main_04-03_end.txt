@@ -1,0 +1,132 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 33 (después)
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Character(name="char_1002_nsabr_1",fadetime=1)]
+[name="Miembro de Reunion"]   ¡En marcha! ...
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=2)]
+[name="Jessica"]   ¿Qué está pasando...?
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=1)]
+[name="Frostleaf"]   (¡No hagas ruido!)
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=2)]
+[name="Jessica"]   (Nnnh---)
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=1)]
+[name="Frostleaf"]   (¿Siguen por aquí?)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (¡Siguen aquí...!)
+[name="Meteorite"]   (Parece que están buscando algo...)
+[name="Meteorite"]   (¡Un miembro de Reunion viene hacia aquí! ¡Tenemos que escondernos!)
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   ...
+[name="Miembro de Reunion"]   Debe ser mi imaginación.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   (¿Tienes un tiro limpio?)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (Estamos demasiado lejos...)
+[name="Meteorite"]   (Las explosiones cesaron en cuanto aparecieron...)
+[name="Meteorite"]   (Están demasiado separados. No podría acabar con los tres a la vez.)
+[name="Meteorite"]   (Además, no se mueven para nada como los matones callejeros de siempre.)
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   (Las otras tropas de Reunion no parecen ir tan abrigadas.)
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (Así es. Como ven, tenemos que extremar las precauciones. Si alguno sobrevive y pide refuerzos, estaremos en grave peligro.)
+[name="Meteorite"]   (Además, veo a alguien con ropa de Hechicero por allá, y parece que está probando algo.)
+[name="Meteorite"]   (Si también pueden usar Artes de detección...)
+[name="Meteorite"]   (Podrían localizarnos con una sola bala que disparemos.)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   (En pocas palabras, tenemos las manos atadas. Somos tres contra tres, pero parece que nos tienen rodeadas.)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (La cosa pinta mal. No me gusta nada esta sensación.)
+[name="Meteorite"]   (Se supone que somos las cazadoras, pero parece que una presa más grande nos ha acorralado y obligado a escondernos.)
+[name="Meteorite"]   (Esperen, parece que se están comunicando con alguien...)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   (No puedo oír lo que dicen desde aquí. Voy a acercarme.)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (No. Es demasiado arriesgado ahora.)
+[name="Meteorite"]   (Hay demasiado silencio. Aún no sabemos a qué clase de Infectados nos enfrentamos...)
+[name="Meteorite"]   (Si alguno tiene el oído más desarrollado, estaremos en problemas.)
+[name="Meteorite"]   (...¿Qué están esperando?)
+[name="Meteorite"]   (Hay algo... raro en todo esto.)
+[name="Meteorite"]   (¿Será que...)
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   (Jessica, ¿tú también lo sientes...?)
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   (S-sí... Yo también...)
+[name="Jessica"]   (La temperatura está bajando otra vez...)
+[Character(name="char_259_Jessica_1#5", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   (Qué... frío...)
+[Character(name="char_259_Jessica_1#5", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (¡¿Serán ellos los responsables...?!)
+[Character(name="char_259_Jessica_1#5", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   (...! Jessica, ¿por qué te estás mordiendo los dedos--)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=1)]
+[name="Frostleaf"]   (Para que no le castañeteen los dientes y hagan ruido.)
+[name="Frostleaf"]   (No creo que haga falta todavía, pero qué niña tan aplicada.)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (Para mí, tú también eres una niña.)
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   (...Ja.)
+[name="Frostleaf"]   (Ni de broma.)
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   (...La temperatura está subiendo otra vez. Esos tres miembros de Reunion también se fueron.)
+[name="Meteorite"]   ¿Estarán probando cómo funciona algo...?
+[name="Meteorite"]   ...Aparecieron sin hacer ruido y solo dejaron a su paso un frío que cala los huesos.
+[name="Meteorite"]   De verdad parecen esos 'yetis' de las leyendas.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   Quizás mi suposición era correcta.
+[name="Frostleaf"]   Puede que sí sean yetis.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   ...Lo encontré.
+[name="Frostleaf"]   Aquí hay otra pared afectada por el hielo. Pero miren esto...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¿Hay un trozo de Originium negro incrustado en la esquina?
+[name="Meteorite"]   Con razón. La ola de frío debe de haber salido de aquí.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   Hay patrones bien definidos en la pared.
+[name="Frostleaf"]   Este trozo de Originium es el epicentro de todo esto.
+[name="Frostleaf"]   ...Cuando era mercenaria, circulaba un rumor.
+[name="Frostleaf"]   En el noroeste, los Infectados libraban una guerra de guerrillas contra Ursus.
+[name="Frostleaf"]   Entre ellos había un monstruo gigantesco.
+[name="Frostleaf"]   Según el rumor, nada podía detener su avance.
+[name="Frostleaf"]   Los escudos se deformaban y las armas se partían.
+[name="Frostleaf"]   Por donde pasaba aquel monstruo, solo quedaba una tundra estéril, desprovista de vida.
+[name="Frostleaf"]   Y entre aquellas fuerzas guerrilleras había un escuadrón...
+[name="Frostleaf"]   Eran como el frío del mismísimo invierno.
+[name="Frostleaf"]   Se decía que el suelo se congelaba bajo sus pies.
+[name="Frostleaf"]   Los edificios se derrumbaban, reducidos a granos de nieve que flotaban sobre un campo de batalla vacío.
+[name="Frostleaf"]   Las trincheras donde se apostaban los soldados de Ursus se convertían en sus tumbas de hielo.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¿Estás diciendo que...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   Sí. Creo que estamos ante la misma leyenda...
+[name="Frostleaf"]   ...el 'Yeti Squadron'.
+[name="Frostleaf"]   Sigamos. Presiento que pronto encontraremos la base de Reunion.
+[Character(name="char_259_Jessica_1#4", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   Ugh...
+[Character(name="char_259_Jessica_1#4", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¿Qué ocurre?
+[Character(name="char_259_Jessica_1#4", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   ¿Ustedes también sienten ese olor...
+[name="Jessica"]   ...ese olor a quemado?
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

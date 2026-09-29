@@ -1,0 +1,175 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 32 (antes)
+[Background(image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]   ¡Q-quedan dos enemigos!
+[name="Jessica"]   Están corriendo hacia el edificio al este de nosotras--
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   Ya los tengo en la mira.
+[name="Meteorite"]   ...!
+[Dialog]
+[Character(fadetime=0.6)]
+[playsound(key="$p_imp_grenade_n", volume=0.5)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Argh...!
+[Delay(time=0.5)]
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   En el blanco.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   ¿No estamos haciendo demasiado ruido?
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Hay explosiones por toda la ciudad. No creo que se den cuenta.
+[name="Meteorite"]   ¿Ya le avisaste a la Dra. Kal'tsit?
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   La llamé antes de que empezara la batalla.
+[name="Frostleaf"]   Hay indicios de que Reunion está llevando a cabo operaciones en esta ciudad.
+[name="Frostleaf"]   Todavía no he cortado la comunicación.
+[name="Frostleaf"]   ¿No deberíamos movernos con un poco más de sigilo?
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Ese miembro de Reunion parecía estar usando Artes de detección.
+[name="Meteorite"]   Tendremos que atacar primero para que no descubran nuestra posición.
+[name="Meteorite"]   Como mínimo, no podemos darles tiempo a estos escuadrones de Reunion para comunicarse entre sí.
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]   Uf... Por fin terminó...
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Frostleaf, evalúa la situación.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Entendido.
+[name="Frostleaf"]   Toma, sostén el comunicador.
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Claro.
+[name="Meteorite"]   Jessica, todavía no bajes la guardia.
+[Character(name="char_259_Jessica_1#3", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   Claro... ¡Ya lo sé!
+[Character(name="char_259_Jessica_1#3", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Está bien, está bien. No volveré a mencionarlo.
+[name="Meteorite"]   Dra. Kal'tsit, ¿me escuchas?
+[Character(fadetime=0)]
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="Kal'tsit"]   Las he estado escuchando todo el tiempo. Así es, todavía no pueden bajar la guardia.
+[name="Kal'tsit"]   Jessica, podría haber un enemigo detrás de ti.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]   ¡Uaaah!
+[dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$b_char_rockexplo", volume=0.7)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=3, ystrength=5, vibrato=30, randomness=90, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿C-cómo hicieron... para ponerse detrás de mí...?
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]  ¿¿...Eeeh??
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]  Si puedo atacarte por la espalda, significa que fuiste demasiado lento.
+[Dialog]
+[Character(fadetime=0)]
+[playsound(key="$p_imp_axe_h", volume=0.5)]
+[CameraShake(duration=1, xstrength=3, ystrength=5, vibrato=30, randomness=90, block=true)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Por ahora estamos bien, Dra. Kal'tsit. Ya eliminé al enemigo.
+[Character(name="char_219_meteo_1",name2="char_193_frostl_1",focus=1)]
+[name="Meteorite"]   De verdad eres rápida...
+[name="Meteorite"]   Ni siquiera pude ver cómo llegaste hasta allá y volviste tan rápido.
+[Character(name="char_219_meteo_1",name2="char_193_frostl_1",focus=2)]
+[name="Frostleaf"]   --En realidad, ni siquiera me fui.
+[Character(name="char_219_meteo_1",name2="char_193_frostl_1",focus=1)]
+[name="Meteorite"]   ...
+[Character(name="char_219_meteo_1", focus=-1)]
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Kal'tsit"]   Projekt Red se puso en contacto conmigo.
+[name="Kal'tsit"]   No hay señales de actividad de las fuerzas de Reunion que se ocultan en Lungmen.
+[name="Kal'tsit"]   Por ahora, lo mejor sería no alborotar el avispero.
+[name="Kal'tsit"]   Por cierto, según la información que recibí de los otros equipos de reconocimiento, podría haber una presencia considerable de Reunion en el desierto.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   En otras palabras, ¿nosotras nos sacamos el premio mayor?
+[name="Meteorite"]   Eso nos pone un poco de presión. Después de todo, solo somos un equipo de reconocimiento.
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   Si es así, hasta ahora ya hemos eliminado a dos escuadrones de Reunion...
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Jessica, ¿estás completamente segura de a qué grupo pertenecían los primeros enemigos con los que intercambiamos disparos?
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   Sí, no debería haber ningún error. Lo comprobé dos veces antes de pedirte que dispararas.
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ...Perdón. Estaba ocupada calculando la trayectoria balística.
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=-1)]
+[name="Kal'tsit"]   ¿Cuántos enemigos hay?
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   No sabemos el número exacto.
+[name="Meteorite"]   Frostleaf, ¿cómo va todo por allá?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¿Qué pasa...?
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[Character(name="char_219_meteo_1", focus=-1)]
+[name="Kal'tsit"]   Vayan a ver qué sucede. Avísenme de inmediato si hay algún problema.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   Así lo haremos.
+[name="Jessica"]   Vamos... a ver qué le pasa.
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ...
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_6", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Delay(time=0.8)]
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¿Qué pasó?
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   ¿...Ustedes dos no lo sintieron?
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=2)]
+[name="Jessica"]   ¿Eh? ¿Qué...?
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   La temperatura.
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=2)]
+[name="Jessica"]   Ahora que lo mencionas... sí parece que hace más frío...
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=1)]
+[name="Frostleaf"]   La temperatura.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ...Es cierto. Hay una diferencia de al menos cinco grados respecto a la temperatura de afuera.
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   ¿Cómo pudo cambiar tan de repente... si hacía tan buen tiempo...?
+[Character(name="char_259_Jessica_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Mira hacia arriba. El tiempo no ha cambiado.
+[Character(name="char_259_Jessica_1", name2="char_193_frostl_1", focus=1)]
+[name="Jessica"]   ...¿Eh?
+[Character(name="char_259_Jessica_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   No es el tiempo.
+[name="Frostleaf"]   Viene de aquí. Ven, toca esto.
+[Character(name="char_219_meteo_1", name2="char_193_frostl_1", focus=1)]
+[name="Meteorite"]   ¿...Las paredes de las ruinas?
+[Character(name="char_219_meteo_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Así es. Estas paredes absorben calor.
+[Character(name="char_259_Jessica_1", name2="char_193_frostl_1", focus=1)]
+[name="Jessica"]   ¡¿...En serio?!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Probablemente ya habían dejado de absorber calor antes de que llegáramos.
+[name="Frostleaf"]   La temperatura está volviendo a su nivel anterior.
+[name="Frostleaf"]   Pero, ¿por qué?
+[name="Frostleaf"]   ¿Quién dejaría algo así?
+[Character(name="char_219_meteo_1", name2="char_193_frostl_1", focus=1)]
+[name="Meteorite"]   ...Los de Reunion son los únicos que han estado activos por aquí.
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]   ¿Reunion? ¿Podrían... hacer algo así?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Los Infectados...
+[Delay(time=0.6)]
+[Blocker(block=true, fadetime=1)]
+[name="Frostleaf"]   Una vez escuché cierta leyenda.
+[name="Frostleaf"]   ...sobre una criatura llamada 'yeti'.
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ...Tengo el presentimiento... de que esto se va a complicar mucho...
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,211 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 32 (después)
+[Background(screenadapt="coverall", image="bg_lungmen_r", width=1, height=1, fadetime=2)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character(fadetime=0)]
+[name="Niño"]   ¡Ahh...! ¡Cuidado!
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Ay!
+[Character(fadetime=0)]
+[name="Niño"]   P-perdón, no quería chocar contigo...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   No te preocupes. Eres muy educado.
+[Character(fadetime=0)]
+[name="Niño"]   Ejeje...
+[name="Niño"]   Eh, señorita, ¿qué haces aquí?
+[name="Niño"]   Todavía está lloviendo. ¿No vas a entrar?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Ah, eh... Solo estoy... dando un paseo.
+[name="Amiya"]   ¿Buscas a alguien que te ayude?
+[Character(fadetime=0)]
+[name="Niño"]   ¡Oh! ¡¿Cómo lo supiste?!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   No puedo decírtelo~ Es un secreto.
+[Character(fadetime=0)]
+[name="Niño"]   Ay... ¡pero no importa!
+[name="Niño"]   Señorita, ¿crees que...?
+[name="Niño"]   Mmm... Creo que no va a funcionar. Eres un poco bajita...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Oye, no digas esas cosas! ¡Tú eres más bajito que yo!
+[Character(fadetime=0)]
+[name="Niño"]  ¡Oh!
+[name="Niño"]  B-bueno, podríamos intentarlo... Eh, ¿me ayudas a mover esa tabla? ¡Hagámoslo juntos!
+[name="Niño"]  Hay un tocadiscos debajo de ese estante de metal. Quiero llevármelo a casa.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Claro.
+[Character(fadetime=0)]
+[name="Niño"]   ¡1... 2... 3! ¡Juntos!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¡Lo logramos!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character(fadetime=0)]
+[name="Niño"]   ¡Guau, eres muy fuerte, señorita! ¡Gracias!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Pero... este tocadiscos está roto.
+[Character(fadetime=0)]
+[name="Niño"]   ¡No importa! Siempre ha estado roto.
+[name="Niño"]   Pero algún día podré arreglarlo. He reunido muchos discos, pero nunca los he escuchado...
+[name="Niño"]   ¡...Pero algún día los pondré para que todos los escuchen!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[name="Amiya"]   ...Habla de algo tan difícil con tanta tranquilidad...
+[name="Amiya"]   ...¿Para qué hago todo esto...? ¿Qué puedo hacer yo...?
+[Character(fadetime=0)]
+[name="Niño"]   Señorita, ¿no me tienes miedo?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿...Miedo de qué?
+[Character(fadetime=0)]
+[name="Niño"]   ¡Soy un Infectado!
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Jaja... Yo también.
+[Character(fadetime=0)]
+[name="Niño"]   ¡¿Qué?! Qué lástima. ¡Y con lo bonita que eres...!
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   No hay nada de malo en ser un Infectado. Estés sano o Infectado...
+[name="Amiya"]   Si eres una buena persona, eso no cambiará.
+[Character(fadetime=0)]
+[name="Niño"]   ¿Eh...? No entiendo...
+[name="Niño"]   (Grrrrrr...)
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿...Tienes hambre?
+[Character(fadetime=0)]
+[name="Niño"]   ...Ajá...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...Toma, es para ti. Es todo lo que tengo.
+[Character(fadetime=0)]
+[name="Niño"]   ¡Guau! ¡Gracias, señorita!
+[name="Niño"]   Pero... ¿por qué viniste aquí?
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Yo...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="Amiya"]   Es porque...
+[Character(name="char_002_amiya_1#10")]
+[name="Amiya"]   Es porque le hice una promesa a alguien.
+[Dialog]
+[Delay(time=1)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Niño"]   ¡¡Adiós, señorita!!
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   ¡Sí, adiós!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   ...
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1.5)]
+[name="Amiya"]   Incluso un niño como él... Al final, solo...
+Aquellos a quienes les arrebataron su identidad. Los Infectados. Hace mucho que perdieron el derecho a llamarse personas.
+[name="Amiya"]   ¿Qué puedo lograr? ¿Qué más... puedo hacer...?
+[name="Amiya"]   ¿Por qué... no puedo proteger a quienes me rodean...?
+No puedes.
+[name="Amiya"]   No... Yo...
+Hambre... Persecución... Muerte...
+Eso es lo único que les espera a los Infectados.
+[name="Amiya"]   No, eso no es cierto...
+[name="Amiya"]   Mientras Rhodes Island siga luchando por los Infectados...
+No eres más que una de las pocas personas con suerte.
+[name="Amiya"]   No... Todos nos hemos unido para luchar por un objetivo común.
+Este mundo ya se ha vuelto frío e insensible.
+[name="Amiya"]   No, todavía no...
+[name="Amiya"]   Los Infectados aún no pueden dejarse vencer por la desesperación...
+Tú.
+Deja que la ira te consuma.
+Solo entonces...
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[name="Amiya"]  Yo...
+[name="Amiya"]  No... No lo haré...
+[name="Amiya"]  Hice una promesa...
+[name="Amiya"]  ¡Le hice una promesa a ella...!
+[Dialog]
+[blocker(r=1, g=1, b=1, a=1, block=true, fadetime=0.5)]
+[Delay(time=1)]
+[Background(block=false)]
+[blocker(block=true, a=0, fadetime=0.4)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...¿Eh?
+[name="Amiya"]   ¿Quién es...?
+[delay=0.5]
+[blocker(r=1, g=1, b=1, a=1, block=true, fadetime=0.5)]
+[Image(image="avg_31_1", fadetime=2, xScale=1, yScale=1)]
+[ImageTween(image="avg_31_1", duration=20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.2, yScaleTo=1.2,yTO=600 )]
+[name="Niña pequeña"]    Una chica mayor me dijo una vez que estos muñecos solo funcionan si los haces tú misma.
+[name="Niña pequeña"]    ¡Por eso te doy esto!
+[name="Voz de otra chica"]    ...
+[Dialog]
+[blocker(r=1, g=1, b=1, a=0, block=true, fadetime=0.5)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]  ¿Esa voz de hace un momento...?
+[Character(fadetime=1)]
+[delay=0.3]
+[name="Amiya"]  !
+[name="Amiya"]  Esa silueta...
+[blocker(r=1, g=1, b=1, a=0.5, block=true, fadetime=0.3)]
+[Image(image="avg_31_2", fadetime=0.5, xScale=1, yScale=1, block=true)]
+[blocker(block=false, a=0, fadetime=0.3)]
+[ImageTween(image="avg_31_2", duration=20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.2, yScaleTo=1.2, yTO=200 )]
+[name="Amiya"]  ¿Es la Señorita Ch'en?
+[Dialog]
+[name="Niña pequeña"]   ...
+[name="Niña pequeña"]   ------
+[name="Niña pequeña"]   ------------
+[name="Niña pequeña"]   ¡------!
+[name="Voz de otra chica"]    ...
+[Dialog]
+[delay=0.7]
+[Image(block=true, fadetime=2)]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]  ...!
+[Character(fadetime=1)]
+[blocker(block=true, fadetime=2)]
+[name="Amiya"]    ...
+[Dialog]
+[blocker(block=true, a=0, fadetime=1)]
+[delay=0.7]
+[Background(screenadapt="coverall", image="bg_lungmen_r", width=1, height=1, fadetime=2, block=true)]
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Señorita Ch'en...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   ... ...
+[Background(fadetime=2)]
+[blocker(block=true, fadetime=2)]
+[Character(fadetime=0)]
+[Image(image="avg_31_4", fadetime=0, xScale=1, yScale=1)]
+[blocker(block=true, a=0, fadetime=2)]
+[name="Amiya"]   ...
+[name="Amiya"]   Señorita Ch'en, ¿qué haces aquí?
+[name="Amiya"]   Pensé que estabas...
+[name="Ch'en"]  No es asunto tuyo.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[name="Ch'en"]  Esto es un asunto de Lungmen, y yo me encargaré.
+[name="Amiya"]   ...
+[Dialog]
+[delay(time=1)]
+[blocker(block=true, fadetime=2)]
+[Image(fadetime=0, xScale=1, yScale=1)]
+[Background(screenadapt="coverall", image="bg_lungmen_r", width=1, height=1, fadetime=1, screenadapt="coverall")]
+[blocker(block=true, a=0, fadetime=1)]
+[Character(name="char_002_amiya_1", fadetime=1)]
+[name="Amiya"]   ...
+[name="Amiya"]   Señorita Ch'en...
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1.6, block=true)]
+[Character]
+[Image(image="avg_31_3", fadetime=0, xScale=1, yScale=1)]
+[blocker(block=true, a=0, fadetime=1)]
+[delay(time=1)]
+[name="Amiya"]   Es la primera vez...
+[name="Amiya"]   ...que veo esa mirada en sus ojos...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

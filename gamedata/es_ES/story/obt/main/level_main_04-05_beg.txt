@@ -1,0 +1,48 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 35 (antes)
+[Background(screenadapt="coverall", image="bg_lungmen_m", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿Frostleaf? ¡¿Frostleaf?!
+[name="Amiya"]   ¿Qué está pasando...?
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Guardia"]   ¡Amiya! Habla el segundo escuadrón de reconocimiento....
+[name="Guardia"]   ¡Nos estamos retirando! Pero el enemigo...
+[name="Guardia"]   Reunion...
+[name="Guardia"]   ...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Se cortó otra vez?
+[name="Amiya"]   ¡Tercer escuadrón de reconocimiento! ¿Me reciben? ¡Tercer escuadrón de reconocimiento!
+[name="Amiya"]   ...
+[Character(name="char_010_chen_1#3")]
+[name="Ch'en"]   ...
+[Character(name="char_010_chen_1#3", focus=-1)]
+[name="Kal'tsit"]   Amiya.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¡Dra. Kal'tsit! ¡Soy yo! ¿Recibiste--
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Kal'tsit"]   He estado monitoreándolos desde el puente de mando sin interrupción.
+[name="Kal'tsit"]   Necesito que le hagas una pregunta a la oficial que está a tu lado.
+[name="Kal'tsit"]   Pregúntale...
+[name="Kal'tsit"]   '¿Hasta cuándo piensa Lungmen seguir haciéndose el desentendido?'
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   Haré como si no hubiera oído eso.
+[name="Ch'en"]   Pero es cierto que no tenemos tiempo que perder.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¿Qué pasó? Solo fui a buscar unos formularios y ahora las dos están tan serias.
+[name="Hoshiguma"]   ...¿Una nueva misión?
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Correcto.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Todos... Preparen su equipo. Es hora de salir.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Señorita Ch'en, solicito formalmente que el L.G.D. apoye a Rhodes Island en esta misión de rescate.
+[name="Amiya"]   Incluso podríamos estar ante el nuevo cuartel general provisional de Reunion...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...
+[Character(name="char_002_amiya_1#4", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Además, creo que nuestros escuadrones de reconocimiento siguen luchando allí, aunque no podamos verlos...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

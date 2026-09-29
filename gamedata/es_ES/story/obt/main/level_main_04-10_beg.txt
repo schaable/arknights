@@ -1,0 +1,205 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 40 (antes)
+[PlayMusic(intro="$frostnova_intro", key="$frostnova_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Image(image="avg_40_2", fadetime=1, block=true)]
+[CameraShake(duration=-1, xstrength=5, ystrength=5, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="Jessica"]   ¿La temperatura... está cayendo de golpe?
+[Blocker(a=0.05, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[name="Jessica"]   Se está formando hielo en el suelo...
+[Blocker(a=0.1, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[name="Jessica"]   Hace tanto frío...
+[name="Jessica"]   ¡No puede ser... hasta la efigie en llamas se congeló....!
+[name="Jessica"]   Las llamas se apagaron... Las nubes oscuras cubrieron el cielo...
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[name="Jessica"]   ¡Aaahh...!
+[Blocker(a=0.2, r=1, g=1, b=1, fadetime=1, block=true)]
+[name="Amiya"]   ¡Que no cunda el pánico!
+[name="Amiya"]   ¡Jessica, operadora de Blacksteel!
+[name="Jessica"]   ...
+[name="Jessica"]   ¡Sí!
+[name="Amiya"]   ¡Mantén tu posición!
+[name="Jessica"]   ¡Recibido!
+[name="Meteorite"]   ¡¿Qué haces, Frostleaf?!
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Dialog]
+[CameraShake(duration=1, xstrength=5, ystrength=5, vibrato=15, randomness=90, fadeout=true, block=false)]
+[Image(fadetime=1, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Background(image="bg_cher_6", width=1, height=1, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Está... absorbiendo todo el calor a su alrededor!
+[name="Amiya"]   ¡No sabía que podía afectar un área tan grande!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Je... La señora de los Yetis...
+[name="Frostleaf"]   Nunca había conocido... a nadie con una temperatura corporal más baja que la mía.
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡Frostleaf!
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   Meteorite... La verdad, quería...
+[name="Frostleaf"]   Distraerla... y ganar tiempo para ustedes...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   Tú...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=1)]
+[name="Frostleaf"]   Pero... mi cuerpo... está completamente congelado.
+[name="Frostleaf"]   Ya no puedo... mover los pies.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   ¡Frostleaf! !
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Amiya, llévatelos y ábranse paso para salir de aquí.
+[name="Frostleaf"]   En menos de un minuto, la comandante enemiga... habrá congelado toda esta plaza.
+[name="Frostleaf"]   No dejen que muera en vano.
+[CameraShake(duration=1, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=true)]
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   Amiya... No podemos... ¡No la abandonaré!
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1#3", focus=1)]
+[name="Amiya"]   Entiendo.
+[name="Amiya"]   No dejaré atrás a Frostleaf.
+[name="Amiya"]   ¡No voy a... dejar a nadie atrás!
+[name="Amiya"]   Frenaré el avance de los escuadrones enemigos.
+[name="Amiya"]   ¡¡Meteorite... cuento contigo para traer a Frostleaf de vuelta!!
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1#3", focus=2)]
+[name="Meteorite"]   ¡Recibido!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Doctor! ¡Dirige a nuestros escuadrones, por favor!
+[Character(name="char_002_amiya_1#7", focus=-1)]
+[Decision(options="¡Ya estoy en ello!;(Asentir);¡Afirmativo!", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...
+[name="Frostleaf"]   Ahora que lo pienso...
+[name="Frostleaf"]   Solo he usado estas Artes una vez antes.
+[name="Frostleaf"]   'Dondequiera que haya sangre...'
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Delay(time=1)]
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Ja.
+[name="FrostNova"]   ¿Así que quieres usar tu hielo... para contrarrestar el mío?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡Nnh...!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ¿Cómo lo harás si ya ni siquiera puedes mover la lengua?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Tú...
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ...
+[name="FrostNova"]   Yeti Squadron, dispérsense.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   Recibido.
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Hermanos míos...
+[name="FrostNova"]   Sáquenlos de sus escondites y congelen su sangre.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   Entendido.
+[Dialog]
+[Character]
+[Delay(time=0.5)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   '...Tu mente no puede ocultarme nada.'
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   ¿Un conjuro?
+[name="Miembro de Reunion"]   La coneja de Rhodes Island...
+[name="Miembro de Reunion"]   ¿Líneas... negras? ...¿Qué demonios es eso?
+[name="Miembro de Reunion"]   Q-qué clase de Artes son esas--
+[name="Miembro de Reunion"]   ¿E-espera, por qué esa cosa... está atravesando nuestras barreras? !
+[name="Miembro de Reunion"]   No--
+[name="Miembro de Reunion"]   ...¡¡¡¡Aaaaaghh!!!!
+[CameraShake(duration=1, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=true)]
+[name="Miembro de Reunion"]   ¡M-mi cuerpo! ¡Está en llamas...! ¡Me quemo!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Meteorite!
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡Lo sé!
+[name="Meteorite"]   ¡Por favor, sigue distrayéndolos!
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   ¡N-n-no... qué frío...!
+[name="Miembro de Reunion"]   ¡Nnngh... duele tanto!
+[name="Miembro de Reunion"]   ...Gaah... No, ya no más...
+[Character(name="char_1505_frstar_1",name2="char_1002_nsabr_2",focus=1)]
+[name="FrostNova"]   ...!
+[name="FrostNova"]   ¡Rápido! ¡No dejen que sigan lastimando a nuestros camaradas!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Entendido!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Tus Artes de Originium... son formidables.
+[name="FrostNova"]   ...
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Nnh... aagh...
+[name="Frostleaf"]   Maldita seas... Aléjate... de mí...
+[name="Frostleaf"]   Nnnh...
+[name="Frostleaf"]   ...
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   No te daré la oportunidad de usar tus Artes, niña.
+[name="FrostNova"]   Ahora cierra los ojos y duerme.
+[name="FrostNova"]   Pronto pondré fin a tu sufrimiento.
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡E-esta bruja...!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ...
+[name="FrostNova"]   Supongo que tú eres Amiya.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ...
+[name="FrostNova"]   Me gusta esa mirada.
+[name="FrostNova"]   Así debe mirar una guerrera.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Lo siento...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Por qué estás...
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ......♬
+[name="FrostNova"]   ——♪——♬——
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Blocker(a=0.3, r=255, g=255, b=255, fadetime=3, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...!
+[name="Amiya"]   ¿Qué está pasando aquí?
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   ——♬——♬——
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...¿Está nevando?
+[Character(name="char_1505_frstar_1")]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=3, block=true)]
+[name="FrostNova"]   ......♪
+[name="FrostNova"]   'Duerman, mis niños. Duerman.
+[name="FrostNova"]   Erizos de trapo y ositos de peluche...'......
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   Esta extraña melodía...
+[name="Meteorite"]   ...¡Está usando sus Artes!
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   'Húndanse en silencio en la oscuridad...♪
+[name="FrostNova"]   ...Mis títeres y muñecos rotos♬'
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Blocker(a=0.5, r=255, g=255, b=255, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[name="Amiya"]   ¡¿Están apareciendo más fragmentos de hielo negro de la nada?!
+[Character(name="char_219_meteo_1#3")]
+[name="Jessica"]   ¡Los fragmentos de hielo están cayendo lentamente al suelo!
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   Maldición, ¿el suelo se congela donde caen los fragmentos...?
+[name="Meteorite"]   El hielo negro...
+[name="Meteorite"]   ¡¿Se está extendiendo...?!
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Los cristales de hielo están destruyendo todo a nuestro alrededor!
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡No dejen que termine su canción! !
+[Character(name="char_002_amiya_1#7", focus=-1)]
+[Decision(options="¡Rhodes Island, vamos con todo!", values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$flashback", volume=0.7, Delay=0.3)]
+[PlaySound(key="$flashback", volume=0.7, Delay=0.7)]
+[Delay(time=0.2)]
+[Blocker(a=1,r=255, g=255, b=255, fadetime=0.3, block=true)]
+[Image]
+[Blocker(block=true, fadetime=0.5)]

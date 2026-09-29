@@ -1,0 +1,151 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 34 (antes)
+[Background(screenadapt="coverall", image="bg_lungmen_m", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Espero no haberte hecho esperar. La reunión del L.G.D. se alargó un poco más de lo previsto.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   No te preocupes, Señorita Ch'en.
+[name="Amiya"]  (Actúa como si no hubiera pasado nada...)
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   ¿Cómo está la situación?
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Nuestro equipo de reconocimiento ya nos envió información.
+[name="Amiya"]   La revisé y seleccioné algunos puntos que podrían interesarte.
+[name="Amiya"]   Ah, Inspectora Hoshiguma...
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   No te preocupes por mí. Solo voy a escuchar.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Continúa, Amiya. No hay problema.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Muy bien. Conseguimos una pista gracias a unos Infectados...
+[name="Amiya"]   El equipo de reconocimiento ya confirmó que hay varios escondites de Reunion en el distrito residencial de Lungmen.
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   ¿Y?
+[Character(name="char_010_chen_1#5", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Varios escuadrones de Reunion ya están planeando atacar las defensas de Lungmen.
+[name="Amiya"]   Incluso encontramos una ruta que Reunion usaba para infiltrarse.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Ja. Qué arrogancia.
+[name="Ch'en"]   Parece que subestiman al L.G.D.
+[name="Ch'en"]   ¿Y las ruinas de Chernobog?
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Rhodes Island envió varios escuadrones de reconocimiento allí.
+[name="Amiya"]   Aunque la mayoría de los habitantes ya se habían ido, encontramos a muchos miembros de Reunion aún activos en la zona.
+[name="Amiya"]   Uno de los equipos incluso tuvo más de tres encuentros con las fuerzas de Reunion.
+[name="Amiya"]   Sin embargo, con la información que tenemos, no podemos vincular con certeza los movimientos en la ciudad con operaciones de mayor alcance de Reunion...
+[name="Amiya"]   Pero recomendaría incluir esta ciudad entre los objetivos prioritarios de nuestras futuras operaciones.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   ...Ya veo.
+[name="Ch'en"]   Hoshiguma, tráeme mis formularios. Están en el tercer cajón del lado izquierdo de mi escritorio.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¿Ahora mismo? Claro.
+[Dialog(fadetime=0.3)]
+[Character(fadetime=0.4)]
+[Delay(time=0.3)]
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Continúa.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Mmm, en resumen...
+[name="Amiya"]   Rhodes Island propone una operación conjunta para eliminar por completo las fuerzas de Reunion que quedan en Lungmen.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   No es aceptable.
+[name="Ch'en"]   El L.G.D. no lo permitirá.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1#6", focus=2)]
+[name="Amiya"]   ...¿Qué? ¿Señorita Ch'en...?
+[Character(name="char_010_chen_1", name2="char_002_amiya_1#6", focus=1)]
+[name="Ch'en"]   Dije que no.
+[name="Ch'en"]   Tú... eres una Infectada.
+[name="Ch'en"]   Si siguen realizando misiones en los suburbios, solo provocarán más disturbios.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   ...
+[Character(name="char_010_chen_1", name2="char_002_amiya_1", focus=1)]
+[name="Ch'en"]   Esa es nuestra decisión.
+[Character(name="char_010_chen_1", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]   Pero--
+[PlaySound(key="$phone")]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Ah, disculpa, tengo que atender esta llamada...
+[name="Amiya"]   Habla Amiya.
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="???"]   ¿A-Amiya? ¿Eres tú?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...! ¿Jessica?
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="Jessica"]   Sí, soy Jessica...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Están en una misión de sigilo? Apenas te oigo...
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Jessica"]   Los encontramos en las ruinas de la ciudad...
+[name="Jessica"]   Los líderes de Reunion...
+[name="Jessica"]   Hay... dos de ellos.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡¿Qué?!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   ¿Así que volviste huyendo con el rabo entre las piernas?
+[Character(name="char_1504_cqbw")]
+[name="W"]  No soy una perra mestiza como tú y los de tu calaña.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   ...Si no fuera porque cumpliste tu misión, te habría dejado otras dos cicatrices en esa sucia cara tuya.
+[Character(name="char_1504_cqbw")]
+[name="W"]  ¿No perdiste todas las extremidades en esa explosión? Me daría pena obligar a un niño como tú a maquillarme con la boca.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Bah.
+[Character(name="char_1504_cqbw")]
+[name="W"]  Pero dejemos esto de lado por ahora... No nos sirve de nada a ninguno de los dos.
+[Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1", focus=2)]
+[name="Mephisto"]   En eso te doy la razón.
+[name="Mephisto"]   Entonces, ¿mordieron el anzuelo?
+[Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1", focus=1)]
+[name="W"]  Por supuesto. A ver si ese viejo abanderado nos trae lo que de verdad buscamos.
+[name="W"]  Por cierto, le tienes bastante miedo a ese viejo, ¿no?
+[Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1#3", focus=2)]
+[name="Mephisto"]   Ya estoy de mal humor.
+[Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1#3", focus=1)]
+[name="W"]  Ay, perdón.
+[name="W"]  Pero solo hasta que atrapemos a la presa, ¿no?
+[name="W"]  ¿Qué tal si dejamos de lado nuestras diferencias por ahora?
+[Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1", focus=2)]
+[name="Mephisto"]   Tch. Está bien.
+[name="Mephisto"]   Primero me encargaré de los peces pequeños.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Rhodes Island, sé que están ahí.
+[name="Mephisto"]   ...Es imposible esconderse de mí.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡Jessica, no!
+[name="Meteorite"]   ¡Podría ser una trampa...!
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]   ¡Nos descubrió! Tenemos que...
+[name="Jessica"]   Si derrotamos al líder enemigo... ¡Tenemos que...!
+[PlaySound(key="$p_imp_grenade_n")]
+[PlaySound(key="$d_gen_explo_n", delay=0.3)]
+[Delay(time=1)]
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]   Ah. Así que sí estaban aquí.
+[name="Mephisto"]   ¿De dónde saliste, gatita~?
+[name="Mephisto"]   No puedes tratar este lugar como si fuera tu patio de juegos.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Oigan, ustedes.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡¡Sí, señor!!
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Antes de darnos un festín con la presa más exquisita...
+[name="Mephisto"]   Sírvanse los aperitivos.
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   Ohhh... ¡Ohhhhh! !
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡Tsk...!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

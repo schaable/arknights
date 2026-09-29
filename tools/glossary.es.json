@@ -1194,6 +1194,8 @@
     "Xingzhu",
     "Yanese Dagger",
     "Yato",
+    "Yeti Squadron",
+    "Yetis",
     "Yu",
     "Zero-Stress Helper",
     "Zima",
@@ -1265,7 +1267,104 @@
     "Istina & May": "Istina y May",
     "Beehunter & Leto": "Beehunter y Leto",
     "Everyone": "Todos",
-    "Announcement": "Anuncio"
+    "Announcement": "Anuncio",
+    "Franka & Exusiai": "Franka y Exusiai",
+    "Little Girl": "Niña pequeña",
+    "Another Girl's Voice": "Voz de otra chica",
+    "Wounded Operator": "Operador herido"
   },
-  "overrides": {}
+  "overrides": {
+    "obt/main/level_main_04-01_beg::s3": {
+      "source": "Welcome back.",
+      "translation": "Bienvenida de vuelta."
+    },
+    "obt/main/level_main_04-02_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 32 (después)"
+    },
+    "obt/main/level_main_04-03_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 33 (antes)"
+    },
+    "obt/main/level_main_04-03_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 33 (después)"
+    },
+    "obt/main/level_main_04-04_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 34 (antes)"
+    },
+    "obt/main/level_main_04-04_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 34 (después)"
+    },
+    "obt/main/level_main_04-05_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 35 (antes)"
+    },
+    "obt/main/level_main_04-05_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 35 (después)"
+    },
+    "obt/main/level_main_04-06_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 36 (antes)"
+    },
+    "obt/main/level_main_04-06_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 36 (después)"
+    },
+    "obt/main/level_main_04-07_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 37 (antes)"
+    },
+    "obt/main/level_main_04-07_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 37 (después)"
+    },
+    "obt/main/level_main_04-08_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 38 (antes)"
+    },
+    "obt/main/level_main_04-08_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 38 (después)"
+    },
+    "obt/main/level_main_04-09_beg::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 39 (antes)"
+    },
+    "obt/main/level_main_04-09_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 39 (después)"
+    },
+    "obt/main/level_main_04-10_end::s0": {
+      "source": "第三十二关（前）",
+      "translation": "Etapa 40 (después)"
+    },
+    "obt/main/level_main_04-08_beg::s2": {
+      "source": "Where is this...",
+      "translation": "¿Dónde estamos...?"
+    },
+    "obt/main/level_main_04-09_beg::s29": {
+      "source": "Yessir!",
+      "translation": "¡Sí, señor!"
+    },
+    "obt/main/level_main_04-10_beg::s7": {
+      "source": "Don't panic!",
+      "translation": "¡Que no cunda el pánico!"
+    },
+    "obt/main/level_main_04-10_beg::s12": {
+      "source": "Roger!",
+      "translation": "¡Recibido!"
+    },
+    "obt/main/level_main_04-10_beg::s34": {
+      "source": "Roger!",
+      "translation": "¡Recibido!"
+    },
+    "obt/main/level_main_04-10_end::s37": {
+      "source": "Roger!",
+      "translation": "¡Recibido!"
+    }
+  }
 }

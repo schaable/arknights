@@ -107,6 +107,7 @@ function localizeUI() {
     setTip("playPauseBtn", "tt_bgm");
 }
 localizeUI();
+const translationReviews = serverString === SERVERS.ES ? createStoryReviewNotes() : null;
 get_char_table(false, serverString)
     .then((js) => {
         operatorData = js;
@@ -727,6 +728,7 @@ async function genStory(data, avatars = []) {
     const remoteUrl = `${DATA_BASE[serverString]}/gamedata/story/${key}.txt`;
     const localUrl = `gamedata/${serverString}/story/${key}.txt`;
     let txtPromise;
+    let hasSpanishTranslation = false;
     if (key.startsWith("uniequip")) {
         // module stories are synthesized locally (English in the ES pilot)
         txtPromise = getModuleStory(key).then((r) => (r.ok ? r.text() : ""));
@@ -735,7 +737,12 @@ async function genStory(data, avatars = []) {
         // fall back to remote EN on a 404 OR a network rejection (the .catch also
         // closes the un-caught reject gap the remote-first path has).
         txtPromise = fetch(localUrl)
-            .then((r) => (r.ok ? r.text() : Promise.reject()))
+            .then(async (r) => {
+                if (!r.ok) throw new Error("No local translation");
+                const text = await r.text();
+                hasSpanishTranslation = true;
+                return text;
+            })
             .catch(() => fetch(remoteUrl).then((r) => r.text()));
     } else {
         // remote-first for EN/JP/KR/CN (unchanged behavior)
@@ -753,7 +760,18 @@ async function genStory(data, avatars = []) {
                 // use special bg, currently used for IS endbooks
                 txt = `[roguebackground(image="${data.storyBackground}")]\n${txt}`;
             }
-            const lines = txt.matchAll(/^(\[[^\]]+])?(.*)?$/gim);
+            const lines = Array.from(txt.matchAll(/^(\[[^\]]+])?(.*)?$/gim));
+            let currentLineIndex = 0;
+            const englishComparison = hasSpanishTranslation
+                ? createEnglishComparison(txt, remoteUrl, {
+                      prefix: data.storyBackground
+                          ? `[roguebackground(image="${data.storyBackground}")]\n` : "",
+                      renderText: renderDialogText,
+                      onLayout: () => scrollFunction(true),
+                      review: translationReviews,
+                      story: { key, name: storyName, code: data.storyCode || "" },
+                  })
+                : null;
             key.startsWith("uniequip")
                 ? storyDiv.classList.add("module")
                 : storyDiv.classList.remove("module");
@@ -1548,6 +1566,9 @@ async function genStory(data, avatars = []) {
                         ? { name: { name: "avg_npc_048" } }
                         : { name: { name: DecisionNotDoctor[CURRENT_STORY] } },
                     1,
+                    0,
+                    null,
+                    null,
                 );
                 // create predicate after making dialog or the dialog will be hidden.
                 const predicate = {};
@@ -1591,7 +1612,24 @@ async function genStory(data, avatars = []) {
                         scrollFunction(true); // changing decision can change scene sizes so clear cache
                     };
                 });
+                englishComparison?.attach(txt, { indexes: [currentLineIndex], field: "options" });
                 return dialog;
+            }
+            function renderDialogText(blocktxt, dialogLine) {
+                blocktxt.innerHTML = dialogLine
+                    .replace(/^(?:\\r\\n|\\r|\\n)+/, "")
+                    .replace(/(?:\\r\\n|\\r|\\n)+$/, "")
+                    .replace(/\\r\\n|\\r|\\n/g, "<br />")
+                    .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;")
+                    .replace(/\{@nbs\}/gi, "&nbsp;")
+                    .replace(/\{@nickname\}/gi, NICK_SPAN)
+                    .replace(
+                        /<color=([#\w]+)>([\s\S]*?)<\/color>/gi,
+                        '<span style="color: $1;">$2</span>',
+                    );
+                blocktxt
+                    .querySelectorAll(".nicknameRef")
+                    .forEach((s) => (s.textContent = currentDocName()));
             }
             function makeDialog(
                 args,
@@ -1600,6 +1638,7 @@ async function genStory(data, avatars = []) {
                 currentSpeaker,
                 colorIndex = 0,
                 type = null,
+                english = { indexes: [currentLineIndex] },
             ) {
                 freshScene = false;
                 applyActiveCurtains();
@@ -1619,20 +1658,7 @@ async function genStory(data, avatars = []) {
                 txt.style.setProperty("--name-color", "#777");
                 let blocktxt = document.createElement("div");
                 blocktxt.classList.add("interactable-text");
-                blocktxt.innerHTML = dialogLine
-                    .replace(/^(?:\\r\\n|\\r|\\n)+/, "")
-                    .replace(/(?:\\r\\n|\\r|\\n)+$/, "")
-                    .replace(/\\r\\n|\\r|\\n/g, "<br />")
-                    .replace(/\\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;")
-                    .replace(/\{@nbs\}/gi, "&nbsp;")
-                    .replace(/\{@nickname\}/gi, NICK_SPAN)
-                    .replace(
-                        /<color=([#\w]+)>([\s\S]*?)<\/color>/gi,
-                        '<span style="color: $1;">$2</span>',
-                    );
-                blocktxt
-                    .querySelectorAll(".nicknameRef")
-                    .forEach((s) => (s.textContent = currentDocName()));
+                renderDialogText(blocktxt, dialogLine);
                 wordCount += countWords(blocktxt.innerHTML);
                 txt.appendChild(blocktxt);
                 wrap.appendChild(left);
@@ -1694,6 +1720,7 @@ async function genStory(data, avatars = []) {
                 }
 
                 refreshNicknames(wrap);
+                if (english) englishComparison?.attach(txt, english);
                 return wrap;
             }
             function endMultiLine() {
@@ -1705,6 +1732,8 @@ async function genStory(data, avatars = []) {
                     multiLineData.chars,
                     multiLineData.speaker,
                     Array.from(speakerList).indexOf(spkr),
+                    null,
+                    { indexes: multiLineData.indexes },
                 );
                 getWorkingScene().appendChild(dlg);
                 multiLineData = {};
@@ -1713,7 +1742,8 @@ async function genStory(data, avatars = []) {
                 // call this in places where a dialog/scene/whatever *should* be finished but may not be marked as so in the script
                 if (Object.keys(multiLineData).length !== 0) endMultiLine();
             }
-            for (const line of lines) {
+            for (const [lineIndex, line] of lines.entries()) {
+                currentLineIndex = lineIndex;
                 [_, _cmd, _args] = line[1]
                     ? /\[\s*?(?:([^=\(\]]+)(?=[\(\]])\(?)?([^\]]*?)\)?\s*?\]/.exec(
                           line[1],
@@ -1944,6 +1974,7 @@ async function genStory(data, avatars = []) {
                             break;
                         case "multiline": // text appears in multiple parts (as the reader taps)
                             if (args && args?.name !== undefined && line[2]) {
+                                (multiLineData.indexes ||= []).push(currentLineIndex);
                                 multiLineData.dialog =
                                     (multiLineData?.dialog || "") + line[2];
                                 multiLineData.args = multiLineData?.args || {
@@ -2004,6 +2035,7 @@ async function genStory(data, avatars = []) {
                                     0,
                                     0,
                                     "subtitle",
+                                    { indexes: [currentLineIndex], field: "text" },
                                 );
                                 getWorkingScene().appendChild(dlg);
                             }

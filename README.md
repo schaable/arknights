@@ -39,6 +39,21 @@ No build step and no backend — open `index.html` and the browser does the rest
 - Spanish is **local-first**: for `es_ES`, `js/story.js` tries
   `gamedata/es_ES/story/<key>.txt` and falls back to the remote English script on a
   miss, so untranslated stories still render (in English).
+- While reading a Spanish translation, click a dialogue box or its **translation
+  icon** to replace that box's Spanish text with the English original. Click again
+  to switch back. For dialogue choices, use the icon; answers remain selectable
+  in either language and the selected branch is preserved when switching.
+  The original loads once per scene, on demand. Comparison is unavailable if the
+  English script's structure no longer matches the translation.
+- The small **comment icon** beside each translation icon lets you save, edit,
+  or delete a review note and an optional replacement. Notes stay in this browser.
+  The **clipboard icon** beside the story selectors copies all saved notes with
+  their stage, scene, speaker, file lines, and English/Spanish text for pasting
+  into a review conversation. If clipboard access is unavailable, select and copy
+  the report from the dialog. If English cannot load, the note still saves with
+  its Spanish text and the report identifies the missing original. After sending
+  your review, use the **eraser icon** beside the clipboard to clear all saved
+  notes and remove their marks from the reader.
 - All local paths are **relative**, so the site works unchanged whether it's served at
   the root (`http://localhost:8000/`) or under a subpath
   (`https://schaable.github.io/arknights/`).
@@ -67,7 +82,8 @@ node tools/translate.mjs --apply --scope=main_NN   # splice translations into ga
 splices byte-preservingly — every `[Command(...)]` tag, id and `values=` is left
 untouched. It fails loudly rather than writing a half-translated file.
 
-Translated so far: Main Story Prologue and Chapters 1–3.
+Translated so far: Main Story Prologue and Chapters 1–4.
+Chapter 4 is fully translated; 4-5 through 4-10 are awaiting review.
 
 ## Running locally
 

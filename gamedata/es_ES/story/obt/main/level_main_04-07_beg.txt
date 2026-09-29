@@ -1,0 +1,72 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 37 (antes)
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Este lugar... está lleno de miembros de Reunion caídos.
+[name="Amiya"]   ...La sangre de sus heridas está congelada, pero el resto de su cuerpo sigue intacto.
+[name="Amiya"]   Esta es la técnica de Frostleaf.
+[name="Amiya"]   ...Esas ruinas de allí parecen ser obra de explosivos.
+[name="Amiya"]   Probablemente fue Meteorite.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   (Frostleaf... Jessica... Meteorite... Estoy segura de que siguen vivas...)
+[Character(fadetime=0.6)]
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="Kal'tsit"]   Amiya, todos los equipos de rescate han llegado a Rhodes Island.
+[name="Kal'tsit"]   Evacuamos a todos los escuadrones de reconocimiento, salvo al de Meteorite.
+[name="Kal'tsit"]   No perdimos a ningún operador en esta misión, pero...
+[name="Kal'tsit"]   Todos sufrieron lesiones por congelación de diversa gravedad.
+[name="Kal'tsit"]   Debes tenerlo en cuenta.
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...¿Lesiones por congelación?
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="Kal'tsit"]   Todos nuestros escuadrones de reconocimiento vieron a un grupo especial de tropas de Reunion recorriendo la ciudad.
+[name="Kal'tsit"]   A diferencia de los soldados temerarios de Reunion a los que solemos enfrentarnos, estos tenían una forma particular de combatir.
+[name="Kal'tsit"]   Ten cuidado.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Yo.... Entiendo.
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Kal'tsit"]   Dr. {@nickname}, ¿quedó claro?
+[Decision(options="Entiendo.", values="1")]
+[Predicate(references="1")]
+[name="Kal'tsit"]   Muy bien, entonces.
+[name="Kal'tsit"]   Yo también tengo asuntos que atender.
+[name="Kal'tsit"]   Amiya, aunque el Dr. {@nickname} sea de gran ayuda, no puedes depender tanto de una sola persona.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Kal'tsit"]   Y ten cuidado con los anillos.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Lo sé.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Amiya"]   La Dra. Kal'tsit se preocupa mucho por ti, en realidad.
+[name="Amiya"]   Sin que nos diéramos cuenta...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Unas bestias peligrosas han mostrado sus colmillos.
+[Decision(options="Reunion se nos viene encima.;Nos han cortado la retirada...;Estos matones de verdad nos tienen en la mira.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   Mmm... Harán todo lo posible para impedir que escapemos.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Pero no vinimos aquí para huir.
+[name="Amiya"]   Rhodes Island se abrirá paso entre sus filas.
+[name="Amiya"]   ¡Vamos a rescatar al escuadrón de Meteorite!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[name="Kal'tsit"]   Projekt Red, ¿me recibes?
+[name="Kal'tsit"]   Ahh, sí.
+[name="Kal'tsit"]   Así es. Nos veremos en la entrada este de los suburbios.
+[name="Kal'tsit"]   Ajá. Solo seremos nosotras dos.
+[name="Kal'tsit"]   Estaremos bien.
+[name="Kal'tsit"]   Nosotras dos somos más que suficientes para enfrentarnos a Reunion.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

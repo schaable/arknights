@@ -1,0 +1,79 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 36 (después)
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Derrotamos a las fuerzas de Reunion!
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=1)]
+[name="Hoshiguma"]   Bah. Para ser unos tipos que solo venían a estorbar, eran bastante duros.
+[name="Hoshiguma"]   ...
+[name="Hoshiguma"]   No hay rastro de Ch'en.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]   Ahora sí que estamos en problemas...
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#4", focus=1)]
+[name="Hoshiguma"]   ¡Tampoco responde a mis llamadas! Tsk... En eso no ha cambiado nada.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡L.G.D.! Todos, prepárense para seguirme--
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   No, Inspectora Hoshiguma.
+[name="Amiya"]   Deja que nosotros nos encarguemos.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Nos acercamos a las zonas con alta concentración de Originium que dejó la Catástrofe...
+[name="Amiya"]   Si siguen avanzando, quienes están sanos corren el riesgo de contraer Oripatía.
+[name="Amiya"]   Las consecuencias serían demasiado graves.
+[name="Amiya"]   Además, como Infectados...
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=1)]
+[name="Hoshiguma"]   Ja. Eres tan pequeñita que resulta tierno verte dar discursos tan serios.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   ...
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#6", focus=2)]
+[name="Amiya"]   ¿Eh? ¡¿Qué?!
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#6", focus=1)]
+[name="Hoshiguma"]   Jajaja, solo te estaba molestando.
+[name="Hoshiguma"]   Pero no tienes que convencerme. Entiendo lo que te preocupa.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡L.G.D.! ¡Seremos el escudo de Rhodes Island!
+[name="Hoshiguma"]   ¡Bloqueen la entrada y no dejen entrar ni salir a un solo miembro de Reunion!
+[name="Hoshiguma"]   ¡Dejaremos este problema en manos de los expertos!
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Inspectora...
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=1)]
+[name="Hoshiguma"]   Ah, llámame Hoshiguma, sin más.
+[name="Hoshiguma"]   Ve. Cuida de Ch'en, por favor.
+[name="Hoshiguma"]   Asegúrate de traerla de vuelta sana y salva.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   ¡Lo haré, Hoshiguma...! ¡Juro que traeré a la Señorita Ch'en de vuelta sana y salva...!
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#7", focus=1)]
+[name="Hoshiguma"]   Ustedes también cuídense.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#7", focus=2)]
+[name="Amiya"]   ¡De acuerdo!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Doctor, sígueme, por favor.
+[name="Amiya"]   ¡Rhodes Island, en marcha!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Amiya"]   (Espérame, Señorita Ch'en...)
+[name="Amiya"]   (Frostleaf, Meteorite, Jessica...)
+[name="Amiya"]   (¡Tienen que resistir!)
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(screenadapt="coverall", image="bg_cher_3", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_016_medic", name2="char_003_kalts_1", focus=1)]
+[name="Médico"]   Rescatamos al equipo de reconocimiento con el que tuvimos el último contacto.
+[name="Médico"]   Están... muy mal...
+[Character(name="char_016_medic", name2="char_003_kalts_1", focus=2)]
+[name="Kal'tsit"]   ...
+[name="Kal'tsit"]   Enrojecimiento, hipotermia y necrosis...
+[name="Kal'tsit"]   ¿Qué está pasando aquí?
+[Character(fadetime=0)]
+[name="Operador herido"]   Ngh...
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   ¿Lesiones por congelación en todo el cuerpo...?
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

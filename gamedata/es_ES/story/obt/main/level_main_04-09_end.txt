@@ -1,0 +1,177 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 39 (después)
+[Background(image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   ¡Frostleaf, cuidado! ¡No te adelantes tanto!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡Sé lo que hago!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Aaah! ¡Aaaagghhh!
+[name="Miembro de Reunion"]   ¿Cortó el escudo con una cuchilla de aire helado?
+[name="Miembro de Reunion"]   ¿Qu-qué?!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡Lárgate!
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡Amiya! ¡Frostleaf rompió la formación enemiga y está cargando contra su comandante!
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1", focus=1)]
+[name="Amiya"]   ¡Francotiradores, Hechiceros, cubran a Frostleaf!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Character(name="char_1507_Mephisto_1")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="Mephisto"]   ¿Ohh...?
+[name="Mephisto"]   ¿Y tú qué quieres, zorrita?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Quiero que grites y supliques. Quiero que pagues...
+[name="Frostleaf"]   ...con tu vida.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Character(name="char_002_amiya_1#7")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="Amiya"]   ¡Fuera de mi camino!
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$p_skill_chimera", volume=0.4)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[name="Miembro de Reunion"]   ¡Uah!
+[name="Miembro de Reunion"]   A-Artes oscuras...
+[name="Miembro de Reunion"]   ¡R-rápido, huyan!
+[name="Miembro de Reunion"]   ¡No quiero acabar como los secuaces de Mephisto...!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Mephisto, no te dejaremos escapar!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Character(name="char_1507_Mephisto_1")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="Mephisto"]   Je. Debí imaginar que estos matones no bastarían para detenerte.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Vas a pagar por lo que hiciste, maldito enfermo!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   No puedes escapar.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Zorrita, te estás acercando demasiado para mi gusto.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Porque yo seré quien te quite la vida.
+[name="Frostleaf"]   Quienes no respetan el valor de la vida...
+[name="Frostleaf"]   No merecen tener una propia.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Jeee...
+[Character(name="char_1507_Mephisto_1")]
+[Background(screenadapt="coverall", image="bg_cher_6", width=1, height=1, fadetime=1)]
+[StopMusic(fadetime=2)]
+[name="Mephisto"]   Así que eso crees.
+[CameraShake(duration=0.5, xstrength=10, ystrength=10, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.5, r=255, g=255, b=255, fadetime=3, block=true)]
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡¿?!
+[name="Frostleaf"]   Qué... ¿Mis pies...?
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡Amiya! ¡Están apareciendo fuerzas de Reunion por todas partes! Aunque no son muchas...
+[name="Meteorite"]   ...
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   Oh, no, es el Yeti Squadron...
+[name="Meteorite"]   ¡Han venido... todos juntos!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Bien, tengo que presentarles a una nueva amiga.
+[name="Mephisto"]   Ejem~ Y ahora, un aplauso para la verdadera estrella del espectáculo...
+[name="Mephisto"]   La pesadilla de la tundra del noroeste, la señora de los Yetis...
+[name="Mephisto"]   ¡La Señorita... Frost... Novaaaaaaa!
+[name="Mephisto"]   Ella congelará cada pedazo de su carne, cada gota de su sangre...
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]   ¡Poco. A. Poco!
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Background(fadetime=0.4)]
+[Dialog]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...¡Tenemos que salir de aquí...!
+[Dialog]
+[Character(fadetime=0)]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlayMusic(intro="$frostnova_intro", key="$frostnova_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Image(image="avg_40_2", xScale=1, yScale=1, fadetime=0, block=true)]
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[ImageTween(image="avg_40_2", xScaleTo=1.22, yScaleTo=1.22, yScaleFrom=1, xScaleFrom=1, duration=23, block=false)]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="FrostNova"]   ...
+[Blocker(a=0.7, initr=2, r=1, g=1, b=1, fadetime=0.3, block=true)]
+[Image(image="avg_40_2", xScale=1.45, yScale=1.45,x=-50, y=50, fadetime=0, block=true)]
+[ImageTween(image="avg_40_2", xScaleTo=1.7, yScaleTo=1.7, yScaleFrom=1.45, xScaleFrom=1.45, duration=23, block=false)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Delay(time=1.5)]
+[Blocker(a=1, initr=2, r=1, g=1, b=1, fadetime=1, block=true)]
+[Image(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_light", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1505_frstar_1")]
+[name="FrostNova"]   Mephisto...
+[Blocker(a=0, fadetime=2, block=false)]
+[name="FrostNova"]   Debí dejarte morir lentamente de frío en la tundra, psicópata.
+[delay(time=1)]
+[Blocker(a=1, initr=2, r=1, g=1, b=1, fadetime=1, block=true)]
+[Background(screenadapt="coverall", image="bg_cher_6", width=1, height=1, fadetime=0)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]   Ay, qué miedo, qué miedo~
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Pero Rhodes Island está justo frente a nosotros.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(image="bg_cher_6", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[name="Amiya"]   Frostleaf...
+[name="Amiya"]   Retrocede.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...
+[name="Frostleaf"]   Amiya, llévatelos contigo.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Me niego!
+[name="Amiya"]   ¡Esa persona... esa persona es...!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Ella... viene hacia mí.
+[name="Frostleaf"]   No podemos ganar.
+[name="Frostleaf"]   Ja... Aunque me habría gustado vivir un poco más...
+[name="Frostleaf"]   Me alegra haber tenido la oportunidad de conocerlos a todos.
+[name="Frostleaf"]   Rápido.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡¿Frostleaf?!
+[Character(name="char_193_frostl_1")]
+[CameraShake(duration=5, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[name="Frostleaf"]   ¡Rápido!
+[Dialog]
+[Blocker(a=1, initr=2, r=1, g=1, b=1, fadetime=2, block=true)]
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Background(fadetime=0)]
+[Character(fadetime=0)]
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[CameraShake(duration=-1, xstrength=5, ystrength=5, vibrato=15, randomness=90, fadeout=true, block=false)]
+[Image(image="avg_40_2", xScale=1.2, yScale=1.2, fadetime=0)]
+[ImageTween(image="avg_40_2", xScaleTo=1, yScaleTo=1, duration=10)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=1, block=true)]
+[name="FrostNova"]   ...
+[name="FrostNova"]   No se preocupen, Rhodes Island.
+[name="FrostNova"]   Les daré una muerte sin dolor.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

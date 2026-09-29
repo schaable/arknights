@@ -1,0 +1,95 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 34 (después)
+[Background(image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   *jadeo*... Maldición...
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]   Por fin... acabamos con ellos...
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ...
+[name="Meteorite"]   ...No, todavía no.
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]   ¿Qué es ese polvo que está cayendo...?
+[Dialog]
+[Character]
+[Delay(time=1)]
+[name="Miembro de Reunion"]   Nngh... Guhh...
+[name="Miembro de Reunion"]   ¡Uaaagh!
+[name="Miembro de Reunion"]   Duele... Dueeeleeee...
+[name="Miembro de Reunion"]   Aaagh... ¡Aaaargh! ¡Pica! ¡¡Pica!!
+[name="Miembro de Reunion"]   ¡¡¿Graaah?!!
+[name="Miembro de Reunion"]   Rhodes... ¡Rhodes Island!
+[name="Miembro de Reunion"]   Enemigo... ¡¡Enemigo!!
+[Character(name="char_259_Jessica_1#3")]
+[name="Jessica"]   ¡Qué...! ¿Q-qué está pasando...?
+[name="Jessica"]   ¿Los enemigos que acabamos de derrotar se están levantando otra vez...?
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   ¿Qué? ¿Ya terminaron?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¿Ese brillo... sale del bastón de ese tipo...?
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Todavía no he hecho nada.
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+[name="Jessica"]   Y... están llegando muchos más refuerzos...
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡Maldito seas...!
+[name="Meteorite"]   ¡Ahora solo me queda rezar para que este proyectil mate al líder enemigo...!
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   No lo hagas.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Jaja... ¿De verdad tienen tiempo para discutir estrategias en su situación?
+[name="Mephisto"]   Cuánta confianza en sí mismas.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   Hmpf. Con este disparo te daré una lección...
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   No, Meteorite. No lo hagas.
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ¡Tsk...! ¡¿Por qué?!
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+[name="Frostleaf"]   Tenemos que retirarnos.
+[name="Frostleaf"]   Puedo sentirlo...
+[name="Frostleaf"]   Son ellos. Están aquí.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   ¿Ohh? ¿No vas a disparar?
+[name="Mephisto"]   Qué lástima.
+[name="Mephisto"]   Sabes que no tendrás otra oportunidad.
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¿Se va? Pero--
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ¡Meteorite! ¡Apunta al edificio que se está derrumbando al oeste, ahora! ¡Al menos podremos distraer al enemigo y ganar algo de tiempo!
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ...¡Es nuestra única opción! ¡Lo haré!
+[PlaySound(key="$d_gen_explo_n")]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=0.7, r=0.93, g=0.7, b=0.2, fadetime=0.1, block=true)]
+[Blocker(a=0, r=0.93, g=0.75, b=0.32, fadetime=0.2, block=true)]
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1", focus=1)]
+[name="Frostleaf"]   Jessica, corre.
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1#3", focus=2)]
+[name="Jessica"]   ¿Eh?
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1#3", focus=1)]
+[name="Frostleaf"]   ...Los Yetis están aquí.
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1#5", focus=2)]
+[name="Jessica"]   Espera...
+[name="Jessica"]   Q-qué frío...
+[Character(name="char_193_frostl_1", name2="char_259_Jessica_1#5", focus=1)]
+[name="Frostleaf"]   ... ...Vámonos.
+[name="Frostleaf"]   Ahora.
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ...Jessica.
+[name="Meteorite"]   Tiene razón.
+[name="Meteorite"]   ¡Tenemos que salir de aquí...!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Amiya, ¿me escuchas?
+[name="Frostleaf"]   ¿Hola? ¿Hola?
+[Character(name="char_219_meteo_1")]
+[name="Meteorite"]   ¡Vayan! ¡Yo las cubro!
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Escucha, Amiya.
+[name="Frostleaf"]   ...No vengan.
+[name="Frostleaf"]   Estas ruinas son...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

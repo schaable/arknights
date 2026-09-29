@@ -1,0 +1,92 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 33 (antes)
+[Background(screenadapt="coverall", image="bg_ri_1", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   Entiendo.
+[name="Kal'tsit"]   Bien, mantente en contacto. Avísame si te enteras de algo.
+[name="Kal'tsit"]   Solo presiona el tercer botón. Ajá.
+[name="Kal'tsit"]   ...¿Mmm? ¿Dr. {@nickname}?
+[name="Kal'tsit"]   ¿Dónde está Amiya?
+[Character(name="char_003_kalts_1", focus=-1)]
+[Decision(options="Fue a los suburbios.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   ...Así que la dejaste ir sola.
+[name="Kal'tsit"]   ...En fin, al menos hay alguien protegiéndola.
+[name="Kal'tsit"]   Supongo que tampoco podrías hacer nada aunque fueras con ella. Te lo dejaré pasar por esta vez.
+[name="Kal'tsit"]   ¿Tú también regresaste solo?
+[name="Kal'tsit"]   Ah, Penguin Logistics.
+[name="Kal'tsit"]   Tú también debes tomar más precauciones para mantenerte a salvo. No siempre tendremos el lujo de contar con guías locales de confianza.
+[name="Kal'tsit"]   Dr. {@nickname}...
+[name="Kal'tsit"]   Amiya no se quedará mucho tiempo en Lungmen, ya que tiene otras misiones que cumplir.
+[name="Kal'tsit"]   Tendrás que volver a verla.
+[name="Kal'tsit"]   ...Si yo fuera tú, me aseguraría de decirle lo que no pude decirle antes.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_lungmen_m", fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Delay(time=0.6)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Ah, ¿Doctor?
+[name="Amiya"]   ¿Estuviste esperándome todo este tiempo...?
+[name="Amiya"]   Perdón por hacerte esperar.
+[name="Amiya"]   ¿Mmm? ¿Me veo distinta a cuando me fui?
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   ...
+[name="Amiya"]   Pasaron algunas cosas.
+[name="Amiya"]   Siento que...
+[name="Amiya"]   Quizás la Señorita Ch'en tenga su propia forma de ver las cosas.
+[name="Amiya"]   Aunque sus palabras sean duras y haya hecho cosas que no puedo aceptar...
+[name="Amiya"]   Quizás... no seamos tan distintas.
+[name="Amiya"]   Ella tiene sus responsabilidades.
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Ah... Ahora lo entiendo...
+[name="Amiya"]   Ella también tiene sus propias cargas.
+[name="Amiya"]   Quizás yo también...
+[Character(name="char_002_amiya_1#2", focus=-1)]
+[Decision(options="Amiya, tú también tienes muchas responsabilidades.;...", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Ah, sí...?
+[name="Amiya"]   Yo... simplemente no tenía otra opción.
+[Character(name="char_002_amiya_1", focus=-1)]
+[Decision(options="Al menos seguiste adelante con tus decisiones.;...", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...Supongo que todo esto fue consecuencia de mi insistencia.
+[name="Amiya"]   Doctor, no hace falta... que intentes consolarme.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   En realidad, lo tengo muy claro.
+[name="Amiya"]   Pero lo que no sé...
+[name="Amiya"]   Lo que no sé es cuánto tiempo más tendremos que seguir adelante antes de que este mundo empiece a cambiar.
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   Pero lo que sí sé con certeza...
+[name="Amiya"]   Es que no me rendiré.
+[name="Amiya"]   Siempre asumiré las consecuencias de mis actos, porque... yo elegí este camino.
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   Doctor...
+[name="Amiya"]   ¿Te quedarás... a mi lado?
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Aunque... esta culpa me acompañe siempre...
+[name="Amiya"]   El pesar de no haber podido llevarme a todos conmigo. De no haber podido salvar a mis amigos...
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]   Pero debo afrontar la realidad.
+[name="Amiya"]   Junto a todos en Rhodes Island...
+[Delay(time=0.6)]
+[Dialog]
+[PlaySound(key="$phone")]
+[Delay(time=3)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Mmm? Un mensaje de la Dra. Kal'tsit...
+[name="Amiya"]   ¿Dra. Kal'tsit? ¿Necesitas algo?
+[Character(fadetime=0)]
+[name="Kal'tsit"]   Amiya, he recibido informes de varios equipos de reconocimiento.
+[name="Kal'tsit"]   La situación ha empeorado.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Bien, voy enseguida.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

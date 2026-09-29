@@ -1,0 +1,93 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 36 (antes)
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=2)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1",fadetime=0.3,block=true)]
+[Dialog]
+[name="Amiya"]   Hemos llegado.
+[name="Amiya"]   ...Qué lugar tan desolador.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ¿Se mencionó algo de esto en las noticias?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Nada.
+[name="Hoshiguma"]   Por lo que se ve, Ursus decidió abandonar este lugar.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Una ciudad desierta, ¿eh...?
+[name="Ch'en"]   Si esta ciudad ya se convirtió en un bastión de Reunion, solo le causará cada vez más problemas a Lungmen.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Está demasiado cerca de Lungmen.
+[name="Hoshiguma"]   Pero si Skullshatterer recibía órdenes desde aquí, no podemos ignorarlo.
+[name="Hoshiguma"]   Pero... ¿qué le pasó exactamente a esta parte de Chernobog?
+[name="Hoshiguma"]   Es imposible que se haya desplazado tan lejos después de sufrir la Catástrofe.
+[name="Hoshiguma"]   ¿Y por qué habría de aparecer aquí?
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Según los datos que recopilamos... esto ocurrió después de la Catástrofe.
+[name="Amiya"]   Eso significa que este sector fue destruido después de llegar aquí.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=1)]
+[name="Hoshiguma"]   Ja. Parece que Rhodes Island tiene buenos Mensajeros de Catástrofes.
+[name="Hoshiguma"]   Es bueno ser precavidos.
+[name="Hoshiguma"]   Nos han estado emboscando matones mal organizados durante todo el camino...
+[name="Hoshiguma"]   Como buitres que dan vueltas sobre nuestras cabezas, buscando carroña entre las ruinas.
+[name="Hoshiguma"]   Me da escalofríos.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Confirmé las coordenadas. Tendremos que seguir adentrándonos--
+[name="Amiya"]   Pero, a juzgar por el terreno, no podremos avanzar con todas nuestras fuerzas juntas.
+[Character(name="char_136_hsguma", name2="char_002_amiya_1", focus=1)]
+[name="Hoshiguma"]   ¿Nos acercamos a las zonas con mayor concentración de Originium?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="Talulah"]   ...
+[name="Talulah"]   (No esperaba encontrarte aquí.)
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_010_chen_1#3", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   Ch'en, ¿qué opinas...?
+[Character(name="char_010_chen_1#3", name2="char_136_hsguma", focus=2)]
+[name="Ch'en"]   ...
+[Character(name="char_010_chen_1#3", name2="char_136_hsguma", focus=2)]
+[name="Hoshiguma"]   ¿Ch'en?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Character(name="char_010_chen_1#3", fadetime=1, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="Ch'en"]   Cómo...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ...!
+[name="Hoshiguma"]   ¡¿Ch'en, adónde vas?!
+[name="Hoshiguma"]   ¡Maldición, salió corriendo! ¿Quién habrá sido esa persona...?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...¡Yo tampoco alcancé a verla bien!
+[name="Amiya"]   Pero esa silueta parecía...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Tenemos que seguirla...
+[CameraShake(duration=1, xstrength=8, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]   ...
+[name="Miembro de Reunion"]   ¡Alto!
+[Delay(time=0.6)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡Qué mal momento...!
+[name="Hoshiguma"]   Ese tipo no es un simple secuaz...
+[name="Hoshiguma"]   Y... ¿de dónde salieron todas esas babosas de Originium?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Esas criaturas... parecen a punto de explotar!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   ¡Dr. {@nickname}!
+[name="Hoshiguma"]   ¡¡Asegúrate de que nuestros operadores extremen las precauciones!!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

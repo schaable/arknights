@@ -1,0 +1,159 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 39 (antes)
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1", focus=1)]
+[name="Amiya"]   Meteorite...
+[name="Amiya"]   ¿Qué fue exactamente lo que vio Jessica...? ¿Estabas con ella?
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1", focus=2)]
+[name="Meteorite"]   ...Es mejor que no lo sepas.
+[name="Meteorite"]   No tiene nada que ver con nuestras operaciones de combate... así que no te preocupes por eso ahora.
+[Character(name="char_002_amiya_1#6", name2="char_219_meteo_1", focus=1)]
+[name="Amiya"]   ...?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_1507_Mephisto_1#6")]
+[name="???"]   ¡¿Hasta cuándo van a seguir escondiéndose, insectos de Rhodes Island?!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#7", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   (...! ¡Mephisto! ¿Nos descubrió?)
+[Character(name="char_002_amiya_1#7", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   (No hagan ruido. Todavía no. Es otro de sus trucos.)
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Ay, ¿todavía no tienen ganas de salir?
+[name="Mephisto"]   No crean que no vi llegar a sus refuerzos.
+[name="Mephisto"]   Bueno, qué más da. Tengo algo que mostrarles. Estoy seguro de que les gustará.
+[name="Mephisto"]   Ahora que lo pienso... Nuestro plan siempre fue tomar Chernobog...
+[name="Mephisto"]   Esperamos tanto, tanto tiempo... y por fin llegó nuestro momento...
+[name="Mephisto"]   ¡El momento de vengarnos de Ursus! ¡De quienes nos persiguieron a los Infectados!
+[name="Mephisto"]   Pero ¿qué hicieron los habitantes de este sector de la ciudad?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="bg_0_guard", fadetime=0, xScale=1, yScale=1)]
+[ImageTween(image="bg_0_guard", xScaleTo=1.3, yScaleTo=1.3, duration=20)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Mephisto"]   Huyeron.
+[name="Mephisto"]   Reaccionaron bastante rápido. Huyeron antes de que pudiéramos actuar.
+[name="Mephisto"]   Desacoplaron su sector y se marcharon tan rápido como pudieron--
+[name="Mephisto"]   Pero ¿adónde esperaban escapar?
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Mephisto"]   Nuestros camaradas llevaban mucho tiempo infiltrados en todos los distritos, esperando la oportunidad.
+[name="Mephisto"]   Al final los alcanzamos y les dimos el castigo que merecían.
+[name="Mephisto"]   Estos cobardes, estos verdugos; ¿qué íbamos a hacer con ellos?
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]   ¡Muy sencillo: darles un castigo ejemplar!
+[name="Mephisto"]   Una declaración de que acabaríamos con todas las injusticias contra los Infectados...
+[name="Mephisto"]   ...Sí, ese es el símbolo del movimiento Reunion...
+[name="Mephisto"]   ¡Que todos se conviertan en efigies del terror, uno por uno!
+[name="Mephisto"]   ¡Tú, prende fuego a esa efigie de ahí! ¡Que se haga la luz!
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¡Sí, señor!
+[Character(name="char_1507_Mephisto_1#5")]
+[name="Mephisto"]   ¡Vamos, iluminen toda la ciudad! ¡Que Rhodes Island vea lo que les ocurre a esos opresores cobardes!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Background(fadetime=2, block=false)]
+[Character(name="char_219_meteo_1#3")]
+[name="Meteorite"]   (--¡No!)
+[Dialog]
+[Character(fadetime=0)]
+[Decision(options="(Cubrir rápidamente los ojos de Amiya)", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¿Doctor...? !
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[Decision(options="¡No mires!;...", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   ...
+[name="Frostleaf"]   Es... un infierno en llamas, lleno de maldad y locura...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[name="Amiya"]   Doctor, suéltame.
+[name="Amiya"]   Estoy bien.
+[name="Amiya"]   ...No, tienes que dejarme verlo.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Algún día tendré que hacer que responda por sus actos. Además, yo antes...
+[Character(name="char_002_amiya_1#7", focus=-1)]
+[Decision(options="(Soltarla)", values="1")]
+[Predicate(references="1")]
+[Dialog(fadetime=0)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="avg_40_1",y=-50, fadetime=0, xScale=1.1, yScale=1.1)]
+[ImageTween(image="bg_0_guard",yto=0, xScaleTo=1, yScaleTo=1, duration=10)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Jessica"]   Por qué... Por qué...
+[name="Meteorite"]   Jessica, cálmate.
+[name="Meteorite"]   --¡Ese bastardo!
+[name="Frostleaf"]   ...Esto es una atrocidad...
+[Delay(time=1)]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Image(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   El olor a carne quemada...
+[name="Amiya"]   ... ...
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   ¿Hasta cuándo piensas seguir escondida, mi querida conejita de Chernobog?
+[name="Mephisto"]   Vi a tu grupito de gentuza merodeando antes, así que pensé que tramaban algo.
+[name="Mephisto"]   Pero resulta que solo vinieron a disfrutar del espectáculo... Qué aburrido.
+[name="Mephisto"]   ¿Parece que trajiste a todo un grupo contigo?
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Character(fadetime=0)]
+[Character(name="char_002_amiya_1#7")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[name="Amiya"]   ¿Tú hiciste todo esto?
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]   Por supuesto~
+[name="Mephisto"]   Sin recurrir al terror, ¿de qué otra forma íbamos a reducir las bajas al mínimo?
+[name="Mephisto"]   Castigas a este diez por ciento para dar el ejemplo...
+[name="Mephisto"]   ...y el otro noventa por ciento obedece.
+[name="Mephisto"]   Como ves, podría decirse que esta es la mejor manera de salvar vidas.
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_002_amiya_1#9")]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ...
+[name="Amiya"]   ...Doctor.
+[name="Amiya"]   Ya no soy la misma de entonces..
+[name="Amiya"]   Aunque quizás no lo recuerdes...
+[name="Amiya"]   Sí... En aquel entonces era tímida, frágil y me asustaba fácilmente... No podía avanzar sin ti...
+[name="Amiya"]   Puede que incluso ahora te parezca igual.
+[name="Amiya"]   Pero la diferencia es que ya he visto demasiadas tragedias.
+[name="Amiya"]   No quiero volver a ver algo así jamás.
+[name="Amiya"]   ...¡Pero nada cambiará si no afronto la realidad!
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[name="Amiya"]   ...
+[name="Amiya"]   Al fin y al cabo, tengo que recordármelo.
+[name="Amiya"]   No puedo permitirme retroceder...
+[name="Amiya"]   ¡Tengo que seguir luchando!
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Character(fadetime=0)]

@@ -1,0 +1,146 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 38 (antes)
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ¿Mmm...?
+[name="Amiya"]   ¿Dónde estamos...?
+[name="Amiya"]   Nos acercamos a las coordenadas que nos envió Frostleaf, pero...
+[name="Amiya"]   Qué olor tan asqueroso.
+[name="Amiya"]   ¿Es olor a quemado...?
+[name="Amiya"]   ¿Adónde nos llevó Reunion?
+[Blocker(a=1, initr=2, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[Dialog(time=0.5)]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Tsk! ¡Cuidado con el ataque sorpresa!
+[PlaySound(key="$p_imp_grenade_n", volume=0.6)]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[name="Amiya"]   ¡Maldición...!
+[Dialog(fadetime=0)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_1011_wizard_1#2", name2="char_1002_nsabr_2", focus=1)]
+[name="Hechicero de Reunion"]   ¡¿F-fallé?!
+[Character(name="char_1011_wizard_1#2", name2="char_1002_nsabr_2", focus=2)]
+[name="Miembro de Reunion"]   No te preocupes. ¡Aquí estamos a salvo!
+[Dialog(time=0.5)]
+[Character(name="char_1011_wizard_1#2", name2="char_1002_nsabr_2", focus=0)]
+[Blocker(r=0.9, g=0.4, b=0.3, a=1, fadetime=0.1, block=true)]
+[Blocker(r=0.7, g=0.4, a=1, fadetime=0.3, block=true)]
+[Blocker(r=0.2, g=0,b=0, a=0.1, fadetime=0.6, block=true)]
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]   Guh...
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Q-qué pasa?
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]   Guh... urgh... aah...
+[Character(name="char_193_frostl_1#2")]
+[name="???"]   No podrá responderte.
+[Character(name="char_1002_nsabr_2")]
+[name="Miembro de Reunion"]   ¿Qu-qué?!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   ¡Desde ese edificio!
+[name="Amiya"]   Espera, ¿esa es...?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Frostleaf! Frostleaf, ¿eres tú?
+[Dialog]
+[Character(name="char_193_frostl_1", fadetime=0.6, block=true)]
+[Delay(time=0.6)]
+[name="Frostleaf"]   Sí. Ya me encargué del enemigo.
+[name="Frostleaf"]   Perdón por preocuparte, Amiya.
+[name="Frostleaf"]   Ugh...
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ¿Estás herida?
+[name="Amiya"]   ¡Médico, rápido!
+[name="Amiya"]   No puede ser... ¿Por qué tienes lesiones por congelación en todo el cuerpo? ¿Qué te pasó...?
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   No te preocupes, no es grave.
+[name="Frostleaf"]   Meteorite y Jessica siguen en la plaza principal.
+[name="Frostleaf"]   Por ahora deberían estar a salvo, pero no sé cuánto durará eso.
+[name="Frostleaf"]   Logré atraer al enemigo lejos de ellas, así que Reunion aún no las ha encontrado.
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ¿El enemigo?
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Todavía no nos han descubierto, así que por ahora no hay de qué preocuparse.
+[name="Frostleaf"]   Pero él llegará pronto...
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=0.6)]
+[Character(name="char_1507_Mephisto_1", fadetime=0.6, block=true)]
+[Delay(time=0.6)]
+[name="Mephisto"]   ¿Dónde te escondes, zorrita?
+[name="Mephisto"]   Vamos, sal de una vez. Nuestro juego de las escondidas está por terminar.
+[name="Mephisto"]   Por cada minuto que sigas escondida, les romperé otro dedo a tus amigas--
+[name="Mephisto"]   ¿Todavía piensas seguir huyendo?
+[Character(name="char_002_amiya_1#7", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   (¡Mephisto...!)
+[Character(name="char_002_amiya_1#7", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   (Está mintiendo. No muerdas el anzuelo.)
+[Character(name="char_002_amiya_1#7", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   (¿Qué está haciendo...?)
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Reunion se está moviendo.
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ¡Ese maldito...!
+[name="Amiya"]   Tenemos que contactar a Meteorite...
+[name="Amiya"]   ...¿Eh?
+[name="Amiya"]   ¿Por qué no logro comunicarme? Ya cruzamos la zona contaminada...
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   *suspiro*...
+[name="Frostleaf"]   Mira esto.
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ¿Tu comunicador?
+[Character(name="char_002_amiya_1#6", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ...!
+[name="Amiya"]   ¿Está... cubierto de hielo? ¿Se... estropeó por el frío?
+[Character(name="char_002_amiya_1#6", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Mephisto es un don nadie.
+[name="Frostleaf"]   Hay algo que recorre esta ciudad...
+[name="Frostleaf"]   ...mucho más aterrador.
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ¿Algo más aterrador?
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Los Yetis. Si nos topamos con ellos, estaremos en graves problemas.
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ¿Yetis? ¿Te refieres al Yeti Squadron? ¿Qué son exactamente...?
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   Ahora no tengo tiempo para explicarlo.
+[name="Frostleaf"]   Pero ellos son los responsables... de la caída repentina de la temperatura y de las heridas de nuestros escuadrones.
+[name="Frostleaf"]   Parece que este escuadrón ya estableció su territorio dentro de la ciudad.
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   Está oscureciendo. Es una buena oportunidad...
+[name="Amiya"]   Podremos cruzar esta zona abierta con más facilidad.
+[name="Amiya"]   Primero rescatemos a Meteorite y Jessica.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]   Yo los guiaré.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=1)]
+[name="Amiya"]   ...
+[name="Amiya"]   ¿Qué son esas cosas en la plaza principal? No alcanzo a ver bien...
+[name="Amiya"]   ¿Son... una especie de estatuas? Tienen formas muy extrañas...
+[name="Amiya"]   Y este olor me da ganas de vomitar...
+[Character(name="char_002_amiya_1", name2="char_193_frostl_1", focus=2)]
+[name="Frostleaf"]   ...
+[name="Frostleaf"]   Por aquí. No se separen.
+[name="Frostleaf"]   No miren esas cosas...
+[name="Frostleaf"]   --Tenemos compañía.
+[name="Frostleaf"]   Acabemos con ellos antes de que nos descubran.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

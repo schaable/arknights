@@ -1,0 +1,70 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 35 (después)
+[Background(image="bg_lungmen_m", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   A estas alturas... no nos quedan otras opciones. Señorita Ch'en, si rechazas mi solicitud...
+[name="Amiya"]   Rhodes Island actuará por su cuenta.
+[name="Amiya"]   Estas acciones no infringen ninguno de los términos de nuestra cooperación.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Por supuesto que iremos.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   ...¿De verdad...?
+[name="Amiya"]   ...
+[name="Amiya"]   En ese caso, te agradezco en nombre de Rhodes Island...
+[name="Amiya"]   Sé que Lungmen aún nos ve como Infectados...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   No es para tanto.
+[name="Ch'en"]   Sin embargo, no sé si nuestros escuadrones podrán entrar en las ruinas.
+[name="Ch'en"]   Tendremos que decidir sobre la marcha.
+[name="Ch'en"]   Si la situación lo permite, sin duda ayudaremos.
+[name="Ch'en"]   Pero nuestra prioridad sigue siendo eliminar a Reunion.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Con eso... con eso nos basta.
+[name="Amiya"]   ...Gracias, Señorita Ch'en.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Lo siento, tengo mis propias obligaciones.
+[name="Ch'en"]   ¿Me escuchaste, doctora?
+[name="Ch'en"]   Nos uniremos a Rhodes Island.
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Kal'tsit"]   Amiya, ten cuidado.
+[name="Kal'tsit"]   Esta no será una tarea sencilla.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Lo haré.
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Kal'tsit"]   Bien, he logrado reunir algunos datos.
+[name="Kal'tsit"]   Rhodes Island ya envió equipos de rescate para ayudar a los otros escuadrones de reconocimiento.
+[name="Kal'tsit"]   Pero el escuadrón de Meteorite está demasiado lejos y no podemos llegar hasta él.
+[name="Kal'tsit"]   Ahí es donde entras tú.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Solo el escuadrón de Meteorite...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Entiendo. Iré a buscarlas.
+[Character(name="char_002_amiya_1", focus=-1)]
+[name="Kal'tsit"]   Te enviaré las coordenadas más tarde.
+[name="Kal'tsit"]   Recuerda, tu seguridad es lo primero.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Entendido.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Entonces, ¿cuándo salimos?
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Ahora mismo.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=1)]
+[name="Hoshiguma"]   Iré a prepararme. Avisa a los demás miembros del L.G.D.
+[Character(name="char_136_hsguma", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   Está bien.
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   Amiya, saldremos de aquí en diez minutos.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   De acuerdo.
+[Background(fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Por favor, estén a salvo...
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -30,7 +30,7 @@ const CURATED_DNT = [
   "Ace", "Mephisto", "Talulah", "FrostNova", "Frostnova", "Skullshatterer",
   "Kal'tsit", "Closure", "Doctor", "Faust",
   // factions / orgs / places
-  "Reunion", "Rhodes Island", "Ursus", "Lungmen", "Victoria",
+  "Reunion", "Rhodes Island", "Ursus", "Lungmen", "Victoria", "Yeti Squadron", "Yetis",
   // "Children of Ursus" (act10d5) speaking NPCs — story-only, so they are not in
   // character_table and would be dropped by a re-seed if they lived only in the JSON
   "Natalya", "Rosalind", "Sonya", "Valery", "Anna", "Pavel", "Lada", "Nikola",

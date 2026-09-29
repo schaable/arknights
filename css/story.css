@@ -263,6 +263,192 @@
   padding: 0.2em;
   border-radius: 0.25em;
 }
+.text.has-english {
+  padding-right: 2.4em;
+}
+.english-toggle,
+.review-note-button {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  display: grid;
+  place-items: center;
+  width: 1.8em;
+  height: 1.6em;
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 0.25em;
+  background: #151515;
+  color: #ddd;
+  font: inherit;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+.english-toggle:hover,
+.english-toggle:focus-visible,
+.review-note-button:hover,
+.review-note-button:focus-visible {
+  border-color: #fff;
+  color: #fff;
+}
+.english-toggle:focus-visible,
+.review-note-button:focus-visible {
+  outline: 2px solid #78bbff;
+  outline-offset: 2px;
+}
+.english-toggle[aria-pressed="true"] {
+  color: #9bceff;
+  border-color: #9bceff;
+}
+.english-toggle[aria-busy="true"] {
+  opacity: 0.6;
+}
+.english-status {
+  margin-top: 0.5em;
+  font-size: 0.7em;
+  color: #ddd;
+}
+.english-status[hidden] {
+  display: none;
+}
+.text.has-review-control {
+  padding-right: 4.2em;
+}
+.has-review-control .english-toggle {
+  right: 2.3em;
+}
+.review-note-button.has-note {
+  color: #ffd286;
+  border-color: #ffd286;
+}
+.text.has-review-note {
+  box-shadow: inset 2px 0 #ffd286;
+}
+.review-copy,
+.review-clear {
+  position: relative;
+  margin-left: 0.5em;
+  padding: 0.35em 0.6em;
+  border: 1px solid #888;
+  border-radius: 0.25em;
+  background: #151515;
+  color: #ddd;
+  cursor: pointer;
+  font: inherit;
+}
+.review-copy:disabled,
+.review-clear:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.review-count {
+  margin-left: 0.4em;
+  font-size: 0.75em;
+}
+.btnPanel .review-copy i,
+.btnPanel .review-clear i {
+  font-size: 1em;
+}
+.review-copy-status {
+  display: block;
+  font-size: 0.85em;
+  margin-top: 0.3em;
+}
+.review-dialog {
+  box-sizing: border-box;
+  width: min(34rem, 92vw);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 1.2rem;
+  border: 1px solid #888;
+  border-radius: 0.5rem;
+  background: #202020;
+  color: #eee;
+  font: 1rem/1.4 sans-serif;
+  text-align: left;
+  user-select: text;
+}
+.review-dialog::backdrop {
+  background: #0009;
+}
+.review-dialog h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.review-dialog label {
+  display: block;
+  margin-top: 0.7rem;
+}
+.review-dialog textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
+  padding: 0.5rem;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+  background: #111;
+  color: #eee;
+  font: inherit;
+  resize: vertical;
+  user-select: text;
+}
+.review-location,
+.review-help {
+  color: #bbb;
+  font-size: 0.85rem;
+}
+.review-help {
+  margin-top: 0.7rem;
+}
+.review-quote {
+  border-left: 2px solid #888;
+  margin: 0.8rem 0;
+  padding-left: 0.7rem;
+  max-height: 8rem;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.review-error {
+  color: #ffd286;
+  margin-top: 0.5rem;
+}
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.review-dialog button {
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.7rem;
+  background: #333;
+  color: #eee;
+  font: inherit;
+  cursor: pointer;
+}
+.review-dialog button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.review-dialog .review-save {
+  background: #214d73;
+}
+.review-dialog .review-delete {
+  margin-right: auto;
+  color: #ffb7b7;
+}
+.review-dialog button[hidden] {
+  display: none;
+}
+.review-dialog :focus-visible,
+.review-copy:focus-visible,
+.review-clear:focus-visible {
+  outline: 2px solid #78bbff;
+  outline-offset: 2px;
+}
 .decision.selected {
   color: #000;
   background: #888;

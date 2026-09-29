@@ -1,0 +1,70 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 37 (después)
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Tuvimos que abrirnos paso entre tantos miembros de Reunion solo para llegar a este punto de observación...
+[name="Amiya"]   ¿Eh...?
+[name="Amiya"]   ¿Esa es... la Señorita Ch'en?
+[name="Amiya"]   ¡Señorita Ch'en!
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ...
+[name="Amiya"]   (¿Por qué hay tantos cuerpos...?)
+[name="Amiya"]   (Tantos soldados de Reunion caídos... ¡¿La Señorita Ch'en hizo todo esto sola?!)
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   ...!
+[Character(name="char_010_chen_1#3")]
+[name="Ch'en"]   Eres tú...
+[Character(name="char_010_chen_1#6")]
+[name="Ch'en"]   Perdí el control. Lo siento...
+[name="Ch'en"]   Puede que haya caído en una trampa del enemigo...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   No... No pasa nada, seguimos con el plan original. Solo que...
+[name="Amiya"]   La persona que apareció antes... ¿era Talulah?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   ...No. Ya no importa. Mi intuición me falló. De todos modos, este no parece un lugar donde estaría esa persona.
+[name="Ch'en"]   Nuestra misión sigue siendo la prioridad.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...Sin mí, al L.G.D. le costaría llevar a cabo esta misión de búsqueda.
+[name="Ch'en"]   Sobre todo en la situación actual...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1#5", focus=2)]
+[name="Ch'en"]   Es mucho más complicado de lo que esperaba.
+[name="Ch'en"]   Tal como están las cosas, es demasiado arriesgado seguir avanzando sola.
+[Character(name="char_002_amiya_1", name2="char_010_chen_1#5", focus=1)]
+[name="Amiya"]   Señorita Ch'en, nosotros también queremos que regreses al L.G.D. de inmediato.
+[name="Amiya"]   La gran cantidad de residuos de Originium que dejó aquí la Catástrofe es muy dañina para quienes no están infectados.
+[name="Amiya"]   Aunque hayas traído medicamentos, no te protegerán por mucho tiempo...
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ¿Y ustedes?
+[Character(name="char_002_amiya_1", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Nuestra misión es proteger Lungmen y eliminar las amenazas--
+[Character(name="char_002_amiya_1#7", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Pero la razón principal por la que vinimos es rescatar a nuestros operadores.
+[name="Amiya"]   Rhodes Island no le da la espalda a nadie.
+[name="Amiya"]   Por eso, seguiremos con nuestras operaciones de combate.
+[Character(name="char_002_amiya_1#7", name2="char_010_chen_1", focus=2)]
+[name="Ch'en"]   ...
+[name="Ch'en"]   Traeré a mi escuadrón para unirnos al suyo... si la situación lo permite.
+[Character(name="char_002_amiya_1#7", name2="char_010_chen_1", focus=1)]
+[name="Amiya"]   Qué bueno.
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]   ¡Señorita Ch'en! Rhodes Island puede enviar un escuadrón para escoltarte...
+[Character(name="char_010_chen_1")]
+[name="Ch'en"]   No hace falta.
+[Dialog(fadetime=0.6)]
+[Character(fadetime=0.6)]
+[Delay(time=0.6)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...
+[name="Amiya"]   ...La Señorita Ch'en es muy orgullosa, ¿verdad?
+[name="Amiya"]   ¿Mmm? ¿Doctor?
+[name="Amiya"]   No te preocupes...
+[name="Amiya"]   Lo sé... Rhodes Island volverá a luchar por su cuenta.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Pero todavía es muy pronto para desanimarnos.
+[name="Amiya"]   Vamos, Jessica y las demás siguen esperándonos.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

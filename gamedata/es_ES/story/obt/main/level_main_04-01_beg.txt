@@ -1,0 +1,182 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 31 (antes)
+[stopmusic]
+[name=""]   8:36 P.M. \ Lluvia \ Visibilidad: 12 km
+[name=""]   Rhodes Island
+[dialog]
+[delay(time=1)]   
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Background(screenadapt="coverall", image="bg_ri_1", width=1, height=1, fadetime=2, block=true)]
+[Delay(time=0.5)]
+[Character(name="char_003_kalts_1",fadetime=0.2,block=true)]
+[name="Kal'tsit"]   Bienvenida de vuelta.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   ...Mmm.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=1)]
+[name="Kal'tsit"]   ...
+[name="Kal'tsit"]   El escuadrón de reconocimiento ya me informó de lo que pasó.
+[name="Kal'tsit"]   Amiya, déjame revisarte las manos.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   No hace falta, Dra. Kal'tsit...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=1)]
+[name="Kal'tsit"]   Amiya.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Yo, yo...
+[name="Amiya"]   ...Está bien.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=1)]
+[name="Kal'tsit"]   ...
+[name="Kal'tsit"]   Todo parece estar bien. Los anillos no se han agrietado ni han cambiado de color.
+[name="Kal'tsit"]   Pero la próxima vez podría ser diferente.
+[name="Kal'tsit"]   Escucha con atención, Amiya...
+[name="Kal'tsit"]   Ten un poco más de cuidado.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]   Dra. Kal'tsit, yo...
+[name="Amiya"]   ...Necesito descansar un poco.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#2", focus=1)]
+[name="Kal'tsit"]   Adelante.
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Mmm...
+[Dialog(fadetime=0.6)]
+[Character(fadetime=0.6)]
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#2")]
+[name="Kal'tsit"]   ...
+[name="Kal'tsit"]   Nunca vuelvas a poner a Amiya en semejante peligro.
+[name="Kal'tsit"]   Tú también eres responsable de lo que pasó.
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   Cuando regresaste a Rhodes Island por primera vez, ella se veía un poco así.
+[name="Kal'tsit"]   Estas emociones nunca abandonaron del todo a Amiya.
+[name="Kal'tsit"]   Esto tiene que cambiar.
+[name="Kal'tsit"]   ...Dr. {@nickname}, deberías acompañarla.
+[name="Kal'tsit"]   No lo arruines.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=0.6)]
+[Decision(options="*toc* *toc*", values="1")]
+[Predicate(references="1")]
+[name="Amiya"]   Está abierto.
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Background(screenadapt="coverall", image="bg_rhodesroom", width=1, height=1, fadetime=2, block=true)]
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   ¿Dr. {@nickname}...?
+[name="Amiya"]   ¿Preocupada? ¿Yo?
+[Character(name="char_002_amiya_1#10")]
+[name="Amiya"]   ...Me descubriste enseguida, jeje...
+[Character(name="char_002_amiya_1#2")]
+[name="Amiya"]   Pensé que lo había disimulado bien.
+[name="Amiya"]   Sí, estoy un poco preocupada... pero solo un poco.
+[name="Amiya"]   Ya estoy acostumbrada a hacer esto.
+[name="Amiya"]   Después de todo, no puedo seguir siendo una carga para los demás.
+[name="Amiya"]   ¿Verdad, Doctor?
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   ...No lo entiendo.
+[name="Amiya"]   Doctor... No lo entiendo.
+[Character(name="char_002_amiya_1", focus=-1)]
+[Decision(options="(Guardar silencio)", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   No, yo... Sé lo que intentamos hacer. También sé... que algunos sacrificios son inevitables.
+[name="Amiya"]   Pero yo... lo que no sé es...
+[name="Amiya"]   ¿Por qué tengo que ver cómo las personas desaparecen ante mis ojos una tras otra... aunque sea posible salvarlas?
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Estuvimos tan cerca... Tal vez con un poco más...
+[name="Amiya"]   Sé que tengo un deber... y seguiré adelante...
+[name="Amiya"]   Pero ahora mismo... me siento tan cansada.
+[name="Amiya"]   ...
+[Character(name="char_002_amiya_1#4", focus=-1)]
+[Decision(options="...;Amiya...", values="1;2")]
+[Predicate(references="1;2")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(fadetime=0)]
+[name="Amiya"]   Por favor, déjame estar sola un rato, Dr. {@nickname}.
+[name="Amiya"]   Gracias.
+[dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=2, block=true)]
+[Delay(time=0.8)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(screenadapt="coverall", image="bg_ri_1", width=1, height=1, fadetime=0, block=true)]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.6, crossfade=1, delay=0.5)]
+[Blocker(a=0,fadetime=1.5, block=true)]
+[Delay(time=0.5)]
+[Character(name="char_002_amiya_1")]
+[name="Amiya"]   Buenos días, Dr. {@nickname}.
+[name="Amiya"]   Ah, Dra. Kal'tsit, ¿tú también estás aquí?
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=1)]
+[name="Kal'tsit"]   Amiya.
+[name="Kal'tsit"]   Tengo una misión bastante urgente y necesito gente que me ayude.
+[name="Kal'tsit"]   Se descubrió una ciudad abandonada no muy lejos de Lungmen.
+[name="Kal'tsit"]   Supongo que es una de las ciudades que se formaron a raíz del incidente de Chernobog.
+[name="Kal'tsit"]   Tendremos que explorar esa ciudad, obtener más información y buscar sobrevivientes.
+[name="Kal'tsit"]   Si la situación es particularmente grave, por ejemplo, si Reunion se oculta allí, podría haber consecuencias serias para nuestras futuras operaciones.
+[name="Kal'tsit"]   Aquí está la propuesta concreta que tengo en mente. Revísala cuando tengas tiempo.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   Entendido.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=1)]
+[name="Kal'tsit"]   Ah, una cosa más.
+[name="Kal'tsit"]   Franka me entregó un informe en el que mencionaba que tenían que regresar a Blacksteel.
+[name="Kal'tsit"]   En cuanto a la situación en los suburbios de Lungmen, Penguin Logistics pidió que te reunieras con ellas allí para hablar de cierta información.
+[name="Kal'tsit"]   Hay algunos detalles más delicados, así que sería mejor que fueras en persona.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]   Lo sé. Iré ahora mismo.
+[name="Amiya"]   Doctor, vamos--
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#2", focus=1)]
+[name="Kal'tsit"]   Todavía tengo algunos asuntos que tratar con el Dr. {@nickname}.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=2)]
+[name="Amiya"]   ...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]   ¿Puedo quedarme a escuchar?
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#2", focus=1)]
+[name="Kal'tsit"]   No puedes.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#3", focus=2)]
+[name="Amiya"]   Puedo taparme los oídos...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#3", focus=1)]
+[name="Kal'tsit"]   No puedes. Ya deberías irte.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#5", focus=2)]
+[name="Amiya"]   Ay...
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#4", focus=2)]
+[name="Amiya"]   Dra. Kal'tsit, no vayas a molestar al Dr. {@nickname}.
+[Character(name="char_003_kalts_1", name2="char_002_amiya_1#4", focus=1)]
+[name="Kal'tsit"]   No lo haré.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_003_kalts_1#3")]
+[name="Kal'tsit"]   ...Tú...
+[name="Kal'tsit"]   Ni siquiera pudiste hacer algo tan básico.
+[Character(name="char_003_kalts_1#2")]
+[name="Kal'tsit"]   Olvídalo, presentía que esto pasaría.
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   Amiya es una niña increíblemente fuerte.
+[name="Kal'tsit"]   Pero, si tiene que obligarse a ser fuerte, llegará el día en que la presión la quiebre.
+[name="Kal'tsit"]   No permitas que eso pase.
+[name="Kal'tsit"]   Si hay una próxima vez, más te vale ser un poco más útil.
+[name="Kal'tsit"]   ¿--?
+[name="Kal'tsit"]   ¿A qué viene esa cara?
+[Character(name="char_003_kalts_1", focus=-1)]
+[Decision(options="Disculpa, ¿a qué te refieres con lo de los anillos de Amiya...?;...", values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1#2")]
+[name="Kal'tsit"]   Tiene que ver con su estado de salud.
+[name="Kal'tsit"]   Si Amiya participa en una batalla intensa...
+[name="Kal'tsit"]   ...Debes revisar sus anillos inmediatamente después.
+[name="Kal'tsit"]   Debes informarme de cualquier cambio que observes.
+[Blocker(fadetime=1.2, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]   Por ahora, eso es todo lo que puedes saber.
+[name="Kal'tsit"]   Ah, cierto. Dentro de dos días tienes que ir al centro médico para hacerte un examen físico. No lo olvides.
+[Dialog]
+[name="Kal'tsit"]   ...Puedes irte. Liskarm está esperando afuera para escoltarte.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
