@@ -103,7 +103,7 @@
 [name="Mephisto"]   En eso te doy la razón.
 [name="Mephisto"]   Entonces, ¿mordieron el anzuelo?
 [Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1", focus=1)]
-[name="W"]  Por supuesto. A ver si ese viejo abanderado nos trae lo que de verdad buscamos.
+[name="W"]  Por supuesto. A ver si ese viejo nacionalista nos trae lo que de verdad buscamos.
 [name="W"]  Por cierto, le tienes bastante miedo a ese viejo, ¿no?
 [Character(name="char_1504_cqbw", name2="char_1507_Mephisto_1#3", focus=2)]
 [name="Mephisto"]   Ya estoy de mal humor.

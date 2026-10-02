@@ -352,7 +352,7 @@
 [name="Mephisto"]   Así es. No podrán escapar. Faust y Crownslayer ya rompieron sus defensas en un punto.
 [name="Mephisto"]   Como dijiste, esa será nuestra brecha para entrar en masa a Lungmen.
 [name="Mephisto"]   Prepararemos emboscadas en cada esquina. El camino a Lungmen se teñirá de sangre fresca.
-[name="Mephisto"]   Cierto, ese viejo abanderado debería volver pronto a Chernobog.
+[name="Mephisto"]   Cierto, ese viejo nacionalista debería volver pronto a Chernobog.
 [name="Mephisto"]   Nuestra victoria está asegurada.
 [PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=1, crossfade=1, delay=0.5)]
 [Delay(time=1)]

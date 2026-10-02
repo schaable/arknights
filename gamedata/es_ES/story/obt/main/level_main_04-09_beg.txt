@@ -51,7 +51,7 @@
 [Blocker(a=0, fadetime=0.6, block=true)]
 [name="Mephisto"]   Nuestros camaradas llevaban mucho tiempo infiltrados en todos los distritos, esperando la oportunidad.
 [name="Mephisto"]   Al final los alcanzamos y les dimos el castigo que merecían.
-[name="Mephisto"]   Estos cobardes, estos verdugos; ¿qué íbamos a hacer con ellos?
+[name="Mephisto"]   Estos cobardes, estos perpetradores; ¿qué íbamos a hacer con ellos?
 [Character(name="char_1507_Mephisto_1#5")]
 [name="Mephisto"]   ¡Muy sencillo: darles un castigo ejemplar!
 [name="Mephisto"]   Una declaración de que acabaríamos con todas las injusticias contra los Infectados...
