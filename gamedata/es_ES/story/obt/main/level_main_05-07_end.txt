@@ -1,0 +1,187 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 6 (después)
+[Background(image="bg_emporium", width=1, height=1,screenadapt="coverall",  fadetime=1)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_010_chen_1#2",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Ch'en"]  Médicos, salida 12 de lo que era el sector sur de Paci Plaza. Una inspectora de alto rango de la L.G.D. está herida. Vengan rápido.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  ¿Ya dejó de sangrar?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  A estas alturas ya deberías conocerme. La herida ya cerró, pero no voy a poder levantar el escudo por un tiempo.
+[name="Hoshiguma"]  ¿Cómo están nuestros compañeros?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Fuimos las únicas que caímos. Eso ya es una pequeña victoria.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿De verdad no me vas a llevar contigo? Puede que el comandante de Reunion esté escondido en el cuartel general de la L.G.D. Va a ser una pelea brutal.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Lo sé. Pero, con lo herida que estás, es lo mejor. ¿No crees?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Me duele un poco oírte decir eso, pero está bien. Sé que tienes razón.
+[name="Hoshiguma"]  Recuerda tener cuidado.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Lo sé.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Lo mires por donde lo mires, Reunion es más débil de lo que esperábamos. Aun así, lograron tomar Chernobog.
+[name="Hoshiguma"]  Además, tienes un punto débil. No me canso de repetírtelo: nunca dejes que tus pensamientos te consuman. Nunca.
+[name="Hoshiguma"]  No te obsesiones tanto con algo que dejes de ver otras opciones. Lo único por lo que vale la pena pelear es por seguir viva.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Lo tomaré como un consejo. Lo tendré muy presente.
+[name="Ch'en"]  Recupérate pronto. Te espero de vuelta cuando termine esta misión.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Yo protegeré al equipo médico. Tú ya deberías irte.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Claro.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Blocker(a=0, fadetime=2, block=true)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="Operador de radio"]  ...
+[name="Operador de radio"]  Reunion ya pasó por Causeway Bell.
+[name="Operador de radio"]  Informe de AU7: Reunion también se está concentrando en Ha Wan. Repito, Reunion se está concentrando. Ese es el informe de la misión de AU7.
+[name="Operador de radio"]  El escuadrón AO3 eliminó a las fuerzas de Reunion en Front Bay según lo planeado. Ahora están obligando a los que quedan a retroceder hacia el cuartel general de la L.G.D.
+[name="Operador de radio"]  Todos los enemigos frente a Scorpio Palace fueron aniquilados. Ahora nos retiramos hacia la avenida Charles para dirigirnos al punto de reunión. Aquí el escuadrón AL1, cambio.
+[name="Operador de radio"]  ...
+[name="Operador de radio"]  Esas son las novedades sobre los movimientos de Reunion y el avance de cada escuadrón.
+[name="Operador de radio"]  Cambio.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Entendido.
+[name="Ch'en"]  Continúen con la operación. Nuestro objetivo es obligar a todas las fuerzas de Reunion a entrar en la zona designada.
+[name="Ch'en"]  Si encuentran pequeños grupos de rezagados en otros distritos, tienen autorización para eliminarlos.
+[name="Ch'en"]  Si es posible, intenten hacerlos salir. La prioridad es evitar bajas. Tenemos que conservar nuestras fuerzas.
+[Character]
+[name="Operador de radio"]  Sí, señora.
+[Dialog]
+[Delay(time=1)]
+[Dialog]
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Uf...
+[name="Ch'en"]  ¿Hmm? ¿Otra llamada?
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_308_swire_1#5", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Swire"]  ¿Hola, hola? ¿Ah Ch'en? ¿Sigues ahí?
+[Character(name="char_empty",name2="char_010_chen_1#2",focus=2)]
+[name="Ch'en"]  ¡¿Cómo me llamaste?!
+[Character(name="char_empty",name2="char_010_chen_1#2",focus=1)]
+[name="Swire"]  Ah Ch'en. ¡Estás acabada! ¡Te voy a matar por lo de Paci Plaza! ¡Lo escuché yo misma, tú diste esas órdenes!
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  ¿Eso era todo lo que querías decir?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Oye, ¿por qué rechazaste la ayuda de Rhodes Island? ¿Porque te sentías culpable?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  No sabía que fueras psicóloga.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  No te preocupes, te ayudaré a arreglar las cosas.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  ¿Arreglar las cosas?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Jeje, todavía no te puedo contar.
+[name="Swire"]  ¡Pero vas a pagar por lo que hiciste!
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Por cierto, ¿todavía te acuerdas de aquel restaurante de Sheung Wan?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  ¿Eh? ¿Cuál? Bueno, ¡ahora están todos cerrados!
+[name="Swire"]  Espera... ¡¿Estás intentando cambiar de tema?!
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  El que tiene ese sándwich de bistec tan delicioso.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  ¿Eh? Ah... ¡¡AH!! ¡Ya me acordé! ¡El restaurante con esa hamburguesa de bistec tan grande como las dos palmas de tus manos juntas!
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Ese mismo.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Iba bastante seguido cuando patrullaba... ¡Al suelo! ¡¿Quién te dijo que podías levantarte?!
+[name="???"]  ¡¡Aaah!!
+[name="Swire"]  ¿Cómo se llamaba? ¿Goodie Foodie?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Creo que sí.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Ah, ya entendí. Me vas a invitar a comer, ¿verdad? Pero ¿por qué no vamos a un lugar un poco más elegante?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Tu idea de 'elegante' es muy distinta a la mía.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Vamos, yo puedo pagar.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Señorita S, ¿de verdad crees que soy esa clase de persona?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  ¿Te atreves a llamarme así otra vez?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Perdón, se me trabó la lengua.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  ¡Se nota que lo hiciste a propósito!
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Swire, estaba pensando... Si no lo hacemos mejor esta vez, no vamos a poder darles la cara a los vecinos.
+[name="Ch'en"]  Nuestros negocios dependen de Lungmen, y Lungmen también depende de ellos.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Si piensas eso, deja de hablar tanto. Cuanto antes acabemos con Reunion, antes podrás invitarme a un brunch.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  ¿Por allá también está intenso el combate?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Ah, tranquila. Puedo con esto.
+[name="???"]  ¡Rápido! ¡Se van a escapar!
+[name="Swire"]  ¡Qué fastidio! ¡Oigan, apúrense! ¡No tenemos todo el día!
+[name="Swire"]  ¡Ah Ch'en! ¡Quiero una hamburguesa de bistec, tomate y huevo!
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Sin problema.
+[name="Ch'en"]  Perdón por haberte encerrado en la bóveda por accidente aquella vez.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  ¡¿A eso le llamas accidente?! ¡Sé que lo hiciste a propósito! Como sea, me desahogué echándote agua esta mañana, así que estamos a mano.
+[name="Swire"]  Oye, Ah Ch'en.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  ¿Hmm?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  La seguridad es lo primero. No arriesgues tu vida por concentrarte solo en lo que tienes enfrente. Recuerda que hay mucha gente que cuenta contigo.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Hmph, ¿ah, sí? Gracias por el consejo.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Si ya estás frente al restaurante, estás a punto de llegar al cuartel general de la L.G.D., ¿no?
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  Así es.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]  Buena suerte.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Background(image="bg_building_3", width=1, height=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[name=""]   7:40 p. m. \ Nublado
+[name=""]   670 m al este del cuartel general de la L.G.D., calle Upper Factor, zona alta de Lungmen
+[Delay(time=1)]
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Señorita Ch'en, el Cuarto Escuadrón Móvil se presenta.
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]  Buen trabajo.
+[name="Ch'en"]  Todos los que están aquí son los mejores de los mejores. Mientras hablamos, muchos de nuestros compañeros siguen peleando allá afuera. Pero nosotros tenemos nuestra propia misión.
+[name="Ch'en"]  El edificio que tenemos enfrente era el símbolo de la seguridad de Lungmen — la representación de la ley y el orden, el corazón de la L.G.D.
+[name="Ch'en"]  Pero ahora ha caído en manos de Reunion, manchado por las conspiraciones y la guerra.
+[name="Ch'en"]  Quizás para algunos de ustedes este sea un trabajo más. Puede que otros estén tristes, o furiosos.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character]
+[Image(image="bg_5_6_police", fadetime=0, xScale=1, yScale=1)]
+[ImageTween(image="bg_5_6_police", xScaleTo=1.3, yScaleTo=1.3, duration=20)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="Ch'en"]  Sin importar cómo se sientan, somos la L.G.D. No somos amotinados ni criminales.
+[name="Ch'en"]  Vamos a recuperar nuestro cuartel general, y no necesariamente por orgullo o por justicia.
+[name="Ch'en"]  Lo haremos porque somos la L.G.D. y vamos a recuperar lo que nos pertenece. Ese es el único motivo que necesitamos.
+[name="Ch'en"]  No hagan que Lungmen se preocupe por nosotros. ¡¿Quedó claro?! ¡Obediencia, dedicación y perseverancia!
+[name="Ch'en"]  Llegó la hora. ¡Expulsemos del cuartel general de la L.G.D. hasta al último miembro de Reunion!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Sí, señora!
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  Vamos.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Image]

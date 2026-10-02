@@ -58,6 +58,7 @@
     "Ægirian Oscilloscope",
     "Aggini of Nila",
     "Agile Installation Module",
+    "Ah Faat",
     "Akafuyu",
     "Akkord",
     "Alanna",
@@ -121,6 +122,7 @@
     "Avalanche Control System",
     "Avalanche Trigger System",
     "Ayerscarpe",
+    "Bad Guy",
     "Bagpipe",
     "Ballista",
     "Barge Captain",
@@ -145,6 +147,7 @@
     "Beast Cage",
     "Beast Trap",
     "Beastmode Energy Drink",
+    "Beatrix Schwire",
     "Beehunter",
     "Beeswax",
     "Bena",
@@ -200,6 +203,7 @@
     "Castle-3",
     "Catapult",
     "Catherine",
+    "Causeway Bell",
     "Cement",
     "Center",
     "Ceobe",
@@ -220,9 +224,11 @@
     "Chest Seaborn",
     "Chest？",
     "Chestnut",
+    "Chi Xiao",
     "Chiave",
     "Chilchuck",
     "Chongyue",
+    "Chung Shui",
     "Chunk of Ice",
     "City Neon",
     "Civilight Eterna",
@@ -392,6 +398,7 @@
     "Flash Grenade",
     "Flaw",
     "Flint",
+    "Floria County",
     "Flower Bush",
     "Flowering Shrub",
     "Flowing Shape",
@@ -417,6 +424,7 @@
     "Friend'",
     "Frightening Victorian Hammer",
     "Friston-3",
+    "Front Bay",
     "Front Toward Enemy",
     "Frost",
     "Frostleaf",
@@ -426,6 +434,7 @@
     "Full Auto Modeler",
     "Full Manual Thruster",
     "Full-Auto Debit Machine",
+    "Fumizuki",
     "Fuze",
     "Gacha Machine",
     "Gas Controller",
@@ -451,6 +460,7 @@
     "Golden Vows",
     "Goldenglow",
     "Goliath Helmet",
+    "Goodie Foodie",
     "Gracebearer",
     "Grain Buds",
     "Gramophone",
@@ -472,8 +482,10 @@
     "Guardian Bulwark",
     "Gummy",
     "Gun-Knight's Might",
+    "Ha Wan",
     "Hadiya",
     "Hand of the Saint",
+    "Hannya",
     "Hardtack",
     "Harmonie",
     "Harold",
@@ -509,6 +521,7 @@
     "Hoshiguma the Breacher",
     "Hot Drink Machine",
     "HR File",
+    "Hua Shui",
     "Humus",
     "Hung",
     "Hunting Net Launcher",
@@ -560,6 +573,7 @@
     "Kaminingyo",
     "Karlan Trade File",
     "Karlan Trade Model",
+    "Kashchey",
     "Kazemaru",
     "Kazimierz File",
     "Kazimierz Model",
@@ -698,6 +712,7 @@
     "Mr. Nothing",
     "Mudrock",
     "Muelsyse",
+    "Muk Wo",
     "Mulberry",
     "Multi-Purpose Robotic Arm",
     "Munitions Factory Command Center",
@@ -736,6 +751,7 @@
     "Nyamu Yūtenji",
     "Nymph",
     "Occluded Quicksand Pit",
+    "Ochre",
     "Odda",
     "Offspring",
     "Old Isin",
@@ -743,6 +759,7 @@
     "Olden Keystone",
     "Olden Pride",
     "Omni Umbrella",
+    "Oni",
     "Operation Kit",
     "Operations Station",
     "Orchid",
@@ -763,11 +780,13 @@
     "Ornamental Giant Mushroom",
     "Outpost",
     "Overspeed Spice",
+    "Paci Plaza",
     "Pallas",
     "Paprika",
     "Papyrus",
     "Passenger",
     "Pasture Village",
+    "Patriot",
     "Patriot's Originium Altar",
     "Pavel",
     "Penance",
@@ -929,6 +948,7 @@
     "Saintess Statue",
     "Sakiko Togawa",
     "Saltheap Cannon",
+    "Sam Cheong Chai",
     "Sand Obelisk",
     "Sand Reckoner",
     "Sandbeast",
@@ -944,6 +964,8 @@
     "Scene",
     "Schwarz",
     "Scoring Station",
+    "Scorpio Palace",
+    "Scout",
     "Scutum",
     "Sealed Floor",
     "Security Forces Cooperation Agreement",
@@ -966,6 +988,7 @@
     "Sharp",
     "Shaw",
     "shell",
+    "Sheung Wan",
     "Shield and Wall",
     "Shieldguard",
     "Shining",
@@ -1021,6 +1044,7 @@
     "Spines of Epoch",
     "Sportsfield Cheerleader",
     "Spot",
+    "Spring City",
     "Spuria",
     "Squeaking Sound",
     "Stable Sarkaz Caster Crystal",
@@ -1059,10 +1083,13 @@
     "Surveyor",
     "Sussurro",
     "Suzuran",
+    "Swarovski Crystal",
     "Swire",
     "Swire the Elegant Wit",
     "Tachanka",
     "Tactical Equipment Toolbox",
+    "Tai Bo",
+    "Tal",
     "Talulah",
     "Taraxacum",
     "Tattered Pillar",
@@ -1185,6 +1212,7 @@
     "Witchcraft Ballista",
     "Witchcraft Village",
     "Withered Altar",
+    "Witte",
     "Wolfpack",
     "Woodland",
     "Woods",
@@ -1192,6 +1220,8 @@
     "Writing Knife",
     "Wulfenite",
     "Xingzhu",
+    "XR02",
+    "Yan",
     "Yanese Dagger",
     "Yato",
     "Yeti Squadron",
@@ -1271,7 +1301,29 @@
     "Franka & Exusiai": "Franka y Exusiai",
     "Little Girl": "Niña pequeña",
     "Another Girl's Voice": "Voz de otra chica",
-    "Wounded Operator": "Operador herido"
+    "Wounded Operator": "Operador herido",
+    "Rhodes Island Operator": "Operador de Rhodes Island",
+    "Informant": "Informante",
+    "Madam Oni": "Señorita Oni",
+    "Chung Shui Big Three": "Tres Grandes de Chung Shui",
+    "Far East": "Lejano Oriente",
+    "University Road": "calle de la Universidad",
+    "Ch'en Estate": "mansión Ch'en",
+    "Radio Operator": "Operador de radio",
+    "Charles Avenue": "avenida Charles",
+    "Upper Factor St.": "calle Upper Factor",
+    "Upper Lungmen": "zona alta de Lungmen",
+    "Mephisto's Guard": "Guardia de Mephisto",
+    "ReUni N MemBr": "MiEMbR d ReUni N",
+    "ReUMmbr? N;E? OE": "MiReUn? B;R? OE",
+    "Mephisto's hERd": "rEBaño de Mephisto",
+    "Mephisto's HeRd": "ReBaño de Mephisto",
+    "Mephisto's Herd": "Rebaño de Mephisto",
+    "Immigration Department": "Departamento de Inmigración",
+    "Phantom Crossbowman": "Ballestero Fantasma",
+    "Speaker Witte": "presidente Witte",
+    "Duke of Kashchey": "duque Kashchey",
+    "Chief's Office": "Despacho del jefe"
   },
   "overrides": {
     "obt/main/level_main_04-01_beg::s3": {
@@ -1377,6 +1429,66 @@
     "activities/act10d5/level_act10d5_st06::s38": {
       "source": "You don't look busy.",
       "translation": "Tú no pareces ocupado."
+    },
+    "obt/main/level_main_05-02_beg::s0": {
+      "source": "第二关（后）",
+      "translation": "Etapa 2 (antes)"
+    },
+    "obt/main/level_main_05-02_end::s75": {
+      "source": "I've never met that person before.",
+      "translation": "No la conozco."
+    },
+    "obt/main/level_main_05-04_beg::s3": {
+      "source": "You don't look so good.",
+      "translation": "No te ves bien."
+    },
+    "obt/main/level_main_05-07_beg::s0": {
+      "source": "第六关（后）",
+      "translation": "Etapa 6 (antes)"
+    },
+    "obt/main/level_main_05-09_beg::s0": {
+      "source": "第六关（后）",
+      "translation": "Etapa 7 (antes)"
+    },
+    "obt/main/level_main_05-09_end::s0": {
+      "source": "第六关（后）",
+      "translation": "Etapa 7 (después)"
+    },
+    "obt/main/level_main_05-09_end::s4": {
+      "source": "That's enough.",
+      "translation": "Ya basta."
+    },
+    "obt/main/level_main_05-09_end::s117": {
+      "source": "There's no need for that.",
+      "translation": "No hace falta."
+    },
+    "obt/main/level_main_05-09_end::s154": {
+      "source": "Why's that?",
+      "translation": "¿Por qué?"
+    },
+    "obt/main/level_main_05-10_beg::s0": {
+      "source": "第六关（后）",
+      "translation": "Etapa 8 (antes)"
+    },
+    "obt/main/level_main_05-10_end::s0": {
+      "source": "第六关（后）",
+      "translation": "Etapa 8 (después)"
+    },
+    "obt/main/level_st_05-01::s0": {
+      "source": "第六关（后）",
+      "translation": "Interludio 5-11"
+    },
+    "obt/main/level_main_05-10_beg::s158": {
+      "source": "Of course!",
+      "translation": "¡Claro que no!"
+    },
+    "obt/main/level_main_05-10_beg::s233": {
+      "source": "Right!",
+      "translation": "¡Así es!"
+    },
+    "obt/main/level_main_05-10_end::s102": {
+      "source": "Run!",
+      "translation": "¡Corre!"
     }
   }
 }

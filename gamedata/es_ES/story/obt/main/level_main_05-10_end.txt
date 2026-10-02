@@ -1,0 +1,415 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 8 (después)
+[Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall",  fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_chixiaobadao")]
+[Blocker(a=0.7, r=1, g=0, b=0, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  Ya no tienes adónde huir.
+[Character(name="char_1507_Mephisto_1#3")]
+[name="Mephisto"]  ...¡Maldita... seas!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¿A dónde crees que vas?
+[Character(name="char_1508_Faust_1#1")]
+[name="Faust"]  Ngh...
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¡Pon las manos donde pueda verlas!
+[name="Blaze"]  ¡Ya descubrí todos tus trucos, mocoso con escamas!
+[Dialog]
+[Character(name="char_1508_Faust_1#1")]
+[CameraShake(duration=0.4, xstrength=8, ystrength=6, vibrato=30, randomness=30, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Character(name="char_017_homura_3#1")]
+[playsound(key="$p_imp_blunt_h")]
+[CameraShake(duration=0.4, xstrength=12, ystrength=18, vibrato=30, randomness=30, fadeout=false)]
+[delay(time=1)]
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¡Te dije que eso no iba a funcionar!
+[Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=1)]
+[name="Amiya"]  ¡Blaze!
+[Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  Hmph, tranquila. ¡Estos ataques no duelen más que unos cohetes!
+[Character(name="char_1508_Faust_1#1")]
+[name="Faust"]  Bloqueaste mis disparos antes de que llegaran.
+[name="Faust"]  ¿Sabes de dónde vienen?
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Claro que sí. Ya descubrí tu truco.
+[name="Blaze"]  Amiya, aléjate. ¡Voy a usar 'eso'!
+[Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=1)]
+[name="Amiya"]  ¡Entendido! Volveré a interferir con los guardias de Mephisto, ¡así que hazlo rápido!
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¡Tomen esta sangre mía como regalo de despedida, 'Ballesteros Fantasma' de Reunion!
+[name="Blaze"]  ¡Hierve y haz volar su camuflaje!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.4)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.3, r=1, g=0, b=0, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Image(image="avg_5_8_homura", fadetime=0.3,screenadapt="coverall",block=true)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=0, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.15, yScaleTo=1.15,duration=15, block=false)]
+[Blocker(a=0, fadetime=1, block=true)]
+[name="Faust"]  ...!
+[name="Faust"]  ¿Usas tu propia sangre para provocar un incendio?
+[name="Blaze"]  Ja, ¿tengo cara de Hechicera? Solo un novato creído andaría provocando incendios así.
+[name="Blaze"]  Lo siento, pero esto es solo una de mis técnicas de combate. ¡Muéstrense, ya no tienen dónde esconderse!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character]
+[Character(name="avg_npc_016",fadetime=1,block=true)]
+[name="Ballestero Fantasma"]  ...
+[name="Ballestero Fantasma"]  Faust, perdí el camuflaje.
+[Character(name="char_1508_Faust_1#1")]
+[name="Faust"]  Orden: retirada.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡¿Qué es eso...?! ¿Cuándo escondió Reunion a esos Francotiradores ahí?
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="Ballestero Fantasma"]  ¿Ahora?
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=1)]
+[name="Faust"]  Ahora mismo.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Aparecieron varios Francotiradores de Reunion, sobre todo en el segundo piso del edificio este y el tercero del edificio sur!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Avancen con cuidado! ¡Puede que nos hayan preparado emboscadas en los pisos inferiores!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¿Ellos también causaron lo extraño que pasaba en el edificio?
+[Character]
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Ingenioso. Usaron la refracción para parecer invisibles.
+[name="Blaze"]  Pero no pueden ocultar por completo sus huellas ni moverse de golpe sin alterar el efecto de sus Artes.
+[name="Blaze"]  ¿Estoy en lo cierto?
+[Character(name="char_017_homura_3#1",name2="char_1508_Faust_1#1",focus=2)]
+[name="Faust"]  ...Eres bastante lista.
+[Character(name="char_017_homura_3#1",name2="char_1508_Faust_1#1",focus=1)]
+[name="Blaze"]  Todo gracias a nuestra excelente información. Ahora que sabes que te descubrimos, deberías rendirte.
+[name="Blaze"]  Si quieres seguir peleando, te haré pagar por las muertes de Ace y Scout. Hmph, ni siquiera me importa si tuviste algo que ver, mocoso.
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="Ballestero Fantasma"]  Faust, todavía tenemos munición.
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=1)]
+[name="Faust"]  Retírense. Ya perdimos nuestra ventaja de información. Yo los mantendré ocupados. Los demás, muévanse ya.
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="Ballestero Fantasma"]  Entendido.
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]  ¿Por qué no le disparas? ¡Faust!
+[name="Mephisto"]  ¡Ataquen, mis guardias! ¡Rápido! Son cuatro, solo cuatro... ¡y solo tres representan una amenaza!
+[name="Mephisto"]  ¡Peleen! ¡Despedacen a esos pecadores de una vez!
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Bajo las órdenes del Dr. {@nickname}, nosotras tres somos más que suficientes para derrotarlos a todos!
+[name="Amiya"]  Sin mencionar a esos Infectados a los que lastimaste, a los que les quitaste la voluntad hasta el punto de que ya ni siquiera son personas...
+[name="Amiya"]  Incluso ese chico con escamas a tu lado podría dejar de apoyarte. Sus pensamientos están llenos de tristeza y confusión...
+[name="Amiya"]  ¡Mephisto, estás solo en este campo de batalla!
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]  ...
+[Character(name="char_002_amiya_1#7",name2="char_1508_Faust_1#1",focus=2)]
+[name="Faust"]  ¿Puedes leerme la mente?
+[Character(name="char_002_amiya_1#7",name2="char_1508_Faust_1#1",focus=1)]
+[name="Amiya"]  No, solo lo sentí.
+[Character(name="char_002_amiya_1#7",name2="char_1508_Faust_1#1",focus=2)]
+[name="Faust"]  Entonces no tienes idea de lo que estoy pensando.
+[Character(name="char_002_amiya_1#7",name2="char_1508_Faust_1#1",focus=1)]
+[name="Amiya"]  ...!
+[Dialog]
+[Character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¡Amiya!
+[Character]
+[Dialog]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#7",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Amiya"]  Estoy bien. ¡Apenas puedo bloquear sus disparos...! Pero no voy a poder seguir conteniendo...
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="avg_npc_015")]
+[name="Guardia de Mephisto"]  ¡¡GRAAAAAAGHHH!! ¡¡AAAARRRRGGHH!!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  ¡Estoy perdiendo el control!
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=1)]
+[name="Faust"]  Mephisto, vámonos.
+[name="Faust"]  Sus refuerzos están acabando con nuestras fuerzas.
+[name="Faust"]  A algunos ni siquiera los habíamos visto antes. El plan cambió. Se adelantaron a nuestros movimientos.
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=2)]
+[name="Mephisto"]  ...¿Por qué no llegaron nuestras fuerzas? Tenemos más de veinte escuadrones y dos grandes brigadas. ¿Por qué no ha llegado ninguno?
+[name="Mephisto"]  ¿Dónde está Crownslayer? ¿O FrostNova?
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=1)]
+[name="Faust"]  Esto no es como Chernobog. No pudimos cortar las comunicaciones del enemigo, así que pidieron muchos refuerzos y opusieron una fuerte resistencia.
+[name="Faust"]  Mephisto...
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#3",focus=2)]
+[name="Mephisto"]  ¡¿Por qué todavía no llegan?!
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#3",focus=1)]
+[name="Faust"]  No sabremos por qué hasta que lo veamos nosotros mismos. Primero salgamos de aquí.
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=1)]
+[name="Amiya"]  Blaze, estoy por llegar a mi límite. ¿Puedes terminar esto?
+[Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  ¡Claro! ¡Conmigo y esa tal Ch'en debería bastar!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#3",focus=1)]
+[name="Faust"]  ¡Rápido!
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  ¿Te di permiso para irte?
+[Character(name="char_1507_Mephisto_1#3")]
+[name="Mephisto"]  ¡Tú...! ¡Guardias! ¡Mátenla! ¡¡Mátenla!!
+[Character(name="avg_npc_015")]
+[name="Guardia de Mephisto"]  Grrr... ¡¡¡Grooooar!!!
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Tsk... Más de una docena empezaron a moverse a la vez. Esto va a ser un fastidio.
+[Character(name="avg_npc_015")]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=false)]
+[name="Guardia de Mephisto"]  ¡¡¡GROOAAAAAR!!!
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¡Ahí vienen, Ch'en!
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]  Gracias, operadora de Rhodes Island. Ahora nadie podrá interponerse en mi camino.
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¿Eh?
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"] (Haah... ¿Todavía no? No puedo contrarrestar por completo su camuflaje... Olvídalo, con esto debería bastar.)
+[name="Ch'en"] (Chi Xiao, esta vez...)
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  'Carmesí desbordante—'
+[Dialog]
+[Character(name="avg_npc_015",name2="avg_npc_015")]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_chixiaobadao")]
+[Blocker(a=0.7, r=1, g=0, b=0, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=0.5)]
+[Character(name="avg_npc_015",name2="avg_npc_015")]
+[name="Guardia de Mephisto"]  ...¡Gah!
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ...¿Será posible...?
+[Character(name="avg_npc_015",name2="avg_npc_015")]
+[name="Guardia de Mephisto"]  Uaaagh... Argh...
+[name="Guardia de Mephisto"]  Gra... cias...
+[Character(fadetime=2,block=true)]
+[Delay(time=2)]
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]  ...
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  ¿Acabas de desenvainar tu espada? ¿Un solo corte? ¿Y con eso derribaste a una docena de esas cosas?
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]  Esa espada...
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Amiya, creo que de ahora en adelante voy a tener mucho más cuidado con lo que digo delante de ella.
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  Hmph.
+[Character(name="char_1507_Mephisto_1#4")]
+[name="Mephisto"]  Tú... ¿Qué hiciste...?
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_chixiaobadao")]
+[Blocker(a=0.7, r=1, g=0, b=0, fadetime=0.02, block=true)]
+[Blocker(a=0, r=1, g=0, b=0, fadetime=0.25, block=true)]
+[Delay(time=0.6)]
+[Character(name="char_1508_Faust_1#1")]
+[name="Faust"]  ¡Corre!
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  Tú tampoco vas a escapar.
+[Character(name="char_1508_Faust_1#1")]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_chixiaobadao")]
+[Blocker(a=0.7, r=1, g=0, b=0, fadetime=0.02, block=true)]
+[Blocker(a=0, r=1, g=0, b=0, fadetime=0.25, block=true)]
+[Character(name="char_1508_Faust_1#1")]
+[CameraShake(duration=2, xstrength=8, ystrength=6, vibrato=30, randomness=20, fadeout=true, block=false)]
+[name="Faust"]  ¡Gah...!
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=2)]
+[name="Mephisto"]  Faust... ¡Faust! ¡Estás herido! Estás... no, no... ¡Nooo!
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=1)]
+[name="Faust"]  ...
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  Se acabó.
+[Character(name="char_1508_Faust_1#1")]
+[name="Faust"]  Todavía no.
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  ¡¿Qué?!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  *tos* *tos*... ¿Me hizo acercarme para disparar a quemarropa?
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Pero lograste bloquearlo, ¿no?
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  ¡Aprovecharon la explosión para escapar!
+[Character]
+[Dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Vaya, ¿explosiones en cadena?
+[name="Blaze"]  ¡Argh, se está derrumbando todo el último piso! ¿Ya no vamos a poder perseguirlos?
+[Character(name="char_010_chen_1#5",name2="char_017_homura_3#1",focus=1)]
+[name="Ch'en"]  La mitad de eso fue culpa tuya.
+[Character(name="char_010_chen_1#5",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  Qué se le va a hacer.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Background(image="bg_uptown_2", width=1, height=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=1)]
+[name="Faust"]  Rápido, tenemos que irnos.
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=2)]
+[name="Mephisto"]  No, tengo que quedarme aquí hasta que lleguen...
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=1)]
+[name="Faust"]  Esta parte del plan fracasó. Tienes que irte.
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#3",focus=2)]
+[name="Mephisto"]  ¿Fracasé? ¿Fracasé? ¡Imposible!
+[name="Mephisto"]  ¿No estaba saliendo todo según el plan...? ¿Acaso no pedí refuerzos hace mucho?
+[name="Mephisto"]  ¿Nos traicionaron? ¿Se filtró nuestra información? ¿Quién fue? ¿Por qué la L.G.D. conoce nuestras posiciones y estrategias?
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#3",focus=1)]
+[name="Faust"]  ¡Vete de una vez!
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=2)]
+[name="Mephisto"]  Si nadie nos traicionó, ¡¿quién pudo haber hecho esto?!
+[name="Mephisto"]  Talulah nunca cometería un error... Así que esto debe ser parte de su plan...
+[name="Mephisto"]  No, es imposible... ¿Por qué nos tendería una trampa así?
+[name="Mephisto"]  ...Faust, no puedo aceptar esto... Me niego a creerlo.
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#4",focus=1)]
+[name="Faust"]  ¡Salta! ¡Yo te sujeto!
+[Character(name="char_1508_Faust_1#1",name2="char_1507_Mephisto_1#2",focus=2)]
+[name="Mephisto"]  Está bien...
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Image(image="avg_5_8_ruins",screenadapt="coverall", block=true)]
+[ImageTween(xFrom=0, yFrom=0, xTo=30, yTo=30, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=20)]
+[Blocker(a=0, fadetime=2, block=true)]
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[Character(name="char_017_homura_3#3")]
+[name="Blaze"]  Bueno... caray, señorita. Parece que este edificio va a necesitar una buena remodelación.
+[name="Blaze"]  Aunque es una pena que esos dos chicos hayan escapado.
+[name="Blaze"]  Esos seguidores sin voluntad propia siguen atacándonos como animales acorralados. Encargarnos de todos todavía va a darnos muchos problemas.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  Al menos logramos recuperar el cuartel general.
+[name="Amiya"]  Esta es nuestra victoria, aunque dure poco.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image]
+[Character]
+[Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1#1",name2="char_002_amiya_1#1",focus=1)]
+[name="Ch'en"]  Amiya...
+[Character(name="char_010_chen_1#6",name2="char_002_amiya_1#1",focus=1)]
+[name="Ch'en"]  ...
+[Character(name="char_010_chen_1#5",name2="char_002_amiya_1#1",focus=1)]
+[name="Ch'en"]  ¿Cómo logró Rhodes Island salir de Chernobog?
+[Character(name="char_010_chen_1#5",name2="char_002_amiya_1#1",focus=2)]
+[name="Amiya"]  La señorita Blaze llegó a ayudarnos justo a tiempo.
+[name="Amiya"]  También había una oficial de la L.G.D. bastante bocona a las afueras de la ciudad en ruinas...
+[Character(name="char_017_homura_3#1")]
+[name="Blaze"]  Habría sido más fácil si nos hubieras ayudado desde el principio, en vez de quedarte mirando.
+[Dialog]
+[Character(name="char_010_chen_1#1")]
+[Delay(time=1.6)]
+[Character(name="char_017_homura_3#1",name2="char_010_chen_1#1",focus=1)]
+[name="Blaze"]  Esperaba que dijeras algo como 'De todos modos, no necesitaba la ayuda de Rhodes Island' o 'Prefiero morir antes que trabajar con ellos'.
+[name="Blaze"]  Pero al menos no pareces tan terca. ¿Tienes algo más que decir? Si no, me gustaría volver a Rhodes Island.
+[Character(name="char_017_homura_3#1",name2="char_010_chen_1#3",focus=2)]
+[name="Ch'en"]  No sabía que Rhodes Island tuviera una aeronave así.
+[Character(name="char_017_homura_3#1",name2="char_010_chen_1#3",focus=1)]
+[name="Blaze"]  Je, tenemos muchas cosas que podrían sorprenderte.
+[Character(name="char_017_homura_3#1",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Igual que ustedes, no queremos mostrar todas nuestras cartas.
+[Character(name="char_017_homura_3#1",name2="char_010_chen_1#1",focus=1)]
+[name="Blaze"]  No nos estarás contando como una de tus cartas, ¿verdad?
+[Character(name="char_017_homura_3#1",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  ...
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Eh, señorita Ch'en... hay una transmisión entrante por una línea privada.
+[name="Agente del L.G.D."]  Es para usted.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ¿Hola?
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Wei Yenwu"]  Buen trabajo, señorita Ch'en.
+[name="Wei Yenwu"]  ¿La señorita Swire también está en este canal?
+[Dialog]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="2", name="char_308_swire_1#5", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Swire"]  Aquí estoy.
+[Dialog]
+[CharacterCutin(widgetID="2",fadetime=0.5,block=true)]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Wei Yenwu"]  Informen de sus avances, por favor.
+[Dialog]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[CharacterCutin(widgetID="2", name="char_308_swire_1#5", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Swire"]  Saqué a Rhodes Island del apuro y terminé los preparativos para las distintas brigadas. Coordinarlo y organizarlo todo me tomó tres noches enteras.
+[name="Swire"]  ¿Y usted, señorita Ch'en?
+[Dialog]
+[CharacterCutin(widgetID="2",fadetime=0.5,block=true)]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Ya recuperé—
+[name="Ch'en"]  ...
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  —con la ayuda de Rhodes Island, recuperamos el cuartel general de la L.G.D. Su comandante difundirá la noticia de su derrota entre sus filas.
+[name="Ch'en"]  Encauzamos a las fuerzas de Reunion que quedan en Lungmen hacia nuestras emboscadas, por las rutas que les preparamos.
+[name="Ch'en"]  Ahora solo tenemos que esperar su contraataque.
+[name="Ch'en"]  Mi misión está cumplida.
+[Character(name="char_empty",name2="char_010_chen_1#5",focus=1)]
+[name="Wei Yenwu"]  También recibí informes de algunos de sus otros compañeros. Todas las misiones de la última fase se completaron sin fallas. Buen trabajo a todos.
+[name="Wei Yenwu"]  Ahora pasaremos a la siguiente fase.
+[Dialog]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

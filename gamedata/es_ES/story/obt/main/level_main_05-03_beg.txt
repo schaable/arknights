@@ -1,0 +1,64 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 3 (antes)
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Background(screenadapt="coverall", image="bg_uptown_2",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[name=""]   11:11 a. m.   Clima/Llovizna
+[name=""]   Afuera del almacén Muk Wo, Sam Cheong Chai, centro de Lungmen
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Ya casi terminamos el reconocimiento. Estamos bien ocultos en este punto de observación y no hay nadie alrededor del almacén.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Parece una obra abandonada. Dejaron montones de materiales de construcción. Hay marcas de objetos que arrastraron por el suelo.
+[name="Ch'en"]  Reunion debe haber preparado una emboscada aquí.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Ch'en, ¿Ah Faat es tu informante?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  ...Sí. ¿Escuchaste nuestra conversación?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Hice lo posible por no escuchar.
+[name="Hoshiguma"]  Lo conozco desde hace mucho, más de diez años. Era imposible que no reconociera su voz.
+[name="Hoshiguma"]  ¿Cuándo lo reclutaste como informante?
+[name="Hoshiguma"]  Se infectó hace más de un año. Fue entonces cuando desapareció de su bar. Los vasos que limpiaba todos los días quedaron abandonados, cubriéndose de polvo.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Quizás incluso antes de eso.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Al menos deberías habérmelo dicho.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Parece que va a llover. Empecemos. Hay que sacar a los enemigos de sus escondites.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Suspiro...
+[name="Hoshiguma"]  Llegamos demasiado tarde. Se va a desangrar.
+[name="Hoshiguma"]  Yo atraeré el fuego de Reunion. Ustedes aprovechen para rodearlos y terminar rápido con esto.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Es demasiado peligroso.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Pero es la forma más rápida de ganar. Confía en mí.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Siempre confío en ti.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Sigan las instrucciones de Hoshiguma. Háganlo rápido.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Sí, señora!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",fadetime=1,block=true,focus=2)]
+[Delay(time=1)]
+[name="Ch'en"]  Estoy lista, Hoshiguma.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Así me gusta. Voy a sacarlos de sus escondites. Dame tres minutos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  ¿Vas a hacer todo eso tú sola en tres minutos? ¡Es demasiado arriesgado!
+[name="Ch'en"]  En cuanto veamos que necesitas ayuda, atacaremos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="Hoshiguma"]  No, solo dame mis tres minutos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]  ...Con eso me basta.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="Hoshiguma"]  Vamos allá.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

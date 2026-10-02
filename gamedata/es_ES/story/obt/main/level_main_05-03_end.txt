@@ -1,0 +1,206 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 3 (después)
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡¿Por qué están huyendo todos?!
+[name="Miembro de Reunion"]  ¡Atáquenla con Artes! ¡¡Dejen de correr!!
+[name="Miembro de Reunion"]  ¡A-alto! ¡Ella, ella viene hacia acá! ¡Deténganla!
+[name="Miembro de Reunion"]  ¡¿Dónde están los demás?! Por qué...
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_136_hsguma",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Hoshiguma"]  Solo quedas tú.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡Aaaaah...!
+[name="Miembro de Reunion"]  Demonio... Q-que alguien me salve...
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  ...¿Así pensaban detenerme?
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  No, yo... No...
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  ¿Pensaban detenerme... así?
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡No me mates! ¡Por favor!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Ni siquiera mereces servir de alimento para mi Hannya.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡¡Noooooo!!
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Background(screenadapt="coverall", image="bg_uptown_2")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Por Dios... Ni siquiera hemos empezado a atacar.
+[name="Agente del L.G.D."]  Acabó sola con Reunion en apenas dos minutos y medio.
+[name="Agente del L.G.D."]  Es un verdadero demonio.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  Agradece que no la conociste hace cinco años. Hacía mucho que no la veía pelear así.
+[name="Ch'en"]  ¿Y los que se quedaron atrás?
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  Nuestros escuadrones ya los capturaron.
+[name="Agente del L.G.D."]  ...Señorita Ch'en, parece que la inspectora Hoshiguma le está haciendo señas.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[Character]
+[Delay(time=0.3)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ¡Médico, ven conmigo!
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=1)]
+[name="Ch'en"]  Hoshiguma, ¿qué más les preguntaste a esos miembros de Reunion?
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=2)]
+[name="Hoshiguma"]  Les pregunté si habían puesto trampas en el almacén.
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=1)]
+[name="Ch'en"]  Si todo el almacén está lleno de explosivos...
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=2)]
+[name="Hoshiguma"]  Los lanzaremos adentro, uno por uno.
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=1)]
+[name="Ch'en"]  ¿Y entonces?
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=2)]
+[name="Hoshiguma"]  No hay nada. Ah Faat llegó aquí después de que lo emboscaran. Los de Reunion ya estaban apostados en los alrededores.
+[name="Hoshiguma"]  Ch'en, jala la puerta del lado derecho. Yo me encargo del izquierdo.
+[Dialog]
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=1)]
+[Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=1)]
+[name="Ch'en"]  ...Parece que está trabada, no se mueve. Déjame intentar abrir un agujero con la espada.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  No, yo la arranco.
+[name="Hoshiguma"]  (¡BOOOOM!)
+[Character]
+[Dialog]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ¡Ya está abierta!
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Background(screenadapt="coverall", image="bg_storehouse",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  ¡XR02, dime dónde estás! ¡XR02!
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  !
+[name="Ch'en"]  ¡XR02!
+[Character]
+[name="Informante"]  Señorita Ch'en... Oigo una pelea afuera. La puerta del almacén... la derribaron. Podría ser Reunion. Yo me encargo...
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  ¡Espera, soy yo! ¡No cortes la comunicación!
+[Character]
+[name="Informante"]  ¿Es usted, señorita Ch'en? Qué alivio... Estoy... al fondo de todo.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Image(image="bg_5_3end1",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=0, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.15, yScaleTo=1.15, duration=15, block=false)]
+[name="Ch'en"]  Esa herida... ¿qué te pasó en los ojos?
+[name="Informante"]  Me descuidé y me alcanzó un ataque de Artes. No se preocupe, ya no importa. Esto... *tos*... es para usted.
+[name="Ch'en"]  ¡Médico, detén la hemorragia!
+[name="Informante"]  No... Señorita Ch'en, no es necesario. Ya lo he aceptado...
+[name="Ch'en"]  ¡Deja de hablar!
+[name="Informante"]  Es verdad. ¿Ve cuántos disparos recibí? Estoy ciego y ya no quiero moverme. No aguanto más el dolor. Estoy tan cansado.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Image]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_010_chen_1#4",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Tome, señorita Ch'en... S249TA, F106.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  49. Ya memoricé la ubicación.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Los detalles están en el papel. La información sobre la infiltración de Reunion no se envió a los otros dirigentes, sino a un único destinatario... Tiene que haber una razón. Debe investigarlo, cuanto antes mejor.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Lo haré.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  *tos*... No fue fácil conseguir esto... En fin, señorita Ch'en, no esperaba que todo terminara así.
+[name="Informante"]  Por fin pude aportar algo, pero no pensé que sería de esta manera...
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Ninguno lo esperaba. Gracias a tu valor, ahora tenemos una oportunidad de detener al enemigo.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Jaja... *tos*... Nunca me gustó Lungmen, y a Lungmen tampoco le gusté yo.
+[name="Informante"]  Pero ahora, por fin hice algo por Lungmen. No está mal para un bueno para nada como yo, ¿verdad...?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  ¿Llamas bueno para nada a uno de los Tres Grandes de Chung Shui?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Comparado con usted, señorita Oni, no soy más que un bueno para nada.
+[name="Informante"]  ...
+[name="Informante"]  ...Señorita Ch'en, ¿cómo está la señorita Oni? ¿Sigue trabajando como inspectora?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Sí. Lleva mucho tiempo siendo mi compañera.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Señorita Ch'en, la señorita Oni... es demasiado honesta y directa. Nadie en la pandilla... *tos*... se atrevía a desafiarla.
+[name="Informante"]  Pero no puede competir con esos magnates de Lungmen. Por favor, cuide de ella.
+[name="Informante"]  No deje que nadie la humille. ¡No voy a permitir que esos ricachones arrogantes la insulten por su origen!
+[name="Informante"]  Es el único favor que le pido. Solo uno... *tos* *tos*...
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  No te preocupes por eso. Hoshiguma es muy fuerte. Nadie puede hacerle daño.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Por muy fuerte que sea alguien, todos tenemos un límite.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Toda la L.G.D. está de su lado.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Bien, qué alivio. Señorita Oni, señorita Ch'en, ya no me arrepiento de nada.
+[name="Informante"]  Señorita Ch'en, ¿sigue aquí?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Aquí estoy.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  ¿Soy una buena persona?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Hace unos años habría sido difícil decirlo. Pero ahora lo eres, sin duda. Lungmen se enorgullece de tener ciudadanos como tú.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Jajaja... *tos*... Jaja... ¿un pobre Infectado como yo puede ser un buen ciudadano?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Es cierto que algunos en Lungmen están obsesionados con la Oripatía, pero sería mejor preguntárselo directamente a Lungmen.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  ¿Y cómo hago eso? ¿Una ciudad me va a responder?
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Je. Yo responderé en su nombre.
+[name="Ch'en"]  Y dice: 'No me importa'.
+[name="Ch'en"]  Ah Faat, siempre has sido - y siempre serás - uno de los mejores ciudadanos de Lungmen.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  Gracias, señorita Ch'en. Muchas gracias.
+[name="Informante"]  Señorita Ch'en, hay dos cosas que quisiera que le dijera a la señorita Oni.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=1)]
+[name="Ch'en"]  Deberías decírselo tú mismo.
+[Character(name="char_010_chen_1#1",name2="avg_npc_013",focus=2)]
+[name="Informante"]  ¿Qué quiere decir? ¿Está diciendo que...
+[Character(name="avg_npc_013")]
+[name="Informante"]  ...¿Jefa?
+[Character(name="char_136_hsguma",name2="avg_npc_013",focus=1)]
+[name="Hoshiguma"]  Soy yo. Estoy aquí, a tu lado.
+[Character(name="avg_npc_013")]
+[name="Informante"]  Señorita Ch'en, debería habérmelo dicho antes.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Ella decidió guardar silencio.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Image(image="bg_5_3end2",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Informante"]  Jefa, ¿hice un buen trabajo?
+[name="Hoshiguma"]  Todavía no. Para decir que hiciste un buen trabajo, tienes que salir vivo de todo esto.
+[name="Informante"]  Carajo, jaja... Que usted me cargue en la espalda ya es toda la suerte que podía pedir, jefa.
+[name="Hoshiguma"]  ¿Hay algún lugar al que quieras ir? Nunca quisiste decirme de dónde eras.
+[name="Informante"]  De aquí, de Lungmen. De hecho, nunca he estado en otras ciudades. Si se puede, entiérreme en aquel lugar de antes.
+[name="Hoshiguma"]  ¿El escondite? Pero... ese lugar está en ruinas, abandonado desde hace mucho. La verdad, no sé cómo arreglarlo.
+[name="Informante"]  No importa. Mientras esté... con los demás.
+[name="Hoshiguma"]  Lo haré.
+[name="Informante"]  Jefa... Aunque siempre le tuvimos miedo, también siempre... la apoyamos.
+[name="Informante"]  Siempre... la apoyamos...
+[name="Hoshiguma"]  Yo también.
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

@@ -1,0 +1,164 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 4 (después)
+[Background(screenadapt="coverall", image="bg_uptown_2", width=1, height=1, fadetime=2)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Capturamos a todos los miembros de Reunion. Ninguno sabía cuáles eran las instrucciones concretas...
+[name="Hoshiguma"]  ...
+[name="Hoshiguma"]  ¿Ch'en? ¿Qué estás mirando con tanta atención?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  ¿Esta no era la calle de la Universidad?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿Hmm? Eso parece. Después le cambiaron el nombre.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Creo que aquí estaba mi casa...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7,block=true)]
+[Image(image="avg_5_4_door",x=20, y=0)]
+[Blocker(a=0, fadetime=0.7, block=true)]
+[ImageTween(xFrom=20, yFrom=0, xTo=0, yTo=0, duration=15, block=false)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿Tu departamento no estaba en Tai Bo?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Esta mansión pertenecía a la familia de mi padre biológico. Parece que la renovaron. Ha pasado tanto tiempo que apenas la reconozco.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿Vivías aquí antes de irte a estudiar a Victoria?
+[name="Hoshiguma"]  Había oído que tú y el señor Wei venían de familias aristocráticas de Yan, pero aun así impresiona ver una mansión tan grande.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  ¿Aristócratas? Ellos lo eran, pero yo no.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Pero esta mansión tuya... ¿Cómo debería llamarla?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Hmm, puedes llamarla mansión Ch'en...
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7,block=true)]
+[Image]
+[Blocker(a=0, fadetime=0.7, block=true)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Adelante.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  ¿Eh?
+[Dialog]
+[Character]
+[Character(name="char_010_chen_1#1")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.4)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=1)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Espera, espera, ¿no es tu propia casa? ¿Por qué abriste la puerta de un espadazo?
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Olvidé traer la llave. Además, Reunion acaba de abrir un agujero en la pared lateral. Puede que hayan causado daños que aún no hemos visto.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Eso no significa que debas— Ah, olvídalo. Como digas.
+[Dialog]
+[Blocker(a=1,fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Background(screenadapt="coverall", image="bg_home",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  No tienes que quitarte los zapatos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿En serio? Ch'en, dime la verdad, ¿odias a tu viejo?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  No merece que lo llame padre.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  De acuerdo.
+[name="Hoshiguma"]  Si mal no recuerdo, entraste a la L.G.D. en cuanto te graduaste en Victoria y regresaste a Lungmen.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  En ese entonces vivía en los dormitorios.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Entonces nunca volviste aquí después de eso.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Ya nada me ata a este lugar.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Los que dicen eso suelen tener muchas cosas dando vueltas en la cabeza.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  En fin, ¿tienes alguna idea de cuál podría ser ese objetivo de gran valor?
+[name="Hoshiguma"]  ¿Ch'en?
+[Dialog]
+[Character(name="char_010_chen_1#1")]
+[Delay(time=2)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  ...
+[name="Hoshiguma"]  Otra vez se perdió en su mundo, ¿eh?
+[name="Hoshiguma"]  Ch'en, te espero en la puerta. Avísame cuando estés lista para salir.
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Background]
+[Blocker(a=0, fadetime=1, block=true)]
+Mantén todos los juguetes ordenados.
+No salgas.
+No hables con nadie sin permiso.
+No mires a los adultos a los ojos sin permiso.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Background(screenadapt="coverall", image="bg_home",screenadapt="coverall")]
+[Character]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ...
+[name="Ch'en"]  De verdad mantuviste limpio este cuarto todo este tiempo.
+[name="Ch'en"]  Hmph. Qué amable de tu parte dejarme la cama arreglada. ¿O es tu forma de maldecirme porque crees que traigo mala suerte?
+[name="Ch'en"]  Espera, la foto... Cierto, la foto...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Background]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, fadetime=1, block=true)]
+No esperes cariño de mí. Ni un poco.
+Perdón. Lo siento, pero no te soporto. Con solo verte me dan ganas de arrancarme la piel de los brazos.
+No soporto a ninguno de ustedes. Soy demasiado egoísta, pero ya no puedo vivir así.
+Algún día todos ustedes lo entenderán. Si me odian, que así sea. Porque yo también los odio. Y así es como debe ser.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character]
+[CameraEffect(effect="Grayscale", fadetime=0, keep=true, initamount=0, amount=1)]
+[Image(image="avg_5_photo", tiled=true, fadetime=0, block=false)]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[CameraEffect(effect="Grayscale", fadetime=18, amount=0, block=false)]
+[name="Ch'en"]  Aquí está.
+[name="Ch'en"]  Una foto de hace tanto tiempo... Pensé que se había perdido.
+[name="Ch'en"]  Espera, no... ¿será esto lo que están buscando?
+[name="Ch'en"]  ¿Qué está pasando? ¿Por qué querrían esto? ¿Tú también perdiste la cabeza?
+[name="Ch'en"]  Claro que voy a ayudarte, pero ¿en qué estás pensando? ¿Por qué aquí y por qué ahora?
+[name="Ch'en"]  Ah... ¿qué esperaba? Claro que no me vas a responder.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Image]
+[Background(screenadapt="coverall", image="bg_uptown_2", width=1, height=1)]
+[Character]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Ah, ¿por fin estás lista para salir?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Nos vamos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿Encontraste alguna pista? ¿O querías seguir jugando un rato con los ovillos de lana?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  No sé cómo todavía tienes ganas de hacer bromas.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Pues yo creo que estás un poquito de mejor humor que antes.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Tenías razón. Quizás tenía demasiadas cosas en la cabeza.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Así es. Según los informes, hay miembros de Reunion dispersos por toda esta zona y las fuerzas que desplegamos antes los están expulsando.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Bien. Eso nos facilita el trabajo y nos acerca a nuestro objetivo.
+[name="Ch'en"]  ¡L.G.D., formen y avancen! ¡Vamos a recuperar Lungmen!
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

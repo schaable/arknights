@@ -28,16 +28,23 @@ const EN_BASE =
 const CURATED_DNT = [
   // Prologue + Chapter 1 speaking NPCs
   "Ace", "Mephisto", "Talulah", "FrostNova", "Frostnova", "Skullshatterer",
-  "Kal'tsit", "Closure", "Doctor", "Faust",
+  "Kal'tsit", "Closure", "Doctor", "Faust", "Patriot", "Scout",
   // factions / orgs / places
   "Reunion", "Rhodes Island", "Ursus", "Lungmen", "Victoria", "Yeti Squadron", "Yetis",
   // "Children of Ursus" (act10d5) speaking NPCs — story-only, so they are not in
   // character_table and would be dropped by a re-seed if they lived only in the JSON
   "Natalya", "Rosalind", "Sonya", "Valery", "Anna", "Pavel", "Lada", "Nikola",
   "Tatyana", "Anton", "Andrey", "Viktor", "Compass",
+  // Chapter 5 personal names, call signs, and places
+  "Beatrix Schwire", "XR02", "Ochre", "Spring City", "Floria County", "Muk Wo",
+  "Ah Faat", "Sam Cheong Chai", "Chung Shui", "Hannya", "Oni",
+  "Yan", "Tai Bo", "Paci Plaza", "Swarovski Crystal",
+  "Hua Shui", "Causeway Bell", "Ha Wan", "Front Bay", "Scorpio Palace",
+  "Sheung Wan", "Goodie Foodie",
+  "Fumizuki", "Bad Guy", "Witte", "Kashchey", "Tal",
   // lore proper nouns (Originium/Sarkaz stay verbatim; Oripathy/Infected are
   // translated — see CURATED_TERMS)
-  "Originium", "Sarkaz",
+  "Originium", "Sarkaz", "Chi Xiao",
   // placeholder / unknown speaker
   "???",
 ];
@@ -62,6 +69,17 @@ const CURATED_TERMS = {
   "Reunion Member": "Miembro de Reunion",
   "Reunion Member A": "Miembro de Reunion A",
   "Reunion Member B": "Miembro de Reunion B",
+  "Rhodes Island Operator": "Operador de Rhodes Island",
+  "Radio Operator": "Operador de radio",
+  "Phantom Crossbowman": "Ballestero Fantasma",
+  // Chapter 5 transformed troops; preserve the progressive label corruption.
+  "Mephisto's Guard": "Guardia de Mephisto",
+  "ReUni N MemBr": "MiEMbR d ReUni N",
+  "ReUMmbr? N;E? OE": "MiReUn? B;R? OE",
+  "Mephisto's hERd": "rEBaño de Mephisto",
+  "Mephisto's HeRd": "ReBaño de Mephisto",
+  "Mephisto's Herd": "Rebaño de Mephisto",
+  Informant: "Informante",
   "Ursus Captain": "Capitán de Ursus",
   "Ursus Guard": "Guardia de Ursus",
   "TV Host": "Presentador de TV",

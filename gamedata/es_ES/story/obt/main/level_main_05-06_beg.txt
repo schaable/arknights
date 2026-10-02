@@ -1,0 +1,147 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 5 (antes)
+[Background(image="bg_emporium", width=1, height=1,screenadapt="coverall",  fadetime=1)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_1011_wizard_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Hechicero de Reunion"]  Algo anda mal.
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  ¿Qué pasa ahora? ¿Tu enfermedad está empeorando?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  Esto es muy distinto a Chernobog.
+[name="Hechicero de Reunion"]  Aunque sufrimos muchas bajas, cuando vencimos en Chernobog podíamos ver a nuestros enemigos resistiendo y a sus cómplices huyendo para salvar la vida.
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  Pero ¿no sientes que Lungmen está vacía?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  No puede ser, ¿verdad?
+[name="Hechicero de Reunion"]  Ahora que lo pienso, esto es Paci Plaza, ¿no? ¿Cómo puede estar vacío un centro comercial tan grande, con tantas tiendas?
+[name="Hechicero de Reunion"]  Además, ¡ya miré por todos lados y no queda nada de valor! ¡Ya se llevaron todo!
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  ¿Patriot no había prohibido eso...?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  No me refería a eso. Ya sabes que a Mephisto le da igual lo que hagamos, pero ese no es el punto.
+[name="Hechicero de Reunion"]  Lo que quería decir es que parece que alguien nos escondió todo.
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  Te lo estás imaginando. ¡Lungmen no puede hacer nada contra nosotros!
+[name="Miembro de Reunion"]  Aparecemos de golpe por todos lados y, carajo, todo será igual que en Chernobog.
+[name="Miembro de Reunion"]  Esta vez no vamos a sembrar el caos por toda la ciudad, sino a conquistarla. ¡Será nuestra ciudad!
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  ¿Sabes una cosa?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  ¿Qué cosa?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  Paci Plaza es la base más cercana al cuartel general de la L.G.D. Desde aquí será fácil y rápido llevarle suministros.
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  Lo escuché en la última reunión informativa. ¿Algo más?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  Todas las fuerzas de Reunion que están por la ciudad deben reunirse en el cuartel general de la L.G.D. y después dispersarse para tomar toda la ciudad.
+[name="Hechicero de Reunion"]  Sabemos cómo están distribuidos los escuadrones de este distrito...
+[name="Hechicero de Reunion"]  ¿Pero qué pasa con los otros distritos? Sé que muchos escuadrones deberían venir hacia aquí, pero bastantes desaparecieron sin dejar rastro.
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=2)]
+[name="Miembro de Reunion"]  ¿Desaparecieron...? ¿A qué te refieres?
+[Character(name="char_1011_wizard_1",name2="char_1002_nsabr_1",focus=1)]
+[name="Hechicero de Reunion"]  Es muy raro. Sus equipos de comunicación seguían conectados, pero nadie respondía. No tenemos forma de contactarlos.
+[Dialog]
+[Delay(time=0.5)]
+[stopmusic(fadetime=1)]
+[Character]
+[name="???"]  Y pronto tampoco podrán contactarlos a ustedes.
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]  ¡¿Qué?! ¡¿Quién está ahí?!
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡Por la ventana! ¡Están del otro lado de la ventana!
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=2, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡Enemigos! ¡Nos están atacando! ¡La L.G.D....! ¡Es la L.G.D.!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  ¡Ja! ¡Claro que somos nosotros!
+[PlayMusic(intro="$escapebattle_intro", key="$escapebattle_loop", volume=0.5, crossfade=1.5, delay=0.5)]
+[playsound(key="$p_imp_blunt_h")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[playsound(key="$p_imp_blunt_h")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=90, fadeout=false)]
+[Delay(time=1)]
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]  ¡Maldición! ¿Se descolgó del techo y entró rompiendo las ventanas?
+[name="Hechicero de Reunion"]  ¡Peleen! ¡Muévanse! ¡Somos más que ellos, solo tenemos que masacrarlos!
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]  Pásame la radio.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  ¡Sí, señora!
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]  ¡L.G.D., escuchen! ¡Hagan pedazos a Reunion junto con sus búnkeres!
+[Dialog]
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_308_swire_1#5", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Swire"]  ¡¿Qué demonios?! ¡Paci Plaza es propiedad de mi familia! ¡Cómo te atreves—
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Lo siento, señorita, pero Reunion sigue resistiendo. Primero tenemos que neutralizarlos, y después podemos pensar en...
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=1)]
+[name="Swire"]  ¡¿Qué dijiste?! ¡Inútil—!!
+[Dialog]
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ¡L.G.D.! ¡Al ataque!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Ay, por favor... *suspiro*...
+[name="Hoshiguma"]  Pero procuren tener cuidado. Después de todo, esto le pertenece a nuestra gente.
+[name="Hoshiguma"]  No se llevaron ese piano, seguramente porque pesa demasiado. Solo ese piano vale 1.8 millones de LMD. La señorita me lo estuvo presumiendo, así que tengan cuidado.
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]  ¡No van a escapar!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡A cubierto! ¡Rápido! ¡Escóndanse detrás de ese piano!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  Uy.
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Delay(time=1)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Destruyeron nuestra cobertura! ¡Cambien de posición!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  1.8 millones perdidos... así nada más.
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¡Compañeros, compañeros! ¡Escuchen bien!
+[name="Miembro de Reunion"]  Tomamos Paci Plaza como nuestra nueva base y preparamos las defensas. ¡Pero la L.G.D. nos atacó por sorpresa desde el techo! ¡Nos están causando muchas bajas!
+[name="Miembro de Reunion"]  ¡¡Alerta!! ¡La fuerza principal de la L.G.D. está en Paci Plaza! ¡Repito, Paci Plaza!
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ¿Ya terminaste?
+[Character(name="char_1002_nsabr_1")]
+[name="Miembro de Reunion"]  ¿Cuándo llegaste—
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Si ya terminaste de informar, tu misión está cumplida.
+[Dialog]
+[Character(name="char_1002_nsabr_1")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=1)]
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  La misión es que todas las fuerzas de Reunion en Lungmen sepan que estamos aquí.
+[name="Ch'en"]  Los estaremos esperando. Que vengan a buscarnos y se enfrenten a la L.G.D. en una lucha a muerte.
+[name="Ch'en"]  ¡L.G.D.! ¡Sigan disparando! ¡No se detengan!
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

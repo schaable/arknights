@@ -1,0 +1,101 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 7 (antes)
+[Background(image="bg_indoor_3",fadetime=2,block=true,screenadapt="coverall")]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[name=""]   11:20 p. m. \ Nublado
+[name=""]   Frente al Departamento de Inmigración, segundo piso del cuartel general de la L.G.D., zona alta de Lungmen.
+[Delay(time=1)]
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Señorita Ch'en, algo anda mal. ¿No le parece raro que hayamos podido entrar al cuartel general tan fácilmente?
+[name="Agente del L.G.D."]  Había tantos miembros de Reunion afuera que nos preparamos para una pelea difícil, pero se movían como sonámbulos.
+[name="Agente del L.G.D."]  Según nuestros exploradores, su equipo está tan dañado que casi no se puede usar. No parece que hayan combatido mucho, y su nivel de preparación parece...
+[name="Agente del L.G.D."]  Me da escalofríos.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Yo también lo noté. Ni siquiera saben que estamos aquí. Al menos por ahora no son una amenaza.
+[name="Ch'en"]  Seguiremos el plan. Los escuadrones que no participan en combate averiguarán cómo están distribuidas las fuerzas de Reunion en cada piso e intentarán reactivar el sistema de seguridad que deshabilitaron antes.
+[name="Ch'en"]  Además, tenemos que estar preparados para resistir si Reunion intenta rodearnos. Debemos aguantar hasta que logremos ejecutar el plan sin problemas.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Entendido.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Concéntrense en mantener la situación bajo control dentro del edificio.
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Según nuestras fuentes, el centro de mando provisional de Reunion está en la azotea.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  ¿La azotea? ¿Qué clase de líder pondría su centro de mando ahí?
+[name="Ch'en"]  Mmm... Es muy probable que sea una trampa.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  Pero no tenemos otra opción, ¿verdad, señorita?
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  Así es. Recuperar la azotea sería como encender una señal para todo Lungmen. Haremos que Reunion presencie el momento en que el cuartel general de la L.G.D. vuelva a nuestras manos.
+[name="Ch'en"]  Tenemos que atraerlos a todos aquí.
+[name="Ch'en"]  Prepárense, todavía faltan unas horas. Que los escuadrones de reconocimiento e ingenieros vayan primero. Los escuadrones de combate aún tienen tiempo para descansar antes de que comience la operación principal.
+[name="Ch'en"]  No desperdicien ni la más pequeña oportunidad de obtener una ventaja. Prepárense para que nuestros enemigos luchen hasta la muerte.
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  Señorita Ch'en, hay algo raro en este edificio.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  ¿A qué te refieres?
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  Primero, esto es lo que creo: al acercarnos al último piso, podríamos encontrar algo de resistencia. Quizás haya enemigos apostados en la azotea.
+[name="Agente del L.G.D."]  Sin embargo, los pisos inferiores estaban completamente vacíos. Los enemigos empezaron a aparecer en el sexto piso y, aunque cada vez hay más, no han representado ninguna amenaza.
+[name="Agente del L.G.D."]  Hace un momento, uno de mis hombres informó que creyó ver a unos miembros de Reunion por un pasillo, pero desaparecieron en un abrir y cerrar de ojos.
+[name="Agente del L.G.D."]  Otro me dijo que escuchó susurros, pero cuando fue a investigar no encontró nada.
+[name="Agente del L.G.D."]  Eso es todo lo que encontramos. Pero sigo sintiendo que algo anda mal.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  ...
+[name="Ch'en"]  Sigamos avanzando. No tengo tiempo para tus cuentos de fantasmas.
+[name="Ch'en"]  Aunque esté pasando algo raro, me ocuparé de eso cuando todo esto termine.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Sí, señora!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_5_7_1", fadetime=1, xScale=1, yScale=1,block=true)]
+[ImageTween(image="avg_5_7_1", xScaleTo=1.3, yScaleTo=1.3, duration=10)]
+[Blocker(a=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[name="Ch'en"]  Usemos esta ruta de evacuación. Casi nunca la usamos, pero ahora nos va a servir.
+[name="Ch'en"]  Esta escalera nos lleva directo a la azotea.
+[name="Ch'en"]  Ustedes tomarán el control del último piso y aprovecharán la visibilidad desde ahí para cubrirme. Yo iré directo a la azotea y me reuniré con ustedes cuando la situación esté bajo control.
+[name="Agente del L.G.D."]  Señorita Ch'en, ¿de verdad va a ir sola? Sea lo que sea que nos espere, estoy seguro de que podremos ayudarla.
+[name="Ch'en"]  Confío plenamente en sus capacidades. Pero puede que tenga que pelear con todas mis fuerzas en la batalla que viene.
+[name="Ch'en"]  La mejor forma de ayudarme es sacar a Reunion de todo el edificio y asegurarse de que no tenga nada más de qué preocuparme.
+[name="Agente del L.G.D."]  En ese caso, no nos interpondremos, señorita Ch'en. Lungmen cuenta con usted.
+[name="Ch'en"]  No. Lungmen cuenta con nosotros.
+[name="Agente del L.G.D."]  ¡Sí, señora!
+[name="Ch'en"]  ¡Rápido!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Image]
+[PlaySound(key="$d_gen_dooropen")]
+[Background(image="bg_rooftop",screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_1507_Mephisto_1#6",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="???"]  Buenas noches, señorita.
+[name="???"]  Entraste sola y de frente en mi trampa. ¿Debería llamarte valiente o simplemente estúpida?
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  No tienes adónde huir, comandante de Reunion.
+[Character]
+[Dialog]
+[Character(name="char_1507_Mephisto_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Mephisto"]  ¿Ah, sí? Desde mi punto de vista, señorita, tú eres la que no tiene adónde huir. Mis compañeros te devorarán.
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  Hablar es fácil. Demuéstrame de qué eres capaz.
+[name="Ch'en"]  ¡Nunca debieron poner un pie aquí, Reunion!
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

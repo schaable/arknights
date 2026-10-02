@@ -1,0 +1,230 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Interludio 5-11
+[Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall",  fadetime=1)]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.6, crossfade=3, delay=0.5)]
+[name=""]   4:45 a. m. \ Despejado
+[name=""]   Ruinas de la azotea del cuartel general de la L.G.D., zona alta de Lungmen
+[Delay(time=1)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Wei Yenwu"]  Señorita Ch'en, creo que Amiya está a su lado. ¿Me escucha?
+[Character(name="char_empty",name2="char_002_amiya_1#1",focus=2)]
+[name="Amiya"]  Sí, jefe Wei.
+[Character(name="char_empty",name2="char_002_amiya_1#1",focus=1)]
+[name="Wei Yenwu"]  Muy bien, entonces.
+[name="Wei Yenwu"]  Debo disculparme, líder de Rhodes Island. Aunque puedo arriesgarme a enviar a la L.G.D. al corazón del territorio enemigo, no puedo arriesgarme a meter a más jugadores en esta partida.
+[Decision(options="¿Meter a más jugadores?;...¿A qué se refiere?;La situación allá afuera ya es un caos.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_empty",name2="char_002_amiya_1#1",focus=1)]
+[name="Wei Yenwu"]  Dr. {@nickname}...
+[name="Wei Yenwu"]  Bajo toda esta tierra se extiende una red invisible, pero muy compleja.
+[name="Wei Yenwu"]  Ninguna ciudad puede escapar de esta red de conspiraciones e intrigas. Mucho menos Lungmen, rodeada de gigantes.
+[name="Wei Yenwu"]  Quizás ya lo sepan, quizás no. De cualquier modo, tengo que tomar en cuenta todos estos factores.
+[Character(name="char_empty",name2="char_002_amiya_1#7",focus=2)]
+[name="Amiya"]  Jefe Wei, si quería que nuestra misión avanzara sin problemas, debió compartir esta información con nosotros.
+[name="Amiya"]  Al menos debió habérmelo dicho a mí.
+[Character(name="char_empty",name2="char_002_amiya_1#7",focus=1)]
+[name="Wei Yenwu"]  Debo disculparme de nuevo, señorita Amiya. En mi posición, sencillamente no puedo revelar toda nuestra información.
+[name="Wei Yenwu"]  Si estuviera en mi lugar, habría tomado la misma decisión.
+[name="Wei Yenwu"]  Fue una pena lo que ocurrió en las ruinas de Chernobog, pero al menos lograron algo.
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  Nos usó para atraer la atención de Reunion.
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=1)]
+[name="Wei Yenwu"]  No, la L.G.D. estuvo ahí junto a ustedes.
+[Decision(options="Nos usó a todos como carnada.", values="1")]
+[Predicate(references="1")]
+[name="Wei Yenwu"]  ¿Eh?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character]
+[CharacterCutin(widgetID="1",block=true)]
+[Dialog]
+[Background]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[name="Kal'tsit"]  Lo planeó todo hace mucho tiempo.
+[name="Kal'tsit"]  La infiltración de Reunion es cada vez mayor, así que tuvo que decidir rápido.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Decision(options="En el momento más decisivo, cuando Reunion era más vulnerable...", values="1")]
+[Predicate(references="1")]
+[Decision(options="Usaron a Rhodes Island para atraer su atención.", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character]
+[Background]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[name="Kal'tsit"]  Hizo creer a Reunion que la L.G.D. se había dividido—
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Decision(options="...y los engañó para que creyeran que Lungmen estaba indefensa.", values="1")]
+[Predicate(references="1")]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  ¡Ja, bien dicho, Dr. {@nickname}! Jefe, claro que necesitaba que retuviéramos a Reunion. Cuantos más, mejor, ¿no?
+[name="Blaze"]  Cuando los de Reunion que estaban escondidos vieran a Lungmen en ese estado, no iban a dejar pasar la oportunidad.
+[name="Blaze"]  Y en cuanto salieran de sus escondites, ¡PUM! Las fuerzas de élite de Lungmen los estarían esperando, como si hubieran salido de la nada.
+[name="Blaze"]  ¿Cuánto tiempo lleva ocultando el poder de Lungmen? ¿Empezó a preparar esto después del incidente de Chernobog?
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=1)]  
+[name="Wei Yenwu"]  Lungmen los mantuvo a salvo y los ayudó a volver a una posición en la que pudieran ser de la mayor utilidad posible.
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  Dejó a Amiya a su suerte, rodeada de enemigos. ¿De qué 'posición' está hablando?
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=1)]  
+[name="Wei Yenwu"]  Solo espero que Rhodes Island entienda que todos debemos afrontar juntos esta difícil situación.
+[Character(name="char_empty",name2="char_002_amiya_1#1",focus=2)]
+[name="Amiya"]  Señorita Blaze, Dr. {@nickname}, está bien.
+[name="Amiya"]  La señorita Swire nos ayudó a derrotar a las fuerzas de Reunion. Lo hicimos juntos. Lungmen no nos abandonó.
+[name="Amiya"]  (No tenemos pruebas.)
+[Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
+[name="Blaze"]  Tch...
+[Character(name="char_empty",name2="char_002_amiya_1#1",focus=1)]
+[name="Wei Yenwu"]  Nuestro acuerdo sigue vigente. Sin importar lo que haya pasado en el proceso, solo el resultado final puede satisfacerme.
+[name="Wei Yenwu"]  Sin importar lo que haya pasado.
+[name="Wei Yenwu"]  Dr. {@nickname}, de Rhodes Island, creo que fui claro la última vez que nos vimos.
+[name="Wei Yenwu"]  No tiene otra opción en este asunto. Pero al menos puede elegir cómo eliminar a sus enemigos.
+[Decision(options="No le creo a usted ni a sus falsas promesas.;...;Nadie va a sonreír y seguir como si nada después de que lo engañen.", values="1;2;3")]
+[Predicate(references="1")]
+[name="Wei Yenwu"]  ¿Acaso no es lo mejor?
+[name="Wei Yenwu"]  Todos debemos estar alerta. Nadie debería bajar la guardia ante un enemigo común.
+[name="Wei Yenwu"]  Estar atento puede evitar que caiga en una trampa.
+[name="Wei Yenwu"]  Escuche, Dr. {@nickname}—
+[name="Wei Yenwu"]  ...Quizás todavía no seamos amigos, pero al menos no somos enemigos.
+[Predicate(references="2")]
+[name="Wei Yenwu"]  Así que su respuesta es el silencio.
+[name="Wei Yenwu"]  Buen criterio. Oculta sus debilidades mientras aprovecha sus ventajas.
+[name="Wei Yenwu"]  Rhodes Island es, sin duda, un aliado poderoso. Lo ocurrido les ha ganado mi reconocimiento.
+[name="Wei Yenwu"]  Pero eso depende de que nuestra relación siga siendo una alianza, y no la de unos Infectados ilegales con las autoridades locales.
+[Predicate(references="3")]
+[name="Wei Yenwu"]  No pretendo engañar a nadie.
+[name="Wei Yenwu"]  Aunque, siendo objetivos, puede que haya engañado a Reunion.
+[name="Wei Yenwu"]  Pero nada de eso se puede demostrar. Puede que Reunion también tenga acceso a nuestros secretos.
+[name="Wei Yenwu"]  Solo nos queda esperar que podamos destruirlos antes de que descubran nuestras estrategias.
+[name="Wei Yenwu"]  Entonces, ¿ese objetivo le da alguna motivación?
+[Predicate]
+[name="Wei Yenwu"]  Señorita Amiya, Dr. {@nickname}, nuestra cooperación aún no termina.
+[name="Wei Yenwu"]  El contraataque es inminente. Les demostraremos la grandeza, la sabiduría y la unidad de Lungmen.
+[name="Wei Yenwu"]  Si es posible, también me gustaría ver el profesionalismo, la determinación y la valentía de Rhodes Island.
+[name="Wei Yenwu"]  En quince minutos, la señorita Ch'en volverá a luchar a su lado.
+[Character(name="char_empty",name2="char_002_amiya_1#7",focus=2)]
+[name="Amiya"]  Señor Wei, espero que no olvide lo que acaba de decir.
+[name="Amiya"]  Porque Rhodes Island no lo olvidará.
+[Character(name="char_empty",name2="char_002_amiya_1#7",focus=1)]
+[name="Wei Yenwu"]  Por supuesto.
+[Dialog]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Character(name="char_002_amiya_1#1")]
+[name="Amiya"]  Blaze, Dr. {@nickname}, vámonos.
+[name="Amiya"]  Ah, por cierto, señorita Ch'en, ¿dónde está la inspectora Hoshiguma? No la veo por aquí. ¿Está... bien?
+[Character(name="char_002_amiya_1#1",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Tuvo algunas heridas leves, nada grave.
+[Character(name="char_002_amiya_1#2",name2="char_010_chen_1#1",focus=1)]
+[name="Amiya"]  Ah, ya veo...
+[name="Amiya"]  Señorita Ch'en, Rhodes Island también puede revisarla y darle un tratamiento de urgencia si lo necesita.
+[Character(name="char_002_amiya_1#2",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  No, gracias.
+[Character(name="char_002_amiya_1#2",name2="char_010_chen_1#1",focus=1)]
+[name="Amiya"]  No tiene de qué preocuparse. Nuestros procedimientos médicos son completamente confidenciales.
+[Character(name="char_002_amiya_1#1",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Me basta con curarme yo misma.
+[Character(name="char_002_amiya_1#1",name2="char_010_chen_1#1",focus=1)]
+[name="Amiya"]  Mmm... Si insiste, no voy a obligarla.
+[name="Amiya"]  Entonces, nos vemos más tarde, señorita Ch'en.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character]
+[Background(image="bg_lungmen_o", width=1, height=1, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=true)]
+[name=""]   5:00 a. m. \ Despejado
+[name=""]   Despacho del jefe, zona alta de Lungmen
+[Dialog]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_308_swire_1#5", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Swire"]  Jefe Wei, ¿cómo salió todo de su lado?
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Bien, por supuesto. Si no, no tendría tiempo de estar aquí conversando con usted.
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
+[name="Swire"]  ¿Aceptaron retrasar la operación?
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Por supuesto, pero hay un límite de tiempo.
+[name="Wei Yenwu"]  Hoy y mañana. Si después de dos días no hemos contenido a Reunion, ya sabe lo que pasará.
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
+[name="Swire"]  ¡¿Solo dos días?! ¡No es suficiente! No puedo—
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Dos días y dos noches ya es demasiado generoso. Yo, en cambio, solo le daré un día.
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
+[name="Swire"]  ¿Un día?
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Quiero que se encargue de todo en un día.
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
+[name="Swire"]  Jefe Wei, si ellos nos ayudan, podemos acabar con Reunion en cuestión de horas. ¿No reduciría eso nuestras pérdidas al mínimo?
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Eso no importa. Lungmen debe poder resolver sus propios problemas de una vez por todas. Ese es nuestro principio fundamental.
+[name="Wei Yenwu"]  Eso es lo que tenemos que demostrarles. Así que, todos, a trabajar.
+[name="Wei Yenwu"]  Vaya, señorita Ch'en. Es hora de mostrarle a Reunion la hospitalidad de Lungmen.
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_010_chen_1#1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
+[name="Ch'en"]  Entendido.
+[name="Ch'en"]  Jefe Wei, tengo una pregunta. Aunque no pueda responder ahora, espero que cuando todo termine pueda darme al menos una explicación razonable.
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Adelante.
+[Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
+[name="Ch'en"]  Se supone que Reunion está atacando con todo. Entonces, ¿por qué su líder, Talulah, no ha aparecido en Lungmen?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_2005_weiyw_1",fadetime=1,block=true)]
+[name="Wei Yenwu"]  Mmm...
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  Creí que todo iba bien. ¿Por qué frunces el ceño?
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  ¿Llegó alguna respuesta de Ursus?
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  Todavía nada.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  ¿Y seguimos sin poder contactar al presidente Witte?
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  Por desgracia, nuestro mensajero ni siquiera ha podido reunirse con él.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Por lo que veo, es imposible saber qué pasa dentro del Imperio de Ursus.
+[name="Wei Yenwu"]  Fumizuki, tengo un presentimiento. Todo esto es apenas el comienzo de algo mucho más grande.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  La última vez que te oí decir eso fue hace muchos años.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  ¿Cuándo lo dije? Ya ni recuerdo por qué habría dicho algo así.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  Fue poco después de conocernos. ¿Me estás diciendo que olvidaste todo lo que hemos vivido juntos?
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  ¡N-no! ¡Cómo crees! Es que solo recuerdo bien los momentos que hemos pasado juntos.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  Buen intento. Tú siempre con tus palabras bonitas. Por desgracia, esto no es algo que puedas olvidar.
+[name="Fumizuki"]  Me lo dijiste hace veinte años... que, si perdíamos, esta ciudad tendría otro nombre y sería un peldaño más en el camino de Ursus hacia la hegemonía.
+[name="Fumizuki"]  Si hubiéramos perdido, tú no estarías sentado aquí. Estaría él.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  ...
+[name="Wei Yenwu"]  El duque Kashchey.
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=1)]
+[name="Fumizuki"]  Ay, pobre Tal. ¿No crees que nos recuerda a él?
+[Character(name="char_2006_weiywfmzuki_1",name2="char_2005_weiyw_1",focus=2)]
+[name="Wei Yenwu"]  Pero él ya está muerto.
+[name="Wei Yenwu"]  Talulah lo mató con sus propias manos.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep05",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+[delay(time=5)]
+[Image(fadetime=2)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

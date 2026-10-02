@@ -1,0 +1,135 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 2 (después)
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[Background(image="bg_uptown_1",fadetime=1,screenadapt="coverall")]
+[Delay(time=1)]
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",fadetime=1,focus=2)]
+[Delay(time=1)]
+[name="Operador de Rhodes Island"]  Antes de enfrentarme a ellos de frente, nunca imaginé que Reunion fuera tan débil.
+[name="Operador de Rhodes Island"]  Después de lo que hicieron en Chernobog y de todos los problemas que les causaron a nuestros escuadrones, pensé que debían de ser increíblemente poderosos.
+[name="Operador de Rhodes Island"]  Pero, por lo que he visto, la información que nos dieron antes de la misión era correcta. Esa es realmente toda la potencia de fuego que Reunion puede reunir. Lo único que complica esta misión es que no sabemos qué están tramando.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  No bajes la guardia. La mayor fortaleza de Reunion es su capacidad para hacer lo que no esperas.
+[name="Ch'en"]  Infiltrarse, atacar por sorpresa y aprovechar las habilidades desconocidas de sus miembros... esas son las tácticas que mejor dominan. Todavía no sabemos qué cartas pueden tener bajo la manga.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]  Lo sé, teniendo en cuenta que lograron derribar ciudades tan grandes y poderosas como Chernobog y Lungmen. Puede que sus efectivos sean muchos más de los que imaginamos.
+[name="Operador de Rhodes Island"]  Por cierto, señorita Ch'en, ¿la L.G.D. no acompañó a Amiya en una misión para investigar ese sector de Chernobog? ¿Por qué aún no han regresado?
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  Lo siento...
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  (Ch'en...)
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  Nos separamos del escuadrón de Amiya. No pudimos volver a reunirnos con ellos y, debido a la emergencia, tuvimos que regresar.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]  ¿Está diciendo que usted y la L.G.D. abandonaron allí a Amiya y al Dr. {@nickname}?
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  Sí...
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]  En otras palabras, ¿están desaparecidos en combate?
+[name="Operador de Rhodes Island"]  ¿Por qué...? Señorita Ch'en...
+[name="Operador de Rhodes Island"]  No... No deberían haber hecho eso... Aunque sean de la L.G.D., no deberían haber abandonado a sus compañeros.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  Es culpa mía. Mi misión era dar prioridad a la seguridad de Lungmen. Decidí cumplirla.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]  ¿Qué importa de quién fue la culpa...? Olvídelo, oficial, no tiene sentido seguir hablando de esto.
+[name="Operador de Rhodes Island"]  Debí haberlo sabido. Sí, sé muy bien cómo nos ven a los Infectados.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  No quise decir eso...
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]  ¿Cuántos operadores necesita? Puede que algunos estén dispuestos a ayudarla, pero yo no soy uno de ellos.
+[name="Operador de Rhodes Island"]  Nosotros también tenemos nuestras misiones. Ayudar a Lungmen a derrotar a Reunion puede ser una de ellas....
+[name="Operador de Rhodes Island"]  Pero nos encargaremos por nuestra cuenta. Asegúrese de recordar nuestros códigos de identificación, señorita. Procure no herir por accidente a sus aliados, aunque seamos Infectados.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]  ...Entiendo.
+[name="Ch'en"]  Si alguien está dispuesto a unirse a la L.G.D. en esta misión, avísame.
+[name="Ch'en"]  ...No tienen que sentirse obligados.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",fadetime=1,block=true,focus=1)]
+[Delay(time=1)]
+[name="Hoshiguma"]  Ese teatro con Swire... ¿no fue para conseguir el apoyo de Rhodes Island?
+[name="Hoshiguma"]  Entonces, ¿por qué después trataste así a su gente?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#6",focus=2)]
+[name="Ch'en"]  Te equivocas, Hoshiguma. No tenía esa intención.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#6",focus=1)]
+[name="Hoshiguma"]  Quizás. Me habría gustado que fueras más sincera. Ahora se te ve mucho más aliviada.
+[name="Hoshiguma"]  La verdad, si yo estuviera en su lugar, también me habría enojado. Agradece que los combatientes de Rhodes Island sean bastante comprensivos.
+[name="Hoshiguma"]  No sé cómo decirlo, pero... aunque fuera una emergencia, ni siquiera yo lo entiendo... ¿Por qué decidiste abandonar al escuadrón de Amiya sin vacilar?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Había demasiadas incógnitas.
+[name="Ch'en"]  El terreno dificultaba el combate para la L.G.D. y no teníamos forma de evaluar la capacidad operativa de Reunion. No puedo exponer a mis escuadrones a riesgos inaceptables.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  No me convence.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Hoshiguma... nuestros planes ya están trazados.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Las órdenes son órdenes y las obedeceré. Pero debería escucharlas directamente de ti, sin tener que esperar a que Swire me las diga.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Hasta que se cumplan las condiciones, los detalles son confidenciales.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Entonces las órdenes vienen del señor Wei.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Puedes hacer las suposiciones que quieras.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Aún no sé cuál es tu objetivo. Muy pocos en Lungmen tienen el poder de hacer que la L.G.D. llegue tan lejos.
+[name="Hoshiguma"]  Es la única posibilidad.
+[name="Hoshiguma"]  Agradezco lo que ha hecho el señor Wei. Pero nunca lo respetaré, y lo que ocurrió hoy es solo una de las razones.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Todo esto es necesario.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Esa es tu excusa.
+[name="Hoshiguma"]  *suspiro*... Ch'en, o le estás dando demasiadas vueltas, o ni tú misma estás convencida.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Tal vez.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Comunícame con Swire.
+[Character(name="char_010_chen_1#1",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  Entendido.
+[Dialog]
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1", name="char_308_swire_1#5", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="Swire"]  ¿Hola?
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Ya salimos de Rhodes Island, Swire. Puedes empezar.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=1)]
+[name="Swire"]  Seguro que disfrutaste gritándome hace rato, ¿eh?
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Puede que no nos llevemos bien, pero tampoco es para tanto. Estaba exagerando.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=1)]
+[name="Swire"]  Pues yo no. Lo disfruté muchísimo.
+[Character(name="char_empty",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]  Pedazo de...
+[Character(name="char_empty",name2="char_010_chen_1#4",focus=1)]
+[name="Swire"]  Bueno, bueno. Es raro que ninguna sepa nada de la misión de la otra.
+[name="Swire"]  Además, acabo de enterarme, pero ¿por qué no quieres que Rhodes Island intervenga? ¿Es tu forma de enmendar las cosas?
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Confío en la capacidad de Rhodes Island, así como en Amiya y en el Dr. {@nickname}.
+[name="Ch'en"]  Pero por eso mismo no quiero que se involucren - solo añadirían otra incógnita.
+[name="Ch'en"]  Sobre todo esa tal Kal'tsit. Te garantizo que no se ajustará a nuestros planes.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=1)]
+[name="Swire"]  No la conozco.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  No necesitas conocerla. Se parece un poco a tu abuelo, solo que sin respirador.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=1)]
+[name="Swire"]  Ah.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Concentrémonos en nuestro trabajo. Antes de eso, todavía tengo que encontrar a alguien.
+[Character(name="char_empty",name2="char_010_chen_1#1",focus=1)]
+[name="Swire"]  Como quieras. Mientras no llegues tarde.
+[Dialog]
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Hoshiguma, nos vamos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  ¿Adónde?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Almacén Muk Wo.
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

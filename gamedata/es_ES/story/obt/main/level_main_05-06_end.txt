@@ -1,0 +1,100 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 5 (después)
+[Background(image="bg_emporium", width=1, height=1,screenadapt="coverall",  fadetime=1)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1,fadetime=1)]
+[Delay(time=1)]
+[name="Hoshiguma"]  Fue más fácil de lo que esperaba. Cada vez me da más curiosidad lo que pasó en Chernobog.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Quizás pasó lo mismo que aquí, solo que las raíces eran más profundas y las llamas ardieron con más fuerza. No bajes la guardia.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Ya sabes que casi nunca cierro los ojos ni para dormir.
+[name="Hoshiguma"]  Uf. Quería terminar el combate cuanto antes, pero aun así acabamos dañando un montón de tiendas.
+[name="Hoshiguma"]  Me temo que al señor Wei le va a tocar pagar los daños otra vez, sobre todo porque nunca le ha caído bien la familia de la señorita.
+[name="Hoshiguma"]  Mira, Swarovski Crystal. Ch'en, ¿no es tu marca favorita?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  No tanto. Los dijes son bonitos, pero los aretes no son tan buenos.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  Escuadrón B1, aquí Ch'en. Bloqueen la entrada oeste y bajen todas las rejas de seguridad.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Casi nunca te veo con aretes.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Bueno, por el trabajo casi siempre llevo uniforme. La poca ropa que tengo está juntando telarañas en el armario.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Señorita Hoshiguma! Este es el plano del nivel L3 del sector este de Paci Plaza, con las modificaciones que hizo Reunion. ¡Revíselo, por favor!
+[Character(name="char_136_hsguma",name2="char_015_lmg",focus=1)]
+[name="Hoshiguma"]  Buen trabajo. Sigan investigando e intenten aprovechar el terreno a nuestro favor.
+[name="Hoshiguma"]  Después buscaremos la mejor ruta para atravesar el bloqueo de Reunion desde aquí. Necesitamos la información que nos consigan.
+[Character(name="char_136_hsguma",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  ¡Enterado!
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Ropa, ¿eh...? Me cuesta imaginarte gastando dinero en esas cosas.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  ¿Y tú no haces lo mismo con tu colección interminable de motos? ¿Qué tiene de malo querer verse bien de vez en cuando, solo por gusto propio?
+[name="Ch'en"]  El trabajo ocupa casi todo mi tiempo, pero no es toda mi vida.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Te creería más si no llegaras temprano todas las mañanas sin falta y no hicieras una cantidad de horas extra que espantaría a cualquiera.
+[name="Hoshiguma"]  Supongo que, para policías como nosotras, la vida no está tan mal.
+[name="Hoshiguma"]  A veces me pregunto si los Infectados como Amiya... ¿Tendrán la oportunidad de salir de compras? ¿De comprarse algún accesorio que les guste o de comer su comida favorita?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Quizás algún día. Pero ese día aún no llega.
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  C3, aquí Ch'en. Despejen el primer piso y avancen despacio. La seguridad es lo primero.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]  Supongo que sí. Este mundo es muy injusto. Ah Faat murió, pero yo sigo viva.
+[name="Hoshiguma"]  Todos murieron y solo yo seguí con vida.
+[name="Hoshiguma"]  Ch'en. ¿De verdad es tan valiosa esa información?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]  Tiene que serlo.
+[Dialog]
+[Character]
+[stopmusic(fadetime=1)]
+[Delay(time=1)]
+[name="Hechicero de Reunion"]  (M-malditos...)
+[name="Hechicero de Reunion"]  (¡Al menos me los llevaré conmigo...!)
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Señorita Ch'en! ¡¡Corra!! ¡Encontramos una gran cantidad de explosivos en el tercer piso!
+[PlayMusic(intro="$escapebattle_intro", key="$escapebattle_loop", volume=0.5, crossfade=1.5, delay=0.5)]
+[name="Agente del L.G.D."]  ¡¡Justo debajo de donde está!!
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]  ¡L.G.D., prepárense para morir!
+[Character(name="char_010_chen_1#1")]
+[name="Ch'en"]  ...!
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]  ¡Ch'en! ¡Por aquí! ¡¡Ponte detrás de mi escudo!!
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Delay(time=1)]
+[Blocker(a=1, fadetime=1, block=true)]
+[Background]
+[Background(image="avg_5_5_fall_back", xScale=1.3, yScale=1.3, fadetime=1)]
+[Image(image="avg_5_5_fall_front",x=-30, y=-30)]
+[BackgroundTween(image="avg_5_5_fall_back", xScaleTo=1.1, yScaleTo=1.1, duration=15)]
+[ImageTween(image="avg_5_5_fall_front", xFrom=-30, yFrom=-30, xTo=-70, yTo=-70,xScaleTo=1.2, yScaleTo=1.2, duration=15)]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Ch'en"]  ¿Eh?
+[name="Ch'en"]  ¿Debajo de mí?
+[name="Hoshiguma"]  ¡¡Ch'en!!
+[Blocker(a=1, fadetime=1, block=true)]
+[Dialog]
+[Background]
+[Image]
+[Blocker(a=0, fadetime=2, block=true)]
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Image]

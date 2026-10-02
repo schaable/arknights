@@ -1,0 +1,204 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 2 (antes)
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, block=true)]
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[Background(image="bg_corridor",fadetime=1,screenadapt="coverall")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",fadetime=1,block=true,focus=2)]
+[Delay(time=1)]
+[name="Ch'en"]   Swire, no tienes autoridad para exigir eso.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Oye.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]   Incluso dejando de lado lo mal que nos llevamos, no creo que seas capaz de asumir esta responsabilidad.
+[name="Ch'en"]   Bien podrías haber anunciado—
+[name="Ch'en"]   'El jefe Wei Yenwu ha ordenado que la actual jefa de operaciones de la L.G.D. deje su cargo y transfiera todas sus responsabilidades a la superintendente Swire.'
+[name="Ch'en"]   ¿Puedes hacer eso? ¿Existe una orden así?
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]   Tch... No me llames así.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]   Si no puedes, limítate a hacer tu trabajo. No te conviene cargar con esa papa caliente, 'señorita S.'
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=1)]
+[name="Swire"]   ¿Cuántas veces tengo que decirte que ese no es mi apellido? Escúchame, Swire es solo mi nombre en clave. Si no, llámame Beatrix Schwire, ¿entendido?
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]   Me importa un carajo cómo te llames. De todos modos, nadie nota la diferencia.
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Oye...
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]   No estoy de humor para jugar contigo. Anda, busca otra cosa que hacer, niña.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=1)]
+[name="Swire"]   Ch'en... de verdad eres una mierda.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]   Y tú puedes metértelo por el culo.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=1)]
+[name="Swire"]   Me voy, Hoshiguma. Te recomiendo que le pongas correa a esa lagarta loca. Si acaba muerta en alguna zanja, no vengas a buscarme.
+[Character(name="char_136_hsguma",name2="char_308_swire_1#5",focus=1)]
+[name="Hoshiguma"]   Eh, perdona, señorita. Vaya carácter que tienen las dos. A pesar de todo lo que dijo, seguimos agradecidas por tu ayuda.
+[Character(name="char_308_swire_1#5")]
+[name="Swire"]   No volveré a ayudarlas. Quiero verla sangrar.
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(fadetime=1,block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1.5,block=true)]
+[PlaySound(key="$d_gen_dooropen")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Delay]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   ¿Qué le pasó en la espalda? Parece una herida reciente.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   Cuando te llevaba a un lugar seguro, un hechicero de Reunion hizo estallar la pared a unos pocos metros detrás de ella.
+[name="Hoshiguma"]   Deberías intentar ser un poco más amable con ella. Seguro que no se van a morir por dejar de tratarse como enemigas mortales de vez en cuando.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   ...Lo sé.
+[Dialog]
+[Character]
+(*toc* *toc*)
+[name="Operador de Rhodes Island"]   ¿Puedo pasar, señorita Ch'en de Lungmen?
+[Character(name="char_136_hsguma")]
+[name="Hoshiguma"]   Adelante. A ella no le molesta. Perdona la espera.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_012",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Operador de Rhodes Island"]   No se preocupe, está bien.
+[name="Operador de Rhodes Island"]   Mucho gusto, señorita Ch'en. Eh... ¿Tiene un momento para hablar con Rhodes Island sobre nuestra misión?
+[name="Operador de Rhodes Island"]   Ya tenemos varios escuadrones reunidos en cubierta. Estamos listos para comenzar la misión con usted cuando sea.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   Entendido. Voy enseguida.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   Lamento haber escuchado su conversación de antes con esa inspectora rubia... Sabemos que la L.G.D. ha sufrido grandes pérdidas. Pero puede confiar en que haremos todo lo que esté en nuestras manos para ayudar.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   ...No es algo de lo que debamos hablar ahora.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1.5,block=true)]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   No te preocupes, Hoshiguma. Tú también deberías saber que Swire está intentando estabilizar la situación.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   Las dos son demasiado impulsivas.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Solo se lo dije sin rodeos. Lungmen ha sufrido muchas bajas, y esa es la 'verdad' que se supone que deben 'conocer'.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   No digas eso. Tú no eres así.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Es por el bien de Lungmen.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   Eso se parece aún menos a ti. Eres una inspectora de alto rango, no una política. Nunca se te han dado bien estos jueguecitos.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Así es, una buena inspectora no debería hacer esto, pero no tengo otra opción.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   ...
+[name="Hoshiguma"]   Lo que pasa es que trabajas demasiado y necesitas unas buenas vacaciones.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Quizás.
+[name="Ch'en"]   Je... Ya lo había pensado.
+[name="Ch'en"]   Hoshiguma, me vendrían bien unas vacaciones muy, muy largas.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   Claro, cuando terminemos con todo esto. No te me mueras por ahí.
+[name="Hoshiguma"]   ¿Ochre o Spring City? ¿O mejor Floria County? En lo que tardamos en llegar a Ochre podríamos tomarnos otras vacaciones.
+[name="Hoshiguma"]   Tal vez podamos volver a Victoria y visitar a algunos antiguos colegas...
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Quiero conocer tu ciudad natal.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   Ni te molestes. No es ni de lejos tan interesante como Lungmen.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Jaja.
+[Dialog]
+[stopmusic]
+[CameraShake(duration=0.3, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   ¿Hmm?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Es una transmisión.
+[name="Ch'en"]   ...Por un canal secreto.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   Entonces te dejo sola.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Te lo agradezco.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[Delay(time=0.3)]
+[Character]
+[Background]
+[Image(image="bg_5_2_call",screenadapt="coverall", fadetime=2)]
+[Blocker(a=0, fadetime=1, block=true)]
+[name="Ch'en"]   Habla, te escucho.
+[Character]
+[name="???"]   Señorita Ch'en... esos Infectados, los de Reunion... están por todas partes...
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   ¿XR02? ¿Dónde estás?
+[Character]
+[name="???"]   Almacén Muk Wo. Me alcanzaron varias flechas y probablemente no aguante mucho más. Esto es una trampa...
+[name="???"]   No venga hasta que se hayan ido. Llevaré la información conmigo. No podrán encontrarla.
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   Agente XR02, resiste. La L.G.D. llegará enseguida. La información que tienes no puede esperar, la necesitamos ahora.
+[Character]
+[name="???"]   No sé, señorita Ch'en. No quiero entorpecer su trabajo.
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   XR02, no tienes permiso para morir. Tienes que sobrevivir.
+[Character]
+[name="???"]   ...No puedo discutir con usted, señorita Ch'en. Por favor, tenga cuidado.
+[name="???"]   Espere, algo se mueve.
+[name="???"]   ¡¡BZZZZZZZZT!!
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   ¿XR02? ¡XR02!
+[name="Ch'en"]   ...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[Image]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]   ¿Hoshiguma?
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=1)]
+[name="Hoshiguma"]   ¿Hm? Aquí estoy.
+[Character(name="char_136_hsguma",name2="char_010_chen_1#1",focus=2)]
+[name="Ch'en"]   Reúne a tu escuadrón. Es hora de irnos.
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[Background(image="bg_uptown_1",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",fadetime=1,focus=2)]
+[Delay(time=1)]
+[name="Operador de Rhodes Island"]   Señorita Ch'en, ¿ya se va?
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   ¿En qué estado están las fuerzas operativas que le quedan a Rhodes Island?
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   No podemos revelar esa información, señorita Ch'en. Nuestra misión es apoyar a la L.G.D. en sus operaciones, pero no estamos directamente bajo su mando.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   No recuerdo haberte preguntado eso.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   P-perdón, hablé de más.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   No importa. Solo quería saber cómo está Rhodes Island y si tienen algún problema de seguridad con el que la L.G.D. pudiera ayudarlos.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   Después de que los derrotáramos tantas veces, los de Reunion prácticamente han renunciado a invadir Rhodes Island. En muchos aspectos, la situación de Lungmen es mucho peor que la nuestra.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   ...
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   Perdón, espero no haber sido grosero...
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   En otras palabras, no necesitan nuestra ayuda.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   Correcto.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   Bueno, por ahora la L.G.D. sí necesita un pequeño favor de ustedes.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   ¿Hmm?
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   Reunion bloqueó la vía principal que lleva a los muelles. Necesitamos su ayuda para abrirnos paso. A la L.G.D. se le acaba el tiempo, así que debemos actuar rápido.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=2)]
+[name="Operador de Rhodes Island"]   Lo haremos, como parte de nuestro contrato, señorita.
+[Character(name="char_010_chen_1#1",name2="avg_npc_012",focus=1)]
+[name="Ch'en"]   Excelente. ¡Síganme!
+[Delay(time=0.3)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

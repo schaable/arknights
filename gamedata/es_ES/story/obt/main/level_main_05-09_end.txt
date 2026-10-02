@@ -1,0 +1,305 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 7 (después)
+[Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall",  fadetime=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+[Character(name="char_1507_Mephisto_1#2")]
+[name="Mephisto"]  *tos* *tos*...
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1#2",focus=1)]
+[name="Ch'en"]  ¡No estás a mi altura!
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1#1",focus=2)]
+[name="Mephisto"]  ¿Derrotaste a todos mis compañeros tú sola? Quizás tenga que reconsiderar tus capacidades, señorita.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1#1",focus=1)]
+[name="Ch'en"]  Ya basta.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  No, todavía falta mucho. Faust, dale un susto.
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]  Entendido.
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  ...!
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  ¡Los que están en la azotea, al suelo!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Ahh!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_5_shot", fadetime=0.3, xScale=1, yScale=1,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Delay(time=0.3)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(fadetime=0,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  El Francotirador de Reunion...
+[name="Ch'en"]  (Me preparé para los ataques a distancia, pero ¿de dónde saca tanta potencia de fuego...?)
+[name="Ch'en"]  Eso no basta para salvarte. Morirás antes de que tu Francotirador logre acertarme un disparo.
+[name="Ch'en"]  ...Espera. ¿La L.G.D. te había arrestado antes?
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]  ...
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Los tuyos le hicieron pasar un infierno. Pero eso no es nada comparado con lo que nos hizo Ursus.
+[name="Mephisto"]  Falló ese disparo a propósito, querida señorita. Te perdonaremos la vida esta vez, así que tómalo como un gesto de bondad.
+[name="Mephisto"]  Las semillas de la rebelión ya están sembradas dentro de la L.G.D.
+[name="Mephisto"]  La corrupción y la negligencia de tu organización le dieron la oportunidad de colaborar con nosotros.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  ...Basura de Reunion, no sabes nada de este mundo.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  ¿Se supone que eso era algo profundo?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  ¿Creías que Reunion había rescatado a Faust?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  En ese entonces había muchos Infectados en la L.G.D.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  Veintiuno.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  ...
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  ¿Pensabas que al menos cuatro de ellos se pondrían del lado de Reunion?
+[name="Ch'en"]  Pero incluso esos cuatro formaban parte de mi plan. Después de que se pusieron en contacto con ustedes, ¿no encerraron a una?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  Muy astuta, señorita. Se escapó.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  ¿Todavía no te das cuenta de la situación en la que estás?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  Claro que me di cuenta. Acabaron con mi escuadrón y solo quedo yo.
+[name="Mephisto"]  Nuestras fuerzas que deambulan afuera son patéticamente débiles y mis compañeros ya casi no tienen voluntad de luchar.
+[name="Mephisto"]  ¿Eso era lo que querías oír?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  Supongo que no eres tan arrogante después de todo.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Entonces... Vengan, mis guardias.
+[name="Mephisto"]  Levántense.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="avg_npc_014",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="Miembro de Reunion"]  Ugh... argh... ¡¡¡Ooaarrrggh!!!
+[Character(name="char_010_chen_1#5")]
+[name="Ch'en"]  ¡¿Qué hiciste?!
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  Los fragmentos de Originium en sus cuerpos... ¿están creciendo?
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  El Originium atravesará sus cuerpos y les dará una nueva forma.
+[name="Mephisto"]  Mira, oficial. Estos son mis guardias, mis guardias inmortales.
+[Character]
+[Dialog]
+[Character(name="avg_npc_015",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="Guardia de Mephisto"]  ¡¡GRAAAAAAGHHH!!
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Recíbanlo todo, mi rebaño, mis compañeros...
+[name="Mephisto"]  Fuuu...
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="avg_5_7_shining", fadetime=0, screenadapt="coverall")]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=0, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.15, yScaleTo=1.15, duration=20, block=false)]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Ch'en"]  ¿Polvo...?
+[name="Mephisto"]  Mis compañeros necesitan que los cure. Me necesitan.
+[name="Ch'en"]  ¿Artes? ¡Todos los escuadrones, alerta! ¡El comandante enemigo está usando algún tipo de polvo para lanzar Artes de gran alcance!
+[name="Mephisto"]  No te preocupes, señorita. Esto no tiene nada que ver contigo, porque tú no eres mi compañera.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(block=true)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="avg_npc_014")]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Miembro de Reunion"]  Ugh... Aagghh—
+[name="MiEMbR d ReUni N"]  ...Unghh... ¡Nnngh!
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="MiReUn? B;R? OE"]  Nghhhaaahghh...
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="???"]  ¡Grrraaaaaaaaaaaghh!
+[name="rEBaño de Mephisto"]  ...¡¡Sangre!! ¡¡Sangre!! ¡¡¡Aaaargh!!! ¡¡¡Aaaaaggh!!!
+[CameraShake(duration=2, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Ahora, silencio.
+[Character(name="avg_npc_014")]
+[name="ReBaño de Mephisto"]  ...
+[Character(name="char_010_chen_1#5",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  Señorita Ch'en, la cosa se está poniendo fea...
+[name="Agente del L.G.D."]  ¡Todos los miembros de Reunion que derrotamos empezaron a transformarse en monstruos enormes al entrar en contacto con ese polvo!
+[name="Agente del L.G.D."]  ¡Volvieron a atacarnos y avanzan lentamente hacia nuestra línea defensiva!
+[Character(name="char_010_chen_1#5",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  ¿Cuántos se transformaron?
+[Character(name="char_010_chen_1#5",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  ¡Todos!
+[Character(name="char_010_chen_1#5",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  ...!
+[Dialog]
+[Character]
+[Delay(time=0.5)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Son mi rebaño y también mis hermanos.
+[name="Mephisto"]  G7, G6.
+[Character(name="avg_npc_014")]
+[Delay(time=0.5)]
+[name="Rebaño de Mephisto"]  ...Urgh.
+[Character(name="char_010_chen_1#5",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  Tú...
+[Character(name="char_010_chen_1#5",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  Nunca caerán, porque yo les quitaré todo su dolor.
+[Character(name="char_010_chen_1#5",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  Solo los estás manipulando como marionetas. ¿Cómo puedes llamarlos tus hermanos?
+[Character(name="char_010_chen_1#5",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  No veo la diferencia. Por un bien mayor, estamos dispuestos a convertirnos en cualquier cosa.
+[Character(name="char_010_chen_1#5",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  Si a esto le llamas un bien mayor... Parece que solo tengo que eliminarte a ti.
+[Character(name="char_010_chen_1#5",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  Sabes lo que quieres y tienes la voluntad de conseguirlo. Me resultas muy interesante, señorita.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Concentren el fuego! ¡Rápido! ¡Apunten al comandante enemigo!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[PlaySound(key="$p_imp_grenade_n", volume=0.6)]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="avg_npc_015")]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[name="Guardia de Mephisto"]  ...
+[name="Guardia de Mephisto"]  Urrrrgghhhh...
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Pero verás que mis guardias no son tan fáciles de derrotar.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  Bloquearon la explosión con sus propios cuerpos... ¡¿y no tienen ni un rasguño?!
+[name="Agente del L.G.D."]  Esa potencia de fuego... ¡Debería haber bastado para atravesar una de las capas de las murallas fortificadas de la ciudad!
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  No te esfuerces en vano.
+[name="Mephisto"]  Las heridas sanarán. La carne se endurecerá. La vida volverá.
+[name="Mephisto"]  Sus armas no pueden herir a mis guardias. Después de todo, los preparé especialmente para ti.
+[name="Mephisto"]  Levántense, mis compañeros. No dejen que nadie interrumpa nuestra conversación.
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Señorita Ch'en, Reunion nos está atacando en oleadas! ¡No podemos derrotarlos con los métodos habituales!
+[name="Agente del L.G.D."]  ¡Maldición! ¡¿Es que no sienten dolor?!
+[name="Agente del L.G.D."]  ¡Los otros escuadrones están en la misma situación! Los miembros de Reunion que estaban afuera también empezaron a moverse. ¡No dejan de avanzar hacia el cuartel general e intentan atacar nuestras instalaciones de seguridad!
+[Character(name="char_010_chen_1#5",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  ¡Primero encárguense de los enemigos que tienen cerca!
+[Character(name="char_015_lmg")]
+[name="Agente del L.G.D."]  ¡Fuera de mi camino!
+[playsound(key="$p_imp_blunt_h")]
+[CameraShake(duration=1, xstrength=12, ystrength=18, vibrato=30, randomness=30, fadeout=false)]
+[Delay(time=1)]
+[Character(name="char_010_chen_1#5",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  ¡Señorita Ch'en, estas cosas no sienten nada! ¡Rodearon por completo el cuartel general de la L.G.D.!
+[name="Agente del L.G.D."]  ¡Nos están obligando a pelear cuerpo a cuerpo! ¡No vamos a poder apoyarla!
+[Character(name="char_010_chen_1#2",name2="char_015_lmg",focus=1)]
+[name="Ch'en"]  Cuídense.
+[Character(name="char_010_chen_1#2",name2="char_015_lmg",focus=2)]
+[name="Agente del L.G.D."]  ¡Enterado!
+[Character(name="char_010_chen_1#2",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  Imponente, ¿verdad? Después de tantas batallas, parece que sus mentes se deshicieron, pero sus cuerpos siguen sanos y fuertes.
+[name="Mephisto"]  Parece que la fuerza bruta compensa un poco las malas decisiones.
+[name="Mephisto"]  Al menos tendremos tiempo de sobra para hablar con calma de nuestros problemas.
+[name="Mephisto"]  Me gustaría tener una conversación provechosa contigo, señorita, sobre cosas que no tienen que ver con esta batalla.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  No hace falta.
+[name="Ch'en"]  Te voy a matar aquí mismo.
+[Character]
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_010_chen_1#4",block=true)]
+[Delay(time=0.3)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  ¡Eres rápida!
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]  ...
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Pero no lo suficiente.
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Character(name="char_010_chen_1#4")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[name="Ch'en"]  !
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]  ¿Desvió mi disparo con su espada?
+[Character(name="avg_npc_015")]
+[name="Guardia de Mephisto"]  ...
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  Ese chico de pelo negro sabe anticipar mis movimientos.
+[name="Ch'en"]  Tsk... Parece que su plan es mantenerme bajo fuego de Francotirador, anticipar mis movimientos y cerrarme el paso.
+[Character(name="char_1507_Mephisto_1")]
+[name="Mephisto"]  Lo siento, señorita. Puedo prever casi todos tus movimientos. Solo necesito estorbarte un poco.
+[name="Mephisto"]  Así nunca podrás acercarte. Entonces, ¿qué prefieres? ¿Flechas afiladas, virotes explosivos o púas pesadas?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  ...
+[name="Ch'en"]  Parece que viniste bien preparado.
+[name="Ch'en"]  Pero cuando un maestro de ajedrez termina sus preparativos, da por hecho que su rival jugará con las piezas del otro color.
+[Character(name="char_1507_Mephisto_1#2")]
+[name="Mephisto"]  (Espera, ¿por qué mi polvo sigue pegado a su cuerpo...?)
+[name="Mephisto"]  (Así que de eso se trata... Ya veo.)
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1#2",focus=1)]
+[name="Ch'en"]  No se me da la teoría como a ti, pero vengo preparada para todo.
+[name="Ch'en"]  Tu tablero no puede detenerme, mocoso. No soy una pieza de ajedrez. Soy la espada de Lungmen.
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
+[name="Mephisto"]  Mmm...
+[name="Mephisto"]  Qué delgada es la línea entre la valentía y la estupidez.
+[name="Mephisto"]  ¿O tienes algún as bajo la manga? Si mal no recuerdo, nunca te he visto usar esa otra espada en combate.
+[name="Mephisto"]  No la llevas solo de adorno, ¿verdad?
+[Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
+[name="Ch'en"]  Ja.
+[name="Ch'en"]  Esta espada no está hecha para desenvainarla contra alguien como tú.
+[name="Ch'en"]  No eres digno de ella. Ni de lejos.
+[name="Ch'en"]  Pero tienes que pagar por tus pecados, por todo lo que les hiciste a los inocentes de Lungmen y Chernobog.
+[Character(name="char_1508_Faust_1#2")]
+[name="Faust"]  ...
+[Character(name="char_010_chen_1#4")]
+[name="Ch'en"]  Aquí y ahora.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0,  fadetime=1, block=true)]
+[name="Wei Yenwu"]  Ahora es tuya.
+[name="Ch'en"]  No la necesito.
+[name="Wei Yenwu"]  Bueno, piensa que te la estoy prestando.
+[name="Ch'en"]  ¿No tienes miedo?
+[name="Wei Yenwu"]  ¿Miedo de qué? ¿De que te vuelvas contra mí?
+[name="Ch'en"]  Sí.
+[name="Wei Yenwu"]  No, no tengo miedo.
+[name="Ch'en"]  ¿Por qué?
+[name="Wei Yenwu"]  Porque no le tengo miedo a la muerte.
+[name="Ch'en"]  ...
+[name="Wei Yenwu"]  Esta no es un arma común. Poco a poco la irás entendiendo.
+[name="Wei Yenwu"]  No desperdicies su poder en cosas insignificantes. Una espada capaz de matar dragones solo debe desenvainarse contra un enemigo digno.
+[name="Wei Yenwu"]  Tú decides contra quién desenvainar esta espada.
+[Character(name="char_010_chen_1#5",fadetime=1,block=true)]
+[name="Ch'en"]  (...Esta espada sigue dormida.)
+[name="Ch'en"]  (Incluso en esta situación, sigues negándote a salir de tu vaina...)
+[Character(name="char_010_chen_1#2")]
+[name="Ch'en"]  (¡Pero ahora, Chi Xiao, tienes que beber su sangre!)
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

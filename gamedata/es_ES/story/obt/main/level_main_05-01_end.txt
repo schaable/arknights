@@ -1,0 +1,52 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Etapa 1 (después)
+[name=""]   7:55 a. m. \ Nublado
+[name=""]   Habitación 7 de Rhodes Island, Lok Tai Chau, puerto de Lungmen
+[Dialog]
+[Character]
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[Background(image="bg_corridor",fadetime=1,screenadapt="coverall")]
+[Delay(time=1)]
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#1",fadetime=1,focus=1)]
+[Delay(time=1)]
+[name="Swire"]   Trabajé con Rhodes Island para acabar con las fuerzas de Reunion que les bloqueaban el paso. Tu escuadrón también está bien, dentro de todo. Jeje~ Por fin puedes volver a Lungmen.
+[name="Swire"]   Justo cuando creías que todo se había calmado, una explosión te dio de lleno y te dejó inconsciente.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]   ...¿En serio?
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=1)]
+[name="Swire"]   ¿Preguntas si de verdad dejaste que te atacaran por sorpresa, o si de verdad te alcanzó una explosión y solo quedaste inconsciente?
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]   Olvídalo, deja de tomarme el pelo. ¿Cómo está la situación en Lungmen ahora?
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]   Es un desastre. Si quieres, lee el informe tú misma.
+[name="Swire"]   Sin importar lo que haya pasado antes, lo cierto es que nuestro contraataque se ha retrasado mucho por tu culpa.
+[name="Swire"]   Ahora mismo, la División de Operaciones Especiales debería estar reuniendo al resto de tu escuadrón para unirse después al resto de la L.G.D., junto con Rhodes Island.
+[Character(name="char_136_hsguma",name2="char_308_swire_1#5",focus=1)]
+[name="Hoshiguma"]   Así que nos abriremos paso combatiendo hasta el corazón de la ciudad. Guerra de maniobras, ¿eh? Suena prometedor.
+[name="Hoshiguma"]   Pero ¿qué se busca con esa estrategia?
+[Character(name="char_136_hsguma",name2="char_308_swire_1#5",focus=2)]
+[name="Swire"]   Destruir todos los puntos de concentración de Reunion. Aprovecharemos al máximo la ventaja que nos dieron.
+[Character(name="char_136_hsguma",name2="char_308_swire_1#5",focus=1)]
+[name="Hoshiguma"]   En otras palabras, un asedio.
+[Character(name="char_136_hsguma",name2="char_308_swire_1#5",focus=2)]
+[name="Swire"]   Así es. Tenemos que aprovechar esta oportunidad mientras Reunion todavía intenta consolidar sus posiciones.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]   Pero, al hacerlo, obligaremos a sus fuerzas restantes a reagruparse más rápido.
+[name="Ch'en"]   No puedes garantizar que lograrás contenerlas hasta que la L.G.D. se reagrupe, y mucho menos que acabarás con todas las fuerzas restantes de Reunion.
+[name="Ch'en"]   No necesitamos ninguna de tus 'ventajas', ni necesito que me des lecciones de estrategia.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]   No te corresponde decidir eso, Ch'en. Aunque seas la jefa de la División de Operaciones Especiales y tengas cierta autonomía en tiempos de guerra, sigues teniendo que rendir cuentas.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
+[name="Ch'en"]   Por tu tono, parece que quieres desafiarme. Acepto, pero ahora no.
+[name="Ch'en"]   Cada una tiene sus órdenes. Lo único que importa es que cumplamos con nuestro trabajo.
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=1)]
+[name="Swire"]   Ch'en, la L.G.D. ha caído y Reunion ha tomado su cuartel general. Esto es culpa tuya.
+[name="Swire"]   ¿Por qué no estabas aquí cuando Lungmen te necesitaba?
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=2)]
+[name="Ch'en"]   ...
+[Character(name="char_308_swire_1#5",name2="char_010_chen_1#5",focus=1)]
+[name="Swire"]   ¿Eso también fue una orden?
+[name="Swire"]   Si no hubieras descuidado tus deberes, Lungmen no habría caído.
+[name="Swire"]   Me avergüenzas, Ch'en. Deberías renunciar de inmediato y dejarme al mando de la División de Operaciones Especiales.
+[Dialog]
+[Delay(time=0.5)]
+[Blocker(a=1,r=0, g=0, b=0, fadetime=2, block=true)]
