@@ -1489,6 +1489,14 @@
     "obt/main/level_main_05-10_end::s102": {
       "source": "Run!",
       "translation": "¡Corre!"
+    },
+    "obt/main/level_main_05-04_end::s43": {
+      "source": "I cannot tolerate any of you. I am too selfish, but I can't live like this anymore.",
+      "translation": "No soporto a ninguna de ustedes. Soy demasiado egoísta, pero ya no puedo seguir viviendo así."
+    },
+    "obt/main/level_main_05-04_end::s44": {
+      "source": "One day, all of you will understand. If you hate me, so be it. Because I hate you too. And that's how it should be.",
+      "translation": "Algún día lo entenderán. Si me odian, que así sea. Porque yo también las odio. Y así es como debe ser."
     }
   }
 }

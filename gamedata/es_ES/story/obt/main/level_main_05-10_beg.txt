@@ -525,7 +525,7 @@ Unos minutos antes...
 [name=""]   Indicativo: 'Bad Guy', 40 m sobre el cuartel general de la L.G.D., zona alta de Lungmen
 [Delay(time=1)]
 [Dialog]
-[Decision(options="¡Bueno, llegó la hora de tu debut!;...Adelante.;Mira cómo quedó. Necesita tu ayuda, Amiya.", values="1;2;3")]
+[Decision(options="¡Bueno, llegó la hora de tu debut!;...Adelante.;Mira lo mal que está Ch'en. Necesita tu ayuda, Amiya.", values="1;2;3")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1#1",name2="char_017_homura_3#1",focus=2)]
 [name="Blaze"]  ¿Por qué estás tan entusiasmado? Te dejó morir en esa ciudad en ruinas. ¿No sería justo dejarla ahí, sin poder hacer nada?

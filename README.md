@@ -85,7 +85,7 @@ untouched. It fails loudly rather than writing a half-translated file.
 Translated so far: Main Story Prologue and Chapters 1–5.
 Chapter 5 includes all 17 story scenes through the 5-11 interlude
 (5-5 and 5-8 have no story scenes).
-5-10, before and after battle, and the 5-11 interlude are awaiting review.
+Chapter 5 has been reviewed, including the 5-11 interlude.
 
 ## Running locally
 

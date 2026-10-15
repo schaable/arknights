@@ -63,7 +63,7 @@
 [name="Ch'en"]  ¿Y entonces?
 [Character(name="char_010_chen_1#1",name2="char_136_hsguma",focus=2)]
 [name="Hoshiguma"]  No hay nada. Ah Faat llegó aquí después de que lo emboscaran. Los de Reunion ya estaban apostados en los alrededores.
-[name="Hoshiguma"]  Ch'en, jala la puerta del lado derecho. Yo me encargo del izquierdo.
+[name="Hoshiguma"]  Ch'en, tira del lado derecho de la puerta. Yo me encargo del izquierdo.
 [Dialog]
 [CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
 [Delay(time=1)]

@@ -63,7 +63,7 @@
 [name="Mephisto"]  ...
 [Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]
 [name="Ch'en"]  ¿Pensabas que al menos cuatro de ellos se pondrían del lado de Reunion?
-[name="Ch'en"]  Pero incluso esos cuatro formaban parte de mi plan. Después de que se pusieron en contacto con ustedes, ¿no encerraron a una?
+[name="Ch'en"]  Pero a esos cuatro los infiltré yo. Después de que se pusieron en contacto con ustedes, ¿no encerraron a una de mis agentes?
 [Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=2)]
 [name="Mephisto"]  Muy astuta, señorita. Se escapó.
 [Character(name="char_010_chen_1#4",name2="char_1507_Mephisto_1",focus=1)]

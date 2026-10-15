@@ -63,7 +63,7 @@
 [Blocker(a=0, fadetime=1.5, block=true)]
 [Character(name="char_308_swire_1#5",fadetime=1,block=true)]
 [Delay(time=1)]
-[name="???"]   ¿Ya volviste a la realidad? Por favor, estás hecha un desastre.
+[name="???"]   ¿Ya volviste a la realidad? ¡Santo cielo, estás hecha un desastre!
 [Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=2)]
 [name="Ch'en"]   ¿Por qué estás aquí? ¿Dónde está mi escuadrón?
 [Character(name="char_308_swire_1#5",name2="char_010_chen_1#4",focus=1)]
@@ -100,7 +100,7 @@
 [name="Hoshiguma"]   En una de las habitaciones de Rhodes Island.
 [Character(name="char_308_swire_1#5")]
 [name="Swire"]   Oficial Ch'en, tú y tu equipo se replegaron hacia Lungmen hace unos 45 minutos.
-[name="Swire"]   Puede que creyeras que habías ocultado bien tu rastro, pero Reunion no lo vio así.
+[name="Swire"]   Quizás creías que habías borrado bien tu rastro, pero Reunion logró seguirte la pista.
 [Dialog]
 [Delay(time=0.5)]
 [Blocker(a=1,r=0, g=0, b=0, fadetime=2, block=true)]

@@ -118,8 +118,8 @@ No mires a los adultos a los ojos sin permiso.
 [Blocker(a=0, fadetime=1, block=true)]
 No esperes cariño de mí. Ni un poco.
 Perdón. Lo siento, pero no te soporto. Con solo verte me dan ganas de arrancarme la piel de los brazos.
-No soporto a ninguno de ustedes. Soy demasiado egoísta, pero ya no puedo vivir así.
-Algún día todos ustedes lo entenderán. Si me odian, que así sea. Porque yo también los odio. Y así es como debe ser.
+No soporto a ninguna de ustedes. Soy demasiado egoísta, pero ya no puedo seguir viviendo así.
+Algún día lo entenderán. Si me odian, que así sea. Porque yo también las odio. Y así es como debe ser.
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2,block=true)]
 [Delay(time=0.3)]

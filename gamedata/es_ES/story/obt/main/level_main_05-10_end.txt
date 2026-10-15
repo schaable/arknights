@@ -36,7 +36,7 @@
 [Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=1)]
 [name="Amiya"]  ¡Blaze!
 [Character(name="char_002_amiya_1#7",name2="char_017_homura_3#1",focus=2)]
-[name="Blaze"]  Hmph, tranquila. ¡Estos ataques no duelen más que unos cohetes!
+[name="Blaze"]  Hmph, tranquila. ¡Estos ataques no duelen más que unos petardos!
 [Character(name="char_1508_Faust_1#1")]
 [name="Faust"]  Bloqueaste mis disparos antes de que llegaran.
 [name="Faust"]  ¿Sabes de dónde vienen?
@@ -85,7 +85,7 @@
 [Character(name="char_002_amiya_1#7")]
 [name="Amiya"]  ¡Avancen con cuidado! ¡Puede que nos hayan preparado emboscadas en los pisos inferiores!
 [Character(name="char_015_lmg")]
-[name="Agente del L.G.D."]  ¿Ellos también causaron lo extraño que pasaba en el edificio?
+[name="Agente del L.G.D."]  ¿Entonces todo lo raro que pasaba en el edificio también era cosa de ellos?
 [Character]
 [Character(name="char_017_homura_3#1")]
 [name="Blaze"]  Ingenioso. Usaron la refracción para parecer invisibles.
