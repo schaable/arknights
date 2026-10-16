@@ -1,0 +1,196 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Operational Intelligence: Entrenamiento de francotiradores
+[Dialog]
+[Delay(time=1)]
+[name="Liskarm"]      A las tres, a 20 metros, blanco A: Hechicero.
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=1)]
+[name="Liskarm"]     A las ocho, a 30 metros, comandante detrás de las unidades pesadas.
+[name="Liskarm"]     Francotirador enemigo a las diez. Agáchate.
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]   
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]      
+[Delay(time=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=0.4)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=0, fadetime=2, block=true)]
+05:32 P.M. \ Despejado
+Puerto de Lungmen - Nave de guerra de Rhodes Island - Campo de tiro de la cubierta inferior
+[Dialog]
+[Character(name="char_107_liskam_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Liskarm"]    Apenas vamos por la quinta ronda.
+[name="Liskarm"]    Y ya tardas más en disparar a los blancos, sin siquiera acertar en puntos vitales.
+[name="Liskarm"]    En un combate real, el enemigo habría tenido tiempo de devolverte el fuego.
+[name="Liskarm"]    ¿Qué pasa, Jessica? ¿Este ejercicio es demasiado difícil para ti?
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]    Ah, eh, uf... ¡N-no!
+[name="Jessica"]    ¡Sigamos!
+[Character(name="char_107_liskam_1",name2="char_259_Jessica_1",focus=1)]
+[name="Liskarm"]    Tienes la actitud correcta, pero te falta fuerza para acompañarla.
+[name="Liskarm"]    Descansemos diez minutos. Recupera el aliento.
+[name="Liskarm"]    Quiero repasar contigo los fundamentos del manejo de pistolas una vez más.
+[name="Liskarm"]    No puedes descuidar lo básico. Ni por un segundo.
+[Character(name="char_107_liskam_1",name2="char_259_Jessica_1",focus=2)]
+[name="Jessica"]   ¡Entendido!
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]    Primero, el equilibrio y la postura. Sin importar por qué entorno te muevas, no debes descuidarlos.
+[name="Liskarm"]    Mantén el torso bajo y protege el abdomen.
+[name="Liskarm"]    Luego, mantén estables las Artes de Originium con las que controlas el arma.
+[name="Liskarm"]    Siente la conexión entre tu brazo y el interior del arma. Conecta con la munición que entra en la recámara, actívala y dispárala.
+[name="Liskarm"]    Es más fácil decirlo que hacerlo. Tienes que aplicar tus Artes de Originium con mucha precisión para activarla.
+[name="Liskarm"]    Si pierdes el control de tus Artes, el arma podría fallar al disparar. Incluso podrías dañarla.
+[name="Liskarm"]    Por último, alinea el arma con el blanco, apunta, dispara y muévete.
+[name="Liskarm"]    Estos son los principios más básicos de la teoría de armas de fuego de Blacksteel. Deberías conocerlos muy bien, Jessica.
+[name="Liskarm"]    Ahora, ¿sabes cuál fue tu mayor error al disparar hace un momento?
+[Character(name="char_107_liskam_1",name2="char_259_Jessica_1",focus=2)]
+[name="Jessica"]   Mmm... No he entrenado lo suficiente, así que no desplazaba mi centro de gravedad lo bastante rápido, y tampoco controlé bien mis Artes de Originium...
+[name="Jessica"]   Y... dudé demasiado antes de disparar, me sobresaltaba y fallaba los blancos.
+[CameraShake(duration=0.3, xstrength=5, ystrength=8, vibrato=30, randomness=30, block=true)]
+[name="Jessica"]   ¡Aaaahh! ¡Ahora que lo digo en voz alta, lo hice todo mal!
+[Character(name="char_107_liskam_1",name2="char_259_Jessica_1",focus=1)]
+[name="Liskarm"]    Tienes razón en parte.
+[name="Liskarm"]    Jessica, intentas hacerlo todo a la vez. Quieres ser rápida y acertar en todos los blancos.
+[name="Liskarm"]    Te preocupas por cada detalle. Terminas asustándote hasta de tu propia cola.
+[name="Liskarm"]    Y como estás tan nerviosa, pierdes el control de tus Artes de Originium. Por eso, cuando empiezas a apuntar al enemigo, todavía tienes que comprobar si controlas bien las Artes dentro del arma.
+[name="Liskarm"]    Por eso te cuesta tanto disparar.
+[Character(name="char_107_liskam_1",name2="char_259_Jessica_1",focus=2)]
+[name="Jessica"]   ¡¿E-eso es lo que pasa...?!
+[Character(name="char_107_liskam_1")]
+[name="Liskarm"]    Lo primero que debes hacer es despejar tu mente de todas esas preocupaciones y concentrarte solo en las yemas de los dedos.
+[name="Liskarm"]    Confía en tu compañera. La pistola que tienes en la mano no te traicionará.
+[name="Liskarm"]    Según cómo la trates, así te responderá.
+[name="Liskarm"]    No importa la rapidez ni la intensidad de tus Artes. Concéntrate en mantener un control preciso y estable.
+[name="Liskarm"]    Vamos, en marcha. Quiero verte pasar frente a esas tres ventanas y acertar en tantos blancos como puedas, lo más rápido posible.
+[name="Liskarm"]    ¡Haz cinco rondas! ¡Concéntrate en tus Artes de Originium!
+[Character(name="char_259_Jessica_1")]
+[name="Jessica"]    ¡Entendido!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[PlaySound(key="$pistol", volume=0.9)]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Delay(time=1)]
+[Dialog]
+[PlaySound(key="$pistol", volume=0.9)]
+[CameraShake(duration=0.1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$pistol", volume=0.9)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_106_franka_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Franka"]      Lo básico, lo básico, lo básico. Ya van tres horas...
+[name="Franka"]      Sáquenme de esta sala de entrenamiento que apesta a sudor.
+[name="Franka"]      Solo es una misión de reconocimiento en unas ruinas. Algo sencillo que Jessica puede hacer sin problemas.
+[name="Franka"]      ¿Crees que se va a encontrar con un gran villano dando un paseo?
+[name="Franka"]      Yo creo que lo que más necesita trabajar es la confianza en sí misma.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]     Según los archivos de Blacksteel, todos los resultados de Jessica están justo en el promedio.
+[name="Liskarm"]     Y esta misión especial con Rhodes Island también la tiene bajo presión.
+[name="Liskarm"]     Irá con Frostleaf y Meteorite, y ellas la cuidarán. Pero asegurarnos de que esté preparada no le hará daño.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]      Sí le hará daño cuando se desmaye de agotamiento en esas ruinas.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]     ......
+[name="Liskarm"]     Ella me buscó para mejorar su capacidad de combate. Le preocupa ser una carga.
+[name="Liskarm"]     En cuanto termine la operación de limpieza en Lungmen, volveremos a la sede central de Blacksteel. No tenemos mucho tiempo para entrenar a Jessica.
+[name="Liskarm"]     Intento compartir con ella toda la experiencia que pueda, sobre todo con armas de fuego.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]     Cuidas tan bien a tu pequeña. Qué ternura.
+[name="Franka"]     Quién diría que te acordabas de que tenemos que volver a Blacksteel.
+[name="Franka"]     Informaremos sobre la situación en Lungmen, pero también tenemos que pasar las pruebas habituales.
+[name="Franka"]     ¿No te estás preparando? ¿No te preocupan tus resultados?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]     Ya preparé todo lo que tenemos que entregar a la empresa. No he estado perdiendo el tiempo todas las noches en Rhodes Island
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]     Jeje, ¿y cómo sabes que solo he estado perdiendo el tiempo?
+[name="Franka"]     Sí que estás pendiente de tus compañeras, Liskarm.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]     Y en cuanto a mis resultados, si bajan demasiado y me trasladan, al menos no tendré que soportarte—
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]    Por lo que has estado haciendo con Jessica, ¿la idea es ponerla a entrenar sin parar para que gane experiencia?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]     ......
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]    Solo la veo repetir lo mismo una y otra y otra vez.
+[name="Franka"]    Si solo vas a dar una clase de armas de fuego, ¿por qué no buscas a esos ángeles brillantes?
+[name="Franka"]    Ellos son los verdaderos expertos en armas de fuego, ¿no? ¡Pum! ¡Pam! Seguro que pondrían a Jessica en forma. En todo caso, sería mucho mejor que aprender de ti.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]     Si les preguntas, solo te dirán cosas como '¿Qué hay que estudiar? No hay nada más fácil' o '¿Por qué no te dejas llevar por la intuición?'.
+[name="Liskarm"]     Para esos ángeles que van por ahí cargados de armas pesadas, una pistola como esta es poco más que un juguete.
+[name="Liskarm"]     Las técnicas de tiro de Laterano son increíblemente avanzadas y complejas. Jessica no podría aprender nada de ellos.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]       Je. Da un poco de envidia, ¿no?
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]       Controlar las Artes de Originium con precisión en todo tipo de situaciones no es nada fácil, y no se consigue con un entrenamiento convencional.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]     ¿Por qué los jefes de Blacksteel quieren que su gente use armas tan complicadas?
+[name="Franka"]     Es un arma a distancia más difícil de usar que una ballesta, con munición más cara y un mantenimiento más delicado.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]    La pistola es una elección bastante lógica para Blacksteel.
+[name="Liskarm"]    Las armas estandarizadas facilitan la gestión de la empresa, reducen la rotación de personal y permiten descartar a quienes no estén a la altura.
+[name="Liskarm"]    Además, ofrecen una cadencia de tiro constante y son más fáciles de ocultar que otras armas a distancia.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]      Bueno, bueno. Ya entendí. 
+[name="Franka"]     Tú sigue con lo tuyo. Yo me voy a casa, si no te molesta.
+[name="Franka"]     A Jessica la apoyo en espíritu. Necesito descansar un poco más antes de que volvamos a la sede central.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]        No te llamé aquí porque sí. Jessica también necesita tu ayuda.
+[name="Liskarm"]    No puedo enseñarle a la vez a asaltar la primera línea y a maniobrar a gran velocidad.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]      Enséñale a llevar un escudo enorme y a moverse mientras le da descargas a la gente.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]      Habla en serio.
+[name="Liskarm"]      Tu experiencia le sirve mucho más a Jessica que mis consejos.
+[name="Liskarm"]      Moverte de un lado a otro en el frente, atravesar las defensas enemigas, mantener las Artes de Originium que alimentan las armas.
+[name="Liskarm"]      Nadie en Blacksteel controla las Artes de Originium como tú.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+[name="Franka"]       Ya, ya, basta. ¿Cómo puedes decir esas cosas con tanta facilidad?
+[name="Franka"]       Me vas a hacer sonrojar.
+[name="Franka"]      En fin, no es que no quiera enseñarle a Jessica. Es que no tengo idea de cómo ser maestra.
+[name="Franka"]      ¿Y si no entiende lo que hago? ¿Y si no puede seguirme el ritmo? No sé si puedo ir más despacio.
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+[name="Liskarm"]        No hay problema. Eso es lo que Jessica querría.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=0.4)]
+[Background]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="Franka"]      ...¿De verdad revisaste los resultados de Jessica que acabas de darme?
+[name="Liskarm"]        No, ¿pasa algo? ¿Qué tan malos son?
+[name="Liskarm"]        Se ha estado esforzando tanto...
+[name="Franka"]       Míralos bien, idiota.
+[name="Franka"]       No es la mejor de Blacksteel, pero, si comparas los resultados, no está muy por debajo de nosotras.
+[name="Franka"]       Sabemos que a Jessica le falta confianza, pero estos no son los resultados de una niña tonta.
+[name="Franka"]       Ha entrenado mucho y con esfuerzo, y está decidida a no decepcionarnos.
+[name="Liskarm"]      Yo... no tenía idea.
+[name="Franka"]    Solo asegúrate de no enseñarle a Jessica a ser una idiota como tú.
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

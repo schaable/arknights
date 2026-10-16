@@ -1,0 +1,419 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Operational Intelligence: Destructor
+[Dialog]
+[Delay(time=1)]
+[Character]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="Hechicero de Reunion"]     W, tenemos problemas.
+[name="W"]   Uuuh... Tiene que ser algo divertido para que me contactes por este canal. ¿Qué pasa?
+[name="Hechicero de Reunion"]     No es tan divertido, W. Mientras te ocupabas de ese mercenario Sarkaz, uno de nuestros equipos desertó.
+[name="Hechicero de Reunion"]     Parecían un equipo de logística encargado de limpiar el campo de batalla, así que fuimos tras ellos de inmediato.
+[name="Hechicero de Reunion"]     Se dispersaron en cuanto nos acercamos y se dirigieron a los límites de la ciudad.
+[name="W"]   Parece que alguien se ganó un premio.
+[name="Hechicero de Reunion"]     Hay más... También perdimos el rastro del escuadrón que enviamos a perseguirlos. No hemos podido contactarlo.
+[name="Hechicero de Reunion"]     Pensé que quizá sabrías qué pasó, ya que ahora estás al mando de los mercenarios.
+[name="Hechicero de Reunion"]     ¿Cómo puede desaparecer un escuadrón de repente?
+[Dialog]
+[Background(image="bg_cher_3", width=1, height=1, fadetime=1, screenadapt="coverall",block=true)]
+01:13 P.M. \ Despejado
+Chernobog - Afueras - Terreno abierto
+[Dialog]
+[Character(name="char_1504_cqbw",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="W"]   ¿Y se supone que yo tengo que entenderlo?
+[Character]
+[name="Hechicero de Reunion"]     Eso es lo que pasó. Los otros equipos no han encontrado señales de emboscadas ni trampas enemigas. Solo sabemos que se enfrentaban a un Sarkaz.
+[Character(name="char_1504_cqbw")]
+[name="W"]   Claro que son Sarkaz. No tengo mercenarios de otro tipo. Pero bueno, la historia está interesante. Sigue.
+[Character]
+[name="Hechicero de Reunion"]     En el primer enfrentamiento logramos contener al objetivo. Por precaución, mantuvimos a nuestros escuadrones a distancia. El enemigo no parecía especialmente fuerte.
+[name="Hechicero de Reunion"]     Entonces, de repente, se cortaron todas las comunicaciones.
+[Character(name="char_1504_cqbw")]
+[name="W"]   ...Sí, ustedes muestran sus cartas demasiado pronto. Un verdadero depredador sabe cuándo enseñar los colmillos.
+[Character]
+[name="Hechicero de Reunion"]     ¿Qué deberíamos hacer?
+[Character(name="char_1504_cqbw")]
+[name="W"]   Bueno, ¿qué tienen de especial esos Sarkaz?
+[Character]
+[name="Hechicero de Reunion"]    ...No estoy seguro. Perdimos contacto con los testigos. Por lo que pudimos ver desde lejos, solo sabemos que tienen a un combatiente cuerpo a cuerpo al que le gusta lanzarse de lleno a la pelea.
+[Character(name="char_1504_cqbw")]
+[name="W"]   Entonces eviten enfrentarse directamente con ellos. Retrasen a ese tipo, llegaré en un rato.
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[name="Maestro de la espada de Reunion"]     ¿Pasa algo?
+[Character(name="char_1504_cqbw#3",name2="char_1002_nsabr_2",focus=1)]
+[name="W"]   Nada. Solo un escuadroncito de novatos que sirvió de carnada.
+[Character(name="char_1504_cqbw#3",name2="char_1002_nsabr_2",focus=2)]
+[name="Maestro de la espada de Reunion"]     ¿Deberíamos ir a apoyarlos?
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=1)]
+[name="W"]   Vamos, todos tienen un trabajo que hacer. ¿Por qué no dejamos que cada uno se ocupe de lo suyo?
+[name="W"]   Sí... No le demos tantas vueltas. Me importan tanto esos Sarkaz raritos que trajo mi pobre predecesor.
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=2)]
+[name="Maestro de la espada de Reunion"]     Entendido.
+[Character(name="char_1002_nsabr_2")]
+[name="Maestro de la espada de Reunion"]     Avisen a todos los escuadrones: prepárense para el combate y avancen hacia las afueras de la ciudad.
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=0.4)]
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=0, fadetime=3, block=true)]
+[character]
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Delay(time=0.5)]
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]     ¡Agh, maldita sea! ¡Este bastardo se mueve aún más rápido! ¡¿Todavía está ocultando su verdadero poder?!
+[character]
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="char_131_flameb_5#7")]
+[name="???"]   ...Patético. ¿Esto es lo mejor que tiene para ofrecer su Movimiento Reunion?
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]     ¡Este engreído...! Se está burlando de nosotros——
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Delay(time=0.4)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1504_cqbw#3",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="W"]   Je...
+[name="W"]   Sabía que me encontraría con viejos amigos aquí, pero nunca pensé que te vería a ti.
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]     W, nosotros——
+[Character(name="char_1504_cqbw",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   Váyanse a casa antes de que los maten. No me miren así, como si quisieran vengarse. Ni siquiera está usando una fracción de su poder. Pero bueno, si tantas ganas tienen de morir, ¿quién soy yo para impedírselo?
+[Character(name="char_1504_cqbw",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]     ...Retírense.
+[Dialog]
+[character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_131_flameb_5#4",fadetime=2,block=true)]
+[Delay(time=3)]
+[Character(name="char_1504_cqbw#4")]
+[name="W"]   Cuánto tiempo, maestro de la espada errante.
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Tú——
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Ahora me llaman W.
+[name="W"]   ¿Y a ti?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Flamebringer. Seguro sabes lo que significa intercambiar nombres conmigo.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Uuuh, qué miedo. ¿También intercambiaste tarjetas de presentación con todos esos tipos que hiciste pedazos?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Los encargos y el combate no son lo mismo.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Un Sarkaz como tú, que pasó por una batalla así y de repente desaparece sin más... Haces que una se preocupe.
+[name="W"]   ¿Y un mercenario que huye solo porque tiene un nuevo jefe? ¿No es un poco caprichoso?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Eso carece de importancia.
+[name="Flamebringer"]     Aunque nunca imaginé que tus subordinados fueran tan indignos, que ni siquiera merecieran oír mi nombre.
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Entonces supongo que debería sentirme honrada... Aunque esos hombres llevaban poco tiempo bajo mi mando. Ah, ¿me estás invitando a matarte?
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     No, no me interesa tu miserable estilo de combate. Depende demasiado de fuerzas externas.
+[name="Flamebringer"]     Pero debo admitir que la táctica también es una habilidad. Si las tuyas son más refinadas que antes, estoy dispuesto a probarlas.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   ...Qué raro. ¿No eras de los que dicen 'mientras el objetivo muera, todo vale'?
+[Character(name="char_1002_nsabr_2")]
+[name="Maestro de la espada de Reunion"]     W, el escuadrón se ha replegado a la posición indicada y ha cortado la retirada del enemigo. No tienen adónde ir.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Y yo nunca esperé que lideraras a esta banda de matones. Todos hemos cambiado mucho.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   ¿Matones? Ah... ¿te refieres a Reunion?
+[name="W"]   ¿O te refieres... a los Sarkaz?
+[Character(name="char_1002_nsabr_2")]
+[name="Maestro de la espada de Reunion"]     ¡Gah——!
+[Dialog]
+[Character(name="char_131_flameb_5#2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.6)]
+[name="Flamebringer"]     Hmph.
+[Character(name="char_131_flameb_5#2",name2="char_1002_nsabr_2",focus=2)]
+[name="Maestro de la espada de Reunion"]     No te subestimaré, Sarkaz. Te he estado observando.
+[name="Maestro de la espada de Reunion"]     Qué lástima. Te quedaste sin opciones.
+[Character(name="char_131_flameb_5#4",name2="char_1002_nsabr_2",focus=1)]
+[name="Flamebringer"]     ¿Ah, sí? Supongo que tú también.
+[name="Flamebringer"]     ¿No es mucho más divertido así? Ahora eres mi piedra de afilar. Y a mi espada le falta un poco de filo.
+[Character(name="char_131_flameb_5#4",name2="char_1002_nsabr_2",focus=2)]
+[name="Maestro de la espada de Reunion"]     ¿En serio? ¿Todavía sigues presumiendo?
+[Character(name="char_131_flameb_5#4",name2="char_1002_nsabr_2",focus=1)]
+[name="Flamebringer"]     Así es. Ven.
+[Dialog]
+[Character(name="char_131_flameb_5#4")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Maestro de la espada de Reunion"]     ¡Agh! ¡Mierda! ¿Cómo puedes——
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Maestro de la espada de Reunion"]     ¡Gaaaah——!
+[Character(name="char_131_flameb_5#4")]
+[name="Flamebringer"]     ¿Todavía puedes hablar?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Delay(time=0.4)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1504_cqbw#3")]
+[name="W"]   ...Es aún más fuerte. No me sorprende.
+[Character(name="char_1504_cqbw#3",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]     ¡W! ¡¿Por qué nos quedamos mirando?! ¡Solo da la orden y lo haremos polvo!
+[Character(name="char_1504_cqbw#4",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   ¿Así que ahora sí puedo darles órdenes otra vez?
+[Character(name="char_1504_cqbw#4",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]     ¡No es momento para esto!
+[Character(name="char_1504_cqbw#4",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   Pero es que yo no soy su comandante.
+[Character(name="char_1504_cqbw#4")]
+[name="W"]   Les propongo algo. Retrocedan, no lo provoquen y busquen otro momento para hacerse matar.
+[Dialog]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Maestro de la espada de Reunion"]     ...Maldita sea.
+[Character(name="char_1504_cqbw#3")]
+[name="W"]   ¿Ves? ¿De verdad creíste que podías salir a pelear con él? ¿Esto es un show de aficionados?
+[Character(name="char_1002_nsabr_2")]
+[name="Maestro de la espada de Reunion"]     Tsk...
+[Dialog]
+[character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_131_flameb_5#2",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Flamebringer"]     ¿Quién sigue?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5#2",focus=1)]
+[name="W"]   ¿Cuál es la prisa? ¿Tienes que ir a algún lado?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     No es la primera vez que me rodean.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Sí, sí. A ver, ¿hablas de aquella guerra civil? Parece una buena historia. ¿Nos la cuentas?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     ¿Qué hay que contar? Me tendieron una emboscada. Todos murieron. Yo sigo vivo. Esa es la historia.
+[name="Flamebringer"]     ¿Qué te parece? ¿Sigo?
+[name="Flamebringer"]     Esa pelea no fue nada para mí. Necesito mucho más.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   No... Solo pensaba, ¿por qué no te unes a nosotros?
+[Character(name="char_1011_wizard_1")]
+[name="Hechicero de Reunion"]     ¡¿W?! Es un traidor. Mira a cuántos de los nuestros ha matado——
+[Character(name="char_1504_cqbw#1",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   Fueron mis mercenarios quienes decidieron recurrir a él. Sería útil para Reunion. ¿Algún problema?
+[Character(name="char_1504_cqbw#1",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]     ¡Sí!
+[Character(name="char_1504_cqbw#1",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     ......
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Piénsalo. ¡Aquí nos divertimos mucho más! Guerra, derramamiento de sangre y todos esos amigos Sarkaz...
+[name="W"]   Todo lo que buscas, aquí te lo damos en bandeja de plata.
+[name="W"]   Te hablo con el corazón. Tú y yo tenemos mucho en común.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     No lo creo.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Eres un Infectado, ¿no? ¡Encajarías perfectamente en Reunion! ¿Cuál es el problema?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Destrucción sin sentido, barbarie organizada... No veo qué podría ofrecerme un grupo así.
+[name="Flamebringer"]     ¿Llamas guerra a esto? Es apenas la llama de un fósforo que se apaga. Deberías saber cómo es una guerra de verdad.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   No digas eso. Aquí también hay gente seria que se esfuerza mucho. En Reunion hay de todo.
+[name="W"]   Por ejemplo, mi antiguo jefe era algo purista, pero yo soy de las que encuentran diversión en todo.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Si pudiera pedir algo... Me gustaría poner a prueba la habilidad de Talulah con la espada.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   ¿La señora dragón? No quiero elogiarla demasiado, pero no tienes la más mínima posibilidad de ganarle.
+[name="W"]   Además, ¿lo suyo siquiera cuenta como esgrima? Serías un montón de polvo antes de acercarte a ella.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Lo sé.
+[name="Flamebringer"]     Por supuesto, también sé que, si rechazo tu oferta, mis posibilidades de salir vivo de esta ciudad son igual de escasas.
+[name="Flamebringer"]     Entonces, ¿qué tengo que perder? Si no me obligo a romper las cadenas del conformismo, ¿cómo voy a mejorar?
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Mmm... ¿Desde cuándo eres tan sentimental?
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Solo busco el sentido de la vida.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Claro. Lo que tú digas, amigo. Dejemos a la señora dragón de lado un momento. ¿Qué te parece unirte al equipo de mercenarios?
+[name="W"]   Ya conoces el trabajo. Puedes hacer prácticamente lo que quieras. Y el comandante al que odias ya está muerto.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     No se puede confiar en ti. Ambos tenemos mucho que ocultar.
+[name="Flamebringer"]     ...Je. Conozco un lugar mejor. Uno mucho más apropiado que Reunion para afilar mi espada.
+[name="Flamebringer"]     Lo vi. Hace poco. Cuando tú y aquel Sarkaz hicieron su pequeño trato. Esa batalla me aceleró el pulso.
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Siempre tiene que haber algo.
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Al final lo mataste, pero los hechos son los hechos. No puedes ocultarlo.
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Hmph.
+[name="W"]   ¡Está bien, está bien! Tú ganas. Hicimos un acuerdo de palabra: él se encargaría del jefe y me facilitaría un poco las cosas.
+[name="W"]   Aquí todos somos amigos. No hacen falta tantas formalidades.
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Pero no los dejarás ir.
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Al menos puedo dejar en paz a las personas que quieren proteger.
+[name="W"]   Acordamos que un equipo de rescate de Rhodes Island podría venir a ayudar. Matarlo no rompió ese acuerdo, ¿verdad?
+[name="W"]   Tengo mis principios. No me molesta hacer la vista gorda de vez en cuando. Pero si tengo un juguete en las manos, ¿cómo no voy a jugar con él?
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Y dejaste que matara a tantos de tus combatientes de élite. No es fácil reemplazarlos.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   ¡Sí, sí! ¡Todavía estoy furiosa por eso!
+[name="W"]   Ugh. Yo que pensaba reencontrarme con un viejo amigo, ponernos al día y llevarnos bien. ¡Pero contigo es imposible! ¡Me rompes el corazón!
+[Character(name="char_1002_nsabr_2")]
+[name="Maestro de la espada de Reunion"]     ...W, tenemos que movernos. Si seguimos demorándonos, se retrasará todo el plan.
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Bien. Parece que se nos acabó el tiempo... ¿De verdad no vas a cambiar de opinión?
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Por supuesto que no.
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Última pregunta: ¿para quién trabajas ahora? Ah, no me lo vas a decir, ¿verdad?
+[name="W"]   Aunque creo que puedo adivinarlo.
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     ¿En serio? Pensaba que no eran tan conocidos.
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[name="W"]   Tengo muchos amigos por aquí. Ya sabes, tengo amigos en todas partes. Tú eres uno de ellos.
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Eso último contradice lo anterior.
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   No. Lo que digo es que quizá sepa cómo acabaron con tu antiguo equipo de mercenarios.
+[name="W"]   ¿Y si el ilustre capitán de tus espadachines, el que estuvo detrás de la conspiración que te convirtió en quien eres hoy, estuviera justo en el lugar al que piensas ir?
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     ¿Es así...?
+[name="Flamebringer"]     Así que...
+[name="Flamebringer"]     Fascinante.
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=1)]
+[name="W"]   ¡Ajajaja! ¡Así que ni siquiera lo sabías! Bueno, yo también acabo de enterarme.
+[name="W"]   Pronto lo entenderás. Las cosas no son tan sencillas como crees.
+[name="W"]   Tengo muchas ganas de ver qué haces. Jeje. ¿Qué harás?
+[Character(name="char_1504_cqbw#5",name2="char_1011_wizard_1",focus=2)]
+[name="Hechicero de Reunion"]     ¡W! ¡¿Qué estás esperando?!
+[Character(name="char_131_flameb_5")]
+[name="Flamebringer"]     ......
+[Character(name="char_1504_cqbw#1")]
+[name="W"]   Bueno, escuchen, mis Sarkaz no van a intervenir, ¿entendido? Lo que haya que hacer, háganlo ustedes.
+[name="W"]   Maestro de la espada——Eh, Flamebringer, podrías morir en esta batalla que estamos por librar.
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Image(image="avg_ac4_1",screenadapt="coverall", fadetime=0)]
+[Blocker(a=0, fadetime=2, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[name="Flamebringer"]     Hace mucho que no me encuentro en una situación así. Estoy emocionado.
+[name="W"]   ¿Hace mucho? Quizá perder a todo tu equipo no te volvió tan frío como dicen. ¿Ya estás de buen humor?
+[name="Flamebringer"]     En eso somos distintos, W. La felicidad no es una meta que valga la pena perseguir.
+[name="Flamebringer"]     Perdí mucho 'la última vez', pero ahora veo con total claridad el camino que tengo delante.
+[name="Flamebringer"]     Esta vez, espero que no me decepciones.
+[name="W"]   Mira qué sonrisa.
+[name="W"]   Si te dijera que te dejaré vivir, ¿me creerías?
+[name="Flamebringer"]     Qué curioso, iba a preguntarte lo mismo.
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Background]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Delay(time=0.5)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.5)]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Delay(time=0.5)]
+[stopmusic(fadetime=2)]
+[Delay(time=3)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Character(name="char_130_doberm_ex")]
+[Blocker(a=0, fadetime=3, block=true)]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[name="Dobermann"]     Según el contrato, no tenías obligación de enfrentarte abiertamente a Reunion antes de incorporarte a nuestras filas.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Lo pedí yo.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="Dobermann"]     Damos la bienvenida a los Infectados y a quienes aspiran a encontrar soluciones a la crisis de la Oripatía, pero rechazamos a quienes incumplen las normas.
+[name="Dobermann"]     Como no conocemos las circunstancias exactas de ese incidente, no lo hemos tenido en cuenta para tomar nuestra decisión.
+[name="Dobermann"]     Pero esto no volverá a ocurrir.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Si surge algún problema, podemos resolverlo a tu manera.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="Dobermann"]     Ya lo hemos resuelto. Tampoco hemos tenido en cuenta tus objetivos ni tus motivos para tomar nuestra decisión.
+[name="Dobermann"]     Si determinamos que no reúnes los requisitos para ingresar a Rhodes Island, no podremos hacer una excepción, por muy honorable que seas.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Bien. Es solo una petición personal.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="Dobermann"]     Jum. No importa. Bienvenido a bordo.
+[name="Dobermann"]     Escucha, a partir de ahora tus acciones también afectan a los operadores que te acompañan, y ellos tomarán decisiones en función de lo que hagas.
+[name="Dobermann"]     Mientras cumplas nuestras normas, Rhodes Island te recibirá como uno de los nuestros, sin importar tu pasado.
+[name="Dobermann"]     Pero, operador Flamebringer, si te pasas de la raya aunque sea un poco...
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="Flamebringer"]     Entendido.
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="Dobermann"]      Bien, vayamos al departamento médico. Hay alguien que quiere verte.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[character]
+[Delay(time=0.5)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_131_flameb_5#3",fadetime=1,block=true)]
+[Delay(time=1)]
+[Decision(options="——¿Y tú quién eres?",values="1")]
+[Predicate(references="1")]
+[Character(name="char_131_flameb_5")]
+[name="Flamebringer"]     ......
+[name="Flamebringer"]     Tú...
+[Decision(options="Con permiso.",values="1")]
+[Predicate(references="1")]
+[character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=3)]
+[Character(name="char_131_flameb_5#4")]
+[name="Flamebringer"]     ...Je.
+[name="Flamebringer"]     Así que era eso.
+[name="Flamebringer"]     Nunca debí dudar de ti, W...
+[name="Flamebringer"]     Resulta que vivir un poco más sí tiene sus ventajas.
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

@@ -86,6 +86,10 @@ Translated so far: Main Story Prologue and Chapters 1–5.
 Chapter 5 includes all 17 story scenes through the 5-11 interlude
 (5-5 and 5-8 have no story scenes).
 Chapter 5 has been reviewed, including the 5-11 interlude.
+Operational Intelligence: "The Anonymous Ones' War", "Destroyer", "Sniper Training",
+"Survival Notorization", "After-class Homework", "Polaris", and "Among the Light
+and the Dust" are translated (all seven stories).
+"Among the Light and the Dust" is awaiting review.
 
 ## Running locally
 

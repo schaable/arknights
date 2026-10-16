@@ -1,0 +1,409 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Operational Intelligence: Fe de vida
+[Dialog]
+[Delay(time=1)]
+♪ ¿Oyes el trueno? ♪
+♪ Mira las nubes cubrir las cumbres ♪
+♪ Rostros olvidados, cosas olvidadas ♪
+♪ Encuentran el camino de vuelta a Vermeil ♪
+♪ Llévenme a casa ♪
+♪ Nubes de rojo intenso ♪
+[Dialog]
+[Delay(time=1)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.6,crossfade=1)]
+[Background(image="bg_towerinside",screenadapt="coverall",fadetime=2,block=true)]
+10:37 A.M. \ Nublado
+Sector de baja incidencia de Catástrofes de Siracusa - Tierras salvajes - Cabaña en el bosque
+[Dialog]
+[Character(name="char_190_clour",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="Vermeil"]     ¿Mmm...?
+[name="Vermeil"]     ......
+[Character(name="char_279_excu_4#6")]
+[name="???"]     Te oí cantar. No es necesario que te escondas. No tengo intención de hacerte daño.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ...Todos los verdugos dicen eso. Pero al final, derraman sangre.
+[Character(name="char_279_excu_4#6")]
+[name="???"]     ¿Verdugo? Me temo que no comprendo a qué te refieres. Represento a la Oficina Notarial de Laterano——
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¡Cállate! ¡No puedes engañarme!
+[Dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Delay(time=1.5)]
+[name="Vermeil"]     ¡Te di!
+[Dialog]
+[Character]
+[Character(name="char_279_excu_4#6")]
+[name="???"]     No me diste.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¡¿Eh?!
+[Character(name="char_279_excu_4#6")]
+[name="???"]     Disculpa.
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[PlaySound(key="$char_emp", volume=0.9)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_279_excu_4",fadetime=1,block=true)]
+[Delay(time=3)]
+[name="???"]     El objetivo escapó por la ventana. Reacción rápida.
+[name="???"]     Entorno analizado. Carne de ave curada, mesa de curtido, pieles de animales procesadas con herramientas de madera y cuchillos pequeños.
+[name="???"]     Suelta el arco. Conozco tu posición. Estás escondida detrás de la ventana.
+[name="???"]     Repito, no tengo intención de hacerte daño.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ——¡Ni lo sueñes!
+[Dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Delay(time=1)]
+[Character(name="char_279_excu_4")]
+[name="???"]     Tu percepción del entorno es impresionante.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¡Te voy a llenar de flechas!
+[Dialog]
+[Character(name="char_279_excu_4")]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Delay(time=2)]
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¿L-la atrapó con la mano?
+[name="Vermeil"]     Pero... ¡¿qué demonios eres?!
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_279_excu_4")]
+[name="???"]     Como indica el informe, la heredera cambia de parecer con facilidad, tarda en confiar y resulta difícil comunicarse con ella.
+[Dialog]
+[Character]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_279_excu_4")]
+Lo anterior constituye la totalidad de mi testamento y última voluntad.
+Sin embargo, tengo una última petición egoísta.
+En los bosques de Siracusa conocí a una niña Vulpo a la que le faltaba un brazo.
+Llevaba mucho tiempo dedicada únicamente a buscar venganza.
+Me compadecí de ella y la ayudé. Aunque quizá herí su orgullo, su obstinación por sobrevivir me conmovió.
+Después supe que mi ayuda solo había reforzado su obsesión por vengarse, y eso me dejó intranquilo.
+Quiero dejarle todo lo que tengo. Por desgracia, es muy poco. Apenas unas cuantas reliquias familiares.
+——Disculpe la interrupción, pero no figura ningún Vulpo entre sus familiares. Esto dificultará bastante nuestro trabajo.
+Así que no es más que una pequeña petición de un ciudadano de Laterano sin hijos, en su lecho de muerte.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_forest",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ......
+[name="Vermeil"]     (Huele a sangre. Y me da mala espina...)
+[name="Vermeil"]     (¿Otro tipo que viene a destruir nuestro hogar? ¡Qué asco!)
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¡Mordió el anzuelo!
+[Character(name="char_279_excu_4")]
+[name="???"]     Ya veo. Otra trampa. Hay mecanismos de activación por todas partes.
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Dialog]
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¡Escucha bien! Caíste en una trampa de caza. ¡Si no quieres morir, entrega tus armas y no te muevas!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="???"]     Si eso facilita la comunicación, lo haré.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ¿Quién eres?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="???"]     Soy un ejecutor de la Oficina Notarial de Laterano y actúo como albacea de esta herencia. Puedes llamarme 'Executor'.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ¿Laterano...?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     'Vermeil', tú eres el objetivo de mi misión.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ¿Cómo sabes mi nombre?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     El difunto, el señor Dürrenmatt, me dio tu nombre.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     No conozco a ningún Dürrenmatt.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     Por diversos motivos, utilizó varios nombres falsos.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ¿Adónde quieres llevarme?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     Por razones de confidencialidad, no puedo decirlo.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ...¡Grr, no dices más que mentiras! ¡Vas a morir aquí!
+[name="Vermeil"]     No me voy a ir. Mi mamá, mi papá, mi tío, mi tía, mis amigos, mi gente, todos están, todos...
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     Mi tarea consiste en llevarte solo a ti.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ¡Cállate! ¡¿Acaso sabes dónde estás?!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     Me encuentro en una situación que me impide avanzar con mi misión.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     Jum. Todo lo que entra en este bosque es nuestra presa.
+[name="Vermeil"]     Los huesos que estás pisando son de bestias y de gente aún peor.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     Entiendo. Los alrededores de esta base de operaciones estaban llenos de trampas.
+[name="Executor"]     Fosos, lazos, minas terrestres y mecanismos que disparan dardos.
+[name="Executor"]     Puedes estar tranquila. Las desactivé todas. Eran trampas de construcción sencilla, pero podían herir a la destinataria.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ......
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]     Por favor, ven conmigo.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]     ——! ¡No te acerques!
+[name="Vermeil"]     ¡Un paso más y te mato de un flechazo!
+[Character]
+[playsound(key="$leaveshake", volume=0.7)]
+[delay(time=1)]
+[Character(name="char_279_excu_4")]
+[name="Executor"]     Escapó de nuevo.
+[Dialog]
+[Character]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_190_clour",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Vermeil"]     Oye, ¿por qué me salvaste?
+[Character]
+[name="Viejo cazador"]     Después de todo, yo también soy cazador.
+[name="Viejo cazador"]     ¿Cómo iba a ignorar a una respetable colega que había perdido un brazo y yacía entre sus propias tripas, junto a un enorme jabalí?
+[Character(name="char_190_clour")]
+[name="Vermeil"]     Jum... Tú no eres cazador. No puedes engañarme. No hueles nada a tierra.
+[Character]
+[name="Viejo cazador"]     Ja. Supongo que no puedo. Pero cuando te vi ahí, me conmovió lo bien que una niña tan pequeña había logrado dominar estas tierras salvajes. Eso es verdad.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¿A qué te refieres?
+[Character]
+[name="Viejo cazador"]     Solo digo lo que se me viene a la mente.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¿Qué es ese círculo que tienes en la cabeza? ¿Y esas cosas de la espalda?
+[Character]
+[name="Viejo cazador"]     ¿Nunca habías visto a alguien de Laterano, pequeña?
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¿Hm?
+[Character]
+[name="Viejo cazador"]     Esto es... Supongo que es lo que me queda de la patria que dejé atrás.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     La tierra del lugar donde naciste nunca se te quita del todo.
+[Character]
+[name="Viejo cazador"]     Quizá tengas razón. Digamos que han pasado muchas cosas. Ven, vamos a intentar que camines.
+[name="Viejo cazador"]     Déjame ponerte esto.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     Esto... ¿es un brazo? ¿Un brazo de metal? Qué cosa tan rara.
+[Character]
+[name="Viejo cazador"]     Una muestra de mi respeto por una hija de estas tierras salvajes.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ¿Eres carpintero? ¿Herrero?
+[Character]
+[name="Viejo cazador"]     Aprendí de todo en mi antiguo trabajo.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     ......
+[name="Vermeil"]     ...Me salvaste, así que no puedes ser malo. Voy a necesitar un brazo para vengarme. Así que gracias.
+[Character]
+[name="Viejo cazador"]     Venganza, ¿eh...? Bueno, no puedo decidir tu destino por ti.
+[name="Viejo cazador"]     Pero cuando tenses el arco con este brazo, espero que pienses en qué otras razones tenemos para vivir, además de la venganza.
+[name="Viejo cazador"]     Si no lo piensas bien, podrías terminar como yo.
+[Character(name="char_190_clour")]
+[name="Vermeil"]     Yo——
+[Character]
+[name="Viejo cazador"]     No quiero oírte decir 'Vivo para vengarme'. Eso ya está muy gastado.
+[name="Viejo cazador"]     ...Sí, maldita sea. Demasiado gastado.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_forest",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_190_clour")]
+[name="Vermeil"]  (Laterano... Dijo que es de Laterano...)
+[name="Vermeil"]  (No puede ser...)
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Vermeil"]  ¡Ay! ¡Eso duele!
+[Character(name="char_190_clour",name2="char_279_excu_4#3",focus=2)]
+[name="Executor"]  Parece que la evaluación del señor Dürrenmatt era correcta.
+[Character(name="char_190_clour",name2="char_279_excu_4#3",focus=1)]
+[name="Vermeil"]     ¿Qué?
+[name="Vermeil"]     Maldita sea, ¿desde cuándo me estás siguiendo?
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Vermeil"]  ¡Oye! ¡Suéltame!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Deja de resistirte. No puedo hacerte daño, ya que eres la heredera designada en este testamento.
+[name="Executor"]  Esta es una carta del difunto.
+[Character(name="char_190_clour")]
+[name="Vermeil"]  ——!!
+[Dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[delay(time=1)]
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  ¿Por qué sigues resistiéndote?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ...Es su olor. La carta huele a su sangre. ¡¿Qué le hiciste?!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  El viaje desde Laterano hasta aquí fue extremadamente largo. Es imposible que quede algún rastro del olor del difunto.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡Respóndeme! ¡O te mato!
+[Dialog]
+[Character(name="char_190_clour")]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Vermeil"]  ¡Agh!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Primero, creo que demostrar la diferencia de fuerzas entre nosotros puede facilitar la comunicación.
+[name="Executor"]  Segundo, por respeto a tu condición de heredera, responderé a tu pregunta.
+[name="Executor"]  El señor Dürrenmatt murió en la mesa de operaciones. No fue una muerte tranquila. Padecía una enfermedad incurable.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡Tú——! ¡Suéltame!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Esa fue su decisión.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡Oye! ¡¿Q-qué estás haciendo?!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Los cristales de Originium ya han atravesado la piel. La infección sigue empeorando.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡No es asunto tuyo!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Si la destinataria insiste en rechazar su herencia, el reglamento me permite abandonar la tarea.
+[name="Executor"]  Pero el cliente y mis superiores establecieron una cláusula adicional. Debo cumplirla.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ——¿Qué demonios intentas hacer?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  'Que Vermeil viva'.
+[name="Executor"]  Como se trata de una petición bastante amplia, cumplirla será complicado. Espero que cooperes.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ...¿Eso fue lo que te pidió?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Correcto. Vendió todas sus propiedades y pagó varios cargos adicionales, incluidos los de la Oficina Notarial, así como los gastos de tu futuro tratamiento médico.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Pero ¿por qué? Solo soy una niña del bosque...
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Quiere que vivas.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡Y yo te estoy preguntando por qué!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Porque creía que mereces vivir.
+[name="Executor"]  Ahora que se ha cumplido su última voluntad y testamento, mi trabajo aquí ha terminado.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡¿Qué...?! ¡¿Cuándo me diste esto——?!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Antes de pasar a la siguiente fase, debo escuchar tu respuesta.
+[name="Executor"]  '¿Quieres vivir?'
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ......
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Solo debes responder: 'Sí' o 'no'.
+[name="Executor"]  Nuestro tiempo es limitado.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Yo——
+[Dialog]
+[Character]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background]
+[Blocker(a=0, fadetime=2, block=true)]
+Oye, señor, ¿cómo se supone que te llame?
+——Executor. Si necesita llamarme de alguna manera.
+Gracias por aceptar mi petición.
+——Fue decisión de la Oficina Notarial. Yo solo cumplo con mis deberes.
+Ja, claro. Y ya que vas a buscar a Vermeil, tengo otra pequeña petición.
+——Según la naturaleza de la petición, podría rechazar su solicitud verbal. Preferiría que la presentara por escrito ante la Oficina Notarial.
+Eres bastante estricto, ¿eh? No importa. Es poca cosa.
+Si puedes, no le cuentes nada de mi pasado. Inventa alguna historia. Dile que morí en la mesa de operaciones.
+——No comprendo la necesidad de esta petición. Tampoco se ajusta a la verdad. Usted eludió la justicia de la Oficina Notarial durante muchos años, y mató a tiros a...
+Ya basta. ¿Y si te dijera que hacerlo así te ahorraría muchos problemas para cumplir con tu trabajo?
+——Si tras evaluarlo coincido con usted, consideraré su petición.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_towerinside",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ...Entonces, en ese lugar, Rhodes Island, ¿de verdad pueden curar esta maldita enfermedad?
+[Character(name="char_190_clour",name2="char_279_excu_4#5",focus=2)]
+[name="Executor"]  La medicina aún no ha encontrado una cura para la Oripatía. Pero quizá puedan aliviar tu sufrimiento.
+[name="Executor"]  Considerando lo que les hiciste a los Ursus, te aconsejo que no sigas actuando sola.
+[name="Executor"]  Y da la casualidad de que debo ir a Rhodes Island por otro asunto.
+[Character(name="char_190_clour",name2="char_279_excu_4#5",focus=1)]
+[name="Vermeil"]  ¿Me estás pidiendo que vaya contigo?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Creo que sería lo más lógico.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Jum. Me niego.
+[name="Vermeil"]  Todavía tengo mucho que hacer antes de irme de aquí. Tengo que despedirme de mi gente.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Aquí corres peligro. El odio no se resuelve con un acuerdo.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Jum... Vaya que sabes mucho.
+[name="Vermeil"]  No me importa lo que sepas. No te metas en mi camino. Puedo ir a ese lugar, Rhodes Island, cuando termine de arreglarlo todo, ¿no?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Permíteme hacer un cálculo.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¿Qué?
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Debo calcular si tengo suficiente munición para enfrentarme a esos fugitivos cuando vuelvan a encontrarte.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¿Munición...? ¡¿Dices que vendrías conmigo a esas tierras desiertas?!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  De acuerdo con tu respuesta, la Oficina Notarial ha registrado que aceptaste tu herencia.
+[name="Executor"]  Sin embargo, aún no se ha cumplido todo lo dispuesto en el testamento. No puedo permitir que te expongas a semejante peligro. Es mi deber.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡No necesito tu ayuda! Estoy acostumbrada a estar sola——
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Además, creo que pretendes llegar a un acuerdo conmigo para luego aprovechar la oportunidad y escapar.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Agh.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  No hay tiempo que perder. Partamos.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  ¡Oye! ¡No dije que sí! No necesito que venga un forastero a... ¡Oye, espera! ¿Adónde vas? ¡¿Acaso conoces el camino?!
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  Sí.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Ten cuidado al pisar, hay——
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
+[name="Executor"]  He desactivado las trampas. Ven conmigo.
+[Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
+[name="Vermeil"]  Aaah——¡Tarde o temprano, te daré tu merecido, bicho raro——!
+[Dialog]
+[Character]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background]
+[Blocker(a=0, fadetime=2, block=true)]
+Por favor, cuídala bien, señor Executor. En serio, a ti también podría hacerte bien.
+No me mires así. Sabes a qué me refiero.
+Sácala de ese lodazal. No dejes que termine como yo.
+¿Justicia? Quizá lo que hice estuvo justificado, señor, si la Oficina Notarial fuera capaz de perdonarme.
+Pero aun así no sería motivo de alegría. La verdad, solo hace que la vida parezca una gran broma.
+Ella. Ella sí es mi legado.
+Mis esperanzas y mis sueños.
+Que el Señor la bendiga y la proteja.
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

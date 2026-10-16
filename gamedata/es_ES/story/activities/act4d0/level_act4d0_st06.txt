@@ -1,0 +1,482 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Operational Intelligence: Polaris
+[Dialog]
+[Delay(time=1)]
+08:30 A.M. \ Tormenta de nieve
+Northlands - Campo de hielo Infy - Puesto temporal de investigación n.º 420 de Rhine Lab
+[name="Dispositivo"]  Sistema desbloqueado.
+[name="Dispositivo"]  Año: Desconocido
+[name="Dispositivo"]  Error de fecha y hora. Cambiando a control manual.
+[name="Dispositivo"]  Verifique su identidad para continuar.
+[Dialog]
+[Character(name="char_248_mgllan",fadetime=1,block=true)]
+[Delay(time=1)] 
+[name="Magallan"] Mmm, a ver... Eso es. Magallan, especialista de campo de Rhine Lab.
+[Character]
+[name="Dispositivo"]   Verificando identidad——
+[name="Dispositivo"]   Verificación completa. Huella de voz confirmada.
+[name="Dispositivo"]   Bip——
+[name="Dispositivo"]   Huella digital confirmada.
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[name="Dispositivo"]   (Voz femenina animada) ¡Hola! ¿Cómo estás, Maggie? ¡Bienvenida de vuelta!
+[Character(name="char_248_mgllan")]
+[name="Magallan"]   ......
+[name="Magallan"]   Qué raro.
+[name="Magallan"]   Supongo que no debí dejar que Mayer jugara con el sistema de acceso. Qué función tan rara...
+[name="Magallan"]   Bueno, en fin, ¡a trabajar!
+[name="Magallan"]   Esta es nuestra última inspección del año. Comprobemos que no haya novedades.
+[name="Magallan"]   Ya se completó la inspección de todas las regiones previstas. Cuando terminen las demás tareas, emprenderán el regreso.
+[name="Magallan"]   Uf. Listo.
+[name="Magallan"]   De verdad no soy buena redactando informes. Escuchemos el audio.
+[Character]
+[name="Dispositivo"]   (Voz femenina animada) ¡Hola, Maggie! Hoy es el día ciento ochenta y siete de tu expedición.
+[Character(name="char_248_mgllan")]
+[name="Magallan"]  Vaya, sí que llevo tiempo aquí. El tiempo vuela.
+[Character]
+[name="Dispositivo"]   (Voz femenina animada) Llevas tanto tiempo fuera, ¿no deberías volver? Todos te extrañan.
+[Character(name="char_248_mgllan")]
+[name="Magallan"]  ¡¿Eh?! ¿Eso ya estaba ahí...? No me digas que Mayer metió parámetros nuevos a escondidas.
+[name="Magallan"]  Bueno, de todos modos es una sorpresa linda. Qué buen detalle.
+[name="Magallan"]  Pero, en cuanto a volver, creo que...
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=2, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[PlaySound(key="$blizzard")]
+[Blocker(a=0.4, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_248_mgllan")]
+[name="Magallan"]  Parece que esta tormenta de nieve va a durar al menos una semana. Menos mal que tengo provisiones de sobra.
+[name="Magallan"]  Revisemos otra vez la lista de pendientes. Creo que todavía faltaban algunas cosas.
+[name="Magallan"]  A ver. Bien. La recolección de muestras ya está. La búsqueda de pistas en las ruinas también podemos darla por terminada.
+[name="Magallan"]  No hay muchas novedades comparado con el año pasado. Ojalá hubiéramos descubierto algo como el año anterior.
+[name="Magallan"]  Es bastante normal, pero seguro que mi superior me regaña por querer más de la cuenta.
+[name="Magallan"]  Aquí tampoco falta nada... ¿Ah? Esto está en blanco. Prueba de nuevos materiales a bajas temperaturas... ah.
+[name="Magallan"]  ¡¡Lo olvidé por completo!! ¡¿Dónde puse ese material nuevo?!
+[name="Magallan"]  ¡Mierda! ¡Me van a matar si lo pierdo!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[name="Magallan"] Uf. Por poco. Solo lo había dejado en el bolsillo exterior.
+[name="Magallan"] El bolsillo exterior está a 43 grados bajo cero. Lo mantuve ahí seis horas. Conserva su elasticidad.
+[name="Magallan"] Ahora probemos su dureza.
+[name="Magallan"] ¡Eh!
+[name="Magallan"] Bueno, sin problemas. A la cámara de pruebas.
+[name="Magallan"] Menos mal que lo guardé en la chaqueta...
+[name="Magallan"] Con esta ventisca, supongo que puedo dejarlo afuera, junto a la puerta, y ver cómo resiste un ambiente de bajas temperaturas.
+[name="Magallan"] Creo que la temperatura de afuera debería servir.
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[name="Magallan"] Bien, Magallan. Vamos. Respira hondo, abre la puerta un instante, lanza eso afuera y ciérrala.
+[name="Magallan"] Tengo que ser rápida, precisa y decidida. Si no, entra la ventisca y se acabó todo.
+[name="Magallan"] ¡1, 2, 3!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_dooropen")]
+[PlaySound(key="$blizzard")]
+[Character(name="char_341_amona_2#2",fadetime=1,block=true)]
+[Delay(time=1)] 
+[name="???"] ......
+[Character(name="char_248_mgllan")]
+[name="Magallan"] ......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="???"] Disculpa...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Magallan"] ¡¡¡Aaaaaaaaaaaaaah!!!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_248_mgllan")]
+[name="Magallan"]  Magallan, ¿acabas de ver un fantasma?
+[name="Magallan"]  Sí, Magallan, y era muy bonita. Pero igual era un fantasma.
+[name="Magallan"]  Pero ¿cómo podría haber otra persona aquí, en Northlands?
+[name="Magallan"]  ¿S-será algún tipo de fantasma de la nieve?
+[name="Magallan"]  Imposible. Solo tengo que abrir la puerta y mirar otra vez. ¡¡Tengo que resolver esta duda con la ciencia!!
+[name="Magallan"]  ¡Los fantasmas no existen! ¡Y no tengo tanto frío como para estar alucinando!
+[name="Magallan"]  ¿Y si es de alguna tribu que nunca ha tenido contacto con el exterior? ¡Sería un descubrimiento enorme! ¡Vamos, Magallan!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_dooropen")]
+[Character(name="char_341_amona_2#2")]
+[name="???"] ......
+[Character(name="char_248_mgllan")]
+[name="Magallan"] ......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="???"] Disculpa, ¿puedo entrar?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Eh... Mmm... Tú... Yo...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="???"] No tengas miedo. No soy un fantasma. Mira, tócame la cara.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Eh? ¿Qué?
+[name="Magallan"] Ah, está bien...
+[name="Magallan"] Vaya. ¡Estás tibia! Pero ¿cómo? ¿Cómo llegaste hasta aquí, a Northlands?
+[name="Magallan"] ...¿Eres de Sami?
+[name="Magallan"] Ah...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="???"] No sé por qué parece decepcionarte, pero sí, soy de Sami. Mucho gusto, pequeña.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] H-hola. Todavía no sé cómo llegaste aquí, pero pasa, por favor. Una persona normal moriría congelada allá afuera.
+[name="Magallan"] Quiero decir, ¿una ventisca así no sería un problema incluso para alguien de Sami?
+[Character(name="char_341_amona_2#2")]
+[name="???"] Gracias.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Toma, un poco de té.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="???"] Gracias.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Cómo te llamas?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="???"] Puedes llamarme——
+[name="???"] Digamos que Simone. Simone. ¿Y tú cómo te llamas, pequeña?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Mi nombre en clave es Magallan! Especialista de campo de Rhine Lab, asignada al puesto de investigación n.º 420...
+[name="Magallan"] Por ahora, solo estoy yo aquí.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Ya veo.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Simone, ¿por qué estás aquí? ¿Te atrapó la tormenta...?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Me encargaron buscar a cierta persona.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Buscar? ¿En Northlands? Aquí no hay nadie. En todos estos meses apenas habré visto un par de seres vivos.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Quien me contrató me informó que ella estaría trabajando en esta zona.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Por qué la buscas?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Esta tormenta durará un tiempo, lo que debería retrasar su viaje. Vine a buscarla.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah, ¿sí? ¿Te refieres a mí?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No estoy segura.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] C-claro. Entonces no viniste por mí. Pero, con este clima, ¿de verdad no tienes problemas?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Los de Sami... Mejor dicho, yo estoy acostumbrada a la nieve.
+[name="Simone"] Pero si el clima sigue empeorando, muchas cosas cambiarán de formas impredecibles.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Sí. Sabía que esta tormenta iba a durar, pero no pensé que sería tan intensa.
+[name="Magallan"] Quería esperar a que el viento se calmara un poco... Con las cosas así, tendremos que apurarnos.
+[name="Magallan"] ¡Según el calendario y mis observaciones, mañana sería el mejor momento!
+[name="Magallan"] Y tenemos suficientes provisiones. Sí que lo hice bien.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Todas estas provisiones son solo para ti?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah, no. Son para que todos los que vivan en esta estación de investigación aguanten hasta la temporada de expediciones del próximo año.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ...¿Ah?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Si necesitas quedarte aquí un tiempo, tú también puedes usar estas provisiones.
+[name="Magallan"] ¡Pero no puedes tocar mi equipo!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Ah. Está bien.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Bueno, ahora que eso está decidido, ¡a empacar!
+[name="Magallan"] Perdón, Simone, tengo que preparar algunas cosas.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Claro. No hay problema. No estorbaré.
+[Dialog]
+[Character(fadetime=1)]
+[delay(time=1)]
+[name="Magallan"] Maleta, maleta, ¿dónde puse mi maleta? Ah, ya me acuerdo. ¡La bajé del altillo y la dejé en la cocina!
+[Dialog]
+[delay(time=1)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Los instrumentos de investigación y el dron... Bueno, están bien.
+[name="Magallan"] Solo necesitan cargarse un poco.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Puedo ayudarte en algo?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Eh? Ah, no. Puedo encargarme de todo esto sola.
+[name="Magallan"] Llevo tiempo haciéndolo todo yo sola. Tengo mucha práctica.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Así que aquí es donde trabajas?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Así es. Me dedico a investigar y observar.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Qué observas?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Todos los campos de hielo de Northlands!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Y eres la única que está aquí?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Sí. Ese es mi trabajo.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿No te sientes sola?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Sí! Pero no creo que sentirse sola y ser feliz sean cosas incompatibles.
+[name="Magallan"] Sé que mis colegas esperan que vuelva. Y sé que estos campos de hielo guardan muchísimos secretos increíbles por descubrir. Así que no está tan mal.
+[name="Magallan"] A veces me siento sola. ¡Pero la mayor parte del tiempo soy muy feliz!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Estar sola... da mucho miedo. Una vida así... No sé ni qué decir.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Sé que no es para todo el mundo.
+[name="Magallan"] ¡Ser exploradora no es fácil!
+[name="Magallan"] Eh, ejem, ¡ser científica!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Eres... muy optimista.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Jeje. Como dijo uno de los grandes: '¡La mejor amiga de un explorador es la soledad!'
+[name="Magallan"] Ah, pero mi superior dice que tengo la mala costumbre de hablar sola. ¿Será verdad? Yo creo que no.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Está bien, señorita Magallan. Eres una buena persona.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah. Eh. Je. ¿De verdad?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Sí.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Bien, las reservas de energía de la estación deberían alcanzar, siempre que programe bien los períodos de hibernación. Entonces...
+[name="Magallan"] Bien. Como te dije, puedes usar lo que quieras, salvo el equipo de investigación, Simone.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Entiendo. Gracias.
+[name="Simone"] Pero soy una Infectada. ¿No te molesta que compartamos las provisiones? ¿Y estas instalaciones?
+[name="Simone"] Te diste cuenta, ¿verdad, Magallan?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Eh, sí. Me di cuenta. Tampoco intentaste ocultarlo.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿No tienes miedo?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Al principio me sorprendió un poco... ¡Sí! No es común ver los cristales distribuidos de esa forma...
+[name="Magallan"] Pero la verdad, con lo bonita que eres, Simone, esos cristales se ven aún más especiales.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No tienes que evitar mirarme a los ojos.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah, tus ojos... ¿eh? Deberías buscar tratamiento, Simone. Es un poco peligroso tenerlos ahí.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No me refiero a eso. Te pregunto si no temes contagiarte.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah. No, no tengo que preocuparme por eso. Las investigaciones de Rhine Lab han demostrado una y otra vez que la Oripatía no se transmite de una persona a otra tan fácilmente como cree la mayoría.
+[name="Magallan"] Aunque parece que nadie escucha... Ay.
+[name="Magallan"] Tengo muchos amigos y colegas Infectados. No es para tanto.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ...¿En serio?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Sí, de verdad. ¡En el departamento médico de Rhine Lab estamos muy orgullosos de lo que hemos logrado!
+[name="Magallan"] Pero en lo relacionado con los Infectados, no podemos compararnos con una farmacéutica llamada 'Rhodes Island...'
+[name="Magallan"] A algunos de mis colegas les molesta mucho, pero es la verdad. Allá hacen un trabajo increíble con la Oripatía.
+[name="Magallan"] Por eso Rhine Lab firmó un acuerdo de cooperación con Rhodes Island. ¡De hecho, yo también voy para allá!
+[name="Magallan"] Estoy muy emocionada. No tengo idea de cómo será, ¡pero espero poder hacer buenas investigaciones! Pensaba que me pasaría la vida encerrada en un laboratorio...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Te gusta mucho hablar, ¿verdad?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Claro! Me encanta hablar con otras personas. Pero, eh, si te canso de tanto hablar, dímelo. Me quedaré callada...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] En absoluto. Me gusta que me cuentes todas estas cosas que no conozco.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah. Eh. Me estoy sonrojando un poco...
+[name="Magallan"] ¿Sabes, Simone? ¡Podrías ir a Rhodes Island para recibir tratamiento! ¡Oye, hasta podría llevarte!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿No te preocupa que tenga otras intenciones?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Otras intenciones?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Que sea una mala persona.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Bueno, Simone, ¿eres una mala persona?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ...Sí. ¿Seré una mala persona?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Magallan, ¿sientes que está bajando la temperatura?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿La temperatura? Ah, ahora que lo dices, sí hace un poco más de frío que antes... Espera... Ay, no...
+[Character]
+Advertencia: anomalía detectada en el centro de climatización. Se desactivará la calefacción exterior.
+Advertencia...
+[Character(name="char_248_mgllan")]
+[name="Magallan"] Eso no es bueno. Disculpa un momento, tengo que revisar el sistema de control.
+[Dialog]
+[delay(time=2)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ay, no. Hay una fuga en las tuberías de la calefacción exterior. Seguramente por el desgaste...
+[name="Magallan"] Perdón, Simone, tengo que salir un momento.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Qué va a pasar?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Si dejo que el sistema apague la barrera térmica exterior, el puesto no llegará a la próxima temporada. O, al menos, dejará de ser habitable.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Cuántos días nos quedan?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Unos dos meses, más o menos... Por mucho que estés acostumbrada a la nieve, no podrías vivir aquí.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No lo haré. Pronto me iré de Northlands.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah, ya veo.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ...¿Sigues empacando?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Me estoy preparando para salir.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿No acabas de decir que podría durar dos meses?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Sí, pero eso no basta! ¡Tiene que durar hasta la próxima temporada!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No es seguro salir en esta tormenta. Un entorno tan hostil puede poner en peligro tu vida. No vayas.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] No puedo quedarme. Este puesto no es solo para mí. Es una base de operaciones y tiene que seguir funcionando.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Nadie más vendrá con este clima.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Simone, tú llegaste con este clima hace apenas diez minutos.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Yo soy diferente. No soy exploradora, Magallan.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Uf... Este calentador pesa mucho...
+[name="Magallan"] Este puesto es aún más importante.
+[name="Magallan"] Para un explorador, los campamentos base como este puesto son refugios que pueden salvarle la vida. Si este deja de funcionar, alguien que se pierda o se quede sin provisiones podría llegar aquí y encontrar solo la muerte.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Está bien, pero desde que lo construyeron hasta que llegué yo, ¿ha venido alguien más?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Nadie.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Entonces, ¿qué importancia tiene?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Sí la tiene.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Cómo puedes estar tan segura?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Porque alguien va a venir. Tal vez no mañana, tal vez hasta la próxima temporada de investigación, o quizá dentro de un par de años.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Solo estás haciendo suposiciones sin fundamento. Magallan, allá afuera es peligroso.
+[name="Simone"] Nadie vendrá. Al menos hasta la estación seca. Ningún explorador vendrá.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Simone... Dijiste que no eres exploradora, ¿verdad?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Así es.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Bueno, no todos los exploradores toman las mismas decisiones.
+[name="Magallan"] Algunos pueden elegir venir cuando el clima está tranquilo, para explorar Northlands de punta a punta. Nadie lo ha logrado todavía, pero siempre hay gente que lo intenta.
+[name="Magallan"] Y otros pueden venir cuando es más peligroso, para ver cómo se forma y cambia el terreno, registrar lo que ven y llevar esa información de vuelta a la civilización.
+[name="Magallan"] La Corriente Negra de Bolívar, las llanuras de las tierras altas de Kazimierz, los volcanes submarinos de Iberia... Hubo un tiempo en que nadie los había visto tampoco.
+[name="Magallan"] Pero ahora los exploradores ya han ido, han vuelto y han plantado sus banderas.
+[name="Magallan"] Y todavía quedan muchos lugares en el mundo que nadie ha pisado. Pero eso es todo lo que significa. Todavía no.
+[name="Magallan"] Hoy yo pisé este campo de hielo. Eso significa que más personas vendrán en el futuro.
+[name="Magallan"] Y no sabemos en qué circunstancias van a llegar.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Y si nadie más viene mientras vivas?
+[name="Simone"] Cuando te vayas, ¿no quedará esta estación en ruinas?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] No puedo rendirme. Siempre existe esa pequeña posibilidad de que, dentro de dos meses, llegue algún explorador que hoy solo existe en mi imaginación.
+[name="Magallan"] Simone... Tienes que entenderlo. Yo, Magallan, creo en la exploración. Creo en los exploradores.
+[name="Magallan"] Algún día, nuestras huellas cubrirán toda esta tierra.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ...Has puesto tus esperanzas en un futuro que quizá nunca llegue. ¿No te decepcionarás?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] No importa. Una exploradora pasa toda su vida haciendo descubrimientos y toda su vida llevándose decepciones.
+[name="Magallan"] Ningún descubrimiento pertenece solo a quien lo hace. Cada uno de nosotros se apoya en todos los exploradores que vinieron antes. Cada descubrimiento está ligado a un pasado largo y lleno de historias.
+[name="Magallan"] Por ejemplo, yo estoy aquí, en este campo de hielo, gracias a una historia que escuché de niña.
+[name="Magallan"] Pero sé en el fondo que, aunque lo que busco no exista, todo lo que hago sigue teniendo sentido.
+[name="Magallan"] Aunque no sea más que un sentido vacío, decepcionante e imaginario.
+[name="Magallan"] Uf, este calentador es demasiado potente... La última vez me quemó el pelo. Bueno, ¡a encenderlo!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ...Ya veo.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Sí! Bueno, ¡allá voy!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Déjame ir en tu lugar.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¿Eh?
+[name="Magallan"] Simone, viniste a buscar a alguien, ¿no? ¡Aquí no estamos contratando a nadie!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Ya la encontré.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah.
+[name="Magallan"] ¿Te refieres a mí, a Magallan?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Las condiciones empeoraron tanto que nuestro mensajero no pudo avisarte con anticipación.
+[name="Simone"] Permíteme presentarme de nuevo. Soy una operadora de Rhodes Island, de nombre en clave 'Santalla'. Estoy aquí para llevarte con nosotros. Por supuesto, puedes seguir llamándome Simone.
+[name="Simone"] Déjame ir en tu lugar.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Vaya...
+[name="Magallan"] No. ¡Es demasiado arriesgado!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Eso debería decirte yo a ti.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] No, no, no. Aquí la especialista de campo soy yo. Es mi responsabilidad.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No me subestimes.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Ah.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Dime cómo hacer la reparación, operadora Magallan. Y déjame encargarme de todo lo de afuera.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] Bueno, bueno, entendido. ¡Toma esto!
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] ¿Qué es?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Solo presiona este botón y saldré a buscarte! Y lleva esto, y esto también...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] Jeje, gracias...
+[name="Simone"] Sin duda encontré a la persona indicada. No los necesito, Magallan.
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="Magallan"] ¡Sí los necesitas! No puedo dejar que salgas sin...
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="Simone"] No. Operadora Magallan... confía en mí.
+[name="Simone"] La tierra también confía en mí.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2")]
+[name="Simone"] Pasamos toda la vida haciendo descubrimientos y toda la vida llevándonos decepciones. ¿Verdad?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="???"] Sami necia. ¿Qué vas a lograr resistiéndote?
+[name="???"] Eres impresionante, sin duda. No podemos escapar de esta tormenta.
+[name="???"] Pero ¿qué importa? ¡Ursus los aplastará, se tragará sus ciudades y devorará sus tierras!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="???"] Bruja... no te mataremos.
+[name="???"] Nosotros moriremos, pero tú vivirás. Tienes que vivir. ¡Tienes que ver la tierra manchada de sangre!
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="???"] Toma esto. ¡Un regalo de los muertos! ¡Recíbelo en el ojo!
+[name="???"] ¡Grita! ¡Llora! ¡Y luego vive!
+[name="???"] ¡Nosotros morimos con gloria! ¡Tú vivirás en la deshonra! ¡¡Para siempre!!
+[name="???"] ¡Bruja!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2")]
+[name="Simone"]  Es verdad. ¿Por qué siempre creí que este mundo iba a morir?
+[name="Simone"]  Mientras haya niñas como ella, el mundo encontrará la forma de florecer.
+[name="Simone"]  Tranquila, Magallan. Hay cosas que están fuera de tu alcance. Déjaselas a los adultos. A nosotros también nos hace bien.
+[name="Simone"]  '...Escucha ♪...'
+[name="Simone"]  '...La vida florece en blanco, negras semillas enterradas en lo profundo de la noche... ♪'
+[name="Simone"]  'Canta, muchacha hermosa. Grita, muchacha hermosa ♪'
+[name="Simone"]  'La nieve escucha tu canto, la ventisca te abriga ♪'
+[name="Simone"]  ——Nieves de Northlands, ¿escuchan mi canción?
+[Character]
+[name="Simone"]  Magallan... Quiero que sigas tus sueños.
+[name="Simone"]  Listo. Eso debería detener la nevada.
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

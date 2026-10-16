@@ -1,0 +1,672 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Operational Intelligence: Tarea después de clase
+[Dialog]
+[Delay(time=1)]
+[Dialog]
+[Character]
+[Background(image="bg_light",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+Todo era blanco.
+Desde el cielo sobre mi cabeza hasta el suelo bajo mis pies, todo lo que veía era de un blanco que me transmitía calma.
+Un blanco puro, silencioso y vacío.
+Solo las llamas parpadeaban y se agitaban.
+Poco a poco, mi sueño se fue desvaneciendo en silencio, hasta que finalmente desperté.
+'¿Dónde estoy?'
+No hubo respuesta.
+'¿Por qué estoy aquí?'
+No hubo respuesta.
+'¿Debería irme?'
+No hubo respuesta.
+'......'
+No había nadie más que yo.
+No había nada más que yo.
+Y así,
+Entre tantas dudas, solo quedó una——
+'¿Qué... eres?'
+......
+............
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+02:35 P.M. \ Lluvioso y nublado
+Arca de Rhodes Island - Cabina n.º 2 - Dormitorios de los operadores
+[Dialog]
+[Character(name="char_134_ifrit_5#7",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="Ifrit"]  !!
+[name="Ifrit"]  ...Uf.
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  (Otra vez. ¿Por qué siempre tengo el mismo sueño? ¿Qué demonios significa?)
+[name="Ifrit"]  (Agh. Dormí en una mala postura. Me late la cabeza.)
+[name="Ifrit"]  (Se rasca) Todo es culpa de ese maldito Doctor. ¡Estas preguntas son demasiado difíciles!
+[name="Ifrit"]  ¿De qué se supone que trata esto? ¿Área de una superficie? ¿A quién le importa?
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"]  ¡Aaaaaagh!
+[name="Ifrit"]  ¡Nonononono! ¡Ahora no! ¡No te prendas!
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  Eeeeep...
+[name="Ifrit"]  Chamusqué el borde del escritorio... Bueno, al menos no quemé la hoja de ejercicios.
+[name="Ifrit"]  Este Doctor...
+[Dialog]
+[Character]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  Agh, ¿de verdad tengo que hacer todo esto? Qué maldito fastidio...
+[name="Ifrit"]  ¿Eh? ¿Estudiar me hace bien?
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  Vamos. Como si no lo supiera. Si no, ¿para qué estudiaría alguien contigo?
+[name="Ifrit"]  ¡Pero es demasiada tarea! Y además, ¿qué diferencia hay entre esta palabra y esta otra?
+[name="Ifrit"]  Te digo dos palabras y Silence me quita los chiles secos. ¡Todo es culpa tuya!
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡Oye, ¿de qué te ríes?!
+[Decision(options="Sé dónde esconde los chiles secos.;......;Pata de gusano de arena al carbón. ¿Quieres una?",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  ¡¿En serio?! ¡¿Dónde?!
+[name="Ifrit"]  Quiero ir a buscarlos contigo. Así nos regañará a los dos.
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡Deja de sonreír así sin decir nada, das mucho miedo!
+[name="Ifrit"]  ¿Simplemente no quieres contestarme?
+[Predicate(references="3")]
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  Qué asco, Doctor, ¿qué es eso?
+[name="Ifrit"]  ¡No, no! ¡No lo quiero! ——¿mmm?
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  ¿Hm?
+[name="Ifrit"]  (Mastica) Mmm.
+[name="Ifrit"]  (Traga) Glup... ¿ah?
+[name="Ifrit"]  ¿Q-qué acabo de comer?
+[name="Ifrit"]  No importa...
+[Predicate(references="1;2;3")]
+[Character(name="char_134_ifrit_5#5")]
+[name="Ifrit"]  Oye, Doctor, ¿Silence va a salir a una misión mañana?
+[name="Ifrit"]  ¿Crees que yo también pueda ir? Sabes lo poderosa que soy, ¿no?
+[name="Ifrit"]  Habla con ella por mí. A ver si consigues que me deje ir.
+[Decision(options="Es una operación de limpieza. Tú eres mejor en combate, ¿no?;Ya recibimos bastantes quejas este mes. Quédate tranquila un tiempo.",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  ¿De qué hablas? Puedo encargarme de eso.
+[name="Ifrit"]  Entonces, ¿por qué no estamos peleando ahora? Mándame de una vez. ¡Quiero mostrarles a todos mi poder!
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  Puedo convertir todo un campo de batalla en vidrio con mis llamas. ¡Solo tienen envidia porque ellos no pueden!
+[name="Ifrit"]  ¡No me importa lo que digan!
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  Tú y Silence creen en mí, ¿no?
+[name="Ifrit"]  Los demás no entienden. Ellos no me importan, y yo no les importo a ellos.
+[name="Ifrit"]  ¡Pero por qué! ¡Dime por qué!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Decision(options="¡Ifrit, cálmate!",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#8")]
+[name="Ifrit"]  ¡Gah!
+[Dialog]
+[Character]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  Te odio.
+[name="Ifrit"]  Olvídalo. Vete al diablo. Mira. Esta, esta otra, todas estas... todas son C.
+[name="Ifrit"]  Y esta... no la entiendo bien. No importa. También es C.
+[Character(name="char_134_ifrit_5#1")]
+[name="Ifrit"]  Ahí está. ¡Listo...!
+[Dialog]
+[Character]
+[CameraShake(duration=0.3, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Operadora médica"]  Es hora de tu revisión médica, Ifrit.
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  Agh.
+[name="Ifrit"]  Ya llegó otra doctora fastidiosa.
+[Character(name="char_016_medic")]
+[name="Operadora médica"]  ¿Por qué huele a quemado...?
+[name="Operadora médica"]  ¿Ifrit? Colabora conmigo.
+[name="Operadora médica"]  Hoy vamos a medir la densidad de cristales de Originium en tu sangre. ¿Vas a cooperar...? ¿Mmm? ¿Qué le pasó a este escritorio? ¿Cómo se quemó?
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=2)]
+[name="Ifrit"]  No te preocupes por eso. Fue un accidente.
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=1)]
+[name="Operadora médica"]  Ifrit... sabes que esto es peligroso.
+[name="Operadora médica"]  No puedes andar provocando incendios dentro de Rhodes Island. Tienes que controlarte.
+[name="Operadora médica"]  Les dije que no podemos usar medicamentos inhibidores, pero tienes que colaborar con nosotros...
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=2)]
+[name="Ifrit"]  ......
+[name="Ifrit"]  ¿Ya terminaste? ¡Cómo te gusta oírte hablar!
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=1)]
+[name="Operadora médica"]  ...Ifrit, soy enfermera. La verdad, no se me da bien tratar con niños.
+[name="Operadora médica"]  Así que, ¿crees que podríamos, no sé, hablar?
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=2)]
+[name="Ifrit"]  ¡¿A quién le dices niña?! ¡¿Alguna vez te pones a pensar?!
+[name="Ifrit"]  ¡¿Por qué tengo que aguantar a gente como tú todo el día?! ¡¿Por qué no me dejan en paz?!
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=1)]
+[name="Operadora médica"]  Ifrit... solo estoy haciendo mi trabajo.
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=2)]
+[name="Ifrit"]  ¡Pues hazlo en otra parte! ¡Me dan ganas de vomitar cada vez que veo a esos imbéciles con sus estúpidas batas blancas!
+[name="Ifrit"]  Quítate de mi camino. Me voy.
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=1)]
+[name="Operadora médica"]  Pero tu revisión...
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=2)]
+[name="Ifrit"]  ¡Te voy a quitar por la fuerza!
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"]  ¡¡Aaah!!
+[name="Ifrit"]  ¡M-mi tarea! ¡S-se quemó!
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡¿Qué hiciste?! ¡Fue tu culpa!
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=1)]
+[name="Operadora médica"]  ¡Ifrit! ¡Rápido! ¡Las llamas!
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡¡Te dije que me dejaras en paz!!
+[name="Ifrit"]  ¡Me las vas a pagar!
+[Character(name="char_016_medic")]
+[name="Operadora médica"]  ¡E-espera! Iré a buscar a Nightingale. ¡Espera un momento!
+[Dialog]
+[Character(fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_134_ifrit_5#8")]
+[name="Ifrit"]   ...Por qué.
+[name="Ifrit"]   ¿Qué hice esta vez? Maldita sea...
+[name="Ifrit"]   ¡Mi tarea!
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]   Está... arruinada.
+[name="Ifrit"]   (Silence tampoco quiere llevarme. ¡Con lo poderosa que soy!)
+[name="Ifrit"]   (El Doctor también se fue. Solo quedamos yo y esos enfermos de bata blanca...)
+[name="Ifrit"]   (Es una porquería. Me tienen tanto miedo que huyen lo más lejos que pueden.)
+[name="Ifrit"]   (Mi cuaderno... está un poco chamuscado, pero todavía sirve.)
+[name="Ifrit"]   (Da igual. Dejo los ejercicios en el escritorio del Doctor y listo, ¿no?)
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="char_193_frostl_1#4",fadetime=0.5,block=true)]
+[Delay(time=2)] 
+[name="Frostleaf"]  ¿?
+[Character(name="char_193_frostl_1#6")]
+[name="Frostleaf"]  ......
+[name="Frostleaf"]  ¿Necesitas algo?
+[Character(name="char_144_red_7#7")]
+[CameraShake(duration=0.3, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Projekt Red"]  !
+[Character(name="char_193_frostl_1#3")]
+[name="Frostleaf"]  Vas a asustar a la gente si sigues haciendo eso.
+[Character(name="char_144_red_7#6")]
+[name="Projekt Red"]  Solo estoy caminando.
+[Character(name="char_193_frostl_1#3")]
+[name="Frostleaf"]  La gente normal no camina por las paredes.
+[Character(name="char_144_red_7#4")]
+[name="Projekt Red"]  ¿?
+[Character(name="char_193_frostl_1#5")]
+[name="Frostleaf"]  Olvídalo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="Frostleaf"]  ¿Qué es eso que tienes en la mano...?
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  Tarea.
+[name="Projekt Red"]  Es un fastidio. Pero Kal'tsit dijo que le hiciera caso al Doctor. No tenía opción.
+[name="Projekt Red"]  ¿Entiendes esto? Esta palabra, no la conozco.
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7",focus=1)]
+[name="Frostleaf"]  Me... me lo estás preguntando a mí.
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  ¿No sabes?
+[Character(name="char_193_frostl_1#3",name2="char_144_red_7",focus=1)]
+[name="Frostleaf"]  Puedo intentarlo. Déjame ver.
+[name="Frostleaf"]  Esta palabra... Mmm... Yo tampoco estoy segura.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]  ...Creo que es así.
+[name="Frostleaf"]  ¿Ahora lo entiendes? Me preocupa no haberme explicado bien.
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  Sí. Muy claro.
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="Frostleaf"]  Me alegra.
+[name="Frostleaf"]  Pero también podrías habérselo preguntado al Doctor. Él lo habría explicado mejor que yo.
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  Sí. Pero creo que Frostleaf habla con suavidad.
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="Frostleaf"]  ...Ya veo.
+[Dialog]
+[Character]
+[name="???"]  ¡¿Qué hacen ustedes dos ahí en el pasillo?!
+[Character(name="char_134_ifrit_5",fadetime=0.5,block=true)]
+[Delay(time=1)]
+[name="Ifrit"]  Oye, Caperucita Roja, ¿verdad? ¿Por qué nunca te veo en clase...?
+[Character(name="char_144_red_7")]
+[name="Projekt Red"]  ——Ifrit.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]  Ifrit, no te acerques tanto a ella.
+[name="Frostleaf"]  Red tiene reflejos defensivos muy rápidos. Podría atacarte sin querer.
+[Character(name="char_144_red_7")]
+[name="Projekt Red"]  ¿Reflejos defensivos?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]  ¿Qué les pasa a las cosas que se acercan a menos de cinco centímetros de ti?
+[Character(name="char_144_red_7")]
+[name="Projekt Red"]  Las corto.
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]  ¿Ves?
+[Character(name="char_134_ifrit_5",name2="char_193_frostl_1",focus=1)]
+[name="Ifrit"]  Ah... Parece que sabes mucho de ella, Cubito de Hielo.
+[Character(name="char_134_ifrit_5",name2="char_193_frostl_1",focus=2)]
+[name="Frostleaf"]  Leí el manual del operador y hablé con Dobermann.
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="Frostleaf"]  Pero ¿crees que podrías relajarte un poco cuando estás con nosotras, Red?
+[Character(name="char_193_frostl_1",name2="char_144_red_7#4",focus=2)]
+[name="Projekt Red"]  ¿?
+[Character(name="char_193_frostl_1",name2="char_144_red_7#4",focus=1)]
+[name="Frostleaf"]  No importa...
+[Character(name="char_134_ifrit_5#6")]
+[name="Ifrit"]  ¡Pff.. jajaja!
+[Character(name="char_134_ifrit_5#6",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  ¿Qué es tan gracioso?
+[Character(name="char_134_ifrit_5#3",name2="char_144_red_7",focus=1)]
+[name="Ifrit"]  ¿Ah?
+[Character(name="char_193_frostl_1")]
+[name="Frostleaf"]  No le hagas caso, Red.
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  Agh.
+[Character(name="char_134_ifrit_5#7",name2="char_193_frostl_1",focus=2)]
+[name="Frostleaf"]  ¿Mmm...? ¿Qué escondes detrás de la espalda?
+[Character(name="char_134_ifrit_5#7",name2="char_193_frostl_1",focus=1)]
+[name="Ifrit"]  ¿Ah? ¿Esto? E-es mi tarea.
+[name="Ifrit"]  La poderosa Ifrit la resolvió sin problemas.
+[Character(name="char_134_ifrit_5#7",name2="char_193_frostl_1",focus=2)]
+[name="Frostleaf"]  ¿Ah...? Me alegra.
+[Character(name="char_134_ifrit_5#7",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  Huele a quemado.
+[name="Projekt Red"]  Ifrit quemó su tarea.
+[Character(name="char_134_ifrit_5#8",name2="char_144_red_7",focus=1)]
+[name="Ifrit"]  ......
+[name="Ifrit"]  No lo hice a propósito.
+[Character(name="char_134_ifrit_5#8",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  Ah.
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=1)]
+[name="Ifrit"]  ...Crees que quemé mi tarea para no tener que terminarla, ¿verdad?
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  No lo sé.
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=1)]
+[name="Ifrit"]  Dilo de una vez.
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  ¿?
+[Character(name="char_193_frostl_1#6")]
+[name="Frostleaf"]  No, Ifrit. Ella no habla mucho...
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  ¿Estás enojada?
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=1)]
+[name="Ifrit"]  ......
+[name="Ifrit"]  ¡Te odio! Eres la peor. ¿Por qué tenemos que estar en la misma clase?
+[name="Ifrit"]  ¿Por qué hoy todo sale tan maaal...? ¿Por qué siempre me pasa esto a mííí?
+[Character(name="char_134_ifrit_5#9",name2="char_193_frostl_1",focus=2)]
+[name="Frostleaf"]  Cálmate, Ifrit.
+[name="Frostleaf"]  La temperatura está subiendo. Esto se está poniendo peligroso.
+[Character(name="char_134_ifrit_5#2",name2="char_193_frostl_1",focus=1)]
+[name="Ifrit"]  ...¿eh?
+[name="Ifrit"]  No actúes como si me conocieras. ¡Estoy bien! ¡No me hables como si lo supieras todo!
+[Character(name="char_144_red_7#7")]
+[name="Projekt Red"]  ¿Una amenaza?
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7#5",focus=1)]
+[name="Frostleaf"]  ¡No, Red, está bien! ¡Ella es así!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[stopmusic(fadetime=1)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+Monstruo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  Gah.
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7",focus=2)]
+[name="Projekt Red"]  Entendido.
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¿Qué entendiste...?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+Monstruo.
+Un monstruo que lastima a la gente. Un monstruo que quema cosas. Un monstruo que no puede controlarse.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  D... Duele... Agh...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+Monstruo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_144_red_7#5")]
+[name="Projekt Red"]  ¿Necesitas quemar algo?
+[Character(name="char_134_ifrit_5#2",name2="char_193_frostl_1#6",focus=2)]
+[name="Frostleaf"]  Espera, Ifrit... aquí no.
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡No te metas!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+Monstruo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡No me conoces!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+Monstruo.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_193_frostl_1#6")]
+[name="Frostleaf"]  ¡Alto!
+[Character(name="char_144_red_7#5")]
+[name="Projekt Red"]  Es una amenaza para mí. Una amenaza para Rhodes Island.
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7#5",focus=1)]
+[name="Frostleaf"]  ¡No lo hagas, Red! ¡Solo se está acalorando!
+[name="Frostleaf"]  Ustedes dos——
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¿Quién se está acalorando? ¡¿Dices que se me calentó la cabeza?! ¡Estoy pensando con claridad! ¡Eres tú y esa actitud de reina del hielo lo que nadie soporta! ¡Aléjate de mí de una maldita vez o te convertiré en cenizas!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+No. No lo hagas.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_144_red_7#5")]
+[name="Projekt Red"]  Está fuera de control. Qué débil.
+[Character(name="char_134_ifrit_5#2")]
+[name="Ifrit"]  ¡Vas a arder, Caperucita!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+Monstruo.
+No, no lo hagas. Son amigas.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_193_frostl_1#6")]
+[name="Frostleaf"]  ¡No! ¡Ifrit!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+¡Monstruo!
+¡No lo soy! ¡No soy un monstruo!
+Las llamas se encienden.
+Las llamas están fuera de control.
+El monstruo gigante suelta una carcajada.
+El cuarto blanco arde hasta quedar negro y carbonizado.
+Algunos lloran. Otros huyen.
+¿Dónde estoy?
+Alguien se acerca. Una persona que conozco. Alta...
+[Character(name="char_134_ifrit_5#8")]
+[name="Ifrit"]  No...
+[name="Ifrit"]  Sari... salva... a los demás...
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Dialog]
+[Character]
+[Character(name="char_249_muesys_8#8")]
+[name="???"] Ay, ay, ¿qué está pasando aquí?
+[name="???"] ¿Iffy? No puedes andar prendiendo fuego en los pasillos. Saria se enojaría mucho si se enterara. Silence también.
+[name="???"] ¡Vamos...!
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"]  No, no es... tú no eres...
+[Character(name="char_249_muesys_8#8")]
+[name="???"] Vamos a reunir unas moléculas de agua para calmar esas llamas...
+[Character(name="char_134_ifrit_5#3")]
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Ifrit"]  ¡¿?!
+[name="Ifrit"]  Pfah——¡Está helada!
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"]  ¡¿Qué... MuMu?!
+[name="Ifrit"]  MuMu, ayúdame... No quiero...
+[Dialog]
+[Character]
+[Character(name="char_249_muesys_8#1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="???"] Shhh——No puedes decirle a nadie que estoy aquí.
+[name="???"] Está bien. Yo me encargo.
+[name="???"] Jeje, no estoy preocupada. Vas a estar bien.
+[name="???"] Pero ¿recuerdas lo que acordamos, Iffy?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, fadetime=1, block=true)]
+Cruel.
+Imprudente.
+Descontrolada.
+Lo destruyó todo.
+......
+Sé que todo es verdad.
+Los experimentos dolorosos me dan náuseas.
+Las miradas de la gente de bata blanca me dan náuseas.
+Este lugar me da náuseas.
+Esto no es vida.
+Esto no es un futuro.
+Bastaría una llama, una sola lengua de fuego lo bastante caliente, para que todos esos ojos asquerosos, todas esas paredes blancas que apestan a desinfectante, todo se volviera humo.
+Mientras sobreviva la gente que quiero.
+Los demás no importan.
+——Así pensaba antes. Antes de llegar aquí.
+Creo que siempre pensé así.
+Pero ahora soy diferente.
+Cruel.
+Lo sé, lo sé.
+Imprudente.
+Bueno, está bien, tendré cuidado.
+Descontrolada.
+...¡No fue para tanto!
+Lo destruyó todo.
+¡No fue a propósito!
+No es que no lo sepa. 
+Pero al menos, mmm...
+Como dijiste. Puedo hacerlo.
+No voy a quemar Rhodes Island ni mi tarea.
+Ni a mis amigos. Mmm... ¡De todos modos, mis amigos son tan increíbles como yo!
+Así que está bien. Lo entiendo. No me he esforzado lo suficiente. Tengo que esforzarme aún más.
+Ya verán. ¡Les voy a demostrar de lo que soy capaz!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Character(name="char_134_ifrit_5#7")]
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Ifrit"]  ¡Jum!
+[Decision(options="¿Todo un pasillo destruido, así nada más?;Pata de gusano de arena al carbón. ¿Quieres una?",values="1;2")]
+[Predicate(references="1")]
+[name="Ifrit"] ¡N-no! ¡Agh! ¡No es asunto tuyo!
+[name="Ifrit"] Grr... Esa Caperucita Roja y los demás, ¿están bien...?
+[name="Ifrit"] ¿Ayudaste a Caperucita a escapar? Jum, qué bueno.
+[name="Ifrit"] ¿Soy peligrosa? ¿Todos somos peligrosos? Ah...
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  Dame una... ¡N-no! ¡No quiero comer eso!
+[name="Ifrit"]  No puedo... comer tanto.
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  Todo eso que pasó en el pasillo, no lo hice a propósito... Así que, supongo, ¡l-lo siento!
+[name="Ifrit"]  Qué asco, ¿por qué me miras así...?
+[name="Ifrit"]  Ah, oye, ¿no tienes que revisar mi tarea? ¡Aquí está!
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Decision(options="Este cuaderno parece un poco quemado.;......",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  ¡Gah, si no te gusta, no lo agarres!
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#9")]
+[name="Ifrit"]  Todavía puedes leerlo, ¿no?
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  Toma. Esta es la tarea.
+[name="Ifrit"]  Hubo un pequeño accidente y quedó así... Oye, ¿por qué me miras de esa manera? ¡Dilo de una vez!
+[name="Ifrit"]  ¡Así son las cosas! No me importa si no me crees. La hice toda. ¡De verdad!
+[name="Ifrit"]  S-solo quedó un poco... rota... y chamuscada... y salpicada.
+[name="Ifrit"]  Y, eh, mmm, algunas respuestas las adiviné, pero... ¡La próxima vez lo haré mejor!
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  ......
+[name="Ifrit"]  Volví a meter la pata.
+[name="Ifrit"]  Regáñame de una vez. Puedo aguantarlo.
+[Decision(options="Ifrit, dame la mano.",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  ¿Eh? ¿Por qué?
+[name="Ifrit"]  ¡Ay! ¡No tan fuerte!
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=1)]
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"]  ¿Hm?
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"]  ¿Son mis... chiles secos? ¡Mis chiles secos favoritos!
+[name="Ifrit"]  Tú... ¿eh? ¿Me los puedo quedar?
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  Oye... ¡qué demonios! ¡Imbécil! No creas que puedes darme algo de comer y después... y después...
+[name="Ifrit"]  (Sorbe la nariz)
+[name="Ifrit"]  Ja. Está bien. ¡Pero sigo pensando que ustedes, idiotas de bata blanca, dan muchísimo asco!
+[name="Ifrit"]  (Susurra) ¡Aunque supongo que puedo hacer una excepción contigo!
+[name="Ifrit"]  ¡Pero te lo advierto! ¡No me trates como una niña todo el tiempo, como hace Silence!
+[name="Ifrit"]  ¡Me voy a enojar! ¡Y no te gustaría verme enojada!
+[Decision(options="Eres una operadora ejemplar.;Realmente imponente, Iffy.",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  Gr... Grr... ¡¿Y a qué viene eso de repente?! ¡Si es obvio!
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"]  Gah——Cof, cof, cof.
+[name="Ifrit"]  ¡Y quién te enseñó ese apodo, ade——! No, ¡quién—— quién te dijo que podías llamarme así!
+[Predicate(references="1;2")]
+[Decision(options="Participarás en la próxima operación.",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"]  !!
+[name="Ifrit"]  ¿En serio? ¿De verdad, de verdad?
+[Character(name="char_134_ifrit_5#6")]
+[name="Ifrit"]  ¿Lo dices en serio? ¿Puedo salir en la próxima misión? ¿De verdad? ¿No es broma?
+[Decision(options="Pero...",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"] ¿Pero qué?
+[name="Ifrit"] ¡Abre la maldita boca! 
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"] ¿Quieres que lo piense yo sola? ¿Qué se supone que significa eso...?
+[name="Ifrit"] ......
+[name="Ifrit"] Cierto. Tengo que ir a disculparme...
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"] La señora de la enfermería, no quería asustarla... Y no debí tratar tan mal a Frostleaf y a Caperucita...
+[name="Ifrit"] Oye, Doctor, ¿me haces un favor? ¿Puedes acompañarme? ¿A disculparme?
+[Decision(options="¿Por qué no vas sola?;¿Vas a asustar a más médicos?",values="1;2")]
+[Predicate(references="1;2")]
+[name="Ifrit"] Yo...
+[name="Ifrit"] Sé que metí la pata.
+[name="Ifrit"] ¡Pero de verdad son lo peor! Aun así... no debería hacerles eso...
+[name="Ifrit"] Y tampoco quiero que te echen la culpa a ti.
+[Decision(options="La próxima vez que vayamos a la playa, ¿te gustaría venir con nosotros?",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#4")]
+[name="Ifrit"] ¿Playa? ¿Qué es eso?
+[name="Ifrit"] No importa. ¡Voy! ¡Quiero ir!
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"] Eh, pero ¿por qué me invitaste de repente? Eres un poco raro, Doctor...
+[Decision(options="Porque, si te portas bien, creo que podría convencer a Silence de que te deje ir.",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#7")]
+[name="Ifrit"] Agh. Siempre estás intentando que haga algo, ¿eh?
+[Decision(options="¿Irás a disculparte?",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="Ifrit"] Jum. ¡Está bien! ¡Puedo hacerlo! ¡Puedo disculparme!
+[name="Ifrit"] Entonces, ¿tenemos un trato? ¡No te puedes echar para atrás! ¡Tienes que dejarme ir!
+[Character(name="char_134_ifrit_5#5")]
+[name="Ifrit"] Jeje. '¡Playa!' Sí, suena bastante bien.
+[name="Ifrit"] ¡Hasta mañana, Doctor!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[name="Ifrit"] ......
+[name="Ifrit"] ¿Sigues mirando?
+[Dialog]
+[Delay(time=1)]
+[name="Ifrit"] Sí. Sé cómo me miran. Sé lo que piensan de mí.
+[name="Ifrit"] Pero no me molesta. ¿Qué me importa? 
+[Dialog]
+[Delay(time=1)]
+[name="Ifrit"] ¡Te voy a derretir!
+[name="Ifrit"] Sabes, tú tienes la culpa de que pase vergüenza. Por eso siempre termino metida en problemas.
+¿Qué sería de ti sin mí?
+[name="Ifrit"] Ja. ¿Crees que todavía te tengo miedo?
+[name="Ifrit"] Con todo el daño que me haces, con todo el daño que les haces a los demás...
+[name="Ifrit"] ¡Gordo! ¡Idiota! ¡Cerdo! ¡Globo con cuernos!
+Jaja. Esa estuvo buena.
+[name="Ifrit"] Mira, nunca más voy a quemarlo todo.
+[name="Ifrit"] Lo entiendo. Hay cosas que puedo quemar y cosas que no.
+¡No hay nada que no se pueda quemar!
+[name="Ifrit"] ¿Qué? ¡Yo decido!
+[name="Ifrit"] ¡Si la poderosa Ifrit decide no quemar algo, no se puede quemar!
+[name="Ifrit"] Y todo lo que se interponga en mi camino, lo reduciré a cenizas.
+[name="Ifrit"] ¿Pero las cosas que no puedo quemar? No las voy a tocar. ¡Ni con una sola llama!
+Entonces esperaré, pequeña.
+[Dialog]
+[Character(name="char_134_ifrit_5#8",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Ifrit"]  ......
+[name="Ifrit"]  Tarde o temprano, ese día... ¡llegará!
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

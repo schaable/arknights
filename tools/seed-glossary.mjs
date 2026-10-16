@@ -42,6 +42,21 @@ const CURATED_DNT = [
   "Hua Shui", "Causeway Bell", "Ha Wan", "Front Bay", "Scorpio Palace",
   "Sheung Wan", "Goodie Foodie",
   "Fumizuki", "Bad Guy", "Witte", "Kashchey", "Tal",
+  // Operational Intelligence: The Anonymous Ones' War
+  "Buldrokkas'tee", "Barclay", "Semyon", "Alyosha", "Britt", "Kazimierz", "Kazdel",
+  "Slink", "Pter", "Scorpion", "Leafa", "Milim", "Tipsy", "Slanna", "Mimi",
+  "Mary", "Thumbtack", "Mudflower", "Macron",
+  "Silverlance", "Northern Tundra Guerrillas",
+  // Operational Intelligence: Sniper Training
+  "Blacksteel", "Laterano",
+  // Operational Intelligence: Survival Notorization
+  "Dürrenmatt", "Siracusa", "Vulpo",
+  // Operational Intelligence: After-class Homework (nicknames)
+  "MuMu", "Iffy", "Sari", "Red",
+  // Operational Intelligence: Polaris
+  "Simone", "Maggie", "Infy", "Rhine Lab", "Sami", "Northlands", "Bolívar", "Iberia",
+  // Operational Intelligence: Among the Light and the Dust
+  "Sargon",
   // lore proper nouns (Originium/Sarkaz stay verbatim; Oripathy/Infected are
   // translated — see CURATED_TERMS)
   "Originium", "Sarkaz", "Chi Xiao",
@@ -69,6 +84,17 @@ const CURATED_TERMS = {
   "Reunion Member": "Miembro de Reunion",
   "Reunion Member A": "Miembro de Reunion A",
   "Reunion Member B": "Miembro de Reunion B",
+  "Reunion Troops": "Tropas de Reunion",
+  "Reunion Soldier A": "Soldado de Reunion A",
+  "Reunion Soldier B": "Soldado de Reunion B",
+  "Reunion Blademaster": "Maestro de la espada de Reunion",
+  "Pegasus Order of Knighthood": "Orden de Caballería Pegaso",
+  "Old Huntsman": "Viejo cazador",
+  "Notarial Hall": "Oficina Notarial",
+  "Laterano Notarial Hall": "Oficina Notarial de Laterano",
+  "Medic Operator": "Operadora médica",
+  Device: "Dispositivo",
+  "Black Flow": "Corriente Negra",
   "Rhodes Island Operator": "Operador de Rhodes Island",
   "Radio Operator": "Operador de radio",
   "Phantom Crossbowman": "Ballestero Fantasma",

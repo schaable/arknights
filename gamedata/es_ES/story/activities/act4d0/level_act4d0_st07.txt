@@ -1,0 +1,334 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] Operational Intelligence: Entre la luz y el polvo
+[Dialog]
+[Delay(time=1)]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Delay(time=0.4)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+11:30 A.M. \ Nublado
+Zona rural - Oficina de la ingeniera jefa de Rhodes Island
+[Dialog]
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"] ¿Qué estás haciendo esta vez?
+[Character]
+[Dialog]
+[Character(name="char_007_closre_1#5",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Closure"] Kal'tsit, ¿crees que pueda ver al Doctor un rato?
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"] ¿Ya pasó demasiado tiempo desde la última broma que le hiciste a {@nickname}? ¿Te estás impacientando?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] ¡Vamos! En realidad me preocupo mucho por los demás.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] La última vez que dijiste que te preocupabas por los demás, instalaste un sistema para transmitir 'El mercado nocturno de videos de Closure' a medianoche durante tres meses seguidos.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Pero...
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Todavía no tenemos forma de bajar el volumen.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Bueno, bueno, ¡lo admito! Quiero ir a molestar un poco al Doctor.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Sin mencionar la pérdida de memoria de {@nickname}. Ni siquiera puedo asegurar que el Doctor sepa quién eres.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] ¿Eh? ¿Durmió tanto que se quedó tonto? Qué pena. Tendré que llevarle algo rico como regalo para animarlo.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Como quieras. Solo procura no dar una mala impresión.
+[name="Kal'tsit"] Con Warfarin ya salió bastante mal. Si a eso le sumas las ideas equivocadas del Doctor sobre los vampiros, el asunto de Kazdel tendrá que posponerse. Indefinidamente.
+[name="Kal'tsit"] Esta es una oportunidad para mejorar tu imagen ante los demás. Aprovéchala bien.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+[name="Closure"] ¿Tan mala imagen tengo?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+[name="Kal'tsit"] Después de aquella vez que pusiste el sistema de climatización a 36 grados, sí.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Fue un corte de luz en el taller mecánico.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Encontramos tus huellas en la consola.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¡Fue un corte de luz en el taller mecánico!
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Hackeaste el sistema de vigilancia y borraste la grabación, pero la consola sirvió de respaldo biológico. Tengo trece muestras de tejido de trece ocasiones distintas.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+[name="Closure"] Perdón fue culpa mía ese enviado es un imbécil arrogante solo quiero bajarle los humos perdón.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+[name="Kal'tsit"] ......
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] En fin, la fiesta de bienvenida. La fiesta por el regreso del Dr. {@nickname}. ¿No vamos a hacer una?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Me temo que no. No con las circunstancias actuales.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Oye, ¿por qué tienes que ser así, Kal'tsit? Estamos hablando del Doctor, del Doctor que tiene amnesia. Tenemos que hacer que se sienta bienvenido y entre amigos. 
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] ¿Siempre pensaste así del Doctor?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Quizá... Nunca fui muy cercana al Doctor. Pero ¿no acabas de decir que es el momento perfecto para dar una buena impresión?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Closure, hablemos de otra cosa.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Jum. Si tú no vas, iré yo sola. No me importa lo que hagas.
+[name="Closure"] ¿Escuché que vamos a Lungmen? Creo que estaba en el itinerario.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Sí.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¿Y podremos movernos libremente?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Lungmen se ha vuelto bastante peligrosa.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¿Eh? ¿En serio? ¿Lungmen? Pensé que ahí todo era ley y orden.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Es la ciudad más cercana a Chernobog. Eso debería explicarlo.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Entonces, ¿por qué vamos?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Porque es la ciudad más cercana a Chernobog.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Creo que estás ocultando algo...
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] No. Dije todo lo que había que decir en la última reunión. Justo cuando estabas recostada en tu silla, con un antifaz, profundamente dormida.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¿Qué quieres que te diga? Mantener todo esto funcionando es agotador.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Nunca dije que te culpara. Sin ti, Rhodes Island ni siquiera podría ponerse en marcha.
+[name="Kal'tsit"] Pero aun así quiero despejar tus sospechas... ¿Para qué me llamaste exactamente?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] ¿Qué? ¿No puedo llamar a una vieja amiga porque sí?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Estaré en mi laboratorio.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+[name="Closure"] ¡Oye! ¡Espera! Bueno... se cortó la luz en dos pasillos del sector tres.
+[name="Closure"] ¿Puedes venir a revisar los cables conmigo?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+[name="Kal'tsit"] Basta con que envíes a un ingeniero. ¿Es un problema con los cables de alimentación?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] O podemos ir a revisarlos nosotras mismas.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Siempre que te pido una inspección, se la encargas a otro operador.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=2)]
+[name="Closure"] ¡De pronto despertó mi sentido de responsabilidad como ingeniera jefa de Rhodes Island! ¡Vamos!
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Vamos, sígueme el paso...
+[Character(name="char_007_closre_1")]
+[name="Closure"] ¿Eh?
+[Dialog]
+[Character]
+[Character(name="char_304_hvrain",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Heavyrain"] ......
+[Character(name="char_007_closre_1")]
+[name="Closure"] ......
+[name="Closure"] ¿¡Eh!?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Ella es Heavyrain.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Ah. ¿Heavyrain?
+[Character(name="char_304_hvrain",name2="char_007_closre_1#4",focus=1)]
+[name="Heavyrain"] Hola, señorita Closure.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=2)]
+[name="Closure"] ¡Qué niña tan educada! ¡Mira, Kal'tsit, es mucho más simpática que tú!
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=1)]
+[name="Kal'tsit"] Hmph.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+[name="Kal'tsit"] Heavyrain, déjame ver tu monitor.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+[name="Heavyrain"] ¿Este...? ¿El que tengo aquí, en el brazo izquierdo?
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+[name="Kal'tsit"] Sí. Ten cuidado de no tocar la aguja.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+[name="Heavyrain"] Entendido...
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+[name="Kal'tsit"] ...Los valores se ven bien. Tu hemoglobina ha subido. Te estás recuperando bien.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+[name="Heavyrain"] Gracias, Dra. Kal'tsit.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+[name="Kal'tsit"] No hace falta agradecerme. Solo hago mi trabajo. No se agradece a la gente por eso.
+[name="Kal'tsit"] ¿Sabes el camino de regreso, Heavyrain?
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+[name="Heavyrain"] Sí, lo sé.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+[name="Kal'tsit"] Entonces vuelve por tu cuenta. Closure y yo tenemos algo de lo que ocuparnos.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+[name="Heavyrain"] Pero soy guardia. Si me voy, ¿estará bien, Dra. Kal'tsit?
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+[name="Kal'tsit"] Creo que te equivocas, Heavyrain.
+[name="Kal'tsit"] Te pedí que nos acompañaras solo para que conocieras la distribución de la nave. Puede que no vengas mucho por aquí en el futuro.
+[name="Kal'tsit"] No necesito protección.
+[Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+[name="Heavyrain"] Entendido.
+[Character(name="char_304_hvrain")]
+[name="Heavyrain"] Entonces, con su permiso. Adiós, señorita Closure.
+[Character(name="char_007_closre_1#4")]
+[name="Closure"] Sí, adiós.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_007_closre_1")]
+[name="Closure"] ......
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] ¿Oíste, Kal'tsit? ¡Me llamó 'señorita'! Ay, qué niña tan buena...
+[name="Closure"] De verdad parecía querer ayudarte. ¿Y la mandaste a irse así?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Cada operadora tiene que encontrar su lugar en el mundo, igual que yo. Hacerla perder el tiempo con cosas que no se le dan bien no ayuda a nadie.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¿Tanto te cuesta hablar como una persona normal de vez en cuando?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Heavyrain estuvo en el ejército de Sargon.
+[name="Kal'tsit"] Antes de establecer relaciones con los demás, necesita encontrar el puesto adecuado para ella e integrarse en Rhodes Island. Para eso hacen falta apoyo y tolerancia, y que ella misma se conozca mejor.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Sí, sí, tus discursos me dan dolor de cabeza.
+[name="Closure"] ¿Es otra de las que recogiste de la calle y trajiste a casa?
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_ri_1",screenadapt="coverall")]
+[Blocker(a=0.3, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Tienes talento para recoger mascotas nuevas, Kal'tsit.
+[name="Closure"] ¿Cuántas llevamos ya?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Es uno de los pasos del 'Procedimiento de reclutamiento y formación de personal Infectado'.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Espera... El mes pasado hiciste una cirugía de 72 horas seguidas. ¿Era a ella a quien estabas operando?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Así es.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¿El equipo quirúrgico pasó por ocho o nueve cambios de turno, pero tú no dormiste en tres días?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Al menos se recuperó rápido.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Dime, Kal'tsit, ¿te drogas?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Me niego a responder esa pregunta.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Si no pregunto, nunca me lo vas a contar, ¿verdad?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] ¿De qué sirve hablar de esto?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Te exiges demasiado.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Puedo soportarlo.
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+[name="Closure"] ¡Qué oscuro!
+[name="Closure"] ¿No deberíamos usar la energía de respaldo?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+[name="Kal'tsit"] ¿No puedes ver?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Soy una vampira, claro que puedo ver.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Yo también.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Bien, entonces sigamos.
+[name="Closure"] Ya sé lo que acabo de decir, pero ¿pisé algo?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+[name="Closure"] ¡Augh! ¡¿Q-qué es esto?!
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+[name="Kal'tsit"] No es para tanto...
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=2)]
+[name="Closure"] ¿Eso es... una máquina de gachapon? ¡¿Qué hace aquí?!
+[name="Closure"] Ah. 'Colección de amigos peludos. 12 amigos peludos distintos para...' ¡Vaya, una edición secreta! ¡Genial!
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=1)]
+[name="Kal'tsit"] ¡Clo-sure!
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=2)]
+[name="Closure"] Hacía mucho que no trabajaba en un conducto oscuro como este. Sí que lo extrañaba.
+[name="Closure"] Y en aquel entonces Rhodes Island no era ni de cerca tan grande.
+[name="Closure"] ¡La llave de tuercas, por favor!
+[name="Closure"] ¡Gracias, Mon3tr!
+[name="Closure"] Hm...
+[name="Kal'tsit"] ¿Qué pasa?
+[name="Closure"] No alcanzo. ¿Puedes levantarme un poco para que arregle el cable?
+[name="Kal'tsit"] De acuerdo.
+[name="Closure"] Uf... Toda esta zona quedó completamente desconectada del suministro eléctrico. Podemos empezar a buscar la falla.
+[name="Closure"] Kal'tsit, ¿crees que fue un error ir a Chernobog a rescatar al Doctor?
+[name="Kal'tsit"] Sin duda fue imprudente entrar en Chernobog en ese momento.
+[name="Closure"] Entonces...
+[name="Kal'tsit"] Amiya estaba muy firme en su decisión. Nadie podía hacerla cambiar de opinión. Y ya sabes cómo son los operadores de élite.
+[name="Closure"] Solo se hizo porque tú te abstuviste.
+[name="Closure"] ¿Y si todo esto era una especie de prueba para Amiya?
+[name="Kal'tsit"] ¿Una prueba? No. O, mejor dicho, si fue una prueba, no se la puse yo. Fue la situación en la que se encontraba.
+[name="Kal'tsit"] Pero, con lo firme que estaba en su decisión, solo podía apoyarla... Aunque eso no significaba que tuviera que hacerle creer que todo saldría bien.
+[name="Kal'tsit"] La decisión fue suya.
+[name="Closure"] Bien dicho. Pero tú eres quien tiene que lidiar con las consecuencias. ¿No estás cansada...?
+[name="Kal'tsit"] Nadie acierta en todo de principio a fin, Closure. Ni siquiera yo.
+[name="Kal'tsit"] Pero logramos atravesar la oscuridad. Ahora solo esperamos la luz al final del túnel.
+[name="Kal'tsit"] Por cierto, ese segundo cable justo encima de tu cabeza está a punto de caerse.
+[name="Closure"] ¡Oye, oye, oye! ¡Sujétame bien! Si se cae el conector de corriente de tres pines, se acabó para las dos.
+[name="Closure"] Bien, espera, estoy acomodando el cable.
+[name="Kal'tsit"] ¿Acabas de meter dos juegos de cables enteros ahí atrás?
+[name="Closure"] ¡Shhh! Debo sentir la vibración de la electricidad en mi corazón para alcanzar la paz y el equilibrio con la corriente.
+[name="Kal'tsit"] Te aconsejo que pienses bien en lo que acabas de decir.
+[name="Closure"] Pero, Kal'tsit... Ah, ya debería estar. Prueba el interruptor.
+[name="Closure"] Como te decía, no importa qué acertijo intentabas contarme: si caminas en la oscuridad, necesitas algo de luz, ¿no?
+[name="Kal'tsit"] ¿No estamos arreglando las luces ahora mismo?
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1",name2="char_007_closre_1")]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Sí, ahí está.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] Closure.
+[name="Kal'tsit"] ¿Por qué me preguntas estas cosas?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Porque, si no pregunto, no me cuentas.
+[name="Closure"] Te guardas todo hasta que terminas volviéndote loca.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] ¿Entonces mis respuestas ni siquiera te importan?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] Creo que todo lo que me contaste es muuuy importante para ti.
+[name="Closure"] Así que sí, no importa tanto lo que digas... pero sí importa muchísimo que lo digas y que yo lo escuche con mis propios oídos.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] Qué pérdida de tiempo.
+[name="Kal'tsit"] La próxima vez te daré el informe por escrito.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] Pero entonces no vendrías conmigo.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] ¿Quién lo dice?
+[name="Kal'tsit"] Siempre que de verdad tengas luces que necesiten reparación.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¿Lo prometes?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] ¿Cómo es que siempre termino haciendo algún trato extraño e inexplicable contigo?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] ¡Para eso estamos los ingenieros!
+[name="Closure"] Mira, Kal'tsit, fíjate en este foco.
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+[name="Kal'tsit"] ¿Da mucha luz?
+[Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+[name="Closure"] ¡Sí, mucha luz!
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+[name="Kal'tsit"] ...
+[name="Kal'tsit"] Si siempre fueras así, estaría mucho menos tensa.
+[name="Kal'tsit"] Si tan solo...
+[Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+[name="Closure"] ¡Oye! ¡Cállate! ¡No lo digas!
+[name="Closure"] Solo guarda silencio... y disfrutemos juntas de esta lucecita.
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"] ......
+[name="Kal'tsit"] Sí que es una luz agradable y suave.
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

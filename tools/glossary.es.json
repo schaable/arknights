@@ -67,6 +67,7 @@
     "Alliance/Supportive Operator",
     "Almond",
     "Altar-type Radar",
+    "Alyosha",
     "Ambriel",
     "Amiya",
     "Amphibious Dock",
@@ -125,6 +126,7 @@
     "Bad Guy",
     "Bagpipe",
     "Ballista",
+    "Barclay",
     "Barge Captain",
     "Barreled Perfume",
     "Barrenland Arena",
@@ -157,6 +159,7 @@
     "Bimodule Robotic Arm",
     "Bison",
     "Blacknight",
+    "Blacksteel",
     "Blaze",
     "Blaze the Igniting Spark",
     "Blemishine",
@@ -174,6 +177,7 @@
     "Bombard",
     "Breeze",
     "Brigid",
+    "Britt",
     "Broca",
     "Broken",
     "Broken Fog Machine",
@@ -181,6 +185,7 @@
     "Bryophyta",
     "Bubble",
     "Budget-Savvy Doll",
+    "Buldrokkas'tee",
     "Burden Tourist",
     "Burdenbeast Traveler",
     "Buried Metal Chest",
@@ -574,7 +579,9 @@
     "Karlan Trade File",
     "Karlan Trade Model",
     "Kashchey",
+    "Kazdel",
     "Kazemaru",
+    "Kazimierz",
     "Kazimierz File",
     "Kazimierz Model",
     "Kestrel",
@@ -605,8 +612,10 @@
     "Large Corral",
     "Laser Sighter",
     "Lateran Clip",
+    "Laterano",
     "Lava",
     "Lava the Purgatory",
+    "Leafa",
     "Lee",
     "Leizi",
     "Leizi the Thunderbringer",
@@ -643,6 +652,7 @@
     "M3 Armor",
     "M3 Claw",
     "M3 Cocoon Shell",
+    "Macron",
     "Magallan",
     "Magic Gourd",
     "Mail Box",
@@ -651,6 +661,7 @@
     "Mantra",
     "Manual Booster",
     "Marcille",
+    "Mary",
     "Master's Shade",
     "Masterful Shadow Gear",
     "Matoimaru",
@@ -673,7 +684,9 @@
     "Midnight",
     "Mieszko coil",
     "Mieszko Coil",
+    "Milim",
     "Military Phone Booth",
+    "Mimi",
     "Mimic Matter",
     "Mine",
     "Mine Deployer",
@@ -710,6 +723,7 @@
     "Mousse",
     "Mr. Boom",
     "Mr. Nothing",
+    "Mudflower",
     "Mudrock",
     "Muelsyse",
     "Muk Wo",
@@ -745,6 +759,7 @@
     "Nikola",
     "Nine-Colored Deer",
     "Noir Corne",
+    "Northern Tundra Guerrillas",
     "Nowell",
     "Nursery Nurse Cosplayer",
     "Nutty",
@@ -846,6 +861,7 @@
     "Provence",
     "Proviso",
     "PRTS",
+    "Pter",
     "Ptilopsis",
     "Public Phone Booth",
     "Pudding",
@@ -965,6 +981,7 @@
     "Schwarz",
     "Scoring Station",
     "Scorpio Palace",
+    "Scorpion",
     "Scout",
     "Scutum",
     "Sealed Floor",
@@ -973,6 +990,7 @@
     "Self-Driving Cart Launchpoint",
     "Self-Driving Cart One-Way Road",
     "Self-Driving Recon Cart",
+    "Semyon",
     "Senshi",
     "Sensor Hub",
     "Sentry Post",
@@ -1007,6 +1025,7 @@
     "Silence the Paradigmatic",
     "SilverAsh",
     "SilverAsh the Reignfrost",
+    "Silverlance",
     "Silvernwhite Bulwark",
     "Skadi",
     "Skadi the Corrupting Heart",
@@ -1015,6 +1034,8 @@
     "Sky Pole",
     "Skybox",
     "Skyfire",
+    "Slanna",
+    "Slink",
     "Slug Lure",
     "Slumberfoot",
     "Small Shield",
@@ -1120,12 +1141,14 @@
     "THRM-EX",
     "Throne of Blood",
     "Throttle Valve",
+    "Thumbtack",
     "Tianshi's Cauldron",
     "Tide Controller",
     "Tide-Hunt Knight",
     "Timey-Wimey Telephone Booth",
     "Tin Man",
     "Tippi",
+    "Tipsy",
     "Titi",
     "Toddifons",
     "Tomimi",
@@ -1233,7 +1256,23 @@
     "Гум",
     "Зима",
     "Истина",
-    "Роса"
+    "Роса",
+    "Dürrenmatt",
+    "Siracusa",
+    "Vulpo",
+    "MuMu",
+    "Iffy",
+    "Sari",
+    "Red",
+    "Simone",
+    "Maggie",
+    "Infy",
+    "Rhine Lab",
+    "Sami",
+    "Northlands",
+    "Bolívar",
+    "Iberia",
+    "Sargon"
   ],
   "terms": {
     "Guard": "Guardia",
@@ -1323,7 +1362,18 @@
     "Phantom Crossbowman": "Ballestero Fantasma",
     "Speaker Witte": "presidente Witte",
     "Duke of Kashchey": "duque Kashchey",
-    "Chief's Office": "Despacho del jefe"
+    "Chief's Office": "Despacho del jefe",
+    "Reunion Troops": "Tropas de Reunion",
+    "Reunion Soldier A": "Soldado de Reunion A",
+    "Reunion Soldier B": "Soldado de Reunion B",
+    "Pegasus Order of Knighthood": "Orden de Caballería Pegaso",
+    "Reunion Blademaster": "Maestro de la espada de Reunion",
+    "Old Huntsman": "Viejo cazador",
+    "Notarial Hall": "Oficina Notarial",
+    "Laterano Notarial Hall": "Oficina Notarial de Laterano",
+    "Medic Operator": "Operadora médica",
+    "Device": "Dispositivo",
+    "Black Flow": "Corriente Negra"
   },
   "overrides": {
     "obt/main/level_main_04-01_beg::s3": {
@@ -1497,6 +1547,94 @@
     "obt/main/level_main_05-04_end::s44": {
       "source": "One day, all of you will understand. If you hate me, so be it. Because I hate you too. And that's how it should be.",
       "translation": "Algún día lo entenderán. Si me odian, que así sea. Porque yo también las odio. Y así es como debe ser."
+    },
+    "activities/act4d0/level_act4d0_st01::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: La guerra de los anónimos"
+    },
+    "activities/act4d0/level_act4d0_st01::s76": {
+      "source": "Yes, sir!",
+      "translation": "¡Sí, señor!"
+    },
+    "activities/act4d0/level_act4d0_st01::s154": {
+      "source": "Yes, sir!",
+      "translation": "¡Sí, señor!"
+    },
+    "activities/act4d0/level_act4d0_st01::s95": {
+      "source": "I see it.",
+      "translation": "Lo veo."
+    },
+    "activities/act4d0/level_act4d0_st01::s167": {
+      "source": "Why you...",
+      "translation": "Maldito..."
+    },
+    "activities/act4d0/level_act4d0_st01::s194": {
+      "source": "Go on.",
+      "translation": "Continúe."
+    },
+    "activities/act4d0/level_act4d0_st01::s309": {
+      "source": "I'm here.",
+      "translation": "Te escucho."
+    },
+    "activities/act4d0/level_act4d0_st01::s413": {
+      "source": "Why...",
+      "translation": "¿Por qué...?"
+    },
+    "activities/act4d0/level_act4d0_st02::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: Destructor"
+    },
+    "activities/act4d0/level_act4d0_st02::s198": {
+      "source": "Right.",
+      "translation": "Entendido."
+    },
+    "activities/act4d0/level_act4d0_st02::s203": {
+      "source": "Excuse me.",
+      "translation": "Con permiso."
+    },
+    "activities/act4d0/level_act4d0_st03::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: Entrenamiento de francotiradores"
+    },
+    "activities/act4d0/level_act4d0_st04::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: Fe de vida"
+    },
+    "activities/act4d0/level_act4d0_st05::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: Tarea después de clase"
+    },
+    "activities/act4d0/level_act4d0_st05::s23": {
+      "source": "...Phew.",
+      "translation": "...Uf."
+    },
+    "activities/act4d0/level_act4d0_st06::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: Polaris"
+    },
+    "activities/act4d0/level_act4d0_st06::s49": {
+      "source": "Hey!",
+      "translation": "¡Eh!"
+    },
+    "activities/act4d0/level_act4d0_st07::s0": {
+      "source": "第一关（前）",
+      "translation": "Operational Intelligence: Entre la luz y el polvo"
+    },
+    "activities/act4d0/level_act4d0_st07::s65": {
+      "source": "Right...",
+      "translation": "Entendido..."
+    },
+    "activities/act4d0/level_act4d0_st07::s70": {
+      "source": "I know.",
+      "translation": "Sí, lo sé."
+    },
+    "activities/act4d0/level_act4d0_st07::s76": {
+      "source": "Right.",
+      "translation": "Entendido."
+    },
+    "activities/act4d0/level_act4d0_st07::s118": {
+      "source": "What is it?",
+      "translation": "¿Qué pasa?"
     }
   }
 }
