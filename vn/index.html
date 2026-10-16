@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1116">
+  <title>Arknights · VN Library</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="./reader.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <main class="reader">
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="Arknights Story Reader">
+        <svg viewBox="0 0 32 36" aria-hidden="true"><path d="M16 2 30 32H2Z M11 29V18h10v11 M14 18V11h4v7"/></svg>
+        <span>ARKNIGHTS<small>STORY READER</small></span>
+      </a>
+      <div class="chapter-label"><span id="page-category">VISUAL NOVEL</span><h1 id="page-title">Biblioteca</h1></div>
+      <label class="language"><span class="sr-only" data-i18n="language">Idioma</span>
+        <select id="language"><option value="es">ES · Español</option><option value="en">EN · English</option></select>
+      </label>
+    </header>
+
+    <nav id="breadcrumbs" class="breadcrumbs" aria-label="Breadcrumb"></nav>
+    <section id="library" class="library" aria-label="Library"><p role="status">Cargando…</p></section>
+    <div id="player" hidden>
+    <nav class="story-navigation" aria-label="Stories">
+      <a id="previous-story" href="#/"></a>
+      <label><span class="sr-only" data-i18n="chooseStory">Seleccionar historia</span><select id="story-select"></select></label>
+      <a id="next-story" href="#/"></a>
+    </nav>
+    <section id="stage" class="stage" aria-label="Story">
+      <div id="scene" class="scene" aria-hidden="true">
+        <div id="camera" class="camera">
+          <div id="background" class="art-layer"></div>
+          <div id="characters" class="art-layer characters"></div>
+          <div id="image" class="art-layer"></div>
+        </div>
+        <div id="blocker" class="blocker"></div>
+        <div class="vignette"></div>
+      </div>
+      <div id="choices" class="choices" role="group" aria-label="Choices" hidden></div>
+      <button id="dialogue" class="dialogue" type="button" aria-label="Continue" hidden>
+        <span id="speaker" class="speaker"></span>
+        <span id="text" class="dialogue-text"></span>
+        <span class="dialogue-bottom"><span id="tap-hint"></span><span class="advance-mark" aria-hidden="true">◆</span></span>
+      </button>
+      <div id="cover" class="cover">
+        <div id="cover-art" class="cover-art" aria-hidden="true"></div>
+        <div class="cover-content">
+          <span class="eyebrow">ARKNIGHTS <span>/</span> <span id="cover-category"></span></span>
+          <div id="cover-number" class="cover-number" aria-hidden="true"></div>
+          <p id="cover-subtitle" class="cover-subtitle"></p>
+          <h2 id="cover-title"></h2>
+          <p id="cover-description"></p>
+          <button id="begin" class="primary" disabled data-i18n="loading">Cargando…</button>
+          <p class="cover-note" data-i18n="savedLocally">Tu progreso se guarda en este navegador.</p>
+        </div>
+      </div>
+      <div id="ending" class="ending" hidden>
+        <span class="eyebrow" data-i18n="complete">LECTURA COMPLETADA</span>
+        <h2 id="ending-title"></h2>
+        <p data-i18n="endText">El Doctor vuelve a tomar el mando de Rhodes Island.</p>
+        <button id="replay" class="primary" data-i18n="replay">Volver a leer</button>
+        <a id="ending-next" href="#/"></a><a id="ending-collection" href="#/" data-i18n="backCollection">Volver a la colección</a>
+      </div>
+    </section>
+
+    <div class="progress-track"><progress id="progress" max="100" value="0" aria-label="Reading progress"></progress></div>
+    <nav class="controls" aria-label="Reader controls">
+      <div class="control-group">
+        <button id="back" disabled><span aria-hidden="true">←</span> <span data-i18n="back">Atrás</span></button>
+        <button id="auto" aria-pressed="false" disabled><span aria-hidden="true">▷</span> <span data-i18n="auto">Auto</span></button>
+        <button id="history" disabled><span aria-hidden="true">☷</span> <span data-i18n="history">Historial</span></button>
+      </div>
+      <span id="position" class="position">00%</span>
+      <div class="control-group">
+        <button id="sound" aria-pressed="false" disabled data-i18n="soundOff">Sonido: no</button>
+        <button id="settings" data-i18n="settings">Ajustes</button>
+        <button id="next" disabled><span data-i18n="next">Siguiente</span> <span aria-hidden="true">→</span></button>
+      </div>
+    </nav>
+    <p class="keyboard-hint" data-i18n="keyboard"></p>
+    </div>
+    <p id="status" class="status" role="status"></p>
+    <footer class="footer"><span data-i18n="fanProject">Proyecto de fans no oficial · Traducción al español asistida por IA</span><a href="../" data-i18n="classic">Lector clásico ↗</a></footer>
+    <noscript>Este lector necesita JavaScript. This reader requires JavaScript.</noscript>
+  </main>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <form method="dialog"><header class="dialog-header"><h2 id="settings-title" data-i18n="settings">Ajustes</h2><button class="close" aria-label="Close">×</button></header></form>
+    <label class="setting"><span data-i18n="doctorName">Nombre del Doctor</span><input id="nickname" maxlength="32" placeholder="Doctor" autocomplete="off"></label>
+    <label class="setting"><span data-i18n="textSpeed">Velocidad del texto</span><select id="speed"><option value="25" data-i18n="slow">Pausada</option><option value="45" data-i18n="normal">Normal</option><option value="0" data-i18n="instant">Instantánea</option></select></label>
+    <label class="setting check"><input id="motion" type="checkbox"><span data-i18n="reduceMotion">Reducir movimiento y destellos</span></label>
+    <button id="restart" class="restart" data-i18n="restart">Volver al inicio de esta historia</button>
+    <p class="settings-note" data-i18n="restartNote">Volver al inicio borra las decisiones de esta lectura.</p>
+  </dialog>
+  <dialog id="history-dialog" class="history-dialog" aria-labelledby="history-title">
+    <form method="dialog"><header class="dialog-header"><h2 id="history-title" data-i18n="history">Historial</h2><button class="close" aria-label="Close">×</button></header></form>
+    <p class="settings-note" data-i18n="historyHint">Selecciona una línea para volver a ese momento.</p>
+    <div id="history-list"></div>
+  </dialog>
+</body>
+</html>
