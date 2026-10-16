@@ -1,10 +1,16 @@
 // The same line/tag and case-insensitive argument conventions as js/story.js,
-// with a deliberately bounded directive set for the four playable scenes.
+// with a deliberately bounded directive set. Generation checks every source.
 const supported = new Set([
   'header', 'dialog', 'image', 'background', 'imagetween', 'character',
   'decision', 'predicate', 'delay', 'blocker', 'cameraeffect', 'camerashake',
   'playmusic', 'stopmusic', 'playsound', 'skiptothis', 'startbattle', 'tutorial', 'gotopage',
 ]);
+
+export class ScriptError extends Error {
+  constructor(code, message, line, command) {
+    super(message); this.code = code; this.line = line; this.command = command;
+  }
+}
 
 export function parseScript(source) {
   return source.split(/\r?\n/).flatMap((line, index) => {
@@ -20,11 +26,11 @@ export function parseScript(source) {
     }
     if (!command && (!tag || 'name' in args)) command = 'line';
     if (command !== 'line' && !supported.has(command)) {
-      throw new Error(`Unsupported directive at line ${index + 1}: ${tag}`);
+      throw new ScriptError('unsupported', `Unsupported directive at line ${index + 1}: ${tag}`, index + 1, command || tag);
     }
     if (command === 'decision') {
       if (!args.options || !args.values || args.options.split(';').length !== args.values.split(';').length) {
-        throw new Error(`Invalid decision at line ${index + 1}`);
+        throw new ScriptError('invalid', `Invalid decision at line ${index + 1}`, index + 1, command);
       }
     }
     return [{ command, args, text: match[2].trim(), line: index + 1 }];
@@ -112,7 +118,7 @@ export function buildTimeline(commands, answers = {}) {
       events.push(item);
     }
   }
-  append('end', { line: commands.at(-1)?.line || 1, text: '', args: {} });
+  append('end', { line: (commands.at(-1)?.line || 0) + 1, text: '', args: {} });
   return steps;
 }
 

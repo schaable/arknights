@@ -30,6 +30,11 @@
       <label><span class="sr-only" data-i18n="chooseStory">Seleccionar historia</span><select id="story-select"></select></label>
       <a id="next-story" href="#/"></a>
     </nav>
+    <div id="load-notice" class="load-notice" role="status" hidden>
+      <p id="load-message"></p>
+      <button id="load-retry" data-i18n="retry">Reintentar</button>
+      <a id="load-classic" href="../" data-i18n="classic">Lector clásico ↗</a>
+    </div>
     <section id="stage" class="stage" aria-label="Story">
       <div id="scene" class="scene" aria-hidden="true">
         <div id="camera" class="camera">
@@ -54,7 +59,7 @@
           <p id="cover-subtitle" class="cover-subtitle"></p>
           <h2 id="cover-title"></h2>
           <p id="cover-description"></p>
-          <button id="begin" class="primary" disabled data-i18n="loading">Cargando…</button>
+          <button id="begin" class="primary" disabled>Cargando…</button>
           <p class="cover-note" data-i18n="savedLocally">Tu progreso se guarda en este navegador.</p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
 import { characterId, imageURLs } from '../assets.mjs';
 
 const es = parseScript(await readFile(new URL('../../gamedata/es_ES/story/obt/guide/beg/0_welcome_to_guide.txt', import.meta.url), 'utf8'));
-const en = parseScript(await readFile(new URL('../chapters/prologue-1.en.txt', import.meta.url), 'utf8'));
+const en = parseScript(await readFile(new URL('../sources/en/obt/guide/beg/0_welcome_to_guide.txt', import.meta.url), 'utf8'));
 const decisions = es.filter((item) => item.command === 'decision');
 const answersFor = (value) => Object.fromEntries(decisions.map((item) => [item.line, item.args.values.includes(';') ? value : '1']));
 

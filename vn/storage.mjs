@@ -13,7 +13,9 @@ function cleanStory(value) {
   if (!object(value) || !Number.isSafeInteger(value.line) || value.line < 1) return null;
   const answers = Object.fromEntries(Object.entries(object(value.answers) ? value.answers : {})
     .filter(([line, answer]) => /^\d+$/.test(line) && typeof answer === 'string' && answer.length < 100));
-  return { line: value.line, answers, read: value.read === true, updated: integer(value.updated) };
+  return { line: value.line, answers, read: value.read === true, updated: integer(value.updated),
+    ...(typeof value.structure === 'string' && /^[a-f0-9]{64}$/.test(value.structure) ? { structure: value.structure } : {}),
+  };
 }
 export function normalizeStore(value, catalog) {
   const result = { v: 2, preferences: cleanPreferences(value?.preferences), groups: {} };

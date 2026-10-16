@@ -3,7 +3,9 @@
 import { readFile, writeFile, access, mkdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { playable } from '../chapters.mjs';
+import { storyOverrides } from '../story-overrides.mjs';
+import { sourceMetadata } from './source-metadata.mjs';
+import { soundPath } from '../assets.mjs';
 const base = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const source = process.argv[2];
 if (!source) throw new Error('Provide the directory containing the source JSON tables.');
@@ -41,13 +43,16 @@ async function add(id, classic, title, entries) {
     if (!key) throw new Error(`Missing storyTxt in ${id}`);
     const phase = /Before Operation/.test(entry.avgTag) ? 'before' : /After Operation/.test(entry.avgTag) ? 'after' : '';
     const name = entry.storyName || entry.storyCode || key.split('/').at(-1);
-    let storySlug = previous?.stories.find((s) => s.id === key)?.slug || playable[key]?.slug ||
+    let storySlug = previous?.stories.find((s) => s.id === key)?.slug || storyOverrides[key]?.slug ||
       slugify(entry.storyCode ? `${entry.storyCode}-${phase || name}` : name) || slugify(key.split('/').at(-1));
     if (stories.some((s) => s.slug === storySlug)) storySlug += `-${index + 1}`;
     let spanish = false;
     try { await access(resolve(base, '../gamedata/es_ES/story', key + '.txt')); spanish = true; } catch { /* Untranslated. */ }
+    const source = spanish ? await sourceMetadata(key, variables) : null;
     stories.push({ id: key, slug: storySlug, title: name, code: entry.storyCode || '', phase,
-      spanish, vn: !!playable[key], classicHash: `#${classic}&${id}&${index}` });
+      spanish, vn: !!source?.compatible.length, classicHash: `#${classic}&${id}&${index}`,
+      ...(source ? { source } : {}),
+    });
   }
   groups.push({ id, category, slug, title, ...(chapter !== undefined ? { chapter } : {}), stories });
 }
@@ -102,15 +107,11 @@ for (const [id, topic] of Object.entries(rogue.topics)) {
 groups.sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category)
   || (a.category === 'main' ? a.chapter - b.chapter : a.title.localeCompare(b.title, 'en')));
 const all = groups.flatMap((g) => g.stories);
-for (const key of Object.keys(playable)) if (all.filter((s) => s.id === key && s.vn).length !== 1) throw new Error(`Playable story missing/duplicated: ${key}`);
-const sounds = new Set();
-for (const key of Object.keys(playable)) {
-  const script = await readFile(resolve(base, '../gamedata/es_ES/story', key + '.txt'), 'utf8');
-  for (const match of script.matchAll(/(?:key|intro)="\$([^"]+)"/g)) sounds.add(match[1]);
-}
+for (const key of Object.keys(storyOverrides)) if (all.filter((s) => s.id === key && s.vn).length !== 1) throw new Error(`Existing playable story missing/unsupported: ${key}`);
+const sounds = new Set(all.filter((s) => s.vn).flatMap((s) => s.source.sounds));
 const audio = Object.fromEntries([...sounds].sort().map((key) => {
-  if (!variables[key]) throw new Error(`Unknown sound: ${key}`);
-  return [key, variables[key]];
+  if (!soundPath(variables, key)) throw new Error(`Unknown sound: ${key}`);
+  return [key, soundPath(variables, key)];
 }));
 await mkdir(resolve(base, 'data'), { recursive: true });
 await writeFile(resolve(base, 'data/catalog.json'), JSON.stringify({ v: 1, generated: new Date().toISOString().slice(0, 10),

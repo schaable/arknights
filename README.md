@@ -108,10 +108,12 @@ Then open <http://localhost:8000/>.
 A separate visual novel reader is available at
 <http://localhost:8000/vn/> when running locally, or at `vn/` on the hosted site.
 Its library browses main-story chapters, side stories, vignettes, operator records,
-modules, and Integrated Strategies. Four scenes are playable in Spanish and
-English: **Prologue Parts 1–2**, **1-1 Before operation**, and **Children of Ursus —
-Habits**, with separate saved progress for each chapter or collection. Other
-stories link to the classic reader, which remains the site's root page.
+modules, and Integrated Strategies. **92 of the 113 translated scenes** are now
+playable in Spanish and English, with separate saved progress for each chapter
+or collection. Story sources, cover art, audio mappings, and compatibility flags
+are generated from the translated scripts. The remaining 21 scenes link to the
+classic reader while their unsupported effects are implemented. The classic
+reader remains the site's root page.
 See [vn/README.md](vn/README.md) for controls, scope, architecture, and tests.
 
 ### This website is made possible by the following projects:

@@ -35,6 +35,16 @@ export const copy = {
 };
 
 Object.assign(copy.es, {
+  load_network: 'No se pudo conectar. Comprueba tu conexión y vuelve a intentarlo.',
+  load_missing: 'No se encontró el archivo de esta historia.',
+  load_unsupported: 'Esta historia usa efectos que el lector VN todavía no admite.',
+  load_format: 'Este tipo de historia todavía no se puede abrir en VN.',
+  load_invalid: 'El archivo de la historia no se pudo interpretar.',
+  load_alignment: 'Esta versión no coincide con la edición del catálogo. Su idioma se ha desactivado para conservar tu posición.',
+  progressReset: 'La historia ha cambiado desde tu última lectura. Se ha vuelto al inicio para evitar recuperar una posición incorrecta.',
+  load_audio: 'El audio no está disponible. Puedes seguir leyendo sin sonido.',
+  fallback_en: 'Esta historia se está mostrando en inglés.', fallback_es: 'Esta historia se está mostrando en español.',
+  language_es: 'Español', language_en: 'Inglés', storyUnavailable: 'Historia no disponible',
   library: 'Biblioteca', home: 'Inicio', story: 'Historia', chapter: 'Capítulo',
   explore: 'Encuentra tu próxima historia.', intro: 'Explora Terra, capítulo a capítulo. Cada colección guarda su propio progreso.',
   categories: 'Explorar historias', continueReading: 'Continuar leyendo', collections: 'colecciones', chapters: 'capítulos',
@@ -52,6 +62,16 @@ Object.assign(copy.es, {
   collectionProgress: 'Progreso de la colección', chooseStory: 'Seleccionar historia',
 });
 Object.assign(copy.en, {
+  load_network: 'Could not connect. Check your connection and try again.',
+  load_missing: 'The story file could not be found.',
+  load_unsupported: 'This story uses effects the VN reader does not support yet.',
+  load_format: 'This type of story cannot be opened in VN yet.',
+  load_invalid: 'The story file could not be read.',
+  load_alignment: 'This version does not match the catalog edition. Its language is disabled to preserve your position.',
+  progressReset: 'The story has changed since your last reading. Reading has returned to the beginning to avoid restoring the wrong position.',
+  load_audio: 'Audio is unavailable. You can continue reading without sound.',
+  fallback_en: 'This story is being shown in English.', fallback_es: 'This story is being shown in Spanish.',
+  language_es: 'Spanish', language_en: 'English', storyUnavailable: 'Story unavailable',
   library: 'Library', home: 'Home', story: 'Story', chapter: 'Chapter',
   explore: 'Find your next story.', intro: 'Explore Terra, chapter by chapter. Each collection remembers where you left off.',
   categories: 'Explore stories', continueReading: 'Continue reading', collections: 'collections', chapters: 'chapters',

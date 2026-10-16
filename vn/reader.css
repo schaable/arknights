@@ -181,3 +181,7 @@ input[type="checkbox"] { accent-color: var(--accent); }
   .breadcrumbs { font-size: 11px; padding-bottom: 12px; }
   .ending a { font-size: 12px; }
 }
+
+.load-notice { padding: 14px 18px; margin-bottom: 16px; border: 1px solid #80d4dd60; background: #142833; font-size: 13px; }
+.load-notice p { margin: 0 0 10px; }
+.load-notice button { padding: 6px 12px; margin-right: 14px; }

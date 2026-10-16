@@ -1,6 +1,11 @@
 const primary = 'https://cdn.jsdelivr.net/gh/akgcc/arkdata@main/assets/';
 const fallback = 'https://raw.githubusercontent.com/akgcc/arkdata/main/assets/';
 
+export function soundPath(map, key) {
+  const name = key.replace(/^\$/, '');
+  return map[name] || (/^Sound_Beta_2\/[a-z0-9_/-]+$/i.test(name) ? name : null);
+}
+
 export function characterId(name) {
   const [, id, face = '1', body = '1'] = /^(.*?)(?:#(\d+))?(?:\$(\d+))?$/.exec(name.trim());
   return `${id}#${face}$${body}`;
@@ -36,7 +41,7 @@ export class Soundtrack {
     this.fades = new Map();
   }
   create(key, volume, loop = false) {
-    const path = this.map[key.replace(/^\$/, '')];
+    const path = soundPath(this.map, key);
     if (!path) { this.onError(); return null; }
     const audio = new Audio();
     const urls = [primary + `torappu/dynamicassets/audio/${path}.mp3`.toLowerCase(),

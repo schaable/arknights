@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { routeFor, resolveRoute, groupKey, groupStats } from '../catalog.mjs';
 import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore } from '../storage.mjs';
 import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
-import { playable } from '../chapters.mjs';
+import { scriptSignature } from '../compatibility.mjs';
 const catalog = JSON.parse(await readFile(new URL('../data/catalog.json', import.meta.url)));
 const audio = JSON.parse(await readFile(new URL('../data/audio.json', import.meta.url)));
 const group = (id) => catalog.groups.find((g) => g.id === id);
@@ -45,7 +45,7 @@ test('all chapters are ordered; translation and VN availability remain independe
   const chapters = catalog.groups.filter((g) => g.category === 'main');
   assert.ok(chapters.length >= 18);
   assert.deepEqual(chapters.map((g) => g.chapter), [...chapters.map((g) => g.chapter)].sort((a, b) => a - b));
-  assert.equal(catalog.groups.flatMap((g) => g.stories).filter((s) => s.vn).length, 4);
+  assert.equal(catalog.groups.flatMap((g) => g.stories).filter((s) => s.vn).length, 92);
   assert.equal(catalog.groups.flatMap((g) => g.stories).filter((s) => s.spanish).length, 113);
   assert.equal(group('main_0').stories[1].slug, 'prologue-2');
   assert.equal(group('main_1').stories[0].slug, '1-1-before');
@@ -81,7 +81,7 @@ test('chapter and event saves are independent, browsing is read-only, restart is
   assert.equal(store.group(first).stories[prologue.id].read, true);
   groups.slice(1).forEach((g, i) => assert.equal(store.group(g).stories[g.stories[0].id].line, i + 11));
   const stats = groupStats(first, store.group(first));
-  assert.equal(stats.read, 1); assert.equal(stats.total, 14); assert.equal(stats.ready, 2);
+  assert.equal(stats.read, 1); assert.equal(stats.total, 14); assert.equal(stats.ready, 14);
   const reloaded = createProgressStore(storage, catalog);
   assert.equal(reloaded.group(first).stories[second.id].line, 1);
 });
@@ -102,15 +102,14 @@ test('saves merge other tabs; malformed/blocked storage stays usable', () => {
   assert.deepEqual(dirty.groups, {}); assert.equal(dirty.preferences.speed, 45);
 });
 
-for (const [key, config] of Object.entries(playable)) test(`bilingual full playback and audio coverage: ${config.slug}`, async () => {
+for (const story of catalog.groups.flatMap((g) => g.stories).filter((s) => s.vn)) test(`bilingual full playback and audio coverage: ${story.id}`, async () => {
+  const key = story.id;
   const [es, en] = await Promise.all([
     readFile(new URL(`../../gamedata/es_ES/story/${key}.txt`, import.meta.url), 'utf8'),
-    readFile(new URL(`../chapters/${config.english}`, import.meta.url), 'utf8'),
+    readFile(new URL('../' + story.source.languages.en, import.meta.url), 'utf8'),
   ]);
   const scripts = [es, en].map(parseScript);
-  const signature = (script) => script.map(({ text, args, ...item }) => ({ ...item,
-    args: Object.fromEntries(Object.entries(args).filter(([k]) => k !== 'options' && !(item.command === 'line' && k === 'name'))) }));
-  assert.deepEqual(signature(scripts[0]), signature(scripts[1]));
+  assert.equal(scriptSignature(scripts[0]), scriptSignature(scripts[1]));
   const answers = Object.fromEntries(scripts[0].filter((s) => s.command === 'decision').map((s) => [s.line, s.args.values.split(';')[0]]));
   const timelines = scripts.map((script) => buildTimeline(script, answers));
   assert.equal(timelines[0].at(-1).kind, 'end');

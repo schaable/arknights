@@ -1,10 +1,12 @@
-import { parseScript, buildTimeline, validateProgress, applyEvent, initialScene } from './script.mjs';
+import { buildTimeline, validateProgress, applyEvent, initialScene } from './script.mjs';
 import { loadImage, imageURLs, Soundtrack } from './assets.mjs';
-import { playable } from './chapters.mjs';
+import { loadStory } from './loader.mjs';
 
 export function createPlayer({ preferences, t, store, onChange }) {
   const $ = (id) => document.getElementById(id);
   let story, group, loadController, loadVersion = 0;
+  let storyLanguage = preferences.language, loadProblems = [], loadFailure = null, usedFallback = false;
+  let sourceStructure;
   let scripts, commands, timeline = [], answers = {}, index = 0, started = false, ready = false;
   let soundtrack, state = initialScene(), busy = false, typing = false, auto = false;
   let run = 0, typeTimer, autoTimer, waitController = new AbortController();
@@ -16,7 +18,8 @@ export function createPlayer({ preferences, t, store, onChange }) {
     document.documentElement.lang = preferences.language;
     document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll('.close').forEach((el) => el.setAttribute('aria-label', t('close')));
-    $('language').value = preferences.language;
+    $('language').value = ready ? storyLanguage : preferences.language;
+    for (const option of $('language').options) option.disabled = ready && !scripts[option.value];
     $('nickname').value = preferences.nickname;
     $('speed').value = preferences.speed;
     $('motion').checked = preferences.motion;
@@ -24,14 +27,30 @@ export function createPlayer({ preferences, t, store, onChange }) {
     $('choices').setAttribute('aria-label', t('choose'));
     $('dialogue').setAttribute('aria-label', t('continue'));
     if (ready) $('begin').textContent = t(index || read ? 'resume' : 'begin');
+    else if (loadFailure) $('begin').textContent = t(loadFailure.retryable ? 'retry' : 'storyUnavailable');
     if (statusKey) notice(statusKey);
+    renderLoadNotice();
     updateControls();
+  }
+
+  function renderLoadNotice() {
+    const messages = [];
+    if (loadFailure) messages.push(t('load_' + (loadFailure.code || 'invalid')));
+    if (usedFallback) messages.push(t('fallback_' + storyLanguage));
+    for (const problem of loadProblems) {
+      const label = problem.language === 'audio' ? '' : t('language_' + problem.language) + ': ';
+      messages.push(label + t('load_' + (problem.error.code || 'invalid')));
+    }
+    $('load-notice').hidden = !messages.length;
+    $('load-message').textContent = messages.join(' ');
+    $('load-retry').hidden = !(loadFailure?.retryable || loadProblems.some((p) => p.error.retryable));
+    if (story) $('load-classic').href = '../' + story.classicHash;
   }
 
   function persist() {
     if (!ready || !started || !story) return;
     if (!store.save(group, story, {
-      line: timeline[index]?.line, answers, read, updated: Date.now(),
+      line: timeline[index]?.line, answers, read, updated: Date.now(), structure: sourceStructure,
     })) notice('storageError');
   }
 
@@ -182,7 +201,7 @@ export function createPlayer({ preferences, t, store, onChange }) {
     if (a.block === 'true') await wait(duration);
   }
 
-  const displayText = (text) => text.replaceAll('{@nickname}', preferences.nickname.trim() || 'Doctor');
+  const displayText = (text) => text.replace(/\{@nickname\}/gi, () => preferences.nickname.trim() || 'Doctor');
   function stopAuto() { auto = false; clearTimeout(autoTimer); updateControls(); }
   function scheduleAuto() {
     clearTimeout(autoTimer);
@@ -354,7 +373,11 @@ export function createPlayer({ preferences, t, store, onChange }) {
     document.querySelectorAll('dialog[open]').forEach((dialog) => dialog.close());
     ready = started = auto = typing = false;
     story = group = null;
-    timeline = []; answers = {}; index = 0; read = false;
+    timeline = []; answers = {}; index = 0; read = false; scripts = {}; commands = null;
+    loadProblems = []; loadFailure = null; usedFallback = false;
+    $('load-notice').hidden = true;
+    for (const option of $('language').options) option.disabled = false;
+    $('language').value = preferences.language;
     state = initialScene();
     $('blocker').style.opacity = 0;
     $('blocker').style.backgroundColor = 'black';
@@ -369,52 +392,50 @@ export function createPlayer({ preferences, t, store, onChange }) {
     $('text').textContent = '';
     updateControls();
   }
-  async function load(nextGroup = group, nextStory = story) {
+  async function load(nextGroup = group, nextStory = story, resumePlayback = false) {
     dispose();
     group = nextGroup; story = nextStory;
     const token = ++loadVersion;
     loadController = new AbortController();
     const signal = loadController.signal;
-    const config = playable[story.id];
+    const source = story.source;
     $('cover-title').textContent = $('ending-title').textContent = story.title;
     $('cover-subtitle').textContent = group.title;
     $('cover-number').textContent = group.chapter === undefined ? '◇' : String(group.chapter).padStart(2, '0');
     $('cover-category').textContent = t('story');
     $('cover-description').textContent = [story.code, story.phase ? t(story.phase) : ''].filter(Boolean).join(' · ');
-    const url = imageURLs(...config.cover)[0];
-    $('cover-art').style.backgroundImage = `linear-gradient(90deg, #09131bf5, #09131bb3 55%, #09131b4d), url("${url}")`;
+    const url = source?.cover ? imageURLs(...source.cover)[0] : null;
+    $('cover-art').style.backgroundImage = url
+      ? `linear-gradient(90deg, #09131bf5, #09131bb3 55%, #09131b4d), url("${url}")`
+      : 'linear-gradient(135deg, #223441, #09131b)';
     $('begin').disabled = true;
     $('begin').textContent = t('loading');
     try {
-      const get = async (url, json = false) => {
-        const response = await fetch(url, { signal });
-        if (!response.ok) throw new Error(`${response.status}: ${url}`);
-        return json ? response.json() : response.text();
-      };
-      const [es, en, audio] = await Promise.all([
-        get(`../gamedata/es_ES/story/${story.id}.txt`), get(`./chapters/${config.english}`), get('./data/audio.json', true),
-      ]);
+      const loaded = await loadStory(source, { language: preferences.language, signal });
       if (token !== loadVersion) return;
-      scripts = { es: parseScript(es), en: parseScript(en) };
-      const signature = (script) => JSON.stringify(script.map((item) => ({
-        ...item, text: '', args: Object.fromEntries(Object.entries(item.args).filter(([key]) =>
-          !(key === 'options' || (item.command === 'line' && key === 'name')))),
-      })));
-      if (signature(scripts.es) !== signature(scripts.en)) throw new Error('English/Spanish script structure differs');
-      commands = scripts[preferences.language];
-      const saved = store.group(group).stories[story.id];
+      scripts = loaded.scripts;
+      storyLanguage = scripts[preferences.language] ? preferences.language : loaded.language;
+      loadProblems = loaded.problems;
+      usedFallback = storyLanguage !== preferences.language;
+      commands = scripts[storyLanguage];
+      sourceStructure = loaded.structure;
+      let saved = store.group(group).stories[story.id];
+      if (saved?.structure && saved.structure !== sourceStructure) { saved = null; notice('progressReset'); }
       ({ answers, timeline, index } = validateProgress(commands, saved));
       read = saved?.read === true;
-      soundtrack = new Soundtrack(audio, () => { if (token === loadVersion) notice('audioError'); });
+      soundtrack = new Soundtrack(loaded.audio, () => { if (token === loadVersion) notice('audioError'); });
       ready = true;
       $('begin').disabled = false;
       localize();
+      if (resumePlayback) { started = true; $('cover').hidden = true; showStep(); }
+      onChange();
     } catch (error) {
       if (token !== loadVersion || signal.aborted) return;
       console.error(error);
-      notice('loadError');
-      $('begin').textContent = t('retry');
-      $('begin').disabled = false;
+      loadFailure = error;
+      renderLoadNotice();
+      $('begin').textContent = t(error.retryable ? 'retry' : 'storyUnavailable');
+      $('begin').disabled = !error.retryable;
     }
   }
 
@@ -425,6 +446,7 @@ export function createPlayer({ preferences, t, store, onChange }) {
     showStep(index === 0);
     $('next').focus({ preventScroll: true });
   });
+  $('load-retry').addEventListener('click', () => load(group, story, started));
   $('dialogue').addEventListener('click', next);
   $('stage').addEventListener('click', (event) => { if (event.target === $('stage')) next(); });
   $('next').addEventListener('click', next);
@@ -438,7 +460,9 @@ export function createPlayer({ preferences, t, store, onChange }) {
     stopAuto();
     const line = timeline[index]?.line;
     if (ready) {
-      commands = scripts[preferences.language];
+      storyLanguage = scripts[preferences.language] ? preferences.language : storyLanguage;
+      usedFallback = storyLanguage !== preferences.language;
+      commands = scripts[storyLanguage];
       timeline = buildTimeline(commands, answers);
       index = Math.max(0, timeline.findIndex((step) => step.line === line));
     }

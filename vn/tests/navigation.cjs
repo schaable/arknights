@@ -22,15 +22,15 @@ const server = http.createServer(async (request, response) => {
 });
 (async () => {
   const catalog = JSON.parse(await fs.readFile(path.join(root, 'vn/data/catalog.json')));
-  const { playable } = await import(pathToFileURL(path.join(root, 'vn/chapters.mjs')));
+  const { storyOverrides } = await import(pathToFileURL(path.join(root, 'vn/story-overrides.mjs')));
   const { parseScript, buildTimeline } = await import(pathToFileURL(path.join(root, 'vn/script.mjs')));
   const { routeFor, groupKey } = await import(pathToFileURL(path.join(root, 'vn/catalog.mjs')));
   const scenes = [];
-  for (const [id, config] of Object.entries(playable)) {
+  for (const [id, config] of Object.entries(storyOverrides)) {
     const group = catalog.groups.find((g) => g.stories.some((s) => s.id === id));
     const story = group.stories.find((s) => s.id === id);
     const es = parseScript(await fs.readFile(path.join(root, `gamedata/es_ES/story/${id}.txt`), 'utf8'));
-    const en = parseScript(await fs.readFile(path.join(root, `vn/chapters/${config.english}`), 'utf8'));
+    const en = parseScript(await fs.readFile(path.resolve(root, 'vn', story.source.languages.en), 'utf8'));
     const answers = Object.fromEntries(es.filter((s) => s.command === 'decision').map((s) => [s.line, s.args.values.split(';')[0]]));
     scenes.push({ group, story, config, route: routeFor(group.category, group, story), es, en, answers, steps: buildTimeline(es, answers) });
   }
@@ -92,7 +92,7 @@ const server = http.createServer(async (request, response) => {
       if (category.id === 'main') {
         await page.screenshot({ path: path.join(output, 'chapters.png'), fullPage: true });
         await page.locator('.catalog-filters input[type="checkbox"]').check();
-        assert.equal(await page.locator('.collection-card').count(), 2);
+        assert.equal(await page.locator('.collection-card').count(), catalog.groups.filter((g) => g.category === 'main' && g.stories.some((s) => s.vn)).length);
         await page.locator('.catalog-filters input[type="checkbox"]').uncheck();
       }
       if (category.id === 'vignettes') {
@@ -105,7 +105,7 @@ const server = http.createServer(async (request, response) => {
     await library(routeFor(first.group.category, first.group));
     await page.locator('.story-row').first().waitFor();
     assert.equal(await page.locator('.story-row').count(), first.group.stories.length);
-    assert.equal(await page.locator('.story-open').count(), 2);
+    assert.equal(await page.locator('.story-open').count(), first.group.stories.filter((s) => s.vn).length);
     assert.match(await page.locator('.library-heading p').innerText(), /0\/14/);
     await page.screenshot({ path: path.join(output, 'chapter-stories.png'), fullPage: true });
     await cover(second);
@@ -173,7 +173,7 @@ const server = http.createServer(async (request, response) => {
       assert.equal(await page.locator('#ending').isVisible(), true);
       assert.equal((await saved()).groups[groupKey(scene.group)].stories[scene.story.id].read, true);
       const following = scene.group.stories[scene.group.stories.indexOf(scene.story) + 1];
-      assert.equal(await page.locator('#ending-next').getAttribute('href'), '../' + following.classicHash);
+      assert.equal(await page.locator('#ending-next').getAttribute('href'), following.vn ? routeFor(scene.group.category, scene.group, following) : '../' + following.classicHash);
       console.log(`Completed ${scene.config.slug}: ${scene.steps.filter((s) => s.kind === 'dialogue').length} dialogue lines.`);
     }
     // Restart affects only this story; it does not clear other chapters or siblings.
@@ -188,7 +188,7 @@ const server = http.createServer(async (request, response) => {
     let release, seen;
     const held = new Promise((resolve) => { release = resolve; });
     const requested = new Promise((resolve) => { seen = resolve; });
-    const pattern = '**/chapters/prologue-2.en.txt';
+    const pattern = '**/sources/en/obt/guide/beg/2_guide_to_home.txt';
     await page.route(pattern, async (request) => { seen(); await held; await request.continue().catch(() => {}); });
     await go(second.route); await requested;
     await start(chapter1); release(); await page.unroute(pattern);
@@ -197,7 +197,7 @@ const server = http.createServer(async (request, response) => {
     await page.locator('#settings').click(); await page.locator('#motion').uncheck();
     await page.locator('#restart').click(); await page.locator('#next').click();
     await page.locator('#sound').click(); await page.locator('#auto').click();
-    const unavailable = chapter1.group.stories[1];
+    const unavailable = chapter1.group.stories.find((s) => !s.vn);
     await library(routeFor(chapter1.group.category, chapter1.group, unavailable));
     await page.locator('.back-link').waitFor();
     assert.equal(await page.locator('#player').isVisible(), false);

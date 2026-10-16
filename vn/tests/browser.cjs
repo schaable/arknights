@@ -26,7 +26,7 @@ const server = http.createServer(async (request, response) => {
 (async () => {
   const { parseScript, buildTimeline } = await import(pathToFileURL(path.join(root, 'vn/script.mjs')));
   const es = parseScript(await fs.readFile(path.join(root, 'gamedata/es_ES/story/obt/guide/beg/0_welcome_to_guide.txt'), 'utf8'));
-  const en = parseScript(await fs.readFile(path.join(root, 'vn/chapters/prologue-1.en.txt'), 'utf8'));
+  const en = parseScript(await fs.readFile(path.join(root, 'vn/sources/en/obt/guide/beg/0_welcome_to_guide.txt'), 'utf8'));
   const decisions = es.filter((step) => step.command === 'decision');
   const answers = Object.fromEntries(decisions.map((step) => [step.line, step.args.values.includes(';') ? '3' : '1']));
   const expected = buildTimeline(es, answers);
@@ -182,13 +182,16 @@ const server = http.createServer(async (request, response) => {
 
     // A failed script request is visible and the retry button can recover.
     const failure = await context.newPage();
-    await failure.route('**/prologue-1.en.txt', (route) => route.fulfill({ status: 503, body: '' }));
+    await failure.route('**/sources/en/obt/guide/beg/0_welcome_to_guide.txt', (route) => route.fulfill({ status: 503, body: '' }));
     await failure.goto(base + '#/main/chapter-0/prologue-1');
-    await failure.waitForFunction(() => document.getElementById('begin').textContent === 'Reintentar');
-    await failure.unroute('**/prologue-1.en.txt');
-    await failure.locator('#begin').click();
+    await failure.locator('#load-notice:visible').waitFor();
+    assert.equal(await failure.locator('#language option[value="en"]').evaluate((o) => o.disabled), true);
+    assert.equal(await failure.locator('#begin').isEnabled(), true);
+    await failure.unroute('**/sources/en/obt/guide/beg/0_welcome_to_guide.txt');
+    await failure.locator('#load-retry').click();
     await failure.waitForFunction(() => document.getElementById('begin').textContent !== 'Cargando…' && !document.getElementById('begin').disabled);
     assert.match(await failure.locator('#begin').innerText(), /lectura/);
+    assert.equal(await failure.locator('#language option[value="en"]').evaluate((o) => !o.disabled), true);
     assert.deepEqual(errors, []);
     console.log(`Browser passed: ${count} dialogue lines, six choices, language/branch preservation, resume, history, restart, mobile, subpath, and retry. Screenshots: ${output}`);
   } finally {
