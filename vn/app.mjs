@@ -1,5 +1,5 @@
 import { resolveRoute, routeFor } from './catalog.mjs';
-import { createProgressStore } from './storage.mjs';
+import { createProgressStore, STORAGE_KEY } from './storage.mjs';
 import { createPlayer } from './reader.mjs';
 import { renderLibrary, element, link, storyTitle } from './library.mjs';
 import { copy } from './i18n.mjs';
@@ -79,7 +79,11 @@ async function boot() {
     player = createPlayer({ preferences, t, store, review, onChange: chrome });
     localize();
     window.addEventListener('hashchange', navigate);
-    window.addEventListener('storage', () => { store.snapshot(); renderLibraryView(); });
+    window.addEventListener('storage', (event) => {
+      store.snapshot();
+      if (event.key === STORAGE_KEY || event.key === null) player.syncReadStatus();
+      renderLibraryView();
+    });
     $('story-select').addEventListener('change', () => { location.hash = $('story-select').value; });
     $('language').addEventListener('change', () => {
       preferences.language = $('language').value;

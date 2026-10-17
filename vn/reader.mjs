@@ -52,6 +52,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
 
   function persist() {
     if (!ready || !started || !story) return;
+    if (timeline[index]?.completionOnly) return;
     if (!store.save(group, story, {
       line: timeline[index]?.line, answers, read, updated: Date.now(), structure: sourceStructure,
     })) notice('storageError');
@@ -60,7 +61,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   function updateControls() {
     const step = timeline[index];
     $('back').disabled = !started || index === 0;
-    $('history').disabled = !started;
+    $('history').disabled = !started || step?.completionOnly;
     $('auto').disabled = !started || step?.kind === 'end';
     $('next').disabled = !started || (step?.kind !== 'dialogue' && !busy);
     $('restart').disabled = !ready;
@@ -384,6 +385,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     review.setContext(null);
     const token = run;
     const step = timeline[index];
+    if (step.kind !== 'end') read = false;
     $('choices').hidden = true;
     $('ending').hidden = true;
     $('dialogue-panel').hidden = $('dialogue').hidden = true;
@@ -448,7 +450,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     showStep(true);
   }
   function openHistory() {
-    if (!started) return;
+    if (!started || timeline[index]?.completionOnly) return;
     stopAuto();
     if (busy) next();
     if (typing) finishText();
@@ -530,15 +532,19 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       usedFallback = storyLanguage !== preferences.language;
       commands = scripts[storyLanguage];
       sourceStructure = loaded.structure;
+      store.snapshot();
       let saved = store.group(group).stories[story.id];
-      if (saved?.structure && saved.structure !== sourceStructure) { saved = null; notice('progressReset'); }
+      if (saved?.structure && saved.structure !== sourceStructure) {
+        if (saved.read) saved = { read: true };
+        else { saved = null; notice('progressReset'); }
+      }
       ({ answers, timeline, index } = validateProgress(commands, saved));
       read = saved?.read === true;
       soundtrack = new Soundtrack(loaded.audio, () => { if (token === loadVersion) notice('audioError'); });
       ready = true;
       $('begin').disabled = false;
       localize();
-      if (resumePlayback) { started = true; $('cover').hidden = true; showStep(); }
+      if (resumePlayback || read) { started = true; $('cover').hidden = true; showStep(); }
       onChange();
     } catch (error) {
       if (token !== loadVersion || signal.aborted) return;
@@ -574,7 +580,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       storyLanguage = scripts[preferences.language] ? preferences.language : storyLanguage;
       usedFallback = storyLanguage !== preferences.language;
       commands = scripts[storyLanguage];
-      timeline = buildTimeline(commands, answers);
+      timeline = timeline[index]?.completionOnly ? validateProgress(commands, { read: true }).timeline : buildTimeline(commands, answers);
       index = Math.max(0, timeline.findIndex((step) => step.line === line));
     }
     localize();
@@ -588,6 +594,22 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   function pause() {
     stopAuto();
     if (typing) finishText();
+  }
+  function syncReadStatus() {
+    if (!ready) return;
+    const saved = store.group(group).stories[story.id];
+    // Manual resets must also replace a position still open in another tab.
+    const reset = !saved?.line && (saved?.read ? !timeline[index]?.completionOnly
+      : read || index !== 0 || Object.keys(answers).length > 0);
+    read = saved?.read === true;
+    if (reset) {
+      stopAuto();
+      review.reset();
+      $('history-dialog').close();
+      ({ answers, timeline, index } = validateProgress(commands, saved));
+      if (started || read) { started = true; $('cover').hidden = true; showStep(); }
+    }
+    localize();
   }
   function compare() {
     if (!started || busy || !scripts.es || !scripts.en || timeline[index]?.kind === 'end') return;
@@ -611,5 +633,5 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     if (document.hidden) { stopAuto(); soundtrack?.enable(false); persist(); updateControls(); }
   });
   window.addEventListener('pagehide', () => { persist(); soundtrack?.enable(false); });
-  return { load, dispose, persist, changeLanguage, settings, pause, compare, refresh() { localize(); if (started) showStep(); }, get ready() { return ready; } };
+  return { load, dispose, persist, changeLanguage, settings, pause, compare, syncReadStatus, refresh() { localize(); if (started) showStep(); }, get ready() { return ready; } };
 }

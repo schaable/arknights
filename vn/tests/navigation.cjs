@@ -65,7 +65,8 @@ const server = http.createServer(async (request, response) => {
       await page.waitForFunction((id) => document.querySelector('#player').dataset.story === id && !document.querySelector('#begin').disabled, scene.story.id);
     };
     const start = async (scene) => {
-      await cover(scene); await page.locator('#begin').click();
+      await cover(scene);
+      if (await page.locator('#cover').isVisible()) await page.locator('#begin').click();
       await page.waitForFunction((id) => document.querySelector('#stage').dataset.story === id, scene.story.id);
     };
     const advance = async () => {
@@ -132,7 +133,8 @@ const server = http.createServer(async (request, response) => {
     await page.locator('#begin:not(:disabled)').click();
     assert.equal(Number(await page.locator('#stage').getAttribute('data-line')), ursusPosition);
     await library('#/'); await page.locator('.resume-link').first().waitFor();
-    assert.equal(await page.locator('.resume-link').count(), 3);
+    assert.equal(await page.locator('.resume-link').count(), 2);
+    assert.deepEqual(await page.locator('.resume-grid .resume-link').evaluateAll((links) => links.map((link) => link.getAttribute('href'))), [ursus.route, chapter1.route]);
     const independent = await saved();
     assert.equal(independent.groups[groupKey(first.group)].resume, second.story.id);
     for (const [scene, position] of [[first, firstPosition], [second, secondPosition], [chapter1, chapterPosition], [ursus, ursusPosition]]) {

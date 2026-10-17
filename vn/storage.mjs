@@ -10,7 +10,12 @@ export function cleanPreferences(value = {}) {
     ...(typeof value?.motion === 'boolean' ? { motion: value.motion } : {}) };
 }
 function cleanStory(value) {
-  if (!object(value) || !Number.isSafeInteger(value.line) || value.line < 1) return null;
+  if (!object(value)) return null;
+  // Manual read/unread resets have no position or branch answers. Keep only
+  // the prior reading timestamp when this story already had a bookmark.
+  if (value.line === undefined && typeof value.read === 'boolean') return { read: value.read,
+    ...(value.updated !== undefined ? { updated: integer(value.updated) } : {}) };
+  if (!Number.isSafeInteger(value.line) || value.line < 1) return null;
   const answers = Object.fromEntries(Object.entries(object(value.answers) ? value.answers : {})
     .filter(([line, answer]) => /^\d+$/.test(line) && typeof answer === 'string' && answer.length < 100));
   return { line: value.line, answers, read: value.read === true, updated: integer(value.updated),
@@ -29,7 +34,8 @@ export function normalizeStore(value, catalog) {
       if (clean) stories[story.id] = clean;
     }
     if (Object.keys(stories).length) result.groups[groupKey(group)] = {
-      resume: Object.hasOwn(stories, saved.resume) ? saved.resume : Object.keys(stories).sort((a, b) => stories[b].updated - stories[a].updated)[0],
+      resume: Object.hasOwn(stories, saved.resume) ? saved.resume : Object.keys(stories).filter((id) => stories[id].updated !== undefined)
+        .sort((a, b) => stories[b].updated - stories[a].updated)[0] || null,
       stories, updated: integer(saved.updated),
     };
   }
@@ -69,12 +75,25 @@ export function createProgressStore(storage, catalog) {
       refresh();
       if (!group.stories.some((s) => s.id === story.id)) return false;
       const clean = cleanStory(progress);
-      if (!clean) return false;
+      if (!clean?.line) return false;
       const key = groupKey(group);
       const saved = data.groups[key] ||= { stories: {} };
       saved.stories[story.id] = clean;
       saved.resume = story.id;
       saved.updated = clean.updated;
+      return write();
+    },
+    setRead(group, story, read) {
+      refresh();
+      if (typeof read !== 'boolean' || !group.stories.some((s) => s.id === story.id)) return false;
+      const key = groupKey(group);
+      const saved = data.groups[key] ||= { stories: {}, resume: null, updated: 0 };
+      const previous = saved.stories[story.id];
+      if (previous?.updated !== undefined) saved.stories[story.id] = { read, updated: previous.updated };
+      else if (read) saved.stories[story.id] = { read: true };
+      else delete saved.stories[story.id];
+      if (!Object.keys(saved.stories).length) delete data.groups[key];
+      // Reset only this story's position and choices; retain resume ordering.
       return write();
     },
     preferences(preferences) { refresh(); data.preferences = cleanPreferences(preferences); return write(); },

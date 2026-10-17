@@ -5,6 +5,7 @@ import { routeFor, resolveRoute, groupKey, groupStats } from '../catalog.mjs';
 import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore } from '../storage.mjs';
 import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
 import { scriptSignature } from '../compatibility.mjs';
+import { recentGroups } from '../library.mjs';
 const catalog = JSON.parse(await readFile(new URL('../data/catalog.json', import.meta.url)));
 const audio = JSON.parse(await readFile(new URL('../data/audio.json', import.meta.url)));
 const group = (id) => catalog.groups.find((g) => g.id === id);
@@ -100,6 +101,81 @@ test('saves merge other tabs; malformed/blocked storage stays usable', () => {
     resume: 'nonexistent', stories: { [prologue.id]: { line: -5 }, invalid: progress(5) },
   } } }, catalog);
   assert.deepEqual(dirty.groups, {}); assert.equal(dirty.preferences.speed, 45);
+});
+
+test('continue reading keeps only the latest playable bookmark per category, in recency order', () => {
+  const sample = { categories: catalog.categories, groups: catalog.categories.flatMap((category, index) => [0, 1].map((number) => ({
+    category: category.id, id: `${index}-${number}`, stories: [{ id: `${index}-${number}`, vn: true }],
+  }))) };
+  const storage = memory(), store = createProgressStore(storage, sample);
+  sample.groups.forEach((g, index) => store.save(g, g.stories[0], progress(index + 1)));
+  const expected = sample.groups.filter((_, index) => index % 2 === 1).reverse();
+  assert.deepEqual(recentGroups(sample, store), expected);
+  store.setRead(sample.groups[0], sample.groups[0].stories[0], true);
+  assert.deepEqual(recentGroups(sample, store), expected, 'marking read must not change recency');
+  const unavailable = sample.groups.at(-1);
+  unavailable.stories[0].vn = false;
+  assert.equal(recentGroups(sample, store)[0], sample.groups.at(-2), 'skip unavailable resume targets');
+  assert.equal(Object.keys(store.snapshot().groups).length, sample.groups.length, 'older bookmarks remain saved');
+});
+
+test('manual completion survives reload without inventing a position or resume target', () => {
+  const storage = memory(), store = createProgressStore(storage, catalog), g = group('main_0');
+  assert.equal(store.setRead(g, prologue, true), true);
+  const restored = createProgressStore(storage, catalog);
+  assert.deepEqual(restored.group(g).stories[prologue.id], { read: true });
+  assert.equal(restored.group(g).resume, null);
+  assert.equal(groupStats(g, restored.group(g)).read, 1);
+  assert.deepEqual(recentGroups(catalog, restored), []);
+  restored.setRead(g, prologue, false);
+  assert.deepEqual(createProgressStore(storage, catalog).snapshot().groups, {});
+  assert.equal(restored.save(g, prologue, { read: true }), false, 'position saves still require a valid line');
+});
+
+test('read toggles reset only this story position and branches, preserving resume order and other tabs', () => {
+  const storage = memory(), a = createProgressStore(storage, catalog), b = createProgressStore(storage, catalog);
+  const g = group('main_0'), sibling = g.stories[1], other = group('main_1');
+  const saved = { ...progress(157), answers: { 143: '2' }, structure: 'a'.repeat(64) };
+  a.save(g, prologue, saved); a.save(g, sibling, progress(200));
+  b.save(other, other.stories[0], progress(300));
+  a.setRead(g, prologue, true);
+  assert.deepEqual(a.group(g).stories[prologue.id], { read: true, updated: saved.updated });
+  assert.equal(a.group(g).resume, sibling.id); assert.equal(a.group(g).updated, 200000);
+  assert.equal(a.group(other).stories[other.stories[0].id].line, 300);
+  b.setRead(g, prologue, false); a.snapshot();
+  assert.deepEqual(a.group(g).stories[prologue.id], { read: false, updated: saved.updated });
+  assert.equal(a.group(g).stories[sibling.id].line, 200);
+  assert.equal(a.setRead(other, prologue, true), false);
+});
+
+test('manual read opens the ending without invented choices; unread opens the beginning', async () => {
+  const commands = parseScript(await readFile(new URL(`../../gamedata/es_ES/story/${prologue.id}.txt`, import.meta.url), 'utf8'));
+  const store = createProgressStore(memory(), catalog), g = group('main_0');
+  store.save(g, prologue, { ...progress(157), answers: { 143: '2' } });
+  store.setRead(g, prologue, true);
+  const completed = validateProgress(commands, store.group(g).stories[prologue.id]);
+  assert.equal(completed.timeline[completed.index].kind, 'end');
+  assert.deepEqual(completed.answers, {});
+  assert.equal(completed.timeline.filter((step) => step.kind === 'choice').length, 0);
+  assert.equal(store.snapshot().groups[groupKey(g)].resume, prologue.id);
+  store.setRead(g, prologue, false);
+  const reset = validateProgress(commands, store.group(g).stories[prologue.id]);
+  assert.equal(reset.index, 0);
+  assert.equal(reset.timeline[0].line, buildTimeline(commands)[0].line);
+  assert.deepEqual(reset.answers, {});
+});
+
+test('classic-only stories can be marked read; denied storage retains the mark for this tab', () => {
+  const g = catalog.groups.find((g) => g.stories.some((s) => !s.vn)), story = g.stories.find((s) => !s.vn);
+  const storage = memory(), store = createProgressStore(storage, catalog);
+  assert.equal(store.setRead(g, story, true), true);
+  assert.equal(createProgressStore(storage, catalog).group(g).stories[story.id].read, true);
+  assert.deepEqual(recentGroups(catalog, store), []);
+  const blocked = createProgressStore(undefined, catalog);
+  assert.equal(blocked.setRead(g, story, true), false);
+  assert.equal(blocked.snapshot().groups[groupKey(g)].stories[story.id].read, true);
+  assert.equal(blocked.setRead(g, story, false), false);
+  assert.deepEqual(blocked.snapshot().groups, {});
 });
 
 for (const story of catalog.groups.flatMap((g) => g.stories).filter((s) => s.vn)) test(`bilingual full playback and audio coverage: ${story.id}`, async () => {

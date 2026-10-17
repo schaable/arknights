@@ -75,3 +75,19 @@ test('asset URLs encode sprite expressions and unknown commands fail explicitly'
   assert.throws(() => parseScript('[Unsupported(key="x")]'), /Unsupported directive/);
   assert.throws(() => parseScript('[Decision(options="A;B",values="1")]'), /Invalid decision/);
 });
+
+test('read flags from older saves open the ending even with intermediate or incomplete positions', () => {
+  const answers = answersFor('2');
+  const timeline = buildTimeline(es, answers), middle = timeline[Math.floor(timeline.length / 2)];
+  const completed = validateProgress(es, { line: middle.line, answers, read: true });
+  assert.equal(completed.timeline[completed.index].kind, 'end');
+  assert.deepEqual(completed.answers, answers);
+  assert.ok(completed.index > 0, 'a complete branch retains its reading history');
+  for (const line of [undefined, 3, middle.line, 999999]) {
+    const partial = validateProgress(es, { line, answers: {}, read: true });
+    assert.equal(partial.timeline[partial.index].kind, 'end');
+    assert.deepEqual(partial.answers, {});
+  }
+  const reading = validateProgress(es, { line: middle.line, answers, read: false });
+  assert.equal(reading.timeline[reading.index].line, middle.line);
+});

@@ -9,6 +9,16 @@ export function link(text, href, className) {
   const node = element('a', text, className); node.href = href; return node;
 }
 export const storyTitle = (story, t) => [story.code, story.title, story.phase ? t(story.phase) : ''].filter(Boolean).join(' · ');
+export function recentGroups(catalog, store) {
+  const latest = new Map();
+  for (const group of catalog.groups) {
+    const saved = store.group(group);
+    if (!group.stories.some((story) => story.vn && story.id === saved.resume)) continue;
+    const previous = latest.get(group.category);
+    if (!previous || (saved.updated || 0) > previous.updated) latest.set(group.category, { group, updated: saved.updated || 0 });
+  }
+  return [...latest.values()].sort((a, b) => b.updated - a.updated).map(({ group }) => group);
+}
 export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   root.replaceChildren();
   const { category, group, story } = route;
@@ -27,7 +37,8 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     const card = element('article', undefined, 'collection-card');
     const title = g.chapter === undefined ? g.title : `${t('chapter')} ${String(g.chapter).padStart(2, '0')} · ${g.title}`;
     const target = routeFor(g.category, g);
-    card.append(element('span', g.chapter === undefined ? t('stories') : `${t('chapter')} ${String(g.chapter).padStart(2, '0')}`, 'eyebrow'),
+    card.append(element('span', resumeOnly ? catalog.categories.find((cat) => cat.id === g.category).name[preferences.language]
+      : g.chapter === undefined ? t('stories') : `${t('chapter')} ${String(g.chapter).padStart(2, '0')}`, 'eyebrow'),
       link(title, target, 'collection-title'), element('p', statsText(g), 'collection-stats'));
     const meter = element('progress'); meter.max = stats.total; meter.value = stats.read; meter.setAttribute('aria-label', t('collectionProgress')); card.append(meter);
     const badges = element('div', undefined, 'badges');
@@ -41,11 +52,11 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   };
   if (route.kind === 'home') {
     heading(t('explore'), t('intro'));
-    const resumes = catalog.groups.filter((g) => g.stories.some((s) => s.vn && s.id === store.group(g).resume));
+    const resumes = recentGroups(catalog, store);
     if (resumes.length) {
       root.append(element('h3', t('continueReading')));
       const row = element('div', undefined, 'collection-grid resume-grid');
-      [...resumes].sort((a, b) => store.group(b).updated - store.group(a).updated).forEach((g) => row.append(groupCard(g, true)));
+      resumes.forEach((g) => row.append(groupCard(g, true)));
       root.append(row);
     }
     root.append(element('h3', t('categories')));
@@ -77,6 +88,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     search.addEventListener('input', render); checkbox.addEventListener('change', render); render();
   } else if (route.kind === 'group') {
     heading(group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')} · ${group.title}`, statsText(group));
+    const message = element('p', undefined, 'library-status'); message.setAttribute('role', 'status'); root.append(message);
     const saved = store.group(group);
     const resume = group.stories.find((s) => s.id === saved.resume && s.vn);
     if (resume) root.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(category, group, resume), 'primary collection-resume'));
@@ -90,11 +102,23 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
       const badges = element('div', undefined, 'badges');
       badges.append(element('span', t(s.vn ? 'available' : 'pending'), s.vn ? 'badge available' : 'badge'));
       badges.append(element('span', t(s.spanish ? 'translated' : 'untranslated'), 'badge'));
-      badges.append(element('span', t(progress?.read ? 'completed' : progress ? 'inProgress' : 'unread'), progress ? 'badge read-status' : 'badge'));
+      badges.append(element('span', t(progress?.read ? 'completed' : progress?.line ? 'inProgress' : 'unread'), progress?.read || progress?.line ? 'badge read-status' : 'badge'));
       info.append(badges);
       item.append(element('span', String(index + 1).padStart(2, '0'), 'story-number'), info);
-      if (!s.vn) item.append(link(t('classic'), '../' + s.classicHash, 'classic-link'));
-      else item.append(link('→', routeFor(category, group, s), 'story-open'));
+      const actions = element('div', undefined, 'story-actions');
+      const mark = element('button', t(progress?.read ? 'markUnread' : 'markRead'), 'story-mark-read');
+      mark.type = 'button'; mark.dataset.story = s.id;
+      mark.setAttribute('aria-label', `${mark.textContent}: ${storyTitle(s, t)}`);
+      mark.addEventListener('click', () => {
+        const success = store.setRead(group, s, !store.group(group).stories[s.id]?.read);
+        renderLibrary(root, route, { catalog, store, preferences, t });
+        root.querySelectorAll('.story-mark-read')[index].focus({ preventScroll: true });
+        if (!success) root.querySelector('.library-status').textContent = t('readStatusError');
+      });
+      actions.append(mark);
+      if (!s.vn) actions.append(link(t('classic'), '../' + s.classicHash, 'classic-link'));
+      else actions.append(link('→', routeFor(category, group, s), 'story-open'));
+      item.append(actions);
       list.append(item);
     });
     root.append(list);

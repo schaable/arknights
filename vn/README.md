@@ -49,6 +49,10 @@ browser Back/Forward without server rewrites. The player provides breadcrumbs,
 previous/next stories, and a story selector. Completion links to the next VN
 story when supported, otherwise explicitly to the classic reader.
 
+The home page's **Continue reading** section shows only the most recently read
+chapter or collection in each category, ordered by recency. Earlier bookmarks
+remain available on their chapter and collection pages.
+
 The complete catalog is a checked-in snapshot (998 collections, 2,670 stories,
 113 local Spanish translations at generation time). No remote story-index
 downloads are required to browse it. The generator discovers translated scripts
@@ -73,6 +77,16 @@ and enables scenes that pass command, branch, language, and audio checks.
   opening a story's cover does not change the resume target.
 - Restart clears only the current story. Collection completion uses *all* its
   stories as the denominator, including scenes not yet supported in VN.
+- Every story in a chapter or collection has **Mark as read / Mark as unread**,
+  including stories available only in the classic reader. Changes update the
+  completion count and persist across reloads. Marking read clears the saved
+  position and choices and opens the ending screen directly on the next visit. Marking
+  unread clears them and starts from the beginning. Other stories and resume
+  order stay unchanged; marking an unopened story does not create a bookmark.
+- Read stories open at **You reached the end of this story**, including older
+  saves that still contain an intermediate position. Restarting, going back
+  into dialogue, or selecting a history line marks the story unread again.
+  Reaching the ending restores completion.
 - Navigation aborts old script requests, rejects stale results, and stops sound,
   automatic reading, timers, animations, and open dialogs before reusing the stage.
 
@@ -98,15 +112,25 @@ and translation-review notes. The shape is:
 }
 ```
 
+Manual read/unread resets store `{ read: true }` or `{ read: false }`, without a
+position or choices. An existing bookmark also retains its `updated` timestamp
+for resume ordering. A newly marked story has no bookmark; clearing its mark
+removes that entry. A collection containing only new marks has `resume: null`.
+Manual completion shows the ending screen without generating branch answers;
+**Read again** starts a fresh reading.
+
 Canonical `storyTxt` IDs identify stories; `${category}:${collectionId}` identifies
 save groups. An existing `arknights.vn.v1` prologue save and its preferences migrate
 once; the original key is retained as a backup. Values and script positions are
 validated on load. New saves include a command-structure fingerprint; a changed
 script restarts with a notice instead of mapping an old position onto different
-dialogue. Existing saves without a fingerprint continue to migrate. Writes merge
-other tabs' saved groups, and storage events
-refresh library progress. Denied/full storage falls back to memory for the tab
-and displays a save warning during reading. There is no cloud sync or import/export.
+dialogue. A completed story retains its read status and opens the ending screen
+without the old branch history if its script structure changed. Existing saves
+without a fingerprint continue to migrate. Writes merge
+other tabs' saved groups, and storage events refresh library progress and read
+status in an open player. Denied/full storage falls back to memory for the tab
+and displays a warning when saving playback or manual read status. There is no
+cloud sync or import/export.
 
 ## Translation review
 
@@ -297,6 +321,7 @@ npm install --prefix /tmp/vn-qa playwright
 /tmp/vn-qa/node_modules/.bin/playwright install chromium
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/review.cjs
@@ -329,3 +354,8 @@ with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,
 and route cleanup. Unit tests verify shared note IDs, raw source fields, the
 Markdown format, and preservation of existing notes and reading progress.
+The library harness checks one recent bookmark per category, manual read/unread
+actions for VN and classic-only stories, opening at the ending/beginning after
+marking read/unread, older read flags with intermediate positions, rereading that
+clears completion, cleared choices, reload, cross-tab resets, mobile and keyboard
+controls, and storage errors.

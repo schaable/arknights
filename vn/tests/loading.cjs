@@ -191,7 +191,7 @@ const server = http.createServer(async (request, response) => {
     await page.evaluate(({ key, id, line }) => {
       const saved = JSON.parse(localStorage.getItem('arknights.vn.v2'));
       saved.groups[key] ||= { resume: id, stories: {} };
-      saved.groups[key].stories[id] = { line, answers: {}, read: true, updated: 1, structure: '0'.repeat(64) };
+      saved.groups[key].stories[id] = { line, answers: {}, read: false, updated: 1, structure: '0'.repeat(64) };
       localStorage.setItem('arknights.vn.v2', JSON.stringify(saved));
     }, { key: `${scene.group.category}:${scene.group.id}`, id: scene.story.id, line: scene.steps[10].line });
     await page.reload(); await page.locator('#begin:not(:disabled)').waitFor();

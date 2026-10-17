@@ -150,8 +150,15 @@ export function buildTimeline(commands, answers = {}) {
   return steps;
 }
 
+function completedProgress(commands) {
+  // Show completion without inventing choices when no complete reading exists.
+  return { answers: {}, index: 0, timeline: [{ kind: 'end', line: (commands.at(-1)?.line || 0) + 1,
+    text: '', speaker: '', state: initialScene(), events: [], completionOnly: true }] };
+}
+
 // Validate saved answers against the actual script, keeping only reachable choices.
 export function validateProgress(commands, saved) {
+  if (saved?.read === true && saved.line === undefined) return completedProgress(commands);
   const answers = {};
   for (const item of commands.filter((c) => c.command === 'decision')) {
     const value = saved?.answers?.[item.line];
@@ -159,6 +166,10 @@ export function validateProgress(commands, saved) {
     answers[item.line] = value;
   }
   const timeline = buildTimeline(commands, answers);
+  // Older saves could combine "read" with an intermediate position. The read
+  // flag takes precedence on entry; retain history only for a complete branch.
+  if (saved?.read === true) return timeline.at(-1).kind === 'end'
+    ? { answers, index: timeline.length - 1, timeline } : completedProgress(commands);
   const index = timeline.findIndex((step) => step.line === saved?.line);
   return { answers, index: index < 0 ? 0 : index, timeline };
 }
