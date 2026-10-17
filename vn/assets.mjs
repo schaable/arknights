@@ -14,14 +14,15 @@ export function characterId(name) {
 export function imageURLs(kind, name) {
   const path = kind === 'character'
     ? `avg/characters/${encodeURIComponent(characterId(name))}.png`
-    : `torappu/dynamicassets/avg/${kind === 'image' ? 'images' : 'backgrounds'}/${name}.png`;
+    : `torappu/dynamicassets/avg/${({ image: 'images', background: 'backgrounds', item: 'items' })[kind]}/${name}.png`;
   return [primary + path.toLowerCase(), fallback + path.toLowerCase()];
 }
 
-export function loadImage(img, kind, name, onError) {
+export function loadImage(img, kind, name, onError, onLoad = null) {
   const urls = imageURLs(kind, name);
   let index = 0;
   img.dataset.asset = name;
+  img.onload = onLoad;
   img.onerror = () => {
     if (++index < urls.length) img.src = urls[index];
     else { img.hidden = true; onError(); }
@@ -37,6 +38,8 @@ export class Soundtrack {
     this.current = null;
     this.track = null;
     this.effects = new Set();
+    this.effectChannels = new Map();
+    this.pendingEffects = new Map();
     this.timers = new Set();
     this.fades = new Map();
   }
@@ -62,9 +65,16 @@ export class Soundtrack {
   later(callback, seconds = 0) {
     const timer = setTimeout(() => { this.timers.delete(timer); callback(); }, Number(seconds) * 1000);
     this.timers.add(timer);
+    return timer;
   }
   dispose(audio) {
     if (!audio) return;
+    const pending = this.pendingEffects.get(audio);
+    clearTimeout(pending);
+    this.timers.delete(pending);
+    this.pendingEffects.delete(audio);
+    this.effects.delete(audio);
+    this.effectChannels.delete(audio);
     clearInterval(this.fades.get(audio));
     this.fades.delete(audio);
     audio.onended = audio.onerror = null;
@@ -75,6 +85,7 @@ export class Soundtrack {
   fade(audio, target, seconds, done = () => {}) {
     if (!audio) return;
     clearInterval(this.fades.get(audio));
+    if (!(Number(seconds) > 0)) { this.fades.delete(audio); audio.volume = target; done(); return; }
     const initial = audio.volume, start = performance.now();
     const timer = setInterval(() => {
       const fraction = Math.min(1, (performance.now() - start) / (Number(seconds) * 1000));
@@ -107,11 +118,31 @@ export class Soundtrack {
   }
   effect(args) {
     if (!this.enabled) return;
-    const audio = this.create(args.key, args.volume);
+    // Named channels have a single owner, including sounds waiting on a delay.
+    // Unnamed one-shots can overlap (the scripts use this for layered impacts).
+    if (args.channel != null) this.stopEffect({ channel: args.channel });
+    const audio = this.create(args.key, args.volume, args.loop === 'true');
     if (!audio) return;
     this.effects.add(audio);
-    audio.onended = () => { this.effects.delete(audio); this.dispose(audio); };
-    this.later(() => this.play(audio), args.delay);
+    this.effectChannels.set(audio, args.channel);
+    audio.onended = () => this.dispose(audio);
+    const timer = this.later(() => {
+      this.pendingEffects.delete(audio);
+      if (this.effects.has(audio)) this.play(audio);
+    }, args.delay);
+    this.pendingEffects.set(audio, timer);
+  }
+  stopEffect(args) {
+    for (const audio of this.effects) {
+      if (!this.effectChannels.has(audio) || this.effectChannels.get(audio) !== args.channel) continue;
+      // Cancel scheduled starts even when a fade-out was requested.
+      const pending = this.pendingEffects.get(audio);
+      if (pending != null || !this.enabled || !(Number(args.fadetime) > 0)) this.dispose(audio);
+      else {
+        this.effectChannels.delete(audio);
+        this.fade(audio, 0, args.fadetime, () => this.dispose(audio));
+      }
+    }
   }
   stopEffects() {
     this.timers.forEach(clearTimeout);
@@ -126,15 +157,17 @@ export class Soundtrack {
     }
     this.fades.clear();
   }
-  enable(enabled) {
+  enable(enabled, sounds = []) {
     this.enabled = enabled;
     this.stopFades();
     this.stopEffects();
     this.music(this.current, true);
+    if (enabled) for (const sound of sounds) this.effect({ ...sound, delay: 0 });
   }
-  restore(args) {
+  restore(args, sounds = []) {
     this.stopFades();
     this.stopEffects();
     this.music(args, true);
+    for (const sound of sounds) this.effect({ ...sound, delay: 0 });
   }
 }

@@ -79,8 +79,8 @@ test('every translation is discovered, enabled sources align, pinned originals m
   const provenance = JSON.parse(await readFile(new URL('../sources/provenance.json', import.meta.url)));
   const translated = catalog.groups.flatMap((g) => g.stories).filter((s) => s.spanish);
   assert.equal(translated.length, 113);
-  assert.equal(translated.filter((s) => s.vn).length, 92);
-  assert.equal(translated.filter((s) => !s.vn).length, 21);
+  assert.equal(translated.filter((s) => s.vn).length, 113);
+  assert.equal(translated.filter((s) => !s.vn).length, 0);
   for (const story of translated) {
     assert.ok(story.source.languages.es && story.source.languages.en);
     const english = await readFile(new URL('../' + story.source.languages.en, import.meta.url));

@@ -1,4 +1,4 @@
-import { buildTimeline, validateProgress, applyEvent, initialScene } from './script.mjs';
+import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt } from './script.mjs';
 import { loadImage, imageURLs, Soundtrack } from './assets.mjs';
 import { loadStory } from './loader.mjs';
 
@@ -135,6 +135,93 @@ export function createPlayer({ preferences, t, store, onChange }) {
     $('characters').replaceChildren(...nodes);
   }
 
+  function loadOverlay(img, kind, name, ready) {
+    const token = loadVersion;
+    const failed = () => { if (token === loadVersion) notice('assetError'); };
+    if (!ready) { loadImage(img, kind, name, failed); return; }
+    // A one-second photograph must be visible for that second even on its
+    // first request. Next/Back/navigation can still cancel this bounded wait.
+    return new Promise((resolve) => {
+      const signal = waitController.signal;
+      const finish = (loaded) => {
+        clearTimeout(timer);
+        signal.removeEventListener('abort', abort);
+        img.onload = img.onerror = null;
+        resolve(loaded);
+      };
+      const abort = () => finish(false);
+      const timer = setTimeout(() => { img.hidden = true; failed(); finish(false); }, 15000);
+      signal.addEventListener('abort', abort, { once: true });
+      loadImage(img, kind, name, () => { failed(); finish(false); }, () => finish(true));
+    });
+  }
+
+  function drawCutin(id, duration = 0, ready = false) {
+    const previous = [...$('cutins').children].find((node) => node.dataset.widget === id);
+    const cutin = state.cutins.find((value) => value.id === id);
+    if (!cutin) {
+      if (!previous) return;
+      const frames = previous.dataset.fade === 'horiz_expand_center'
+        ? [{ clipPath: getComputedStyle(previous).clipPath }, { clipPath: 'inset(0 50%)' }]
+        : [{ opacity: getComputedStyle(previous).opacity }, { opacity: 0 }];
+      const fade = animate(previous, frames, duration, 'cutin');
+      if (fade) {
+        if (previous.dataset.fade === 'horiz_expand_center') previous.style.clipPath = 'inset(0 50%)';
+        else previous.style.opacity = 0;
+        fade.finished.then(() => previous.remove()).catch(() => {});
+      } else previous.remove();
+      return;
+    }
+    previous?.remove();
+    const panel = document.createElement('div');
+    panel.className = 'cutin';
+    panel.dataset.widget = id;
+    panel.dataset.fade = cutin.fade;
+    panel.style.left = `${50 + cutin.x / 12.8}%`;
+    panel.style.top = `${-cutin.y / 7.2}%`;
+    panel.style.width = `${cutin.width / 12.8}%`;
+    panel.style.height = `${cutin.height / 7.2}%`;
+    const img = document.createElement('img');
+    img.alt = '';
+    panel.append(img);
+    $('cutins').append(panel);
+    const reveal = () => {
+      panel.style.visibility = '';
+      animate(panel, cutin.fade === 'horiz_expand_center'
+        ? [{ clipPath: 'inset(0 50%)' }, { clipPath: 'inset(0 0%)' }]
+        : [{ opacity: 0 }, { opacity: 1 }], duration, 'cutin');
+    };
+    const loaded = loadOverlay(img, 'character', cutin.name, ready);
+    if (loaded) {
+      panel.style.visibility = 'hidden';
+      return loaded.then((okay) => { if (okay) reveal(); });
+    }
+    reveal();
+  }
+
+  function drawItem(duration = 0, ready = false) {
+    const layer = $('item');
+    const old = [...layer.children];
+    if (state.item) {
+      const img = document.createElement('img');
+      img.alt = '';
+      layer.replaceChildren(img);
+      const reveal = () => { img.style.visibility = ''; animate(img, [{ opacity: 0 }, { opacity: 1 }], duration, 'opacity'); };
+      const loaded = loadOverlay(img, 'item', state.item.name, ready);
+      if (loaded) {
+        img.style.visibility = 'hidden';
+        return loaded.then((okay) => { if (okay) reveal(); });
+      }
+      reveal();
+    } else for (const img of old) {
+      const opacity = getComputedStyle(img).opacity;
+      img.style.opacity = 0;
+      const fade = animate(img, [{ opacity }, { opacity: 0 }], duration, 'opacity');
+      if (fade) fade.finished.then(() => img.remove()).catch(() => {});
+      else img.remove();
+    }
+  }
+
   function restoreScene(snapshot) {
     animations.forEach((a) => a.cancel());
     animations.clear();
@@ -142,17 +229,21 @@ export function createPlayer({ preferences, t, store, onChange }) {
     drawArt('background', state.background);
     drawArt('image', state.image);
     drawCharacters();
+    $('cutins').replaceChildren();
+    state.cutins.forEach((cutin) => drawCutin(cutin.id));
+    drawItem();
     $('blocker').style.backgroundColor = state.blocker.color;
     $('blocker').style.opacity = state.blocker.alpha;
     $('camera').style.filter = `grayscale(${state.grayscale})`;
-    soundtrack?.restore(state.music);
+    soundtrack?.restore(state.music, state.sounds);
   }
 
   async function event(item) {
     const { command, args: a } = item;
+    const token = run;
     const previous = structuredClone(state);
     applyEvent(state, item);
-    const duration = Number(a.fadetime ?? a.duration ?? 0);
+    const duration = Number(a.fadetime ?? a.duration ?? (command === 'charactercutin' ? 0.3 : 0));
     switch (command) {
       case 'background':
       case 'image':
@@ -160,13 +251,17 @@ export function createPlayer({ preferences, t, store, onChange }) {
         if (command === 'background') drawCharacters();
         break;
       case 'character': drawCharacters(); break;
-      case 'imagetween': {
-        const img = $('image').lastElementChild;
-        if (img && previous.image) {
-          const from = { ...previous.image, x: Number(a.xfrom ?? previous.image.x),
-            y: Number(a.yfrom ?? previous.image.y), scale: Number(a.xscalefrom ?? previous.image.scale) };
-          img.style.transform = transform(state.image);
-          animate(img, [{ transform: transform(from) }, { transform: transform(state.image) }], duration, 'transform');
+      case 'charactercutin': await drawCutin(a.widgetid || '0', duration, true); break;
+      case 'showitem':
+      case 'hideitem': await drawItem(duration, true); break;
+      case 'imagetween':
+      case 'backgroundtween': {
+        const layer = command === 'imagetween' ? 'image' : 'background';
+        const img = $(layer).lastElementChild;
+        if (img && previous[layer]) {
+          const from = tweenArt(previous[layer], a, 'from');
+          img.style.transform = transform(state[layer]);
+          animate(img, [{ transform: transform(from) }, { transform: transform(state[layer]) }], duration, 'transform');
         }
         break;
       }
@@ -195,10 +290,11 @@ export function createPlayer({ preferences, t, store, onChange }) {
       case 'playmusic': soundtrack?.music(a); break;
       case 'stopmusic': soundtrack?.music(null, false, a.fadetime); break;
       case 'playsound': soundtrack?.effect(a); break;
+      case 'stopsound': soundtrack?.stopEffect(a); break;
       case 'delay': await wait(a.time); return;
       case 'dialog': await wait(a.time); return;
     }
-    if (a.block === 'true') await wait(duration);
+    if (token === run && a.block === 'true') await wait(duration);
   }
 
   const displayText = (text) => text.replace(/\{@nickname\}/gi, () => preferences.nickname.trim() || 'Doctor');
@@ -368,8 +464,8 @@ export function createPlayer({ preferences, t, store, onChange }) {
     animations.clear();
     soundtrack?.enable(false);
     soundtrack = null;
-    document.querySelectorAll('.scene img').forEach((img) => { img.onerror = null; });
-    for (const id of ['background', 'image', 'characters', 'choices', 'history-list']) $(id).replaceChildren();
+    document.querySelectorAll('.scene img').forEach((img) => { img.onload = img.onerror = null; });
+    for (const id of ['background', 'image', 'characters', 'cutins', 'item', 'choices', 'history-list']) $(id).replaceChildren();
     document.querySelectorAll('dialog[open]').forEach((dialog) => dialog.close());
     ready = started = auto = typing = false;
     story = group = null;
@@ -455,7 +551,7 @@ export function createPlayer({ preferences, t, store, onChange }) {
   $('restart').addEventListener('click', restart);
   $('replay').addEventListener('click', restart);
   $('auto').addEventListener('click', () => { auto = !auto; updateControls(); scheduleAuto(); });
-  $('sound').addEventListener('click', () => { soundtrack.enable(!soundtrack.enabled); updateControls(); });
+  $('sound').addEventListener('click', () => { soundtrack.enable(!soundtrack.enabled, state.sounds); updateControls(); });
   function changeLanguage() {
     stopAuto();
     const line = timeline[index]?.line;

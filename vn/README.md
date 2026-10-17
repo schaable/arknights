@@ -20,22 +20,22 @@ Collection pages list stories in game order. Translation availability and VN
 availability are separate: a Spanish script can exist before its scene is
 supported by the player. Other stories have links to the classic reader.
 
-**92 of the 113 translated scenes** are enabled in Spanish and English:
+**All 113 translated scenes** are enabled in Spanish and English:
 
 | Collection | Playable / translated scenes |
 | --- | --- |
 | Chapter 00 | 14 / 14 |
-| Chapter 01 | 11 / 12 |
-| Chapter 02 | 13 / 20 |
-| Chapter 03 | 13 / 16 |
-| Chapter 04 | 18 / 20 |
-| Chapter 05 | 10 / 17 |
-| Children of Ursus | 6 / 7 |
+| Chapter 01 | 12 / 12 |
+| Chapter 02 | 20 / 20 |
+| Chapter 03 | 16 / 16 |
+| Chapter 04 | 20 / 20 |
+| Chapter 05 | 17 / 17 |
+| Children of Ursus | 7 / 7 |
 | Operational Intelligence | 7 / 7 |
 
-The remaining 21 scenes need support for character cut-ins, background tweens,
-item overlays, or stopping sound channels. They remain available in the classic
-reader. Translations and the root reader are unchanged.
+The previously blocked 21 scenes now support their character cut-ins, background
+tweens, item overlays, and sound-channel stops. Untranslated stories remain in
+the classic reader. Translations and the root reader are unchanged.
 
 Example URLs after `/vn/`:
 
@@ -61,7 +61,7 @@ and enables scenes that pass command, branch, language, and audio checks.
   neither copied nor regenerated. Story and collection names retain their
   upstream titles. Settings can change the Doctor's name.
 - Stage artwork, character focus, backgrounds/CGs, crossfades, image transforms,
-  blockers, grayscale, camera shake, and waits use the script's events. Next can
+  cut-ins, item overlays, blockers, grayscale, camera shake, and waits use the script's events. Next can
   skip a transition. Space/Right advance, Left goes back, and H opens history.
 - Typewriter speed, automatic reading, choices, history, restart, reduced motion,
   and mobile layout are supported. Optional music/SFX start muted. Hiding the
@@ -127,6 +127,7 @@ and displays a save warning during reading. There is no cloud sync or import/exp
 | `storage.mjs` | Versioned grouped saves and legacy migration |
 | `sources/en/`, `sources/provenance.json` | 113 pinned English AVG scripts and their commit/checksums |
 | `tests/` | Parser/storage/catalog tests and Chromium integration checks |
+| `COMMANDS.md`, `tools/audit-commands.mjs` | Reproducible command inventory across local game data and pinned sources |
 
 The classic `js/story.js` couples parsing and DOM playback. This separate player
 uses its line/tag, sprite, and predicate conventions in a small pure adapter with
@@ -144,6 +145,50 @@ camera effects/page destinations, or unknown audio references prevent automatic
 activation. Passing these checks establishes compatibility with the current
 renderer; new content still needs visual QA. Do not derive classic story indices
 from stage codes: the catalog preserves the classic reader's ordering.
+
+### Scene command coverage
+
+- `CharacterCutin` keeps independent `widgetID` slots, uses the requested sprite,
+  horizontal offset and width, and opens/closes with a center reveal or alpha
+  fade. A command without `name` removes its slot. Cut-ins sit above the CG and
+  normal characters; their snapshots survive Back, history, reload and language
+  switches. Unvalidated styles remain gated. Portrait crops use the same common
+  canvas anchors as normal sprites, rather than exact game UI metrics.
+- `BackgroundTween` animates the background independently of `ImageTween`.
+  Both honor explicit start/end positions, uniform scale, duration and blocking;
+  nonblocking animation continues while dialogue is shown. Seeking or skipping
+  uses the deterministic final transform.
+- `ShowItem` uses the AVG items asset directory and a single centered overlay;
+  another item replaces it and `HideItem` fades it away. Cut-ins and items wait
+  for their artwork before beginning timed playback, with a 15-second bound,
+  image fallback and a visible failure notice. Next and navigation cancel the
+  wait. Reduced motion omits scripted animation/delay, including brief inserts.
+- `PlaySound` supports looping named channels. `StopSound` cancels pending
+  starts and fades only the specified channel; music and other channels keep
+  playing. Named-channel replacement disposes the previous sound. Unnamed
+  one-shots can overlap. Only active loops are restored when seeking or enabling
+  sound; one-shots are never replayed by restoring a save. Muting and leaving a
+  story dispose all sounds, fades and delayed starts. Audio restores from the
+  start of a loop, not an exact playback timestamp.
+
+The [command audit](COMMANDS.md) covers all 212 local gamedata scripts and 113
+pinned English counterparts. It found **12 additional command families**, all
+outside the translated corpus: character actions/slots, multiline/popup dialogue,
+subtitles/stickers, foreground/background effects, image rotation, and volume
+changes. Implementing these requires validating their own scenes and, for
+particles, an asset/rendering adapter. They remain explicitly unsupported under
+the translated-only validation scope; none were silently accepted as no-ops.
+This local inventory is not an audit of the entire upstream English catalog.
+
+The implementation follows the checked-in scripts and existing asset conventions.
+The public [Mooncell rendering reference](https://github.com/MooncellWiki/arknights-story-player/blob/588a9baad8aed9250c9e8fe8d54a10616aa7630c/src/engine/rendering/PixiStoryRenderer.ts)
+and [audio reference](https://github.com/MooncellWiki/arknights-story-player/blob/588a9baad8aed9250c9e8fe8d54a10616aa7630c/src/engine/audio.ts)
+were also consulted for widget/channel lifecycle; this is not a claim of exact
+in-game rendering parity. Rebuild the inventory with:
+
+```sh
+node vn/tools/audit-commands.mjs > vn/COMMANDS.md
+```
 
 ## Loading behavior
 
@@ -206,7 +251,7 @@ contents.
 
 The source repository is `ArknightsAssets/ArknightsGamedata`, also used by
 `js/util.js`. The catalog tables were retrieved on 2026-10-16; the pinned English
-revision is recorded in `sources/provenance.json`. There are 84 audio entries,
+revision is recorded in `sources/provenance.json`. There are 91 audio entries,
 including direct `Sound_Beta_2/...` paths. Artwork/audio use the existing public
 asset CDNs with fallbacks. The root README's game-content ownership and unofficial
 fan-project notices apply here too.
@@ -229,6 +274,7 @@ npm install --prefix /tmp/vn-qa playwright
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
 ```
 
 `VN_BROWSER_PATH` optionally selects an existing Chromium binary;
@@ -240,11 +286,16 @@ six catalog categories, independent saves/migration, reload/Back/Forward,
 stale-load cancellation, teardown, all three new stories' complete selected-path
 text, remote images, and mobile layout. The loading harness checks a complete
 selected path through all
-92 enabled stories (8,700 dialogue lines), completion saves, language switching,
-271 unique images, and samples from every migrated collection. It also simulates
+113 enabled stories (10,631 dialogue lines), completion saves, language switching,
+303 unique images (including transient and alternate-branch artwork), and samples
+from every migrated collection. It also simulates
 missing/failed languages, mismatched scripts, audio failures, unsupported scripts,
 and retry during reading. Set `VN_FAILURES_ONLY=1` to run just those failure cases.
 Unit tests cover original branching answers, bilingual source alignment across
 all enabled scenes, every catalog route, malformed saves, group isolation,
 request cancellation/timeouts, fingerprints, pinned-source checksums, and unknown
-commands/variants.
+commands/variants. The scene harness checks timed cut-ins, the brief Ursus item
+insert with a slow image request, independent background/foreground tweens,
+both translated sound-stop sequences, overlay restoration and route teardown.
+Unit tests also verify channel isolation, delayed-start cancellation and mute/
+restore cleanup without fetching audio.

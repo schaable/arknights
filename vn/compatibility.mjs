@@ -34,6 +34,13 @@ export function inspectScript(source) {
     if (command === 'gotopage' && a.dest?.toLowerCase() !== 'home') {
       issues.push({ code: 'unsupported', command, line, detail: `Page destination: ${a.dest}` });
     }
+    if (command === 'charactercutin' && ((a.style && a.style !== 'cutin')
+      || (a.fadestyle && !['alpha', 'horiz_expand_center'].includes(a.fadestyle)))) {
+      issues.push({ code: 'unsupported', command, line, detail: 'Unvalidated cut-in style' });
+    }
+    if (command === 'showitem' && a.is_module === 'true') {
+      issues.push({ code: 'unsupported', command, line, detail: 'Module item artwork' });
+    }
     if (command === 'playmusic' || command === 'playsound') {
       for (const value of [a.key, a.intro].filter(Boolean)) soundKeys.add(value.replace(/^\$/, ''));
     }

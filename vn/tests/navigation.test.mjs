@@ -45,7 +45,7 @@ test('all chapters are ordered; translation and VN availability remain independe
   const chapters = catalog.groups.filter((g) => g.category === 'main');
   assert.ok(chapters.length >= 18);
   assert.deepEqual(chapters.map((g) => g.chapter), [...chapters.map((g) => g.chapter)].sort((a, b) => a - b));
-  assert.equal(catalog.groups.flatMap((g) => g.stories).filter((s) => s.vn).length, 92);
+  assert.equal(catalog.groups.flatMap((g) => g.stories).filter((s) => s.vn).length, 113);
   assert.equal(catalog.groups.flatMap((g) => g.stories).filter((s) => s.spanish).length, 113);
   assert.equal(group('main_0').stories[1].slug, 'prologue-2');
   assert.equal(group('main_1').stories[0].slug, '1-1-before');

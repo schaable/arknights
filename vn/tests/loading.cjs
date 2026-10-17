@@ -32,8 +32,13 @@ const server = http.createServer(async (request, response) => {
     const commands = parseScript(source);
     const answers = Object.fromEntries(commands.filter((c) => c.command === 'decision').map((c) => [c.line, c.args.values.split(';')[0]]));
     const steps = buildTimeline(commands, answers);
-    for (const step of steps) {
-      for (const [kind, name] of [['background', step.state.background?.name], ['image', step.state.image?.name], ...step.state.characters.map((name) => ['character', name])]) {
+    // Include transient artwork between clicks and artwork in alternate branches.
+    for (const { command, args } of commands) {
+      const assets = ['background', 'image'].includes(command) ? [[command, args.image]]
+        : command === 'showitem' ? [['item', args.image]]
+        : command === 'charactercutin' ? [['character', args.name]]
+        : command === 'character' ? [args.name, args.name2, args.name3].map((name) => ['character', name?.trim()]) : [];
+      for (const [kind, name] of assets) {
         if (name) artwork.set(kind + ':' + name, { kind, name, urls: imageURLs(kind, name) });
       }
     }
@@ -66,9 +71,13 @@ const server = http.createServer(async (request, response) => {
         const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
         const display = (value) => value.replace(/\{@nickname\}/gi, 'Test');
         for (const [index, step] of steps.entries()) {
-          for (let n = 0; n < 100 && (Number(stage.dataset.line) !== step.line || stage.dataset.kind !== step.kind || stage.getAttribute('aria-busy') === 'true'); n++) await pause();
+          const deadline = Date.now() + 20000;
+          while (Date.now() < deadline && (Number(stage.dataset.line) !== step.line || stage.dataset.kind !== step.kind || stage.getAttribute('aria-busy') === 'true')) await pause();
           if (Number(stage.dataset.line) !== step.line || stage.dataset.kind !== step.kind) throw new Error(`${id}:${step.line} — wrong step ${stage.dataset.line}/${stage.dataset.kind}`);
           if (step.kind === 'dialogue' && document.querySelector('#text').textContent !== display(step.text)) throw new Error(`${id}:${step.line} — text differs`);
+          const cutins = [...document.querySelectorAll('#cutins .cutin')].map((el) => ({ id: el.dataset.widget, name: el.querySelector('img').dataset.asset }));
+          if (JSON.stringify(cutins) !== JSON.stringify(step.cutins)) throw new Error(`${id}:${step.line} — cut-ins differ`);
+          if ((document.querySelector('#item img')?.dataset.asset || null) !== step.item) throw new Error(`${id}:${step.line} — item differs`);
           if (step.kind === 'choice') {
             const choices = [...document.querySelectorAll('#choices button')];
             if (JSON.stringify(choices.map((c) => c.textContent)) !== JSON.stringify(step.options.map((o) => display(o.text)))) throw new Error(`${id}:${step.line} — choices differ`);
@@ -83,7 +92,8 @@ const server = http.createServer(async (request, response) => {
           else if (step.kind !== 'end') document.querySelector('#next').click();
           await pause();
         }
-      }, { id: scene.story.id, steps: scene.steps.map(({ kind, line, text, options }) => ({ kind, line, text, options })) });
+      }, { id: scene.story.id, steps: scene.steps.map(({ kind, line, text, options, state }) => ({ kind, line, text, options,
+        cutins: state.cutins.map(({ id, name }) => ({ id, name })), item: state.item?.name || null })) });
       assert.equal(await page.locator('#ending').isVisible(), true);
       const state = await page.evaluate(({ key, id }) => JSON.parse(localStorage.getItem('arknights.vn.v2')).groups[key].stories[id], { key: `${scene.group.category}:${scene.group.id}`, id: scene.story.id });
       assert.equal(state.read, true); assert.equal(state.line, scene.steps.at(-1).line);

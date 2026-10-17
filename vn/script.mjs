@@ -1,9 +1,10 @@
 // The same line/tag and case-insensitive argument conventions as js/story.js,
 // with a deliberately bounded directive set. Generation checks every source.
-const supported = new Set([
+export const supportedCommands = new Set([
   'header', 'dialog', 'image', 'background', 'imagetween', 'character',
   'decision', 'predicate', 'delay', 'blocker', 'cameraeffect', 'camerashake',
   'playmusic', 'stopmusic', 'playsound', 'skiptothis', 'startbattle', 'tutorial', 'gotopage',
+  'charactercutin', 'backgroundtween', 'showitem', 'hideitem', 'stopsound',
 ]);
 
 export class ScriptError extends Error {
@@ -25,7 +26,7 @@ export function parseScript(source) {
       args.time = args.delay;
     }
     if (!command && (!tag || 'name' in args)) command = 'line';
-    if (command !== 'line' && !supported.has(command)) {
+    if (command !== 'line' && !supportedCommands.has(command)) {
       throw new ScriptError('unsupported', `Unsupported directive at line ${index + 1}: ${tag}`, index + 1, command || tag);
     }
     if (command === 'decision') {
@@ -39,8 +40,13 @@ export function parseScript(source) {
 
 const number = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
 export function initialScene() {
-  return { background: null, image: null, characters: [], focus: 1,
-    blocker: { color: 'rgb(0, 0, 0)', alpha: 0 }, grayscale: 0, music: null };
+  return { background: null, image: null, characters: [], focus: 1, cutins: [], item: null,
+    blocker: { color: 'rgb(0, 0, 0)', alpha: 0 }, grayscale: 0, music: null, sounds: [] };
+}
+
+export function tweenArt(art, args, endpoint) {
+  return { ...art, x: number(args['x' + endpoint], art.x), y: number(args['y' + endpoint], art.y),
+    scale: number(args['xscale' + endpoint], art.scale) };
 }
 
 export function applyEvent(state, { command, args: a }) {
@@ -53,16 +59,29 @@ export function applyEvent(state, { command, args: a }) {
       break;
     }
     case 'imagetween':
-      if (state.image) {
-        state.image.x = number(a.xto, state.image.x);
-        state.image.y = number(a.yto, state.image.y);
-        state.image.scale = number(a.xscaleto, state.image.scale);
-      }
+    case 'backgroundtween': {
+      const layer = command === 'imagetween' ? 'image' : 'background';
+      if (state[layer]) state[layer] = tweenArt(tweenArt(state[layer], a, 'from'), a, 'to');
       break;
+    }
     case 'character':
       state.characters = [a.name, a.name2, a.name3].filter(Boolean).map((name) => name.trim());
       state.focus = number(a.focus, 1);
       break;
+    case 'charactercutin': {
+      const id = a.widgetid || '0';
+      const existing = state.cutins.findIndex((cutin) => cutin.id === id);
+      if (!a.name) state.cutins = state.cutins.filter((cutin) => cutin.id !== id);
+      else {
+        const cutin = { id, name: a.name.trim(), x: number(a.offsetx), y: number(a.offsety),
+          width: number(a.width, 200), height: number(a.height, 720), fade: a.fadestyle || 'alpha' };
+        if (existing < 0) state.cutins.push(cutin);
+        else state.cutins[existing] = cutin;
+      }
+      break;
+    }
+    case 'showitem': state.item = a.image ? { name: a.image } : null; break;
+    case 'hideitem': state.item = null; break;
     case 'blocker': {
       const rgb = [number(a.r), number(a.g), number(a.b)];
       // AVG uses both normalized RGB and byte RGB, sometimes in the same scene.
@@ -77,6 +96,15 @@ export function applyEvent(state, { command, args: a }) {
       break;
     case 'playmusic': state.music = { ...a }; break;
     case 'stopmusic': state.music = null; break;
+    case 'playsound':
+      // Only loops survive a seek, reload or language switch. One-shots must
+      // never be replayed by restoring a snapshot.
+      if (a.channel != null) state.sounds = state.sounds.filter((sound) => sound.channel !== a.channel);
+      if (a.loop === 'true') state.sounds.push({ ...a });
+      break;
+    case 'stopsound':
+      state.sounds = state.sounds.filter((sound) => sound.channel !== a.channel);
+      break;
   }
   return state;
 }

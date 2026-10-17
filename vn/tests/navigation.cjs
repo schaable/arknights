@@ -197,8 +197,9 @@ const server = http.createServer(async (request, response) => {
     await page.locator('#settings').click(); await page.locator('#motion').uncheck();
     await page.locator('#restart').click(); await page.locator('#next').click();
     await page.locator('#sound').click(); await page.locator('#auto').click();
-    const unavailable = chapter1.group.stories.find((s) => !s.vn);
-    await library(routeFor(chapter1.group.category, chapter1.group, unavailable));
+    const unavailableGroup = catalog.groups.find((g) => g.category === 'main' && g.stories.some((s) => !s.vn));
+    const unavailable = unavailableGroup.stories.find((s) => !s.vn);
+    await library(routeFor(unavailableGroup.category, unavailableGroup, unavailable));
     await page.locator('.back-link').waitFor();
     assert.equal(await page.locator('#player').isVisible(), false);
     assert.equal(await page.locator('.collection-resume').getAttribute('href'), '../' + unavailable.classicHash);
