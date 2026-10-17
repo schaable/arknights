@@ -1,0 +1,407 @@
+{
+  "sources": {
+    "archive": "https://github.com/ArknightsAssets/ArknightsAssets/tree/c0be4e4428f79c7e87c6889067a6906361ae979b/assets/torappu/dynamicassets/arts/ui",
+    "arkdata": "https://github.com/akgcc/arkdata/tree/main/assets/torappu/dynamicassets/arts/ui/storyreview",
+    "archive-en": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets",
+    "local": "vn/assets/covers/sources.json"
+  },
+  "covers": {
+    "1stact": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act1d0.png"
+    },
+    "act3d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act3d0.png"
+    },
+    "act5d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act5d0.png"
+    },
+    "act11d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act11d0.png"
+    },
+    "act9d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act9d0.png"
+    },
+    "act12d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act12d0.png"
+    },
+    "act13d5": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act13d5.png"
+    },
+    "act15d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act15d0.png"
+    },
+    "act16d5": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act16d5.png"
+    },
+    "act17d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act17d0.png"
+    },
+    "act18d0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act18d0.png"
+    },
+    "act18d3": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act18d3.png"
+    },
+    "act12side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act12side.png"
+    },
+    "act13side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act13side.png"
+    },
+    "act14side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act14side.png"
+    },
+    "act15side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act15side.png"
+    },
+    "act16side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act16side.png"
+    },
+    "act17side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act17side.png"
+    },
+    "act18side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act18side.png"
+    },
+    "act20side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act20side.png"
+    },
+    "act19side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act19side.png"
+    },
+    "act21side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act21side.png"
+    },
+    "act22side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act22side.png"
+    },
+    "act23side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act23side.png"
+    },
+    "act25side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act25side.png"
+    },
+    "act26side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act26side.png"
+    },
+    "act27side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act27side.png"
+    },
+    "act28side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act28side.png"
+    },
+    "act29side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act29side.png"
+    },
+    "act30side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act30side.png"
+    },
+    "act31side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act31side.png"
+    },
+    "act32side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act32side.png"
+    },
+    "act33side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act33side.png"
+    },
+    "act34side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act34side.png"
+    },
+    "act35side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act35side.png"
+    },
+    "act37side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act37side.png"
+    },
+    "act38side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act38side.png"
+    },
+    "act39side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act39side.png"
+    },
+    "act40side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act40side.png"
+    },
+    "act41side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act41side.png"
+    },
+    "act4d0": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act4d0.png"
+    },
+    "act6d5": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act6d5.png"
+    },
+    "act7d5": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act7d5.png"
+    },
+    "act10d5": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act10d5.png"
+    },
+    "act13d0": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act13d0.png"
+    },
+    "act15d5": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act15d5.png"
+    },
+    "act7mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act7mini.png"
+    },
+    "act8mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act8mini.png"
+    },
+    "act9mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act9mini.png"
+    },
+    "act10mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act10mini.png"
+    },
+    "act11mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act11mini.png"
+    },
+    "act12mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act12mini.png"
+    },
+    "act14mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act14mini.png"
+    },
+    "act15mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act15mini.png"
+    },
+    "act16mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act16mini.png"
+    },
+    "act17mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act17mini.png"
+    },
+    "act18mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act18mini.png"
+    },
+    "act19mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act19mini.png"
+    },
+    "act20mini": {
+      "provider": "arkdata",
+      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act20mini.png"
+    },
+    "main_0": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_0.png"
+    },
+    "main_1": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_1.png"
+    },
+    "main_2": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_2.png"
+    },
+    "main_3": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_3.png"
+    },
+    "main_4": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_4.png"
+    },
+    "main_5": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_5.png"
+    },
+    "main_6": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_6.png"
+    },
+    "main_7": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_7.png"
+    },
+    "main_8": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_8.png"
+    },
+    "main_9": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_9.png"
+    },
+    "main_10": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_10.png"
+    },
+    "main_11": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_11.png"
+    },
+    "main_12": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_12.png"
+    },
+    "main_13": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_13.png"
+    },
+    "main_14": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_14.png"
+    },
+    "rogue_1": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_1_entry_display_1.png"
+    },
+    "rogue_2": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_2_entry_display_1.png"
+    },
+    "rogue_3": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_3_entry_display_1.png"
+    },
+    "rogue_4": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_4_entry_display_1.png"
+    },
+    "main_15": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_15.png"
+    },
+    "main_16": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_16.png"
+    },
+    "main_17": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_17.png"
+    },
+    "act42side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act42side.png"
+    },
+    "act43side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act43side.png"
+    },
+    "act44side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act44side.png"
+    },
+    "act45side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act45side.png"
+    },
+    "act46side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act46side.png"
+    },
+    "act47side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act47side.png"
+    },
+    "act48side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act48side.png"
+    },
+    "act49side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act49side.png"
+    },
+    "act51side": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act51side.png"
+    },
+    "rogue_5": {
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/stage/hometheme/rogue_5_entry_display_1.png"
+    },
+    "act13mini": {
+      "provider": "local",
+      "path": "act13mini.png"
+    },
+    "act24side": {
+      "provider": "local",
+      "path": "act24side.png"
+    },
+    "rogue_0": {
+      "provider": "local",
+      "path": "rogue_0.png"
+    },
+    "act36side": {
+      "provider": "archive",
+      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/act36side.png"
+    }
+  },
+  "modulePortraitFallbacks": [
+    "uniequip_002_accast",
+    "uniequip_002_acfend",
+    "uniequip_002_acguad",
+    "uniequip_002_acmedc",
+    "uniequip_002_acnipe",
+    "uniequip_002_acpion",
+    "uniequip_002_acspec",
+    "uniequip_002_acsupo",
+    "uniequip_002_pithst",
+    "uniequip_002_sharp2"
+  ],
+  "notes": {
+    "main_15-main_17": "Original episode mission cards from the newer English asset snapshot.",
+    "act13mini-act24side-rogue_0": "Original event-entry images preserved by PRTS, rather than unavailable-overlay archive mockups. See local provenance.",
+    "act36side": "Original event home artwork; no clean archive card was found in the mirrors."
+  }
+}

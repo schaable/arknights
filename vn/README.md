@@ -20,6 +20,25 @@ Collection pages list stories in game order. Translation availability and VN
 availability are separate: a Spanish script can exist before its scene is
 supported by the player. Other stories have links to the classic reader.
 
+Collection cards, Continue reading, collection headings, and story opening
+screens use the game's collection artwork. Square frames contain the complete
+image without cropping or stretching. Chapters use episode covers, events use
+archive covers, operator records use portraits, modules use their equipment art
+(or an operator portrait when that icon is missing), and Integrated Strategies
+uses topic artwork shared with its monthly squads. Images load lazily in grids
+and retry a raw GitHub mirror if the CDN fails; a neutral placeholder preserves
+navigation when a cover is missing or both mirrors fail.
+
+All 998 catalog collections have mapped artwork, including chapters 15–17 and
+every IS topic and monthly squad. Chapters 15–17, the newer side stories, and
+IS topic 5 use the newer English asset snapshot. The older collaborations and
+Ceobe's Fungimist use their original event-entry/home artwork where a clean
+archive card was unavailable. Three legacy entry images are served locally;
+their source URLs and checksums are recorded in `assets/covers/sources.json`.
+They are unmodified game artwork preserved by PRTS. Some images contain Chinese text baked
+into the artwork; changing the reader language does not translate it. The
+placeholder remains a fallback for loading failures and future unmapped entries.
+
 **All 113 translated scenes** are enabled in Spanish and English:
 
 | Collection | Playable / translated scenes |
@@ -162,6 +181,8 @@ the editor and show an error; malformed saved notes are left untouched.
 | `index.html`, `reader.css` | Library/player shell, stage, responsive controls, dialogs |
 | `app.mjs`, `catalog.mjs` | Hash routing, navigation, collection progress, app lifecycle |
 | `library.mjs`, `i18n.mjs` | Catalog views and Spanish/English UI strings |
+| `covers.mjs`, `tools/cover-assets.json` | Collection artwork, CDN fallback, verified archive paths and source provenance |
+| `assets/covers/` | Three preserved legacy event-entry images and their source/checksum records |
 | `loader.mjs` | Independent language/audio loading, error classification, structure validation |
 | `compatibility.mjs` | Command/variant/branch checks, language signatures, cover/audio discovery |
 | `story-overrides.mjs` | Optional stable slugs and cover overrides; no playback allowlist |
@@ -187,7 +208,12 @@ require network access; offline caching is not implemented.
 
 To migrate another translated scene, sync its English counterpart and rebuild
 metadata. No per-story loading configuration is needed. The first nonblank
-background/CG becomes the cover; optional overrides can select another image.
+background/CG is still recorded in source metadata; the opening screen now uses
+the collection's cover. Add verified chapter/event/topic paths to
+`tools/cover-assets.json` and rebuild the catalog to expand artwork coverage.
+Operator portraits and module icons are derived from the source tables. Archive
+textures are pinned to the commit in `covers.mjs`; update that pin and the
+manifest's provenance together when refreshing the archive asset snapshot.
 Unknown commands, conditional/nested decisions, nonuniform scaling, unsupported
 camera effects/page destinations, or unknown audio references prevent automatic
 activation. Passing these checks establishes compatibility with the current
@@ -322,6 +348,7 @@ npm install --prefix /tmp/vn-qa playwright
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/review.cjs
@@ -359,3 +386,9 @@ actions for VN and classic-only stories, opening at the ending/beginning after
 marking read/unread, older read flags with intermediate positions, rereading that
 clears completion, cleared choices, reload, cross-tab resets, mobile and keyboard
 controls, and storage errors.
+The cover harness checks actual artwork in every category, all 17 recovered
+images (covering the previous 25 unmapped collections), collection and player
+covers, resume cards, mobile layout, raw-mirror fallback, local images under a
+GitHub Pages subpath, simulated missing metadata, and continued access to stories
+when both image mirrors fail. Unit tests require cover metadata for every catalog
+collection and verify the preserved local images against their provenance.

@@ -1,0 +1,30 @@
+{
+  "description": "Unmodified original Arknights event-entry artwork preserved by PRTS. Game artwork belongs to Hypergryph and its respective rights holders. These local copies avoid depending on wiki image availability.",
+  "retrieved": "2026-10-17",
+  "images": {
+    "act13mini.png": {
+      "collection": "act13mini",
+      "sourcePage": "https://prts.wiki/w/%E6%96%87%E4%BB%B6:%E6%B4%BB%E5%8A%A8%E5%90%8D%E7%A7%B0_%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81.png",
+      "sourceImage": "https://media.prts.wiki/e/e1/%E6%B4%BB%E5%8A%A8%E5%90%8D%E7%A7%B0_%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81.png",
+      "sha256": "5346d9374789867e0895a54f4509aa2605129f734c149ba5472133c871c37716",
+      "width": 463,
+      "height": 226
+    },
+    "act24side.png": {
+      "collection": "act24side",
+      "sourcePage": "https://prts.wiki/w/%E6%96%87%E4%BB%B6:%E6%B4%BB%E5%8A%A8%E5%90%8D%E7%A7%B0_%E8%90%BD%E5%8F%B6%E9%80%90%E7%81%AB.png",
+      "sourceImage": "https://media.prts.wiki/2/29/%E6%B4%BB%E5%8A%A8%E5%90%8D%E7%A7%B0_%E8%90%BD%E5%8F%B6%E9%80%90%E7%81%AB.png",
+      "sha256": "b2420df96b03be25a6497e9d8e715780f098280d5636d9043e15cd7e188b8503",
+      "width": 463,
+      "height": 226
+    },
+    "rogue_0.png": {
+      "collection": "rogue_0",
+      "sourcePage": "https://prts.wiki/w/%E6%96%87%E4%BB%B6:%E6%B4%BB%E5%8A%A8%E5%90%8D%E7%A7%B0_%E5%88%BB%E4%BF%84%E6%9F%8F%E7%9A%84%E7%81%B0%E8%95%88%E8%BF%B7%E5%A2%83.png",
+      "sourceImage": "https://media.prts.wiki/a/a5/%E6%B4%BB%E5%8A%A8%E5%90%8D%E7%A7%B0_%E5%88%BB%E4%BF%84%E6%9F%8F%E7%9A%84%E7%81%B0%E8%95%88%E8%BF%B7%E5%A2%83.png",
+      "sha256": "0d31e9b96bc76d819d86546e431ad3b923df02bfdfdd90625b536512f78ad7ca",
+      "width": 465,
+      "height": 224
+    }
+  }
+}

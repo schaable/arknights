@@ -27,8 +27,13 @@ try { prior = JSON.parse(await readFile(resolve(base, 'data/catalog.json'), 'utf
 const slugify = (value) => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
   .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const names = Object.fromEntries(Object.entries(operators).map(([id, data]) => [id.split('_')[2], data.name || data.appellation]));
+// Summons share their operator's short name; use only playable character IDs.
+const operatorIds = Object.fromEntries(Object.keys(operators).filter((id) => id.startsWith('char_')).map((id) => [id.split('_')[2], id]));
+const { covers, modulePortraitFallbacks } = JSON.parse(await readFile(new URL('./cover-assets.json', import.meta.url), 'utf8'));
+const operatorCover = (id) => id ? { provider: 'arkdata',
+  path: `torappu/dynamicassets/arts/charavatars/${id}${id === 'char_002_amiya' ? '_2' : ''}.png` } : undefined;
 const groups = [];
-async function add(id, classic, title, entries) {
+async function add(id, classic, title, entries, cover = covers[id]) {
   const category = categories.find((c) => c.classic === classic).id;
   const previous = prior.groups.find((g) => g.id === id && g.category === category);
   const chapter = classic === 'main' ? Number(id.split('_')[1]) : undefined;
@@ -54,7 +59,7 @@ async function add(id, classic, title, entries) {
       ...(source ? { source } : {}),
     });
   }
-  groups.push({ id, category, slug, title, ...(chapter !== undefined ? { chapter } : {}), stories });
+  groups.push({ id, category, slug, title, ...(chapter !== undefined ? { chapter } : {}), ...(cover ? { cover } : {}), stories });
 }
 for (const group of Object.values(review)) {
   const id = group.id;
@@ -69,14 +74,15 @@ for (const group of Object.values(review)) {
   if (intro && table[intro]) entries.unshift({ storyTxt: intro, storyName: 'Introduction', storyCode: 'PV' });
   const type = main ? 'main' : id.startsWith('story_') ? 'record' : group.entryType.startsWith('MINI_') ? 'mini' : 'side';
   const title = type === 'record' ? `${names[id.split('_')[1]] || id.split('_')[1]} · ${group.name}` : group.name;
-  await add(id, type, title, entries);
+  await add(id, type, title, entries, type === 'record' ? operatorCover(operatorIds[id.split('_')[1]]) : covers[id]);
 }
 for (const id of Object.values(modules.charEquip).flatMap((ids) => ids.slice(1))) {
   const item = modules.equipDict[id], operator = operators[item.charId];
   if (!operator) continue;
   await add(id, 'module', `${operator.name || operator.appellation} · ${item.uniEquipName}`, [
     { storyName: item.uniEquipName, storyTxt: id },
-  ]);
+  ], modulePortraitFallbacks.includes(item.uniEquipIcon.toLowerCase()) ? operatorCover(item.charId)
+    : { provider: 'arkdata', path: `torappu/dynamicassets/arts/ui/uniequipimg/${item.uniEquipIcon.toLowerCase()}.png` });
 }
 await add('rogue_0', 'rogue', "Ceobe's Fungimist", [
   { storyName: 'Entry', storyTxt: 'activities/act12d6/level_act12d6_entry' },
@@ -101,7 +107,7 @@ for (const [id, topic] of Object.entries(rogue.topics)) {
     const entries = Object.values(chat.clientChatItemData || chat.chatItemList).map((part) => ({
       storyName: `Floor ${part.chatFloor ?? part.floor}`, storyTxt: part.chatStoryId.toLowerCase(),
     }));
-    await add(`${id}_${key}`, 'rogue', `${topic.name} · Squad ${index + 1} — ${squad.teamName}`, entries);
+    await add(`${id}_${key}`, 'rogue', `${topic.name} · Squad ${index + 1} — ${squad.teamName}`, entries, covers[id]);
   }
 }
 groups.sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category)

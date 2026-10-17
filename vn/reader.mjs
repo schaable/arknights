@@ -1,5 +1,6 @@
 import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt } from './script.mjs';
-import { loadImage, imageURLs, Soundtrack } from './assets.mjs';
+import { loadImage, Soundtrack } from './assets.mjs';
+import { createCover } from './covers.mjs';
 import { loadStory } from './loader.mjs';
 import { reviewContext } from './review-data.mjs';
 
@@ -516,10 +517,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('cover-number').textContent = group.chapter === undefined ? '◇' : String(group.chapter).padStart(2, '0');
     $('cover-category').textContent = t('story');
     $('cover-description').textContent = [story.code, story.phase ? t(story.phase) : ''].filter(Boolean).join(' · ');
-    const url = source?.cover ? imageURLs(...source.cover)[0] : null;
-    $('cover-art').style.backgroundImage = url
-      ? `linear-gradient(90deg, #09131bf5, #09131bb3 55%, #09131b4d), url("${url}")`
-      : 'linear-gradient(135deg, #223441, #09131b)';
+    $('cover-art').replaceChildren(createCover(group.cover, { lazy: false }));
     $('begin').disabled = true;
     $('begin').textContent = t('loading');
     try {

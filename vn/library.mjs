@@ -1,4 +1,5 @@
 import { routeFor, groupStats } from './catalog.mjs';
+import { createCover } from './covers.mjs';
 export function element(tag, text, className) {
   const node = document.createElement(tag);
   if (text !== undefined) node.textContent = text;
@@ -22,10 +23,16 @@ export function recentGroups(catalog, store) {
 export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   root.replaceChildren();
   const { category, group, story } = route;
-  const heading = (title, description) => {
+  const heading = (title, description, collection) => {
     const header = element('header', undefined, 'library-heading');
-    header.append(element('span', 'ARKNIGHTS / ARCHIVE', 'eyebrow'), element('h2', title));
-    if (description) header.append(element('p', description));
+    const text = element('div');
+    text.append(element('span', 'ARKNIGHTS / ARCHIVE', 'eyebrow'), element('h2', title));
+    if (description) text.append(element('p', description));
+    if (collection) {
+      header.classList.add('illustrated-heading');
+      header.append(createCover(collection.cover, { lazy: false }));
+    }
+    header.append(text);
     root.append(header);
   };
   const statsText = (g) => {
@@ -37,6 +44,10 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     const card = element('article', undefined, 'collection-card');
     const title = g.chapter === undefined ? g.title : `${t('chapter')} ${String(g.chapter).padStart(2, '0')} · ${g.title}`;
     const target = routeFor(g.category, g);
+    const artwork = link('', target, 'collection-cover-link');
+    artwork.setAttribute('aria-label', title);
+    artwork.append(createCover(g.cover));
+    card.append(artwork);
     card.append(element('span', resumeOnly ? catalog.categories.find((cat) => cat.id === g.category).name[preferences.language]
       : g.chapter === undefined ? t('stories') : `${t('chapter')} ${String(g.chapter).padStart(2, '0')}`, 'eyebrow'),
       link(title, target, 'collection-title'), element('p', statsText(g), 'collection-stats'));
@@ -87,7 +98,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     };
     search.addEventListener('input', render); checkbox.addEventListener('change', render); render();
   } else if (route.kind === 'group') {
-    heading(group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')} · ${group.title}`, statsText(group));
+    heading(group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')} · ${group.title}`, statsText(group), group);
     const message = element('p', undefined, 'library-status'); message.setAttribute('role', 'status'); root.append(message);
     const saved = store.group(group);
     const resume = group.stories.find((s) => s.id === saved.resume && s.vn);
@@ -123,7 +134,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     });
     root.append(list);
   } else {
-    heading(story ? storyTitle(story, t) : t('missingTitle'), t(story ? 'unavailableTitle' : 'missingText'));
+    heading(story ? storyTitle(story, t) : t('missingTitle'), t(story ? 'unavailableTitle' : 'missingText'), group);
     if (story) {
       root.append(element('p', t('unavailableText')),
         element('p', t(story.spanish ? 'translated' : 'untranslated'), 'muted'),

@@ -63,8 +63,9 @@ h1 { font-size: 19px; font-weight: 500; margin: 3px 0 0; }
 .choices button::before { content: '◇'; margin-right: 12px; color: var(--accent); }
 .choices button:hover { border-color: var(--accent); }
 .cover, .ending { position: absolute; inset: 0; display: flex; align-items: center; padding: 7%; background: #101922; z-index: 3; }
-.cover-art { position: absolute; inset: 0; background-position: center; background-size: cover; opacity: .9; }
-.cover-content { position: relative; }
+.cover { gap: 6%; background: radial-gradient(ellipse at top right, #223441, #101922 75%); }
+.cover-art { flex: 0 1 42%; min-width: 0; order: 1; }
+.cover-content { position: relative; flex: 1; min-width: 0; }
 .eyebrow { color: var(--accent); font-size: 10px; letter-spacing: .2em; }
 .eyebrow > span { padding: 0 10px; }
 .cover-number { font: 200 clamp(60px, 9vw, 128px)/1 system-ui, sans-serif; letter-spacing: -.07em; margin: 22px 0 16px; color: #e1edf3; }
@@ -139,9 +140,10 @@ input[type="checkbox"] { accent-color: var(--accent); }
   .speaker { font-size: 15px; }
   .choices { top: 16px; left: 5%; width: 90%; gap: 6px; }
   .choices button { padding: 8px 10px; font-size: 13px; }
-  .cover { padding: 30px; }
-  .cover-number { font-size: 90px; margin-top: 26px; }
-  .cover h2 { font-size: 30px; }
+  .cover { padding: 24px; display: block; overflow-y: auto; }
+  .cover-art { float: right; width: 36%; margin: 0 0 16px 16px; }
+  .cover-number { font-size: 60px; margin: 16px 0; }
+  .cover h2 { font-size: 26px; }
   #cover-description { max-width: 220px; }
   .controls { flex-wrap: wrap; gap: 4px; padding: 8px 0; }
   .control-group { flex: 1; justify-content: space-between; }
@@ -162,6 +164,9 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .library-heading { padding: 32px 0; max-width: 850px; }
 .library-heading h2 { font-size: clamp(28px, 4vw, 48px); line-height: 1.15; font-weight: 450; letter-spacing: -.04em; margin: 16px 0; }
 .library-heading p { color: var(--muted); margin: 0; }
+.illustrated-heading { display: flex; align-items: center; gap: 28px; max-width: none; }
+.illustrated-heading > .collection-art { flex: 0 0 160px; }
+.illustrated-heading > div:last-child { min-width: 0; }
 .library > h3 { font-size: 16px; font-weight: 500; margin: 24px 0 18px; }
 .category-grid, .collection-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .category-card { position: relative; padding: 30px; min-height: 225px; border: 1px solid var(--line); background: linear-gradient(135deg, #1e303b, #101922 80%); border-radius: 3px; text-decoration: none; overflow: hidden; }
@@ -172,6 +177,13 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .category-card p { color: var(--muted); font-size: 12px; margin: 0; }
 .card-arrow { position: absolute; right: 25px; top: 28px; color: var(--muted); font-size: 20px; }
 .collection-card { padding: 24px; border: 1px solid var(--line); background: #111c24b3; display: flex; flex-direction: column; gap: 16px; border-radius: 3px; min-width: 0; }
+.collection-cover-link { display: block; }
+.collection-art { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: linear-gradient(135deg, #223441, #0b141c); border: 1px solid #ffffff0d; }
+.collection-art::before { content: '◇'; position: absolute; inset: 0; display: grid; place-items: center; color: #80d4dd55; font-size: 48px; }
+.collection-art img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; opacity: 0; }
+.collection-art.has-art img { opacity: 1; }
+.collection-art.has-art::before { display: none; }
+.collection-cover-link:hover .collection-art { border-color: var(--accent); }
 .collection-title { font-size: 18px; text-decoration: none; line-height: 1.4; overflow-wrap: anywhere; }
 .collection-stats { color: var(--muted); font-size: 12px; margin: auto 0 0; }
 .collection-card progress { margin-top: 2px; height: 3px; background: #ffffff15; }
@@ -208,6 +220,9 @@ input[type="checkbox"] { accent-color: var(--accent); }
   .category-card { min-height: 175px; padding: 24px; }
   .category-card h3 { margin-top: 24px; }
   .library-heading { padding: 20px 0 28px; }
+  .illustrated-heading { gap: 16px; align-items: flex-start; }
+  .illustrated-heading > .collection-art { flex-basis: 88px; }
+  .illustrated-heading h2 { font-size: 25px; margin-top: 10px; overflow-wrap: anywhere; }
   .story-row { flex-wrap: wrap; gap: 12px; padding: 20px 4px; }
   .story-title { font-size: 15px; }
   .story-actions { flex-basis: 100%; margin-left: 30px; justify-content: space-between; gap: 12px; }
