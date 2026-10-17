@@ -1,13 +1,15 @@
 import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt } from './script.mjs';
 import { loadImage, imageURLs, Soundtrack } from './assets.mjs';
 import { loadStory } from './loader.mjs';
+import { reviewContext } from './review-data.mjs';
 
-export function createPlayer({ preferences, t, store, onChange }) {
+export function createPlayer({ preferences, t, store, review, onChange }) {
   const $ = (id) => document.getElementById(id);
   let story, group, loadController, loadVersion = 0;
   let storyLanguage = preferences.language, loadProblems = [], loadFailure = null, usedFallback = false;
   let sourceStructure;
-  let scripts, commands, timeline = [], answers = {}, index = 0, started = false, ready = false;
+  let scripts, sources = {}, commands, timeline = [], answers = {}, index = 0, started = false, ready = false;
+  let comparedLanguage = null;
   let soundtrack, state = initialScene(), busy = false, typing = false, auto = false;
   let run = 0, typeTimer, autoTimer, waitController = new AbortController();
   let fullText = '', statusKey = '', read = false;
@@ -30,6 +32,7 @@ export function createPlayer({ preferences, t, store, onChange }) {
     else if (loadFailure) $('begin').textContent = t(loadFailure.retryable ? 'retry' : 'storyUnavailable');
     if (statusKey) notice(statusKey);
     renderLoadNotice();
+    review.localize();
     updateControls();
   }
 
@@ -314,15 +317,20 @@ export function createPlayer({ preferences, t, store, onChange }) {
   }
   function showText(instant = false) {
     const step = timeline[index];
+    const language = comparedLanguage || storyLanguage;
+    const line = scripts[language]?.find((command) => command.line === step.line);
     $('stage').dataset.story = story.id;
     $('stage').dataset.line = step.line;
     $('stage').dataset.kind = step.kind;
-    $('dialogue').hidden = step.kind === 'end';
+    $('dialogue-panel').hidden = $('dialogue').hidden = step.kind === 'end';
     $('ending').hidden = step.kind !== 'end';
     $('choices').replaceChildren();
     $('choices').hidden = step.kind !== 'choice';
     clearInterval(typeTimer);
     typing = false;
+    review.setContext(reviewContext({ story, step, sources,
+      sourceUrl: story.source.languages.en ? new URL(story.source.languages.en, location.href).href : '',
+      sourceError: t('reviewSourceError') }), language);
     if (step.kind === 'end') {
       read = true;
       stopAuto();
@@ -333,20 +341,22 @@ export function createPlayer({ preferences, t, store, onChange }) {
       $('replay').focus({ preventScroll: true });
       return;
     }
-    $('speaker').textContent = displayText(step.kind === 'choice' ? 'Doctor' : step.speaker);
-    fullText = step.kind === 'choice' ? t('choose') : displayText(step.text);
+    $('speaker').textContent = displayText(step.kind === 'choice' ? 'Doctor' : line?.args.name || '');
+    $('speaker').lang = $('text').lang = $('choices').lang = language;
+    fullText = step.kind === 'choice' ? t('choose') : displayText(line?.text ?? step.text);
     $('text').textContent = '';
     $('tap-hint').textContent = t(step.kind === 'choice' ? 'choose' : 'reveal');
     if (step.kind === 'choice') {
       stopAuto();
-      for (const option of step.options) {
+      const texts = line.args.options.split(';');
+      for (const [i, option] of step.options.entries()) {
         const button = document.createElement('button');
-        button.textContent = displayText(option.text);
+        button.textContent = displayText(texts[i]);
         button.addEventListener('click', () => choose(option.value));
         $('choices').append(button);
       }
       $('text').textContent = fullText;
-      $('choices').firstElementChild.focus({ preventScroll: true });
+      if (!comparedLanguage) $('choices').firstElementChild.focus({ preventScroll: true });
     } else if (!instant && preferences.speed && !preferences.motion) {
       const letters = Array.from(fullText);
       let count = 0;
@@ -370,11 +380,13 @@ export function createPlayer({ preferences, t, store, onChange }) {
   }
   async function showStep(animateScene = false) {
     cancelPending();
+    comparedLanguage = null;
+    review.setContext(null);
     const token = run;
     const step = timeline[index];
     $('choices').hidden = true;
     $('ending').hidden = true;
-    $('dialogue').hidden = true;
+    $('dialogue-panel').hidden = $('dialogue').hidden = true;
     busy = animateScene;
     updateControls();
     persist();
@@ -460,6 +472,8 @@ export function createPlayer({ preferences, t, store, onChange }) {
     loadVersion++;
     loadController?.abort();
     cancelPending();
+    review.reset();
+    sources = {}; comparedLanguage = null;
     animations.forEach((animation) => animation.cancel());
     animations.clear();
     soundtrack?.enable(false);
@@ -483,7 +497,7 @@ export function createPlayer({ preferences, t, store, onChange }) {
     $('stage').removeAttribute('data-kind');
     $('stage').removeAttribute('data-story');
     $('stage').setAttribute('aria-busy', 'false');
-    $('dialogue').hidden = $('ending').hidden = $('choices').hidden = true;
+    $('dialogue-panel').hidden = $('dialogue').hidden = $('ending').hidden = $('choices').hidden = true;
     $('cover').hidden = false;
     $('text').textContent = '';
     updateControls();
@@ -510,6 +524,7 @@ export function createPlayer({ preferences, t, store, onChange }) {
       const loaded = await loadStory(source, { language: preferences.language, signal });
       if (token !== loadVersion) return;
       scripts = loaded.scripts;
+      sources = loaded.sources;
       storyLanguage = scripts[preferences.language] ? preferences.language : loaded.language;
       loadProblems = loaded.problems;
       usedFallback = storyLanguage !== preferences.language;
@@ -570,6 +585,18 @@ export function createPlayer({ preferences, t, store, onChange }) {
     if (busy) next();
     $('settings-dialog').showModal();
   }
+  function pause() {
+    stopAuto();
+    if (typing) finishText();
+  }
+  function compare() {
+    if (!started || busy || !scripts.es || !scripts.en || timeline[index]?.kind === 'end') return;
+    pause();
+    comparedLanguage = (comparedLanguage || storyLanguage) === 'es' ? 'en' : 'es';
+    // Text only: keep choice values/progress and do not replay scene/audio events.
+    showText(true);
+    $('review-toggle').focus({ preventScroll: true });
+  }
   document.addEventListener('keydown', (event) => {
     if (!started || event.altKey || event.ctrlKey || event.metaKey || event.repeat || document.querySelector('dialog[open]')) return;
     if (event.target.closest('input, select, textarea') || (event.target.closest('button, a') && [' ', 'Enter'].includes(event.key))) return;
@@ -584,5 +611,5 @@ export function createPlayer({ preferences, t, store, onChange }) {
     if (document.hidden) { stopAuto(); soundtrack?.enable(false); persist(); updateControls(); }
   });
   window.addEventListener('pagehide', () => { persist(); soundtrack?.enable(false); });
-  return { load, dispose, persist, changeLanguage, settings, refresh() { localize(); if (started) showStep(); }, get ready() { return ready; } };
+  return { load, dispose, persist, changeLanguage, settings, pause, compare, refresh() { localize(); if (started) showStep(); }, get ready() { return ready; } };
 }

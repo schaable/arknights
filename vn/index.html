@@ -22,6 +22,12 @@
       </label>
     </header>
 
+    <div id="review-toolbar" class="review-toolbar" role="group" aria-label="Revisión de traducción">
+      <button id="review-copy" type="button" disabled><span aria-hidden="true">▤</span> <span data-i18n="reviewCopy">Copiar notas</span> <span id="review-count">0</span></button>
+      <button id="review-clear" type="button" disabled data-i18n="reviewClear">Borrar notas</button>
+      <span id="review-status" class="review-status" role="status"></span>
+    </div>
+
     <nav id="breadcrumbs" class="breadcrumbs" aria-label="Breadcrumb"></nav>
     <section id="library" class="library" aria-label="Library"><p role="status">Cargando…</p></section>
     <div id="player" hidden>
@@ -48,11 +54,17 @@
         <div class="vignette"></div>
       </div>
       <div id="choices" class="choices" role="group" aria-label="Choices" hidden></div>
-      <button id="dialogue" class="dialogue" type="button" aria-label="Continue" hidden>
-        <span id="speaker" class="speaker"></span>
-        <span id="text" class="dialogue-text"></span>
-        <span class="dialogue-bottom"><span id="tap-hint"></span><span class="advance-mark" aria-hidden="true">◆</span></span>
-      </button>
+      <div id="dialogue-panel" class="dialogue-panel" hidden>
+        <button id="dialogue" class="dialogue" type="button" aria-label="Continue" hidden>
+          <span id="speaker" class="speaker"></span>
+          <span id="text" class="dialogue-text"></span>
+          <span class="dialogue-bottom"><span id="tap-hint"></span><span class="advance-mark" aria-hidden="true">◆</span></span>
+        </button>
+        <div id="review-controls" class="review-controls" role="group" aria-label="Revisión de traducción" hidden>
+          <button id="review-toggle" type="button" aria-pressed="false" aria-label="Ver inglés">EN</button>
+          <button id="review-note" type="button" aria-label="Añadir nota de revisión"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4V4Z M8 8h8 M8 12h5"/></svg></button>
+        </div>
+      </div>
       <div id="cover" class="cover">
         <div id="cover-art" class="cover-art" aria-hidden="true"></div>
         <div class="cover-content">
@@ -107,6 +119,28 @@
     <form method="dialog"><header class="dialog-header"><h2 id="history-title" data-i18n="history">Historial</h2><button class="close" aria-label="Close">×</button></header></form>
     <p class="settings-note" data-i18n="historyHint">Selecciona una línea para volver a ese momento.</p>
     <div id="history-list"></div>
+  </dialog>
+  <dialog id="review-dialog" class="review-dialog" aria-labelledby="review-title">
+    <form id="review-form">
+      <header class="dialog-header"><h2 id="review-title" data-i18n="reviewTitle">Revisar traducción</h2><button id="review-close" class="close" type="button" aria-label="Cerrar">×</button></header>
+      <p id="review-location" class="settings-note"></p>
+      <p class="review-quote-label" data-i18n="language_es">Español</p><blockquote id="review-spanish" lang="es"></blockquote>
+      <p class="review-quote-label" data-i18n="language_en">Inglés</p><blockquote id="review-english" lang="en"></blockquote>
+      <label for="review-comment" data-i18n="reviewComment">Comentario</label>
+      <textarea id="review-comment" rows="3"></textarea>
+      <label for="review-proposal" data-i18n="reviewProposal">Traducción propuesta (opcional)</label>
+      <textarea id="review-proposal" rows="3" lang="es"></textarea>
+      <p class="settings-note" data-i18n="reviewHelp">Las notas se guardan en este navegador y se comparten con el lector clásico. Usa Copiar notas para exportarlas.</p>
+      <p id="review-error" class="review-status" role="status"></p>
+      <div class="review-actions"><button id="review-delete" type="button" data-i18n="reviewDelete">Eliminar nota</button><button id="review-cancel" type="button" data-i18n="reviewCancel">Cancelar</button><button id="review-save" type="submit" data-i18n="reviewSave">Guardar</button></div>
+    </form>
+  </dialog>
+  <dialog id="review-export-dialog" class="review-dialog" aria-labelledby="review-export-title">
+    <h2 id="review-export-title" data-i18n="reviewCopy">Copiar notas</h2>
+    <p class="settings-note" data-i18n="reviewCopyFallback">No se pudo copiar automáticamente. Copia el texto seleccionado y pégalo en la conversación.</p>
+    <label for="review-export-text" class="sr-only" data-i18n="reviewReport">Revisión completa</label>
+    <textarea id="review-export-text" rows="12" readonly></textarea>
+    <button id="review-export-close" type="button" data-i18n="close">Cerrar</button>
   </dialog>
 </body>
 </html>

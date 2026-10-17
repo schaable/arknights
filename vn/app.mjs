@@ -3,8 +3,9 @@ import { createProgressStore } from './storage.mjs';
 import { createPlayer } from './reader.mjs';
 import { renderLibrary, element, link, storyTitle } from './library.mjs';
 import { copy } from './i18n.mjs';
+import { createReviewTools } from './review.mjs';
 const $ = (id) => document.getElementById(id);
-let catalog, store, player, preferences, route;
+let catalog, store, player, preferences, route, review;
 const t = (key) => copy[preferences?.language || 'es'][key] || key;
 function localize() {
   document.documentElement.lang = preferences.language;
@@ -14,6 +15,7 @@ function localize() {
   $('speed').value = preferences.speed;
   $('motion').checked = preferences.motion;
   document.querySelectorAll('.close').forEach((el) => el.setAttribute('aria-label', t('close')));
+  review?.localize();
 }
 function chrome() {
   const { category, group, story } = route;
@@ -73,7 +75,8 @@ async function boot() {
     try { storage = localStorage; } catch { /* Memory saves remain available. */ }
     store = createProgressStore(storage, catalog);
     preferences = { motion: matchMedia('(prefers-reduced-motion: reduce)').matches, ...store.snapshot().preferences };
-    player = createPlayer({ preferences, t, store, onChange: chrome });
+    review = createReviewTools({ storage, t, onPause: () => player?.pause(), onCompare: () => player?.compare() });
+    player = createPlayer({ preferences, t, store, review, onChange: chrome });
     localize();
     window.addEventListener('hashchange', navigate);
     window.addEventListener('storage', () => { store.snapshot(); renderLibraryView(); });

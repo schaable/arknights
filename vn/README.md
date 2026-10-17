@@ -108,6 +108,29 @@ other tabs' saved groups, and storage events
 refresh library progress. Denied/full storage falls back to memory for the tab
 and displays a save warning during reading. There is no cloud sync or import/export.
 
+## Translation review
+
+Each Spanish dialogue and choice offers an **EN/ES** comparison button and a
+**note** button. Comparison changes only that line or set of choices, pauses
+automatic reading, and leaves the story language, progress, and scene intact.
+The next line returns to the selected story language. Comparison is disabled
+when a compatible English source is unavailable; notes can still be taken.
+
+The note editor shows both source texts and accepts a comment, a suggested
+translation, or both. Noted lines are marked, and reopening a note lets you edit
+or delete it. Notes preserve physical source lines, original text (including
+markup and nickname placeholders), and the English source URL. New VN notes use
+the pinned English scripts; editing an existing note retains its saved source
+snapshots. Review notes do not modify translations.
+
+**Copy notes** at the top exports every saved note in the classic reader's
+Markdown format. If clipboard access fails, a dialog provides selected text for
+manual copying. **Clear notes** removes all review notes, preserving reading
+progress. Both readers share `arknights.translationReviews.v1` on the same
+browser and origin, so existing classic-reader notes are immediately available
+and edits synchronize between tabs. Storage failures leave unsaved drafts in
+the editor and show an error; malformed saved notes are left untouched.
+
 ## Files and extension points
 
 | File | Responsibility |
@@ -123,6 +146,7 @@ and displays a save warning during reading. There is no cloud sync or import/exp
 | `tools/sync-english.py` | Pin translated stories’ English counterparts to an upstream commit |
 | `script.mjs` | Tag parsing, branches, scene state, timeline, progress validation |
 | `reader.mjs` | Reusable player, rendering, transitions, controls, history |
+| `review.mjs`, `review-data.mjs` | Per-line comparison controls, note editor, shared classic-reader storage and Markdown export |
 | `assets.mjs` | Existing CDN conventions, image fallback, music/SFX |
 | `storage.mjs` | Versioned grouped saves and legacy migration |
 | `sources/en/`, `sources/provenance.json` | 113 pinned English AVG scripts and their commit/checksums |
@@ -275,6 +299,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cj
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/review.cjs
 ```
 
 `VN_BROWSER_PATH` optionally selects an existing Chromium binary;
@@ -299,3 +324,8 @@ insert with a slow image request, independent background/foreground tweens,
 both translated sound-stop sequences, overlay restoration and route teardown.
 Unit tests also verify channel isolation, delayed-start cancellation and mute/
 restore cleanup without fetching audio.
+The review harness checks per-dialogue and choice comparison, interoperability
+with the classic review UI, source snapshots, note editing/deletion, clipboard
+and manual export, mobile layout, missing/misaligned sources, storage failures,
+and route cleanup. Unit tests verify shared note IDs, raw source fields, the
+Markdown format, and preservation of existing notes and reading progress.

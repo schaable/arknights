@@ -45,14 +45,17 @@ export async function loadStory(source, { language = 'es', signal, fetcher = fet
       if (source.structure && await structureHash(inspected.commands) !== source.structure) {
         throw new LoadError('alignment', `Source structure changed: ${lang}`);
       }
-      return [lang, inspected.commands];
+      return [lang, inspected.commands, text];
     }),
     fetchSource('./data/audio.json', fetcher, signal, true, timeoutMs),
   ]);
   if (signal?.aborted) throw signal.reason || new DOMException('Aborted', 'AbortError');
-  const scripts = {}, problems = [];
+  const scripts = {}, sources = {}, problems = [];
   results.slice(0, entries.length).forEach((result, index) => {
-    if (result.status === 'fulfilled') scripts[result.value[0]] = result.value[1];
+    if (result.status === 'fulfilled') {
+      scripts[result.value[0]] = result.value[1];
+      sources[result.value[0]] = result.value[2];
+    }
     else problems.push({ language: entries[index][0], error: result.reason });
   });
   if (!Object.keys(scripts).length) {
@@ -64,6 +67,7 @@ export async function loadStory(source, { language = 'es', signal, fetcher = fet
     // Never map a saved line/choice to a structurally different translation.
     // Spanish is the canonical source for the translated collection's saves.
     delete scripts.en;
+    delete sources.en;
     problems.push({ language: 'en', error: new LoadError('alignment', 'English/Spanish command structure differs') });
   }
   const audioResult = results.at(-1);
@@ -73,5 +77,5 @@ export async function loadStory(source, { language = 'es', signal, fetcher = fet
     problems.push({ language: 'audio', error: new LoadError('audio', 'Audio mappings are unavailable', true) });
   }
   const chosen = scripts[actualLanguage] ? actualLanguage : 'es';
-  return { scripts, language: chosen, audio, problems, fallback: chosen !== language, structure: await structureHash(scripts[chosen]) };
+  return { scripts, sources, language: chosen, audio, problems, fallback: chosen !== language, structure: await structureHash(scripts[chosen]) };
 }
