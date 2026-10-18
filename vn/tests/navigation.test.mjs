@@ -5,7 +5,7 @@ import { routeFor, resolveRoute, groupKey, groupStats, isOperatorCategory, opera
 import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore } from '../storage.mjs';
 import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
 import { scriptSignature } from '../compatibility.mjs';
-import { recentGroups } from '../library.mjs';
+import { recentGroups, resumeStory } from '../library.mjs';
 const catalog = JSON.parse(await readFile(new URL('../data/catalog.json', import.meta.url)));
 const audio = JSON.parse(await readFile(new URL('../data/audio.json', import.meta.url)));
 const group = (id) => catalog.groups.find((g) => g.id === id);
@@ -205,6 +205,32 @@ test('manual completion survives reload without inventing a position or resume t
   restored.setRead(g, prologue, false);
   assert.deepEqual(createProgressStore(storage, catalog).snapshot().groups, {});
   assert.equal(restored.save(g, prologue, { read: true }), false, 'position saves still require a valid line');
+});
+
+test('resume links exclude manual completion, completed positions and unread resets until reading starts again', () => {
+  const storage = memory(), store = createProgressStore(storage, catalog);
+  const first = group('main_0'), latest = group('main_1'), story = latest.stories[0];
+  store.save(first, prologue, progress(10));
+  store.save(latest, story, progress(20));
+  assert.deepEqual(recentGroups(catalog, store), [latest]);
+  assert.equal(resumeStory(latest, store.group(latest)), story);
+
+  store.setRead(latest, story, true);
+  assert.equal(resumeStory(latest, store.group(latest)), undefined);
+  assert.deepEqual(recentGroups(catalog, store), [first], 'fall back to the last unfinished collection in the section');
+  store.setRead(latest, story, false);
+  assert.equal(resumeStory(latest, store.group(latest)), undefined, 'a reset has no position to continue');
+  assert.deepEqual(recentGroups(catalog, store), [first]);
+
+  store.save(latest, story, progress(30, true));
+  const restored = createProgressStore(storage, catalog);
+  assert.equal(resumeStory(latest, restored.group(latest)), undefined, 'completed saves with a position are excluded too');
+  assert.deepEqual(recentGroups(catalog, restored), [first]);
+  restored.setRead(first, prologue, true);
+  assert.deepEqual(recentGroups(catalog, restored), []);
+  restored.save(latest, story, progress(40));
+  assert.deepEqual(recentGroups(catalog, restored), [latest], 'rereading restores the resume link');
+  assert.equal(resumeStory(latest, restored.group(latest)), story);
 });
 
 test('read toggles reset only this story position and branches, preserving resume order and other tabs', () => {

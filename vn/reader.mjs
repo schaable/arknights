@@ -29,8 +29,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('progress').setAttribute('aria-label', t('progress'));
     $('choices').setAttribute('aria-label', t('choose'));
     $('dialogue').setAttribute('aria-label', t('continue'));
-    if (ready) $('begin').textContent = t(index || read ? 'resume' : 'begin');
-    else if (loadFailure) $('begin').textContent = t(loadFailure.retryable ? 'retry' : 'storyUnavailable');
+    if (!ready && loadFailure) $('begin').textContent = t(loadFailure.retryable ? 'retry' : 'storyUnavailable');
     if (statusKey) notice(statusKey);
     renderLoadNotice();
     review.localize();
@@ -61,6 +60,8 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
 
   function updateControls() {
     const step = timeline[index];
+    $('begin').hidden = ready && (read || step?.kind === 'end');
+    if (ready) $('begin').textContent = t(index && !read ? 'resume' : 'begin');
     $('back').disabled = !started || index === 0;
     $('history').disabled = !started || step?.completionOnly;
     $('auto').disabled = !started || step?.kind === 'end';

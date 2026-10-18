@@ -10,11 +10,16 @@ export function link(text, href, className) {
   const node = element('a', text, className); node.href = href; return node;
 }
 export const storyTitle = (story, t) => [story.code, story.title, story.phase ? t(story.phase) : ''].filter(Boolean).join(' · ');
+export function resumeStory(group, saved) {
+  const progress = saved.stories?.[saved.resume];
+  if (!progress?.line || progress.read) return;
+  return group.stories.find((story) => story.vn && story.id === saved.resume);
+}
 export function recentGroups(catalog, store) {
   const latest = new Map();
   for (const group of catalog.groups) {
     const saved = store.group(group);
-    if (!group.stories.some((story) => story.vn && story.id === saved.resume)) continue;
+    if (!resumeStory(group, saved)) continue;
     const previous = latest.get(group.category);
     if (!previous || (saved.updated || 0) > previous.updated) latest.set(group.category, { group, updated: saved.updated || 0 });
   }
@@ -63,7 +68,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     const eyebrow = resumeOnly ? catalog.categories.find((cat) => cat.id === g.category).name[preferences.language]
       : g.chapter === undefined ? t('stories') : `${t('chapter')} ${String(g.chapter).padStart(2, '0')}`;
     const card = collectionCard(title, g.cover, target, eyebrow, stats);
-    const resume = g.stories.find((s) => s.id === saved.resume && s.vn);
+    const resume = resumeStory(g, saved);
     if (resume) card.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(g.category, g, resume), 'resume-link'));
     else if (!resumeOnly) card.append(link(t('browse') + ' →', target, 'browse-link'));
     return card;
@@ -133,7 +138,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     heading(title, statsText(stats), parent || group);
     const message = element('p', undefined, 'library-status'); message.setAttribute('role', 'status'); root.append(message);
     const recent = recentGroups({ groups }, store)[0];
-    const resume = recent?.stories.find((s) => s.id === store.group(recent).resume && s.vn);
+    const resume = recent && resumeStory(recent, store.group(recent));
     if (resume) root.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(category, recent, resume), 'primary collection-resume'));
     let list, previousGroup;
     groups.flatMap((g) => g.stories.map((s) => ({ g, s }))).forEach(({ g, s }, index) => {

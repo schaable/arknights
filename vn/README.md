@@ -91,9 +91,12 @@ browser Back/Forward without server rewrites. The player provides breadcrumbs,
 previous/next stories, and a story selector. Completion links to the next VN
 story when supported, otherwise explicitly to the classic reader.
 
-The home page's **Continue reading** section shows only the most recently read
-chapter or collection in each category, ordered by recency. Earlier bookmarks
-remain available on their chapter and collection pages.
+The home page's **Continue reading** section shows only the most recent unfinished
+reading in each category, ordered by recency. Completed stories and manual
+read/unread resets without a saved position are excluded from resume links on
+the home page, category cards, and collection/operator/topic pages. Starting a
+new reading makes the story eligible again. Earlier unfinished bookmarks remain
+available on their chapter and collection pages.
 
 The complete catalog is a checked-in snapshot (998 collections, 2,670 stories,
 113 local Spanish translations at generation time). No remote story-index
@@ -126,7 +129,8 @@ and enables scenes that pass command, branch, language, and audio checks.
   unread clears them and starts from the beginning. Other stories and resume
   order stay unchanged; marking an unopened story does not create a bookmark.
 - Read stories open at **You reached the end of this story**, including older
-  saves that still contain an intermediate position. Restarting, going back
+  saves that still contain an intermediate position. The completed story has no
+  Continue reading button; **Read again** starts a new reading. Restarting, going back
   into dialogue, or selecting a history line marks the story unread again.
   Reaching the ending restores completion.
 - Navigation aborts old script requests, rejects stale results, and stops sound,
