@@ -116,6 +116,10 @@ and enables scenes that pass command, branch, language, and audio checks.
 - Stage artwork, character focus, backgrounds/CGs, crossfades, image transforms,
   cut-ins, item overlays, blockers, grayscale, camera shake, and waits use the script's events. Next can
   skip a transition. Space/Right advance, Left goes back, and H opens history.
+  Space takes priority over focused buttons, links, and selectors while reading,
+  including after closing a dialog; on a loaded story cover it begins reading.
+  Enter activates focused controls and choices. Open dialogs and text fields
+  keep normal keyboard behavior, and holding Space does not repeatedly advance.
 - Typewriter speed, automatic reading, choices, history, restart, reduced motion,
   and mobile layout are supported. Optional music/SFX start muted. Hiding the
   tab stops automatic reading and sound.
@@ -383,6 +387,7 @@ npm install --prefix /tmp/vn-qa playwright
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/keyboard.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
@@ -428,6 +433,9 @@ controls, and storage errors.
 The operator harness checks both operator indexes, aggregated lists and counts,
 existing collection/story links, independent saves across records and modules,
 search, localization, reload/Back/Forward, and mobile layout.
+The keyboard harness checks Space with focused player buttons, links and selectors,
+dialog close/focus restoration, native text input inside dialogs, held keys,
+Enter for choices, starting from the cover, and normal library controls.
 The IS topic harness checks topic counts, squad/story search, ordered sections,
 combined progress, independent collection saves, existing links, breadcrumbs,
 reload/Back/Forward, localization, and mobile layout. A translated-script fixture

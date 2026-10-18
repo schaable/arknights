@@ -22,7 +22,8 @@ a:hover { color: var(--accent); }
 .chapter-label b { color: var(--accent); padding: 0 8px; }
 h1 { font-size: 19px; font-weight: 500; margin: 3px 0 0; }
 .language select { padding: 9px; font-size: 12px; }
-.stage { position: relative; aspect-ratio: 16 / 9; background: #000; isolation: isolate; border: 1px solid #ffffff25; box-shadow: 0 24px 70px #0007; overflow: hidden; }
+/* Repeated clicks and slight pointer movement advance without selecting the scene. */
+.stage { position: relative; aspect-ratio: 16 / 9; background: #000; isolation: isolate; border: 1px solid #ffffff25; box-shadow: 0 24px 70px #0007; overflow: hidden; -webkit-user-select: none; user-select: none; }
 .scene, .camera, .art-layer, .blocker, .vignette { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .art-layer img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
 .art-layer.characters { overflow: visible; }

@@ -555,13 +555,14 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     }
   }
 
-  $('begin').addEventListener('click', () => {
+  function begin() {
     if (!ready) { load(); return; }
     started = true;
     $('cover').hidden = true;
     showStep(index === 0);
     $('next').focus({ preventScroll: true });
-  });
+  }
+  $('begin').addEventListener('click', begin);
   $('load-retry').addEventListener('click', () => load(group, story, started));
   $('dialogue').addEventListener('click', next);
   $('stage').addEventListener('click', (event) => { if (event.target === $('stage')) next(); });
@@ -619,9 +620,17 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('review-toggle').focus({ preventScroll: true });
   }
   document.addEventListener('keydown', (event) => {
-    if (!started || event.altKey || event.ctrlKey || event.metaKey || event.repeat || document.querySelector('dialog[open]')) return;
-    if (event.target.closest('input, select, textarea') || (event.target.closest('button, a') && [' ', 'Enter'].includes(event.key))) return;
-    if ([' ', 'ArrowRight', 'ArrowLeft', 'h', 'H'].includes(event.key)) {
+    if (!ready || event.altKey || event.ctrlKey || event.metaKey || document.querySelector('dialog[open]')) return;
+    if (event.target.closest('input, textarea, [contenteditable]:not([contenteditable="false"])')) return;
+    if (event.key === ' ') {
+      // Cancel native button/select activation, including repeated keydowns.
+      // Focus can stay on the control that opened a now-closed dialog.
+      event.preventDefault();
+      if (!event.repeat) { if (started) next(); else begin(); }
+      return;
+    }
+    if (!started || event.repeat || event.target.closest('select')) return;
+    if (['ArrowRight', 'ArrowLeft', 'h', 'H'].includes(event.key)) {
       event.preventDefault();
       if (event.key === 'ArrowLeft') back();
       else if (event.key.toLowerCase() === 'h') openHistory();

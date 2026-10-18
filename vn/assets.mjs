@@ -21,6 +21,7 @@ export function imageURLs(kind, name) {
 export function loadImage(img, kind, name, onError, onLoad = null) {
   const urls = imageURLs(kind, name);
   let index = 0;
+  img.draggable = false;
   img.dataset.asset = name;
   img.onload = onLoad;
   img.onerror = () => {
