@@ -55,15 +55,22 @@ const server = http.createServer(async (request, response) => {
       await go(routeFor(group.category, group));
       await page.locator(`.story-mark-read[data-story="${group.stories[0].id}"]`).waitFor();
     };
-    const noResume = async () => {
-      await collection(main);
-      assert.equal(await page.locator('.collection-resume').count(), 0);
-      await go(routeFor(main.category)); await page.locator('.catalog-filters').waitFor();
-      const card = page.locator('.collection-card').filter({ has: page.locator(`.collection-title[href="${routeFor(main.category, main)}"]`) });
-      assert.equal(await card.locator('.resume-link').count(), 0);
+    const continuation = async (target, group = main) => {
+      const check = async (links) => {
+        assert.equal(await links.count(), target ? 1 : 0);
+        if (target) {
+          assert.equal(await links.getAttribute('href'), routeFor(group.category, group, target));
+          assert.equal(await links.innerText(), `Continuar leyendo → ${target.title}`);
+        }
+      };
+      await collection(group);
+      await check(page.locator('.collection-resume'));
+      await go(routeFor(group.category)); await page.locator('.catalog-filters').waitFor();
+      const card = page.locator('.collection-card').filter({ has: page.locator(`.collection-title[href="${routeFor(group.category, group)}"]`) });
+      await check(card.locator('.resume-link'));
       await go('#/'); await page.locator('.category-card').first().waitFor();
-      assert.equal(await page.locator('.resume-grid').count(), 0);
-      await collection(main);
+      await check(page.locator(`.resume-grid .resume-link[href^="#/${group.category}/"]`));
+      await collection(group);
     };
     const start = async (kind = 'dialogue') => {
       await page.evaluate((hash) => { location.hash = hash; }, routeFor(main.category, main, story));
@@ -85,11 +92,11 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await mark().evaluate((button) => document.activeElement === button), true);
     assert.match(await page.locator('.library-heading p').innerText(), /^1\/14/);
     assert.deepEqual((await stored()).groups[groupKey(main)].stories[story.id], { read: true });
-    assert.equal((await stored()).groups[groupKey(main)].resume, null);
+    assert.equal((await stored()).groups[groupKey(main)].resume, story.id);
     await page.reload(); await mark().waitFor();
     assert.equal(await mark().innerText(), 'Marcar como no leída');
-    await go('#/'); await page.locator('.category-card').first().waitFor();
-    assert.equal(await page.locator('.resume-link').count(), 0, 'marking read must not create a bookmark');
+    await continuation(main.stories[1]);
+    assert.equal((await stored()).groups[groupKey(main)].stories[main.stories[1].id], undefined, 'the next story has no invented progress');
 
     // A marked story opens its ending, including reload/language switches, without fabricated choices.
     await collection(main); await page.locator('.story-title').first().click();
@@ -123,9 +130,10 @@ const server = http.createServer(async (request, response) => {
     const timestamp = before.stories[story.id].updated;
     assert.equal(await page.locator('.collection-resume').getAttribute('href'), routeFor(main.category, main, story));
     await mark().click();
-    assert.deepEqual((await stored()).groups[groupKey(main)], { ...before, stories: { ...before.stories, [story.id]: { read: true, updated: timestamp } } });
-    assert.equal(await page.locator('.collection-resume').count(), 0, 'manual completion removes the link immediately');
-    await noResume();
+    assert.deepEqual((await stored()).groups[groupKey(main)].stories, { ...before.stories, [story.id]: { read: true, updated: timestamp } });
+    assert.ok((await stored()).groups[groupKey(main)].updated >= before.updated);
+    assert.equal(await page.locator('.collection-resume').getAttribute('href'), routeFor(main.category, main, main.stories[1]), 'manual completion advances the link immediately');
+    await continuation(main.stories[1]);
     await start('end');
     assert.equal(await page.locator('#begin').evaluate((button) => button.hidden), true);
     assert.equal(await page.locator('#progress').getAttribute('value'), '100');
@@ -133,13 +141,14 @@ const server = http.createServer(async (request, response) => {
     await collection(main); await mark().click();
     assert.deepEqual((await stored()).groups[groupKey(main)].stories[story.id], { read: false, updated: timestamp });
     assert.match(await page.locator('.story-row').first().innerText(), /Sin empezar/);
-    await noResume();
+    await continuation();
     await page.locator('.story-title').first().click();
     await page.locator('#begin:not(:disabled)').waitFor();
     assert.equal(await page.locator('#begin').innerText(), 'Comenzar lectura →');
     await collection(main);
     await mark(main.stories[1]).click();
-    assert.equal((await stored()).groups[groupKey(main)].resume, story.id);
+    assert.equal((await stored()).groups[groupKey(main)].resume, main.stories[1].id);
+    await continuation(main.stories[2]);
     await mark(main.stories[1]).click();
     assert.equal((await stored()).groups[groupKey(main)].stories[main.stories[1].id], undefined);
     await page.screenshot({ path: path.join(output, 'story-read-actions.png'), fullPage: true });
@@ -204,9 +213,9 @@ const server = http.createServer(async (request, response) => {
     await advance(); await page.locator('#ending:visible').waitFor();
     assert.equal((await stored()).groups[groupKey(main)].stories[story.id].read, true);
     assert.equal(await page.locator('#begin').evaluate((button) => button.hidden), true);
-    await noResume();
+    await continuation(main.stories[1]);
     await page.reload(); await mark().waitFor();
-    assert.equal(await page.locator('.collection-resume').count(), 0, 'natural completion stays excluded after reload');
+    assert.equal(await page.locator('.collection-resume').getAttribute('href'), routeFor(main.category, main, main.stories[1]), 'natural completion advances after reload too');
     await start('end');
     await page.locator('#history').click(); await page.locator('.history-line').first().click(); await advance();
     assert.equal((await stored()).groups[groupKey(main)].stories[story.id].read, false);
@@ -215,7 +224,7 @@ const server = http.createServer(async (request, response) => {
     await collection(classicGroup); await mark(classicStory).click();
     await page.reload(); await mark(classicStory).waitFor();
     assert.equal((await stored()).groups[groupKey(classicGroup)].stories[classicStory.id].read, true);
-    assert.equal((await stored()).groups[groupKey(classicGroup)].resume, null);
+    assert.equal((await stored()).groups[groupKey(classicGroup)].resume, classicStory.id);
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.ok((await mark(classicStory).boundingBox()).height >= 44);
@@ -245,13 +254,38 @@ const server = http.createServer(async (request, response) => {
     await page.screenshot({ path: path.join(output, 'recent-sections.png'), fullPage: true });
     await collection(main); await mark(main.stories[1]).click();
     await go('#/'); await page.locator('.category-card').first().waitFor();
-    assert.deepEqual(await resumes(), latestLinks);
+    assert.deepEqual(await resumes(), [routeFor(main.category, main, main.stories[2]), latestLinks[0]]);
     assert.equal(Object.keys((await stored()).groups).length, 4);
 
     await collection(chapter1); await mark(chapter1.stories[0]).click();
-    assert.equal(await page.locator('.collection-resume').count(), 0);
+    assert.equal(await page.locator('.collection-resume').getAttribute('href'), routeFor(chapter1.category, chapter1, chapter1.stories[1]));
     await go('#/'); await page.locator('.category-card').first().waitFor();
-    assert.deepEqual(await resumes(), [latestLinks[0], routeFor(main.category, main, story)], 'show the last unfinished chapter instead of the completed one');
+    assert.deepEqual(await resumes(), [routeFor(chapter1.category, chapter1, chapter1.stories[1]), latestLinks[0]]);
+    await continuation(chapter1.stories[1], chapter1);
+    await mark(chapter1.stories.at(-1)).click();
+    await continuation(undefined, chapter1);
+    await page.reload(); await mark(chapter1.stories[0]).waitFor();
+    await continuation(undefined, chapter1);
+
+    // Actually finish the final story: no continuation or fallback to older chapters.
+    const last = main.stories.at(-1);
+    const lastCommands = parseScript(await fs.readFile(path.resolve(root, 'vn', last.source.languages.es), 'utf8'));
+    const lastAnswers = Object.fromEntries(lastCommands.filter((c) => c.command === 'decision').map((c) => [c.line, c.args.values.split(';')[0]]));
+    const finalDialogue = buildTimeline(lastCommands, lastAnswers).at(-2);
+    assert.equal(finalDialogue.kind, 'dialogue');
+    await page.evaluate(({ key, groupKey, id, line, answers, structure }) => {
+      const data = JSON.parse(localStorage.getItem(key));
+      data.groups[groupKey].resume = id;
+      data.groups[groupKey].updated = Date.now();
+      data.groups[groupKey].stories[id] = { line, answers, structure, read: false, updated: Date.now() };
+      localStorage.setItem(key, JSON.stringify(data));
+    }, { key, groupKey: groupKey(main), id: last.id, line: finalDialogue.line, answers: lastAnswers, structure: last.source.structure });
+    await page.goto(base + routeFor(main.category, main, last));
+    await page.locator('#begin:not(:disabled)').click(); await page.locator('#dialogue:visible').waitFor();
+    await advance(); await page.locator('#ending:visible').waitFor();
+    await continuation();
+    await page.reload(); await mark().waitFor();
+    await continuation();
 
     // A denied write is visible and retains the action in memory for this tab.
     await collection(main);
@@ -262,6 +296,6 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await mark().innerText(), 'Marcar como no leída');
     assert.deepEqual(await stored(), bytes);
     assert.deepEqual(errors, []);
-    console.log('Library passed: completed/reset stories have no resume links/buttons, direct ending entry, legacy read saves, rereading, read/unread resets, reload, cross-tab resets, latest unfinished resume per section, mobile/keyboard actions and storage errors.');
+    console.log('Library passed: all three continuation links advance after manual/natural completion, stop at the final story, preserve saves and reset/rereading behavior, and work across reloads/tabs and mobile.');
   } finally { await browser?.close(); await new Promise((resolve) => server.close(resolve)); }
 })().catch((error) => { console.error(error); process.exitCode = 1; });

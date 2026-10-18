@@ -91,12 +91,16 @@ browser Back/Forward without server rewrites. The player provides breadcrumbs,
 previous/next stories, and a story selector. Completion links to the next VN
 story when supported, otherwise explicitly to the classic reader.
 
-The home page's **Continue reading** section shows only the most recent unfinished
-reading in each category, ordered by recency. Completed stories and manual
-read/unread resets without a saved position are excluded from resume links on
-the home page, category cards, and collection/operator/topic pages. Starting a
-new reading makes the story eligible again. Earlier unfinished bookmarks remain
-available on their chapter and collection pages.
+The home page's **Continue reading** section shows only the most recently active
+chapter or collection in each category, ordered by recency. The home card,
+category card, and collection/operator/topic page use the same continuation
+target: an unfinished reading resumes at its saved position; completing or
+marking a story read points to the next unread story in that collection. Already
+read successors are skipped, but unsupported stories are not: their existing
+page links to the classic reader. Finishing the last story removes these links
+without jumping to another chapter or reviving an older bookmark on the home
+page. Marking unread clears the position; starting a new reading restores its
+resume link. Earlier bookmarks remain available on their collection pages.
 
 The complete catalog is a checked-in snapshot (998 collections, 2,670 stories,
 113 local Spanish translations at generation time). No remote story-index
@@ -117,7 +121,7 @@ and enables scenes that pass command, branch, language, and audio checks.
   tab stops automatic reading and sound.
 - Progress is independent **per main-story chapter**, **per side story/vignette
   collection**, and **per operator-record/module/Integrated Strategies
-  collection**. Each group remembers its last opened reading and preserves each
+  collection**. Each group remembers its last reading or manual completion and preserves each
   story's line, choices, completion, and timestamp. Merely browsing a chapter or
   opening a story's cover does not change the resume target.
 - Restart clears only the current story. Collection completion uses *all* its
@@ -126,8 +130,9 @@ and enables scenes that pass command, branch, language, and audio checks.
   including stories available only in the classic reader. Changes update the
   completion count and persist across reloads. Marking read clears the saved
   position and choices and opens the ending screen directly on the next visit. Marking
-  unread clears them and starts from the beginning. Other stories and resume
-  order stay unchanged; marking an unopened story does not create a bookmark.
+  unread clears them and starts from the beginning. Marking read updates the
+  collection's continuation point and recency, including for an unopened story,
+  without creating progress in the next story. Other stories keep their saves.
 - Read stories open at **You reached the end of this story**, including older
   saves that still contain an intermediate position. The completed story has no
   Continue reading button; **Read again** starts a new reading. Restarting, going back
@@ -160,8 +165,11 @@ and translation-review notes. The shape is:
 
 Manual read/unread resets store `{ read: true }` or `{ read: false }`, without a
 position or choices. An existing bookmark also retains its `updated` timestamp
-for resume ordering. A newly marked story has no bookmark; clearing its mark
-removes that entry. A collection containing only new marks has `resume: null`.
+as reading history. Manual completion sets the group's `resume` to the completed
+story and updates the group's timestamp. The displayed continuation is resolved
+from that point without writing a save for the next story. Older manual-only
+saves with `resume: null` continue after their last marked story in game order.
+Clearing a new mark removes its entry.
 Manual completion shows the ending screen without generating branch answers;
 **Read again** starts a fresh reading.
 
@@ -410,7 +418,9 @@ with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,
 and route cleanup. Unit tests verify shared note IDs, raw source fields, the
 Markdown format, and preservation of existing notes and reading progress.
-The library harness checks one recent bookmark per category, manual read/unread
+The library harness checks one recent collection per category, continuation in
+all three library locations after manual/natural completion, stopping at the
+last story without reviving older chapters, manual read/unread
 actions for VN and classic-only stories, opening at the ending/beginning after
 marking read/unread, older read flags with intermediate positions, rereading that
 clears completion, cleared choices, reload, cross-tab resets, mobile and keyboard

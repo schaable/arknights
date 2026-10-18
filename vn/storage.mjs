@@ -22,6 +22,10 @@ function cleanStory(value) {
     ...(typeof value.structure === 'string' && /^[a-f0-9]{64}$/.test(value.structure) ? { structure: value.structure } : {}),
   };
 }
+function savedResume(stories, resume) {
+  return Object.hasOwn(stories, resume) ? resume : Object.keys(stories).filter((id) => stories[id].updated !== undefined)
+    .sort((a, b) => stories[b].updated - stories[a].updated)[0] || null;
+}
 export function normalizeStore(value, catalog) {
   const result = { v: 2, preferences: cleanPreferences(value?.preferences), groups: {} };
   if (value?.v !== 2 || !object(value.groups)) return result;
@@ -34,8 +38,7 @@ export function normalizeStore(value, catalog) {
       if (clean) stories[story.id] = clean;
     }
     if (Object.keys(stories).length) result.groups[groupKey(group)] = {
-      resume: Object.hasOwn(stories, saved.resume) ? saved.resume : Object.keys(stories).filter((id) => stories[id].updated !== undefined)
-        .sort((a, b) => stories[b].updated - stories[a].updated)[0] || null,
+      resume: savedResume(stories, saved.resume),
       stories, updated: integer(saved.updated),
     };
   }
@@ -92,8 +95,14 @@ export function createProgressStore(storage, catalog) {
       if (previous?.updated !== undefined) saved.stories[story.id] = { read, updated: previous.updated };
       else if (read) saved.stories[story.id] = { read: true };
       else delete saved.stories[story.id];
+      if (read) {
+        // Continue after this story without inventing a position in its successor.
+        saved.resume = story.id;
+        saved.updated = Date.now();
+      }
       if (!Object.keys(saved.stories).length) delete data.groups[key];
-      // Reset only this story's position and choices; retain resume ordering.
+      else saved.resume = savedResume(saved.stories, saved.resume);
+      // Other stories keep their own positions, choices and completion flags.
       return write();
     },
     preferences(preferences) { refresh(); data.preferences = cleanPreferences(preferences); return write(); },

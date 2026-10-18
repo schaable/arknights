@@ -11,19 +11,25 @@ export function link(text, href, className) {
 }
 export const storyTitle = (story, t) => [story.code, story.title, story.phase ? t(story.phase) : ''].filter(Boolean).join(' · ');
 export function resumeStory(group, saved) {
-  const progress = saved.stories?.[saved.resume];
-  if (!progress?.line || progress.read) return;
-  return group.stories.find((story) => story.vn && story.id === saved.resume);
+  const stories = saved.stories || {};
+  let index = group.stories.findIndex((story) => story.id === saved.resume);
+  // Older manual read marks did not record a continuation point.
+  if (index < 0) index = group.stories.findLastIndex((story) => stories[story.id]?.read);
+  if (index < 0) return;
+  const current = group.stories[index], progress = stories[current.id];
+  if (progress?.read) return group.stories.slice(index + 1).find((story) => !stories[story.id]?.read);
+  if (progress?.line && current.vn) return current;
 }
 export function recentGroups(catalog, store) {
   const latest = new Map();
   for (const group of catalog.groups) {
     const saved = store.group(group);
-    if (!resumeStory(group, saved)) continue;
+    if (!Object.keys(saved.stories || {}).length) continue;
     const previous = latest.get(group.category);
     if (!previous || (saved.updated || 0) > previous.updated) latest.set(group.category, { group, updated: saved.updated || 0 });
   }
-  return [...latest.values()].sort((a, b) => b.updated - a.updated).map(({ group }) => group);
+  return [...latest.values()].sort((a, b) => b.updated - a.updated).map(({ group }) => group)
+    .filter((group) => resumeStory(group, store.group(group)));
 }
 export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   root.replaceChildren();

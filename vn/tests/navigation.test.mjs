@@ -178,7 +178,7 @@ test('saves merge other tabs; malformed/blocked storage stays usable', () => {
   assert.deepEqual(dirty.groups, {}); assert.equal(dirty.preferences.speed, 45);
 });
 
-test('continue reading keeps only the latest playable bookmark per category, in recency order', () => {
+test('continue reading keeps only the latest active collection per category without reviving older bookmarks', () => {
   const sample = { categories: catalog.categories, groups: catalog.categories.flatMap((category, index) => [0, 1].map((number) => ({
     category: category.id, id: `${index}-${number}`, stories: [{ id: `${index}-${number}`, vn: true }],
   }))) };
@@ -187,27 +187,29 @@ test('continue reading keeps only the latest playable bookmark per category, in 
   const expected = sample.groups.filter((_, index) => index % 2 === 1).reverse();
   assert.deepEqual(recentGroups(sample, store), expected);
   store.setRead(sample.groups[0], sample.groups[0].stories[0], true);
-  assert.deepEqual(recentGroups(sample, store), expected, 'marking read must not change recency');
+  assert.deepEqual(recentGroups(sample, store), expected.filter((g) => g.category !== sample.groups[0].category), 'completing the latest collection hides that section');
   const unavailable = sample.groups.at(-1);
   unavailable.stories[0].vn = false;
-  assert.equal(recentGroups(sample, store)[0], sample.groups.at(-2), 'skip unavailable resume targets');
+  assert.deepEqual(recentGroups(sample, store), expected.filter((g) => ![sample.groups[0].category, unavailable.category].includes(g.category)), 'an unavailable position does not revive an older collection');
   assert.equal(Object.keys(store.snapshot().groups).length, sample.groups.length, 'older bookmarks remain saved');
 });
 
-test('manual completion survives reload without inventing a position or resume target', () => {
+test('manual completion survives reload and continues to the next story without inventing its progress', () => {
   const storage = memory(), store = createProgressStore(storage, catalog), g = group('main_0');
   assert.equal(store.setRead(g, prologue, true), true);
   const restored = createProgressStore(storage, catalog);
   assert.deepEqual(restored.group(g).stories[prologue.id], { read: true });
-  assert.equal(restored.group(g).resume, null);
+  assert.equal(restored.group(g).resume, prologue.id);
+  assert.equal(resumeStory(g, restored.group(g)), g.stories[1]);
+  assert.equal(restored.group(g).stories[g.stories[1].id], undefined);
   assert.equal(groupStats(g, restored.group(g)).read, 1);
-  assert.deepEqual(recentGroups(catalog, restored), []);
+  assert.deepEqual(recentGroups(catalog, restored), [g]);
   restored.setRead(g, prologue, false);
   assert.deepEqual(createProgressStore(storage, catalog).snapshot().groups, {});
   assert.equal(restored.save(g, prologue, { read: true }), false, 'position saves still require a valid line');
 });
 
-test('resume links exclude manual completion, completed positions and unread resets until reading starts again', () => {
+test('continuation advances after completion and stops at the chapter boundary', () => {
   const storage = memory(), store = createProgressStore(storage, catalog);
   const first = group('main_0'), latest = group('main_1'), story = latest.stories[0];
   store.save(first, prologue, progress(10));
@@ -216,24 +218,51 @@ test('resume links exclude manual completion, completed positions and unread res
   assert.equal(resumeStory(latest, store.group(latest)), story);
 
   store.setRead(latest, story, true);
-  assert.equal(resumeStory(latest, store.group(latest)), undefined);
-  assert.deepEqual(recentGroups(catalog, store), [first], 'fall back to the last unfinished collection in the section');
+  assert.equal(resumeStory(latest, store.group(latest)), latest.stories[1]);
+  assert.deepEqual(recentGroups(catalog, store), [latest]);
   store.setRead(latest, story, false);
   assert.equal(resumeStory(latest, store.group(latest)), undefined, 'a reset has no position to continue');
-  assert.deepEqual(recentGroups(catalog, store), [first]);
+  assert.deepEqual(recentGroups(catalog, store), [], 'a reset must not revive an older chapter');
 
   store.save(latest, story, progress(30, true));
   const restored = createProgressStore(storage, catalog);
-  assert.equal(resumeStory(latest, restored.group(latest)), undefined, 'completed saves with a position are excluded too');
-  assert.deepEqual(recentGroups(catalog, restored), [first]);
-  restored.setRead(first, prologue, true);
+  assert.equal(resumeStory(latest, restored.group(latest)), latest.stories[1], 'normal completion with a saved position also advances');
+  assert.deepEqual(recentGroups(catalog, restored), [latest]);
+  restored.setRead(latest, latest.stories.at(-1), true);
+  assert.equal(resumeStory(latest, restored.group(latest)), undefined, 'the last story has no successor even if earlier stories are unread');
   assert.deepEqual(recentGroups(catalog, restored), []);
   restored.save(latest, story, progress(40));
   assert.deepEqual(recentGroups(catalog, restored), [latest], 'rereading restores the resume link');
   assert.equal(resumeStory(latest, restored.group(latest)), story);
 });
 
-test('read toggles reset only this story position and branches, preserving resume order and other tabs', () => {
+test('continuation handles existing manual marks, skips read successors, and preserves unsupported story order', () => {
+  const g = group('main_0');
+  const saved = { resume: null, stories: { [prologue.id]: { read: true } } };
+  const before = structuredClone(saved);
+  assert.equal(resumeStory(g, saved), g.stories[1], 'old manual marks need no migration');
+  assert.deepEqual(saved, before, 'resolving continuation never writes progress');
+  saved.resume = prologue.id;
+  saved.stories[g.stories[1].id] = { read: true };
+  assert.equal(resumeStory(g, saved), g.stories[2]);
+  const future = structuredClone(g);
+  future.stories[2].vn = false;
+  assert.equal(resumeStory(future, saved), future.stories[2], 'do not skip the next story just because it needs the classic reader');
+  for (const story of g.stories) saved.stories[story.id] = { read: true };
+  assert.equal(resumeStory(g, saved), undefined, 'a completed chapter has no continuation');
+});
+
+test('undoing a new completion restores the same existing bookmark immediately and after reload', () => {
+  const storage = memory(), store = createProgressStore(storage, catalog), g = group('main_0');
+  store.save(g, prologue, progress(10));
+  store.setRead(g, g.stories[2], true);
+  assert.equal(resumeStory(g, store.group(g)), g.stories[3]);
+  store.setRead(g, g.stories[2], false);
+  assert.equal(resumeStory(g, store.group(g)), prologue);
+  assert.deepEqual(store.group(g), createProgressStore(storage, catalog).group(g));
+});
+
+test('read toggles update the continuation point and reset only this story position and branches', () => {
   const storage = memory(), a = createProgressStore(storage, catalog), b = createProgressStore(storage, catalog);
   const g = group('main_0'), sibling = g.stories[1], other = group('main_1');
   const saved = { ...progress(157), answers: { 143: '2' }, structure: 'a'.repeat(64) };
@@ -241,7 +270,9 @@ test('read toggles reset only this story position and branches, preserving resum
   b.save(other, other.stories[0], progress(300));
   a.setRead(g, prologue, true);
   assert.deepEqual(a.group(g).stories[prologue.id], { read: true, updated: saved.updated });
-  assert.equal(a.group(g).resume, sibling.id); assert.equal(a.group(g).updated, 200000);
+  assert.equal(a.group(g).resume, prologue.id);
+  assert.equal(resumeStory(g, a.group(g)), sibling);
+  assert.ok(a.group(g).updated > 200000);
   assert.equal(a.group(other).stories[other.stories[0].id].line, 300);
   b.setRead(g, prologue, false); a.snapshot();
   assert.deepEqual(a.group(g).stories[prologue.id], { read: false, updated: saved.updated });
@@ -271,7 +302,7 @@ test('classic-only stories can be marked read; denied storage retains the mark f
   const storage = memory(), store = createProgressStore(storage, catalog);
   assert.equal(store.setRead(g, story, true), true);
   assert.equal(createProgressStore(storage, catalog).group(g).stories[story.id].read, true);
-  assert.deepEqual(recentGroups(catalog, store), []);
+  assert.equal(resumeStory(g, store.group(g)), g.stories[g.stories.indexOf(story) + 1]);
   const blocked = createProgressStore(undefined, catalog);
   assert.equal(blocked.setRead(g, story, true), false);
   assert.equal(blocked.snapshot().groups[groupKey(g)].stories[story.id].read, true);
