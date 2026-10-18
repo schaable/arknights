@@ -1,4 +1,4 @@
-import { routeFor, groupStats } from './catalog.mjs';
+import { routeFor, groupStats, isOperatorCategory, operatorsFor } from './catalog.mjs';
 import { createCover } from './covers.mjs';
 export function element(tag, text, className) {
   const node = document.createElement(tag);
@@ -22,7 +22,7 @@ export function recentGroups(catalog, store) {
 }
 export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   root.replaceChildren();
-  const { category, group, story } = route;
+  const { category, group, story, operator } = route;
   const heading = (title, description, collection) => {
     const header = element('header', undefined, 'library-heading');
     const text = element('div');
@@ -35,30 +35,44 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     header.append(text);
     root.append(header);
   };
-  const statsText = (g) => {
+  const statsText = (stats) => `${stats.read}/${stats.total} ${t('read').toLowerCase()} · ${stats.ready} ${t('playable').toLowerCase()}`;
+  const operatorStats = (op) => op.groups.reduce((total, g) => {
     const stats = groupStats(g, store.group(g));
-    return `${stats.read}/${stats.total} ${t('read').toLowerCase()} · ${stats.ready} ${t('playable').toLowerCase()}`;
-  };
-  const groupCard = (g, resumeOnly = false) => {
-    const saved = store.group(g), stats = groupStats(g, saved);
+    for (const key of Object.keys(total)) total[key] += stats[key];
+    return total;
+  }, { total: 0, read: 0, ready: 0, spanish: 0 });
+  const collectionCard = (title, cover, target, eyebrow, stats) => {
     const card = element('article', undefined, 'collection-card');
-    const title = g.chapter === undefined ? g.title : `${t('chapter')} ${String(g.chapter).padStart(2, '0')} · ${g.title}`;
-    const target = routeFor(g.category, g);
     const artwork = link('', target, 'collection-cover-link');
     artwork.setAttribute('aria-label', title);
-    artwork.append(createCover(g.cover));
+    artwork.append(createCover(cover));
     card.append(artwork);
-    card.append(element('span', resumeOnly ? catalog.categories.find((cat) => cat.id === g.category).name[preferences.language]
-      : g.chapter === undefined ? t('stories') : `${t('chapter')} ${String(g.chapter).padStart(2, '0')}`, 'eyebrow'),
-      link(title, target, 'collection-title'), element('p', statsText(g), 'collection-stats'));
+    card.append(element('span', eyebrow, 'eyebrow'),
+      link(title, target, 'collection-title'), element('p', statsText(stats), 'collection-stats'));
     const meter = element('progress'); meter.max = stats.total; meter.value = stats.read; meter.setAttribute('aria-label', t('collectionProgress')); card.append(meter);
     const badges = element('div', undefined, 'badges');
     badges.append(element('span', `${stats.spanish}/${stats.total} ES`, 'badge'));
     if (stats.ready) badges.append(element('span', `${stats.ready} VN`, 'badge available'));
     card.append(badges);
+    return card;
+  };
+  const groupCard = (g, resumeOnly = false) => {
+    const saved = store.group(g), stats = groupStats(g, saved);
+    const target = routeFor(g.category, g);
+    const title = g.chapter === undefined ? g.title : `${t('chapter')} ${String(g.chapter).padStart(2, '0')} · ${g.title}`;
+    const eyebrow = resumeOnly ? catalog.categories.find((cat) => cat.id === g.category).name[preferences.language]
+      : g.chapter === undefined ? t('stories') : `${t('chapter')} ${String(g.chapter).padStart(2, '0')}`;
+    const card = collectionCard(title, g.cover, target, eyebrow, stats);
     const resume = g.stories.find((s) => s.id === saved.resume && s.vn);
     if (resume) card.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(g.category, g, resume), 'resume-link'));
     else if (!resumeOnly) card.append(link(t('browse') + ' →', target, 'browse-link'));
+    return card;
+  };
+  const operatorCard = (op) => {
+    const stats = operatorStats(op), target = routeFor(category, op);
+    const kind = category.id === 'operator-modules' ? 'modules' : 'records';
+    const card = collectionCard(op.name, op.cover, target, `${stats.total} ${t(kind)}`, stats);
+    card.append(link(t('browse') + ' →', target, 'browse-link'));
     return card;
   };
   if (route.kind === 'home') {
@@ -75,15 +89,19 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     catalog.categories.forEach((cat, index) => {
       const groups = catalog.groups.filter((g) => g.category === cat.id);
       const ready = groups.reduce((sum, g) => sum + g.stories.filter((s) => s.vn).length, 0);
+      const count = isOperatorCategory(cat) ? operatorsFor(catalog, cat).length : groups.length;
+      const unit = isOperatorCategory(cat) ? 'operators' : cat.id === 'main' ? 'chapters' : 'collections';
       const card = link('', routeFor(cat), 'category-card');
       card.append(element('span', String(index + 1).padStart(2, '0'), 'category-number'), element('h3', cat.name[preferences.language]),
-        element('p', `${groups.length} ${t(cat.id === 'main' ? 'chapters' : 'collections')} · ${ready} VN`), element('span', '↗', 'card-arrow'));
+        element('p', `${count} ${t(unit)} · ${ready} VN`), element('span', '↗', 'card-arrow'));
       grid.append(card);
     });
     root.append(grid);
   } else if (route.kind === 'category') {
     const groups = catalog.groups.filter((g) => g.category === category.id);
-    heading(category.name[preferences.language], `${groups.length} ${t(category.id === 'main' ? 'chapters' : 'collections')}`);
+    const byOperator = isOperatorCategory(category);
+    const entries = byOperator ? operatorsFor(catalog, category) : groups;
+    heading(category.name[preferences.language], `${entries.length} ${t(byOperator ? 'operators' : category.id === 'main' ? 'chapters' : 'collections')}`);
     const filters = element('div', undefined, 'catalog-filters');
     const search = element('input'); search.type = 'search'; search.placeholder = t('search'); search.setAttribute('aria-label', t('search'));
     const label = element('label'); const checkbox = element('input'); checkbox.type = 'checkbox'; label.append(checkbox, document.createTextNode(t('readyOnly')));
@@ -92,22 +110,31 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     const render = () => {
       grid.replaceChildren();
       const query = search.value.trim().toLocaleLowerCase();
-      const matches = groups.filter((g) => `${g.title} ${g.chapter ?? ''}`.toLocaleLowerCase().includes(query) && (!checkbox.checked || g.stories.some((s) => s.vn)));
-      matches.forEach((g) => grid.append(groupCard(g)));
+      const matches = entries.filter((entry) => {
+        const collections = byOperator ? entry.groups : [entry];
+        const name = byOperator ? `${entry.name} ${collections.map((g) => g.title).join(' ')}` : `${entry.title} ${entry.chapter ?? ''}`;
+        return name.toLocaleLowerCase().includes(query) && (!checkbox.checked || collections.some((g) => g.stories.some((s) => s.vn)));
+      });
+      matches.forEach((entry) => grid.append(byOperator ? operatorCard(entry) : groupCard(entry)));
       if (!matches.length) grid.append(element('p', t('noResults')));
     };
     search.addEventListener('input', render); checkbox.addEventListener('change', render); render();
-  } else if (route.kind === 'group') {
-    heading(group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')} · ${group.title}`, statsText(group), group);
+  } else if (route.kind === 'group' || route.kind === 'operator') {
+    const groups = route.kind === 'operator' ? [...operator.groups] : [group];
+    if (route.kind === 'operator' && category.id === 'operator-records') groups.sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
+    const stats = route.kind === 'operator' ? operatorStats(operator) : groupStats(group, store.group(group));
+    const title = route.kind === 'operator' ? operator.name
+      : group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')} · ${group.title}`;
+    heading(title, statsText(stats), route.kind === 'operator' ? operator : group);
     const message = element('p', undefined, 'library-status'); message.setAttribute('role', 'status'); root.append(message);
-    const saved = store.group(group);
-    const resume = group.stories.find((s) => s.id === saved.resume && s.vn);
-    if (resume) root.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(category, group, resume), 'primary collection-resume'));
+    const recent = recentGroups({ groups }, store)[0];
+    const resume = recent?.stories.find((s) => s.id === store.group(recent).resume && s.vn);
+    if (resume) root.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(category, recent, resume), 'primary collection-resume'));
     const list = element('ol', undefined, 'story-list');
-    group.stories.forEach((s, index) => {
-      const progress = saved.stories[s.id];
+    groups.flatMap((g) => g.stories.map((s) => ({ g, s }))).forEach(({ g, s }, index) => {
+      const progress = store.group(g).stories[s.id];
       const item = element('li', undefined, 'story-row');
-      const title = link(storyTitle(s, t), routeFor(category, group, s), 'story-title');
+      const title = link(storyTitle(s, t), routeFor(category, g, s), 'story-title');
       const info = element('div', undefined, 'story-info');
       info.append(title);
       const badges = element('div', undefined, 'badges');
@@ -115,20 +142,26 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
       badges.append(element('span', t(s.spanish ? 'translated' : 'untranslated'), 'badge'));
       badges.append(element('span', t(progress?.read ? 'completed' : progress?.line ? 'inProgress' : 'unread'), progress?.read || progress?.line ? 'badge read-status' : 'badge'));
       info.append(badges);
-      item.append(element('span', String(index + 1).padStart(2, '0'), 'story-number'), info);
+      item.append(element('span', String(index + 1).padStart(2, '0'), 'story-number'));
+      if (route.kind === 'operator' && category.id === 'operator-modules') {
+        const artwork = link('', routeFor(category, g, s), 'story-cover');
+        artwork.setAttribute('aria-label', storyTitle(s, t));
+        artwork.append(createCover(g.cover)); item.append(artwork);
+      }
+      item.append(info);
       const actions = element('div', undefined, 'story-actions');
       const mark = element('button', t(progress?.read ? 'markUnread' : 'markRead'), 'story-mark-read');
-      mark.type = 'button'; mark.dataset.story = s.id;
+      mark.type = 'button'; mark.dataset.story = s.id; mark.dataset.group = g.id;
       mark.setAttribute('aria-label', `${mark.textContent}: ${storyTitle(s, t)}`);
       mark.addEventListener('click', () => {
-        const success = store.setRead(group, s, !store.group(group).stories[s.id]?.read);
+        const success = store.setRead(g, s, !store.group(g).stories[s.id]?.read);
         renderLibrary(root, route, { catalog, store, preferences, t });
         root.querySelectorAll('.story-mark-read')[index].focus({ preventScroll: true });
         if (!success) root.querySelector('.library-status').textContent = t('readStatusError');
       });
       actions.append(mark);
       if (!s.vn) actions.append(link(t('classic'), '../' + s.classicHash, 'classic-link'));
-      else actions.append(link('→', routeFor(category, group, s), 'story-open'));
+      else actions.append(link('→', routeFor(category, g, s), 'story-open'));
       item.append(actions);
       list.append(item);
     });
@@ -140,6 +173,6 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
         element('p', t(story.spanish ? 'translated' : 'untranslated'), 'muted'),
         link(t('classic'), '../' + story.classicHash, 'primary collection-resume'));
     }
-    root.append(link(t(group ? 'backCollection' : 'home'), group ? routeFor(category, group) : '#/', 'back-link'));
+    root.append(link(t(operator ? 'backOperator' : group ? 'backCollection' : 'home'), group ? routeFor(category, operator || group) : '#/', 'back-link'));
   }
 }

@@ -1,6 +1,18 @@
 export function routeFor(category, group, story) {
   return '#/' + [category?.id || category, group?.slug, story?.slug].filter(Boolean).map(encodeURIComponent).join('/');
 }
+export const isOperatorCategory = (category) => ['operator-records', 'operator-modules'].includes(category?.id || category);
+export function operatorsFor(catalog, category) {
+  if (!isOperatorCategory(category)) return [];
+  const groupsByOperator = new Map();
+  for (const group of catalog.groups) {
+    if (group.category !== (category?.id || category) || !group.operatorId) continue;
+    if (!groupsByOperator.has(group.operatorId)) groupsByOperator.set(group.operatorId, []);
+    groupsByOperator.get(group.operatorId).push(group);
+  }
+  return (catalog.operators || []).filter((operator) => groupsByOperator.has(operator.id))
+    .map((operator) => ({ ...operator, groups: groupsByOperator.get(operator.id) }));
+}
 export function resolveRoute(hash, catalog) {
   if (!hash || hash === '#' || hash === '#/') return { kind: 'home' };
   let parts;
@@ -10,11 +22,16 @@ export function resolveRoute(hash, catalog) {
   if (!category) return { kind: 'missing' };
   if (parts.length === 1) return { kind: 'category', category };
   const group = catalog.groups.find((g) => g.category === category.id && g.slug === parts[1]);
-  if (!group) return { kind: 'missing', category };
-  if (parts.length === 2) return { kind: 'group', category, group };
+  if (!group) {
+    const operator = parts.length === 2 && operatorsFor(catalog, category).find((o) => o.slug === parts[1]);
+    return operator ? { kind: 'operator', category, operator } : { kind: 'missing', category };
+  }
+  const operator = catalog.operators?.find((o) => o.id === group.operatorId);
+  const collection = { category, group, ...(operator ? { operator } : {}) };
+  if (parts.length === 2) return { kind: 'group', ...collection };
   const story = group.stories.find((s) => s.slug === parts[2]);
-  if (!story) return { kind: 'missing', category, group };
-  return { kind: story.vn ? 'story' : 'unavailable', category, group, story };
+  if (!story) return { kind: 'missing', ...collection };
+  return { kind: story.vn ? 'story' : 'unavailable', ...collection, story };
 }
 export const groupKey = (group) => `${group.category}:${group.id}`;
 export function groupStats(group, state) {

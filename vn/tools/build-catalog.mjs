@@ -26,14 +26,13 @@ let prior = { groups: [] };
 try { prior = JSON.parse(await readFile(resolve(base, 'data/catalog.json'), 'utf8')); } catch { /* First build. */ }
 const slugify = (value) => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
   .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-const names = Object.fromEntries(Object.entries(operators).map(([id, data]) => [id.split('_')[2], data.name || data.appellation]));
 // Summons share their operator's short name; use only playable character IDs.
 const operatorIds = Object.fromEntries(Object.keys(operators).filter((id) => id.startsWith('char_')).map((id) => [id.split('_')[2], id]));
 const { covers, modulePortraitFallbacks } = JSON.parse(await readFile(new URL('./cover-assets.json', import.meta.url), 'utf8'));
 const operatorCover = (id) => id ? { provider: 'arkdata',
   path: `torappu/dynamicassets/arts/charavatars/${id}${id === 'char_002_amiya' ? '_2' : ''}.png` } : undefined;
 const groups = [];
-async function add(id, classic, title, entries, cover = covers[id]) {
+async function add(id, classic, title, entries, cover = covers[id], operatorId) {
   const category = categories.find((c) => c.classic === classic).id;
   const previous = prior.groups.find((g) => g.id === id && g.category === category);
   const chapter = classic === 'main' ? Number(id.split('_')[1]) : undefined;
@@ -59,7 +58,8 @@ async function add(id, classic, title, entries, cover = covers[id]) {
       ...(source ? { source } : {}),
     });
   }
-  groups.push({ id, category, slug, title, ...(chapter !== undefined ? { chapter } : {}), ...(cover ? { cover } : {}), stories });
+  groups.push({ id, category, slug, title, ...(chapter !== undefined ? { chapter } : {}),
+    ...(operatorId ? { operatorId } : {}), ...(cover ? { cover } : {}), stories });
 }
 for (const group of Object.values(review)) {
   const id = group.id;
@@ -73,8 +73,11 @@ for (const group of Object.values(review)) {
   const intro = entries[0]?.storyTxt.replace(/[^/]+$/, main ? `${id}_zone_enter` : `level_${id}_entry`);
   if (intro && table[intro]) entries.unshift({ storyTxt: intro, storyName: 'Introduction', storyCode: 'PV' });
   const type = main ? 'main' : id.startsWith('story_') ? 'record' : group.entryType.startsWith('MINI_') ? 'mini' : 'side';
-  const title = type === 'record' ? `${names[id.split('_')[1]] || id.split('_')[1]} · ${group.name}` : group.name;
-  await add(id, type, title, entries, type === 'record' ? operatorCover(operatorIds[id.split('_')[1]]) : covers[id]);
+  const operatorId = type === 'record' ? operatorIds[id.split('_')[1]] : undefined;
+  if (type === 'record' && !operatorId) throw new Error(`Unknown operator for ${id}`);
+  const operator = operators[operatorId];
+  const title = operator ? `${operator.name || operator.appellation} · ${group.name}` : group.name;
+  await add(id, type, title, entries, operator ? operatorCover(operatorId) : covers[id], operatorId);
 }
 for (const id of Object.values(modules.charEquip).flatMap((ids) => ids.slice(1))) {
   const item = modules.equipDict[id], operator = operators[item.charId];
@@ -82,7 +85,7 @@ for (const id of Object.values(modules.charEquip).flatMap((ids) => ids.slice(1))
   await add(id, 'module', `${operator.name || operator.appellation} · ${item.uniEquipName}`, [
     { storyName: item.uniEquipName, storyTxt: id },
   ], modulePortraitFallbacks.includes(item.uniEquipIcon.toLowerCase()) ? operatorCover(item.charId)
-    : { provider: 'arkdata', path: `torappu/dynamicassets/arts/ui/uniequipimg/${item.uniEquipIcon.toLowerCase()}.png` });
+    : { provider: 'arkdata', path: `torappu/dynamicassets/arts/ui/uniequipimg/${item.uniEquipIcon.toLowerCase()}.png` }, item.charId);
 }
 await add('rogue_0', 'rogue', "Ceobe's Fungimist", [
   { storyName: 'Entry', storyTxt: 'activities/act12d6/level_act12d6_entry' },
@@ -112,6 +115,16 @@ for (const [id, topic] of Object.entries(rogue.topics)) {
 }
 groups.sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category)
   || (a.category === 'main' ? a.chapter - b.chapter : a.title.localeCompare(b.title, 'en')));
+// Operator pages share the category's URL space with existing collection links.
+// Reserve those slugs so old bookmarks keep resolving to the same collections.
+const reserved = new Set(groups.filter((g) => g.operatorId).map((g) => g.slug));
+const operatorIndex = [...new Set(groups.map((g) => g.operatorId).filter(Boolean))].sort().map((id) => {
+  const name = operators[id].name || operators[id].appellation;
+  let slug = prior.operators?.find((operator) => operator.id === id)?.slug || slugify(name) || slugify(id);
+  while (reserved.has(slug)) slug += '-' + slugify(id);
+  reserved.add(slug);
+  return { id, name, slug, cover: operatorCover(id) };
+}).sort((a, b) => a.name.localeCompare(b.name, 'en'));
 const all = groups.flatMap((g) => g.stories);
 for (const key of Object.keys(storyOverrides)) if (all.filter((s) => s.id === key && s.vn).length !== 1) throw new Error(`Existing playable story missing/unsupported: ${key}`);
 const sounds = new Set(all.filter((s) => s.vn).flatMap((s) => s.source.sounds));
@@ -121,6 +134,6 @@ const audio = Object.fromEntries([...sounds].sort().map((key) => {
 }));
 await mkdir(resolve(base, 'data'), { recursive: true });
 await writeFile(resolve(base, 'data/catalog.json'), JSON.stringify({ v: 1, generated: new Date().toISOString().slice(0, 10),
-  source: 'ArknightsAssets/ArknightsGamedata/en', categories, groups }) + '\n');
+  source: 'ArknightsAssets/ArknightsGamedata/en', categories, operators: operatorIndex, groups }) + '\n');
 await writeFile(resolve(base, 'data/audio.json'), JSON.stringify(audio, null, 2) + '\n');
 console.log(`${groups.length} collections, ${all.length} stories, ${all.filter((s) => s.spanish).length} Spanish, ${all.filter((s) => s.vn).length} VN, ${sounds.size} sounds.`);

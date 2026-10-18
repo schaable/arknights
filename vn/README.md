@@ -16,6 +16,13 @@ than `file://`, because the player fetches its scripts.
 The library lists Main Story, Side Stories, Vignettes, Operator Records,
 Operator Modules, and Integrated Strategies. Category pages show every chapter
 or collection, with search and an optional filter for playable VN stories.
+Operator Records and Operator Modules first list operators, each with a portrait
+and combined completion count. Selecting an operator lists all their records or
+modules directly, with individual module artwork and read/unread controls.
+Search in these sections matches operator names and record/module titles.
+The operator index uses game character IDs; alternate forms with distinct
+operator IDs remain separate, while Amiya's class-specific modules share her page.
+Existing collection/story links and independent progress remain unchanged.
 Collection pages list stories in game order. Translation availability and VN
 availability are separate: a Spanish script can exist before its scene is
 supported by the player. Other stories have links to the classic reader.
@@ -61,6 +68,7 @@ Example URLs after `/vn/`:
 - `#/main/chapter-0/prologue-1` and `#/main/chapter-0/prologue-2`
 - `#/main/chapter-1/1-1-before`
 - `#/vignettes/children-of-ursus/habits`
+- `#/operator-records/magallan` and `#/operator-modules/magallan`
 
 `/vn/` or `/vn/#/` opens the library. Removing the story slug opens the collection;
 removing the collection slug opens the category. Links support reloads and native
@@ -348,6 +356,7 @@ npm install --prefix /tmp/vn-qa playwright
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
@@ -386,6 +395,9 @@ actions for VN and classic-only stories, opening at the ending/beginning after
 marking read/unread, older read flags with intermediate positions, rereading that
 clears completion, cleared choices, reload, cross-tab resets, mobile and keyboard
 controls, and storage errors.
+The operator harness checks both operator indexes, aggregated lists and counts,
+existing collection/story links, independent saves across records and modules,
+search, localization, reload/Back/Forward, and mobile layout.
 The cover harness checks actual artwork in every category, all 17 recovered
 images (covering the previous 25 unmapped collections), collection and player
 covers, resume cards, mobile layout, raw-mirror fallback, local images under a

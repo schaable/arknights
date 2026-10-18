@@ -35,6 +35,7 @@ export const copy = {
 };
 
 Object.assign(copy.es, {
+  operators: 'operadores', records: 'archivos', modules: 'módulos', backOperator: 'Volver al operador',
   markRead: 'Marcar como leída', markUnread: 'Marcar como no leída',
   readStatusError: 'No se pudo guardar el estado de lectura en este navegador. El cambio solo se conserva en esta pestaña.',
   reviewTools: 'Revisión de traducción', reviewCopy: 'Copiar notas', reviewClear: 'Borrar notas',
@@ -81,6 +82,7 @@ Object.assign(copy.es, {
   collectionProgress: 'Progreso de la colección', chooseStory: 'Seleccionar historia',
 });
 Object.assign(copy.en, {
+  operators: 'operators', records: 'records', modules: 'modules', backOperator: 'Back to operator',
   markRead: 'Mark as read', markUnread: 'Mark as unread',
   readStatusError: 'The reading status could not be saved in this browser. The change is kept only in this tab.',
   reviewTools: 'Translation review', reviewCopy: 'Copy notes', reviewClear: 'Clear notes',

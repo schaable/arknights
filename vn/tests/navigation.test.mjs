@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { routeFor, resolveRoute, groupKey, groupStats } from '../catalog.mjs';
+import { routeFor, resolveRoute, groupKey, groupStats, isOperatorCategory, operatorsFor } from '../catalog.mjs';
 import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore } from '../storage.mjs';
 import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
 import { scriptSignature } from '../compatibility.mjs';
@@ -21,6 +21,15 @@ test('catalog routes round-trip uniquely for all categories, collections and sto
   for (const category of catalog.categories) {
     assert.equal(resolveRoute(routeFor(category), catalog).kind, 'category');
     assert.ok(catalog.groups.some((g) => g.category === category.id));
+    for (const operator of operatorsFor(catalog, category)) {
+      const url = routeFor(category, operator);
+      assert.equal(routes.has(url), false, url); routes.add(url);
+      const route = resolveRoute(url, catalog);
+      assert.equal(route.kind, 'operator');
+      assert.equal(route.operator.id, operator.id);
+      assert.ok(route.operator.groups.every((g) => g.category === category.id && g.operatorId === operator.id));
+      assert.equal(resolveRoute(url + '/unknown', catalog).kind, 'missing');
+    }
   }
   for (const g of catalog.groups) {
     const url = routeFor(g.category, g);
@@ -40,6 +49,38 @@ test('catalog routes round-trip uniquely for all categories, collections and sto
   assert.equal(resolveRoute('', catalog).kind, 'home');
   assert.equal(resolveRoute('#/', catalog).kind, 'home');
   assert.equal(resolveRoute('#/vignettes/children-of-ursus/habits', catalog).story.id, 'activities/act10d5/level_act10d5_st01');
+});
+
+test('operator pages cover every archive/module exactly once using playable operator identities', () => {
+  const ids = new Set(catalog.operators.map((o) => o.id));
+  assert.equal(ids.size, catalog.operators.length);
+  for (const category of catalog.categories) {
+    const operators = operatorsFor(catalog, category);
+    if (!isOperatorCategory(category)) { assert.deepEqual(operators, []); continue; }
+    const groups = catalog.groups.filter((g) => g.category === category.id);
+    assert.deepEqual(operators.flatMap((o) => o.groups.map((g) => g.id)).sort(), groups.map((g) => g.id).sort());
+    for (const operator of operators) {
+      assert.ok(operator.id.startsWith('char_'));
+      assert.ok(operator.cover?.path.includes(operator.id));
+      assert.ok(operator.groups.length);
+      for (const g of operator.groups) {
+        assert.ok(g.title.startsWith(operator.name + ' · '));
+        assert.equal(resolveRoute(routeFor(category, g), catalog).operator.id, operator.id);
+        for (const story of g.stories) assert.equal(resolveRoute(routeFor(category, g, story), catalog).operator.id, operator.id);
+      }
+    }
+  }
+  const ami = operatorsFor(catalog, 'operator-modules').find((o) => o.name === 'Amiya');
+  assert.deepEqual(ami.groups.map((g) => g.id).sort(), ['uniequip_002_amiya', 'uniequip_002_amiya2', 'uniequip_002_amiya3']);
+  assert.equal(resolveRoute('#/operator-records/magallan', catalog).operator.id, 'char_248_mgllan');
+  assert.equal(resolveRoute('#/operator-records/soaring-dragon-a-cycle-of-life/cycle-of-life', catalog).story.id, 'obt/memory/story_mgllan_1_1');
+  assert.equal(resolveRoute('#/operator-records/blazing-sun-starting-point', catalog).operator.name, 'Nearl the Radiant Knight');
+  assert.equal(resolveRoute('#/main/magallan', catalog).kind, 'missing');
+  for (const category of ['operator-records', 'operator-modules']) {
+    const available = new Set(operatorsFor(catalog, category).map((o) => o.id));
+    const absent = catalog.operators.find((o) => !available.has(o.id));
+    assert.equal(resolveRoute(routeFor(category, absent), catalog).kind, 'missing');
+  }
 });
 
 test('all chapters are ordered; translation and VN availability remain independent', () => {
