@@ -1,4 +1,4 @@
-import { routeFor, groupStats, isOperatorCategory, operatorsFor } from './catalog.mjs';
+import { routeFor, groupStats, isOperatorCategory, operatorsFor, topicsFor } from './catalog.mjs';
 import { createCover } from './covers.mjs';
 export function element(tag, text, className) {
   const node = document.createElement(tag);
@@ -22,7 +22,7 @@ export function recentGroups(catalog, store) {
 }
 export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   root.replaceChildren();
-  const { category, group, story, operator } = route;
+  const { category, group, story, operator, topic } = route;
   const heading = (title, description, collection) => {
     const header = element('header', undefined, 'library-heading');
     const text = element('div');
@@ -36,7 +36,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     root.append(header);
   };
   const statsText = (stats) => `${stats.read}/${stats.total} ${t('read').toLowerCase()} · ${stats.ready} ${t('playable').toLowerCase()}`;
-  const operatorStats = (op) => op.groups.reduce((total, g) => {
+  const combinedStats = (entry) => entry.groups.reduce((total, g) => {
     const stats = groupStats(g, store.group(g));
     for (const key of Object.keys(total)) total[key] += stats[key];
     return total;
@@ -68,10 +68,11 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     else if (!resumeOnly) card.append(link(t('browse') + ' →', target, 'browse-link'));
     return card;
   };
-  const operatorCard = (op) => {
-    const stats = operatorStats(op), target = routeFor(category, op);
-    const kind = category.id === 'operator-modules' ? 'modules' : 'records';
-    const card = collectionCard(op.name, op.cover, target, `${stats.total} ${t(kind)}`, stats);
+  const parentCard = (entry) => {
+    const stats = combinedStats(entry), target = routeFor(category, entry);
+    const byTopic = category.id === 'integrated-strategies';
+    const kind = byTopic ? 'collections' : category.id === 'operator-modules' ? 'modules' : 'records';
+    const card = collectionCard(entry.name, entry.cover, target, `${byTopic ? entry.groups.length : stats.total} ${t(kind)}`, stats);
     card.append(link(t('browse') + ' →', target, 'browse-link'));
     return card;
   };
@@ -89,8 +90,9 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     catalog.categories.forEach((cat, index) => {
       const groups = catalog.groups.filter((g) => g.category === cat.id);
       const ready = groups.reduce((sum, g) => sum + g.stories.filter((s) => s.vn).length, 0);
-      const count = isOperatorCategory(cat) ? operatorsFor(catalog, cat).length : groups.length;
-      const unit = isOperatorCategory(cat) ? 'operators' : cat.id === 'main' ? 'chapters' : 'collections';
+      const count = isOperatorCategory(cat) ? operatorsFor(catalog, cat).length
+        : cat.id === 'integrated-strategies' ? topicsFor(catalog).length : groups.length;
+      const unit = isOperatorCategory(cat) ? 'operators' : cat.id === 'integrated-strategies' ? 'topics' : cat.id === 'main' ? 'chapters' : 'collections';
       const card = link('', routeFor(cat), 'category-card');
       card.append(element('span', String(index + 1).padStart(2, '0'), 'category-number'), element('h3', cat.name[preferences.language]),
         element('p', `${count} ${t(unit)} · ${ready} VN`), element('span', '↗', 'card-arrow'));
@@ -100,8 +102,10 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
   } else if (route.kind === 'category') {
     const groups = catalog.groups.filter((g) => g.category === category.id);
     const byOperator = isOperatorCategory(category);
-    const entries = byOperator ? operatorsFor(catalog, category) : groups;
-    heading(category.name[preferences.language], `${entries.length} ${t(byOperator ? 'operators' : category.id === 'main' ? 'chapters' : 'collections')}`);
+    const byTopic = category.id === 'integrated-strategies';
+    const grouped = byOperator || byTopic;
+    const entries = byOperator ? operatorsFor(catalog, category) : byTopic ? topicsFor(catalog) : groups;
+    heading(category.name[preferences.language], `${entries.length} ${t(byOperator ? 'operators' : byTopic ? 'topics' : category.id === 'main' ? 'chapters' : 'collections')}`);
     const filters = element('div', undefined, 'catalog-filters');
     const search = element('input'); search.type = 'search'; search.placeholder = t('search'); search.setAttribute('aria-label', t('search'));
     const label = element('label'); const checkbox = element('input'); checkbox.type = 'checkbox'; label.append(checkbox, document.createTextNode(t('readyOnly')));
@@ -111,27 +115,40 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
       grid.replaceChildren();
       const query = search.value.trim().toLocaleLowerCase();
       const matches = entries.filter((entry) => {
-        const collections = byOperator ? entry.groups : [entry];
-        const name = byOperator ? `${entry.name} ${collections.map((g) => g.title).join(' ')}` : `${entry.title} ${entry.chapter ?? ''}`;
+        const collections = grouped ? entry.groups : [entry];
+        const name = grouped ? `${entry.name} ${collections.map((g) => `${g.title} ${g.stories.map((s) => s.title).join(' ')}`).join(' ')}` : `${entry.title} ${entry.chapter ?? ''}`;
         return name.toLocaleLowerCase().includes(query) && (!checkbox.checked || collections.some((g) => g.stories.some((s) => s.vn)));
       });
-      matches.forEach((entry) => grid.append(byOperator ? operatorCard(entry) : groupCard(entry)));
+      matches.forEach((entry) => grid.append(grouped ? parentCard(entry) : groupCard(entry)));
       if (!matches.length) grid.append(element('p', t('noResults')));
     };
     search.addEventListener('input', render); checkbox.addEventListener('change', render); render();
-  } else if (route.kind === 'group' || route.kind === 'operator') {
-    const groups = route.kind === 'operator' ? [...operator.groups] : [group];
+  } else if (['group', 'operator', 'topic'].includes(route.kind)) {
+    const parent = route.kind === 'operator' ? operator : route.kind === 'topic' ? topic : null;
+    const groups = parent ? [...parent.groups] : [group];
     if (route.kind === 'operator' && category.id === 'operator-records') groups.sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
-    const stats = route.kind === 'operator' ? operatorStats(operator) : groupStats(group, store.group(group));
-    const title = route.kind === 'operator' ? operator.name
+    const stats = parent ? combinedStats(parent) : groupStats(group, store.group(group));
+    const title = parent ? parent.name
       : group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')} · ${group.title}`;
-    heading(title, statsText(stats), route.kind === 'operator' ? operator : group);
+    heading(title, statsText(stats), parent || group);
     const message = element('p', undefined, 'library-status'); message.setAttribute('role', 'status'); root.append(message);
     const recent = recentGroups({ groups }, store)[0];
     const resume = recent?.stories.find((s) => s.id === store.group(recent).resume && s.vn);
     if (resume) root.append(link(`${t('continueReading')} → ${resume.title}`, routeFor(category, recent, resume), 'primary collection-resume'));
-    const list = element('ol', undefined, 'story-list');
+    let list, previousGroup;
     groups.flatMap((g) => g.stories.map((s) => ({ g, s }))).forEach(({ g, s }, index) => {
+      if (!list || (route.kind === 'topic' && previousGroup !== g)) {
+        if (route.kind === 'topic') {
+          const section = element('h3', undefined, 'story-section-heading');
+          section.dataset.group = g.id;
+          if (g.id === topic.id) section.textContent = t('entryEndings');
+          else section.append(link(g.title.replace(topic.name + ' · ', ''), routeFor(category, g)));
+          root.append(section);
+        }
+        list = element('ol', undefined, 'story-list');
+        list.start = index + 1;
+        root.append(list); previousGroup = g;
+      }
       const progress = store.group(g).stories[s.id];
       const item = element('li', undefined, 'story-row');
       const title = link(storyTitle(s, t), routeFor(category, g, s), 'story-title');
@@ -165,7 +182,6 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
       item.append(actions);
       list.append(item);
     });
-    root.append(list);
   } else {
     heading(story ? storyTitle(story, t) : t('missingTitle'), t(story ? 'unavailableTitle' : 'missingText'), group);
     if (story) {
@@ -173,6 +189,6 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
         element('p', t(story.spanish ? 'translated' : 'untranslated'), 'muted'),
         link(t('classic'), '../' + story.classicHash, 'primary collection-resume'));
     }
-    root.append(link(t(operator ? 'backOperator' : group ? 'backCollection' : 'home'), group ? routeFor(category, operator || group) : '#/', 'back-link'));
+    root.append(link(t(operator ? 'backOperator' : topic ? 'backTopic' : group ? 'backCollection' : 'home'), group ? routeFor(category, operator || topic || group) : '#/', 'back-link'));
   }
 }

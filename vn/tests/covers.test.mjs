@@ -9,8 +9,9 @@ const catalog = JSON.parse(await readFile(new URL('../data/catalog.json', import
 test('every catalog collection has resolvable cover metadata, including inherited squad artwork', () => {
   for (const group of catalog.groups) {
     assert.ok(coverURLs(group.cover).length, `Missing cover: ${group.id}`);
-    if (group.id.startsWith('rogue_5_')) {
-      assert.deepEqual(group.cover, catalog.groups.find((g) => g.id === 'rogue_5').cover);
+    const topic = group.id.match(/^(rogue_\d+)_/);
+    if (topic) {
+      assert.deepEqual(group.cover, catalog.groups.find((g) => g.id === topic[1]).cover, group.id);
     }
   }
 });

@@ -1,14 +1,11 @@
-// Archive textures are pinned to the verified asset snapshot. The existing
-// arkdata mirror supplies vignette covers, operator portraits and module art.
+// Chapter, event, and IS covers use the verified ArknightsAssets2 English snapshot.
+// Local event-entry artwork fills archive gaps. The arkdata mirror supplies
+// vignette covers, operator portraits and module art.
 const mirrors = {
   local: [new URL('./assets/covers/', import.meta.url).href],
   'archive-en': [
     'https://cdn.jsdelivr.net/gh/ArknightsAssets/ArknightsAssets2@6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets/',
     'https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets/',
-  ],
-  archive: [
-    'https://cdn.jsdelivr.net/gh/ArknightsAssets/ArknightsAssets@c0be4e4428f79c7e87c6889067a6906361ae979b/assets/',
-    'https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets/c0be4e4428f79c7e87c6889067a6906361ae979b/assets/',
   ],
   arkdata: [
     'https://cdn.jsdelivr.net/gh/akgcc/arkdata@main/assets/',

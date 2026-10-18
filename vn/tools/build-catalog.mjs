@@ -32,7 +32,7 @@ const { covers, modulePortraitFallbacks } = JSON.parse(await readFile(new URL('.
 const operatorCover = (id) => id ? { provider: 'arkdata',
   path: `torappu/dynamicassets/arts/charavatars/${id}${id === 'char_002_amiya' ? '_2' : ''}.png` } : undefined;
 const groups = [];
-async function add(id, classic, title, entries, cover = covers[id], operatorId) {
+async function add(id, classic, title, entries, cover = covers[id], { operatorId, topicId } = {}) {
   const category = categories.find((c) => c.classic === classic).id;
   const previous = prior.groups.find((g) => g.id === id && g.category === category);
   const chapter = classic === 'main' ? Number(id.split('_')[1]) : undefined;
@@ -59,7 +59,7 @@ async function add(id, classic, title, entries, cover = covers[id], operatorId) 
     });
   }
   groups.push({ id, category, slug, title, ...(chapter !== undefined ? { chapter } : {}),
-    ...(operatorId ? { operatorId } : {}), ...(cover ? { cover } : {}), stories });
+    ...(operatorId ? { operatorId } : {}), ...(topicId ? { topicId } : {}), ...(cover ? { cover } : {}), stories });
 }
 for (const group of Object.values(review)) {
   const id = group.id;
@@ -77,7 +77,7 @@ for (const group of Object.values(review)) {
   if (type === 'record' && !operatorId) throw new Error(`Unknown operator for ${id}`);
   const operator = operators[operatorId];
   const title = operator ? `${operator.name || operator.appellation} · ${group.name}` : group.name;
-  await add(id, type, title, entries, operator ? operatorCover(operatorId) : covers[id], operatorId);
+  await add(id, type, title, entries, operator ? operatorCover(operatorId) : covers[id], { operatorId });
 }
 for (const id of Object.values(modules.charEquip).flatMap((ids) => ids.slice(1))) {
   const item = modules.equipDict[id], operator = operators[item.charId];
@@ -85,12 +85,12 @@ for (const id of Object.values(modules.charEquip).flatMap((ids) => ids.slice(1))
   await add(id, 'module', `${operator.name || operator.appellation} · ${item.uniEquipName}`, [
     { storyName: item.uniEquipName, storyTxt: id },
   ], modulePortraitFallbacks.includes(item.uniEquipIcon.toLowerCase()) ? operatorCover(item.charId)
-    : { provider: 'arkdata', path: `torappu/dynamicassets/arts/ui/uniequipimg/${item.uniEquipIcon.toLowerCase()}.png` }, item.charId);
+    : { provider: 'arkdata', path: `torappu/dynamicassets/arts/ui/uniequipimg/${item.uniEquipIcon.toLowerCase()}.png` }, { operatorId: item.charId });
 }
 await add('rogue_0', 'rogue', "Ceobe's Fungimist", [
   { storyName: 'Entry', storyTxt: 'activities/act12d6/level_act12d6_entry' },
   ...['迷尘幻梦', '茫然行者', '归于荒野'].map((title, i) => ({ storyName: title, storyTxt: `activities/act12d6/level_act12d6_ending_${i + 1}` })),
-]);
+], covers.rogue_0, { topicId: 'rogue_0' });
 for (const [id, topic] of Object.entries(rogue.topics)) {
   const number = id.split('_')[1], detail = rogue.details[id];
   const entries = [{ storyName: 'Entry', storyTxt: `obt/roguelike/ro${number}/level_rogue${number}_entry` }];
@@ -104,13 +104,13 @@ for (const [id, topic] of Object.entries(rogue.topics)) {
       storyName: `${ending.title} - ${part.endbookName}`, storyTxt: part.textId.toLowerCase(),
     });
   }
-  await add(id, 'rogue', topic.name, entries);
+  await add(id, 'rogue', topic.name, entries, covers[id], { topicId: id });
   for (const [index, [key, squad]] of Object.entries(detail.monthSquad).entries()) {
     const chat = detail.archiveComp.chat.chat[squad.chatId];
     const entries = Object.values(chat.clientChatItemData || chat.chatItemList).map((part) => ({
       storyName: `Floor ${part.chatFloor ?? part.floor}`, storyTxt: part.chatStoryId.toLowerCase(),
     }));
-    await add(`${id}_${key}`, 'rogue', `${topic.name} · Squad ${index + 1} — ${squad.teamName}`, entries, covers[id]);
+    await add(`${id}_${key}`, 'rogue', `${topic.name} · Squad ${index + 1} — ${squad.teamName}`, entries, covers[id], { topicId: id });
   }
 }
 groups.sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category)

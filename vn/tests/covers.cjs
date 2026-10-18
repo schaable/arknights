@@ -45,6 +45,7 @@ const server = http.createServer(async (request, response) => {
       assert.equal(await img.evaluate((img) => getComputedStyle(img).objectFit), 'contain');
       const src = await img.getAttribute('src');
       assert.ok(src.startsWith('https://raw.githubusercontent.com/') || src.startsWith(base + 'assets/covers/'), src);
+      return src;
     };
     await go('#/main');
     await art('.collection-card');
@@ -54,6 +55,7 @@ const server = http.createServer(async (request, response) => {
     for (const hash of ['#/main/chapter-0', '#/side-stories/code-of-brawl', '#/vignettes/children-of-ursus']) {
       await go(hash); await art('.library-heading');
       assert.ok(await page.locator('.story-title').count());
+      if (hash.includes('code-of-brawl')) await page.screenshot({ path: path.join(output, 'assets2-event-cover.png') });
     }
     const catalog = JSON.parse(await fs.readFile(path.join(root, 'vn/data/catalog.json')));
     for (const category of ['operator-records', 'operator-modules', 'integrated-strategies']) {
@@ -71,6 +73,19 @@ const server = http.createServer(async (request, response) => {
       }
     }
 
+    // Migrated topic artwork must also reach the independently saved squad pages.
+    for (const id of ['rogue_1', 'rogue_2', 'rogue_3', 'rogue_4']) {
+      const topic = catalog.groups.find((g) => g.id === id);
+      await go(`#/${topic.category}/${topic.slug}`);
+      const source = await art('.library-heading');
+      assert.ok(source.includes('/ArknightsAssets/ArknightsAssets2/'), source);
+      const squad = catalog.groups.find((g) => g.id.startsWith(id + '_'));
+      await go(`#/${squad.category}/${squad.slug}`);
+      assert.equal(await art('.library-heading'), source);
+      assert.ok(await page.locator('.story-title').count());
+      if (id === 'rogue_2') await page.screenshot({ path: path.join(output, 'assets2-squad-cover.png') });
+    }
+
     await page.goto(base + '#/main/chapter-0/prologue-1');
     await page.locator('#begin:not(:disabled)').waitFor(); await art('#cover');
     await page.screenshot({ path: path.join(output, 'story-collection-cover.png') });
@@ -81,6 +96,9 @@ const server = http.createServer(async (request, response) => {
     await page.locator('#next').click();
     await page.evaluate(() => { location.hash = '#/'; });
     await page.locator('.resume-grid').waitFor(); await art('.resume-grid');
+    await go('#/main/chapter-0'); await art('.library-heading');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    await page.screenshot({ path: path.join(output, 'assets2-chapter-cover-mobile.png') });
 
     // Unknown artwork has a stable placeholder and still exposes every story.
     // Inject an unmapped future collection instead of depending on a catalog gap.
@@ -104,6 +122,6 @@ const server = http.createServer(async (request, response) => {
     await offline.locator('.story-title').first().click();
     await offline.locator('#begin:not(:disabled)').waitFor();
     assert.deepEqual(errors, []);
-    console.log('Covers passed: all categories, 17 recovered images, raw fallback, local artwork under a subpath, mobile, resume cards, missing artwork and both mirrors unavailable.');
+    console.log('Covers passed: all categories, 17 recovered images, migrated IS topics/squads, raw fallback, local artwork under a subpath, mobile chapter/player covers, resume cards, missing artwork and both mirrors unavailable.');
   } finally { await browser?.close(); await new Promise((resolve) => server.close(resolve)); }
 })().catch((error) => { console.error(error); process.exitCode = 1; });

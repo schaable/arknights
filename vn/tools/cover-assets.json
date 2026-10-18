@@ -1,170 +1,169 @@
 {
   "sources": {
-    "archive": "https://github.com/ArknightsAssets/ArknightsAssets/tree/c0be4e4428f79c7e87c6889067a6906361ae979b/assets/torappu/dynamicassets/arts/ui",
     "arkdata": "https://github.com/akgcc/arkdata/tree/main/assets/torappu/dynamicassets/arts/ui/storyreview",
     "archive-en": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets",
     "local": "vn/assets/covers/sources.json"
   },
   "covers": {
     "1stact": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act1d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act1d0.png"
     },
     "act3d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act3d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act3d0.png"
     },
     "act5d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act5d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act5d0.png"
     },
     "act11d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act11d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act11d0.png"
     },
     "act9d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act9d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act9d0.png"
     },
     "act12d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act12d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act12d0.png"
     },
     "act13d5": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act13d5.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act13d5.png"
     },
     "act15d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act15d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act15d0.png"
     },
     "act16d5": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act16d5.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act16d5.png"
     },
     "act17d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act17d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act17d0.png"
     },
     "act18d0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act18d0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act18d0.png"
     },
     "act18d3": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act18d3.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act18d3.png"
     },
     "act12side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act12side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act12side.png"
     },
     "act13side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act13side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act13side.png"
     },
     "act14side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act14side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act14side.png"
     },
     "act15side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act15side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act15side.png"
     },
     "act16side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act16side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act16side.png"
     },
     "act17side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act17side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act17side.png"
     },
     "act18side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act18side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act18side.png"
     },
     "act20side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act20side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act20side.png"
     },
     "act19side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act19side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act19side.png"
     },
     "act21side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act21side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act21side.png"
     },
     "act22side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act22side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act22side.png"
     },
     "act23side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act23side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act23side.png"
     },
     "act25side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act25side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act25side.png"
     },
     "act26side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act26side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act26side.png"
     },
     "act27side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act27side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act27side.png"
     },
     "act28side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act28side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act28side.png"
     },
     "act29side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act29side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act29side.png"
     },
     "act30side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act30side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act30side.png"
     },
     "act31side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act31side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act31side.png"
     },
     "act32side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act32side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act32side.png"
     },
     "act33side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act33side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act33side.png"
     },
     "act34side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act34side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act34side.png"
     },
     "act35side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act35side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act35side.png"
     },
     "act37side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act37side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act37side.png"
     },
     "act38side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act38side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act38side.png"
     },
     "act39side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act39side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act39side.png"
     },
     "act40side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act40side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act40side.png"
     },
     "act41side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/activity/storyEntryPic_act41side.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act41side.png"
     },
     "act4d0": {
       "provider": "arkdata",
@@ -243,80 +242,80 @@
       "path": "torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act20mini.png"
     },
     "main_0": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_0.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_0.png"
     },
     "main_1": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_1.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_1.png"
     },
     "main_2": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_2.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_2.png"
     },
     "main_3": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_3.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_3.png"
     },
     "main_4": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_4.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_4.png"
     },
     "main_5": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_5.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_5.png"
     },
     "main_6": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_6.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_6.png"
     },
     "main_7": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_7.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_7.png"
     },
     "main_8": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_8.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_8.png"
     },
     "main_9": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_9.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_9.png"
     },
     "main_10": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_10.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_10.png"
     },
     "main_11": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_11.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_11.png"
     },
     "main_12": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_12.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_12.png"
     },
     "main_13": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_13.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_13.png"
     },
     "main_14": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/[uc]stagezonemainlineitembg/zone_page_main_14.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/mainmission/main_14.png"
     },
     "rogue_1": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_1_entry_display_1.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/stage/hometheme/rogue_1_entry_display_1.png"
     },
     "rogue_2": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_2_entry_display_1.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/stage/hometheme/rogue_2_entry_display_1.png"
     },
     "rogue_3": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_3_entry_display_1.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/stage/hometheme/rogue_3_entry_display_1.png"
     },
     "rogue_4": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/rogue_4_entry_display_1.png"
+      "provider": "archive-en",
+      "path": "dyn/arts/ui/stage/hometheme/rogue_4_entry_display_1.png"
     },
     "main_15": {
       "provider": "archive-en",
@@ -383,8 +382,8 @@
       "path": "rogue_0.png"
     },
     "act36side": {
-      "provider": "archive",
-      "path": "torappu/dynamicassets/arts/ui/stage/hometheme/act36side.png"
+      "provider": "local",
+      "path": "act36side.png"
     }
   },
   "modulePortraitFallbacks": [
@@ -400,8 +399,9 @@
     "uniequip_002_sharp2"
   ],
   "notes": {
-    "main_15-main_17": "Original episode mission cards from the newer English asset snapshot.",
     "act13mini-act24side-rogue_0": "Original event-entry images preserved by PRTS, rather than unavailable-overlay archive mockups. See local provenance.",
-    "act36side": "Original event home artwork; no clean archive card was found in the mirrors."
+    "act36side": "Original English event-entry artwork preserved by Arknights Terra Wiki, stored locally without modification. Replaces the retired repository's event home artwork; see local provenance.",
+    "main_0-main_17": "Original episode mission cards from the pinned ArknightsAssets2 English snapshot. The wider layered frames are displayed in full inside square cover slots.",
+    "archive-en": "Maintained ArknightsAssets2 English artwork for chapters, event archive cards, and IS topics. Includes 59 covers migrated from the retired repository after URL, checksum, image decoding, and visual checks on 2026-10-18."
   }
 }

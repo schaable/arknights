@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { routeFor, resolveRoute, groupKey, groupStats, isOperatorCategory, operatorsFor } from '../catalog.mjs';
+import { routeFor, resolveRoute, groupKey, groupStats, isOperatorCategory, operatorsFor, topicsFor } from '../catalog.mjs';
 import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore } from '../storage.mjs';
 import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
 import { scriptSignature } from '../compatibility.mjs';
@@ -49,6 +49,40 @@ test('catalog routes round-trip uniquely for all categories, collections and sto
   assert.equal(resolveRoute('', catalog).kind, 'home');
   assert.equal(resolveRoute('#/', catalog).kind, 'home');
   assert.equal(resolveRoute('#/vignettes/children-of-ursus/habits', catalog).story.id, 'activities/act10d5/level_act10d5_st01');
+});
+
+test('IS topics contain each collection once, in topic/squad order, with existing story routes', () => {
+  const topics = topicsFor(catalog);
+  const groups = catalog.groups.filter((g) => g.category === 'integrated-strategies');
+  assert.equal(topics.length, 6);
+  assert.deepEqual(topics.map((topic) => topic.id), ['rogue_0', 'rogue_1', 'rogue_2', 'rogue_3', 'rogue_4', 'rogue_5']);
+  assert.deepEqual(topics.flatMap((topic) => topic.groups.map((g) => g.id)).sort(), groups.map((g) => g.id).sort());
+  assert.deepEqual(topicsFor(catalog, 'main'), []);
+  for (const topic of topics) {
+    const main = topic.groups[0];
+    assert.equal(main.id, topic.id);
+    assert.deepEqual(topic.cover, main.cover);
+    assert.equal(resolveRoute(routeFor(main.category, topic), catalog).kind, 'topic');
+    assert.deepEqual(topic.groups.slice(1).map((g) => g.id),
+      topic.groups.slice(1).map((_, index) => `${topic.id}_month_team_${index + 1}`));
+    for (const g of topic.groups) {
+      assert.equal(g.topicId, topic.id);
+      assert.equal(resolveRoute(routeFor(g.category, g), catalog).topic.id, topic.id);
+      for (const story of g.stories) {
+        const route = resolveRoute(routeFor(g.category, g, story), catalog);
+        assert.equal(route.topic.id, topic.id);
+        assert.equal(route.group.id, g.id);
+        assert.equal(route.story.id, story.id);
+      }
+    }
+  }
+  const future = structuredClone(catalog);
+  const squad = future.groups.find((g) => g.id === 'rogue_1_month_team_1');
+  squad.stories[0].vn = true;
+  const route = resolveRoute(routeFor(squad.category, squad, squad.stories[0]), future);
+  assert.equal(route.kind, 'story');
+  assert.equal(route.topic.id, 'rogue_1');
+  assert.equal(resolveRoute('#/integrated-strategies/phantom-crimson-solitaire/unknown', catalog).kind, 'missing');
 });
 
 test('operator pages cover every archive/module exactly once using playable operator identities', () => {

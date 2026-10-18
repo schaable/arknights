@@ -13,6 +13,15 @@ export function operatorsFor(catalog, category) {
   return (catalog.operators || []).filter((operator) => groupsByOperator.has(operator.id))
     .map((operator) => ({ ...operator, groups: groupsByOperator.get(operator.id) }));
 }
+export function topicsFor(catalog, category = 'integrated-strategies') {
+  if ((category?.id || category) !== 'integrated-strategies') return [];
+  const groups = catalog.groups.filter((g) => g.category === 'integrated-strategies');
+  return groups.filter((g) => g.id === g.topicId).map((topic) => ({
+    id: topic.id, name: topic.title, slug: topic.slug, cover: topic.cover,
+    groups: groups.filter((g) => g.topicId === topic.id)
+      .sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true })),
+  })).sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
+}
 export function resolveRoute(hash, catalog) {
   if (!hash || hash === '#' || hash === '#/') return { kind: 'home' };
   let parts;
@@ -27,8 +36,11 @@ export function resolveRoute(hash, catalog) {
     return operator ? { kind: 'operator', category, operator } : { kind: 'missing', category };
   }
   const operator = catalog.operators?.find((o) => o.id === group.operatorId);
-  const collection = { category, group, ...(operator ? { operator } : {}) };
-  if (parts.length === 2) return { kind: 'group', ...collection };
+  const topic = group.topicId && topicsFor(catalog, category).find((t) => t.id === group.topicId);
+  const collection = { category, group, ...(operator ? { operator } : {}), ...(topic ? { topic } : {}) };
+  // The existing entry/endings URL also opens the complete topic. Story and
+  // squad URLs retain their original groups and independent progress keys.
+  if (parts.length === 2) return { kind: topic?.id === group.id ? 'topic' : 'group', ...collection };
   const story = group.stories.find((s) => s.slug === parts[2]);
   if (!story) return { kind: 'missing', ...collection };
   return { kind: story.vn ? 'story' : 'unavailable', ...collection, story };

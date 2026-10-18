@@ -18,11 +18,12 @@ function localize() {
   review?.localize();
 }
 function chrome() {
-  const { category, group, story, operator } = route;
+  const { category, group, story, operator, topic } = route;
   const crumbs = $('breadcrumbs'); crumbs.replaceChildren(link(t('home'), '#/'));
   if (category) crumbs.append(element('span', '/'), link(category.name[preferences.language], routeFor(category)));
   if (operator) crumbs.append(element('span', '/'), link(operator.name, routeFor(category, operator)));
-  if (group && (!operator || !story)) crumbs.append(element('span', '/'), link(group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')}`, routeFor(category, group)));
+  if (topic) crumbs.append(element('span', '/'), link(topic.name, routeFor(category, topic)));
+  if (group && (!operator || !story) && group.id !== topic?.id) crumbs.append(element('span', '/'), link(group.chapter === undefined ? group.title : `${t('chapter')} ${String(group.chapter).padStart(2, '0')}`, routeFor(category, group)));
   if (story) { const current = element('span', story.title); current.setAttribute('aria-current', 'page'); crumbs.append(element('span', '/'), current); }
   $('page-category').textContent = category ? category.name[preferences.language].toUpperCase() : 'VISUAL NOVEL';
   $('page-title').textContent = story ? storyTitle(story, t) : group?.title || operator?.name || category?.name[preferences.language] || t(route.kind === 'missing' ? 'missingTitle' : 'library');
@@ -34,8 +35,8 @@ function chrome() {
     $(id).hidden = !target;
     if (target) { $(id).href = routeFor(category, group, target); $(id).textContent = t(text); }
   }
-  $('ending-collection').href = routeFor(category, operator || group);
-  $('ending-collection').textContent = t(operator ? 'backOperator' : 'backCollection');
+  $('ending-collection').href = routeFor(category, operator || topic || group);
+  $('ending-collection').textContent = t(operator ? 'backOperator' : topic ? 'backTopic' : 'backCollection');
   $('ending-next').hidden = !next;
   if (next) {
     $('ending-next').href = next.vn ? routeFor(category, group, next) : '../' + next.classicHash;

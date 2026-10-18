@@ -24,7 +24,7 @@ const server = http.createServer(async (request, response) => {
   const catalog = JSON.parse(await fs.readFile(path.join(root, 'vn/data/catalog.json')));
   const { storyOverrides } = await import(pathToFileURL(path.join(root, 'vn/story-overrides.mjs')));
   const { parseScript, buildTimeline } = await import(pathToFileURL(path.join(root, 'vn/script.mjs')));
-  const { routeFor, groupKey, isOperatorCategory, operatorsFor } = await import(pathToFileURL(path.join(root, 'vn/catalog.mjs')));
+  const { routeFor, groupKey, isOperatorCategory, operatorsFor, topicsFor } = await import(pathToFileURL(path.join(root, 'vn/catalog.mjs')));
   const scenes = [];
   for (const [id, config] of Object.entries(storyOverrides)) {
     const group = catalog.groups.find((g) => g.stories.some((s) => s.id === id));
@@ -90,7 +90,8 @@ const server = http.createServer(async (request, response) => {
       await page.locator(`.category-card[href="${routeFor(category)}"]`).click();
       await page.locator('.catalog-filters').waitFor();
       assert.equal(await page.locator('.collection-card').count(), isOperatorCategory(category)
-        ? operatorsFor(catalog, category).length : catalog.groups.filter((g) => g.category === category.id).length);
+        ? operatorsFor(catalog, category).length : category.id === 'integrated-strategies'
+          ? topicsFor(catalog).length : catalog.groups.filter((g) => g.category === category.id).length);
       if (category.id === 'main') {
         await page.screenshot({ path: path.join(output, 'chapters.png'), fullPage: true });
         await page.locator('.catalog-filters input[type="checkbox"]').check();

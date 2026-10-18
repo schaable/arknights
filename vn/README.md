@@ -23,6 +23,12 @@ Search in these sections matches operator names and record/module titles.
 The operator index uses game character IDs; alternate forms with distinct
 operator IDs remain separate, while Amiya's class-specific modules share her page.
 Existing collection/story links and independent progress remain unchanged.
+Integrated Strategies shows one card per topic, ordered from Ceobe's Fungimist
+onward. Each topic lists its entry/endings and monthly squad stories under
+separate headings, with combined read/translation/VN counts. Search matches
+topic, squad, and story titles. The existing entry/endings URL opens the combined
+topic page; squad and story URLs still work, and each original collection keeps
+its own progress. Breadcrumbs and return links lead back to the topic.
 Collection pages list stories in game order. Translation availability and VN
 availability are separate: a Spanish script can exist before its scene is
 supported by the player. Other stories have links to the classic reader.
@@ -36,14 +42,22 @@ uses topic artwork shared with its monthly squads. Images load lazily in grids
 and retry a raw GitHub mirror if the CDN fails; a neutral placeholder preserves
 navigation when a cover is missing or both mirrors fail.
 
-All 998 catalog collections have mapped artwork, including chapters 15–17 and
-every IS topic and monthly squad. Chapters 15–17, the newer side stories, and
-IS topic 5 use the newer English asset snapshot. The older collaborations and
-Ceobe's Fungimist use their original event-entry/home artwork where a clean
-archive card was unavailable. Three legacy entry images are served locally;
-their source URLs and checksums are recorded in `assets/covers/sources.json`.
-They are unmodified game artwork preserved by PRTS. Some images contain Chinese text baked
-into the artwork; changing the reader language does not translate it. The
+All 998 catalog collections have mapped artwork. All 18 chapters, event archive
+cards, and IS topics 1–5 (including their monthly squads) use the pinned English
+ArknightsAssets2 snapshot. The chapter artwork uses the newer, wider layered
+cards, shown in full inside square frames. Migrating 59 covers from the retired
+ArknightsAssets repository updated 91 collections, including inherited squad
+covers. English release artwork replaces most Chinese title lettering; this is
+not a general resolution upgrade.
+
+Delicious On Terra uses its English event-entry artwork preserved by Arknights
+Terra Wiki. It's Been A While, A Flurry to the Flame, and Ceobe's Fungimist use
+event-entry artwork preserved by PRTS. These four images are stored locally
+without modification; their source URLs, retrieval dates, and checksums are in
+`assets/covers/sources.json`. VN collection covers no longer depend on the
+retired ArknightsAssets repository.
+Some images still contain Chinese text baked into the artwork, even in the
+English snapshot; changing the reader language does not translate it. The
 placeholder remains a fallback for loading failures and future unmapped entries.
 
 **All 113 translated scenes** are enabled in Spanish and English:
@@ -69,6 +83,7 @@ Example URLs after `/vn/`:
 - `#/main/chapter-1/1-1-before`
 - `#/vignettes/children-of-ursus/habits`
 - `#/operator-records/magallan` and `#/operator-modules/magallan`
+- `#/integrated-strategies/phantom-crimson-solitaire`
 
 `/vn/` or `/vn/#/` opens the library. Removing the story slug opens the collection;
 removing the collection slug opens the category. Links support reloads and native
@@ -190,7 +205,7 @@ the editor and show an error; malformed saved notes are left untouched.
 | `app.mjs`, `catalog.mjs` | Hash routing, navigation, collection progress, app lifecycle |
 | `library.mjs`, `i18n.mjs` | Catalog views and Spanish/English UI strings |
 | `covers.mjs`, `tools/cover-assets.json` | Collection artwork, CDN fallback, verified archive paths and source provenance |
-| `assets/covers/` | Three preserved legacy event-entry images and their source/checksum records |
+| `assets/covers/` | Four preserved event-entry images and their source/checksum records |
 | `loader.mjs` | Independent language/audio loading, error classification, structure validation |
 | `compatibility.mjs` | Command/variant/branch checks, language signatures, cover/audio discovery |
 | `story-overrides.mjs` | Optional stable slugs and cover overrides; no playback allowlist |
@@ -357,6 +372,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cj
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
@@ -398,8 +414,14 @@ controls, and storage errors.
 The operator harness checks both operator indexes, aggregated lists and counts,
 existing collection/story links, independent saves across records and modules,
 search, localization, reload/Back/Forward, and mobile layout.
+The IS topic harness checks topic counts, squad/story search, ordered sections,
+combined progress, independent collection saves, existing links, breadcrumbs,
+reload/Back/Forward, localization, and mobile layout. A translated-script fixture
+also checks future VN availability, topic resume links, and the player's return
+link without enabling untranslated IS stories in the catalog.
 The cover harness checks actual artwork in every category, all 17 recovered
-images (covering the previous 25 unmapped collections), collection and player
+images (covering the previous 25 unmapped collections), the migrated IS topics
+and their inherited squad artwork, collection and player
 covers, resume cards, mobile layout, raw-mirror fallback, local images under a
 GitHub Pages subpath, simulated missing metadata, and continued access to stories
 when both image mirrors fail. Unit tests require cover metadata for every catalog
