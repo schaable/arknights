@@ -1,0 +1,92 @@
+[
+  {
+    "id": "01",
+    "status": "saved",
+    "slug": "classic-rook",
+    "name": "Rhodes rook",
+    "family": "Rook",
+    "description": "The Rhodes Island tower: broad crown, flared walls, and an uneven stone base.",
+    "file": "01-classic-rook.svg"
+  },
+  {
+    "id": "02",
+    "status": "saved",
+    "slug": "rhodes-tower",
+    "name": "Rhodes tower",
+    "family": "Rook",
+    "description": "The same Rhodes tower framed by a triangle, with gaps around its crown.",
+    "file": "02-rhodes-tower.svg"
+  },
+  {
+    "id": "03",
+    "status": "saved",
+    "slug": "archive-rook",
+    "name": "Archive rook",
+    "family": "Rook",
+    "description": "The Rhodes tower rises from an open book with clean, blank pages.",
+    "file": "03-archive-rook.svg"
+  },
+  {
+    "id": "04",
+    "status": "saved",
+    "slug": "amiya-silhouette",
+    "name": "Amiya portrait",
+    "family": "Amiya",
+    "description": "Pointed leaf-shaped ears, a swept fringe, and long locks framing the chin.",
+    "file": "04-amiya-silhouette.svg"
+  },
+  {
+    "id": "08",
+    "status": "active",
+    "slug": "rabbit-rook",
+    "name": "Amiya & pages",
+    "family": "Hybrid",
+    "description": "Amiya’s pointed ears and swept hair above an open book.",
+    "file": "08-rabbit-rook.svg"
+  },
+  {
+    "id": "10",
+    "status": "saved",
+    "slug": "ear-bookmark",
+    "name": "Amiya bookmark",
+    "family": "Hybrid",
+    "description": "The new Amiya head with a small bookmark tail below it.",
+    "file": "10-ear-bookmark.svg"
+  },
+  {
+    "id": "11",
+    "status": "saved",
+    "slug": "amiya-solid",
+    "name": "Amiya solid",
+    "family": "Solid",
+    "description": "A single filled silhouette: tapered ears, long side locks, and a soft chin.",
+    "file": "11-amiya-solid.svg"
+  },
+  {
+    "id": "12",
+    "status": "saved",
+    "slug": "amiya-fringe",
+    "name": "Amiya fringe",
+    "family": "Solid",
+    "description": "Solid ears and hair, with a transparent face revealing the swept fringe.",
+    "file": "12-amiya-fringe.svg"
+  },
+  {
+    "id": "14",
+    "status": "saved",
+    "slug": "pointed-ears",
+    "name": "Amiya contour",
+    "family": "Amiya",
+    "description": "The head from 11/12 as a simple outline, with long side locks and a soft chin.",
+    "file": "14-pointed-ears.svg"
+  },
+  {
+    "id": "15",
+    "status": "saved",
+    "slug": "pointed-ears-and-pages",
+    "name": "Pointed ears & pages",
+    "family": "Hybrid",
+    "description": "A blank-page book with pointed Amiya ears spaced farther apart.",
+    "file": "15-pointed-ears-and-pages.svg"
+  }
+]

@@ -15,7 +15,7 @@ a:hover { color: var(--accent); }
 .reader { max-width: 1376px; padding: 0 32px 24px; margin: auto; }
 .topbar { display: flex; align-items: center; gap: 30px; min-height: 100px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: .16em; font-size: 15px; }
-.brand svg { width: 30px; height: 36px; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+.brand svg { display: block; flex-shrink: 0; width: 30px; height: 36px; color: var(--accent); }
 .brand small { display: block; font-size: 8px; font-weight: 400; letter-spacing: .32em; color: var(--muted); }
 .chapter-label { padding-left: 30px; border-left: 1px solid var(--line); flex: 1; }
 .chapter-label > span { font-size: 10px; letter-spacing: .16em; color: var(--muted); }

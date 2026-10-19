@@ -11,6 +11,10 @@ python3 -m http.server 8000
 Relative paths also work at `/arknights/vn/` on GitHub Pages. Use HTTP rather
 than `file://`, because the player fetches its scripts.
 
+The header uses the **Amiya & pages** logo (option 08).
+Its standalone SVG and the saved alternatives—01, 02, 03, 04, 10, 11, 12, 14,
+and 15—are in [the logo gallery](design/logo-options/README.md).
+
 ## Library and playable stories
 
 The library lists Main Story, Side Stories, Vignettes, Operator Records,
