@@ -16,15 +16,21 @@ test('every catalog collection has resolvable cover metadata, including inherite
   }
 });
 
-test('local legacy artwork matches its source provenance and is included in the catalog', async () => {
-  const provenance = JSON.parse(await readFile(new URL('../assets/covers/sources.json', import.meta.url)));
-  for (const [name, source] of Object.entries(provenance.images)) {
-    const group = catalog.groups.find((g) => g.id === source.collection);
-    assert.deepEqual(group.cover, { provider: 'local', path: name });
-    const bytes = await readFile(new URL(coverURLs(group.cover)[0]));
-    assert.equal(createHash('sha256').update(bytes).digest('hex'), source.sha256);
-    assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
-    assert.equal(bytes.readUInt32BE(16), source.width);
-    assert.equal(bytes.readUInt32BE(20), source.height);
+test('local artwork matches its provenance and generated covers are included in the catalog', async () => {
+  for (const directory of ['', 'generated/']) {
+    const base = new URL(`../assets/covers/${directory}`, import.meta.url);
+    const provenance = JSON.parse(await readFile(new URL('sources.json', base)));
+    for (const [name, source] of Object.entries(provenance.images)) {
+      if (directory) {
+        const group = catalog.groups.find((g) => g.id === source.collection);
+        assert.deepEqual(group.cover, { provider: 'local', path: directory + name });
+        assert.equal(coverURLs(group.cover)[0], new URL(name, base).href);
+      }
+      const bytes = await readFile(new URL(name, base));
+      assert.equal(createHash('sha256').update(bytes).digest('hex'), source.sha256);
+      assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+      assert.equal(bytes.readUInt32BE(16), source.width);
+      assert.equal(bytes.readUInt32BE(20), source.height);
+    }
   }
 });

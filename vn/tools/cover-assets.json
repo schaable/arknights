@@ -2,7 +2,7 @@
   "sources": {
     "arkdata": "https://github.com/akgcc/arkdata/tree/main/assets/torappu/dynamicassets/arts/ui/storyreview",
     "archive-en": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets",
-    "local": "vn/assets/covers/sources.json"
+    "local": "vn/assets/covers/generated/sources.json"
   },
   "covers": {
     "1stact": {
@@ -371,19 +371,19 @@
     },
     "act13mini": {
       "provider": "local",
-      "path": "act13mini.png"
+      "path": "generated/act13mini.png"
     },
     "act24side": {
       "provider": "local",
-      "path": "act24side.png"
+      "path": "generated/act24side.png"
     },
     "rogue_0": {
       "provider": "local",
-      "path": "rogue_0.png"
+      "path": "generated/rogue_0.png"
     },
     "act36side": {
       "provider": "local",
-      "path": "act36side.png"
+      "path": "generated/act36side.png"
     }
   },
   "modulePortraitFallbacks": [
@@ -399,8 +399,7 @@
     "uniequip_002_sharp2"
   ],
   "notes": {
-    "act13mini-act24side-rogue_0": "Original event-entry images preserved by PRTS, rather than unavailable-overlay archive mockups. See local provenance.",
-    "act36side": "Original English event-entry artwork preserved by Arknights Terra Wiki, stored locally without modification. Replaces the retired repository's event home artwork; see local provenance.",
+    "act13mini-act24side-act36side-rogue_0": "Custom AI-generated covers using preserved event banners and official category artwork as references. English titles and transparent backgrounds; provenance and prompts are in vn/assets/covers/generated/. Original banner sources remain in vn/assets/covers/sources.json.",
     "main_0-main_17": "Original episode mission cards from the pinned ArknightsAssets2 English snapshot. The wider layered frames are displayed in full inside square cover slots.",
     "archive-en": "Maintained ArknightsAssets2 English artwork for chapters, event archive cards, and IS topics. Includes 59 covers migrated from the retired repository after URL, checksum, image decoding, and visual checks on 2026-10-18."
   }

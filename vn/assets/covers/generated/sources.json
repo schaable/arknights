@@ -1,0 +1,55 @@
+{
+  "description": "AI-generated collection covers derived from Arknights event artwork, using official category covers as style references. These are custom compositions, not official covers. Arknights artwork and characters belong to Hypergryph and their respective rights holders.",
+  "generated": "2026-10-18",
+  "tool": "Built-in image_gen.imagegen",
+  "status": "active in the VN reader catalog",
+  "activated": "2026-10-19",
+  "images": {
+    "act36side.png": {
+      "collection": "act36side",
+      "title": "Delicious on Terra",
+      "artworkReference": "../act36side.png",
+      "artworkProvenance": "../sources.json",
+      "styleReference": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets/dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act13side.png",
+      "width": 1145,
+      "height": 1374,
+      "sha256": "627f012a62068a8b57e33cfd6131358e02d82b8690ca171231febee4788317bc",
+      "revised": "2026-10-19",
+      "revisionNote": "Matches the official white three-section archive reel; removes loose filmstrips and adhesive tape."
+    },
+    "act24side.png": {
+      "collection": "act24side",
+      "title": "A Flurry to the Flame",
+      "artworkReference": "../act24side.png",
+      "artworkProvenance": "../sources.json",
+      "styleReference": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets/dyn/arts/ui/storyreview/hubs/activity/storyentrypic_act13side.png",
+      "width": 1145,
+      "height": 1374,
+      "sha256": "b74d5b240b93840299419b80d61fe32532f21714a802af60af1bbaf2f6467ccd",
+      "revised": "2026-10-19",
+      "revisionNote": "Matches the official white three-section archive reel; removes loose filmstrips and adhesive tape."
+    },
+    "act13mini.png": {
+      "collection": "act13mini",
+      "title": "It's Been A While",
+      "artworkReference": "../act13mini.png",
+      "artworkProvenance": "../sources.json",
+      "styleReference": "https://raw.githubusercontent.com/akgcc/arkdata/main/assets/torappu/dynamicassets/arts/ui/storyreview/hubs/mini/storyentrypic/storyentrypic_act10d5.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "a6b206480b7c5ac3ffb641c9ea4da9240f0f138242f78ccdcddeb9d67389fad4",
+      "revised": "2026-10-19",
+      "revisionNote": "Matches the official white three-section archive reel; removes loose filmstrips and adhesive tape."
+    },
+    "rogue_0.png": {
+      "collection": "rogue_0",
+      "title": "Ceobe's Fungimist",
+      "artworkReference": "../rogue_0.png",
+      "artworkProvenance": "../sources.json",
+      "styleReference": "https://raw.githubusercontent.com/ArknightsAssets/ArknightsAssets2/6df8f6877a03e16f6a1499172a8de10f0f6f773a/assets/dyn/arts/ui/stage/hometheme/rogue_1_entry_display_1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "e683f198dfb6c3e5d6944b7bf688ce86d0c042ba8ba04f715d7af5e19d9f680a"
+    }
+  }
+}

@@ -34,7 +34,7 @@ availability are separate: a Spanish script can exist before its scene is
 supported by the player. Other stories have links to the classic reader.
 
 Collection cards, Continue reading, collection headings, and story opening
-screens use the game's collection artwork. Square frames contain the complete
+screens use collection artwork. Square frames contain the complete
 image without cropping or stretching. Chapters use episode covers, events use
 archive covers, operator records use portraits, modules use their equipment art
 (or an operator portrait when that icon is missing), and Integrated Strategies
@@ -50,12 +50,14 @@ ArknightsAssets repository updated 91 collections, including inherited squad
 covers. English release artwork replaces most Chinese title lettering; this is
 not a general resolution upgrade.
 
-Delicious On Terra uses its English event-entry artwork preserved by Arknights
-Terra Wiki. It's Been A While, A Flurry to the Flame, and Ceobe's Fungimist use
-event-entry artwork preserved by PRTS. These four images are stored locally
-without modification; their source URLs, retrieval dates, and checksums are in
-`assets/covers/sources.json`. VN collection covers no longer depend on the
-retired ArknightsAssets repository.
+Delicious On Terra, A Flurry to the Flame, It's Been A While, and Ceobe's Fungimist
+use custom AI-generated covers with English titles and transparent backgrounds.
+They use event banners and official category artwork as references; they are not
+official covers. The images, prompts, source references and checksums are in
+`assets/covers/generated/`. The original event banners from Arknights Terra Wiki
+and PRTS remain preserved without modification in `assets/covers/`, with their
+provenance in `assets/covers/sources.json`. VN collection covers no longer depend
+on the retired ArknightsAssets repository.
 Some images still contain Chinese text baked into the artwork, even in the
 English snapshot; changing the reader language does not translate it. The
 placeholder remains a fallback for loading failures and future unmapped entries.
@@ -221,7 +223,7 @@ the editor and show an error; malformed saved notes are left untouched.
 | `app.mjs`, `catalog.mjs` | Hash routing, navigation, collection progress, app lifecycle |
 | `library.mjs`, `i18n.mjs` | Catalog views and Spanish/English UI strings |
 | `covers.mjs`, `tools/cover-assets.json` | Collection artwork, CDN fallback, verified archive paths and source provenance |
-| `assets/covers/` | Four preserved event-entry images and their source/checksum records |
+| `assets/covers/` | Four generated collection covers, original reference banners, prompts and source/checksum records |
 | `loader.mjs` | Independent language/audio loading, error classification, structure validation |
 | `compatibility.mjs` | Command/variant/branch checks, language signatures, cover/audio discovery |
 | `story-overrides.mjs` | Optional stable slugs and cover overrides; no playback allowlist |

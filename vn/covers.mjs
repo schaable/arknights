@@ -1,5 +1,5 @@
 // Chapter, event, and IS covers use the verified ArknightsAssets2 English snapshot.
-// Local event-entry artwork fills archive gaps. The arkdata mirror supplies
+// Local generated covers fill archive gaps. The arkdata mirror supplies
 // vignette covers, operator portraits and module art.
 const mirrors = {
   local: [new URL('./assets/covers/', import.meta.url).href],
