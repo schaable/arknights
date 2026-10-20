@@ -5,6 +5,7 @@ const object = (v) => v && typeof v === 'object' && !Array.isArray(v);
 const integer = (v) => Number.isSafeInteger(v) && v >= 0 ? v : 0;
 export function cleanPreferences(value = {}) {
   return { language: value?.language === 'en' ? 'en' : 'es',
+    sound: value?.sound === true,
     nickname: typeof value?.nickname === 'string' ? value.nickname.slice(0, 32) : '',
     speed: [0, 25, 45].includes(value?.speed) ? value.speed : 45,
     ...(typeof value?.motion === 'boolean' ? { motion: value.motion } : {}) };

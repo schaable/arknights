@@ -67,13 +67,23 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('auto').disabled = !started || step?.kind === 'end';
     $('next').disabled = !started || (step?.kind !== 'dialogue' && !busy);
     $('restart').disabled = !ready;
-    $('sound').disabled = !started || !soundtrack;
+    $('story-settings').hidden = !ready;
+    $('sound').disabled = false;
     $('auto').setAttribute('aria-pressed', auto);
-    $('sound').setAttribute('aria-pressed', soundtrack?.enabled || false);
-    $('sound').textContent = t(soundtrack?.enabled ? 'soundOn' : 'soundOff');
+    $('sound').setAttribute('aria-pressed', preferences.sound);
+    $('sound').setAttribute('aria-label', t('sound'));
+    $('sound').title = t(preferences.sound ? 'soundOn' : 'soundOff');
+    $('settings').setAttribute('aria-label', t('settings'));
+    $('settings').title = t('settings');
     const percent = step?.kind === 'end' ? 100 : Math.floor(((step?.line || 0) / (commands?.at(-1)?.line || 1)) * 100);
     $('progress').value = percent;
     $('position').textContent = String(percent).padStart(2, '0') + '%';
+  }
+
+  function syncSound() {
+    // The saved preference survives navigation; playback belongs to the visible story.
+    const enabled = preferences.sound && started && !document.hidden;
+    if (soundtrack && soundtrack.enabled !== enabled) soundtrack.enable(enabled, state.sounds);
   }
 
   function animate(element, frames, seconds, property) {
@@ -315,7 +325,6 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     clearInterval(typeTimer);
     typing = false;
     $('text').textContent = fullText;
-    $('tap-hint').textContent = t('continue');
     scheduleAuto();
   }
   function showText(instant = false) {
@@ -348,7 +357,6 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('speaker').lang = $('text').lang = $('choices').lang = language;
     fullText = step.kind === 'choice' ? t('choose') : displayText(line?.text ?? step.text);
     $('text').textContent = '';
-    $('tap-hint').textContent = t(step.kind === 'choice' ? 'choose' : 'reveal');
     if (step.kind === 'choice') {
       stopAuto();
       const texts = line.args.options.split(';');
@@ -383,6 +391,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   }
   async function showStep(animateScene = false) {
     cancelPending();
+    syncSound();
     comparedLanguage = null;
     review.setContext(null);
     const token = run;
@@ -396,7 +405,6 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     persist();
     if (animateScene) {
       busy = true;
-      if (!statusKey || statusKey === 'transition') notice('transition');
       $('stage').setAttribute('aria-busy', 'true');
       for (const item of step.events) {
         if (token !== run) return;
@@ -405,7 +413,6 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       if (token !== run) return;
       busy = false;
     } else restoreScene(step.state);
-    if (statusKey === 'transition') { statusKey = ''; $('status').textContent = ''; }
     $('stage').setAttribute('aria-busy', 'false');
     showText(!animateScene);
   }
@@ -414,7 +421,6 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     if (busy) {
       cancelPending();
       restoreScene(timeline[index].state);
-      if (statusKey === 'transition') { statusKey = ''; $('status').textContent = ''; }
       $('stage').setAttribute('aria-busy', 'false');
       showText(true);
     } else if (typing) finishText();
@@ -572,7 +578,12 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   $('restart').addEventListener('click', restart);
   $('replay').addEventListener('click', restart);
   $('auto').addEventListener('click', () => { auto = !auto; updateControls(); scheduleAuto(); });
-  $('sound').addEventListener('click', () => { soundtrack.enable(!soundtrack.enabled, state.sounds); updateControls(); });
+  $('sound').addEventListener('click', () => {
+    preferences.sound = !preferences.sound;
+    if (!store.preferences(preferences)) notice('storageError');
+    syncSound();
+    updateControls();
+  });
   function changeLanguage() {
     stopAuto();
     const line = timeline[index]?.line;
@@ -638,7 +649,8 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     }
   });
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) { stopAuto(); soundtrack?.enable(false); persist(); updateControls(); }
+    if (document.hidden) { stopAuto(); persist(); }
+    syncSound();
   });
   window.addEventListener('pagehide', () => { persist(); soundtrack?.enable(false); });
   return { load, dispose, persist, changeLanguage, settings, pause, compare, syncReadStatus, refresh() { localize(); if (started) showStep(); }, get ready() { return ready; } };

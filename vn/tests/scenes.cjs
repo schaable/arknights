@@ -175,7 +175,7 @@ const server = http.createServer(async (request, response) => {
       if (sound === 'slideshow') await page.waitForFunction(() => window.__vnAudio.some((a) => a.src.includes('slideshow') && a.volume > 0 && a.volume < 0.1));
       await done();
       await page.waitForFunction((key) => !window.__vnAudio.some((a) => a.getAttribute('src')?.includes(key)), sound);
-      assert.equal(await page.locator('#sound').getAttribute('aria-pressed'), sound === 'slideshow' ? 'false' : 'true');
+      assert.equal(await page.locator('#sound').getAttribute('aria-pressed'), 'true', 'scene commands preserve the global sound preference');
       await page.evaluate(() => { location.hash = '#/'; }); await page.locator('.category-card').first().waitFor();
       assert.equal(await page.evaluate(() => window.__vnAudio.every((a) => a.paused && !a.getAttribute('src'))), true);
     }

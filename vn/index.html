@@ -24,16 +24,29 @@
         <span>ARKNIGHTS<small>STORY READER</small></span>
       </a>
       <div class="chapter-label"><span id="page-category">VISUAL NOVEL</span><h1 id="page-title">Biblioteca</h1></div>
-      <label class="language"><span class="sr-only" data-i18n="language">Idioma</span>
-        <select id="language"><option value="es">ES · Español</option><option value="en">EN · English</option></select>
-      </label>
+      <div class="global-controls">
+        <div id="review-toolbar" class="review-toolbar" role="group" aria-label="Revisión de traducción">
+          <button id="review-copy" class="icon-button" type="button" aria-label="Copiar notas" title="Copiar notas" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+            <span id="review-count" aria-hidden="true" hidden>0</span>
+          </button>
+          <button id="review-clear" class="icon-button" type="button" aria-label="Borrar notas" title="Borrar notas" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></svg>
+          </button>
+        </div>
+        <button id="sound" class="icon-button" type="button" aria-pressed="false" aria-label="Sonido" title="Sonido: no" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/><path class="sound-on" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-off" d="m16 9 6 6m0-6-6 6"/></svg>
+        </button>
+        <button id="settings" class="icon-button" type="button" aria-label="Ajustes" title="Ajustes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 3-.5 3-2 1.2-2.8-1-3 5.2L3 13v2.3l-2.3 1.6 3 5.2 2.8-1 2 1.2L9 25h6l.5-2.7 2-1.2 2.8 1 3-5.2-2.3-1.6V13l2.3-1.6-3-5.2-2.8 1-2-1.2L15 3Z" transform="translate(2.4 .8) scale(.8)"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <label class="language"><span class="sr-only" data-i18n="language">Idioma</span>
+          <select id="language"><option value="es">ES</option><option value="en">EN</option></select>
+        </label>
+      </div>
     </header>
 
-    <div id="review-toolbar" class="review-toolbar" role="group" aria-label="Revisión de traducción">
-      <button id="review-copy" type="button" disabled><span aria-hidden="true">▤</span> <span data-i18n="reviewCopy">Copiar notas</span> <span id="review-count">0</span></button>
-      <button id="review-clear" type="button" disabled data-i18n="reviewClear">Borrar notas</button>
-      <span id="review-status" class="review-status" role="status"></span>
-    </div>
+    <p id="review-status" class="review-status" role="status"></p>
 
     <nav id="breadcrumbs" class="breadcrumbs" aria-label="Breadcrumb"></nav>
     <section id="library" class="library" aria-label="Library"><p role="status">Cargando…</p></section>
@@ -63,9 +76,10 @@
       <div id="choices" class="choices" role="group" aria-label="Choices" hidden></div>
       <div id="dialogue-panel" class="dialogue-panel" hidden>
         <button id="dialogue" class="dialogue" type="button" aria-label="Continue" hidden>
-          <span id="speaker" class="speaker"></span>
-          <span id="text" class="dialogue-text"></span>
-          <span class="dialogue-bottom"><span id="tap-hint"></span><span class="advance-mark" aria-hidden="true">◆</span></span>
+          <span class="dialogue-copy">
+            <span id="speaker" class="speaker"></span>
+            <span id="text" class="dialogue-text"></span>
+          </span>
         </button>
         <div id="review-controls" class="review-controls" role="group" aria-label="Revisión de traducción" hidden>
           <button id="review-toggle" type="button" aria-pressed="false" aria-label="Ver inglés">EN</button>
@@ -102,12 +116,9 @@
       </div>
       <span id="position" class="position">00%</span>
       <div class="control-group">
-        <button id="sound" aria-pressed="false" disabled data-i18n="soundOff">Sonido: no</button>
-        <button id="settings" data-i18n="settings">Ajustes</button>
         <button id="next" disabled><span data-i18n="next">Siguiente</span> <span aria-hidden="true">→</span></button>
       </div>
     </nav>
-    <p class="keyboard-hint" data-i18n="keyboard"></p>
     </div>
     <p id="status" class="status" role="status"></p>
     <footer class="footer"><span data-i18n="fanProject">Proyecto de fans no oficial · Traducción al español asistida por IA</span><a href="../" data-i18n="classic">Lector clásico ↗</a></footer>
@@ -119,8 +130,10 @@
     <label class="setting"><span data-i18n="doctorName">Nombre del Doctor</span><input id="nickname" maxlength="32" placeholder="Doctor" autocomplete="off"></label>
     <label class="setting"><span data-i18n="textSpeed">Velocidad del texto</span><select id="speed"><option value="25" data-i18n="slow">Pausada</option><option value="45" data-i18n="normal">Normal</option><option value="0" data-i18n="instant">Instantánea</option></select></label>
     <label class="setting check"><input id="motion" type="checkbox"><span data-i18n="reduceMotion">Reducir movimiento y destellos</span></label>
-    <button id="restart" class="restart" data-i18n="restart">Volver al inicio de esta historia</button>
-    <p class="settings-note" data-i18n="restartNote">Volver al inicio borra las decisiones de esta lectura.</p>
+    <div id="story-settings" hidden>
+      <button id="restart" class="restart" data-i18n="restart">Volver al inicio de esta historia</button>
+      <p class="settings-note" data-i18n="restartNote">Volver al inicio borra las decisiones de esta lectura.</p>
+    </div>
   </dialog>
   <dialog id="history-dialog" class="history-dialog" aria-labelledby="history-title">
     <form method="dialog"><header class="dialog-header"><h2 id="history-title" data-i18n="history">Historial</h2><button class="close" aria-label="Close">×</button></header></form>

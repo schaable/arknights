@@ -127,8 +127,11 @@ and enables scenes that pass command, branch, language, and audio checks.
   Enter activates focused controls and choices. Open dialogs and text fields
   keep normal keyboard behavior, and holding Space does not repeatedly advance.
 - Typewriter speed, automatic reading, choices, history, restart, reduced motion,
-  and mobile layout are supported. Optional music/SFX start muted. Hiding the
-  tab stops automatic reading and sound.
+  and mobile layout are supported. Sound and settings are global header controls,
+  available from the library and every story. Sound defaults to muted; its preference,
+  text speed, Doctor's name, and reduced motion persist across stories and reloads.
+  Covers and the library stay silent. Hiding the tab stops automatic reading and
+  suspends sound; returning restores sound when enabled.
 - Progress is independent **per main-story chapter**, **per side story/vignette
   collection**, and **per operator-record/module/Integrated Strategies
   collection**. Each group remembers its last reading or manual completion and preserves each
@@ -157,7 +160,7 @@ and translation-review notes. The shape is:
 ```js
 {
   v: 2,
-  preferences: { language: 'es', nickname: '', speed: 45, motion: false },
+  preferences: { language: 'es', sound: false, nickname: '', speed: 45, motion: false },
   groups: {
     'main:main_0': {
       resume: 'obt/guide/beg/2_guide_to_home',
@@ -394,6 +397,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/browser.cj
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/keyboard.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/preferences.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
@@ -424,6 +428,9 @@ insert with a slow image request, independent background/foreground tweens,
 both translated sound-stop sequences, overlay restoration and route teardown.
 Unit tests also verify channel isolation, delayed-start cancellation and mute/
 restore cleanup without fetching audio.
+The preferences harness checks global controls from the library, saved sound and
+text settings across stories/reloads, silent covers, and background audio suspension
+using a local audio fixture.
 The review harness checks per-dialogue and choice comparison, interoperability
 with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,

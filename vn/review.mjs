@@ -4,9 +4,20 @@ export function createReviewTools({ storage, t, onPause, onCompare }) {
   const $ = (id) => document.getElementById(id);
   const store = createReviewStore(storage);
   let current = null, editing = null, notes = [], available = true, language = 'es', version = 0;
-  let statusKey = '', errorKey = '';
+  let statusKey = '', errorKey = '', statusTimer;
   const label = (button, text) => { button.title = text; button.setAttribute('aria-label', text); };
-  const status = (key) => { statusKey = key; $('review-status').textContent = t(key); };
+  function clearStatus() {
+    clearTimeout(statusTimer);
+    statusTimer = undefined;
+    statusKey = '';
+    $('review-status').textContent = '';
+  }
+  function status(key, persistent = false) {
+    clearStatus();
+    statusKey = key;
+    $('review-status').textContent = t(key);
+    if (!persistent) statusTimer = setTimeout(clearStatus, 4000);
+  }
   const error = (key) => { errorKey = key; $('review-error').textContent = key ? t(key) : ''; };
   function render() {
     $('review-toolbar').setAttribute('aria-label', t('reviewTools'));
@@ -22,6 +33,7 @@ export function createReviewTools({ storage, t, onPause, onCompare }) {
     $('review-toggle').setAttribute('aria-pressed', String(language === 'en'));
     $('review-toggle').disabled = current?.english == null;
     $('review-count').textContent = available ? String(notes.length) : '—';
+    $('review-count').hidden = !available || !notes.length;
     $('review-copy').disabled = $('review-clear').disabled = !available || !notes.length;
     label($('review-copy'), `${t('reviewCopy')} (${available ? notes.length : '—'})`);
     label($('review-clear'), t('reviewClearHelp'));
@@ -31,8 +43,8 @@ export function createReviewTools({ storage, t, onPause, onCompare }) {
   function refresh() {
     try {
       notes = store.read(); available = true;
-      if (statusKey === 'reviewReadError') { statusKey = ''; $('review-status').textContent = ''; }
-    } catch { notes = []; available = false; status('reviewReadError'); }
+      if (statusKey === 'reviewReadError') clearStatus();
+    } catch { notes = []; available = false; status('reviewReadError', true); }
     render();
   }
   function cancel() {
@@ -100,7 +112,7 @@ export function createReviewTools({ storage, t, onPause, onCompare }) {
   $('review-clear').addEventListener('click', () => {
     onPause();
     try { store.clear(); refresh(); status('reviewCleared'); }
-    catch { status('reviewClearError'); }
+    catch { status('reviewClearError', true); }
   });
   window.addEventListener('storage', (event) => {
     if (event.key === REVIEW_KEY || event.key === null) refresh();
@@ -109,6 +121,6 @@ export function createReviewTools({ storage, t, onPause, onCompare }) {
   return {
     setContext(context, displayedLanguage = 'es') { current = context; language = displayedLanguage; refresh(); },
     localize: render,
-    reset() { cancel(); current = null; render(); },
+    reset() { cancel(); if (statusTimer !== undefined) clearStatus(); current = null; render(); },
   };
 }
