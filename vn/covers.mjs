@@ -30,7 +30,19 @@ export function createCover(cover, { lazy = true } = {}) {
   img.alt = ''; img.decoding = 'async'; img.loading = lazy ? 'lazy' : 'eager';
   img.width = img.height = 512;
   let attempt = 0;
-  img.onload = () => frame.classList.add('has-art');
+  img.onload = () => {
+    // Optional square window in source pixels. Both axes use the same scale,
+    // keeping the art's proportions while trimming excess transparent margins.
+    const crop = cover.crop;
+    if (crop && [crop.x, crop.y, crop.size].every(Number.isFinite) &&
+        crop.x >= 0 && crop.y >= 0 && crop.size > 0 &&
+        crop.x + crop.size <= img.naturalWidth && crop.y + crop.size <= img.naturalHeight) {
+      img.style.width = `${100 * img.naturalWidth / crop.size}%`;
+      img.style.height = `${100 * img.naturalHeight / crop.size}%`;
+      img.style.inset = `${-100 * crop.y / crop.size}% auto auto ${-100 * crop.x / crop.size}%`;
+    }
+    frame.classList.add('has-art');
+  };
   img.onerror = () => {
     if (++attempt < urls.length) img.src = urls[attempt];
     else { img.remove(); frame.classList.remove('has-art'); }

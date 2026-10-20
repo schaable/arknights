@@ -303,19 +303,23 @@
     },
     "rogue_1": {
       "provider": "archive-en",
-      "path": "dyn/arts/ui/stage/hometheme/rogue_1_entry_display_1.png"
+      "path": "dyn/arts/ui/stage/hometheme/rogue_1_entry_display_1.png",
+      "crop": { "x": 0, "y": 55, "size": 740 }
     },
     "rogue_2": {
       "provider": "archive-en",
-      "path": "dyn/arts/ui/stage/hometheme/rogue_2_entry_display_1.png"
+      "path": "dyn/arts/ui/stage/hometheme/rogue_2_entry_display_1.png",
+      "crop": { "x": 0, "y": 95, "size": 680 }
     },
     "rogue_3": {
       "provider": "archive-en",
-      "path": "dyn/arts/ui/stage/hometheme/rogue_3_entry_display_1.png"
+      "path": "dyn/arts/ui/stage/hometheme/rogue_3_entry_display_1.png",
+      "crop": { "x": 0, "y": 15, "size": 740 }
     },
     "rogue_4": {
       "provider": "archive-en",
-      "path": "dyn/arts/ui/stage/hometheme/rogue_4_entry_display_1.png"
+      "path": "dyn/arts/ui/stage/hometheme/rogue_4_entry_display_1.png",
+      "crop": { "x": 0, "y": 40, "size": 630 }
     },
     "main_15": {
       "provider": "archive-en",

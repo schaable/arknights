@@ -38,8 +38,11 @@ availability are separate: a Spanish script can exist before its scene is
 supported by the player. Other stories have links to the classic reader.
 
 Collection cards, Continue reading, collection headings, and story opening
-screens use collection artwork. Square frames contain the complete
-image without cropping or stretching. Chapters use episode covers, events use
+screens use collection artwork. Square frames preserve the image's proportions
+and normally show it in full. Phantom, Mizuki, Expeditioner, and Sarkaz IS covers
+use individual square crops to reduce excess transparent margins while keeping
+their titles and main artwork visible; monthly squads inherit the same framing.
+Chapters use episode covers, events use
 archive covers, operator records use portraits, modules use their equipment art
 (or an operator portrait when that icon is missing), and Integrated Strategies
 uses topic artwork shared with its monthly squads. Images load lazily in grids
@@ -259,6 +262,8 @@ metadata. No per-story loading configuration is needed. The first nonblank
 background/CG is still recorded in source metadata; the opening screen now uses
 the collection's cover. Add verified chapter/event/topic paths to
 `tools/cover-assets.json` and rebuild the catalog to expand artwork coverage.
+An optional `crop: { x, y, size }` defines a square window in source-image pixels
+for covers with excessive margins, applied consistently wherever they appear.
 Operator portraits and module icons are derived from the source tables. Archive
 textures are pinned to the commit in `covers.mjs`; update that pin and the
 manifest's provenance together when refreshing the archive asset snapshot.
