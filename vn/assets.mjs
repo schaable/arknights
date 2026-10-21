@@ -125,7 +125,7 @@ export class Soundtrack {
       this.fade(audio, target, seconds);
     }
     if (hasIntro) audio.onended = () => {
-      if (this.track === audio) this.music({ ...args, intro: null, delay: 0 });
+      if (this.track === audio) this.music({ ...this.current, intro: null, delay: 0 });
     };
     this.later(() => { if (this.track === audio) this.play(audio); }, resume ? 0 : args.delay);
   }
@@ -178,9 +178,17 @@ export class Soundtrack {
     if (enabled) for (const sound of sounds) this.effect({ ...sound, delay: 0 });
   }
   restore(args, sounds = []) {
+    const sameMusic = this.enabled && this.track && args && this.current
+      && soundPath(this.map, args.key) === soundPath(this.map, this.current.key);
     this.stopFades();
     this.stopEffects();
-    this.music(args, true);
+    if (sameMusic) {
+      // Seeking settles the snapshot's volume without rewinding its music or intro.
+      this.current = args;
+      this.setLevel(this.track, Math.max(0, Math.min(1, Number(args.volume ?? 0.8))));
+      // stopEffects also cancels pending music starts; resume one immediately.
+      if (this.track.paused) this.play(this.track);
+    } else this.music(args, true);
     for (const sound of sounds) this.effect({ ...sound, delay: 0 });
   }
 }

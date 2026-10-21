@@ -19,12 +19,12 @@ const server = http.createServer(async (request, response) => {
 });
 
 // Real, locally fulfilled audio avoids relying on the remote asset mirrors.
-const wav = Buffer.alloc(44 + 16000);
+const wav = Buffer.alloc(44 + 16000 * 60);
 wav.write('RIFF'); wav.writeUInt32LE(wav.length - 8, 4); wav.write('WAVEfmt ', 8);
 wav.writeUInt32LE(16, 16); wav.writeUInt16LE(1, 20); wav.writeUInt16LE(1, 22);
 wav.writeUInt32LE(8000, 24); wav.writeUInt32LE(16000, 28);
 wav.writeUInt16LE(2, 32); wav.writeUInt16LE(16, 34); wav.write('data', 36);
-wav.writeUInt32LE(16000, 40);
+wav.writeUInt32LE(wav.length - 44, 40);
 
 (async () => {
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
@@ -83,6 +83,48 @@ wav.writeUInt32LE(16000, 40);
     await page.locator('#begin').click();
     await page.locator('#dialogue:visible').waitFor();
     await playing();
+    const { parseScript, buildTimeline } = await import('../script.mjs');
+    const steps = buildTimeline(parseScript(await fs.readFile(path.join(root, 'gamedata/es_ES/story/obt/guide/beg/0_welcome_to_guide.txt'), 'utf8')));
+    const atLine = (line) => page.waitForFunction((line) => document.querySelector('#stage').dataset.line === String(line)
+      && document.querySelector('#stage').getAttribute('aria-busy') === 'false', line);
+    const markMusic = async () => {
+      await playing();
+      await page.evaluate(() => {
+        window.__seekAudio = window.__vnAudio.find((audio) => !audio.paused && audio.loop);
+        window.__seekAudio.currentTime = 12;
+      });
+      await page.waitForFunction(() => !window.__seekAudio.seeking && window.__seekAudio.currentTime >= 12);
+    };
+    const continued = () => page.evaluate(() => !window.__seekAudio.paused && window.__seekAudio.currentTime >= 12);
+    for (const width of [1440, 390]) {
+      await page.setViewportSize({ width, height: 900 });
+      await markMusic();
+      await page.locator('#next').click(); await atLine(steps[1].line);
+      assert.equal(await continued(), true, 'Next keeps the same track playing');
+      await page.locator('#back').click(); await atLine(steps[0].line);
+      assert.equal(await continued(), true, `Back preserves music and its position at ${width}px`);
+    }
+    await page.setViewportSize({ width: 1440, height: 900 });
+    const change = steps.findIndex((step) => step.state.music?.key !== steps[0].state.music.key);
+    assert.ok(change > 1);
+    const originalSource = await page.evaluate(() => window.__seekAudio.src);
+    for (const step of steps.slice(1, change + 1)) {
+      await page.locator('#next').click(); await atLine(step.line);
+    }
+    await playing();
+    assert.equal(await page.evaluate(() => window.__seekAudio.paused && !window.__seekAudio.getAttribute('src')), true);
+    assert.notEqual(await page.evaluate(() => window.__vnAudio.find((audio) => !audio.paused).src), originalSource);
+    await page.locator('#back').click(); await atLine(steps[change - 1].line);
+    await playing();
+    assert.equal(await page.evaluate(() => window.__vnAudio.find((audio) => !audio.paused).src), originalSource, 'Back across a music cue restores the previous track');
+    assert.ok(await page.evaluate(() => window.__vnAudio.find((audio) => !audio.paused).currentTime < 5), 'a different track starts from the beginning');
+    await markMusic();
+    await page.locator('#history').click();
+    await page.locator('.history-line').first().click(); await atLine(steps[0].line);
+    assert.equal(await continued(), true, 'history keeps the same music playing');
+    await page.locator('#language').selectOption('en');
+    await page.locator('#language').selectOption('es');
+    assert.equal(await continued(), true, 'language changes keep the same music playing');
     const line = await page.locator('#stage').getAttribute('data-line');
     const groups = await page.evaluate(() => JSON.parse(localStorage.getItem('arknights.vn.v2')).groups);
     await page.locator('#volume').focus();
@@ -198,7 +240,7 @@ wav.writeUInt32LE(16000, 40);
     await touch.screenshot({ path: path.join(screenshots, 'volume-mobile-narrow.png'), fullPage: true });
     await mobile.close();
     assert.deepEqual(errors, []);
-    console.log('Preferences passed: live volume, saved settings, silent covers, mute, background suspension, keyboard/touch controls, localization, and desktop/mobile layouts.');
+    console.log('Preferences passed: music continuity on Back/Next/history/language changes, track changes, live volume, saved settings, silent covers, mute, background suspension, keyboard/touch controls, localization, and desktop/mobile layouts.');
   } finally {
     await browser?.close();
     await new Promise((resolve) => server.close(resolve));

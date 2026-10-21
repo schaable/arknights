@@ -189,7 +189,88 @@ test('stopping or replacing a channel cancels delayed starts, including after a 
   assert.equal(s.pendingEffects.size, 0);
 });
 
-test('restore and mute dispose all playback; enabling restores loops without replaying one-shots', (t) => {
+test('restoring the same music keeps its position while restoring volume and sound channels', (t) => {
+  const { soundtrack: s, audios, advance } = audioHarness(t);
+  s.music({ key: '$music', volume: 0.8 });
+  s.effect({ key: 'impact' });
+  advance(10);
+  const music = s.track;
+  music.currentTime = 12;
+  s.restore({ key: 'music', volume: 0.4 }, [{ key: 'rain', channel: 'weather', loop: 'true' }]);
+  advance(10);
+  assert.equal(s.track, music, 'resolved track identity survives a snapshot restore');
+  assert.equal(music.currentTime, 12);
+  assert.equal(music.plays, 1);
+  assert.equal(music.paused, false);
+  assert.equal(music.volume, 0.4 * 0.55);
+  assert.equal(audios[1].src, '', 'one-shots are still disposed');
+  assert.equal(s.effects.size, 1);
+  assert.equal(audios.at(-1).loop, true);
+});
+
+test('restoring different music replaces playback and a silent snapshot stops it', (t) => {
+  const { soundtrack: s, audios, advance } = audioHarness(t);
+  s.music({ key: 'music' });
+  advance(10);
+  const old = s.track;
+  s.restore({ key: 'heartbeat' });
+  advance(10);
+  assert.notEqual(s.track, old);
+  assert.equal(old.paused, true);
+  assert.equal(old.src, '');
+  assert.match(s.track.src, /heartbeat\.mp3$/);
+  assert.equal(s.track.plays, 1);
+  s.restore(null);
+  assert.equal(s.track, null);
+  assert.ok(audios.every((audio) => audio.paused && !audio.src));
+});
+
+test('restoring during or after a music intro does not replay it', (t) => {
+  const { soundtrack: s, audios, advance } = audioHarness(t);
+  const cue = { intro: 'heartbeat', key: 'music', volume: 0.8 };
+  s.music(cue);
+  advance(10);
+  const intro = s.track;
+  intro.currentTime = 4;
+  s.restore({ ...cue, volume: 0.4 });
+  assert.equal(s.track, intro);
+  assert.equal(intro.currentTime, 4);
+  assert.equal(intro.plays, 1);
+  intro.onended();
+  advance(10);
+  const loop = s.track;
+  assert.notEqual(loop, intro);
+  assert.equal(loop.loop, true);
+  assert.equal(loop.volume, 0.4 * 0.55, 'intro completion uses the restored volume');
+  loop.currentTime = 8;
+  s.restore(cue);
+  assert.equal(s.track, loop);
+  assert.equal(loop.currentTime, 8);
+  assert.equal(audios.length, 2);
+});
+
+test('restoring the same delayed or fading music settles its level without losing playback', (t) => {
+  const { soundtrack: s, audios, advance } = audioHarness(t);
+  s.music({ key: 'heartbeat' });
+  advance(10);
+  const cue = { key: 'music', volume: 0.4, delay: 2, crossfade: 1 };
+  s.music(cue);
+  const music = s.track;
+  advance(200);
+  assert.equal(music.paused, true);
+  assert.ok(music.volume < 0.4 * 0.55);
+  s.restore(cue);
+  assert.equal(s.track, music);
+  assert.equal(music.paused, false, 'seeking starts pending music immediately');
+  assert.equal(music.volume, 0.4 * 0.55);
+  assert.equal(audios[0].src, '', 'the outgoing fade is disposed');
+  assert.equal(s.fades.size, 0);
+  advance(3000);
+  assert.equal(music.plays, 1, 'the cancelled delay cannot start it again');
+  assert.equal(audios.length, 2);
+});
+
+test('restore clears effects and mute disposes all playback; enabling restores loops without replaying one-shots', (t) => {
   const { soundtrack: s, audios, advance } = audioHarness(t);
   s.effect({ key: 'impact', delay: 0.03 });
   const loops = [{ key: 'heartbeat', channel: 'HB', loop: 'true', delay: 2 }];

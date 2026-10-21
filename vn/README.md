@@ -139,6 +139,9 @@ and enables scenes that pass command, branch, language, and audio checks.
   Arrow keys adjust the focused slider; Space still advances the story.
   Covers and the library stay silent. Hiding the tab stops automatic reading and
   suspends sound; returning restores sound when enabled.
+- Back and history preserve the current music's playback position when the
+  destination uses the same track. A different track starts from the beginning,
+  and a silent scene stops the music. Language changes also preserve the track.
 - The speed selector beside Auto offers 0.5×, 1×, 1.5×, 2× and 3×. It scales the
   text-length-based pause after each line finishes typing; 1× preserves the original
   timing. Changing it during Auto starts a fresh pause at the selected speed without
@@ -456,7 +459,8 @@ Unit tests also verify channel isolation, delayed-start cancellation and mute/
 restore cleanup without fetching audio.
 The preferences harness checks global controls from the library, saved sound,
 volume and text settings across stories/reloads, live volume without restarting
-audio, silent covers, and background audio suspension using a local audio fixture.
+audio, music continuity on Back/Next/history/language changes, switching tracks,
+silent covers, and background audio suspension using a local audio fixture.
 It also checks localized slider labels, keyboard/touch adjustment, and desktop/mobile
 layouts. Unit tests cover volume during crossfades, delayed sounds and mute/restore.
 The Auto speed harness uses a controlled clock to check every playback rate,
