@@ -139,6 +139,13 @@ and enables scenes that pass command, branch, language, and audio checks.
   Arrow keys adjust the focused slider; Space still advances the story.
   Covers and the library stay silent. Hiding the tab stops automatic reading and
   suspends sound; returning restores sound when enabled.
+- The speed selector beside Auto offers 0.5×, 1×, 1.5×, 2× and 3×. It scales the
+  text-length-based pause after each line finishes typing; 1× preserves the original
+  timing. Changing it during Auto starts a fresh pause at the selected speed without
+  replaying the scene. The speed is global and persists across stories and reloads.
+  Text typing, scripted animations and audio retain their existing speeds. Choices,
+  dialogs, the ending and hiding the tab still stop Auto; changing speed does not
+  turn Auto on. Space still advances when the speed selector has focus.
 - The fullscreen button beside Next expands the story while keeping sound, settings,
   history and translation review available. Click it again or press Esc to exit;
   Enter activates the focused button, while Space still advances. Artwork keeps
@@ -174,7 +181,7 @@ and translation-review notes. The shape is:
 ```js
 {
   v: 2,
-  preferences: { language: 'es', sound: false, volume: 55, nickname: '', speed: 45, motion: false },
+  preferences: { language: 'es', sound: false, volume: 55, nickname: '', speed: 45, autoSpeed: 1, motion: false },
   groups: {
     'main:main_0': {
       resume: 'obt/guide/beg/2_guide_to_home',
@@ -415,6 +422,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/keyboard.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/preferences.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/autoplay.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/fullscreen.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
@@ -451,6 +459,9 @@ volume and text settings across stories/reloads, live volume without restarting
 audio, silent covers, and background audio suspension using a local audio fixture.
 It also checks localized slider labels, keyboard/touch adjustment, and desktop/mobile
 layouts. Unit tests cover volume during crossfades, delayed sounds and mute/restore.
+The Auto speed harness uses a controlled clock to check every playback rate,
+live timer replacement, choices/completion, pauses, navigation cleanup, persistence,
+localized labels and desktop/mobile/fullscreen layouts.
 The fullscreen harness checks native entry/exit, Escape and focus restoration,
 unchanged progress, settings/history/review dialogs, Space, localization, mobile
 fallback, portrait/landscape layouts, scene proportions and late-request cleanup.

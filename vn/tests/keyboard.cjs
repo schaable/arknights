@@ -60,7 +60,7 @@ const server = http.createServer(async (request, response) => {
 
     // A focused control must not receive its native Space click or selection.
     for (const selector of ['#settings', '#history', '#auto', '#sound', '#volume', '#fullscreen', '#back', '#next',
-      '#dialogue', '#review-toggle', '#review-note', '#next-story', '#language', '#story-select']) {
+      '#dialogue', '#review-toggle', '#review-note', '#next-story', '#language', '#story-select', '#auto-speed']) {
       const control = page.locator(selector);
       const url = page.url();
       await control.evaluate((node) => { node.dataset.clicks = '0'; node.addEventListener('click', () => node.dataset.clicks = String(Number(node.dataset.clicks) + 1)); });

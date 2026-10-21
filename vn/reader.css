@@ -94,6 +94,8 @@ progress::-webkit-progress-value { background: var(--accent); }
 progress::-moz-progress-bar { background: var(--accent); }
 .controls { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 68px; border-bottom: 1px solid var(--line); }
 .control-group { display: flex; gap: 8px; }
+.auto-controls { display: flex; align-items: center; gap: 2px; }
+.auto-speed select { min-height: 36px; padding: 4px; font-size: 12px; }
 .controls button { background: transparent; border-color: transparent; font-size: 12px; padding: 8px 10px; white-space: nowrap; }
 .controls .icon-button { padding: 0; flex-shrink: 0; }
 #fullscreen[aria-pressed="false"] .fullscreen-exit, #fullscreen[aria-pressed="true"] .fullscreen-enter { display: none; }
@@ -156,7 +158,9 @@ input[type="checkbox"] { accent-color: var(--accent); }
   #cover-description { max-width: 220px; }
   .controls { flex-wrap: wrap; gap: 4px; padding: 8px 0; }
   .control-group { flex: 1; justify-content: space-between; }
+  .controls > .control-group:first-child { flex-basis: 100%; flex-wrap: wrap; gap: 4px; }
   .control-group:last-child { flex: 0; margin-left: auto; }
+  .auto-speed select { min-height: 42px; }
   .controls button { min-height: 42px; }
   .position { padding: 0 10px; }
   .footer { flex-direction: column; gap: 8px; }

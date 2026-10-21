@@ -76,7 +76,7 @@ wav.writeUInt32LE(16000, 40);
     await page.locator('#speed').selectOption('0');
     await page.locator('#motion').check();
     await page.locator('#settings-dialog .close').click();
-    assert.deepEqual(await stored(), { language: 'es', sound: true, volume: 35, nickname: 'Test Doctor', speed: 0, motion: true });
+    assert.deepEqual(await stored(), { language: 'es', sound: true, volume: 35, nickname: 'Test Doctor', speed: 0, autoSpeed: 1, motion: true });
 
     await navigate('#/main/chapter-0/prologue-1');
     assert.equal(await stopped(), true, 'the story cover is silent');
@@ -164,7 +164,7 @@ wav.writeUInt32LE(16000, 40);
     await page.locator('.category-card').first().waitFor();
     assert.equal(await page.locator('#sound').getAttribute('aria-pressed'), 'false');
     assert.equal(await page.locator('#sound svg').count(), 1, 'localization keeps the icon');
-    assert.deepEqual(await stored(), { language: 'en', sound: false, volume: 70, nickname: 'Test Doctor', speed: 0, motion: true });
+    assert.deepEqual(await stored(), { language: 'en', sound: false, volume: 70, nickname: 'Test Doctor', speed: 0, autoSpeed: 1, motion: true });
 
     const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
     await mobile.route('https://**', (route) => route.abort());

@@ -34,6 +34,26 @@ test('volume preferences default for existing saves, validate values, and preser
   assert.deepEqual(restored.groups, before);
 });
 
+test('Auto speed defaults for older saves and persists validated rates without changing progress', () => {
+  for (const autoSpeed of [undefined, null, '2', 0, -1, 4, NaN, Infinity]) {
+    assert.equal(cleanPreferences({ autoSpeed }).autoSpeed, 1);
+  }
+  const storage = memory();
+  storage.setItem(LEGACY_KEY, JSON.stringify({ v: 1, preferences: { speed: 25 } }));
+  const store = createProgressStore(storage, catalog);
+  assert.equal(store.snapshot().preferences.autoSpeed, 1);
+  store.save(group('main_0'), prologue, progress(42));
+  store.save(group('main_1'), group('main_1').stories[0], progress(12));
+  const before = store.snapshot().groups;
+  for (const autoSpeed of [0.5, 1, 1.5, 2, 3]) {
+    store.preferences({ ...store.snapshot().preferences, autoSpeed });
+    const restored = createProgressStore(storage, catalog).snapshot();
+    assert.equal(restored.preferences.autoSpeed, autoSpeed);
+    assert.equal(restored.preferences.speed, 25, 'typing speed remains independent');
+    assert.deepEqual(restored.groups, before);
+  }
+});
+
 test('catalog routes round-trip uniquely for all categories, collections and stories', () => {
   const routes = new Set();
   for (const category of catalog.categories) {

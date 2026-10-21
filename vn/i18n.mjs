@@ -1,6 +1,7 @@
 export const copy = {
   es: {
     language: 'Idioma', volume: 'Volumen',
+    autoSpeed: 'Velocidad de lectura automática',
     fullscreen: 'Pantalla completa', exitFullscreen: 'Salir de pantalla completa',
     fullscreenError: 'No se pudo salir de pantalla completa. Presiona Esc o vuelve a intentarlo.',
     savedLocally: 'Tu progreso se guarda en este navegador.', loading: 'Cargando…', begin: 'Comenzar lectura →', resume: 'Continuar lectura →',
@@ -20,6 +21,7 @@ export const copy = {
   },
   en: {
     language: 'Language', volume: 'Volume', savedLocally: 'Your progress is saved in this browser.',
+    autoSpeed: 'Auto playback speed',
     fullscreen: 'Fullscreen', exitFullscreen: 'Exit fullscreen',
     fullscreenError: 'Could not exit fullscreen. Press Esc or try again.',
     loading: 'Loading…', begin: 'Begin reading →', resume: 'Continue reading →', complete: 'READING COMPLETE',

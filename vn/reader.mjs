@@ -73,6 +73,8 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('story-settings').hidden = !ready;
     $('sound').disabled = false;
     $('auto').setAttribute('aria-pressed', auto);
+    $('auto-speed').value = preferences.autoSpeed;
+    $('auto-speed').title = t('autoSpeed');
     $('sound').setAttribute('aria-pressed', preferences.sound);
     $('sound').setAttribute('aria-label', t('sound'));
     $('sound').title = t(preferences.sound ? 'soundOn' : 'soundOff');
@@ -324,7 +326,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   function scheduleAuto() {
     clearTimeout(autoTimer);
     if (auto && !typing && !busy && timeline[index]?.kind === 'dialogue' && !document.hidden) {
-      autoTimer = setTimeout(next, 1600 + Array.from(fullText).length * 45);
+      autoTimer = setTimeout(next, (1600 + Array.from(fullText).length * 45) / preferences.autoSpeed);
     }
   }
   function finishText() {
@@ -585,6 +587,12 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   $('restart').addEventListener('click', restart);
   $('replay').addEventListener('click', restart);
   $('auto').addEventListener('click', () => { auto = !auto; updateControls(); scheduleAuto(); });
+  $('auto-speed').addEventListener('change', () => {
+    preferences.autoSpeed = Number($('auto-speed').value);
+    if (!store.preferences(preferences)) notice('storageError');
+    scheduleAuto();
+    updateControls();
+  });
   $('sound').addEventListener('click', () => {
     preferences.sound = !preferences.sound;
     if (!store.preferences(preferences)) notice('storageError');

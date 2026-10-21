@@ -116,7 +116,12 @@
     <nav class="controls" aria-label="Reader controls">
       <div class="control-group">
         <button id="back" disabled><span aria-hidden="true">←</span> <span data-i18n="back">Atrás</span></button>
-        <button id="auto" aria-pressed="false" disabled><span aria-hidden="true">▷</span> <span data-i18n="auto">Auto</span></button>
+        <div class="auto-controls">
+          <button id="auto" aria-pressed="false" disabled><span aria-hidden="true">▷</span> <span data-i18n="auto">Auto</span></button>
+          <label class="auto-speed"><span class="sr-only" data-i18n="autoSpeed">Velocidad de lectura automática</span>
+            <select id="auto-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option><option value="3">3×</option></select>
+          </label>
+        </div>
         <button id="history" disabled><span aria-hidden="true">☷</span> <span data-i18n="history">Historial</span></button>
       </div>
       <span id="position" class="position">00%</span>

@@ -9,6 +9,7 @@ export function cleanPreferences(value = {}) {
     volume: Number.isFinite(value?.volume) ? Math.max(0, Math.min(100, Math.round(value.volume))) : 55,
     nickname: typeof value?.nickname === 'string' ? value.nickname.slice(0, 32) : '',
     speed: [0, 25, 45].includes(value?.speed) ? value.speed : 45,
+    autoSpeed: [0.5, 1, 1.5, 2, 3].includes(value?.autoSpeed) ? value.autoSpeed : 1,
     ...(typeof value?.motion === 'boolean' ? { motion: value.motion } : {}) };
 }
 function cleanStory(value) {
