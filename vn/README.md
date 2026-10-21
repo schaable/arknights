@@ -129,6 +129,12 @@ and enables scenes that pass command, branch, language, and audio checks.
   including after closing a dialog; on a loaded story cover it begins reading.
   Enter activates focused controls and choices. Open dialogs and text fields
   keep normal keyboard behavior, and holding Space does not repeatedly advance.
+- History opens at the latest entry. Its title and close button stay visible
+  while the entries scroll, including on mobile and in fullscreen.
+  Named dialogue shows the focused character's portrait and expression using the
+  classic reader's thumbnails. Narration, choices and lines without a focused
+  character remain text-only. Portraits load lazily, retry the asset mirror and
+  fall back to the speaker's initial without shifting the entries.
 - Typewriter speed, automatic reading, choices, history, restart, reduced motion,
   and mobile layout are supported. Sound and settings are global header controls,
   available from the library and every story. A volume slider beside the sound icon
@@ -427,6 +433,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/keyboard.c
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/preferences.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/autoplay.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/fullscreen.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/history.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
@@ -469,6 +476,10 @@ localized labels and desktop/mobile/fullscreen layouts.
 The fullscreen harness checks native entry/exit, Escape and focus restoration,
 unchanged progress, settings/history/review dialogs, Space, localization, mobile
 fallback, portrait/landscape layouts, scene proportions and late-request cleanup.
+The history harness checks real character thumbnails, expressions, mirror and
+missing-image fallbacks, accessible labels, stable scrolling and line selection
+on desktop, mobile and fullscreen. Unit tests cover speaker focus and text-only
+entries independently of translated names.
 The review harness checks per-dialogue and choice comparison, interoperability
 with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,

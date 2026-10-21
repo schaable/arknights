@@ -12,6 +12,10 @@ export function characterId(name) {
 }
 
 export function imageURLs(kind, name) {
+  if (kind === 'portrait') {
+    const path = `../thumbs/${encodeURIComponent(characterId(name))}.webp`.toLowerCase();
+    return [primary, fallback].map((base) => new URL(path, base).href);
+  }
   const path = kind === 'character'
     ? `avg/characters/${encodeURIComponent(characterId(name))}.png`
     : `torappu/dynamicassets/avg/${({ image: 'images', background: 'backgrounds', item: 'items' })[kind]}/${name}.png`;

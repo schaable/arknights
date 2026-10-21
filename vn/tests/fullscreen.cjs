@@ -27,7 +27,8 @@ const server = http.createServer(async (request, response) => {
   const story = group.stories.find((s) => s.slug === 'habits');
   const script = parseScript(await fs.readFile(path.join(root, `gamedata/es_ES/story/${story.id}.txt`), 'utf8'));
   const answers = Object.fromEntries(script.filter((s) => s.command === 'decision').map((s) => [s.line, s.args.values.split(';')[0]]));
-  const longest = buildTimeline(script, answers).filter((s) => s.kind === 'dialogue').sort((a, b) => b.text.length - a.text.length)[0];
+  const steps = buildTimeline(script, answers);
+  const longest = steps.filter((s) => s.kind === 'dialogue').sort((a, b) => b.text.length - a.text.length)[0];
   const saved = { v: 2, preferences: { language: 'es', speed: 0, motion: true, volume: 35 }, groups: {
     [`${group.category}:${group.id}`]: { resume: story.id, updated: 1, stories: { [story.id]: { line: longest.line, answers, read: false, updated: 1 } } },
   } };
@@ -41,7 +42,7 @@ const server = http.createServer(async (request, response) => {
     const makePage = async (options = {}) => {
       const context = await browser.newContext(options);
       // Fullscreen/layout checks do not depend on remote artwork or audio.
-      await context.route('https://**', (route) => route.abort());
+      await context.route(/^https:\/\//, (route) => route.abort());
       await context.addInitScript((saved) => {
         if (!localStorage.getItem('arknights.vn.v2')) localStorage.setItem('arknights.vn.v2', JSON.stringify(saved));
       }, saved);
@@ -70,6 +71,35 @@ const server = http.createServer(async (request, response) => {
       assert.ok(Math.abs(scene.width / scene.height - 16 / 9) < 0.01, 'scene retains its proportions');
       assert.ok(scene.width <= stage.width && scene.height <= stage.height, 'scene fits without cropping');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    };
+    const history = async (page, capture) => {
+      const before = await state(page);
+      const list = page.locator('#history-list'), close = page.locator('#history-dialog .close');
+      const atEnd = () => list.evaluate((el) => el.scrollHeight > el.clientHeight
+        && Math.abs(el.scrollHeight - el.clientHeight - el.scrollTop) <= 1);
+      const closeAvailable = () => close.evaluate((button) => {
+        const rect = button.getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= innerHeight && rect.left >= 0 && rect.right <= innerWidth
+          && document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2) === button;
+      });
+      await page.locator('#history').click();
+      assert.equal(await atEnd(), true, 'history opens at the latest entry');
+      assert.equal(await closeAvailable(), true, 'close is visible and clickable at the end');
+      assert.equal(await page.locator('#history-dialog').evaluate((el) => el.scrollHeight <= el.clientHeight), true, 'only history entries scroll');
+      const position = await close.boundingBox();
+      await page.screenshot({ path: path.join(output, `${capture}.png`) });
+      await list.evaluate((el) => { el.scrollTop = 0; });
+      assert.equal(await closeAvailable(), true, 'close remains available at the beginning');
+      assert.deepEqual(await close.boundingBox(), position, 'scrolling leaves the header in place');
+      await close.click();
+      await page.locator('#history-dialog').waitFor({ state: 'hidden' });
+      assert.deepEqual(await state(page), before, 'closing history preserves progress');
+      assert.equal(await page.evaluate(() => document.activeElement.id), 'history');
+      await page.locator('#history').click();
+      assert.equal(await atEnd(), true, 'reopening returns to the latest entry after scrolling up');
+      await page.keyboard.press('Escape');
+      await page.locator('#history-dialog').waitFor({ state: 'hidden' });
+      assert.deepEqual(await state(page), before, 'Escape closes history without changing progress');
     };
 
     const page = await makePage({ viewport: { width: 1440, height: 900 } });
@@ -125,6 +155,18 @@ const server = http.createServer(async (request, response) => {
     await expanded(page, false);
     assert.equal(await page.evaluate(() => document.fullscreenElement), null);
 
+    await open(page, '#/vignettes/children-of-ursus/habits');
+    await page.locator('#begin:not(:disabled)').click();
+    await page.locator('#dialogue:visible').waitFor();
+    await history(page, 'history-desktop');
+    await page.locator('#language').selectOption('es');
+    await page.locator('#fullscreen').click();
+    await expanded(page);
+    await history(page, 'history-fullscreen-desktop');
+    await expanded(page);
+    await page.locator('#fullscreen').click();
+    await expanded(page, false);
+
     const mobile = await makePage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
     await mobile.addInitScript(() => Object.defineProperty(document, 'fullscreenEnabled', { value: false }));
     await open(mobile, '#/vignettes/children-of-ursus/habits');
@@ -138,7 +180,15 @@ const server = http.createServer(async (request, response) => {
       await mobile.setViewportSize(viewport);
       await layout(mobile);
       await mobile.screenshot({ path: path.join(output, `fullscreen-mobile-${viewport.width}.png`) });
+      await history(mobile, `history-mobile-${viewport.width}`);
+      await expanded(mobile);
     }
+    await mobile.locator('#history').tap();
+    const previous = steps[steps.indexOf(longest) - 1];
+    const entries = mobile.locator('.history-line');
+    await entries.nth(await entries.count() - 2).tap();
+    await mobile.locator('#history-dialog').waitFor({ state: 'hidden' });
+    assert.equal(await mobile.locator('#stage').getAttribute('data-line'), String(previous.line), 'recent history entries still restore the selected line');
     await mobile.locator('#settings').tap();
     await mobile.keyboard.press('Escape');
     await mobile.locator('#settings-dialog').waitFor({ state: 'hidden' });
@@ -179,7 +229,7 @@ const server = http.createServer(async (request, response) => {
     await expanded(denied, false);
     assert.equal(await denied.evaluate(() => document.fullscreenElement), null);
     assert.deepEqual(errors, []);
-    console.log('Fullscreen passed: native entry/exit, Escape, focus, unchanged progress, dialogs/review, Space, localized labels, mobile fallback, proportions, rotation and late-request cleanup.');
+    console.log('Fullscreen passed: native entry/exit, Escape, focus, unchanged progress, history scrolling/fixed close/reopening/selection, dialogs/review, Space, localized labels, mobile fallback, proportions, rotation and late-request cleanup.');
   } finally {
     await browser?.close();
     await new Promise((resolve) => server.close(resolve));

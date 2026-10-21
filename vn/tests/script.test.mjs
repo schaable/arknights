@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
+import { parseScript, buildTimeline, validateProgress, speakerCharacter } from '../script.mjs';
 import { characterId, imageURLs } from '../assets.mjs';
 
 const es = parseScript(await readFile(new URL('../../gamedata/es_ES/story/obt/guide/beg/0_welcome_to_guide.txt', import.meta.url), 'utf8'));
@@ -72,8 +72,37 @@ test('asset URLs encode sprite expressions and unknown commands fail explicitly'
   assert.equal(characterId('char_002_amiya_1#4'), 'char_002_amiya_1#4$1');
   assert.equal(characterId('char_016_medic'), 'char_016_medic#1$1');
   assert.ok(imageURLs('character', 'char_002_amiya_1#4')[0].includes('%234%241.png'));
+  assert.deepEqual(imageURLs('portrait', 'char_002_Amiya_1#4$2'), [
+    'https://cdn.jsdelivr.net/gh/akgcc/arkdata@main/thumbs/char_002_amiya_1%234%242.webp',
+    'https://raw.githubusercontent.com/akgcc/arkdata/main/thumbs/char_002_amiya_1%234%242.webp',
+  ]);
   assert.throws(() => parseScript('[Unsupported(key="x")]'), /Unsupported directive/);
   assert.throws(() => parseScript('[Decision(options="A;B",values="1")]'), /Invalid decision/);
+});
+
+test('history portraits follow the focused character and expression in each snapshot', () => {
+  const steps = buildTimeline(parseScript(`[Character(name="first#2",name2="second#4",focus=2)]
+[name="Second"] Hello
+[Character(name="first#3",name2="second#4",focus=1)]
+[name="First"] Reply
+Narration with characters still visible
+[Character(name="first",name2="second",focus=0)]
+[name="Both"] Together
+[Character(name="first",focus=-1)]
+[name="Offscreen"] Elsewhere
+[Character(name="char_empty")]
+[name="Hidden"] No portrait
+[Character]
+[name="Unseen"] No sprite
+[Character(name="first")]
+[name="First"] Default focus
+[Decision(options="Yes;No",values="1;2")]`));
+  assert.deepEqual(steps.map(speakerCharacter), ['second#4', 'first#3', null, null, null, null, null, 'first', null]);
+  assert.equal(speakerCharacter({ ...steps[0], speaker: '  ' }), null);
+  assert.equal(speakerCharacter({ ...steps[0], state: { characters: ['first'], focus: 2 } }), null);
+  const spanish = buildTimeline(es, answersFor('1'));
+  const english = buildTimeline(en, answersFor('1'));
+  assert.deepEqual(spanish.map(speakerCharacter), english.map(speakerCharacter), 'portraits are independent of translated speaker names');
 });
 
 test('read flags from older saves open the ending even with intermediate or incomplete positions', () => {

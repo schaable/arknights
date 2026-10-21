@@ -1,4 +1,4 @@
-import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt } from './script.mjs';
+import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt, speakerCharacter } from './script.mjs';
 import { loadImage, Soundtrack } from './assets.mjs';
 import { createCover } from './covers.mjs';
 import { loadStory } from './loader.mjs';
@@ -475,14 +475,32 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       if (step.kind === 'end') continue;
       const button = document.createElement('button');
       button.className = 'history-line';
+      const portrait = speakerCharacter(step);
+      if (portrait) {
+        const frame = document.createElement('span');
+        frame.className = 'history-portrait';
+        frame.setAttribute('aria-hidden', 'true');
+        frame.textContent = displayText(step.speaker).trim().charAt(0).toLocaleUpperCase();
+        const img = document.createElement('img');
+        img.alt = ''; img.width = img.height = 56;
+        img.loading = 'lazy'; img.decoding = 'async';
+        // Keep the initial as a quiet fallback if both portrait mirrors fail.
+        loadImage(img, 'portrait', portrait, () => {});
+        frame.append(img);
+        button.append(frame);
+      }
+      const copy = document.createElement('span');
+      copy.className = 'history-copy';
       const name = document.createElement('strong');
       name.textContent = step.kind === 'choice' ? 'Doctor' : step.speaker || t('narration');
       const text = step.kind === 'choice' ? step.options.find((o) => o.value === step.answer)?.text || t('choose') : step.text;
-      button.append(name, document.createTextNode(displayText(text)));
+      copy.append(name, document.createTextNode(displayText(text)));
+      button.append(copy);
       button.addEventListener('click', () => { index = i; $('history-dialog').close(); showStep(); });
       $('history-list').append(button);
     }
     $('history-dialog').showModal();
+    $('history-list').scrollTop = $('history-list').scrollHeight;
   }
 
   function dispose() {

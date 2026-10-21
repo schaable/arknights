@@ -44,6 +44,12 @@ export function initialScene() {
     blocker: { color: 'rgb(0, 0, 0)', alpha: 0 }, grayscale: 0, music: null, sounds: [] };
 }
 
+export function speakerCharacter(step) {
+  if (step.kind !== 'dialogue' || !step.speaker.trim()) return null;
+  const name = step.state.characters[step.state.focus - 1];
+  return name && !/^char_empty(?:[#\$]|$)/i.test(name) ? name : null;
+}
+
 export function tweenArt(art, args, endpoint) {
   return { ...art, x: number(args['x' + endpoint], art.x), y: number(args['y' + endpoint], art.y),
     scale: number(args['xscale' + endpoint], art.scale) };
