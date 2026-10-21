@@ -95,6 +95,8 @@ progress::-moz-progress-bar { background: var(--accent); }
 .controls { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 68px; border-bottom: 1px solid var(--line); }
 .control-group { display: flex; gap: 8px; }
 .controls button { background: transparent; border-color: transparent; font-size: 12px; padding: 8px 10px; white-space: nowrap; }
+.controls .icon-button { padding: 0; flex-shrink: 0; }
+#fullscreen[aria-pressed="false"] .fullscreen-exit, #fullscreen[aria-pressed="true"] .fullscreen-enter { display: none; }
 .position { font: 11px ui-monospace, monospace; color: var(--muted); }
 .footer { display: flex; justify-content: space-between; color: #a1adb8; gap: 15px; font-size: 10px; }
 .footer a { white-space: nowrap; }
@@ -166,6 +168,33 @@ input[type="checkbox"] { accent-color: var(--accent); }
   #volume { width: 50px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0s !important; } }
+
+/* Keep the complete reader and its dialogs in the fullscreen document. */
+.reader-fullscreen { overflow: hidden; }
+.reader-fullscreen .reader {
+  position: fixed; inset: 0; width: 100%; height: 100dvh; max-width: none;
+  padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  display: flex; flex-direction: column; gap: 6px; background: #0b1116;
+}
+.reader-fullscreen :is(.brand, .chapter-label, .breadcrumbs, .story-navigation, .footer) { display: none; }
+.reader-fullscreen .topbar { min-height: 0; padding: 0; flex-shrink: 0; }
+.reader-fullscreen #player { display: flex; flex: 1; flex-direction: column; min-height: 0; }
+.reader-fullscreen .stage { flex: 1; min-height: 0; aspect-ratio: auto; container-type: size; }
+.reader-fullscreen .scene {
+  position: absolute; inset: auto; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: min(100cqw, calc(100cqh * 16 / 9)); height: auto; aspect-ratio: 16 / 9;
+}
+.reader-fullscreen .dialogue-panel { position: absolute; bottom: 0; min-height: 0; max-height: 60%; overflow-y: auto; }
+.reader-fullscreen .dialogue { min-height: 110px; }
+.reader-fullscreen .choices { top: 5%; max-height: 85%; overflow-y: auto; }
+.reader-fullscreen :is(.cover, .ending) { overflow-y: auto; padding: clamp(16px, 4vmin, 64px); align-items: safe center; }
+.reader-fullscreen .ending { justify-content: safe center; }
+.reader-fullscreen .ending > * { flex-shrink: 0; }
+.reader-fullscreen .controls { min-height: 44px; flex-shrink: 0; }
+.reader-fullscreen :is(.status, .review-status) { margin: 0; min-height: 0; flex-shrink: 0; }
+.reader-fullscreen :is(.status, .review-status):empty { display: none; }
+.reader-fullscreen .load-notice { flex-shrink: 0; max-height: 20dvh; overflow-y: auto; }
+@media (max-width: 700px) { .reader-fullscreen .position { display: none; } }
 
 /* Catalog and navigation share the stage's restrained archive styling. */
 .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 12px; padding: 0 0 18px; }

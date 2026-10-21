@@ -3,6 +3,7 @@ import { loadImage, Soundtrack } from './assets.mjs';
 import { createCover } from './covers.mjs';
 import { loadStory } from './loader.mjs';
 import { reviewContext } from './review-data.mjs';
+import { createFullscreen } from './fullscreen.mjs';
 
 export function createPlayer({ preferences, t, store, review, onChange }) {
   const $ = (id) => document.getElementById(id);
@@ -15,6 +16,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   let run = 0, typeTimer, autoTimer, waitController = new AbortController();
   let fullText = '', statusKey = '', read = false;
   const animations = new Set();
+  const fullscreen = createFullscreen({ t, onError: () => notice('fullscreenError') });
 
   function notice(key) { statusKey = key; $('status').textContent = t(key); }
   function localize() {
@@ -59,6 +61,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   }
 
   function updateControls() {
+    fullscreen.refresh();
     const step = timeline[index];
     $('begin').hidden = ready && (read || step?.kind === 'end');
     if (ready) $('begin').textContent = t(index && !read ? 'resume' : 'begin');
@@ -481,6 +484,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   }
 
   function dispose() {
+    fullscreen.exit({ restoreFocus: false });
     persist();
     loadVersion++;
     loadController?.abort();

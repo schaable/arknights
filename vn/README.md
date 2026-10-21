@@ -139,6 +139,13 @@ and enables scenes that pass command, branch, language, and audio checks.
   Arrow keys adjust the focused slider; Space still advances the story.
   Covers and the library stay silent. Hiding the tab stops automatic reading and
   suspends sound; returning restores sound when enabled.
+- The fullscreen button beside Next expands the story while keeping sound, settings,
+  history and translation review available. Click it again or press Esc to exit;
+  Enter activates the focused button, while Space still advances. Artwork keeps
+  its 16:9 scene proportions with letterboxing, and long dialogue can scroll.
+  Browsers that cannot enter native fullscreen use a full-window view with browser
+  chrome still visible. Fullscreen leaves progress and preferences unchanged and
+  exits on navigation or reload; it is not a saved preference.
 - Progress is independent **per main-story chapter**, **per side story/vignette
   collection**, and **per operator-record/module/Integrated Strategies
   collection**. Each group remembers its last reading or manual completion and preserves each
@@ -246,6 +253,7 @@ the editor and show an error; malformed saved notes are left untouched.
 | `tools/sync-english.py` | Pin translated stories’ English counterparts to an upstream commit |
 | `script.mjs` | Tag parsing, branches, scene state, timeline, progress validation |
 | `reader.mjs` | Reusable player, rendering, transitions, controls, history |
+| `fullscreen.mjs` | Native fullscreen, full-window fallback, view lifecycle and accessible toggle |
 | `review.mjs`, `review-data.mjs` | Per-line comparison controls, note editor, shared classic-reader storage and Markdown export |
 | `assets.mjs` | Existing CDN conventions, image fallback, music/SFX |
 | `storage.mjs` | Versioned grouped saves and legacy migration |
@@ -407,6 +415,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/navigation
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/library.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/keyboard.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/preferences.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/fullscreen.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/operators.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
@@ -442,6 +451,9 @@ volume and text settings across stories/reloads, live volume without restarting
 audio, silent covers, and background audio suspension using a local audio fixture.
 It also checks localized slider labels, keyboard/touch adjustment, and desktop/mobile
 layouts. Unit tests cover volume during crossfades, delayed sounds and mute/restore.
+The fullscreen harness checks native entry/exit, Escape and focus restoration,
+unchanged progress, settings/history/review dialogs, Space, localization, mobile
+fallback, portrait/landscape layouts, scene proportions and late-request cleanup.
 The review harness checks per-dialogue and choice comparison, interoperability
 with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,
