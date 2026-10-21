@@ -804,6 +804,7 @@
     "Patriot",
     "Patriot's Originium Altar",
     "Pavel",
+    "Pegasus Order of Knighthood",
     "Penance",
     "Pepe",
     "Performer Wang",
@@ -1366,7 +1367,6 @@
     "Reunion Troops": "Tropas de Reunion",
     "Reunion Soldier A": "Soldado de Reunion A",
     "Reunion Soldier B": "Soldado de Reunion B",
-    "Pegasus Order of Knighthood": "Orden de Caballería Pegaso",
     "Reunion Blademaster": "Maestro de la espada de Reunion",
     "Old Huntsman": "Viejo cazador",
     "Notarial Hall": "Oficina Notarial",
@@ -1635,6 +1635,18 @@
     "activities/act4d0/level_act4d0_st07::s118": {
       "source": "What is it?",
       "translation": "¿Qué pasa?"
+    },
+    "activities/act4d0/level_act4d0_st01::s37": {
+      "source": "You have managed to completely paralyze Chernobog. I am not sure whether I should be congratulating you.",
+      "translation": "Has logrado paralizar Chernobog por completo. No sé si debería felicitarte."
+    },
+    "activities/act4d0/level_act4d0_st01::s64": {
+      "source": "All our recent Emperors have seen you as nothing more than monsters. You are not Ursus warriors to them. They have done everything they can to oppress your people.",
+      "translation": "Todos nuestros últimos emperadores solo han visto monstruos en ti y en tu pueblo. Para ellos no son guerreros de Ursus. Han hecho todo lo posible por oprimir a tu pueblo."
+    },
+    "activities/act4d0/level_act4d0_st05::s99": {
+      "source": "I'll make you move!",
+      "translation": "¡Voy a hacer que te apartes!"
     }
   }
 }

@@ -46,7 +46,7 @@ const CURATED_DNT = [
   "Buldrokkas'tee", "Barclay", "Semyon", "Alyosha", "Britt", "Kazimierz", "Kazdel",
   "Slink", "Pter", "Scorpion", "Leafa", "Milim", "Tipsy", "Slanna", "Mimi",
   "Mary", "Thumbtack", "Mudflower", "Macron",
-  "Silverlance", "Northern Tundra Guerrillas",
+  "Silverlance", "Northern Tundra Guerrillas", "Pegasus Order of Knighthood",
   // Operational Intelligence: Sniper Training
   "Blacksteel", "Laterano",
   // Operational Intelligence: Survival Notorization
@@ -88,7 +88,6 @@ const CURATED_TERMS = {
   "Reunion Soldier A": "Soldado de Reunion A",
   "Reunion Soldier B": "Soldado de Reunion B",
   "Reunion Blademaster": "Maestro de la espada de Reunion",
-  "Pegasus Order of Knighthood": "Orden de Caballería Pegaso",
   "Old Huntsman": "Viejo cazador",
   "Notarial Hall": "Oficina Notarial",
   "Laterano Notarial Hall": "Oficina Notarial de Laterano",

@@ -90,6 +90,8 @@ Operational Intelligence: "The Anonymous Ones' War", "Destroyer", "Sniper Traini
 "Survival Notorization", "After-class Homework", "Polaris", and "Among the Light
 and the Dust" are translated (all seven stories).
 "Among the Light and the Dust" is awaiting review.
+Five review corrections in "The Anonymous Ones' War" and "After-class Homework"
+are also awaiting confirmation.
 
 ## Running locally
 

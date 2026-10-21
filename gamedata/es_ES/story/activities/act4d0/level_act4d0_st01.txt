@@ -58,7 +58,7 @@ En pocas palabras, estás completamente rodeado por el enemigo.
 [Blocker(a=0, fadetime=1, block=true)]
 [Character(name="char_188_helage_1",fadetime=1,block=true)]
 [Delay(time=1)]
-[name="Hellagur"]   Han logrado paralizar Chernobog por completo. No sé si debería felicitarte.
+[name="Hellagur"]   Has logrado paralizar Chernobog por completo. No sé si debería felicitarte.
 [Character(name="avg_npc_025_1#2")]
 [name="???"]   ——
 [Character(name="char_188_helage_1")]
@@ -76,12 +76,12 @@ En pocas palabras, estás completamente rodeado por el enemigo.
 [name="Patriot"]   Así que. Me recuerda.
 [name="Patriot"]   ...General.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=1)]
-[name="Hellagur"]   Si no hubieras irrumpido en la fortaleza con tanta audacia y con ese escudo tuyo, Barclay, Semyon y yo habríamos muerto a manos de los Silverlance de Kazimierz, de la Orden de Caballería Pegaso.
+[name="Hellagur"]   Si no hubieras irrumpido en la fortaleza con tanta audacia y con ese escudo tuyo, Barclay, Semyon y yo habríamos muerto a manos de los Silverlance de Kazimierz, de la Pegasus Order of Knighthood.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=2)]
 [name="Patriot"]   Mis guerreros. Son valientes. No temen sacrificarse.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=1)]
 [name="Hellagur"]   Mmm. Tu forma de hablar ha cambiado mucho desde entonces.
-[name="Hellagur"]   Una vez te vi arengar a las tropas hasta lograr que incluso Barclay, el Carnicero Calvo, coreara tu nombre. No era nada fácil.
+[name="Hellagur"]   Una vez te vi entusiasmar a las tropas con tus palabras, hasta lograr que incluso Barclay, el Carnicero Calvo, coreara tu nombre. No era nada fácil.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=2)]
 [name="Patriot"]   La infección. Alteró mis cuerdas vocales. Ahora. Me cuesta. Hablar. Con fluidez. Ridículo.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=1)]
@@ -106,7 +106,7 @@ En pocas palabras, estás completamente rodeado por el enemigo.
 [name="Patriot"]   Y, Su Majestad dijo, que el ejército sirve al país. No a las ambiciones de sus oficiales.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=1)]
 [name="Hellagur"]   También dijo una vez que a los habitantes de Ursus los unen sus convicciones, no la sangre. ¿Qué queda de eso ahora? Solo espero que Su Majestad pueda descansar en paz.
-[name="Hellagur"]   Todos nuestros últimos emperadores los han visto como simples monstruos. Para ellos no son guerreros de Ursus. Han hecho todo lo posible por oprimir a tu pueblo.
+[name="Hellagur"]   Todos nuestros últimos emperadores solo han visto monstruos en ti y en tu pueblo. Para ellos no son guerreros de Ursus. Han hecho todo lo posible por oprimir a tu pueblo.
 [Character(name="char_188_helage_1",name2="avg_npc_025_1",focus=2)]
 [name="Patriot"]   Aquel emperador, más sabio. Ya murió. Eso, lo entiendo.
 [name="Patriot"]   Las bestias de guerra. De Ursus. Son tantas, que podrían inundar el mundo. No soy especial.
