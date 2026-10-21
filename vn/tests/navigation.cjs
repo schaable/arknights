@@ -208,7 +208,8 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await page.locator('#player').isVisible(), false);
     assert.equal(await page.locator('.collection-resume').getAttribute('href'), '../' + unavailable.classicHash);
     assert.equal(await page.evaluate(() => window.__vnAudio.every((a) => a.paused && !a.getAttribute('src'))), true);
-    assert.equal(await page.evaluate(() => document.getAnimations().length), 0);
+    // Global controls may still be finishing hover transitions after navigation.
+    assert.equal(await page.evaluate(() => document.querySelector('#stage').getAnimations({ subtree: true }).length), 0);
     await library('#/main/not-a-chapter'); await page.locator('.back-link').waitFor();
     assert.match(await page.locator('.library-heading h2').innerText(), /No encontramos/);
     // A phone can browse the catalog and read the longest translated line without clipping.

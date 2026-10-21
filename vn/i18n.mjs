@@ -1,6 +1,6 @@
 export const copy = {
   es: {
-    language: 'Idioma',
+    language: 'Idioma', volume: 'Volumen',
     savedLocally: 'Tu progreso se guarda en este navegador.', loading: 'Cargando…', begin: 'Comenzar lectura →', resume: 'Continuar lectura →',
     complete: 'LECTURA COMPLETADA', replay: 'Volver a leer',
     back: 'Atrás', auto: 'Auto', history: 'Historial', sound: 'Sonido', soundOff: 'Sonido: no', soundOn: 'Sonido: sí',
@@ -17,7 +17,7 @@ export const copy = {
     saved: 'Progreso guardado', close: 'Cerrar', progress: 'Progreso de lectura',
   },
   en: {
-    language: 'Language', savedLocally: 'Your progress is saved in this browser.',
+    language: 'Language', volume: 'Volume', savedLocally: 'Your progress is saved in this browser.',
     loading: 'Loading…', begin: 'Begin reading →', resume: 'Continue reading →', complete: 'READING COMPLETE',
     replay: 'Read again',
     back: 'Back', auto: 'Auto', history: 'History', sound: 'Sound', soundOff: 'Sound: off', soundOn: 'Sound: on', settings: 'Settings', next: 'Next',

@@ -131,8 +131,12 @@ and enables scenes that pass command, branch, language, and audio checks.
   keep normal keyboard behavior, and holding Space does not repeatedly advance.
 - Typewriter speed, automatic reading, choices, history, restart, reduced motion,
   and mobile layout are supported. Sound and settings are global header controls,
-  available from the library and every story. Sound defaults to muted; its preference,
+  available from the library and every story. A volume slider beside the sound icon
+  adjusts music and effects from 0–100%, including during fades. Volume defaults to
+  55% (the previous playback level); mute remains a separate toggle, so adjusting
+  the slider while muted stays silent. Sound defaults to muted; sound, volume,
   text speed, Doctor's name, and reduced motion persist across stories and reloads.
+  Arrow keys adjust the focused slider; Space still advances the story.
   Covers and the library stay silent. Hiding the tab stops automatic reading and
   suspends sound; returning restores sound when enabled.
 - Progress is independent **per main-story chapter**, **per side story/vignette
@@ -163,7 +167,7 @@ and translation-review notes. The shape is:
 ```js
 {
   v: 2,
-  preferences: { language: 'es', sound: false, nickname: '', speed: 45, motion: false },
+  preferences: { language: 'es', sound: false, volume: 55, nickname: '', speed: 45, motion: false },
   groups: {
     'main:main_0': {
       resume: 'obt/guide/beg/2_guide_to_home',
@@ -433,9 +437,11 @@ insert with a slow image request, independent background/foreground tweens,
 both translated sound-stop sequences, overlay restoration and route teardown.
 Unit tests also verify channel isolation, delayed-start cancellation and mute/
 restore cleanup without fetching audio.
-The preferences harness checks global controls from the library, saved sound and
-text settings across stories/reloads, silent covers, and background audio suspension
-using a local audio fixture.
+The preferences harness checks global controls from the library, saved sound,
+volume and text settings across stories/reloads, live volume without restarting
+audio, silent covers, and background audio suspension using a local audio fixture.
+It also checks localized slider labels, keyboard/touch adjustment, and desktop/mobile
+layouts. Unit tests cover volume during crossfades, delayed sounds and mute/restore.
 The review harness checks per-dialogue and choice comparison, interoperability
 with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,

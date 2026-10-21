@@ -13,15 +13,18 @@ a { color: inherit; text-underline-offset: 4px; }
 a:hover { color: var(--accent); }
 [hidden] { display: none !important; }
 .reader { max-width: 1376px; padding: 0 32px 24px; margin: auto; }
-.topbar { display: flex; align-items: center; gap: 30px; min-height: 100px; }
+.topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 30px; min-height: 100px; padding: 12px 0; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: .16em; font-size: 15px; }
 .brand svg { display: block; flex-shrink: 0; width: 30px; height: 36px; color: var(--accent); }
 .brand small { display: block; font-size: 8px; font-weight: 400; letter-spacing: .32em; color: var(--muted); }
-.chapter-label { padding-left: 30px; border-left: 1px solid var(--line); flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.chapter-label { padding-left: 30px; border-left: 1px solid var(--line); flex: 1; min-width: 180px; overflow-wrap: anywhere; }
 .chapter-label > span { font-size: 10px; letter-spacing: .16em; color: var(--muted); }
 .chapter-label b { color: var(--accent); padding: 0 8px; }
 h1 { font-size: 19px; font-weight: 500; margin: 3px 0 0; }
 .global-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; margin-left: auto; }
+.volume-control { display: flex; align-items: center; gap: 6px; }
+#volume { width: 80px; height: 36px; margin: 0; padding: 0; accent-color: var(--accent); cursor: pointer; }
+#volume-value { width: 4ch; color: var(--muted); font: 11px ui-monospace, monospace; text-align: right; }
 .icon-button { position: relative; width: 36px; height: 36px; padding: 0; display: grid; place-items: center; }
 .icon-button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 #sound[aria-pressed="false"] .sound-on, #sound[aria-pressed="true"] .sound-off { display: none; }
@@ -125,6 +128,8 @@ input[type="checkbox"] { accent-color: var(--accent); }
 @media (max-width: 700px) {
   .reader { padding: 0 12px 20px; }
   .topbar { min-height: 85px; gap: 12px; flex-wrap: wrap; padding: 14px 0; }
+  .global-controls { flex-wrap: wrap; justify-content: flex-end; width: 100%; }
+  .global-controls .review-toolbar { margin-right: auto; }
   .brand { font-size: 12px; flex: 1; }
   .brand svg { width: 23px; }
   .chapter-label { order: 3; flex-basis: 100%; padding: 0; border: 0; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
@@ -155,7 +160,11 @@ input[type="checkbox"] { accent-color: var(--accent); }
   .footer { flex-direction: column; gap: 8px; }
   .setting { flex-wrap: wrap; gap: 8px; }
 }
-@media (max-width: 380px) { .brand > span { display: none; } }
+@media (max-width: 380px) {
+  .brand > span { display: none; }
+  .global-controls, .volume-control { gap: 4px; }
+  #volume { width: 50px; }
+}
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0s !important; } }
 
 /* Catalog and navigation share the stage's restrained archive styling. */

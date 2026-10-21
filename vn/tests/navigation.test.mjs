@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { routeFor, resolveRoute, groupKey, groupStats, isOperatorCategory, operatorsFor, topicsFor } from '../catalog.mjs';
-import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore } from '../storage.mjs';
+import { createProgressStore, STORAGE_KEY, LEGACY_KEY, normalizeStore, cleanPreferences } from '../storage.mjs';
 import { parseScript, buildTimeline, validateProgress } from '../script.mjs';
 import { scriptSignature } from '../compatibility.mjs';
 import { recentGroups, resumeStory } from '../library.mjs';
@@ -15,6 +15,24 @@ const memory = () => {
   return { getItem: (key) => data.get(key) ?? null, setItem: (key, value) => data.set(key, value) };
 };
 const progress = (line, read = false) => ({ line, read, answers: {}, updated: line * 1000 });
+
+test('volume preferences default for existing saves, validate values, and preserve story progress', () => {
+  for (const volume of [undefined, null, '30', NaN, Infinity]) assert.equal(cleanPreferences({ volume }).volume, 55);
+  for (const [volume, expected] of [[0, 0], [100, 100], [-10, 0], [120, 100], [32.7, 33]]) {
+    assert.equal(cleanPreferences({ volume }).volume, expected);
+  }
+  const storage = memory();
+  storage.setItem(LEGACY_KEY, JSON.stringify({ v: 1, preferences: { sound: true } }));
+  const store = createProgressStore(storage, catalog);
+  assert.equal(store.snapshot().preferences.volume, 55);
+  store.save(group('main_0'), prologue, progress(42));
+  const before = store.snapshot().groups;
+  store.preferences({ ...store.snapshot().preferences, volume: 0 });
+  const restored = createProgressStore(storage, catalog).snapshot();
+  assert.equal(restored.preferences.volume, 0);
+  assert.equal(restored.preferences.sound, true);
+  assert.deepEqual(restored.groups, before);
+});
 
 test('catalog routes round-trip uniquely for all categories, collections and stories', () => {
   const routes = new Set();

@@ -32,7 +32,7 @@ export function loadImage(img, kind, name, onError, onLoad = null) {
 }
 
 export class Soundtrack {
-  constructor(map, onError) {
+  constructor(map, onError, volume = 0.55) {
     this.map = map;
     this.onError = onError;
     this.enabled = false;
@@ -43,6 +43,17 @@ export class Soundtrack {
     this.pendingEffects = new Map();
     this.timers = new Set();
     this.fades = new Map();
+    // Script levels (including fades) stay independent of the user's volume.
+    this.levels = new Map();
+    this.volume = volume;
+  }
+  setLevel(audio, level) {
+    this.levels.set(audio, level);
+    audio.volume = level * this.volume;
+  }
+  setVolume(volume) {
+    this.volume = Math.max(0, Math.min(1, volume));
+    for (const [audio, level] of this.levels) audio.volume = level * this.volume;
   }
   create(key, volume, loop = false) {
     const path = soundPath(this.map, key);
@@ -51,7 +62,7 @@ export class Soundtrack {
     const urls = [primary + `torappu/dynamicassets/audio/${path}.mp3`.toLowerCase(),
       'https://raw.githubusercontent.com/Aceship/Arknight-voices/main/' + path.replace(/^Sound_Beta_2\//, '').toLowerCase() + '.wav'];
     let attempt = 0;
-    audio.volume = Math.max(0, Math.min(1, Number(volume ?? 0.8))) * 0.55;
+    this.setLevel(audio, Math.max(0, Math.min(1, Number(volume ?? 0.8))));
     audio.loop = loop;
     audio.onerror = () => {
       if (++attempt < urls.length) { audio.src = urls[attempt]; this.play(audio); }
@@ -78,6 +89,7 @@ export class Soundtrack {
     this.effectChannels.delete(audio);
     clearInterval(this.fades.get(audio));
     this.fades.delete(audio);
+    this.levels.delete(audio);
     audio.onended = audio.onerror = null;
     audio.pause();
     audio.removeAttribute('src');
@@ -86,11 +98,11 @@ export class Soundtrack {
   fade(audio, target, seconds, done = () => {}) {
     if (!audio) return;
     clearInterval(this.fades.get(audio));
-    if (!(Number(seconds) > 0)) { this.fades.delete(audio); audio.volume = target; done(); return; }
-    const initial = audio.volume, start = performance.now();
+    if (!(Number(seconds) > 0)) { this.fades.delete(audio); this.setLevel(audio, target); done(); return; }
+    const initial = this.levels.get(audio), start = performance.now();
     const timer = setInterval(() => {
       const fraction = Math.min(1, (performance.now() - start) / (Number(seconds) * 1000));
-      audio.volume = initial + (target - initial) * fraction;
+      this.setLevel(audio, initial + (target - initial) * fraction);
       if (fraction === 1) { clearInterval(timer); this.fades.delete(audio); done(); }
     }, 40);
     this.fades.set(audio, timer);
@@ -108,8 +120,8 @@ export class Soundtrack {
     if (!audio) return;
     this.track = audio;
     if (seconds > 0 && !resume) {
-      const target = audio.volume;
-      audio.volume = 0;
+      const target = this.levels.get(audio);
+      this.setLevel(audio, 0);
       this.fade(audio, target, seconds);
     }
     if (hasIntro) audio.onended = () => {

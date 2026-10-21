@@ -59,7 +59,7 @@ const server = http.createServer(async (request, response) => {
     await at(steps[index]);
 
     // A focused control must not receive its native Space click or selection.
-    for (const selector of ['#settings', '#history', '#auto', '#sound', '#back', '#next',
+    for (const selector of ['#settings', '#history', '#auto', '#sound', '#volume', '#back', '#next',
       '#dialogue', '#review-toggle', '#review-note', '#next-story', '#language', '#story-select']) {
       const control = page.locator(selector);
       const url = page.url();

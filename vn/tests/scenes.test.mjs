@@ -120,6 +120,63 @@ test('StopSound fades only the named channel, keeping music and other sounds pla
   assert.equal(music.paused, false); assert.equal(rain.paused, false);
 });
 
+test('master volume scales music, loops, one-shots and delayed sounds without restarting them', (t) => {
+  const { soundtrack: s, audios, advance } = audioHarness(t);
+  s.music({ key: 'music', volume: 0.8 });
+  s.effect({ key: 'rain', volume: 0.4, loop: 'true' });
+  s.effect({ key: 'impact', volume: 1 });
+  s.effect({ key: 'heartbeat', volume: 0.6, delay: 1 });
+  advance(10);
+  const plays = audios.map((a) => a.plays);
+  s.setVolume(0.25);
+  assert.deepEqual(audios.map((a) => a.volume), [0.2, 0.1, 0.25, 0.15]);
+  assert.deepEqual(audios.map((a) => a.plays), plays);
+  s.setVolume(0);
+  assert.ok(audios.every((a) => a.volume === 0));
+  advance(1000);
+  assert.equal(audios[3].plays, 1);
+  assert.equal(audios[3].volume, 0);
+  s.setVolume(1);
+  assert.deepEqual(audios.map((a) => a.volume), [0.8, 0.4, 1, 0.6]);
+  s.enable(false);
+  assert.equal(s.levels.size, 0);
+  s.setVolume(0.5);
+  assert.ok(audios.every((a) => a.paused));
+  s.enable(true);
+  advance(10);
+  assert.equal(audios.at(-1).volume, 0.4, 'new playback retains master volume');
+});
+
+test('volume changes during crossfades and sound fades preserve the script envelope even at zero', (t) => {
+  const { soundtrack: s, audios, advance } = audioHarness(t);
+  s.setVolume(1);
+  s.music({ key: 'music', volume: 0.8 });
+  advance(10);
+  s.music({ key: 'music', volume: 0.4, crossfade: 1 });
+  s.effect({ key: 'rain', volume: 0.6, channel: 'weather', loop: 'true' });
+  advance(200);
+  const [old, current, rain] = audios;
+  s.stopEffect({ channel: 'weather', fadetime: 0.8 });
+  s.setVolume(0.5);
+  assert.ok(Math.abs(old.volume - 0.32) < 1e-9);
+  assert.ok(Math.abs(current.volume - 0.04) < 1e-9);
+  advance(200);
+  assert.ok(Math.abs(old.volume - 0.24) < 1e-9);
+  assert.ok(Math.abs(current.volume - 0.08) < 1e-9);
+  assert.ok(Math.abs(rain.volume - 0.225) < 1e-9);
+  s.setVolume(0);
+  advance(200);
+  assert.ok(audios.every((a) => a.volume === 0));
+  s.setVolume(1);
+  assert.ok(Math.abs(old.volume - 0.32) < 1e-9);
+  assert.ok(Math.abs(current.volume - 0.24) < 1e-9);
+  assert.ok(Math.abs(rain.volume - 0.3) < 1e-9);
+  advance(400);
+  assert.equal(current.volume, 0.4);
+  assert.equal(old.src, ''); assert.equal(rain.src, '');
+  assert.equal(s.levels.size, 1);
+});
+
 test('stopping or replacing a channel cancels delayed starts, including after a requested fade', (t) => {
   const { soundtrack: s, audios, advance } = audioHarness(t);
   s.effect({ key: 'heartbeat', channel: 'HB', delay: 0.03, loop: 'true' });

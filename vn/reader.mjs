@@ -73,6 +73,9 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('sound').setAttribute('aria-pressed', preferences.sound);
     $('sound').setAttribute('aria-label', t('sound'));
     $('sound').title = t(preferences.sound ? 'soundOn' : 'soundOff');
+    $('volume').value = preferences.volume;
+    $('volume').setAttribute('aria-valuetext', `${preferences.volume}%`);
+    $('volume-value').textContent = `${preferences.volume}%`;
     $('settings').setAttribute('aria-label', t('settings'));
     $('settings').title = t('settings');
     const percent = step?.kind === 'end' ? 100 : Math.floor(((step?.line || 0) / (commands?.at(-1)?.line || 1)) * 100);
@@ -545,7 +548,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       }
       ({ answers, timeline, index } = validateProgress(commands, saved));
       read = saved?.read === true;
-      soundtrack = new Soundtrack(loaded.audio, () => { if (token === loadVersion) notice('audioError'); });
+      soundtrack = new Soundtrack(loaded.audio, () => { if (token === loadVersion) notice('audioError'); }, preferences.volume / 100);
       ready = true;
       $('begin').disabled = false;
       localize();
@@ -582,6 +585,12 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     preferences.sound = !preferences.sound;
     if (!store.preferences(preferences)) notice('storageError');
     syncSound();
+    updateControls();
+  });
+  $('volume').addEventListener('input', () => {
+    preferences.volume = Number($('volume').value);
+    soundtrack?.setVolume(preferences.volume / 100);
+    if (!store.preferences(preferences)) notice('storageError');
     updateControls();
   });
   function changeLanguage() {
@@ -632,7 +641,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   }
   document.addEventListener('keydown', (event) => {
     if (!ready || event.altKey || event.ctrlKey || event.metaKey || document.querySelector('dialog[open]')) return;
-    if (event.target.closest('input, textarea, [contenteditable]:not([contenteditable="false"])')) return;
+    if (event.target.closest('input:not([type="range"]), textarea, [contenteditable]:not([contenteditable="false"])')) return;
     if (event.key === ' ') {
       // Cancel native button/select activation, including repeated keydowns.
       // Focus can stay on the control that opened a now-closed dialog.
@@ -640,7 +649,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       if (!event.repeat) { if (started) next(); else begin(); }
       return;
     }
-    if (!started || event.repeat || event.target.closest('select')) return;
+    if (!started || event.repeat || event.target.closest('input, select')) return;
     if (['ArrowRight', 'ArrowLeft', 'h', 'H'].includes(event.key)) {
       event.preventDefault();
       if (event.key === 'ArrowLeft') back();
