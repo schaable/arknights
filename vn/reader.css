@@ -64,8 +64,14 @@ h1 { font-size: 19px; font-weight: 500; margin: 3px 0 0; }
 .review-toolbar { display: flex; align-items: center; gap: 6px; }
 #review-count { position: absolute; top: -6px; right: -3px; min-width: 16px; padding: 1px 4px; border-radius: 8px; background: var(--accent); color: #102029; font: 10px/1.4 system-ui, sans-serif; pointer-events: none; }
 .review-status { color: var(--accent); font-size: 12px; overflow-wrap: anywhere; }
-#review-status { margin: 0; }
-#review-status:not(:empty) { margin-bottom: 16px; }
+/* Keep the live region mounted, but outside page flow so notices never shift navigation. */
+#review-status {
+  position: fixed; z-index: 5; margin: 0;
+  right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom));
+  max-width: min(440px, calc(100vw - 32px - env(safe-area-inset-left) - env(safe-area-inset-right)));
+  font-size: 13px; pointer-events: none;
+}
+#review-status:not(:empty) { padding: 12px 16px; border: 1px solid #80d4dd55; border-radius: 6px; background: #111c24; box-shadow: 0 8px 32px #0008; }
 /* Branch ends use lavender; a noted branch end keeps both colored markers. */
 .dialogue-panel.branch-end { box-shadow: inset 3px 0 var(--branch-accent); }
 .dialogue-panel.branch-end .dialogue { border-left: 3px solid var(--branch-accent); }
@@ -210,10 +216,14 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .reader-fullscreen .ending { justify-content: safe center; }
 .reader-fullscreen .ending > * { flex-shrink: 0; }
 .reader-fullscreen .controls { min-height: 44px; flex-shrink: 0; }
-.reader-fullscreen :is(.status, .review-status) { margin: 0; min-height: 0; flex-shrink: 0; }
-.reader-fullscreen :is(.status, .review-status):empty { display: none; }
+.reader-fullscreen :is(.status, #review-error) { margin: 0; min-height: 0; flex-shrink: 0; }
+.reader-fullscreen :is(.status, #review-error):empty { display: none; }
+.reader-fullscreen #review-status { bottom: calc(64px + env(safe-area-inset-bottom)); }
 .reader-fullscreen .load-notice { flex-shrink: 0; max-height: 20dvh; overflow-y: auto; }
-@media (max-width: 700px) { .reader-fullscreen .position { display: none; } }
+@media (max-width: 700px) {
+  .reader-fullscreen .position { display: none; }
+  .reader-fullscreen #review-status { bottom: calc(120px + env(safe-area-inset-bottom)); }
+}
 
 /* Catalog and navigation share the stage's restrained archive styling. */
 .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 12px; padding: 0 0 18px; }

@@ -163,10 +163,44 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await page.locator('#text').getAttribute('lang'), 'es');
 
     // Clipboard success uses the real browser API; blocked clipboard gives selected Markdown.
-    await page.locator('#review-copy').click();
-    await page.waitForFunction(() => document.querySelector('#review-status').textContent.includes('copiada'));
+    async function copyWithoutLayoutShift(name) {
+      await page.waitForFunction(() => !document.querySelector('#review-status').textContent);
+      await page.locator('#review-copy').scrollIntoViewIfNeeded();
+      const layout = () => page.evaluate(() => ({
+        boxes: ['#breadcrumbs', '#stage', '.controls'].map((selector) => {
+          const { x, y, width, height } = document.querySelector(selector).getBoundingClientRect();
+          return { x, y, width, height };
+        }),
+        scrollY, height: document.documentElement.scrollHeight, width: document.documentElement.scrollWidth,
+      }));
+      const before = await layout();
+      await page.locator('#review-copy').click();
+      await page.waitForFunction(() => document.querySelector('#review-status').textContent.includes('copiada'));
+      assert.deepEqual(await layout(), before, `${name}: notification does not move or resize the reader`);
+      const toast = await page.locator('#review-status').boundingBox(), viewport = page.viewportSize();
+      assert.ok(toast.x >= 0 && toast.y >= 0 && toast.x + toast.width <= viewport.width && toast.y + toast.height <= viewport.height,
+        `${name}: notification stays inside the viewport`);
+      assert.equal(await page.locator('#review-status').getAttribute('role'), 'status');
+      if (await page.locator('body').evaluate((el) => el.classList.contains('reader-fullscreen'))) {
+        const controls = await page.locator('.controls').boundingBox();
+        assert.ok(toast.y + toast.height <= controls.y, `${name}: notification stays above fullscreen controls`);
+      }
+      await page.screenshot({ path: path.join(output, `notification-${name}.png`), fullPage: true });
+      await page.waitForFunction(() => !document.querySelector('#review-status').textContent);
+      assert.deepEqual(await layout(), before, `${name}: dismissing the notification does not move the reader`);
+    }
+    await copyWithoutLayoutShift('desktop');
     const report = exportReviews(await stored());
     assert.equal(await page.evaluate(() => navigator.clipboard.readText()), report);
+    await page.locator('#fullscreen').click();
+    await copyWithoutLayoutShift('desktop-fullscreen');
+    await page.locator('#fullscreen').click();
+    await page.setViewportSize({ width: 390, height: 844 });
+    await copyWithoutLayoutShift('mobile');
+    await page.locator('#fullscreen').click();
+    await copyWithoutLayoutShift('mobile-fullscreen');
+    await page.locator('#fullscreen').click();
+    await page.setViewportSize({ width: 1280, height: 960 });
     await page.evaluate(() => { Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async () => { throw new Error('Denied'); } } }); });
     await page.locator('#review-copy').click();
     await page.locator('#review-export-dialog[open]').waitFor();
@@ -244,6 +278,6 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await page.locator('#review-dialog').isVisible(), true);
     assert.equal(await page.evaluate((key) => localStorage.getItem(key), REVIEW_KEY), '{broken');
     assert.deepEqual(errors, []);
-    console.log('Review passed: per-line/choice comparison, shared classic notes, exact snapshots, edit/delete/clear, clipboard/fallback, mobile, missing/misaligned sources, quota/corrupt storage and navigation cleanup.');
+    console.log('Review passed: per-line/choice comparison, shared classic notes, exact snapshots, edit/delete/clear, clipboard/fallback, notifications without layout shifts on desktop/mobile/fullscreen, missing/misaligned sources, quota/corrupt storage and navigation cleanup.');
   } finally { await browser?.close(); await new Promise((resolve) => server.close(resolve)); }
 })().catch((error) => { console.error(error); process.exitCode = 1; });

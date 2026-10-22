@@ -280,6 +280,10 @@ progress. Both readers share `arknights.translationReviews.v1` on the same
 browser and origin, so existing classic-reader notes are immediately available
 and edits synchronize between tabs. Storage failures leave unsaved drafts in
 the editor and show an error; malformed saved notes are left untouched.
+Review notifications float near the bottom of the viewport without shifting
+breadcrumbs or resizing the story, including in fullscreen. They remain announced
+to screen readers and do not intercept clicks; confirmations disappear after four
+seconds, while storage warnings remain visible. Editor errors stay inside the dialog.
 
 ## Files and extension points
 
@@ -520,7 +524,8 @@ on desktop, mobile and fullscreen. Unit tests cover speaker focus and text-only
 entries independently of translated names.
 The review harness checks per-dialogue and choice comparison, interoperability
 with the classic review UI, source snapshots, note editing/deletion, clipboard
-and manual export, mobile layout, missing/misaligned sources, storage failures,
+and manual export, notifications without layout shifts on desktop/mobile/fullscreen,
+mobile layout, missing/misaligned sources, storage failures,
 and route cleanup. Unit tests verify shared note IDs, raw source fields, the
 Markdown format, and preservation of existing notes and reading progress.
 Branch marker tests cover branch ends, noted lines, highlighted Doctor choices in
