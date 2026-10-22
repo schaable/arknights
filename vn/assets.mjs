@@ -23,16 +23,74 @@ export function imageURLs(kind, name) {
 }
 
 export function loadImage(img, kind, name, onError, onLoad = null) {
-  const urls = imageURLs(kind, name);
+  img.dataset.asset = name;
+  loadImageURLs(img, imageURLs(kind, name), onError, onLoad);
+}
+
+function loadImageURLs(img, urls, onError, onLoad) {
   let index = 0;
   img.draggable = false;
-  img.dataset.asset = name;
   img.onload = onLoad;
   img.onerror = () => {
     if (++index < urls.length) img.src = urls[index];
     else { img.hidden = true; onError(); }
   };
   img.src = urls[index];
+}
+
+// Small caches share decoded images and remember a working mirror.
+// Consumers own their visible nodes; clearing a cache cannot replace them.
+export function createImageCache(kind, limit = 12) {
+  const cache = new Map();
+  const urlsFor = typeof kind === 'function' ? kind : (name) => imageURLs(kind, name);
+  function prepare(name, priority = 'auto') {
+    const urls = urlsFor(name), id = urls[0];
+    if (!id) return Promise.resolve(null);
+    let entry = cache.get(id);
+    if (entry) {
+      cache.delete(id); cache.set(id, entry);
+      if (priority === 'auto') entry.image.fetchPriority = priority;
+      return entry.promise;
+    }
+    const image = new Image();
+    image.alt = ''; image.decoding = 'async'; image.fetchPriority = priority;
+    if (typeof name === 'string') image.dataset.asset = name;
+    entry = { image, ready: null };
+    entry.promise = new Promise((resolve) => {
+      let settled = false;
+      const finish = (result) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        image.onload = image.onerror = null;
+        entry.ready = result;
+        resolve(result);
+      };
+      entry.cancel = () => { finish(null); image.removeAttribute('src'); };
+      const timer = setTimeout(entry.cancel, 15000);
+      loadImageURLs(image, urls, () => finish(null), () => {
+        image.decode().then(() => finish(image)).catch(() => image.onerror?.());
+      });
+    });
+    cache.set(id, entry);
+    if (cache.size > limit) {
+      const oldest = cache.keys().next().value;
+      cache.get(oldest).cancel(); cache.delete(oldest);
+    }
+    return entry.promise;
+  }
+  return {
+    prepare,
+    ready(name) { return cache.get(urlsFor(name)[0])?.ready; },
+    prefetch(names) {
+      if (navigator.connection?.saveData) return;
+      for (const name of [...new Set(names)].slice(0, Math.min(9, limit))) prepare(name, 'low');
+    },
+    clear() {
+      for (const entry of cache.values()) entry.cancel();
+      cache.clear();
+    },
+  };
 }
 
 export class Soundtrack {

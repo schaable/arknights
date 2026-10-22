@@ -35,11 +35,16 @@ const server = http.createServer(async (request, response) => {
     browser = await playwright.chromium.launch({ ...(process.env.VN_BROWSER_PATH ? { executablePath: process.env.VN_BROWSER_PATH } : {}), args: ['--no-sandbox'] });
     const errors = [];
     const base = `http://127.0.0.1:${server.address().port}/arknights/vn/`;
-    const makePage = async (options, missingPortraits = false) => {
+    const makePage = async (options, missingPortraits = false, slowPortrait = false) => {
+      const portraitRequests = [];
+      let releasePortrait;
+      const pendingPortrait = slowPortrait ? new Promise((resolve) => { releasePortrait = resolve; }) : null;
       const context = await browser.newContext({ ignoreHTTPSErrors: true, ...options });
-      await context.route(/^https:\/\//, (route) => {
+      await context.route(/^https:\/\//, async (route) => {
         const url = route.request().url();
         if (!url.includes('/thumbs/')) return route.abort();
+        portraitRequests.push(url);
+        if (url.includes('char_260_durnar')) await pendingPortrait;
         // Verify that the raw mirror recovers a failed primary portrait.
         if (url.includes('char_260_durnar') && (missingPortraits || url.includes('cdn.jsdelivr.net'))) return route.fulfill({ status: 404, body: '' });
         return route.continue();
@@ -49,6 +54,8 @@ const server = http.createServer(async (request, response) => {
         Object.defineProperty(document, 'fullscreenEnabled', { value: false });
       }, saved);
       const page = await context.newPage();
+      page.portraitRequests = portraitRequests;
+      page.releasePortrait = releasePortrait;
       page.setDefaultTimeout(15000);
       page.on('pageerror', (error) => errors.push(error.message));
       await page.goto(base + '#/vignettes/children-of-ursus/habits');
@@ -81,6 +88,8 @@ const server = http.createServer(async (request, response) => {
 
     const page = await makePage({ viewport: { width: 1440, height: 900 } });
     const before = await page.evaluate(() => localStorage.getItem('arknights.vn.v2'));
+    await page.waitForTimeout(100);
+    assert.ok(page.portraitRequests.some((url) => url.includes('char_260_durnar')), 'recent portraits start loading before history opens');
     await openHistory(page);
     assert.equal(await page.locator('.history-line').count(), recent.length);
     assert.deepEqual(await page.locator('.history-line').evaluateAll((rows) => rows.map((row) => row.querySelector('img')?.dataset.asset || null)),
@@ -93,11 +102,24 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await last.locator('img').evaluate((img) => getComputedStyle(img).objectFit), 'contain');
     assert.equal(await page.getByRole('button', { name: `${recent.at(-1).speaker} ${recent.at(-1).text}`, exact: true }).count(), 1, 'portrait does not repeat the accessible name');
     await page.screenshot({ path: path.join(output, 'history-portraits-desktop.png') });
+    await page.evaluate(() => {
+      window.lastHistoryImage = document.querySelector('.history-line:last-child img');
+      window.historyChanges = [];
+      new MutationObserver((records) => window.historyChanges.push(...records))
+        .observe(document.querySelector('#history-list'), { childList: true });
+    });
     await page.locator('#history-dialog .close').click();
     assert.equal(await page.evaluate(() => localStorage.getItem('arknights.vn.v2')), before);
+    const requestsBefore = page.portraitRequests.filter((url) => url.includes('char_260_durnar')).length;
+    await openHistory(page);
+    assert.equal(await page.evaluate(() => window.lastHistoryImage === document.querySelector('.history-line:last-child img')), true, 'reopening reuses the decoded image');
+    assert.equal(await page.evaluate(() => window.historyChanges.length), 0, 'reopening does not detach the rows');
+    assert.equal(page.portraitRequests.filter((url) => url.includes('char_260_durnar')).length, requestsBefore, 'reopening does not retry the failed primary mirror');
+    await page.locator('#history-dialog .close').click();
     await page.locator('#language').selectOption('en');
     await openHistory(page);
     assert.equal(await last.locator('img').getAttribute('data-asset'), 'char_260_durnar_1');
+    assert.equal(await page.evaluate(() => window.lastHistoryImage === document.querySelector('.history-line:last-child img')), true, 'language changes update text while preserving portraits');
     await page.keyboard.press('Escape');
 
     const mobile = await makePage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
@@ -117,6 +139,52 @@ const server = http.createServer(async (request, response) => {
     await previous.locator('.history-portrait').tap();
     await mobile.locator('#history-dialog').waitFor({ state: 'hidden' });
     assert.equal(await mobile.locator('#stage').getAttribute('data-line'), String(recent.at(-2).line), 'tapping the portrait restores that line');
+    await openHistory(mobile);
+    assert.equal(await mobile.locator('.history-line').count(), recent.length - 1, 'seeking trims later history entries');
+    await mobile.locator('#history-dialog .close').tap();
+
+    // A cold portrait stays hidden through both download and decoding. The
+    // initial, scroll position and close button remain available throughout.
+    const slow = await makePage({ viewport: { width: 390, height: 844 } }, false, true);
+    await slow.evaluate(() => {
+      const decode = HTMLImageElement.prototype.decode;
+      const gate = new Promise((resolve) => { window.releaseDecode = resolve; });
+      HTMLImageElement.prototype.decode = async function () {
+        await decode.call(this);
+        if (this.src.includes('/thumbs/char_260_durnar')) {
+          window.decodeStarted = true;
+          await gate;
+        }
+        this.dataset.testDecoded = 'true';
+      };
+    });
+    await slow.locator('#history').click();
+    const slowLast = slow.locator('.history-line').last();
+    const initialBox = await slowLast.locator('.history-portrait').boundingBox();
+    assert.equal(await slowLast.locator('img').isHidden(), true);
+    assert.equal(await slowLast.locator('img').getAttribute('src'), null, 'an undecoded portrait is not assigned to the visible row');
+    assert.equal(await slowLast.locator('.history-portrait').textContent(), 'D');
+    await slow.locator('#history-dialog .close').click();
+    await slow.locator('#history').click();
+    slow.releasePortrait();
+    await slow.waitForFunction(() => window.decodeStarted);
+    assert.equal(await slowLast.locator('img').isHidden(), true, 'network completion alone does not reveal the portrait');
+    assert.equal(await atEnd(slow), true);
+    await slow.evaluate(() => window.releaseDecode());
+    await slowLast.locator('img').waitFor({ state: 'visible' });
+    assert.equal(await slowLast.locator('img').getAttribute('data-test-decoded'), 'true');
+    assert.deepEqual(await slowLast.locator('.history-portrait').boundingBox(), initialBox, 'loading does not move the entry');
+    await slow.locator('#history-dialog .close').click();
+
+    const leaving = await makePage({ viewport: { width: 390, height: 844 } }, false, true);
+    await leaving.locator('#history').click();
+    await leaving.evaluate(() => { window.oldPortrait = document.querySelector('.history-line:last-child img'); location.hash = '#/'; });
+    await leaving.locator('.category-card').first().waitFor();
+    leaving.releasePortrait();
+    await leaving.waitForTimeout(150);
+    assert.equal(await leaving.evaluate(() => window.oldPortrait.hidden), true, 'late requests cannot reveal removed portraits');
+    assert.equal(await leaving.locator('#history-list img').count(), 0);
+    assert.equal(await leaving.locator('#status').textContent(), '');
 
     // A fresh context avoids already decoded portraits bypassing the failures.
     const failed = await makePage({ viewport: { width: 390, height: 844 } }, true);
@@ -130,7 +198,7 @@ const server = http.createServer(async (request, response) => {
     assert.equal(await failed.locator('#status').textContent(), status, 'missing optional portraits do not interrupt reading');
     await failed.locator('#history-dialog .close').click();
     assert.deepEqual(errors, []);
-    console.log('History portraits passed: real thumbnails, focused expressions, narration, localization, mirror/missing fallback, stable latest-entry scrolling, accessible labels, desktop/mobile/fullscreen and portrait selection.');
+    console.log('History portraits passed: preloading, decoded reveal, reused rows/images, slow download/decode, cancellation, real thumbnails, focused expressions, mirror/missing fallback, scrolling, localization, accessible labels and desktop/mobile/fullscreen selection.');
   } finally {
     await browser?.close();
     await new Promise((resolve) => server.close(resolve));

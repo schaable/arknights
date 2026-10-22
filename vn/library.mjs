@@ -1,5 +1,5 @@
 import { routeFor, groupStats, isOperatorCategory, operatorsFor, topicsFor } from './catalog.mjs';
-import { createCover } from './covers.mjs';
+import { reuseCovers } from './covers.mjs';
 export function element(tag, text, className) {
   const node = document.createElement(tag);
   if (text !== undefined) node.textContent = text;
@@ -32,6 +32,7 @@ export function recentGroups(catalog, store) {
     .filter((group) => resumeStory(group, store.group(group)));
 }
 export function renderLibrary(root, route, { catalog, store, preferences, t }) {
+  let createCover = reuseCovers(root);
   root.replaceChildren();
   const { category, group, story, operator, topic } = route;
   const heading = (title, description, collection) => {
@@ -123,6 +124,7 @@ export function renderLibrary(root, route, { catalog, store, preferences, t }) {
     filters.append(search, label); root.append(filters);
     const grid = element('div', undefined, 'collection-grid'); root.append(grid);
     const render = () => {
+      if (grid.children.length) createCover = reuseCovers(grid);
       grid.replaceChildren();
       const query = search.value.trim().toLocaleLowerCase();
       const matches = entries.filter((entry) => {

@@ -1,9 +1,11 @@
 import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt, speakerCharacter, choiceReviewRanges } from './script.mjs';
 import { loadImage, Soundtrack } from './assets.mjs';
-import { createCover } from './covers.mjs';
+import { reuseCovers } from './covers.mjs';
 import { loadStory } from './loader.mjs';
 import { reviewContext } from './review-data.mjs';
 import { createFullscreen } from './fullscreen.mjs';
+import { createCharacters } from './characters.mjs';
+import { createPortraits } from './portraits.mjs';
 
 export function createPlayer({ preferences, t, store, review, onChange }) {
   const $ = (id) => document.getElementById(id);
@@ -18,6 +20,8 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   let fullText = '', statusKey = '', read = false;
   const animations = new Set();
   const fullscreen = createFullscreen({ t, onError: () => notice('fullscreenError') });
+  const characters = createCharacters($('characters'), () => notice('assetError'));
+  const portraits = createPortraits($('history-list'));
 
   function notice(key) { statusKey = key; $('status').textContent = t(key); }
   function localize() {
@@ -158,20 +162,11 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     } else layer.replaceChildren(img);
   }
   function drawCharacters() {
-    const existing = [...$('characters').children];
-    const nodes = state.characters.map((name, i) => {
-      const img = existing[i] || document.createElement('img');
-      img.alt = '';
-      if (img.dataset.asset !== name || img.hidden) {
-        img.hidden = false;
-        const token = loadVersion;
-        loadImage(img, 'character', name, () => { if (token === loadVersion) notice('assetError'); });
-      }
-      img.dataset.slot = state.characters.length === 1 ? 'center' : ['left', 'right', 'center'][i];
-      img.classList.toggle('dim', state.focus !== i + 1 && state.focus !== 0);
-      return img;
-    });
-    $('characters').replaceChildren(...nodes);
+    characters.draw(state.characters, state.focus);
+  }
+  function prefetchArtwork() {
+    characters.prefetch(timeline.slice(index, index + 3).flatMap((step) => step.state.characters));
+    portraits.prefetch(timeline.slice(Math.max(0, index - 8), index + 1).map(speakerCharacter).filter(Boolean));
   }
 
   function loadOverlay(img, kind, name, ready) {
@@ -420,6 +415,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     const token = run;
     const step = timeline[index];
     if (step.kind !== 'end') read = false;
+    prefetchArtwork();
     $('choices').hidden = true;
     $('ending').hidden = true;
     $('dialogue-panel').hidden = $('dialogue').hidden = true;
@@ -485,28 +481,37 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     stopAuto();
     if (busy) next();
     if (typing) finishText();
-    $('history-list').replaceChildren();
+    portraits.reset();
+    const list = $('history-list');
+    const previous = new Map([...list.children].map((button) => [Number(button.dataset.line), button]));
+    const rows = [];
     for (const [i, step] of timeline.slice(0, index + 1).entries()) {
       if (step.kind === 'end') continue;
-      const button = document.createElement('button');
+      let button = previous.get(step.line);
+      if (!button) {
+        button = document.createElement('button');
+        button.dataset.line = step.line;
+        button.addEventListener('click', () => { index = Number(button.dataset.index); $('history-dialog').close(); showStep(); });
+        const copy = document.createElement('span');
+        copy.className = 'history-copy';
+        copy.append(document.createElement('strong'), document.createTextNode(''));
+        button.append(copy);
+      }
+      button.dataset.index = i;
       button.className = 'history-line';
       const portrait = speakerCharacter(step);
+      let frame = button.querySelector('.history-portrait');
       if (portrait) {
-        const frame = document.createElement('span');
-        frame.className = 'history-portrait';
-        frame.setAttribute('aria-hidden', 'true');
-        frame.textContent = displayText(step.speaker).trim().charAt(0).toLocaleUpperCase();
-        const img = document.createElement('img');
-        img.alt = ''; img.width = img.height = 56;
-        img.loading = 'lazy'; img.decoding = 'async';
-        // Keep the initial as a quiet fallback if both portrait mirrors fail.
-        loadImage(img, 'portrait', portrait, () => {});
-        frame.append(img);
-        button.append(frame);
-      }
-      const copy = document.createElement('span');
-      copy.className = 'history-copy';
-      const name = document.createElement('strong');
+        if (!frame) {
+          frame = document.createElement('span');
+          frame.className = 'history-portrait';
+          frame.setAttribute('aria-hidden', 'true');
+          button.prepend(frame);
+        }
+        portraits.attach(frame, portrait, displayText(step.speaker).trim().charAt(0).toLocaleUpperCase());
+      } else frame?.remove();
+      const copy = button.querySelector('.history-copy');
+      const name = copy.firstChild;
       name.textContent = step.kind === 'choice' ? 'Doctor' : step.speaker || t('narration');
       const text = step.kind === 'choice' ? step.options.find((o) => o.value === step.answer)?.text || t('choose') : step.text;
       if (step.kind === 'choice') {
@@ -514,11 +519,14 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
         button.title = t('historyChoice');
         button.setAttribute('aria-label', `${t('historyChoice')}: Doctor. ${displayText(text)}`);
       }
-      copy.append(name, document.createTextNode(displayText(text)));
-      button.append(copy);
-      button.addEventListener('click', () => { index = i; $('history-dialog').close(); showStep(); });
-      $('history-list').append(button);
+      copy.lastChild.textContent = displayText(text);
+      rows.push(button);
     }
+    const retained = new Set(rows);
+    for (const button of [...list.children]) if (!retained.has(button)) button.remove();
+    rows.forEach((button, i) => {
+      if (list.children[i] !== button) list.insertBefore(button, list.children[i] || null);
+    });
     $('history-dialog').showModal();
     $('history-list').scrollTop = $('history-list').scrollHeight;
   }
@@ -529,6 +537,8 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     loadVersion++;
     loadController?.abort();
     cancelPending();
+    characters.clear();
+    portraits.clear();
     review.reset();
     sources = {}; comparedLanguage = null;
     animations.forEach((animation) => animation.cancel());
@@ -572,6 +582,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     $('cover-number').textContent = group.chapter === undefined ? '◇' : String(group.chapter).padStart(2, '0');
     $('cover-category').textContent = t('story');
     $('cover-description').textContent = [story.code, story.phase ? t(story.phase) : ''].filter(Boolean).join(' · ');
+    const createCover = reuseCovers($('cover-art'));
     $('cover-art').replaceChildren(createCover(group.cover, { lazy: false }));
     $('begin').disabled = true;
     $('begin').textContent = t('loading');
@@ -593,6 +604,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
         else { saved = null; notice('progressReset'); }
       }
       ({ answers, timeline, index } = validateProgress(commands, saved));
+      prefetchArtwork();
       read = saved?.read === true;
       soundtrack = new Soundtrack(loaded.audio, () => { if (token === loadVersion) notice('audioError'); }, preferences.volume / 100);
       ready = true;

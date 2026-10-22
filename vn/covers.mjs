@@ -1,6 +1,7 @@
 // Chapter, event, and IS covers use the verified ArknightsAssets2 English snapshot.
 // Local generated covers fill archive gaps. The arkdata mirror supplies
 // vignette covers, operator portraits and module art.
+import { createImageCache } from './assets.mjs';
 const mirrors = {
   local: [new URL('./assets/covers/', import.meta.url).href],
   'archive-en': [
@@ -19,35 +20,65 @@ export function coverURLs(cover) {
   return mirrors[cover.provider].map((base) => base + path);
 }
 
-export function createCover(cover, { lazy = true } = {}) {
-  const frame = document.createElement('div');
+const cache = createImageCache(coverURLs, 24);
+const pending = new WeakMap();
+let observer;
+const coverKey = (cover) => JSON.stringify([cover?.provider, cover?.path, cover?.crop]);
+
+async function reveal(frame) {
+  observer?.unobserve(frame);
+  const request = pending.get(frame);
+  if (!request) return;
+  const current = () => frame.isConnected && pending.get(frame) === request;
+  const prepared = await cache.prepare(request.cover);
+  if (!prepared || !current()) return;
+  const img = prepared.cloneNode();
+  img.width = img.height = 512;
+  // Apply the optional square crop before revealing any pixels. Both axes use
+  // the same scale, preserving proportions while trimming transparent margins.
+  const crop = request.cover.crop;
+  if (crop && [crop.x, crop.y, crop.size].every(Number.isFinite) &&
+      crop.x >= 0 && crop.y >= 0 && crop.size > 0 &&
+      crop.x + crop.size <= prepared.naturalWidth && crop.y + crop.size <= prepared.naturalHeight) {
+    img.style.width = `${100 * prepared.naturalWidth / crop.size}%`;
+    img.style.height = `${100 * prepared.naturalHeight / crop.size}%`;
+    img.style.inset = `${-100 * crop.y / crop.size}% auto auto ${-100 * crop.x / crop.size}%`;
+  }
+  try { await img.decode(); } catch { return; }
+  if (!current()) return;
+  frame.replaceChildren(img);
+  frame.classList.add('has-art');
+  pending.delete(frame);
+}
+
+export function createCover(cover, { lazy = true, frame = document.createElement('div') } = {}) {
+  if (frame.classList.contains('has-art')) return frame;
   frame.className = 'collection-art';
+  frame.dataset.cover = coverKey(cover);
   // The adjacent collection title labels this decorative artwork.
   frame.setAttribute('aria-hidden', 'true');
   const urls = coverURLs(cover);
   if (!urls.length) return frame;
-  const img = document.createElement('img');
-  img.alt = ''; img.decoding = 'async'; img.loading = lazy ? 'lazy' : 'eager';
-  img.width = img.height = 512;
-  let attempt = 0;
-  img.onload = () => {
-    // Optional square window in source pixels. Both axes use the same scale,
-    // keeping the art's proportions while trimming excess transparent margins.
-    const crop = cover.crop;
-    if (crop && [crop.x, crop.y, crop.size].every(Number.isFinite) &&
-        crop.x >= 0 && crop.y >= 0 && crop.size > 0 &&
-        crop.x + crop.size <= img.naturalWidth && crop.y + crop.size <= img.naturalHeight) {
-      img.style.width = `${100 * img.naturalWidth / crop.size}%`;
-      img.style.height = `${100 * img.naturalHeight / crop.size}%`;
-      img.style.inset = `${-100 * crop.y / crop.size}% auto auto ${-100 * crop.x / crop.size}%`;
-    }
-    frame.classList.add('has-art');
-  };
-  img.onerror = () => {
-    if (++attempt < urls.length) img.src = urls[attempt];
-    else { img.remove(); frame.classList.remove('has-art'); }
-  };
-  img.src = urls[0];
-  frame.append(img);
+  pending.set(frame, { cover });
+  if (!lazy || cache.ready(cover)) reveal(frame);
+  else {
+    observer ||= new IntersectionObserver((entries) => {
+      for (const entry of entries) if (entry.isIntersecting) reveal(entry.target);
+    }, { rootMargin: '200px 0px' });
+    observer.observe(frame);
+  }
   return frame;
+}
+
+// Capture the old view before it is rebuilt. Each placement gets its own frame,
+// including pages that show a heading and several cards with the same artwork.
+export function reuseCovers(root) {
+  const frames = new Map();
+  for (const frame of root.querySelectorAll('.collection-art')) {
+    observer?.unobserve(frame); pending.delete(frame);
+    const key = frame.dataset.cover;
+    if (!frames.has(key)) frames.set(key, []);
+    frames.get(key).push(frame);
+  }
+  return (cover, options = {}) => createCover(cover, { ...options, frame: frames.get(coverKey(cover))?.shift() });
 }

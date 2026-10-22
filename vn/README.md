@@ -48,6 +48,12 @@ archive covers, operator records use portraits, modules use their equipment art
 uses topic artwork shared with its monthly squads. Images load lazily in grids
 and retry a raw GitHub mirror if the CDN fails; a neutral placeholder preserves
 navigation when a cover is missing or both mirrors fail.
+Cover images decode and receive their crop before being revealed. A shared cache
+keeps up to 24 decoded covers and remembers successful mirrors. Library language,
+filter and progress updates reuse ready artwork that remains in the view; stories
+in the same collection also reuse their opening cover. Repeated artwork has an
+independent frame and crop at each placement. Late decoding cannot update a
+removed frame, and slow first loads leave the square placeholder stable.
 
 All 998 catalog collections have mapped artwork. All 18 chapters, event archive
 cards, and IS topics 1–5 (including their monthly squads) use the pinned English
@@ -129,12 +135,23 @@ and enables scenes that pass command, branch, language, and audio checks.
   including after closing a dialog; on a loaded story cover it begins reading.
   Enter activates focused controls and choices. Open dialogs and text fields
   keep normal keyboard behavior, and holding Space does not repeatedly advance.
+- Character sprites stay mounted when only focus changes. New expressions load
+  and decode offscreen before replacing the previous face. The current line and
+  next two reachable lines warm a cache of at most 12 sprites; data-saving mode
+  disables this lookahead. Departing operators still disappear immediately, and
+  Back, history and navigation invalidate outdated image swaps. Cold or slow
+  downloads can delay a new expression, but do not blank the existing operator.
 - History opens at the latest entry. Its title and close button stay visible
   while the entries scroll, including on mobile and in fullscreen.
   Named dialogue shows the focused character's portrait and expression using the
   classic reader's thumbnails. Narration, choices and lines without a focused
-  character remain text-only. Portraits load lazily, retry the asset mirror and
-  fall back to the speaker's initial without shifting the entries.
+  character remain text-only. Recent portraits preload while reading; older ones
+  load near the history viewport. A bounded cache shares decoded thumbnails and
+  remembers the working mirror. Reopening history or switching languages reuses
+  existing rows and images. Portraits appear only after decoding, with the
+  speaker's initial as a stable fallback while loading or if both mirrors fail.
+  Loading never shifts entries or blocks closing history; leaving the story
+  cancels pending portrait updates. Data-saving mode disables preloading.
 - Typewriter speed, automatic reading, choices, history, restart, reduced motion,
   and mobile layout are supported. Sound and settings are global header controls,
   available from the library and every story. A volume slider beside the sound icon
@@ -283,7 +300,9 @@ the editor and show an error; malformed saved notes are left untouched.
 | `reader.mjs` | Reusable player, rendering, transitions, controls, history |
 | `fullscreen.mjs` | Native fullscreen, full-window fallback, view lifecycle and accessible toggle |
 | `review.mjs`, `review-data.mjs` | Per-line comparison controls, note editor, shared classic-reader storage and Markdown export |
-| `assets.mjs` | Existing CDN conventions, image fallback, music/SFX |
+| `assets.mjs` | Existing CDN conventions, decoded image caches, image fallback, music/SFX |
+| `characters.mjs` | Decoded character swaps, stable stage nodes and bounded sprite lookahead |
+| `portraits.mjs` | History portrait preloading, viewport loading and decoded reveal |
 | `storage.mjs` | Versioned grouped saves and legacy migration |
 | `sources/en/`, `sources/provenance.json` | 113 pinned English AVG scripts and their commit/checksums |
 | `tests/` | Parser/storage/catalog tests and Chromium integration checks |
@@ -451,6 +470,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/topics.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/characters.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/review.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/branches.cjs
 ```
@@ -477,6 +497,10 @@ insert with a slow image request, independent background/foreground tweens,
 both translated sound-stop sequences, overlay restoration and route teardown.
 Unit tests also verify channel isolation, delayed-start cancellation and mute/
 restore cleanup without fetching audio.
+The character harness checks slow downloads and decoding, stable nodes on focus
+changes, expression lookahead, mirror failures, duplicate sprites, cancellation,
+cache eviction and data-saving mode. Set `VN_REAL_ART=1` to use real character
+artwork for its desktop/mobile screenshots instead of local image fixtures.
 The preferences harness checks global controls from the library, saved sound,
 volume and text settings across stories/reloads, live volume without restarting
 audio, music continuity on Back/Next/history/language changes, switching tracks,
@@ -489,8 +513,9 @@ localized labels and desktop/mobile/fullscreen layouts.
 The fullscreen harness checks native entry/exit, Escape and focus restoration,
 unchanged progress, settings/history/review dialogs, Space, localization, mobile
 fallback, portrait/landscape layouts, scene proportions and late-request cleanup.
-The history harness checks real character thumbnails, expressions, mirror and
-missing-image fallbacks, accessible labels, stable scrolling and line selection
+The history harness checks real character thumbnails, expressions, preloading,
+slow downloads/decoding, repeated openings, reused nodes, mirror and missing-image
+fallbacks, cancellation, accessible labels, stable scrolling and line selection
 on desktop, mobile and fullscreen. Unit tests cover speaker focus and text-only
 entries independently of translated names.
 The review harness checks per-dialogue and choice comparison, interoperability
@@ -521,7 +546,9 @@ combined progress, independent collection saves, existing links, breadcrumbs,
 reload/Back/Forward, localization, and mobile layout. A translated-script fixture
 also checks future VN availability, topic resume links, and the player's return
 link without enabling untranslated IS stories in the catalog.
-The cover harness checks actual artwork in every category, all 17 recovered
+The cover harness checks decoding before reveal, reuse across language/filter/
+progress updates, mirror caching, lazy loading, independent crops and late-load
+cleanup. It also checks actual artwork in every category, all 17 recovered
 images (covering the previous 25 unmapped collections), the migrated IS topics
 and their inherited squad artwork, collection and player
 covers, resume cards, mobile layout, raw-mirror fallback, local images under a
