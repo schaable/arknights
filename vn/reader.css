@@ -1,4 +1,4 @@
-:root { color-scheme: dark; --ink: #edf1f2; --muted: #9cabb5; --accent: #80d4dd; --line: #ffffff20; font: 15px/1.5 system-ui, sans-serif; background: #0b1116; color: var(--ink); }
+:root { color-scheme: dark; --ink: #edf1f2; --muted: #9cabb5; --accent: #80d4dd; --branch-accent: #c4a7ff; --line: #ffffff20; font: 15px/1.5 system-ui, sans-serif; background: #0b1116; color: var(--ink); }
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 280px; background: radial-gradient(ellipse at 50% 0, #1d2c37, transparent 70%); min-height: 100dvh; }
 button, select, input { font: inherit; color: inherit; }
@@ -66,6 +66,10 @@ h1 { font-size: 19px; font-weight: 500; margin: 3px 0 0; }
 .review-status { color: var(--accent); font-size: 12px; overflow-wrap: anywhere; }
 #review-status { margin: 0; }
 #review-status:not(:empty) { margin-bottom: 16px; }
+/* Branch ends use lavender; a noted branch end keeps both colored markers. */
+.dialogue-panel.branch-end { box-shadow: inset 3px 0 var(--branch-accent); }
+.dialogue-panel.branch-end .dialogue { border-left: 3px solid var(--branch-accent); }
+.dialogue-panel.branch-end.has-note .dialogue { border-left-color: #ffd286; border-right: 3px solid var(--branch-accent); }
 .dialogue-text { font-size: clamp(16px, 1.65vw, 23px); line-height: 1.6; display: block; white-space: pre-wrap; }
 .choices { position: absolute; top: 22%; left: 22%; width: 56%; display: grid; gap: 10px; z-index: 2; }
 .choices button { padding: 14px 20px; font-size: clamp(14px, 1.5vw, 20px); background: #09121fef; border-color: #b7cad15e; box-shadow: 0 5px 25px #0008; }
@@ -124,6 +128,8 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .history-portrait { position: relative; flex-shrink: 0; display: grid; place-items: center; width: 56px; height: 56px; overflow: hidden; border-radius: 3px; background: #09131b; color: var(--muted); font-size: 24px; }
 .history-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .history-line strong { display: block; color: var(--accent); font-size: 12px; margin-bottom: 4px; }
+.history-choice { border-left: 3px solid var(--branch-accent); background: #c4a7ff12; }
+.history-choice strong { color: var(--branch-accent); }
 .review-dialog { width: min(92vw, 700px); }
 .review-dialog label { display: block; font-size: 14px; margin: 16px 0 6px; }
 .review-dialog textarea { display: block; width: 100%; padding: 10px; resize: vertical; font: inherit; color: var(--ink); background: #09131b; border: 1px solid var(--line); border-radius: 3px; }

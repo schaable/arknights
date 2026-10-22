@@ -231,6 +231,18 @@ cloud sync or import/export.
 
 ## Translation review
 
+The last dialogue line of a choice branch has a lavender edge, distinct from the
+amber marker on lines with review notes. A line with both markers keeps amber on
+the left and lavender on the right. The branch marker includes a localized tooltip
+and accessible description. In **History**, Doctor choices also have lavender
+markers, making it easier to return to a decision and review another response.
+These visual cues are always available; they do not pause Auto or change navigation.
+
+Boundaries come from the script's conditional commands, including shared passages
+inside a branch and branches that reach the ending. Choices with identical
+continuations do not mark a branch end. Comparison and notes still use exact
+physical source lines, so notes from different alternatives remain separate.
+
 Each Spanish dialogue and choice offers an **EN/ES** comparison button and a
 **note** button. Comparison changes only that line or set of choices, pauses
 automatic reading, and leaves the story language, progress, and scene intact.
@@ -440,6 +452,7 @@ VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/covers.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/loading.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/scenes.cjs
 VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/review.cjs
+VN_PLAYWRIGHT_MODULE=/tmp/vn-qa/node_modules/playwright node vn/tests/branches.cjs
 ```
 
 `VN_BROWSER_PATH` optionally selects an existing Chromium binary;
@@ -485,6 +498,11 @@ with the classic review UI, source snapshots, note editing/deletion, clipboard
 and manual export, mobile layout, missing/misaligned sources, storage failures,
 and route cleanup. Unit tests verify shared note IDs, raw source fields, the
 Markdown format, and preservation of existing notes and reading progress.
+Branch marker tests cover branch ends, noted lines, highlighted Doctor choices in
+history, returning to a choice, unchanged Auto playback, exact bilingual notes,
+keyboard controls and desktop/mobile/fullscreen layouts. Unit tests validate
+boundaries in all 113 enabled stories and both languages, including shared passages
+between conditional blocks.
 The library harness checks one recent collection per category, continuation in
 all three library locations after manual/natural completion, stopping at the
 last story without reviving older chapters, manual read/unread

@@ -1,4 +1,4 @@
-import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt, speakerCharacter } from './script.mjs';
+import { buildTimeline, validateProgress, applyEvent, initialScene, tweenArt, speakerCharacter, choiceReviewRanges } from './script.mjs';
 import { loadImage, Soundtrack } from './assets.mjs';
 import { createCover } from './covers.mjs';
 import { loadStory } from './loader.mjs';
@@ -11,6 +11,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
   let storyLanguage = preferences.language, loadProblems = [], loadFailure = null, usedFallback = false;
   let sourceStructure;
   let scripts, sources = {}, commands, timeline = [], answers = {}, index = 0, started = false, ready = false;
+  let branchRanges = new Map();
   let comparedLanguage = null;
   let soundtrack, state = initialScene(), busy = false, typing = false, auto = false;
   let run = 0, typeTimer, autoTimer, waitController = new AbortController();
@@ -86,6 +87,20 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     const percent = step?.kind === 'end' ? 100 : Math.floor(((step?.line || 0) / (commands?.at(-1)?.line || 1)) * 100);
     $('progress').value = percent;
     $('position').textContent = String(percent).padStart(2, '0') + '%';
+    const branchEnd = isBranchEnd();
+    $('dialogue-panel').classList.toggle('branch-end', branchEnd);
+    $('dialogue').title = branchEnd ? t('branchEnd') : '';
+    if (branchEnd) $('dialogue').setAttribute('aria-describedby', 'branch-end-description');
+    else $('dialogue').removeAttribute('aria-describedby');
+  }
+
+  function isBranchEnd() {
+    const step = timeline[index];
+    if (!started || step?.kind !== 'dialogue') return false;
+    let choiceIndex = index - 1;
+    while (choiceIndex >= 0 && timeline[choiceIndex].kind !== 'choice') choiceIndex--;
+    const range = branchRanges.get(timeline[choiceIndex]?.line);
+    return !!range?.divergent && step.line < range.joinLine && timeline[index + 1]?.line >= range.joinLine;
   }
 
   function syncSound() {
@@ -494,6 +509,11 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       const name = document.createElement('strong');
       name.textContent = step.kind === 'choice' ? 'Doctor' : step.speaker || t('narration');
       const text = step.kind === 'choice' ? step.options.find((o) => o.value === step.answer)?.text || t('choose') : step.text;
+      if (step.kind === 'choice') {
+        button.classList.add('history-choice');
+        button.title = t('historyChoice');
+        button.setAttribute('aria-label', `${t('historyChoice')}: Doctor. ${displayText(text)}`);
+      }
       copy.append(name, document.createTextNode(displayText(text)));
       button.append(copy);
       button.addEventListener('click', () => { index = i; $('history-dialog').close(); showStep(); });
@@ -521,6 +541,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
     ready = started = auto = typing = false;
     story = group = null;
     timeline = []; answers = {}; index = 0; read = false; scripts = {}; commands = null;
+    branchRanges = new Map();
     loadProblems = []; loadFailure = null; usedFallback = false;
     $('load-notice').hidden = true;
     for (const option of $('language').options) option.disabled = false;
@@ -563,6 +584,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       loadProblems = loaded.problems;
       usedFallback = storyLanguage !== preferences.language;
       commands = scripts[storyLanguage];
+      branchRanges = choiceReviewRanges(commands);
       sourceStructure = loaded.structure;
       store.snapshot();
       let saved = store.group(group).stories[story.id];
@@ -630,6 +652,7 @@ export function createPlayer({ preferences, t, store, review, onChange }) {
       storyLanguage = scripts[preferences.language] ? preferences.language : storyLanguage;
       usedFallback = storyLanguage !== preferences.language;
       commands = scripts[storyLanguage];
+      branchRanges = choiceReviewRanges(commands);
       timeline = timeline[index]?.completionOnly ? validateProgress(commands, { read: true }).timeline : buildTimeline(commands, answers);
       index = Math.max(0, timeline.findIndex((step) => step.line === line));
     }

@@ -50,6 +50,29 @@ export function speakerCharacter(step) {
   return name && !/^char_empty(?:[#\$]|$)/i.test(name) ? name : null;
 }
 
+// A choice can have several conditional blocks, with shared lines between them.
+// Its responses rejoin only after the last command restricted to some answers.
+export function choiceReviewRanges(commands) {
+  const ranges = new Map();
+  for (const [index, choice] of commands.entries()) {
+    if (choice.command !== 'decision') continue;
+    const values = choice.args.values.split(';');
+    if (values.length < 2) continue;
+    let active = values, lastConditional = index;
+    for (let i = index + 1; i < commands.length && commands[i].command !== 'decision'; i++) {
+      const item = commands[i];
+      if (item.command === 'predicate') {
+        active = item.args.references ? values.filter((value) => item.args.references.split(';').includes(value)) : values;
+      } else if (active.length && active.length < values.length) lastConditional = i;
+    }
+    ranges.set(choice.line, {
+      divergent: lastConditional !== index,
+      joinLine: commands[lastConditional + 1]?.line ?? (commands.at(-1).line + 1),
+    });
+  }
+  return ranges;
+}
+
 export function tweenArt(art, args, endpoint) {
   return { ...art, x: number(args['x' + endpoint], art.x), y: number(args['y' + endpoint], art.y),
     scale: number(args['xscale' + endpoint], art.scale) };
